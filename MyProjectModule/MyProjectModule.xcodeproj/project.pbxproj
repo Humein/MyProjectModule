@@ -15,6 +15,7 @@
 		333D106520CE74AB004D9241 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D106420CE74AB004D9241 /* main.m */; };
 		333D106F20CE74AB004D9241 /* MyProjectModuleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D106E20CE74AB004D9241 /* MyProjectModuleTests.m */; };
 		333D107A20CE74AB004D9241 /* MyProjectModuleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D107920CE74AB004D9241 /* MyProjectModuleUITests.m */; };
+		333D108B20CF60A6004D9241 /* PopTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D108A20CF60A5004D9241 /* PopTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		333D107520CE74AB004D9241 /* MyProjectModuleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyProjectModuleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		333D107920CE74AB004D9241 /* MyProjectModuleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyProjectModuleUITests.m; sourceTree = "<group>"; };
 		333D107B20CE74AB004D9241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		333D108920CF60A5004D9241 /* PopTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopTableView.h; sourceTree = "<group>"; };
+		333D108A20CF60A5004D9241 /* PopTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 		333D105420CE74A8004D9241 /* MyProjectModule */ = {
 			isa = PBXGroup;
 			children = (
+				333D108820CF5AB2004D9241 /* CollectionViewModule */,
+				333D108720CF5AAB004D9241 /* TableViewModule */,
 				333D105520CE74A8004D9241 /* AppDelegate.h */,
 				333D105620CE74A9004D9241 /* AppDelegate.m */,
 				333D105820CE74A9004D9241 /* ViewController.h */,
@@ -130,6 +135,22 @@
 				333D107B20CE74AB004D9241 /* Info.plist */,
 			);
 			path = MyProjectModuleUITests;
+			sourceTree = "<group>";
+		};
+		333D108720CF5AAB004D9241 /* TableViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				333D108920CF60A5004D9241 /* PopTableView.h */,
+				333D108A20CF60A5004D9241 /* PopTableView.m */,
+			);
+			path = TableViewModule;
+			sourceTree = "<group>";
+		};
+		333D108820CF5AB2004D9241 /* CollectionViewModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionViewModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +286,7 @@
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
 				333D106520CE74AB004D9241 /* main.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
+				333D108B20CF60A6004D9241 /* PopTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
