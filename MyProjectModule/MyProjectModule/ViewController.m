@@ -22,9 +22,12 @@
 
 #import "ViewController.h"
 #import "PopTableView.h"
-
-@interface ViewController ()<MatchesSwitchMdoelCellDelegate>
-
+#import "AlertTableView.h"
+#import "CellModel.h"
+#import "AbstractTableViewCell.h"
+@interface ViewController ()<AlertTableViewDelegate>
+@property (nonatomic,strong)AlertTableView *tableView;
+@property (nonatomic,strong)NSMutableArray *itemList;
 @end
 
 @implementation ViewController
@@ -32,47 +35,87 @@
 #pragma mark --- lifeCycle
 -(void)viewDidLoad{
     [super viewDidLoad];
-    
+    CellModel *model =  [CellModel new];
+    model.title = @"colloctionView";
+    self.itemList = [NSMutableArray arrayWithObjects:model
+                                                       , nil];
+    [self.tableView registCell:[AbstractTableViewCell class] forItem:[CellModel class]];
+
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self popOver];
-}
 
 #pragma mark ---NetWorkRequest
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    self.tableView.FromPoint = CGPointMake(0, 100);
+    self.tableView.isSelectIndexToHidden= YES;
+    self.tableView.tableViewFrame= CGRectMake(0, 0, self.view.frame.size.width, 30*self.itemList.count + 20);
+    self.tableView.tableView.layer.cornerRadius= 4;
+    self.tableView.tableView.contentInset=UIEdgeInsetsMake(0, 0, 0, 0);
+    
+    [self.tableView showInView:self.view];
+    [self.tableView reloadData];
 
+}
 #pragma mark ----Delegate
+
+#pragma mark- tableview的代理
+- (NSMutableArray*)alertTableVieItemList
+{
+    return self.itemList;
+}
+
+- (void)alertTableViewCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"把cell和item对应起来");
+    CellModel *item = [self.itemList objectAtIndex:indexPath.row];
+    AbstractTableViewCell *tmpCell =(AbstractTableViewCell*)cell;
+    [tmpCell updateByItem:item];
+}
+- (CGFloat)alertTableView:(AlertTableView *)alertTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CellModel *item = [self.itemList objectAtIndex:indexPath.row];
+    
+    if (1) {
+        return 60.0f;
+    }else if (0){
+        return UITableViewAutomaticDimension;
+    }
+    return item.itemHeight;
+}
+
+
 #pragma mark ----popOverDelegate
 
--(void)cellClick:(MatchesSwitchMdoel *)viewModel{
-    
-    NSString *stTmp = [NSString stringWithFormat:@"%@",viewModel];
-    NSInteger state = [stTmp integerValue];
-    switch (state) {
-        case 1:
-            break;
-        case 2:
-            break;
-        case 3:
-            break;
-                    default:
-            break;
-    }
-    
-}
 #pragma mark --- PrivateMethod
--(void)popOver{
-    NSArray *arr = @[@"colloctionView",@"2",@"3",@"1",@"2",@"3"];
-    PopTableView *pooView = [[PopTableView alloc]initWithFrame:CGRectMake(0,100, 258*0.5, arr.count * 30 + 20) dataSource:arr withBGView:@"弹窗"];
-    pooView.delegate = self;
-    
-    [pooView show];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(30 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [pooView dismiss];
-    });
-}
+//-(void)popOver{
+//    NSArray *arr = @[@"colloctionView",@"2",@"3",@"1",@"2",@"3"];
+//    PopTableView *pooView = [[PopTableView alloc]initWithFrame:CGRectMake(0,100, 258*0.5, arr.count * 30 + 20) dataSource:arr withBGView:@"弹窗"];
+//    pooView.delegate = self;
+//
+//    [pooView show];
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(30 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [pooView dismiss];
+//    });
+//}
 #pragma mark --- PublicMethod
 
 #pragma mark --- LazyLoad
+- (AlertTableView *)tableView
+{
+    if (_tableView == nil) {
+        _tableView = [[AlertTableView alloc] initWithFrame:CGRectZero];
+        _tableView.tableView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.8f];
+        _tableView.delegate= self;
+    }
+    return _tableView;
+}
+- (NSMutableArray*)itemList
+{
+    if (_itemList==nil) {
+        _itemList = [NSMutableArray new];
+    }
+    return _itemList;
+}
 
 @end

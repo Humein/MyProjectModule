@@ -16,6 +16,9 @@
 		333D106F20CE74AB004D9241 /* MyProjectModuleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D106E20CE74AB004D9241 /* MyProjectModuleTests.m */; };
 		333D107A20CE74AB004D9241 /* MyProjectModuleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D107920CE74AB004D9241 /* MyProjectModuleUITests.m */; };
 		333D108B20CF60A6004D9241 /* PopTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D108A20CF60A5004D9241 /* PopTableView.m */; };
+		333D108E20CF6E24004D9241 /* AlertTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D108D20CF6E24004D9241 /* AlertTableView.m */; };
+		333D109120CF9698004D9241 /* CellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109020CF9698004D9241 /* CellModel.m */; };
+		333D109420CFA054004D9241 /* AbstractTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109320CFA054004D9241 /* AbstractTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,12 @@
 		333D107B20CE74AB004D9241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		333D108920CF60A5004D9241 /* PopTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopTableView.h; sourceTree = "<group>"; };
 		333D108A20CF60A5004D9241 /* PopTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTableView.m; sourceTree = "<group>"; };
+		333D108C20CF6E24004D9241 /* AlertTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertTableView.h; sourceTree = "<group>"; };
+		333D108D20CF6E24004D9241 /* AlertTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertTableView.m; sourceTree = "<group>"; };
+		333D108F20CF9698004D9241 /* CellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellModel.h; sourceTree = "<group>"; };
+		333D109020CF9698004D9241 /* CellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellModel.m; sourceTree = "<group>"; };
+		333D109220CFA054004D9241 /* AbstractTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractTableViewCell.h; sourceTree = "<group>"; };
+		333D109320CFA054004D9241 /* AbstractTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +151,12 @@
 			children = (
 				333D108920CF60A5004D9241 /* PopTableView.h */,
 				333D108A20CF60A5004D9241 /* PopTableView.m */,
+				333D108C20CF6E24004D9241 /* AlertTableView.h */,
+				333D108D20CF6E24004D9241 /* AlertTableView.m */,
+				333D108F20CF9698004D9241 /* CellModel.h */,
+				333D109020CF9698004D9241 /* CellModel.m */,
+				333D109220CFA054004D9241 /* AbstractTableViewCell.h */,
+				333D109320CFA054004D9241 /* AbstractTableViewCell.m */,
 			);
 			path = TableViewModule;
 			sourceTree = "<group>";
@@ -285,6 +300,9 @@
 			files = (
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
 				333D106520CE74AB004D9241 /* main.m in Sources */,
+				333D108E20CF6E24004D9241 /* AlertTableView.m in Sources */,
+				333D109420CFA054004D9241 /* AbstractTableViewCell.m in Sources */,
+				333D109120CF9698004D9241 /* CellModel.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				333D108B20CF60A6004D9241 /* PopTableView.m in Sources */,
 			);
