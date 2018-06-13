@@ -18,4 +18,6 @@
 @property (nonatomic,assign)CGFloat itemWidth;
 
 @property (nonatomic,copy)NSString *title;
+
+-(CGFloat)titleHeight;
 @end

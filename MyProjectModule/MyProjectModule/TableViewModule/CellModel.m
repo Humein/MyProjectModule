@@ -66,4 +66,8 @@
     return self;
 }
 
+-(CGFloat )titleHeight{
+    return 50;
+}
+
 @end

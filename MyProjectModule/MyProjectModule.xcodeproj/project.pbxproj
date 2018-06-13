@@ -19,6 +19,7 @@
 		333D108E20CF6E24004D9241 /* AlertTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D108D20CF6E24004D9241 /* AlertTableView.m */; };
 		333D109120CF9698004D9241 /* CellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109020CF9698004D9241 /* CellModel.m */; };
 		333D109420CFA054004D9241 /* AbstractTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109320CFA054004D9241 /* AbstractTableViewCell.m */; };
+		333D109720CFED75004D9241 /* colloctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109620CFED75004D9241 /* colloctionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		333D109020CF9698004D9241 /* CellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellModel.m; sourceTree = "<group>"; };
 		333D109220CFA054004D9241 /* AbstractTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractTableViewCell.h; sourceTree = "<group>"; };
 		333D109320CFA054004D9241 /* AbstractTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractTableViewCell.m; sourceTree = "<group>"; };
+		333D109520CFED75004D9241 /* colloctionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = colloctionViewController.h; sourceTree = "<group>"; };
+		333D109620CFED75004D9241 /* colloctionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = colloctionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 		333D108820CF5AB2004D9241 /* CollectionViewModule */ = {
 			isa = PBXGroup;
 			children = (
+				333D109520CFED75004D9241 /* colloctionViewController.h */,
+				333D109620CFED75004D9241 /* colloctionViewController.m */,
 			);
 			path = CollectionViewModule;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 			files = (
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
 				333D106520CE74AB004D9241 /* main.m in Sources */,
+				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
 				333D108E20CF6E24004D9241 /* AlertTableView.m in Sources */,
 				333D109420CFA054004D9241 /* AbstractTableViewCell.m in Sources */,
 				333D109120CF9698004D9241 /* CellModel.m in Sources */,

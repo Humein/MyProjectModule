@@ -18,6 +18,8 @@
 //配置数据
 - (void)alertTableViewCell:(UITableViewCell*)cell forRowAtIndexPath:(NSIndexPath*)indexPath;
 @optional
+- (void )alertTableView:(AlertTableView *)TableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+
 -(UIView*)alertTableHeaderView:(AlertTableView*)alertTableView headerForSection:(NSInteger)section;
 
 -(CGFloat)alertTableHeaderView:(AlertTableView*)alertTableView headerHeightForSection:(NSInteger)section;

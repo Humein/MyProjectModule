@@ -27,7 +27,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     _selectBlock ? _selectBlock(indexPath) :nil;
-    
+    if (_delegate && [_delegate respondsToSelector:@selector(alertTableView:didSelectRowAtIndexPath:)]){
+        
+        [_delegate alertTableView:self didSelectRowAtIndexPath:indexPath];
+    }
     if (self.isSelectIndexToHidden) {
         [self hidden];
     }

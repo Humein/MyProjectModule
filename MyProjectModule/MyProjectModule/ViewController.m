@@ -36,7 +36,8 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     CellModel *model =  [CellModel new];
-    model.title = @"colloctionView";
+    model.title = @"colloctionViewController";
+    model.itemHeight = [model titleHeight];
     self.itemList = [NSMutableArray arrayWithObjects:model
                                                        , nil];
     [self.tableView registCell:[AbstractTableViewCell class] forItem:[CellModel class]];
@@ -72,17 +73,29 @@
     AbstractTableViewCell *tmpCell =(AbstractTableViewCell*)cell;
     [tmpCell updateByItem:item];
 }
+
+- (void)alertTableView:(AlertTableView *)TableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    CellModel *item = [self.itemList objectAtIndex:indexPath.row];
+    Class class = NSClassFromString(item.title);
+    UIViewController *VC = [[class alloc] init];
+    VC.hidesBottomBarWhenPushed= YES;
+    [self.navigationController pushViewController:VC animated:YES];
+}
+
+
 - (CGFloat)alertTableView:(AlertTableView *)alertTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CellModel *item = [self.itemList objectAtIndex:indexPath.row];
     
-    if (1) {
+    if (0) {
         return 60.0f;
     }else if (0){
         return UITableViewAutomaticDimension;
     }
     return item.itemHeight;
 }
+
 
 
 #pragma mark ----popOverDelegate
