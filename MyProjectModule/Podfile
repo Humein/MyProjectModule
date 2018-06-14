@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'MyProjectModule' do
+  pod 'Masonry'
+end
