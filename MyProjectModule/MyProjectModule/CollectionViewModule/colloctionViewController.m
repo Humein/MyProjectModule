@@ -30,7 +30,7 @@
     [self.autoView reloadData];
     self.autoView.pagingEnabled = YES;
     [self.view addSubview:self.autoView];
-
+   
 }
 
 #pragma mark ----Delegate

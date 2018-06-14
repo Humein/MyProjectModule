@@ -2,4 +2,5 @@ use_frameworks!
 
 target 'MyProjectModule' do
   pod 'Masonry'
+  pod 'YYKit'
 end
