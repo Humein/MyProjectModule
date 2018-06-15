@@ -35,11 +35,15 @@
 #pragma mark --- lifeCycle
 -(void)viewDidLoad{
     [super viewDidLoad];
-    CellModel *model =  [CellModel new];
-    model.title = @"colloctionViewController";
-    model.itemHeight = [model titleHeight];
-    self.itemList = [NSMutableArray arrayWithObjects:model
-                                                       , nil];
+    self.itemList = [NSMutableArray array];
+    NSArray *list = [NSArray arrayWithObjects: @"colloctionViewController",@"DrawViewController", nil];
+    [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        CellModel *model =  [CellModel new];
+        model.itemHeight = [model titleHeight];
+        model.title = (NSString*)obj;
+        [self.itemList addObject:model];
+    }];
+
     [self.tableView registCell:[AbstractTableViewCell class] forItem:[CellModel class]];
 
 }
@@ -68,7 +72,6 @@
 
 - (void)alertTableViewCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"把cell和item对应起来");
     CellModel *item = [self.itemList objectAtIndex:indexPath.row];
     AbstractTableViewCell *tmpCell =(AbstractTableViewCell*)cell;
     [tmpCell updateByItem:item];
