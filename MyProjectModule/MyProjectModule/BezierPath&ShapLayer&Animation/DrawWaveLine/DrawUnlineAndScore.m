@@ -21,31 +21,38 @@
     CGFloat padding = 1;
     CGFloat margin = 1;
     
-    if (ABS(endRect.origin.y - startRect.origin.y) < 5)//They are in the same line
+    NSInteger num = (endRect.origin.y - startRect.origin.y)/(startRect.size.height - 5) + 1;
+    
+    if (ABS(endRect.origin.y - startRect.origin.y) < 5)
     {
         CGRect wholeRect = CGRectMake(startRect.origin.x, startRect.origin.y + padding, endRect.origin.x - startRect.origin.x, startRect.size.height - 2 * padding);
-        // draw
         [self drawWaveLineWithRect:wholeRect];
         CGRect scoreRect = CGRectMake(wholeRect.origin.x + wholeRect.size.width, wholeRect.origin.y + wholeRect.size.height - 7, 30, 50);
         [self drawScoreWithRect:scoreRect];
     }
-    else // The range occupies at least two lines
+    else
     {
-        CGRect firstRect = CGRectMake(startRect.origin.x, startRect.origin.y + padding, self.textView.bounds.size.width - startRect.origin.x - margin, startRect.size.height - 2 * padding);
-        // draw
-        [self drawWaveLineWithRect:firstRect];
-        CGFloat heightDiff = endRect.origin.y - (startRect.origin.y + startRect.size.height);
-        if (heightDiff > 5)//The range occupies more than two lines
-        {
-            CGRect secondRect = CGRectMake(margin, startRect.origin.y + startRect.size.height + padding, self.textView.bounds.size.width - 2*margin, heightDiff - 2 * padding);
-            // draw
-            [self drawWaveLineWithRect:secondRect];
-        }
-        CGRect thirdRect = CGRectMake(margin, endRect.origin.y + padding, endRect.origin.x, endRect.size.height - 2* padding);
-        // draw
-        [self drawWaveLineWithRect:thirdRect];
-        CGRect scoreRect = CGRectMake(thirdRect.origin.x + thirdRect.size.width, thirdRect.origin.y + thirdRect.size.height - 7, 30, 50);
 
+        CGRect firstRect = CGRectMake(startRect.origin.x, startRect.origin.y + padding, self.textView.bounds.size.width - startRect.origin.x - margin, startRect.size.height - 2 * padding);
+        [self drawWaveLineWithRect:firstRect];
+        
+        
+        CGFloat heightDiff = endRect.origin.y - (startRect.origin.y + startRect.size.height);
+        if (heightDiff > 5)
+        {
+            for (int i = 1; i <= num - 2 ; i++) {
+                CGRect secondRect = CGRectMake(margin, startRect.origin.y + padding+2*startRect.size.height - i*startRect.size.height +i, self.textView.bounds.size.width - 2*margin, heightDiff - 2 * padding);
+                [self drawWaveLineWithRect:secondRect];
+            }
+        }
+        
+        
+        
+        CGRect thirdRect = CGRectMake(margin, endRect.origin.y + padding, endRect.origin.x, endRect.size.height - 2* padding);
+        [self drawWaveLineWithRect:thirdRect];
+        
+        
+        CGRect scoreRect = CGRectMake(thirdRect.origin.x + thirdRect.size.width, thirdRect.origin.y + thirdRect.size.height - 7, 30, 50);
         [self drawScoreWithRect:scoreRect];
 
     }

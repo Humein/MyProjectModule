@@ -35,11 +35,11 @@
                                  NSFontAttributeName:[UIFont systemFontOfSize:15],
                                  NSParagraphStyleAttributeName:paragraphStyle
                                  };
-    self.textView.attributedText = [[NSAttributedString alloc] initWithString:@"《你好，旧时光》作为一部“全景式青春治愈剧”，电视剧除了纯纯的校园青春还拓深了外延和内涵：时间横跨过去、现在和未来；从校园家庭到校外生活，空间维度也足够立体；更涵盖了“亲情、友情、师生情”。总之，无论时间、空间还是故事的情绪渲染，都可以看出该剧从多条线索多...空间还是故事的情绪渲染，都可以看出该剧从多条线索多..." attributes:attributes];
+    self.textView.attributedText = [[NSAttributedString alloc] initWithString:@"《你好，旧时光》作为一部“全景式青春治愈剧”，电视剧除了纯纯的校园青春还拓深了外延和内涵：时间横跨过去、现在和未来；从校园家庭到校外生活，空间维度也足够立体；更涵盖了“亲情、友情、师生情”。总之，无论时间、空间还是故事的情绪渲染，都可以看出该剧从多条线索多...空间还是故事的情绪渲染，都可以看出该剧从多条线索多...你好，旧时光》作为一部“全景式青春治愈剧”，电视剧除了纯纯的校园青春还拓深了外延和内涵：时间横跨过去、现在和未来；从校园家庭到校外生活，空间维度也足够立体；更涵盖了“亲情、友情、师生情”。总之，无论时间、空间还是故事的情绪渲染，都可以看出该剧从多条线索多...空间还是故事的情绪渲染，都可以看出该剧从多条线索多..." attributes:attributes];
     
     NSRange range0 = NSMakeRange(1, 3);
     NSRange range1 = NSMakeRange(20, 6);
-    NSRange range2 = NSMakeRange(30, 46);
+    NSRange range2 = NSMakeRange(100, 124);
     NSMutableArray *array = [NSMutableArray arrayWithObjects:[NSValue valueWithRange:range0],[NSValue valueWithRange:range1],[NSValue valueWithRange:range2], nil];
     DrawUnlineAndScore *drawObj =  [DrawUnlineAndScore new];
 
