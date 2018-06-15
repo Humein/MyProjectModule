@@ -8,16 +8,23 @@
 
 #import "DrawUnlineAndScore.h"
 @interface DrawUnlineAndScore(){
+    NSRange _range;
+    UIColor *_color;
+    NSString *_score;
 }
 @property (nonatomic, strong) UITextView *textView;
 
 @end
 @implementation DrawUnlineAndScore
-- (void)drawRange:(NSRange)range withTheView:(UITextView *)textView
-{
+
+- (void)drawUnlineWithParm:(NSDictionary *)parm withTheView:(UITextView *)textView{
+    _range = [[parm objectForKey:@"range"] rangeValue];
+    _color = [parm objectForKey:@"color"];
+    _score = [parm objectForKey:@"score"];
+    
     self.textView = textView;
-    CGRect startRect = [self getRectAtRangePos:range.location];
-    CGRect endRect = [self getRectAtRangePos:range.location + range.length];
+    CGRect startRect = [self getRectAtRangePos:_range.location];
+    CGRect endRect = [self getRectAtRangePos:_range.location + _range.length];
     CGFloat padding = 1;
     CGFloat margin = 1;
     
@@ -32,7 +39,7 @@
     }
     else
     {
-
+        
         CGRect firstRect = CGRectMake(startRect.origin.x, startRect.origin.y + padding, self.textView.bounds.size.width - startRect.origin.x - margin, startRect.size.height - 2 * padding);
         [self drawWaveLineWithRect:firstRect];
         
@@ -54,10 +61,10 @@
         
         CGRect scoreRect = CGRectMake(thirdRect.origin.x + thirdRect.size.width, thirdRect.origin.y + thirdRect.size.height - 7, 30, 50);
         [self drawScoreWithRect:scoreRect];
-
+        
     }
-}
 
+}
 
 - (void)drawWaveLineWithRect:(CGRect)result1
 {
@@ -66,7 +73,7 @@
     UIBezierPath *path = [self getWavePathWithStartPoint:startPoint endPoint:endPoint];
     CAShapeLayer *pathLayer = [CAShapeLayer layer];
     pathLayer.lineWidth = 1;
-    pathLayer.strokeColor = [UIColor blueColor].CGColor;
+    pathLayer.strokeColor = _color.CGColor;
     pathLayer.fillColor = nil;
     pathLayer.path = path.CGPath;
     [self.textView.layer addSublayer:pathLayer];
@@ -93,7 +100,7 @@
     [self.textView.layer addSublayer:textLayer];
     textLayer.contentsScale = [UIScreen mainScreen].scale;
     //set text attributes
-    textLayer.foregroundColor = [UIColor blueColor].CGColor;
+    textLayer.foregroundColor = _color.CGColor;
     textLayer.alignmentMode = kCAAlignmentJustified;
     textLayer.wrapped = YES;
     
@@ -108,7 +115,7 @@
     CGFontRelease(fontRef);
     
     //choose some text
-    NSString *text = @"(+10)";
+    NSString *text = _score;
     
     //set layer text
     textLayer.string = text;

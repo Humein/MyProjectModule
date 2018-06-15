@@ -40,13 +40,28 @@
     NSRange range0 = NSMakeRange(1, 3);
     NSRange range1 = NSMakeRange(20, 6);
     NSRange range2 = NSMakeRange(100, 124);
-    NSMutableArray *array = [NSMutableArray arrayWithObjects:[NSValue valueWithRange:range0],[NSValue valueWithRange:range1],[NSValue valueWithRange:range2], nil];
+    
     DrawUnlineAndScore *drawObj =  [DrawUnlineAndScore new];
 
-    [array enumerateObjectsUsingBlock:^(NSValue *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSRange range = [obj rangeValue];
-        [drawObj drawRange:range withTheView:self.textView];
-
+    NSDictionary *dic0 = @{
+                          @"range":[NSValue valueWithRange:range0]?:@"",
+                          @"color":[UIColor redColor]?:@"",
+                          @"score":@"10分",
+                          };
+    NSDictionary *dic1 = @{
+                          @"range":[NSValue valueWithRange:range1]?:@"",
+                          @"color":[UIColor yellowColor]?:@"",
+                          @"score":@"80分",
+                          };
+    NSDictionary *dic2 = @{
+                          @"range":[NSValue valueWithRange:range2]?:@"",
+                          @"color":[UIColor greenColor]?:@"",
+                          @"score":@"20分",
+                          };
+    NSMutableArray *dicArray = [NSMutableArray arrayWithObjects:dic0 ,dic1 ,dic2 , nil];
+    
+    [dicArray enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [drawObj drawUnlineWithParm:obj withTheView:self.textView];
     }];
     
     

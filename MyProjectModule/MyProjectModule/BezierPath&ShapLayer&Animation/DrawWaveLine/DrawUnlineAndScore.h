@@ -10,5 +10,15 @@
 #import <UIKit/UIKit.h>
 
 @interface DrawUnlineAndScore : NSObject
-- (void)drawRange:(NSRange)range withTheView:(UITextView *)textView;
+/**
+ parm must be correct
+
+ @param parm
+           @"range":[NSValue valueWithRange:range0]?:@"",
+           @"color":[UIColor redColor]?:@"",
+           @"score":@"10",
+ @param textView needDrawView
+ */
+- (void)drawUnlineWithParm:(NSDictionary *)parm withTheView:(UITextView *)textView;
+
 @end
