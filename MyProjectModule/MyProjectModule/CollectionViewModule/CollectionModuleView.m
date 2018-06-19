@@ -7,6 +7,9 @@
 //
 
 #import "CollectionModuleView.h"
+#import "CarouselLayout.h"
+
+
 @interface CollectionModuleView ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate>
 @property (nonatomic,strong)UICollectionView *collectionView;
 @property (nonatomic,strong)NSMutableArray *dataArray;
@@ -62,7 +65,7 @@
 {
     if (_collectionView== nil) {
         
-        
+//        正常
         UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
         flowLayout.scrollDirection=UICollectionViewScrollDirectionHorizontal;
         flowLayout.itemSize=CGSizeMake(self.frame.size.width, self.frame.size.height);
@@ -70,9 +73,17 @@
         flowLayout.minimumLineSpacing=0.0;
         flowLayout.sectionInset=UIEdgeInsetsMake(0, 0, 0, 0);
         
+//        旋转木马      
+        CarouselLayout *carouselLayout                = [[CarouselLayout alloc] init];
+        carouselLayout.carouselSlideIndexBlock          = ^(NSInteger index){
+            NSLog(@"index======%ld",(long)index);
+        };
+        carouselLayout.itemSize                         = CGSizeMake(190, 262);
+        
+//        瀑布流
         
         
-        _collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:carouselLayout];
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.dataSource=self;

@@ -23,12 +23,14 @@
     CellModel *model =  [CellModel new];
     model.title = @"colloctionViewController";
     model.itemHeight = [model titleHeight];
-    self.itemList = [NSMutableArray arrayWithObjects:model,model,model
+    self.itemList = [NSMutableArray arrayWithObjects:model,model,model,model,model,model
                      , nil];
     
     [self.autoView registCell:[AbstractCollectionViewCell class] forItem:[CellModel class]];
     [self.autoView reloadData];
-    self.autoView.pagingEnabled = YES;
+    //        整合到 layout 里
+//    self.autoView.pagingEnabled = YES;
+    
     [self.view addSubview:self.autoView];
    
 }
@@ -60,7 +62,8 @@
     if (!_autoView) {
         _autoView = [[CollectionModuleView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 200)];
         _autoView.backgroundColor = [UIColor blueColor];
-        _autoView.direction = RToLType;
+//        整合到 layout 里
+//        _autoView.direction = RToLType;
         _autoView.dataSource = self;
         _autoView.delegate = self;
     }
