@@ -27,6 +27,14 @@
 		338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */; };
 		33A32AD220D8EA70008C3969 /* CarouselLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AD120D8EA70008C3969 /* CarouselLayout.m */; };
 		33A32AD520D8ECC8008C3969 /* WaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AD420D8ECC8008C3969 /* WaterfallLayout.m */; };
+		33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32ADA20D90681008C3969 /* SegmentContentView.m */; };
+		33A32ADE20D90717008C3969 /* SegementTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32ADD20D90717008C3969 /* SegementTitleView.m */; };
+		33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AE420DA2FA3008C3969 /* SegementTitleConfigured.m */; };
+		33A32AE920DA789D008C3969 /* UIScrollView+SlideGestureBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AE820DA789D008C3969 /* UIScrollView+SlideGestureBack.m */; };
+		33A32AEC20DA78FA008C3969 /* UIView+ChainFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AEB20DA78FA008C3969 /* UIView+ChainFrameView.m */; };
+		33A32AEF20DA795E008C3969 /* UIButton+SegementCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AEE20DA795E008C3969 /* UIButton+SegementCustomButton.m */; };
+		33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AF120DA7FFC008C3969 /* SegementDemoViewController.m */; };
+		33A32AF520DA8044008C3969 /* SegementPersonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AF420DA8044008C3969 /* SegementPersonDemoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +93,23 @@
 		33A32AD120D8EA70008C3969 /* CarouselLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarouselLayout.m; sourceTree = "<group>"; };
 		33A32AD320D8ECC8008C3969 /* WaterfallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterfallLayout.h; sourceTree = "<group>"; };
 		33A32AD420D8ECC8008C3969 /* WaterfallLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterfallLayout.m; sourceTree = "<group>"; };
+		33A32AD920D90681008C3969 /* SegmentContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentContentView.h; sourceTree = "<group>"; };
+		33A32ADA20D90681008C3969 /* SegmentContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentContentView.m; sourceTree = "<group>"; };
+		33A32ADC20D90717008C3969 /* SegementTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementTitleView.h; sourceTree = "<group>"; };
+		33A32ADD20D90717008C3969 /* SegementTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegementTitleView.m; sourceTree = "<group>"; };
+		33A32AE320DA2FA3008C3969 /* SegementTitleConfigured.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementTitleConfigured.h; sourceTree = "<group>"; };
+		33A32AE420DA2FA3008C3969 /* SegementTitleConfigured.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegementTitleConfigured.m; sourceTree = "<group>"; };
+		33A32AE720DA789D008C3969 /* UIScrollView+SlideGestureBack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SlideGestureBack.h"; sourceTree = "<group>"; };
+		33A32AE820DA789D008C3969 /* UIScrollView+SlideGestureBack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SlideGestureBack.m"; sourceTree = "<group>"; };
+		33A32AEA20DA78FA008C3969 /* UIView+ChainFrameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ChainFrameView.h"; sourceTree = "<group>"; };
+		33A32AEB20DA78FA008C3969 /* UIView+ChainFrameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ChainFrameView.m"; sourceTree = "<group>"; };
+		33A32AED20DA795E008C3969 /* UIButton+SegementCustomButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+SegementCustomButton.h"; sourceTree = "<group>"; };
+		33A32AEE20DA795E008C3969 /* UIButton+SegementCustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SegementCustomButton.m"; sourceTree = "<group>"; };
+		33A32AF020DA7FFC008C3969 /* SegementDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementDemoViewController.h; sourceTree = "<group>"; };
+		33A32AF120DA7FFC008C3969 /* SegementDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegementDemoViewController.m; sourceTree = "<group>"; };
+		33A32AF320DA8044008C3969 /* SegementPersonDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementPersonDemoViewController.h; sourceTree = "<group>"; };
+		33A32AF420DA8044008C3969 /* SegementPersonDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegementPersonDemoViewController.m; sourceTree = "<group>"; };
+		33A32AF620DA82B7008C3969 /* SegementHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementHeader.h; sourceTree = "<group>"; };
 		37274BAA150B3CCC94945653 /* Pods_MyProjectModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C26993B1DAA4E4068C6E736 /* Pods-MyProjectModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.debug.xcconfig"; sourceTree = "<group>"; };
 		A36D58F14EAF98187791F3CA /* Pods-MyProjectModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +205,7 @@
 		333D108720CF5AAB004D9241 /* TableViewModule */ = {
 			isa = PBXGroup;
 			children = (
+				33A32ADF20D91234008C3969 /* 折叠的TableView */,
 				333D108920CF60A5004D9241 /* PopTableView.h */,
 				333D108A20CF60A5004D9241 /* PopTableView.m */,
 				333D108C20CF6E24004D9241 /* AlertTableView.h */,
@@ -248,6 +274,10 @@
 		33A32ACA20D8B4D5008C3969 /* 详情页 */ = {
 			isa = PBXGroup;
 			children = (
+				33A32AF020DA7FFC008C3969 /* SegementDemoViewController.h */,
+				33A32AF120DA7FFC008C3969 /* SegementDemoViewController.m */,
+				33A32AF320DA8044008C3969 /* SegementPersonDemoViewController.h */,
+				33A32AF420DA8044008C3969 /* SegementPersonDemoViewController.m */,
 			);
 			path = "详情页";
 			sourceTree = "<group>";
@@ -255,6 +285,14 @@
 		33A32ACB20D8B4D5008C3969 /* SegmentView */ = {
 			isa = PBXGroup;
 			children = (
+				33A32AE620DA7864008C3969 /* UIKitCategory */,
+				33A32AF620DA82B7008C3969 /* SegementHeader.h */,
+				33A32AD920D90681008C3969 /* SegmentContentView.h */,
+				33A32ADA20D90681008C3969 /* SegmentContentView.m */,
+				33A32ADC20D90717008C3969 /* SegementTitleView.h */,
+				33A32ADD20D90717008C3969 /* SegementTitleView.m */,
+				33A32AE320DA2FA3008C3969 /* SegementTitleConfigured.h */,
+				33A32AE420DA2FA3008C3969 /* SegementTitleConfigured.m */,
 			);
 			path = SegmentView;
 			sourceTree = "<group>";
@@ -264,6 +302,26 @@
 			children = (
 			);
 			path = socket;
+			sourceTree = "<group>";
+		};
+		33A32ADF20D91234008C3969 /* 折叠的TableView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "折叠的TableView";
+			sourceTree = "<group>";
+		};
+		33A32AE620DA7864008C3969 /* UIKitCategory */ = {
+			isa = PBXGroup;
+			children = (
+				33A32AE720DA789D008C3969 /* UIScrollView+SlideGestureBack.h */,
+				33A32AE820DA789D008C3969 /* UIScrollView+SlideGestureBack.m */,
+				33A32AEA20DA78FA008C3969 /* UIView+ChainFrameView.h */,
+				33A32AEB20DA78FA008C3969 /* UIView+ChainFrameView.m */,
+				33A32AED20DA795E008C3969 /* UIButton+SegementCustomButton.h */,
+				33A32AEE20DA795E008C3969 /* UIButton+SegementCustomButton.m */,
+			);
+			path = UIKitCategory;
 			sourceTree = "<group>";
 		};
 		359209391D424CA64C1C9257 /* Pods */ = {
@@ -457,17 +515,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
+				33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */,
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
 				333D106520CE74AB004D9241 /* main.m in Sources */,
+				33A32ADE20D90717008C3969 /* SegementTitleView.m in Sources */,
 				338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */,
+				33A32AF520DA8044008C3969 /* SegementPersonDemoViewController.m in Sources */,
+				33A32AEF20DA795E008C3969 /* UIButton+SegementCustomButton.m in Sources */,
+				33A32AE920DA789D008C3969 /* UIScrollView+SlideGestureBack.m in Sources */,
 				33A32AD520D8ECC8008C3969 /* WaterfallLayout.m in Sources */,
+				33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
 				333D108E20CF6E24004D9241 /* AlertTableView.m in Sources */,
 				333D109420CFA054004D9241 /* AbstractTableViewCell.m in Sources */,
+				33A32AEC20DA78FA008C3969 /* UIView+ChainFrameView.m in Sources */,
 				333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */,
 				333D109120CF9698004D9241 /* CellModel.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */,
+				33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */,
 				33A32AD220D8EA70008C3969 /* CarouselLayout.m in Sources */,
 				333D108B20CF60A6004D9241 /* PopTableView.m in Sources */,
 			);
