@@ -8,9 +8,13 @@
 
 #import "SegementDemoViewController.h"
 #import "SegementHeader.h"
+#import "SegementChildViewController.h"
 @interface SegementDemoViewController () <SGPageTitleViewDelegate,SegmentContentViewDelegate >
 @property (nonatomic, strong) SegementTitleView *pageTitleView;
 @property (nonatomic, strong) SegmentContentView *pageContentCollectionView;
+
+@property (nonatomic,strong)NSMutableDictionary *gl_items_dict;//控制器的数组
+
 @end
 
 @implementation SegementDemoViewController
@@ -32,27 +36,55 @@
         pageTitleViewY = 88;
     }
     
-    NSArray *titleArr = @[@"精选", @"电影", @"电视剧", @"综艺", @"NBA", @"娱乐", @"动漫", @"演唱会", @"VIP会员"];
+
     SegementTitleConfigured *configure = [SegementTitleConfigured pageTitleViewConfigure];
-    configure.showIndicator = NO;
-    configure.titleTextZoom = YES;
+    configure.showIndicator = YES;
+    configure.indicatorStyle = SGIndicatorStyleFixed;
+    configure.indicatorFixedWidth = 30;
     configure.titleTextScaling = 0.3;
     configure.spacingBetweenButtons = 30;
     
-// title
+
+    NSArray *dicArray = [NSArray arrayWithObjects:@{@"categoryId":@"11"},@{@"categoryId":@"22"},@{@"categoryId":@"33"},@{@"categoryId":@"44"},@{@"categoryId":@"55"},@{@"categoryId":@"65"}, nil];
+    
+    NSMutableArray *childArray = [NSMutableArray array];
+    NSMutableArray *titleArr = [NSMutableArray array];
+
+    for (NSDictionary *dic in dicArray) {
+        [titleArr addObject:[dic objectForKey:@"categoryId"]];
+        NSInteger cID = [[dic objectForKey:@"categoryId"] integerValue];
+        [childArray addObject:[self viewControlForCategoryId:cID]];
+    }
+
     self.pageTitleView = [SegementTitleView pageTitleViewWithFrame:CGRectMake(0, pageTitleViewY, self.view.frame.size.width, 44) delegate:self titleNames:titleArr configure:configure];
     [self.view addSubview:_pageTitleView];
-
-// content
-    UIViewController *VC = [UIViewController new];
-    NSArray *childArr = @[VC, VC, VC, VC, VC, VC, VC, VC, VC];
+    
+    
     
     CGFloat ContentCollectionViewHeight = self.view.frame.size.height - CGRectGetMaxY(_pageTitleView.frame);
-    self.pageContentCollectionView = [[SegmentContentView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_pageTitleView.frame), self.view.frame.size.width, ContentCollectionViewHeight) parentVC:self childVCs:childArr];
+    self.pageContentCollectionView = [[SegmentContentView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_pageTitleView.frame), self.view.frame.size.width, ContentCollectionViewHeight) parentVC:self childVCs:childArray];
     _pageContentCollectionView.delegateSegmentContent = self;
     [self.view addSubview:_pageContentCollectionView];
 
 }
+
+
+- (UIViewController*)viewControlForCategoryId:(NSInteger)categoryId
+{
+    NSString *key = [NSString stringWithFormat:@"%zi",categoryId];
+    
+    SegementChildViewController *vc= [self.gl_items_dict objectForKey:key];
+    
+    if (vc) {
+        
+    }else{
+        vc = [[SegementChildViewController alloc] init];
+        vc.categoryId = categoryId;
+        [self.gl_items_dict setObject:vc forKey:key];
+    }
+    return vc;
+}
+
 
 #pragma makr ---SegementDelegate
 - (void)pageTitleView:(SegementTitleView *)pageTitleView selectedIndex:(NSInteger)selectedIndex {
@@ -65,6 +97,15 @@
 
 }
 
+
+#pragma mark --- get&set
+- (NSMutableDictionary*)gl_items_dict
+{
+    if (_gl_items_dict == nil) {
+        _gl_items_dict = [NSMutableDictionary new];
+    }
+    return _gl_items_dict;
+}
 
 
 

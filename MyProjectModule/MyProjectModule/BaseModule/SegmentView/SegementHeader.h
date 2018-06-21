@@ -9,3 +9,4 @@
 #import "SegmentContentView.h"
 #import "SegementTitleView.h"
 #import "SegementTitleConfigured.h"
+#import "PersonalCenterChildViewController.h"

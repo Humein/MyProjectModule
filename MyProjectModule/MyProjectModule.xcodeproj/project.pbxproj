@@ -35,6 +35,8 @@
 		33A32AEF20DA795E008C3969 /* UIButton+SegementCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AEE20DA795E008C3969 /* UIButton+SegementCustomButton.m */; };
 		33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AF120DA7FFC008C3969 /* SegementDemoViewController.m */; };
 		33A32AF520DA8044008C3969 /* SegementPersonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AF420DA8044008C3969 /* SegementPersonDemoViewController.m */; };
+		33A32AF920DB3909008C3969 /* SegementChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AF820DB3909008C3969 /* SegementChildViewController.m */; };
+		33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AFB20DB4910008C3969 /* PersonalCenterChildViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,10 @@
 		33A32AF320DA8044008C3969 /* SegementPersonDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementPersonDemoViewController.h; sourceTree = "<group>"; };
 		33A32AF420DA8044008C3969 /* SegementPersonDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegementPersonDemoViewController.m; sourceTree = "<group>"; };
 		33A32AF620DA82B7008C3969 /* SegementHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementHeader.h; sourceTree = "<group>"; };
+		33A32AF720DB3909008C3969 /* SegementChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementChildViewController.h; sourceTree = "<group>"; };
+		33A32AF820DB3909008C3969 /* SegementChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegementChildViewController.m; sourceTree = "<group>"; };
+		33A32AFA20DB4910008C3969 /* PersonalCenterChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalCenterChildViewController.h; sourceTree = "<group>"; };
+		33A32AFB20DB4910008C3969 /* PersonalCenterChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalCenterChildViewController.m; sourceTree = "<group>"; };
 		37274BAA150B3CCC94945653 /* Pods_MyProjectModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C26993B1DAA4E4068C6E736 /* Pods-MyProjectModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.debug.xcconfig"; sourceTree = "<group>"; };
 		A36D58F14EAF98187791F3CA /* Pods-MyProjectModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.release.xcconfig"; sourceTree = "<group>"; };
@@ -278,6 +284,8 @@
 				33A32AF120DA7FFC008C3969 /* SegementDemoViewController.m */,
 				33A32AF320DA8044008C3969 /* SegementPersonDemoViewController.h */,
 				33A32AF420DA8044008C3969 /* SegementPersonDemoViewController.m */,
+				33A32AF720DB3909008C3969 /* SegementChildViewController.h */,
+				33A32AF820DB3909008C3969 /* SegementChildViewController.m */,
 			);
 			path = "详情页";
 			sourceTree = "<group>";
@@ -287,6 +295,8 @@
 			children = (
 				33A32AE620DA7864008C3969 /* UIKitCategory */,
 				33A32AF620DA82B7008C3969 /* SegementHeader.h */,
+				33A32AFA20DB4910008C3969 /* PersonalCenterChildViewController.h */,
+				33A32AFB20DB4910008C3969 /* PersonalCenterChildViewController.m */,
 				33A32AD920D90681008C3969 /* SegmentContentView.h */,
 				33A32ADA20D90681008C3969 /* SegmentContentView.m */,
 				33A32ADC20D90717008C3969 /* SegementTitleView.h */,
@@ -517,6 +527,7 @@
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
 				33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */,
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
+				33A32AF920DB3909008C3969 /* SegementChildViewController.m in Sources */,
 				333D106520CE74AB004D9241 /* main.m in Sources */,
 				33A32ADE20D90717008C3969 /* SegementTitleView.m in Sources */,
 				338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */,
@@ -531,6 +542,7 @@
 				33A32AEC20DA78FA008C3969 /* UIView+ChainFrameView.m in Sources */,
 				333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */,
 				333D109120CF9698004D9241 /* CellModel.m in Sources */,
+				33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */,
 				33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */,

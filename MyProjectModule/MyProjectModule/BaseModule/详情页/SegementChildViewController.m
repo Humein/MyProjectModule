@@ -1,22 +1,31 @@
 //
-//  SegementPersonDemoViewController.m
+//  SegementChildViewController.m
 //  MyProjectModule
 //
-//  Created by 鑫鑫 on 2018/6/20.
+//  Created by 鑫鑫 on 2018/6/21.
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
-#import "SegementPersonDemoViewController.h"
 
-@interface SegementPersonDemoViewController ()
+#import "SegementChildViewController.h"
+
+@interface SegementChildViewController ()
 
 @end
 
-@implementation SegementPersonDemoViewController
+@implementation SegementChildViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    UILabel *textLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 88, 150, 44)];
+    textLabel.text = [NSString stringWithFormat:@"TAG=====%ld",(long)self.categoryId];
+    [self.view addSubview:textLabel];
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
