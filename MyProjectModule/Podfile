@@ -3,4 +3,5 @@ use_frameworks!
 target 'MyProjectModule' do
   pod 'Masonry'
   pod 'YYKit'
+  pod 'pop', '~> 1.0'
 end

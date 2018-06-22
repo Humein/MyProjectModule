@@ -36,7 +36,7 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.itemList = [NSMutableArray array];
-    NSArray *list = [NSArray arrayWithObjects: @"colloctionViewController",@"DrawViewController",@"SegementDemoViewController",@"SegementPersonDemoViewController", nil];
+    NSArray *list = [NSArray arrayWithObjects: @"colloctionViewController",@"DrawViewController",@"SegementDemoViewController",@"SegementPersonDemoViewController",@"SegementChildViewController", nil];
     [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         CellModel *model =  [CellModel new];
         model.itemHeight = [model titleHeight];

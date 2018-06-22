@@ -6,8 +6,14 @@
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
 #import "SegementPersonDemoViewController.h"
+#import "SegementHeader.h"
+#import "SegementChildViewController.h"
 
-@interface SegementPersonDemoViewController ()
+@interface SegementPersonDemoViewController ()<SGPageTitleViewDelegate,SegmentContentViewDelegate>
+
+@property (nonatomic, strong) SegementTitleView *pageTitleView;
+@property (nonatomic, strong) SegmentContentView *pageContentCollectionView;
+
 
 @end
 
@@ -17,6 +23,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

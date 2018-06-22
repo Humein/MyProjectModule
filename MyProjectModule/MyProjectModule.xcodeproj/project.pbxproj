@@ -25,6 +25,7 @@
 		333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109C20D14489004D9241 /* AbstractCollectionViewCell.m */; };
 		333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D10A120D24FD5004D9241 /* DrawViewController.m */; };
 		338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */; };
+		338FEB5B20DCCF8D0025631B /* POPNumberAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEB5920DCCF8D0025631B /* POPNumberAnimation.m */; };
 		33A32AD220D8EA70008C3969 /* CarouselLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AD120D8EA70008C3969 /* CarouselLayout.m */; };
 		33A32AD520D8ECC8008C3969 /* WaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AD420D8ECC8008C3969 /* WaterfallLayout.m */; };
 		33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32ADA20D90681008C3969 /* SegmentContentView.m */; };
@@ -37,6 +38,8 @@
 		33A32AF520DA8044008C3969 /* SegementPersonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AF420DA8044008C3969 /* SegementPersonDemoViewController.m */; };
 		33A32AF920DB3909008C3969 /* SegementChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AF820DB3909008C3969 /* SegementChildViewController.m */; };
 		33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AFB20DB4910008C3969 /* PersonalCenterChildViewController.m */; };
+		33A32B0020DB7D5C008C3969 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AFF20DB7D5C008C3969 /* SectionModel.m */; };
+		33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32B0220DC95AF008C3969 /* DrawLine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,8 @@
 		333D10A120D24FD5004D9241 /* DrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
 		338ECBA320D25D080059BE0D /* DrawUnlineAndScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawUnlineAndScore.h; sourceTree = "<group>"; };
 		338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawUnlineAndScore.m; sourceTree = "<group>"; };
+		338FEB5920DCCF8D0025631B /* POPNumberAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPNumberAnimation.m; sourceTree = "<group>"; };
+		338FEB5A20DCCF8D0025631B /* POPNumberAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPNumberAnimation.h; sourceTree = "<group>"; };
 		33A32AD020D8EA70008C3969 /* CarouselLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarouselLayout.h; sourceTree = "<group>"; };
 		33A32AD120D8EA70008C3969 /* CarouselLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarouselLayout.m; sourceTree = "<group>"; };
 		33A32AD320D8ECC8008C3969 /* WaterfallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterfallLayout.h; sourceTree = "<group>"; };
@@ -116,6 +121,10 @@
 		33A32AF820DB3909008C3969 /* SegementChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegementChildViewController.m; sourceTree = "<group>"; };
 		33A32AFA20DB4910008C3969 /* PersonalCenterChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalCenterChildViewController.h; sourceTree = "<group>"; };
 		33A32AFB20DB4910008C3969 /* PersonalCenterChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalCenterChildViewController.m; sourceTree = "<group>"; };
+		33A32AFE20DB7D5C008C3969 /* SectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SectionModel.h; sourceTree = "<group>"; };
+		33A32AFF20DB7D5C008C3969 /* SectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectionModel.m; sourceTree = "<group>"; };
+		33A32B0120DC95AF008C3969 /* DrawLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawLine.h; sourceTree = "<group>"; };
+		33A32B0220DC95AF008C3969 /* DrawLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawLine.m; sourceTree = "<group>"; };
 		37274BAA150B3CCC94945653 /* Pods_MyProjectModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C26993B1DAA4E4068C6E736 /* Pods-MyProjectModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.debug.xcconfig"; sourceTree = "<group>"; };
 		A36D58F14EAF98187791F3CA /* Pods-MyProjectModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.release.xcconfig"; sourceTree = "<group>"; };
@@ -252,10 +261,14 @@
 		333D109F20D2383A004D9241 /* DrawWaveLine */ = {
 			isa = PBXGroup;
 			children = (
+				338FEB5A20DCCF8D0025631B /* POPNumberAnimation.h */,
+				338FEB5920DCCF8D0025631B /* POPNumberAnimation.m */,
 				333D10A020D24FD5004D9241 /* DrawViewController.h */,
 				333D10A120D24FD5004D9241 /* DrawViewController.m */,
 				338ECBA320D25D080059BE0D /* DrawUnlineAndScore.h */,
 				338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */,
+				33A32B0120DC95AF008C3969 /* DrawLine.h */,
+				33A32B0220DC95AF008C3969 /* DrawLine.m */,
 			);
 			path = DrawWaveLine;
 			sourceTree = "<group>";
@@ -280,6 +293,7 @@
 		33A32ACA20D8B4D5008C3969 /* 详情页 */ = {
 			isa = PBXGroup;
 			children = (
+				33A32AFD20DB7D3E008C3969 /* Model */,
 				33A32AF020DA7FFC008C3969 /* SegementDemoViewController.h */,
 				33A32AF120DA7FFC008C3969 /* SegementDemoViewController.m */,
 				33A32AF320DA8044008C3969 /* SegementPersonDemoViewController.h */,
@@ -332,6 +346,15 @@
 				33A32AEE20DA795E008C3969 /* UIButton+SegementCustomButton.m */,
 			);
 			path = UIKitCategory;
+			sourceTree = "<group>";
+		};
+		33A32AFD20DB7D3E008C3969 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33A32AFE20DB7D5C008C3969 /* SectionModel.h */,
+				33A32AFF20DB7D5C008C3969 /* SectionModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		359209391D424CA64C1C9257 /* Pods */ = {
@@ -488,11 +511,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -524,7 +549,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A32B0020DB7D5C008C3969 /* SectionModel.m in Sources */,
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
+				338FEB5B20DCCF8D0025631B /* POPNumberAnimation.m in Sources */,
 				33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */,
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
 				33A32AF920DB3909008C3969 /* SegementChildViewController.m in Sources */,
@@ -544,6 +571,7 @@
 				333D109120CF9698004D9241 /* CellModel.m in Sources */,
 				33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
+				33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */,
 				333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */,
 				33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */,
 				33A32AD220D8EA70008C3969 /* CarouselLayout.m in Sources */,
@@ -718,7 +746,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MR4GTF2765;
+				DEVELOPMENT_TEAM = B4Q6JBQZP4;
 				INFOPLIST_FILE = MyProjectModule/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -736,7 +764,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MR4GTF2765;
+				DEVELOPMENT_TEAM = B4Q6JBQZP4;
 				INFOPLIST_FILE = MyProjectModule/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

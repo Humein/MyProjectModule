@@ -8,6 +8,7 @@
 
 #import "DrawViewController.h"
 #import "DrawUnlineAndScore.h"
+#import "DrawLine.h"
 @interface DrawViewController ()
 @property (nonatomic, strong) UITextView *textView;
 
@@ -19,12 +20,30 @@
     [super viewDidLoad];
     UITextView *textStuff = [[UITextView alloc] init];
     textStuff.font = [UIFont systemFontOfSize:16];
-    textStuff.frame = CGRectMake(50.0, 100.0, 300.0, 140.0);
+    textStuff.frame = CGRectMake(50.0, 100.0, 100.0, 140.0);
     textStuff.textColor = [UIColor blackColor];
     [self.view addSubview:textStuff];
     self.textView = textStuff;
     
+    
+    DrawLine *line = [[DrawLine alloc]initWithFrame:CGRectMake(50, 300, 50, 50)];
+    line.lineBackgroundColor = [UIColor grayColor];
+    line.lineForegroundColor = [UIColor redColor];
+    line.lineWidht = 2;
+    line.duration = 2;
+    line.numberFont = 15;
+    line.numberColor = [UIColor redColor];
+    
+    [self.view addSubview:line];
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [line setStrokeEnd:0.8 AndNumberValue:55 animated:YES];
+
+    });
+
+    
 }
+
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];

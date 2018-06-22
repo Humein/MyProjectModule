@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SegementChildViewController : UIViewController
+#import "PersonalCenterChildViewController.h"
+@interface SegementChildViewController : PersonalCenterChildViewController
 
 @property (nonatomic,assign)NSInteger categoryId;
 

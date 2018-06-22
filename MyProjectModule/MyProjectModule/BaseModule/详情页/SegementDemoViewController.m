@@ -45,7 +45,7 @@
     configure.spacingBetweenButtons = 30;
     
 
-    NSArray *dicArray = [NSArray arrayWithObjects:@{@"categoryId":@"11"},@{@"categoryId":@"22"},@{@"categoryId":@"33"},@{@"categoryId":@"44"},@{@"categoryId":@"55"},@{@"categoryId":@"65"}, nil];
+    NSArray *dicArray = [NSArray arrayWithObjects:@{@"categoryId":@"11"},@{@"categoryId":@"22"}, nil];
     
     NSMutableArray *childArray = [NSMutableArray array];
     NSMutableArray *titleArr = [NSMutableArray array];
@@ -56,7 +56,7 @@
         [childArray addObject:[self viewControlForCategoryId:cID]];
     }
 
-    self.pageTitleView = [SegementTitleView pageTitleViewWithFrame:CGRectMake(0, pageTitleViewY, self.view.frame.size.width, 44) delegate:self titleNames:titleArr configure:configure];
+    self.pageTitleView = [SegementTitleView pageTitleViewWithFrame:CGRectMake(0, pageTitleViewY, self.view.frame.size.width * 0.5, 44) delegate:self titleNames:titleArr configure:configure];
     [self.view addSubview:_pageTitleView];
     
     
