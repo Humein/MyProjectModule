@@ -9,6 +9,7 @@
 #import "DrawViewController.h"
 #import "DrawUnlineAndScore.h"
 #import "DrawLine.h"
+#import "DrawBaseAnimaltionView.h"
 @interface DrawViewController ()
 @property (nonatomic, strong) UITextView *textView;
 
@@ -26,6 +27,8 @@
     self.textView = textStuff;
     
     
+    {
+//         进度
     DrawLine *line = [[DrawLine alloc]initWithFrame:CGRectMake(50, 300, 50, 50)];
     line.lineBackgroundColor = [UIColor grayColor];
     line.lineForegroundColor = [UIColor redColor];
@@ -40,7 +43,15 @@
         [line setStrokeEnd:0.8 AndNumberValue:55 animated:YES];
 
     });
+    }
+    
+    {
+//   脉动
+        DrawBaseAnimaltionView *heartBeat = [[DrawBaseAnimaltionView alloc]initWithFrame:CGRectMake(50, 400, 50, 50)];
+        heartBeat.backgroundColor = [UIColor grayColor];
+        [self.view addSubview:heartBeat];
 
+    }
     
 }
 

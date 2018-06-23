@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
 @interface DrawLine : UIView
 //进度颜色 默认red
 @property (nonatomic,strong) UIColor *lineForegroundColor;

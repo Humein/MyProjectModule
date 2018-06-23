@@ -55,7 +55,7 @@
     self.label.textColor = _numberColor ?: [UIColor blackColor];
     self.label.font = [UIFont systemFontOfSize:_numberFont?:8];
 
-    self.circleLayer.path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 0, 0)
+    self.circleLayer.path = [UIBezierPath bezierPathWithRoundedRect:rect
                                                        cornerRadius:radius].CGPath;
     self.circleBGLayer.path = [UIBezierPath bezierPathWithRoundedRect:rect
                                                          cornerRadius:radius].CGPath;
@@ -76,7 +76,7 @@
     [self addSubview:self.label];
     [self.layer addSublayer:self.circleBGLayer];
     [self.layer addSublayer:self.circleLayer];
-
+    self.circleLayer.hidden = YES;
 }
 
 
@@ -102,6 +102,7 @@
     [self.numberAnimation saveValues];
     animated ? [self.numberAnimation startAnimation]: [self textString:numberValue];
 //  ShapeLayerAnimation
+    self.circleLayer.hidden = NO;
     POPBasicAnimation *strokeAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPShapeLayerStrokeEnd];
     strokeAnimation.fromValue = @(0.0f);
     strokeAnimation.toValue = @(strokeEnd);

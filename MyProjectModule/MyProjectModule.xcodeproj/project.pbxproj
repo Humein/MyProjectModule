@@ -26,6 +26,7 @@
 		333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D10A120D24FD5004D9241 /* DrawViewController.m */; };
 		338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */; };
 		338FEB5B20DCCF8D0025631B /* POPNumberAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEB5920DCCF8D0025631B /* POPNumberAnimation.m */; };
+		338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEB5E20DCFC7D0025631B /* DrawBaseAnimaltionView.m */; };
 		33A32AD220D8EA70008C3969 /* CarouselLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AD120D8EA70008C3969 /* CarouselLayout.m */; };
 		33A32AD520D8ECC8008C3969 /* WaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AD420D8ECC8008C3969 /* WaterfallLayout.m */; };
 		33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32ADA20D90681008C3969 /* SegmentContentView.m */; };
@@ -96,6 +97,8 @@
 		338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawUnlineAndScore.m; sourceTree = "<group>"; };
 		338FEB5920DCCF8D0025631B /* POPNumberAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPNumberAnimation.m; sourceTree = "<group>"; };
 		338FEB5A20DCCF8D0025631B /* POPNumberAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPNumberAnimation.h; sourceTree = "<group>"; };
+		338FEB5D20DCFC7D0025631B /* DrawBaseAnimaltionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawBaseAnimaltionView.h; sourceTree = "<group>"; };
+		338FEB5E20DCFC7D0025631B /* DrawBaseAnimaltionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawBaseAnimaltionView.m; sourceTree = "<group>"; };
 		33A32AD020D8EA70008C3969 /* CarouselLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarouselLayout.h; sourceTree = "<group>"; };
 		33A32AD120D8EA70008C3969 /* CarouselLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarouselLayout.m; sourceTree = "<group>"; };
 		33A32AD320D8ECC8008C3969 /* WaterfallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterfallLayout.h; sourceTree = "<group>"; };
@@ -261,14 +264,15 @@
 		333D109F20D2383A004D9241 /* DrawWaveLine */ = {
 			isa = PBXGroup;
 			children = (
-				338FEB5A20DCCF8D0025631B /* POPNumberAnimation.h */,
-				338FEB5920DCCF8D0025631B /* POPNumberAnimation.m */,
-				333D10A020D24FD5004D9241 /* DrawViewController.h */,
-				333D10A120D24FD5004D9241 /* DrawViewController.m */,
 				338ECBA320D25D080059BE0D /* DrawUnlineAndScore.h */,
 				338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */,
 				33A32B0120DC95AF008C3969 /* DrawLine.h */,
 				33A32B0220DC95AF008C3969 /* DrawLine.m */,
+				338FEB5D20DCFC7D0025631B /* DrawBaseAnimaltionView.h */,
+				338FEB5E20DCFC7D0025631B /* DrawBaseAnimaltionView.m */,
+				338FEB5C20DCFC290025631B /* abstractOBJ */,
+				333D10A020D24FD5004D9241 /* DrawViewController.h */,
+				333D10A120D24FD5004D9241 /* DrawViewController.m */,
 			);
 			path = DrawWaveLine;
 			sourceTree = "<group>";
@@ -280,6 +284,15 @@
 				33A32ACA20D8B4D5008C3969 /* 详情页 */,
 			);
 			path = BaseModule;
+			sourceTree = "<group>";
+		};
+		338FEB5C20DCFC290025631B /* abstractOBJ */ = {
+			isa = PBXGroup;
+			children = (
+				338FEB5A20DCCF8D0025631B /* POPNumberAnimation.h */,
+				338FEB5920DCCF8D0025631B /* POPNumberAnimation.m */,
+			);
+			path = abstractOBJ;
 			sourceTree = "<group>";
 		};
 		33A32AC920D8AF8F008C3969 /* NetRequstAndSocket */ = {
@@ -564,6 +577,7 @@
 				33A32AD520D8ECC8008C3969 /* WaterfallLayout.m in Sources */,
 				33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
+				338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */,
 				333D108E20CF6E24004D9241 /* AlertTableView.m in Sources */,
 				333D109420CFA054004D9241 /* AbstractTableViewCell.m in Sources */,
 				33A32AEC20DA78FA008C3969 /* UIView+ChainFrameView.m in Sources */,
