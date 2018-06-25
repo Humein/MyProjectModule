@@ -50,15 +50,16 @@
 -(void)finishConfigLine{
     UIBezierPath * path = [UIBezierPath bezierPath];
     path.lineWidth = 4;
-    CGFloat radius = CGRectGetWidth(self.bounds);
-    CGRect rect = CGRectMake(0, 0, radius, radius);
+    _cycleSize.width = _cycleSize.width?:50;
+    _cycleSize.height = _cycleSize.height?:50;
+    CGRect rect = CGRectMake(0, 0, _cycleSize.width, _cycleSize.height);
     self.label.textColor = _numberColor ?: [UIColor blackColor];
     self.label.font = [UIFont systemFontOfSize:_numberFont?:8];
 
     self.circleLayer.path = [UIBezierPath bezierPathWithRoundedRect:rect
-                                                       cornerRadius:radius].CGPath;
+                                                       cornerRadius:_cycleSize.width].CGPath;
     self.circleBGLayer.path = [UIBezierPath bezierPathWithRoundedRect:rect
-                                                         cornerRadius:radius].CGPath;
+                                                         cornerRadius:_cycleSize.width].CGPath;
     
     self.circleLayer.strokeColor = _lineForegroundColor.CGColor ?:[UIColor redColor].CGColor;
     self.circleLayer.fillColor = nil;
@@ -72,7 +73,7 @@
     self.circleBGLayer.lineCap = kCALineCapRound;
     self.circleBGLayer.lineJoin = kCALineJoinRound;
     
-    
+    [self.label setFrame:rect];
     [self addSubview:self.label];
     [self.layer addSublayer:self.circleBGLayer];
     [self.layer addSublayer:self.circleLayer];

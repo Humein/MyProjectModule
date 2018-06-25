@@ -53,7 +53,9 @@
     
     self.dataSources = [NSMutableArray arrayWithArray:@[firstArr,
                                                         secondArr.copy,
-                                                        ]];}
+                                                        ]];
+    
+}
 
 
 

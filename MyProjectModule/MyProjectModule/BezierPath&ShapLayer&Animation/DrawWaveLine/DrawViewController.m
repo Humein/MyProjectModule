@@ -32,6 +32,7 @@
     DrawLine *line = [[DrawLine alloc]initWithFrame:CGRectMake(50, 300, 50, 50)];
     line.lineBackgroundColor = [UIColor grayColor];
     line.lineForegroundColor = [UIColor redColor];
+    line.cycleSize = CGSizeMake(50, 50);
     line.lineWidht = 2;
     line.duration = 2;
     line.numberFont = 15;

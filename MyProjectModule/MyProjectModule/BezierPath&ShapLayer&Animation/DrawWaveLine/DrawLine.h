@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 @interface DrawLine : UIView
+//大小 默认50
+@property (nonatomic,assign)CGSize cycleSize;
 //进度颜色 默认red
 @property (nonatomic,strong) UIColor *lineForegroundColor;
 //进度背景 默认black
