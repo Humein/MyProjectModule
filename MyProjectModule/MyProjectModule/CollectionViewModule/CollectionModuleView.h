@@ -23,7 +23,6 @@ typedef NSInteger ScrollDirection;
 - (void)autoViewSelectCellForIndexPath:(NSIndexPath*)indexPath inAutoView:(CollectionModuleView *)autoView;
 
 
-- (void)autoViewWillDisplayCellIndexPath:(NSIndexPath*)indexPath inAutoView:(CollectionModuleView *)autoView;
 
 
 

@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 @interface BlockObject : UIViewController
 
-//As a property
+//As a property 逆向传值
 @property (nonatomic,copy) void (^rightBarItemClickBlock)(UIButton *button, NSInteger index);
 //返回值,链式编程实现原理
 - (BlockObject * (^) (NSString * rightName,CGRect frame,BOOL isImage))rightBarItem;
