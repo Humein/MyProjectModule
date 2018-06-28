@@ -55,6 +55,7 @@
 		33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4EE20E2452D00BE7175 /* JHBodyCell.m */; };
 		33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F320E2459200BE7175 /* SectionFModel.m */; };
 		33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F420E2459200BE7175 /* CellFModel.m */; };
+		33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +168,8 @@
 		33FAE4F420E2459200BE7175 /* CellFModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellFModel.m; sourceTree = "<group>"; };
 		33FAE4F520E2459200BE7175 /* CellFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellFModel.h; sourceTree = "<group>"; };
 		33FAE4F620E2459200BE7175 /* SectionFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionFModel.h; sourceTree = "<group>"; };
+		33FAE50520E3693400BE7175 /* AbstractFCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractFCollectionView.h; sourceTree = "<group>"; };
+		33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractFCollectionView.m; sourceTree = "<group>"; };
 		37274BAA150B3CCC94945653 /* Pods_MyProjectModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C26993B1DAA4E4068C6E736 /* Pods-MyProjectModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.debug.xcconfig"; sourceTree = "<group>"; };
 		A36D58F14EAF98187791F3CA /* Pods-MyProjectModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.release.xcconfig"; sourceTree = "<group>"; };
@@ -449,6 +452,8 @@
 				33FAE4E820E244A800BE7175 /* Cell */,
 				33FAE4D220E243B700BE7175 /* CollectionDetaiDemo.h */,
 				33FAE4D120E243B700BE7175 /* CollectionDetaiDemo.m */,
+				33FAE50520E3693400BE7175 /* AbstractFCollectionView.h */,
+				33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -717,6 +722,7 @@
 				33FAE4E720E2445500BE7175 /* WaterfallLayout.m in Sources */,
 				333D109120CF9698004D9241 /* CellModel.m in Sources */,
 				33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */,
+				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */,
 				33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */,

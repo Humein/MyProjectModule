@@ -9,6 +9,7 @@
 #import "CollectionSectionViewController.h"
 #import "CollectionDetaiDemo.h"
 #import "HeaderSuspendedLayout.h"
+#import "SectionFModel.h"
 @interface CollectionSectionViewController ()
 
 @end
@@ -24,8 +25,18 @@
     layout.minimumLineSpacing = 10;
     //设置头部视图的尺寸
     layout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height * 0.085);
-    [demo reloadDataWithFlowLayout:layout];
-
+    [demo initViewWithFlowLayout:layout];
+    
+    //保存模型的数组
+    NSMutableArray *temp = [NSMutableArray array];
+    //字典转模型
+    NSArray *dictArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"HomeDatas" ofType:@"plist"]];
+    for (NSDictionary *dict in dictArray) {
+        SectionFModel *home = [SectionFModel homeWithDict:dict];
+        [temp addObject:home];
+    }
+    [demo reloadDataWithArray:temp];
+    
     [self.view addSubview:demo];
     
     

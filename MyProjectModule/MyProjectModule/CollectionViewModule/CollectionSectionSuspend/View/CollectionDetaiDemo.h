@@ -26,6 +26,6 @@
 
 @property (nonatomic,weak)id <CollectionViewDelegate>delegate;
 @property (nonatomic,weak)id <CollectionViewDataSource>dataSource;
-
--(void)reloadDataWithFlowLayout:(UICollectionViewFlowLayout *)flowLayout;
+-(void)initViewWithFlowLayout:(UICollectionViewFlowLayout *)flowLayout;
+-(void)reloadDataWithArray:(NSArray *)array;
 @end

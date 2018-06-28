@@ -26,7 +26,7 @@ static NSString *const kHeaderID = @"JHHeaderReusableView";
 @implementation CollectionDetaiDemo
 
 
--(void)reloadDataWithFlowLayout:(UICollectionViewFlowLayout *)flowLayout{
+-(void)initViewWithFlowLayout:(UICollectionViewFlowLayout *)flowLayout{
 
     if (flowLayout) {
         _flowLayout = flowLayout;
@@ -161,7 +161,9 @@ static NSString *const kHeaderID = @"JHHeaderReusableView";
 //}
 
 
-
+-(void)reloadDataWithArray:(NSArray *)array{
+    self.bodyArray = [array mutableCopy];
+}
 
 
 #pragma mark -- get&Set
@@ -169,15 +171,7 @@ static NSString *const kHeaderID = @"JHHeaderReusableView";
 {
     if (!_bodyArray) {
         
-        //保存模型的数组
-        NSMutableArray *temp = [NSMutableArray array];
-        //字典转模型
-        NSArray *dictArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"HomeDatas" ofType:@"plist"]];
-        for (NSDictionary *dict in dictArray) {
-            SectionFModel *home = [SectionFModel homeWithDict:dict];
-            [temp addObject:home];
-        }
-        _bodyArray = temp;
+        _bodyArray = [NSMutableArray array];
     }
     
     return _bodyArray;
