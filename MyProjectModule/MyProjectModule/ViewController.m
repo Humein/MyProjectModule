@@ -36,7 +36,7 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.itemList = [NSMutableArray array];
-    NSArray *list = [NSArray arrayWithObjects: @"colloctionViewController",@"DrawViewController",@"SegementDemoViewController",@"SegementPersonDemoViewController",@"SegementChildViewController",@"CollectionSectionViewController", nil];
+    NSArray *list = [NSArray arrayWithObjects: @"colloctionViewController",@"DrawViewController",@"SegementDemoViewController",@"SegementPersonDemoViewController",@"SegementChildViewController",@"CollectionSectionViewController",@"PaternalViewController",@"PaternalSViewController", nil];
     [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         CellModel *model =  [CellModel new];
         model.itemHeight = [model titleHeight];
@@ -51,15 +51,23 @@
 
 #pragma mark ---NetWorkRequest
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
+//  AlertTableView
     self.tableView.FromPoint = CGPointMake(0, 100);
     self.tableView.isSelectIndexToHidden= YES;
     self.tableView.tableViewFrame= CGRectMake(0, 0, self.view.frame.size.width, 30*self.itemList.count + 20);
     self.tableView.tableView.layer.cornerRadius= 4;
     self.tableView.tableView.contentInset=UIEdgeInsetsMake(0, 0, 0, 0);
     
+    
+    
+    
     [self.tableView showInView:self.view];
     [self.tableView reloadData];
+// scrollView 偏移量
+//    NSIndexPath * IndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//    [self.tableView scrollToRowAtIndexPath:IndexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
+
+    [self.tableView.tableView scrollRectToVisible:CGRectMake(0, 0, 10000, 10000) animated:YES];
 
 }
 #pragma mark ----Delegate

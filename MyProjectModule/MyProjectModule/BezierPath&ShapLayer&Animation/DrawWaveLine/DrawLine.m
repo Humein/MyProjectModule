@@ -48,19 +48,39 @@
 }
 
 -(void)finishConfigLine{
-    UIBezierPath * path = [UIBezierPath bezierPath];
-    path.lineWidth = 4;
+
     _cycleSize.width = _cycleSize.width?:50;
     _cycleSize.height = _cycleSize.height?:50;
     CGRect rect = CGRectMake(0, 0, _cycleSize.width, _cycleSize.height);
     self.label.textColor = _numberColor ?: [UIColor blackColor];
     self.label.font = [UIFont systemFontOfSize:_numberFont?:8];
 
-    self.circleLayer.path = [UIBezierPath bezierPathWithRoundedRect:rect
-                                                       cornerRadius:_cycleSize.width].CGPath;
-    self.circleBGLayer.path = [UIBezierPath bezierPathWithRoundedRect:rect
-                                                         cornerRadius:_cycleSize.width].CGPath;
+// UIBezierPath
+    if (!_customizePath) {
+        _customizePath =  [UIBezierPath bezierPath];
+        _customizePath.lineWidth = 10;
+        
+        if (1) {
+            _customizePath = [UIBezierPath bezierPathWithRoundedRect:rect
+                                                        cornerRadius:_cycleSize.width];
+            _customizePath = [UIBezierPath bezierPathWithRoundedRect:rect
+                                                        cornerRadius:_cycleSize.width];
+            [self.label setFrame:rect];
+            [self addSubview:self.label];
+            
+        }else{
+            [_customizePath moveToPoint:CGPointMake(0, 0)];
+            [_customizePath addLineToPoint:CGPointMake(_cycleSize.width, 0)];
+            [self.label setFrame:rect];
+            [self addSubview:self.label];
+        }
+    }
+
+    self.circleLayer.path = _customizePath.CGPath;
+    self.circleBGLayer.path = _customizePath.CGPath;
     
+    
+// CAShapeLayer
     self.circleLayer.strokeColor = _lineForegroundColor.CGColor ?:[UIColor redColor].CGColor;
     self.circleLayer.fillColor = nil;
     self.circleLayer.lineWidth= _lineWidht?:3;
@@ -73,8 +93,7 @@
     self.circleBGLayer.lineCap = kCALineCapRound;
     self.circleBGLayer.lineJoin = kCALineJoinRound;
     
-    [self.label setFrame:rect];
-    [self addSubview:self.label];
+
     [self.layer addSublayer:self.circleBGLayer];
     [self.layer addSublayer:self.circleLayer];
     self.circleLayer.hidden = YES;
@@ -90,6 +109,8 @@
 -(void)textString:(CGFloat )currentValue{
     NSString *numberString = [NSString stringWithFormat:@"%.0f%@", currentValue,@"%"];
     self.label.text = numberString;
+//    _label.textColor = [self numColorWithValue:currentValue / 100.f];
+
 }
 
 - (void)setStrokeEnd:(CGFloat)strokeEnd AndNumberValue:(CGFloat )numberValue animated:(BOOL)animated
@@ -111,6 +132,10 @@
     strokeAnimation.removedOnCompletion = YES;
     [self.circleLayer pop_addAnimation:strokeAnimation forKey:@"layerStrokeAnimation"];
 
+}
+- (UIColor *)numColorWithValue:(CGFloat)value {
+    
+    return [UIColor colorWithRed:value green:0 blue:0 alpha:1.f];
 }
 -(void)dealloc{
     [self pop_removeAllAnimations];

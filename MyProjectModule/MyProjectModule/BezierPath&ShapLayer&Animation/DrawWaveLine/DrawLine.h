@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 @interface DrawLine : UIView
+
+//自定义图形
+@property (nonatomic,strong) UIBezierPath * customizePath;
 //大小 默认50
 @property (nonatomic,assign)CGSize cycleSize;
 //进度颜色 默认red

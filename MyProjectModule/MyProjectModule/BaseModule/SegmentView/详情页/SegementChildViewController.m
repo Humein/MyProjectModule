@@ -105,7 +105,13 @@
 
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    
+//    __weak typeof(self) weakSelf = self;
+//    HTStandardAnswerHeaderView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([HTStandardAnswerHeaderView class])];
+//    view.model = self.model.answerList[section];
+//    [view setButtonClick:^(HTTopicStandardAnswerModel *model, BOOL open) {
+//        [weakSelf.tableView reloadData];
+//    }];
+//    return view;
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 2)];
     view.backgroundColor = [UIColor redColor];
     return view;

@@ -24,6 +24,16 @@
 		333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109920D0ECA0004D9241 /* CollectionModuleView.m */; };
 		333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109C20D14489004D9241 /* AbstractCollectionViewCell.m */; };
 		333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D10A120D24FD5004D9241 /* DrawViewController.m */; };
+		33888FC320EDCCCB00E4A119 /* CAGradientLayerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FC220EDCCCB00E4A119 /* CAGradientLayerDemo.m */; };
+		33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FCB20F05ADB00E4A119 /* ViewControllerChildOne.m */; };
+		33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FD020F05ADB00E4A119 /* ViewControllerChildTwo.m */; };
+		33888FD420F05ADB00E4A119 /* PaternalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FD120F05ADB00E4A119 /* PaternalViewController.m */; };
+		33888FDB20F05DBA00E4A119 /* ImitateSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FDA20F05DBA00E4A119 /* ImitateSegmentViewController.m */; };
+		33888FDE20F05E3500E4A119 /* SegmentContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FDD20F05E3500E4A119 /* SegmentContentCell.m */; };
+		33888FE120F05E6B00E4A119 /* SegmentSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FE020F05E6B00E4A119 /* SegmentSliderView.m */; };
+		33888FE420F0683C00E4A119 /* UIView+frameAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FE320F0683C00E4A119 /* UIView+frameAdjust.m */; };
+		33888FE820F06AC900E4A119 /* PaternalSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FE720F06AC900E4A119 /* PaternalSViewController.m */; };
+		33888FEB20F06ADD00E4A119 /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FEA20F06ADD00E4A119 /* ChildViewController.m */; };
 		338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */; };
 		338FEB5B20DCCF8D0025631B /* POPNumberAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEB5920DCCF8D0025631B /* POPNumberAnimation.m */; };
 		338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEB5E20DCFC7D0025631B /* DrawBaseAnimaltionView.m */; };
@@ -56,6 +66,7 @@
 		33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F320E2459200BE7175 /* SectionFModel.m */; };
 		33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F420E2459200BE7175 /* CellFModel.m */; };
 		33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */; };
+		33FAE51920E5E61400BE7175 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 33FAE51820E5E61400BE7175 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +119,27 @@
 		333D109C20D14489004D9241 /* AbstractCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractCollectionViewCell.m; sourceTree = "<group>"; };
 		333D10A020D24FD5004D9241 /* DrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
 		333D10A120D24FD5004D9241 /* DrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
+		33888FC120EDCCCB00E4A119 /* CAGradientLayerDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAGradientLayerDemo.h; sourceTree = "<group>"; };
+		33888FC220EDCCCB00E4A119 /* CAGradientLayerDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAGradientLayerDemo.m; sourceTree = "<group>"; };
+		33888FCB20F05ADB00E4A119 /* ViewControllerChildOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerChildOne.m; sourceTree = "<group>"; };
+		33888FCC20F05ADB00E4A119 /* ViewControllerChildTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerChildTwo.h; sourceTree = "<group>"; };
+		33888FCD20F05ADB00E4A119 /* PaternalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaternalViewController.h; sourceTree = "<group>"; };
+		33888FCE20F05ADB00E4A119 /* ViewControllerChildOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerChildOne.h; sourceTree = "<group>"; };
+		33888FCF20F05ADB00E4A119 /* BookVCProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookVCProtocol.h; sourceTree = "<group>"; };
+		33888FD020F05ADB00E4A119 /* ViewControllerChildTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerChildTwo.m; sourceTree = "<group>"; };
+		33888FD120F05ADB00E4A119 /* PaternalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaternalViewController.m; sourceTree = "<group>"; };
+		33888FD920F05DBA00E4A119 /* ImitateSegmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImitateSegmentViewController.h; sourceTree = "<group>"; };
+		33888FDA20F05DBA00E4A119 /* ImitateSegmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImitateSegmentViewController.m; sourceTree = "<group>"; };
+		33888FDC20F05E3500E4A119 /* SegmentContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentContentCell.h; sourceTree = "<group>"; };
+		33888FDD20F05E3500E4A119 /* SegmentContentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentContentCell.m; sourceTree = "<group>"; };
+		33888FDF20F05E6B00E4A119 /* SegmentSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentSliderView.h; sourceTree = "<group>"; };
+		33888FE020F05E6B00E4A119 /* SegmentSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentSliderView.m; sourceTree = "<group>"; };
+		33888FE220F0683C00E4A119 /* UIView+frameAdjust.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+frameAdjust.h"; sourceTree = "<group>"; };
+		33888FE320F0683C00E4A119 /* UIView+frameAdjust.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+frameAdjust.m"; sourceTree = "<group>"; };
+		33888FE620F06AC900E4A119 /* PaternalSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaternalSViewController.h; sourceTree = "<group>"; };
+		33888FE720F06AC900E4A119 /* PaternalSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaternalSViewController.m; sourceTree = "<group>"; };
+		33888FE920F06ADD00E4A119 /* ChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
+		33888FEA20F06ADD00E4A119 /* ChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
 		338ECBA320D25D080059BE0D /* DrawUnlineAndScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawUnlineAndScore.h; sourceTree = "<group>"; };
 		338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawUnlineAndScore.m; sourceTree = "<group>"; };
 		338FEB5920DCCF8D0025631B /* POPNumberAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPNumberAnimation.m; sourceTree = "<group>"; };
@@ -170,6 +202,7 @@
 		33FAE4F620E2459200BE7175 /* SectionFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionFModel.h; sourceTree = "<group>"; };
 		33FAE50520E3693400BE7175 /* AbstractFCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractFCollectionView.h; sourceTree = "<group>"; };
 		33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractFCollectionView.m; sourceTree = "<group>"; };
+		33FAE51820E5E61400BE7175 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		37274BAA150B3CCC94945653 /* Pods_MyProjectModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C26993B1DAA4E4068C6E736 /* Pods-MyProjectModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.debug.xcconfig"; sourceTree = "<group>"; };
 		A36D58F14EAF98187791F3CA /* Pods-MyProjectModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.release.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +237,7 @@
 		333D104920CE74A8004D9241 = {
 			isa = PBXGroup;
 			children = (
+				33FAE51820E5E61400BE7175 /* README.md */,
 				333D105420CE74A8004D9241 /* MyProjectModule */,
 				333D106D20CE74AB004D9241 /* MyProjectModuleTests */,
 				333D107820CE74AB004D9241 /* MyProjectModuleUITests */,
@@ -226,6 +260,7 @@
 		333D105420CE74A8004D9241 /* MyProjectModule */ = {
 			isa = PBXGroup;
 			children = (
+				339D6C7420EA285700AC535E /* DataTransmission  */,
 				33A32AC920D8AF8F008C3969 /* NetRequstAndSocket */,
 				33828F1120D3CAB800318AE5 /* BaseModule */,
 				333D109E20D23810004D9241 /* BezierPath&ShapLayer&Animation */,
@@ -297,6 +332,7 @@
 		333D109E20D23810004D9241 /* BezierPath&ShapLayer&Animation */ = {
 			isa = PBXGroup;
 			children = (
+				338FEB5C20DCFC290025631B /* abstractOBJ */,
 				333D109F20D2383A004D9241 /* DrawWaveLine */,
 			);
 			path = "BezierPath&ShapLayer&Animation";
@@ -311,7 +347,8 @@
 				33A32B0220DC95AF008C3969 /* DrawLine.m */,
 				338FEB5D20DCFC7D0025631B /* DrawBaseAnimaltionView.h */,
 				338FEB5E20DCFC7D0025631B /* DrawBaseAnimaltionView.m */,
-				338FEB5C20DCFC290025631B /* abstractOBJ */,
+				33888FC120EDCCCB00E4A119 /* CAGradientLayerDemo.h */,
+				33888FC220EDCCCB00E4A119 /* CAGradientLayerDemo.m */,
 				333D10A020D24FD5004D9241 /* DrawViewController.h */,
 				333D10A120D24FD5004D9241 /* DrawViewController.m */,
 			);
@@ -321,16 +358,76 @@
 		33828F1120D3CAB800318AE5 /* BaseModule */ = {
 			isa = PBXGroup;
 			children = (
+				33888FD820F05C3600E4A119 /* ImitateWMPage */,
 				33FAE4B820E1E37300BE7175 /* BookMarkSegement */,
 				338FEBFC20E0F2390025631B /* BaseUIKitFactory */,
 				33A32ACB20D8B4D5008C3969 /* SegmentView */,
-				33A32ACA20D8B4D5008C3969 /* 详情页 */,
 				338FEBF320E0B5440025631B /* CustomAlertView.h */,
 				338FEBF420E0B5440025631B /* CustomAlertView.m */,
+			);
+			path = BaseModule;
+			sourceTree = "<group>";
+		};
+		33888FCA20F05ADB00E4A119 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				33888FCB20F05ADB00E4A119 /* ViewControllerChildOne.m */,
+				33888FCC20F05ADB00E4A119 /* ViewControllerChildTwo.h */,
+				33888FCD20F05ADB00E4A119 /* PaternalViewController.h */,
+				33888FCE20F05ADB00E4A119 /* ViewControllerChildOne.h */,
+				33888FCF20F05ADB00E4A119 /* BookVCProtocol.h */,
+				33888FD020F05ADB00E4A119 /* ViewControllerChildTwo.m */,
+				33888FD120F05ADB00E4A119 /* PaternalViewController.m */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		33888FD520F05B0F00E4A119 /* KVO:KVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "KVO:KVC";
+			sourceTree = "<group>";
+		};
+		33888FD620F05B0F00E4A119 /* Block */ = {
+			isa = PBXGroup;
+			children = (
 				338FEBF920E0E3FC0025631B /* BlockObject.h */,
 				338FEBFA20E0E3FC0025631B /* BlockObject.m */,
 			);
-			path = BaseModule;
+			path = Block;
+			sourceTree = "<group>";
+		};
+		33888FD720F05B1400E4A119 /* Rumtime */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Rumtime;
+			sourceTree = "<group>";
+		};
+		33888FD820F05C3600E4A119 /* ImitateWMPage */ = {
+			isa = PBXGroup;
+			children = (
+				33888FE520F06A6A00E4A119 /* StestDemo */,
+				33888FD920F05DBA00E4A119 /* ImitateSegmentViewController.h */,
+				33888FDA20F05DBA00E4A119 /* ImitateSegmentViewController.m */,
+				33888FDC20F05E3500E4A119 /* SegmentContentCell.h */,
+				33888FDD20F05E3500E4A119 /* SegmentContentCell.m */,
+				33888FDF20F05E6B00E4A119 /* SegmentSliderView.h */,
+				33888FE020F05E6B00E4A119 /* SegmentSliderView.m */,
+			);
+			path = ImitateWMPage;
+			sourceTree = "<group>";
+		};
+		33888FE520F06A6A00E4A119 /* StestDemo */ = {
+			isa = PBXGroup;
+			children = (
+				33888FE620F06AC900E4A119 /* PaternalSViewController.h */,
+				33888FE720F06AC900E4A119 /* PaternalSViewController.m */,
+				33888FE920F06ADD00E4A119 /* ChildViewController.h */,
+				33888FEA20F06ADD00E4A119 /* ChildViewController.m */,
+			);
+			path = StestDemo;
 			sourceTree = "<group>";
 		};
 		338FEB5C20DCFC290025631B /* abstractOBJ */ = {
@@ -349,8 +446,21 @@
 				338FEBFE20E0F25A0025631B /* UIControlFactory.m */,
 				338FEC0320E0F5B70025631B /* UIButton+Decorate.h */,
 				338FEC0420E0F5B70025631B /* UIButton+Decorate.m */,
+				33888FE220F0683C00E4A119 /* UIView+frameAdjust.h */,
+				33888FE320F0683C00E4A119 /* UIView+frameAdjust.m */,
 			);
 			path = BaseUIKitFactory;
+			sourceTree = "<group>";
+		};
+		339D6C7420EA285700AC535E /* DataTransmission  */ = {
+			isa = PBXGroup;
+			children = (
+				33888FD720F05B1400E4A119 /* Rumtime */,
+				33888FD620F05B0F00E4A119 /* Block */,
+				33888FD520F05B0F00E4A119 /* KVO:KVC */,
+				33888FCA20F05ADB00E4A119 /* Protocol */,
+			);
+			path = "DataTransmission ";
 			sourceTree = "<group>";
 		};
 		33A32AC920D8AF8F008C3969 /* NetRequstAndSocket */ = {
@@ -378,6 +488,7 @@
 		33A32ACB20D8B4D5008C3969 /* SegmentView */ = {
 			isa = PBXGroup;
 			children = (
+				33A32ACA20D8B4D5008C3969 /* 详情页 */,
 				33A32AE620DA7864008C3969 /* UIKitCategory */,
 				33A32AF620DA82B7008C3969 /* SegementHeader.h */,
 				33A32AFA20DB4910008C3969 /* PersonalCenterChildViewController.h */,
@@ -620,6 +731,7 @@
 				333D106220CE74AB004D9241 /* LaunchScreen.storyboard in Resources */,
 				333D105F20CE74AB004D9241 /* Assets.xcassets in Resources */,
 				33FAE4F120E2452D00BE7175 /* JHHeaderReusableView.xib in Resources */,
+				33FAE51920E5E61400BE7175 /* README.md in Resources */,
 				333D105D20CE74A9004D9241 /* Main.storyboard in Resources */,
 				33FAE4EF20E2452D00BE7175 /* JHBodyCell.xib in Resources */,
 				33FAE4CC20E23DE500BE7175 /* HomeDatas.plist in Resources */,
@@ -693,23 +805,31 @@
 				338FEBF520E0B5450025631B /* CustomAlertView.m in Sources */,
 				33A32B0020DB7D5C008C3969 /* SectionModel.m in Sources */,
 				33FAE4F020E2452D00BE7175 /* JHHeaderReusableView.m in Sources */,
+				33888FC320EDCCCB00E4A119 /* CAGradientLayerDemo.m in Sources */,
 				33FAE4D820E243B800BE7175 /* CollectionDetaiDemo.m in Sources */,
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
 				338FEB5B20DCCF8D0025631B /* POPNumberAnimation.m in Sources */,
+				33888FE820F06AC900E4A119 /* PaternalSViewController.m in Sources */,
 				33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */,
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
 				338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */,
 				33A32AF920DB3909008C3969 /* SegementChildViewController.m in Sources */,
+				33888FDB20F05DBA00E4A119 /* ImitateSegmentViewController.m in Sources */,
 				333D106520CE74AB004D9241 /* main.m in Sources */,
 				33A32ADE20D90717008C3969 /* SegementTitleView.m in Sources */,
+				33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */,
 				338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */,
 				33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */,
 				33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */,
+				33888FD420F05ADB00E4A119 /* PaternalViewController.m in Sources */,
 				33A32AF520DA8044008C3969 /* SegementPersonDemoViewController.m in Sources */,
 				33A32AEF20DA795E008C3969 /* UIButton+SegementCustomButton.m in Sources */,
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
 				33A32AE920DA789D008C3969 /* UIScrollView+SlideGestureBack.m in Sources */,
+				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
 				33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */,
+				33888FE420F0683C00E4A119 /* UIView+frameAdjust.m in Sources */,
+				33888FEB20F06ADD00E4A119 /* ChildViewController.m in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
 				33FAE4E520E2445500BE7175 /* HeaderSuspendedLayout.m in Sources */,
 				338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */,
@@ -720,8 +840,10 @@
 				33A32AEC20DA78FA008C3969 /* UIView+ChainFrameView.m in Sources */,
 				333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */,
 				33FAE4E720E2445500BE7175 /* WaterfallLayout.m in Sources */,
+				33888FE120F05E6B00E4A119 /* SegmentSliderView.m in Sources */,
 				333D109120CF9698004D9241 /* CellModel.m in Sources */,
 				33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */,
+				33888FDE20F05E3500E4A119 /* SegmentContentCell.m in Sources */,
 				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */,
@@ -902,6 +1024,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B4Q6JBQZP4;
 				INFOPLIST_FILE = MyProjectModule/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -920,6 +1043,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B4Q6JBQZP4;
 				INFOPLIST_FILE = MyProjectModule/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
