@@ -46,6 +46,15 @@
 		339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B533F20F4AB29003444CB /* ZTKZTKBJDownItem.m */; };
 		339B534920F4AB2A003444CB /* ZTKDownHelperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B534220F4AB29003444CB /* ZTKDownHelperManager.m */; };
 		339B534A20F4AB2A003444CB /* ZTKLLDownHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B534320F4AB29003444CB /* ZTKLLDownHelper.m */; };
+		339B534D20F4AE74003444CB /* DownLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B534C20F4AE74003444CB /* DownLoadViewController.m */; };
+		339B535020F4AF35003444CB /* UIButton+ButtonBlockCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B534F20F4AF35003444CB /* UIButton+ButtonBlockCategory.m */; };
+		339B535520F4B078003444CB /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B535420F4B078003444CB /* PlayerViewController.m */; };
+		339B536020F4B28B003444CB /* BJPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B535F20F4B28B003444CB /* BJPlayer.m */; };
+		339B536320F4B29B003444CB /* ZSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B536220F4B29B003444CB /* ZSPlayer.m */; };
+		339B536620F4B39B003444CB /* ZSPlaterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B536520F4B39B003444CB /* ZSPlaterHelper.m */; };
+		339B536920F4B3CC003444CB /* BJPlayerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B536820F4B3CC003444CB /* BJPlayerHelper.m */; };
+		339B536C20F4B450003444CB /* AbstractPlayerHelperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B536B20F4B450003444CB /* AbstractPlayerHelperManager.m */; };
+		339B536E20F4B486003444CB /* AbstractPlayerProtocol.h in Sources */ = {isa = PBXBuildFile; fileRef = 339B536D20F4B486003444CB /* AbstractPlayerProtocol.h */; };
 		33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32ADA20D90681008C3969 /* SegmentContentView.m */; };
 		33A32ADE20D90717008C3969 /* SegementTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32ADD20D90717008C3969 /* SegementTitleView.m */; };
 		33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AE420DA2FA3008C3969 /* SegementTitleConfigured.m */; };
@@ -170,6 +179,25 @@
 		339B534320F4AB29003444CB /* ZTKLLDownHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTKLLDownHelper.m; sourceTree = "<group>"; };
 		339B534420F4AB2A003444CB /* ZTKZTKBJDownItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTKZTKBJDownItem.h; sourceTree = "<group>"; };
 		339B534520F4AB2A003444CB /* ZTKDownHelperProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTKDownHelperProtocol.h; sourceTree = "<group>"; };
+		339B534B20F4AE74003444CB /* DownLoadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownLoadViewController.h; sourceTree = "<group>"; };
+		339B534C20F4AE74003444CB /* DownLoadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownLoadViewController.m; sourceTree = "<group>"; };
+		339B534E20F4AF35003444CB /* UIButton+ButtonBlockCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ButtonBlockCategory.h"; sourceTree = "<group>"; };
+		339B534F20F4AF35003444CB /* UIButton+ButtonBlockCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ButtonBlockCategory.m"; sourceTree = "<group>"; };
+		339B535320F4B078003444CB /* PlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		339B535420F4B078003444CB /* PlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		339B535B20F4B1B2003444CB /* ZSPlayerProtovol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSPlayerProtovol.h; sourceTree = "<group>"; };
+		339B535D20F4B1B2003444CB /* BJPlayerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJPlayerProtocol.h; sourceTree = "<group>"; };
+		339B535E20F4B28B003444CB /* BJPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJPlayer.h; sourceTree = "<group>"; };
+		339B535F20F4B28B003444CB /* BJPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJPlayer.m; sourceTree = "<group>"; };
+		339B536120F4B29B003444CB /* ZSPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSPlayer.h; sourceTree = "<group>"; };
+		339B536220F4B29B003444CB /* ZSPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSPlayer.m; sourceTree = "<group>"; };
+		339B536420F4B39B003444CB /* ZSPlaterHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSPlaterHelper.h; sourceTree = "<group>"; };
+		339B536520F4B39B003444CB /* ZSPlaterHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSPlaterHelper.m; sourceTree = "<group>"; };
+		339B536720F4B3CC003444CB /* BJPlayerHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJPlayerHelper.h; sourceTree = "<group>"; };
+		339B536820F4B3CC003444CB /* BJPlayerHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJPlayerHelper.m; sourceTree = "<group>"; };
+		339B536A20F4B450003444CB /* AbstractPlayerHelperManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractPlayerHelperManager.h; sourceTree = "<group>"; };
+		339B536B20F4B450003444CB /* AbstractPlayerHelperManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractPlayerHelperManager.m; sourceTree = "<group>"; };
+		339B536D20F4B486003444CB /* AbstractPlayerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractPlayerProtocol.h; sourceTree = "<group>"; };
 		33A32AD920D90681008C3969 /* SegmentContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentContentView.h; sourceTree = "<group>"; };
 		33A32ADA20D90681008C3969 /* SegmentContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentContentView.m; sourceTree = "<group>"; };
 		33A32ADC20D90717008C3969 /* SegementTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementTitleView.h; sourceTree = "<group>"; };
@@ -418,6 +446,8 @@
 		33888FD720F05B1400E4A119 /* Rumtime */ = {
 			isa = PBXGroup;
 			children = (
+				339B534E20F4AF35003444CB /* UIButton+ButtonBlockCategory.h */,
+				339B534F20F4AF35003444CB /* UIButton+ButtonBlockCategory.m */,
 			);
 			path = Rumtime;
 			sourceTree = "<group>";
@@ -496,6 +526,10 @@
 		339B533820F4AA9D003444CB /* 策略模式  */ = {
 			isa = PBXGroup;
 			children = (
+				339B534B20F4AE74003444CB /* DownLoadViewController.h */,
+				339B534C20F4AE74003444CB /* DownLoadViewController.m */,
+				339B535320F4B078003444CB /* PlayerViewController.h */,
+				339B535420F4B078003444CB /* PlayerViewController.m */,
 				339B533920F4AB06003444CB /* DownLoad */,
 				339B533A20F4AB06003444CB /* Player */,
 			);
@@ -507,13 +541,13 @@
 			children = (
 				339B534020F4AB29003444CB /* ZTKBJDownHelper.h */,
 				339B533B20F4AB28003444CB /* ZTKBJDownHelper.m */,
+				339B533D20F4AB28003444CB /* ZTKLLDownHelper.h */,
+				339B534320F4AB29003444CB /* ZTKLLDownHelper.m */,
 				339B534120F4AB29003444CB /* ZTKDownHelperManager.h */,
 				339B534220F4AB29003444CB /* ZTKDownHelperManager.m */,
 				339B534520F4AB2A003444CB /* ZTKDownHelperProtocol.h */,
 				339B533E20F4AB29003444CB /* ZTKDownItem.h */,
 				339B533C20F4AB28003444CB /* ZTKDownItem.m */,
-				339B533D20F4AB28003444CB /* ZTKLLDownHelper.h */,
-				339B534320F4AB29003444CB /* ZTKLLDownHelper.m */,
 				339B534420F4AB2A003444CB /* ZTKZTKBJDownItem.h */,
 				339B533F20F4AB29003444CB /* ZTKZTKBJDownItem.m */,
 			);
@@ -523,8 +557,53 @@
 		339B533A20F4AB06003444CB /* Player */ = {
 			isa = PBXGroup;
 			children = (
+				339B535120F4B024003444CB /* Simulation--PlayerPlatform */,
+				339B535220F4B05C003444CB /* PlayerStrategy */,
 			);
 			path = Player;
+			sourceTree = "<group>";
+		};
+		339B535120F4B024003444CB /* Simulation--PlayerPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				339B535C20F4B1B2003444CB /* BJPlayer */,
+				339B535A20F4B1B2003444CB /* ZSPlayer */,
+			);
+			path = "Simulation--PlayerPlatform";
+			sourceTree = "<group>";
+		};
+		339B535220F4B05C003444CB /* PlayerStrategy */ = {
+			isa = PBXGroup;
+			children = (
+				339B536420F4B39B003444CB /* ZSPlaterHelper.h */,
+				339B536520F4B39B003444CB /* ZSPlaterHelper.m */,
+				339B536720F4B3CC003444CB /* BJPlayerHelper.h */,
+				339B536820F4B3CC003444CB /* BJPlayerHelper.m */,
+				339B536A20F4B450003444CB /* AbstractPlayerHelperManager.h */,
+				339B536B20F4B450003444CB /* AbstractPlayerHelperManager.m */,
+				339B536D20F4B486003444CB /* AbstractPlayerProtocol.h */,
+			);
+			path = PlayerStrategy;
+			sourceTree = "<group>";
+		};
+		339B535A20F4B1B2003444CB /* ZSPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				339B535B20F4B1B2003444CB /* ZSPlayerProtovol.h */,
+				339B536120F4B29B003444CB /* ZSPlayer.h */,
+				339B536220F4B29B003444CB /* ZSPlayer.m */,
+			);
+			path = ZSPlayer;
+			sourceTree = "<group>";
+		};
+		339B535C20F4B1B2003444CB /* BJPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				339B535D20F4B1B2003444CB /* BJPlayerProtocol.h */,
+				339B535E20F4B28B003444CB /* BJPlayer.h */,
+				339B535F20F4B28B003444CB /* BJPlayer.m */,
+			);
+			path = BJPlayer;
 			sourceTree = "<group>";
 		};
 		339D6C7420EA285700AC535E /* DataTransmission  */ = {
@@ -893,10 +972,12 @@
 				33A32AF920DB3909008C3969 /* SegementChildViewController.m in Sources */,
 				33888FDB20F05DBA00E4A119 /* ImitateSegmentViewController.m in Sources */,
 				333D106520CE74AB004D9241 /* main.m in Sources */,
+				339B536E20F4B486003444CB /* AbstractPlayerProtocol.h in Sources */,
 				33A32ADE20D90717008C3969 /* SegementTitleView.m in Sources */,
 				339B534A20F4AB2A003444CB /* ZTKLLDownHelper.m in Sources */,
 				33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */,
 				338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */,
+				339B536920F4B3CC003444CB /* BJPlayerHelper.m in Sources */,
 				33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */,
 				33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */,
 				33888FD420F05ADB00E4A119 /* PaternalViewController.m in Sources */,
@@ -913,18 +994,25 @@
 				33FAE4E520E2445500BE7175 /* HeaderSuspendedLayout.m in Sources */,
 				338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */,
 				333D108E20CF6E24004D9241 /* AlertTableView.m in Sources */,
+				339B536020F4B28B003444CB /* BJPlayer.m in Sources */,
 				338FEBFF20E0F25A0025631B /* UIControlFactory.m in Sources */,
+				339B535520F4B078003444CB /* PlayerViewController.m in Sources */,
 				33FAE4E620E2445500BE7175 /* CarouselLayout.m in Sources */,
 				333D109420CFA054004D9241 /* AbstractTableViewCell.m in Sources */,
 				33A32AEC20DA78FA008C3969 /* UIView+ChainFrameView.m in Sources */,
 				333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */,
 				33FAE4E720E2445500BE7175 /* WaterfallLayout.m in Sources */,
+				339B534D20F4AE74003444CB /* DownLoadViewController.m in Sources */,
 				33888FE120F05E6B00E4A119 /* SegmentSliderView.m in Sources */,
 				333D109120CF9698004D9241 /* CellModel.m in Sources */,
+				339B536320F4B29B003444CB /* ZSPlayer.m in Sources */,
 				33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */,
+				339B536C20F4B450003444CB /* AbstractPlayerHelperManager.m in Sources */,
 				339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */,
 				33888FDE20F05E3500E4A119 /* SegmentContentCell.m in Sources */,
+				339B536620F4B39B003444CB /* ZSPlaterHelper.m in Sources */,
 				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
+				339B535020F4AF35003444CB /* UIButton+ButtonBlockCategory.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */,
 				33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */,
