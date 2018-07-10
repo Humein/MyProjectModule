@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface ZSPlaterHelper : NSObject
+#import "AbstractPlayerProtocol.h"
+@interface ZSPlaterHelper : NSObject<AbstractPlayerProtocol>
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AbstractPlayerProtocol.h"
 
-@interface BJPlayerHelper : NSObject
+@interface BJPlayerHelper : NSObject<AbstractPlayerProtocol>
 
 @end
