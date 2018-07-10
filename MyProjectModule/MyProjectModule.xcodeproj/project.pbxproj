@@ -34,8 +34,6 @@
 		33888FE420F0683C00E4A119 /* UIView+frameAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FE320F0683C00E4A119 /* UIView+frameAdjust.m */; };
 		33888FE820F06AC900E4A119 /* PaternalSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FE720F06AC900E4A119 /* PaternalSViewController.m */; };
 		33888FEB20F06ADD00E4A119 /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FEA20F06ADD00E4A119 /* ChildViewController.m */; };
-		33888FF720F0C28400E4A119 /* 算法.md in Resources */ = {isa = PBXBuildFile; fileRef = 33888FF620F0C28400E4A119 /* 算法.md */; };
-		33888FF920F0C2AC00E4A119 /* InterViewQuestion.md in Resources */ = {isa = PBXBuildFile; fileRef = 33888FF820F0C2AB00E4A119 /* InterViewQuestion.md */; };
 		338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */; };
 		338FEB5B20DCCF8D0025631B /* POPNumberAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEB5920DCCF8D0025631B /* POPNumberAnimation.m */; };
 		338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEB5E20DCFC7D0025631B /* DrawBaseAnimaltionView.m */; };
@@ -43,6 +41,11 @@
 		338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEBFA20E0E3FC0025631B /* BlockObject.m */; };
 		338FEBFF20E0F25A0025631B /* UIControlFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEBFE20E0F25A0025631B /* UIControlFactory.m */; };
 		338FEC0520E0F5B70025631B /* UIButton+Decorate.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEC0420E0F5B70025631B /* UIButton+Decorate.m */; };
+		339B534620F4AB2A003444CB /* ZTKBJDownHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B533B20F4AB28003444CB /* ZTKBJDownHelper.m */; };
+		339B534720F4AB2A003444CB /* ZTKDownItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B533C20F4AB28003444CB /* ZTKDownItem.m */; };
+		339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B533F20F4AB29003444CB /* ZTKZTKBJDownItem.m */; };
+		339B534920F4AB2A003444CB /* ZTKDownHelperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B534220F4AB29003444CB /* ZTKDownHelperManager.m */; };
+		339B534A20F4AB2A003444CB /* ZTKLLDownHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B534320F4AB29003444CB /* ZTKLLDownHelper.m */; };
 		33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32ADA20D90681008C3969 /* SegmentContentView.m */; };
 		33A32ADE20D90717008C3969 /* SegementTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32ADD20D90717008C3969 /* SegementTitleView.m */; };
 		33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AE420DA2FA3008C3969 /* SegementTitleConfigured.m */; };
@@ -142,8 +145,6 @@
 		33888FE720F06AC900E4A119 /* PaternalSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaternalSViewController.m; sourceTree = "<group>"; };
 		33888FE920F06ADD00E4A119 /* ChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
 		33888FEA20F06ADD00E4A119 /* ChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
-		33888FF620F0C28400E4A119 /* 算法.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "算法.md"; sourceTree = "<group>"; };
-		33888FF820F0C2AB00E4A119 /* InterViewQuestion.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = InterViewQuestion.md; sourceTree = "<group>"; };
 		338ECBA320D25D080059BE0D /* DrawUnlineAndScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawUnlineAndScore.h; sourceTree = "<group>"; };
 		338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawUnlineAndScore.m; sourceTree = "<group>"; };
 		338FEB5920DCCF8D0025631B /* POPNumberAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPNumberAnimation.m; sourceTree = "<group>"; };
@@ -158,6 +159,17 @@
 		338FEBFE20E0F25A0025631B /* UIControlFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIControlFactory.m; sourceTree = "<group>"; };
 		338FEC0320E0F5B70025631B /* UIButton+Decorate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Decorate.h"; sourceTree = "<group>"; };
 		338FEC0420E0F5B70025631B /* UIButton+Decorate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Decorate.m"; sourceTree = "<group>"; };
+		339B533B20F4AB28003444CB /* ZTKBJDownHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTKBJDownHelper.m; sourceTree = "<group>"; };
+		339B533C20F4AB28003444CB /* ZTKDownItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTKDownItem.m; sourceTree = "<group>"; };
+		339B533D20F4AB28003444CB /* ZTKLLDownHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTKLLDownHelper.h; sourceTree = "<group>"; };
+		339B533E20F4AB29003444CB /* ZTKDownItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTKDownItem.h; sourceTree = "<group>"; };
+		339B533F20F4AB29003444CB /* ZTKZTKBJDownItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTKZTKBJDownItem.m; sourceTree = "<group>"; };
+		339B534020F4AB29003444CB /* ZTKBJDownHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTKBJDownHelper.h; sourceTree = "<group>"; };
+		339B534120F4AB29003444CB /* ZTKDownHelperManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTKDownHelperManager.h; sourceTree = "<group>"; };
+		339B534220F4AB29003444CB /* ZTKDownHelperManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTKDownHelperManager.m; sourceTree = "<group>"; };
+		339B534320F4AB29003444CB /* ZTKLLDownHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTKLLDownHelper.m; sourceTree = "<group>"; };
+		339B534420F4AB2A003444CB /* ZTKZTKBJDownItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTKZTKBJDownItem.h; sourceTree = "<group>"; };
+		339B534520F4AB2A003444CB /* ZTKDownHelperProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTKDownHelperProtocol.h; sourceTree = "<group>"; };
 		33A32AD920D90681008C3969 /* SegmentContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentContentView.h; sourceTree = "<group>"; };
 		33A32ADA20D90681008C3969 /* SegmentContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentContentView.m; sourceTree = "<group>"; };
 		33A32ADC20D90717008C3969 /* SegementTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementTitleView.h; sourceTree = "<group>"; };
@@ -241,8 +253,6 @@
 		333D104920CE74A8004D9241 = {
 			isa = PBXGroup;
 			children = (
-				33888FF820F0C2AB00E4A119 /* InterViewQuestion.md */,
-				33888FF620F0C28400E4A119 /* 算法.md */,
 				33FAE51820E5E61400BE7175 /* README.md */,
 				333D105420CE74A8004D9241 /* MyProjectModule */,
 				333D106D20CE74AB004D9241 /* MyProjectModuleTests */,
@@ -440,6 +450,9 @@
 		33888FF520F0C25400E4A119 /* DesignMode */ = {
 			isa = PBXGroup;
 			children = (
+				339B533820F4AA9D003444CB /* 策略模式  */,
+				339B533620F4AA9C003444CB /* 工厂模式 */,
+				339B533720F4AA9C003444CB /* 适配器模式 */,
 			);
 			path = DesignMode;
 			sourceTree = "<group>";
@@ -464,6 +477,54 @@
 				33888FE320F0683C00E4A119 /* UIView+frameAdjust.m */,
 			);
 			path = BaseUIKitFactory;
+			sourceTree = "<group>";
+		};
+		339B533620F4AA9C003444CB /* 工厂模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "工厂模式";
+			sourceTree = "<group>";
+		};
+		339B533720F4AA9C003444CB /* 适配器模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "适配器模式";
+			sourceTree = "<group>";
+		};
+		339B533820F4AA9D003444CB /* 策略模式  */ = {
+			isa = PBXGroup;
+			children = (
+				339B533920F4AB06003444CB /* DownLoad */,
+				339B533A20F4AB06003444CB /* Player */,
+			);
+			path = "策略模式 ";
+			sourceTree = "<group>";
+		};
+		339B533920F4AB06003444CB /* DownLoad */ = {
+			isa = PBXGroup;
+			children = (
+				339B534020F4AB29003444CB /* ZTKBJDownHelper.h */,
+				339B533B20F4AB28003444CB /* ZTKBJDownHelper.m */,
+				339B534120F4AB29003444CB /* ZTKDownHelperManager.h */,
+				339B534220F4AB29003444CB /* ZTKDownHelperManager.m */,
+				339B534520F4AB2A003444CB /* ZTKDownHelperProtocol.h */,
+				339B533E20F4AB29003444CB /* ZTKDownItem.h */,
+				339B533C20F4AB28003444CB /* ZTKDownItem.m */,
+				339B533D20F4AB28003444CB /* ZTKLLDownHelper.h */,
+				339B534320F4AB29003444CB /* ZTKLLDownHelper.m */,
+				339B534420F4AB2A003444CB /* ZTKZTKBJDownItem.h */,
+				339B533F20F4AB29003444CB /* ZTKZTKBJDownItem.m */,
+			);
+			path = DownLoad;
+			sourceTree = "<group>";
+		};
+		339B533A20F4AB06003444CB /* Player */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		339D6C7420EA285700AC535E /* DataTransmission  */ = {
@@ -742,7 +803,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33888FF720F0C28400E4A119 /* 算法.md in Resources */,
 				333D106220CE74AB004D9241 /* LaunchScreen.storyboard in Resources */,
 				333D105F20CE74AB004D9241 /* Assets.xcassets in Resources */,
 				33FAE4F120E2452D00BE7175 /* JHHeaderReusableView.xib in Resources */,
@@ -750,7 +810,6 @@
 				333D105D20CE74A9004D9241 /* Main.storyboard in Resources */,
 				33FAE4EF20E2452D00BE7175 /* JHBodyCell.xib in Resources */,
 				33FAE4CC20E23DE500BE7175 /* HomeDatas.plist in Resources */,
-				33888FF920F0C2AC00E4A119 /* InterViewQuestion.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,12 +877,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				339B534720F4AB2A003444CB /* ZTKDownItem.m in Sources */,
 				338FEBF520E0B5450025631B /* CustomAlertView.m in Sources */,
 				33A32B0020DB7D5C008C3969 /* SectionModel.m in Sources */,
 				33FAE4F020E2452D00BE7175 /* JHHeaderReusableView.m in Sources */,
 				33888FC320EDCCCB00E4A119 /* CAGradientLayerDemo.m in Sources */,
 				33FAE4D820E243B800BE7175 /* CollectionDetaiDemo.m in Sources */,
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
+				339B534920F4AB2A003444CB /* ZTKDownHelperManager.m in Sources */,
 				338FEB5B20DCCF8D0025631B /* POPNumberAnimation.m in Sources */,
 				33888FE820F06AC900E4A119 /* PaternalSViewController.m in Sources */,
 				33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */,
@@ -833,6 +894,7 @@
 				33888FDB20F05DBA00E4A119 /* ImitateSegmentViewController.m in Sources */,
 				333D106520CE74AB004D9241 /* main.m in Sources */,
 				33A32ADE20D90717008C3969 /* SegementTitleView.m in Sources */,
+				339B534A20F4AB2A003444CB /* ZTKLLDownHelper.m in Sources */,
 				33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */,
 				338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */,
 				33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */,
@@ -845,6 +907,7 @@
 				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
 				33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */,
 				33888FE420F0683C00E4A119 /* UIView+frameAdjust.m in Sources */,
+				339B534620F4AB2A003444CB /* ZTKBJDownHelper.m in Sources */,
 				33888FEB20F06ADD00E4A119 /* ChildViewController.m in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
 				33FAE4E520E2445500BE7175 /* HeaderSuspendedLayout.m in Sources */,
@@ -859,6 +922,7 @@
 				33888FE120F05E6B00E4A119 /* SegmentSliderView.m in Sources */,
 				333D109120CF9698004D9241 /* CellModel.m in Sources */,
 				33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */,
+				339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */,
 				33888FDE20F05E3500E4A119 /* SegmentContentCell.m in Sources */,
 				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
