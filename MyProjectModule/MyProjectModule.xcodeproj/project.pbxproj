@@ -34,6 +34,8 @@
 		33888FE420F0683C00E4A119 /* UIView+frameAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FE320F0683C00E4A119 /* UIView+frameAdjust.m */; };
 		33888FE820F06AC900E4A119 /* PaternalSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FE720F06AC900E4A119 /* PaternalSViewController.m */; };
 		33888FEB20F06ADD00E4A119 /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FEA20F06ADD00E4A119 /* ChildViewController.m */; };
+		33888FF720F0C28400E4A119 /* 算法.md in Resources */ = {isa = PBXBuildFile; fileRef = 33888FF620F0C28400E4A119 /* 算法.md */; };
+		33888FF920F0C2AC00E4A119 /* InterViewQuestion.md in Resources */ = {isa = PBXBuildFile; fileRef = 33888FF820F0C2AB00E4A119 /* InterViewQuestion.md */; };
 		338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */; };
 		338FEB5B20DCCF8D0025631B /* POPNumberAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEB5920DCCF8D0025631B /* POPNumberAnimation.m */; };
 		338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEB5E20DCFC7D0025631B /* DrawBaseAnimaltionView.m */; };
@@ -140,6 +142,8 @@
 		33888FE720F06AC900E4A119 /* PaternalSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaternalSViewController.m; sourceTree = "<group>"; };
 		33888FE920F06ADD00E4A119 /* ChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
 		33888FEA20F06ADD00E4A119 /* ChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
+		33888FF620F0C28400E4A119 /* 算法.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "算法.md"; sourceTree = "<group>"; };
+		33888FF820F0C2AB00E4A119 /* InterViewQuestion.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = InterViewQuestion.md; sourceTree = "<group>"; };
 		338ECBA320D25D080059BE0D /* DrawUnlineAndScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawUnlineAndScore.h; sourceTree = "<group>"; };
 		338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawUnlineAndScore.m; sourceTree = "<group>"; };
 		338FEB5920DCCF8D0025631B /* POPNumberAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPNumberAnimation.m; sourceTree = "<group>"; };
@@ -237,6 +241,8 @@
 		333D104920CE74A8004D9241 = {
 			isa = PBXGroup;
 			children = (
+				33888FF820F0C2AB00E4A119 /* InterViewQuestion.md */,
+				33888FF620F0C28400E4A119 /* 算法.md */,
 				33FAE51820E5E61400BE7175 /* README.md */,
 				333D105420CE74A8004D9241 /* MyProjectModule */,
 				333D106D20CE74AB004D9241 /* MyProjectModuleTests */,
@@ -260,6 +266,7 @@
 		333D105420CE74A8004D9241 /* MyProjectModule */ = {
 			isa = PBXGroup;
 			children = (
+				33888FF520F0C25400E4A119 /* DesignMode */,
 				339D6C7420EA285700AC535E /* DataTransmission  */,
 				33A32AC920D8AF8F008C3969 /* NetRequstAndSocket */,
 				33828F1120D3CAB800318AE5 /* BaseModule */,
@@ -428,6 +435,13 @@
 				33888FEA20F06ADD00E4A119 /* ChildViewController.m */,
 			);
 			path = StestDemo;
+			sourceTree = "<group>";
+		};
+		33888FF520F0C25400E4A119 /* DesignMode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DesignMode;
 			sourceTree = "<group>";
 		};
 		338FEB5C20DCFC290025631B /* abstractOBJ */ = {
@@ -728,6 +742,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33888FF720F0C28400E4A119 /* 算法.md in Resources */,
 				333D106220CE74AB004D9241 /* LaunchScreen.storyboard in Resources */,
 				333D105F20CE74AB004D9241 /* Assets.xcassets in Resources */,
 				33FAE4F120E2452D00BE7175 /* JHHeaderReusableView.xib in Resources */,
@@ -735,6 +750,7 @@
 				333D105D20CE74A9004D9241 /* Main.storyboard in Resources */,
 				33FAE4EF20E2452D00BE7175 /* JHBodyCell.xib in Resources */,
 				33FAE4CC20E23DE500BE7175 /* HomeDatas.plist in Resources */,
+				33888FF920F0C2AC00E4A119 /* InterViewQuestion.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
