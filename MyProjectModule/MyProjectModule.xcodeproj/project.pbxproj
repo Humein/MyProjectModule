@@ -416,12 +416,12 @@
 		33888FCA20F05ADB00E4A119 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				33888FCE20F05ADB00E4A119 /* ViewControllerChildOne.h */,
 				33888FCB20F05ADB00E4A119 /* ViewControllerChildOne.m */,
 				33888FCC20F05ADB00E4A119 /* ViewControllerChildTwo.h */,
-				33888FCD20F05ADB00E4A119 /* PaternalViewController.h */,
-				33888FCE20F05ADB00E4A119 /* ViewControllerChildOne.h */,
-				33888FCF20F05ADB00E4A119 /* BookVCProtocol.h */,
 				33888FD020F05ADB00E4A119 /* ViewControllerChildTwo.m */,
+				33888FCF20F05ADB00E4A119 /* BookVCProtocol.h */,
+				33888FCD20F05ADB00E4A119 /* PaternalViewController.h */,
 				33888FD120F05ADB00E4A119 /* PaternalViewController.m */,
 			);
 			path = Protocol;
@@ -530,6 +530,7 @@
 				339B534C20F4AE74003444CB /* DownLoadViewController.m */,
 				339B535320F4B078003444CB /* PlayerViewController.h */,
 				339B535420F4B078003444CB /* PlayerViewController.m */,
+				339B536F20F4DE65003444CB /* 模考大赛 */,
 				339B533920F4AB06003444CB /* DownLoad */,
 				339B533A20F4AB06003444CB /* Player */,
 			);
@@ -604,6 +605,13 @@
 				339B535F20F4B28B003444CB /* BJPlayer.m */,
 			);
 			path = BJPlayer;
+			sourceTree = "<group>";
+		};
+		339B536F20F4DE65003444CB /* 模考大赛 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "模考大赛";
 			sourceTree = "<group>";
 		};
 		339D6C7420EA285700AC535E /* DataTransmission  */ = {

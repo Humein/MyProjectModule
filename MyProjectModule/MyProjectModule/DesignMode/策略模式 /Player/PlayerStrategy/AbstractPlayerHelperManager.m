@@ -48,12 +48,12 @@
 
 //暂停视频
 - (NSString *)abs_pause{
-    return [_player pl_play];
+    return [_player pl_pause];
 }
 
 //停止播放
 - (NSString *)abs_stop{
-    return [_player pl_play];
+    return [_player pl_stop];
 }
 - (void)dealloc
 {
