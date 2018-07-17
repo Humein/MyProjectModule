@@ -67,6 +67,11 @@
 		33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AFB20DB4910008C3969 /* PersonalCenterChildViewController.m */; };
 		33A32B0020DB7D5C008C3969 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AFF20DB7D5C008C3969 /* SectionModel.m */; };
 		33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32B0220DC95AF008C3969 /* DrawLine.m */; };
+		33CCB0E920FDEF2E002C4FF4 /* ResponOfChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0E820FDEF2E002C4FF4 /* ResponOfChainManager.m */; };
+		33CCB0ED20FDF030002C4FF4 /* HTMiddleControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0EC20FDF030002C4FF4 /* HTMiddleControlView.m */; };
+		33CCB0F020FDF077002C4FF4 /* HTTopControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0EF20FDF077002C4FF4 /* HTTopControlView.m */; };
+		33CCB0F320FDF099002C4FF4 /* HTBottomControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0F220FDF099002C4FF4 /* HTBottomControlView.m */; };
+		33CCB0F620FDF185002C4FF4 /* RChainDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0F520FDF185002C4FF4 /* RChainDemoViewController.m */; };
 		33FAE4CC20E23DE500BE7175 /* HomeDatas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33FAE4CB20E23DE500BE7175 /* HomeDatas.plist */; };
 		33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4CE20E2427100BE7175 /* CollectionSectionViewController.m */; };
 		33FAE4D820E243B800BE7175 /* CollectionDetaiDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4D120E243B700BE7175 /* CollectionDetaiDemo.m */; };
@@ -223,6 +228,17 @@
 		33A32AFF20DB7D5C008C3969 /* SectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectionModel.m; sourceTree = "<group>"; };
 		33A32B0120DC95AF008C3969 /* DrawLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawLine.h; sourceTree = "<group>"; };
 		33A32B0220DC95AF008C3969 /* DrawLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawLine.m; sourceTree = "<group>"; };
+		33CCB0E720FDEF2E002C4FF4 /* ResponOfChainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponOfChainManager.h; sourceTree = "<group>"; };
+		33CCB0E820FDEF2E002C4FF4 /* ResponOfChainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponOfChainManager.m; sourceTree = "<group>"; };
+		33CCB0EA20FDEF6B002C4FF4 /* ActionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionProtocol.h; sourceTree = "<group>"; };
+		33CCB0EB20FDF030002C4FF4 /* HTMiddleControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTMiddleControlView.h; sourceTree = "<group>"; };
+		33CCB0EC20FDF030002C4FF4 /* HTMiddleControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTMiddleControlView.m; sourceTree = "<group>"; };
+		33CCB0EE20FDF077002C4FF4 /* HTTopControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTopControlView.h; sourceTree = "<group>"; };
+		33CCB0EF20FDF077002C4FF4 /* HTTopControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTopControlView.m; sourceTree = "<group>"; };
+		33CCB0F120FDF099002C4FF4 /* HTBottomControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTBottomControlView.h; sourceTree = "<group>"; };
+		33CCB0F220FDF099002C4FF4 /* HTBottomControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTBottomControlView.m; sourceTree = "<group>"; };
+		33CCB0F420FDF185002C4FF4 /* RChainDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RChainDemoViewController.h; sourceTree = "<group>"; };
+		33CCB0F520FDF185002C4FF4 /* RChainDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RChainDemoViewController.m; sourceTree = "<group>"; };
 		33FAE4CB20E23DE500BE7175 /* HomeDatas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomeDatas.plist; sourceTree = "<group>"; };
 		33FAE4CD20E2427100BE7175 /* CollectionSectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionSectionViewController.h; sourceTree = "<group>"; };
 		33FAE4CE20E2427100BE7175 /* CollectionSectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionSectionViewController.m; sourceTree = "<group>"; };
@@ -480,6 +496,7 @@
 		33888FF520F0C25400E4A119 /* DesignMode */ = {
 			isa = PBXGroup;
 			children = (
+				33CCB0E420FDDFF3002C4FF4 /* 责任链模式 */,
 				339B533820F4AA9D003444CB /* 策略模式  */,
 				339B533620F4AA9C003444CB /* 工厂模式 */,
 				339B533720F4AA9C003444CB /* 适配器模式 */,
@@ -699,6 +716,24 @@
 				33A32AFF20DB7D5C008C3969 /* SectionModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		33CCB0E420FDDFF3002C4FF4 /* 责任链模式 */ = {
+			isa = PBXGroup;
+			children = (
+				33CCB0EA20FDEF6B002C4FF4 /* ActionProtocol.h */,
+				33CCB0E720FDEF2E002C4FF4 /* ResponOfChainManager.h */,
+				33CCB0E820FDEF2E002C4FF4 /* ResponOfChainManager.m */,
+				33CCB0EE20FDF077002C4FF4 /* HTTopControlView.h */,
+				33CCB0EF20FDF077002C4FF4 /* HTTopControlView.m */,
+				33CCB0EB20FDF030002C4FF4 /* HTMiddleControlView.h */,
+				33CCB0EC20FDF030002C4FF4 /* HTMiddleControlView.m */,
+				33CCB0F120FDF099002C4FF4 /* HTBottomControlView.h */,
+				33CCB0F220FDF099002C4FF4 /* HTBottomControlView.m */,
+				33CCB0F420FDF185002C4FF4 /* RChainDemoViewController.h */,
+				33CCB0F520FDF185002C4FF4 /* RChainDemoViewController.m */,
+			);
+			path = "责任链模式";
 			sourceTree = "<group>";
 		};
 		33FAE4B820E1E37300BE7175 /* BookMarkSegement */ = {
@@ -965,7 +1000,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				339B534720F4AB2A003444CB /* ZTKDownItem.m in Sources */,
+				33CCB0F320FDF099002C4FF4 /* HTBottomControlView.m in Sources */,
 				338FEBF520E0B5450025631B /* CustomAlertView.m in Sources */,
+				33CCB0F620FDF185002C4FF4 /* RChainDemoViewController.m in Sources */,
 				33A32B0020DB7D5C008C3969 /* SectionModel.m in Sources */,
 				33FAE4F020E2452D00BE7175 /* JHHeaderReusableView.m in Sources */,
 				33888FC320EDCCCB00E4A119 /* CAGradientLayerDemo.m in Sources */,
@@ -1011,6 +1048,7 @@
 				333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */,
 				33FAE4E720E2445500BE7175 /* WaterfallLayout.m in Sources */,
 				339B534D20F4AE74003444CB /* DownLoadViewController.m in Sources */,
+				33CCB0ED20FDF030002C4FF4 /* HTMiddleControlView.m in Sources */,
 				33888FE120F05E6B00E4A119 /* SegmentSliderView.m in Sources */,
 				333D109120CF9698004D9241 /* CellModel.m in Sources */,
 				339B536320F4B29B003444CB /* ZSPlayer.m in Sources */,
@@ -1019,12 +1057,14 @@
 				339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */,
 				33888FDE20F05E3500E4A119 /* SegmentContentCell.m in Sources */,
 				339B536620F4B39B003444CB /* ZSPlaterHelper.m in Sources */,
+				33CCB0E920FDEF2E002C4FF4 /* ResponOfChainManager.m in Sources */,
 				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
 				339B535020F4AF35003444CB /* UIButton+ButtonBlockCategory.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */,
 				33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */,
 				338FEC0520E0F5B70025631B /* UIButton+Decorate.m in Sources */,
+				33CCB0F020FDF077002C4FF4 /* HTTopControlView.m in Sources */,
 				333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */,
 				33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */,
 				333D108B20CF60A6004D9241 /* PopTableView.m in Sources */,
