@@ -30,10 +30,15 @@
     HTMiddleControlView *mid = [[HTMiddleControlView alloc] init];
     bot.superior = mid;
     mid.superior = top;
-    NSArray *responseEvent = @[@"0",@"1"];
-    for (NSString *string in responseEvent) {
-        [bot responseEvent:[string integerValue] playItem:nil];
-    }
+//    NSArray *responseEvent = @[@"0",@"1",@"3"];
+//    for (NSString *string in responseEvent) {
+//        [bot responseEvent:[string integerValue] playItem:nil];
+//    }
+    
+     [bot responseEvent:1 playItem:nil];
+
+    
+    
     
 }
 

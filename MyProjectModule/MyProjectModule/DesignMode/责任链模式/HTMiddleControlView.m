@@ -13,7 +13,12 @@
 - (void)responseEvent:(NSInteger)eventType playItem:(id)playItem{
     if (eventType == 1) {
         NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
-    }else{
+    }else if (eventType == 100){
+        NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
+        self.superior ? [self.superior responseEvent:eventType playItem:nil] : nil;
+
+    }
+    else{
         self.superior ? [self.superior responseEvent:eventType playItem:nil] : nil;
     }
 

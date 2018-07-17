@@ -496,6 +496,7 @@
 		33888FF520F0C25400E4A119 /* DesignMode */ = {
 			isa = PBXGroup;
 			children = (
+				33CCB12C20FDFBAE002C4FF4 /* 组合模式 */,
 				33CCB0E420FDDFF3002C4FF4 /* 责任链模式 */,
 				339B533820F4AA9D003444CB /* 策略模式  */,
 				339B533620F4AA9C003444CB /* 工厂模式 */,
@@ -734,6 +735,13 @@
 				33CCB0F520FDF185002C4FF4 /* RChainDemoViewController.m */,
 			);
 			path = "责任链模式";
+			sourceTree = "<group>";
+		};
+		33CCB12C20FDFBAE002C4FF4 /* 组合模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "组合模式";
 			sourceTree = "<group>";
 		};
 		33FAE4B820E1E37300BE7175 /* BookMarkSegement */ = {

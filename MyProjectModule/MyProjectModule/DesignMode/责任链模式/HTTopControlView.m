@@ -12,8 +12,11 @@
 - (void)responseEvent:(NSInteger)eventType playItem:(id)playItem{
     if (eventType == 0) {
         NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
-    }else{
-        self.superior ? [self.superior responseEvent:eventType playItem:nil] : nil;
+    }else if (eventType == 100){
+        NSLog(@"联动事件");
+    }
+    else{
+        NSLog(@"无法响应");
     }
 }
 @end
