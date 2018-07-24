@@ -10,7 +10,6 @@
 #import "DrawUnlineAndScore.h"
 #import "DrawLine.h"
 #import "DrawBaseAnimaltionView.h"
-#import "AlertTableView.h"
 @interface DrawViewController ()
 @property (nonatomic, strong) UITextView *textView;
 
@@ -99,10 +98,7 @@
     
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    AlertTableView *VC = [[AlertTableView alloc]initWithFrame:self.view.frame];
-    [VC show];
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

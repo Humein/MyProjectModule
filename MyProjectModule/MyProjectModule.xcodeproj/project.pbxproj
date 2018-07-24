@@ -17,9 +17,6 @@
 		333D106F20CE74AB004D9241 /* MyProjectModuleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D106E20CE74AB004D9241 /* MyProjectModuleTests.m */; };
 		333D107A20CE74AB004D9241 /* MyProjectModuleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D107920CE74AB004D9241 /* MyProjectModuleUITests.m */; };
 		333D108B20CF60A6004D9241 /* PopTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D108A20CF60A5004D9241 /* PopTableView.m */; };
-		333D108E20CF6E24004D9241 /* AlertTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D108D20CF6E24004D9241 /* AlertTableView.m */; };
-		333D109120CF9698004D9241 /* CellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109020CF9698004D9241 /* CellModel.m */; };
-		333D109420CFA054004D9241 /* AbstractTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109320CFA054004D9241 /* AbstractTableViewCell.m */; };
 		333D109720CFED75004D9241 /* colloctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109620CFED75004D9241 /* colloctionViewController.m */; };
 		333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109920D0ECA0004D9241 /* CollectionModuleView.m */; };
 		333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109C20D14489004D9241 /* AbstractCollectionViewCell.m */; };
@@ -72,6 +69,16 @@
 		33CCB0F020FDF077002C4FF4 /* HTTopControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0EF20FDF077002C4FF4 /* HTTopControlView.m */; };
 		33CCB0F320FDF099002C4FF4 /* HTBottomControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0F220FDF099002C4FF4 /* HTBottomControlView.m */; };
 		33CCB0F620FDF185002C4FF4 /* RChainDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0F520FDF185002C4FF4 /* RChainDemoViewController.m */; };
+		33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDCF210034E200422FC7 /* AlertTableView.m */; };
+		33E6CDD5210034E300422FC7 /* CellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDD0210034E200422FC7 /* CellModel.m */; };
+		33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDD1210034E200422FC7 /* AbstractTableViewCell.m */; };
+		33E6CDD9210035FF00422FC7 /* ThreeLevelTreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDD8210035FF00422FC7 /* ThreeLevelTreeView.m */; };
+		33E6CE0421006D2000422FC7 /* TreeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDFB21006D1F00422FC7 /* TreeViewModel.m */; };
+		33E6CE0521006D2000422FC7 /* CreatTreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDFD21006D1F00422FC7 /* CreatTreeView.m */; };
+		33E6CE0621006D2000422FC7 /* TreeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDFF21006D1F00422FC7 /* TreeModel.m */; };
+		33E6CE0721006D2000422FC7 /* UITableViewCell+AnimationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CE0021006D1F00422FC7 /* UITableViewCell+AnimationType.m */; };
+		33E6CE0821006D2000422FC7 /* TreeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CE0221006D1F00422FC7 /* TreeViewCell.m */; };
+		33E6CE0A21006DA000422FC7 /* Tree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33E6CE0921006DA000422FC7 /* Tree.plist */; };
 		33FAE4CC20E23DE500BE7175 /* HomeDatas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33FAE4CB20E23DE500BE7175 /* HomeDatas.plist */; };
 		33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4CE20E2427100BE7175 /* CollectionSectionViewController.m */; };
 		33FAE4D820E243B800BE7175 /* CollectionDetaiDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4D120E243B700BE7175 /* CollectionDetaiDemo.m */; };
@@ -124,12 +131,6 @@
 		333D107B20CE74AB004D9241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		333D108920CF60A5004D9241 /* PopTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopTableView.h; sourceTree = "<group>"; };
 		333D108A20CF60A5004D9241 /* PopTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTableView.m; sourceTree = "<group>"; };
-		333D108C20CF6E24004D9241 /* AlertTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertTableView.h; sourceTree = "<group>"; };
-		333D108D20CF6E24004D9241 /* AlertTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertTableView.m; sourceTree = "<group>"; };
-		333D108F20CF9698004D9241 /* CellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellModel.h; sourceTree = "<group>"; };
-		333D109020CF9698004D9241 /* CellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellModel.m; sourceTree = "<group>"; };
-		333D109220CFA054004D9241 /* AbstractTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractTableViewCell.h; sourceTree = "<group>"; };
-		333D109320CFA054004D9241 /* AbstractTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractTableViewCell.m; sourceTree = "<group>"; };
 		333D109520CFED75004D9241 /* colloctionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = colloctionViewController.h; sourceTree = "<group>"; };
 		333D109620CFED75004D9241 /* colloctionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = colloctionViewController.m; sourceTree = "<group>"; };
 		333D109820D0ECA0004D9241 /* CollectionModuleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionModuleView.h; sourceTree = "<group>"; };
@@ -239,6 +240,25 @@
 		33CCB0F220FDF099002C4FF4 /* HTBottomControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTBottomControlView.m; sourceTree = "<group>"; };
 		33CCB0F420FDF185002C4FF4 /* RChainDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RChainDemoViewController.h; sourceTree = "<group>"; };
 		33CCB0F520FDF185002C4FF4 /* RChainDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RChainDemoViewController.m; sourceTree = "<group>"; };
+		33E6CDCE210034E200422FC7 /* AbstractTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractTableViewCell.h; sourceTree = "<group>"; };
+		33E6CDCF210034E200422FC7 /* AlertTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertTableView.m; sourceTree = "<group>"; };
+		33E6CDD0210034E200422FC7 /* CellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellModel.m; sourceTree = "<group>"; };
+		33E6CDD1210034E200422FC7 /* AbstractTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractTableViewCell.m; sourceTree = "<group>"; };
+		33E6CDD2210034E200422FC7 /* AlertTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertTableView.h; sourceTree = "<group>"; };
+		33E6CDD3210034E200422FC7 /* CellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellModel.h; sourceTree = "<group>"; };
+		33E6CDD7210035FF00422FC7 /* ThreeLevelTreeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeLevelTreeView.h; sourceTree = "<group>"; };
+		33E6CDD8210035FF00422FC7 /* ThreeLevelTreeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeLevelTreeView.m; sourceTree = "<group>"; };
+		33E6CDFA21006D1F00422FC7 /* TreeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeModel.h; sourceTree = "<group>"; };
+		33E6CDFB21006D1F00422FC7 /* TreeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeViewModel.m; sourceTree = "<group>"; };
+		33E6CDFC21006D1F00422FC7 /* UITableViewCell+AnimationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+AnimationType.h"; sourceTree = "<group>"; };
+		33E6CDFD21006D1F00422FC7 /* CreatTreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatTreeView.m; sourceTree = "<group>"; };
+		33E6CDFE21006D1F00422FC7 /* TreeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeViewCell.h; sourceTree = "<group>"; };
+		33E6CDFF21006D1F00422FC7 /* TreeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeModel.m; sourceTree = "<group>"; };
+		33E6CE0021006D1F00422FC7 /* UITableViewCell+AnimationType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+AnimationType.m"; sourceTree = "<group>"; };
+		33E6CE0121006D1F00422FC7 /* TreeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeViewModel.h; sourceTree = "<group>"; };
+		33E6CE0221006D1F00422FC7 /* TreeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeViewCell.m; sourceTree = "<group>"; };
+		33E6CE0321006D1F00422FC7 /* CreatTreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatTreeView.h; sourceTree = "<group>"; };
+		33E6CE0921006DA000422FC7 /* Tree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tree.plist; sourceTree = "<group>"; };
 		33FAE4CB20E23DE500BE7175 /* HomeDatas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomeDatas.plist; sourceTree = "<group>"; };
 		33FAE4CD20E2427100BE7175 /* CollectionSectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionSectionViewController.h; sourceTree = "<group>"; };
 		33FAE4CE20E2427100BE7175 /* CollectionSectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionSectionViewController.m; sourceTree = "<group>"; };
@@ -335,6 +355,7 @@
 				333D105E20CE74AB004D9241 /* Assets.xcassets */,
 				333D106020CE74AB004D9241 /* LaunchScreen.storyboard */,
 				33FAE4CB20E23DE500BE7175 /* HomeDatas.plist */,
+				33E6CE0921006DA000422FC7 /* Tree.plist */,
 				333D106320CE74AB004D9241 /* Info.plist */,
 				333D106420CE74AB004D9241 /* main.m */,
 			);
@@ -362,15 +383,10 @@
 		333D108720CF5AAB004D9241 /* TableViewModule */ = {
 			isa = PBXGroup;
 			children = (
+				33E6CDCD210034E200422FC7 /* AlertTableView */,
 				33A32ADF20D91234008C3969 /* 折叠的TableView */,
 				333D108920CF60A5004D9241 /* PopTableView.h */,
 				333D108A20CF60A5004D9241 /* PopTableView.m */,
-				333D108C20CF6E24004D9241 /* AlertTableView.h */,
-				333D108D20CF6E24004D9241 /* AlertTableView.m */,
-				333D108F20CF9698004D9241 /* CellModel.h */,
-				333D109020CF9698004D9241 /* CellModel.m */,
-				333D109220CFA054004D9241 /* AbstractTableViewCell.h */,
-				333D109320CFA054004D9241 /* AbstractTableViewCell.m */,
 			);
 			path = TableViewModule;
 			sourceTree = "<group>";
@@ -693,6 +709,9 @@
 		33A32ADF20D91234008C3969 /* 折叠的TableView */ = {
 			isa = PBXGroup;
 			children = (
+				33E6CDF921006D1F00422FC7 /* KnowledgePointsTree */,
+				33E6CDD7210035FF00422FC7 /* ThreeLevelTreeView.h */,
+				33E6CDD8210035FF00422FC7 /* ThreeLevelTreeView.m */,
 			);
 			path = "折叠的TableView";
 			sourceTree = "<group>";
@@ -742,6 +761,36 @@
 			children = (
 			);
 			path = "组合模式";
+			sourceTree = "<group>";
+		};
+		33E6CDCD210034E200422FC7 /* AlertTableView */ = {
+			isa = PBXGroup;
+			children = (
+				33E6CDCE210034E200422FC7 /* AbstractTableViewCell.h */,
+				33E6CDD1210034E200422FC7 /* AbstractTableViewCell.m */,
+				33E6CDD2210034E200422FC7 /* AlertTableView.h */,
+				33E6CDCF210034E200422FC7 /* AlertTableView.m */,
+				33E6CDD3210034E200422FC7 /* CellModel.h */,
+				33E6CDD0210034E200422FC7 /* CellModel.m */,
+			);
+			path = AlertTableView;
+			sourceTree = "<group>";
+		};
+		33E6CDF921006D1F00422FC7 /* KnowledgePointsTree */ = {
+			isa = PBXGroup;
+			children = (
+				33E6CDFA21006D1F00422FC7 /* TreeModel.h */,
+				33E6CDFF21006D1F00422FC7 /* TreeModel.m */,
+				33E6CDFC21006D1F00422FC7 /* UITableViewCell+AnimationType.h */,
+				33E6CE0021006D1F00422FC7 /* UITableViewCell+AnimationType.m */,
+				33E6CE0321006D1F00422FC7 /* CreatTreeView.h */,
+				33E6CDFD21006D1F00422FC7 /* CreatTreeView.m */,
+				33E6CDFE21006D1F00422FC7 /* TreeViewCell.h */,
+				33E6CE0221006D1F00422FC7 /* TreeViewCell.m */,
+				33E6CE0121006D1F00422FC7 /* TreeViewModel.h */,
+				33E6CDFB21006D1F00422FC7 /* TreeViewModel.m */,
+			);
+			path = KnowledgePointsTree;
 			sourceTree = "<group>";
 		};
 		33FAE4B820E1E37300BE7175 /* BookMarkSegement */ = {
@@ -937,6 +986,7 @@
 				333D105F20CE74AB004D9241 /* Assets.xcassets in Resources */,
 				33FAE4F120E2452D00BE7175 /* JHHeaderReusableView.xib in Resources */,
 				33FAE51920E5E61400BE7175 /* README.md in Resources */,
+				33E6CE0A21006DA000422FC7 /* Tree.plist in Resources */,
 				333D105D20CE74A9004D9241 /* Main.storyboard in Resources */,
 				33FAE4EF20E2452D00BE7175 /* JHBodyCell.xib in Resources */,
 				33FAE4CC20E23DE500BE7175 /* HomeDatas.plist in Resources */,
@@ -967,12 +1017,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
@@ -1021,10 +1073,12 @@
 				33888FE820F06AC900E4A119 /* PaternalSViewController.m in Sources */,
 				33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */,
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
+				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
 				338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */,
 				33A32AF920DB3909008C3969 /* SegementChildViewController.m in Sources */,
 				33888FDB20F05DBA00E4A119 /* ImitateSegmentViewController.m in Sources */,
 				333D106520CE74AB004D9241 /* main.m in Sources */,
+				33E6CDD5210034E300422FC7 /* CellModel.m in Sources */,
 				339B536E20F4B486003444CB /* AbstractPlayerProtocol.h in Sources */,
 				33A32ADE20D90717008C3969 /* SegementTitleView.m in Sources */,
 				339B534A20F4AB2A003444CB /* ZTKLLDownHelper.m in Sources */,
@@ -1033,33 +1087,34 @@
 				339B536920F4B3CC003444CB /* BJPlayerHelper.m in Sources */,
 				33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */,
 				33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */,
+				33E6CE0521006D2000422FC7 /* CreatTreeView.m in Sources */,
 				33888FD420F05ADB00E4A119 /* PaternalViewController.m in Sources */,
 				33A32AF520DA8044008C3969 /* SegementPersonDemoViewController.m in Sources */,
 				33A32AEF20DA795E008C3969 /* UIButton+SegementCustomButton.m in Sources */,
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
 				33A32AE920DA789D008C3969 /* UIScrollView+SlideGestureBack.m in Sources */,
 				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
+				33E6CE0821006D2000422FC7 /* TreeViewCell.m in Sources */,
 				33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */,
 				33888FE420F0683C00E4A119 /* UIView+frameAdjust.m in Sources */,
 				339B534620F4AB2A003444CB /* ZTKBJDownHelper.m in Sources */,
 				33888FEB20F06ADD00E4A119 /* ChildViewController.m in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
+				33E6CE0721006D2000422FC7 /* UITableViewCell+AnimationType.m in Sources */,
 				33FAE4E520E2445500BE7175 /* HeaderSuspendedLayout.m in Sources */,
 				338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */,
-				333D108E20CF6E24004D9241 /* AlertTableView.m in Sources */,
 				339B536020F4B28B003444CB /* BJPlayer.m in Sources */,
 				338FEBFF20E0F25A0025631B /* UIControlFactory.m in Sources */,
 				339B535520F4B078003444CB /* PlayerViewController.m in Sources */,
 				33FAE4E620E2445500BE7175 /* CarouselLayout.m in Sources */,
-				333D109420CFA054004D9241 /* AbstractTableViewCell.m in Sources */,
 				33A32AEC20DA78FA008C3969 /* UIView+ChainFrameView.m in Sources */,
 				333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */,
 				33FAE4E720E2445500BE7175 /* WaterfallLayout.m in Sources */,
 				339B534D20F4AE74003444CB /* DownLoadViewController.m in Sources */,
 				33CCB0ED20FDF030002C4FF4 /* HTMiddleControlView.m in Sources */,
 				33888FE120F05E6B00E4A119 /* SegmentSliderView.m in Sources */,
-				333D109120CF9698004D9241 /* CellModel.m in Sources */,
 				339B536320F4B29B003444CB /* ZSPlayer.m in Sources */,
+				33E6CDD9210035FF00422FC7 /* ThreeLevelTreeView.m in Sources */,
 				33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */,
 				339B536C20F4B450003444CB /* AbstractPlayerHelperManager.m in Sources */,
 				339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */,
@@ -1068,6 +1123,7 @@
 				33CCB0E920FDEF2E002C4FF4 /* ResponOfChainManager.m in Sources */,
 				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
 				339B535020F4AF35003444CB /* UIButton+ButtonBlockCategory.m in Sources */,
+				33E6CE0421006D2000422FC7 /* TreeViewModel.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */,
 				33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */,
@@ -1075,6 +1131,8 @@
 				33CCB0F020FDF077002C4FF4 /* HTTopControlView.m in Sources */,
 				333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */,
 				33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */,
+				33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */,
+				33E6CE0621006D2000422FC7 /* TreeModel.m in Sources */,
 				333D108B20CF60A6004D9241 /* PopTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1249,10 +1307,7 @@
 				DEVELOPMENT_TEAM = B4Q6JBQZP4;
 				INFOPLIST_FILE = MyProjectModule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1268,10 +1323,7 @@
 				DEVELOPMENT_TEAM = B4Q6JBQZP4;
 				INFOPLIST_FILE = MyProjectModule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1285,11 +1337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MR4GTF2765;
 				INFOPLIST_FILE = MyProjectModuleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModuleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1304,11 +1352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MR4GTF2765;
 				INFOPLIST_FILE = MyProjectModuleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModuleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1322,11 +1366,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MR4GTF2765;
 				INFOPLIST_FILE = MyProjectModuleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModuleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1340,11 +1380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MR4GTF2765;
 				INFOPLIST_FILE = MyProjectModuleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModuleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
