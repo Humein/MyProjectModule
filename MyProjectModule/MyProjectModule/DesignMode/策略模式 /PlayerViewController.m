@@ -12,6 +12,7 @@
 @interface PlayerViewController (){
     AbstractPlayerHelperManager *_player;
 
+    
 }
 
 @end
