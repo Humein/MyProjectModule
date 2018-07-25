@@ -10,6 +10,8 @@
 #import "Hamburger.h"
 #import "Condiment.h"
 #import "pie.h"
+#import "UIImage+Shadow.h"
+#import "UIImage+Transform.h"
 @interface DecoratorViewController ()
 
 @end
@@ -23,6 +25,7 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
+//
     Hamburger *AA = [[Hamburger alloc] init];
     NSLog(@"AA>>>>>%@,%@",@([AA getCost]).stringValue,[AA getDescription]);
     
@@ -33,6 +36,25 @@
     Condiment *CC = [[Condiment alloc]initWithChickenBurger:BB];
     
     NSLog(@"CC>>>>>%@,%@",@([CC getCost]).stringValue,[CC getDescription]);
+    
+    
+//
+    UIImage *image = [UIImage imageNamed:@""];
+
+    
+    CGAffineTransform rotateTransform = CGAffineTransformMakeRotation(-M_PI / 4.0);
+    CGAffineTransform translateTransform = CGAffineTransformMakeTranslation(-image.size.width / 2.0,
+                                                                            image.size.height / 8.0);
+    CGAffineTransform finalTransform = CGAffineTransformConcat(rotateTransform, translateTransform);
+    
+    
+    UIImage* finalImage = [[image imageWithTransform:finalTransform] imageWithDropShadow];
+    
+    
+    
+
+    
+    
 
 }
 

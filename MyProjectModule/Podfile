@@ -5,4 +5,5 @@ target 'MyProjectModule' do
   pod 'YYKit'
   pod 'pop', '~> 1.0'
   pod 'MJExtension'
+  pod 'AFNetworking'
 end

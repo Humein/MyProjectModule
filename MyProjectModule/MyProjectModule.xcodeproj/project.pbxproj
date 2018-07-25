@@ -21,10 +21,15 @@
 		333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109920D0ECA0004D9241 /* CollectionModuleView.m */; };
 		333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109C20D14489004D9241 /* AbstractCollectionViewCell.m */; };
 		333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D10A120D24FD5004D9241 /* DrawViewController.m */; };
-		337828092108272A00373A20 /* Hamburger.m in Sources */ = {isa = PBXBuildFile; fileRef = 337828082108272A00373A20 /* Hamburger.m */; };
 		3378280C2108278C00373A20 /* DecoratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378280B2108278C00373A20 /* DecoratorViewController.m */; };
-		3378280F210842DB00373A20 /* Condiment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378280E210842DB00373A20 /* Condiment.m */; };
-		337828122108480300373A20 /* pie.m in Sources */ = {isa = PBXBuildFile; fileRef = 337828112108480300373A20 /* pie.m */; };
+		3378281B21084A6E00373A20 /* pie.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378281721084A6D00373A20 /* pie.m */; };
+		3378281C21084A6E00373A20 /* Condiment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378281921084A6D00373A20 /* Condiment.m */; };
+		3378281D21084A6E00373A20 /* Hamburger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378281A21084A6D00373A20 /* Hamburger.m */; };
+		337828232108539800373A20 /* UIImage+BaseFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 337828222108539800373A20 /* UIImage+BaseFilter.m */; };
+		33782826210853AD00373A20 /* UIImage+Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = 33782825210853AD00373A20 /* UIImage+Transform.m */; };
+		33782829210853B800373A20 /* UIImage+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 33782828210853B800373A20 /* UIImage+Shadow.m */; };
+		3378282C2108544300373A20 /* UIImage+Title.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378282B2108544300373A20 /* UIImage+Title.m */; };
+		337828312108772600373A20 /* ThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337828302108772600373A20 /* ThreadViewController.m */; };
 		33888FC320EDCCCB00E4A119 /* CAGradientLayerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FC220EDCCCB00E4A119 /* CAGradientLayerDemo.m */; };
 		33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FCB20F05ADB00E4A119 /* ViewControllerChildOne.m */; };
 		33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FD020F05ADB00E4A119 /* ViewControllerChildTwo.m */; };
@@ -143,15 +148,25 @@
 		333D109C20D14489004D9241 /* AbstractCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractCollectionViewCell.m; sourceTree = "<group>"; };
 		333D10A020D24FD5004D9241 /* DrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
 		333D10A120D24FD5004D9241 /* DrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
-		337828062108239C00373A20 /* Decorator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Decorator.h; sourceTree = "<group>"; };
-		337828072108272A00373A20 /* Hamburger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hamburger.h; sourceTree = "<group>"; };
-		337828082108272A00373A20 /* Hamburger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hamburger.m; sourceTree = "<group>"; };
 		3378280A2108278C00373A20 /* DecoratorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecoratorViewController.h; sourceTree = "<group>"; };
 		3378280B2108278C00373A20 /* DecoratorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DecoratorViewController.m; sourceTree = "<group>"; };
-		3378280D210842DB00373A20 /* Condiment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Condiment.h; sourceTree = "<group>"; };
-		3378280E210842DB00373A20 /* Condiment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Condiment.m; sourceTree = "<group>"; };
-		337828102108480300373A20 /* pie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pie.h; sourceTree = "<group>"; };
-		337828112108480300373A20 /* pie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pie.m; sourceTree = "<group>"; };
+		3378281421084A6D00373A20 /* pie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pie.h; sourceTree = "<group>"; };
+		3378281521084A6D00373A20 /* Condiment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Condiment.h; sourceTree = "<group>"; };
+		3378281621084A6D00373A20 /* Hamburger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hamburger.h; sourceTree = "<group>"; };
+		3378281721084A6D00373A20 /* pie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pie.m; sourceTree = "<group>"; };
+		3378281821084A6D00373A20 /* Decorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decorator.h; sourceTree = "<group>"; };
+		3378281921084A6D00373A20 /* Condiment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Condiment.m; sourceTree = "<group>"; };
+		3378281A21084A6D00373A20 /* Hamburger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hamburger.m; sourceTree = "<group>"; };
+		337828212108539800373A20 /* UIImage+BaseFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+BaseFilter.h"; sourceTree = "<group>"; };
+		337828222108539800373A20 /* UIImage+BaseFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BaseFilter.m"; sourceTree = "<group>"; };
+		33782824210853AD00373A20 /* UIImage+Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Transform.h"; sourceTree = "<group>"; };
+		33782825210853AD00373A20 /* UIImage+Transform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Transform.m"; sourceTree = "<group>"; };
+		33782827210853B800373A20 /* UIImage+Shadow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Shadow.h"; sourceTree = "<group>"; };
+		33782828210853B800373A20 /* UIImage+Shadow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Shadow.m"; sourceTree = "<group>"; };
+		3378282A2108544300373A20 /* UIImage+Title.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Title.h"; sourceTree = "<group>"; };
+		3378282B2108544300373A20 /* UIImage+Title.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Title.m"; sourceTree = "<group>"; };
+		3378282F2108772600373A20 /* ThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadViewController.h; sourceTree = "<group>"; };
+		337828302108772600373A20 /* ThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadViewController.m; sourceTree = "<group>"; };
 		33888FC120EDCCCB00E4A119 /* CAGradientLayerDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAGradientLayerDemo.h; sourceTree = "<group>"; };
 		33888FC220EDCCCB00E4A119 /* CAGradientLayerDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAGradientLayerDemo.m; sourceTree = "<group>"; };
 		33888FCB20F05ADB00E4A119 /* ViewControllerChildOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerChildOne.m; sourceTree = "<group>"; };
@@ -448,17 +463,71 @@
 		3378280521081E5D00373A20 /* 装饰者模式 */ = {
 			isa = PBXGroup;
 			children = (
-				337828062108239C00373A20 /* Decorator.h */,
-				337828072108272A00373A20 /* Hamburger.h */,
-				337828082108272A00373A20 /* Hamburger.m */,
-				337828102108480300373A20 /* pie.h */,
-				337828112108480300373A20 /* pie.m */,
-				3378280D210842DB00373A20 /* Condiment.h */,
-				3378280E210842DB00373A20 /* Condiment.m */,
+				3378281E21084A7C00373A20 /* 分类实现 */,
+				3378281321084A6D00373A20 /* 协议实现 */,
 				3378280A2108278C00373A20 /* DecoratorViewController.h */,
 				3378280B2108278C00373A20 /* DecoratorViewController.m */,
 			);
 			path = "装饰者模式";
+			sourceTree = "<group>";
+		};
+		3378281321084A6D00373A20 /* 协议实现 */ = {
+			isa = PBXGroup;
+			children = (
+				3378281821084A6D00373A20 /* Decorator.h */,
+				3378281621084A6D00373A20 /* Hamburger.h */,
+				3378281A21084A6D00373A20 /* Hamburger.m */,
+				3378281421084A6D00373A20 /* pie.h */,
+				3378281721084A6D00373A20 /* pie.m */,
+				3378281521084A6D00373A20 /* Condiment.h */,
+				3378281921084A6D00373A20 /* Condiment.m */,
+			);
+			path = "协议实现";
+			sourceTree = "<group>";
+		};
+		3378281E21084A7C00373A20 /* 分类实现 */ = {
+			isa = PBXGroup;
+			children = (
+				337828212108539800373A20 /* UIImage+BaseFilter.h */,
+				337828222108539800373A20 /* UIImage+BaseFilter.m */,
+				33782824210853AD00373A20 /* UIImage+Transform.h */,
+				33782825210853AD00373A20 /* UIImage+Transform.m */,
+				33782827210853B800373A20 /* UIImage+Shadow.h */,
+				33782828210853B800373A20 /* UIImage+Shadow.m */,
+				3378282A2108544300373A20 /* UIImage+Title.h */,
+				3378282B2108544300373A20 /* UIImage+Title.m */,
+			);
+			path = "分类实现";
+			sourceTree = "<group>";
+		};
+		3378281F21084C5C00373A20 /* 申论批改详情 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "申论批改详情";
+			sourceTree = "<group>";
+		};
+		3378282021084DFC00373A20 /* 抽象类 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "抽象类";
+			sourceTree = "<group>";
+		};
+		3378282D2108726F00373A20 /* NetRequest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetRequest;
+			sourceTree = "<group>";
+		};
+		3378282E2108770600373A20 /* 线程 */ = {
+			isa = PBXGroup;
+			children = (
+				3378282F2108772600373A20 /* ThreadViewController.h */,
+				337828302108772600373A20 /* ThreadViewController.m */,
+			);
+			path = "线程";
 			sourceTree = "<group>";
 		};
 		33828F1120D3CAB800318AE5 /* BaseModule */ = {
@@ -541,6 +610,7 @@
 		33888FF520F0C25400E4A119 /* DesignMode */ = {
 			isa = PBXGroup;
 			children = (
+				3378282021084DFC00373A20 /* 抽象类 */,
 				339B533820F4AA9D003444CB /* 策略模式  */,
 				3378280521081E5D00373A20 /* 装饰者模式 */,
 				33CCB12C20FDFBAE002C4FF4 /* 组合模式 */,
@@ -594,6 +664,7 @@
 				339B534C20F4AE74003444CB /* DownLoadViewController.m */,
 				339B535320F4B078003444CB /* PlayerViewController.h */,
 				339B535420F4B078003444CB /* PlayerViewController.m */,
+				3378281F21084C5C00373A20 /* 申论批改详情 */,
 				339B536F20F4DE65003444CB /* 模考大赛 */,
 				339B533920F4AB06003444CB /* DownLoad */,
 				339B533A20F4AB06003444CB /* Player */,
@@ -681,6 +752,7 @@
 		339D6C7420EA285700AC535E /* DataTransmission  */ = {
 			isa = PBXGroup;
 			children = (
+				3378282E2108770600373A20 /* 线程 */,
 				33888FD720F05B1400E4A119 /* Rumtime */,
 				33888FD620F05B0F00E4A119 /* Block */,
 				33888FD520F05B0F00E4A119 /* KVO:KVC */,
@@ -692,6 +764,7 @@
 		33A32AC920D8AF8F008C3969 /* NetRequstAndSocket */ = {
 			isa = PBXGroup;
 			children = (
+				3378282D2108726F00373A20 /* NetRequest */,
 				33A32ACC20D8B4EB008C3969 /* socket */,
 			);
 			path = NetRequstAndSocket;
@@ -1089,6 +1162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				337828312108772600373A20 /* ThreadViewController.m in Sources */,
+				3378281B21084A6E00373A20 /* pie.m in Sources */,
 				339B534720F4AB2A003444CB /* ZTKDownItem.m in Sources */,
 				33CCB0F320FDF099002C4FF4 /* HTBottomControlView.m in Sources */,
 				338FEBF520E0B5450025631B /* CustomAlertView.m in Sources */,
@@ -1103,7 +1178,6 @@
 				33888FE820F06AC900E4A119 /* PaternalSViewController.m in Sources */,
 				33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */,
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
-				337828122108480300373A20 /* pie.m in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
 				338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */,
 				33A32AF920DB3909008C3969 /* SegementChildViewController.m in Sources */,
@@ -1118,8 +1192,8 @@
 				339B536920F4B3CC003444CB /* BJPlayerHelper.m in Sources */,
 				33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */,
 				33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */,
+				3378281C21084A6E00373A20 /* Condiment.m in Sources */,
 				33E6CE0521006D2000422FC7 /* CreatTreeView.m in Sources */,
-				3378280F210842DB00373A20 /* Condiment.m in Sources */,
 				33888FD420F05ADB00E4A119 /* PaternalViewController.m in Sources */,
 				33A32AF520DA8044008C3969 /* SegementPersonDemoViewController.m in Sources */,
 				33A32AEF20DA795E008C3969 /* UIButton+SegementCustomButton.m in Sources */,
@@ -1131,10 +1205,13 @@
 				33888FE420F0683C00E4A119 /* UIView+frameAdjust.m in Sources */,
 				339B534620F4AB2A003444CB /* ZTKBJDownHelper.m in Sources */,
 				33888FEB20F06ADD00E4A119 /* ChildViewController.m in Sources */,
+				3378282C2108544300373A20 /* UIImage+Title.m in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
+				3378281D21084A6E00373A20 /* Hamburger.m in Sources */,
 				33E6CE0721006D2000422FC7 /* UITableViewCell+AnimationType.m in Sources */,
 				33FAE4E520E2445500BE7175 /* HeaderSuspendedLayout.m in Sources */,
 				338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */,
+				33782829210853B800373A20 /* UIImage+Shadow.m in Sources */,
 				339B536020F4B28B003444CB /* BJPlayer.m in Sources */,
 				338FEBFF20E0F25A0025631B /* UIControlFactory.m in Sources */,
 				339B535520F4B078003444CB /* PlayerViewController.m in Sources */,
@@ -1148,9 +1225,9 @@
 				339B536320F4B29B003444CB /* ZSPlayer.m in Sources */,
 				33E6CDD9210035FF00422FC7 /* ThreeLevelTreeView.m in Sources */,
 				33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */,
+				337828232108539800373A20 /* UIImage+BaseFilter.m in Sources */,
 				339B536C20F4B450003444CB /* AbstractPlayerHelperManager.m in Sources */,
 				339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */,
-				337828092108272A00373A20 /* Hamburger.m in Sources */,
 				33888FDE20F05E3500E4A119 /* SegmentContentCell.m in Sources */,
 				339B536620F4B39B003444CB /* ZSPlaterHelper.m in Sources */,
 				33CCB0E920FDEF2E002C4FF4 /* ResponOfChainManager.m in Sources */,
@@ -1168,6 +1245,7 @@
 				33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */,
 				33E6CE0621006D2000422FC7 /* TreeModel.m in Sources */,
 				333D108B20CF60A6004D9241 /* PopTableView.m in Sources */,
+				33782826210853AD00373A20 /* UIImage+Transform.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
