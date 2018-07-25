@@ -21,6 +21,10 @@
 		333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109920D0ECA0004D9241 /* CollectionModuleView.m */; };
 		333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109C20D14489004D9241 /* AbstractCollectionViewCell.m */; };
 		333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D10A120D24FD5004D9241 /* DrawViewController.m */; };
+		337828092108272A00373A20 /* Hamburger.m in Sources */ = {isa = PBXBuildFile; fileRef = 337828082108272A00373A20 /* Hamburger.m */; };
+		3378280C2108278C00373A20 /* DecoratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378280B2108278C00373A20 /* DecoratorViewController.m */; };
+		3378280F210842DB00373A20 /* Condiment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378280E210842DB00373A20 /* Condiment.m */; };
+		337828122108480300373A20 /* pie.m in Sources */ = {isa = PBXBuildFile; fileRef = 337828112108480300373A20 /* pie.m */; };
 		33888FC320EDCCCB00E4A119 /* CAGradientLayerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FC220EDCCCB00E4A119 /* CAGradientLayerDemo.m */; };
 		33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FCB20F05ADB00E4A119 /* ViewControllerChildOne.m */; };
 		33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FD020F05ADB00E4A119 /* ViewControllerChildTwo.m */; };
@@ -139,6 +143,15 @@
 		333D109C20D14489004D9241 /* AbstractCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractCollectionViewCell.m; sourceTree = "<group>"; };
 		333D10A020D24FD5004D9241 /* DrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
 		333D10A120D24FD5004D9241 /* DrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
+		337828062108239C00373A20 /* Decorator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Decorator.h; sourceTree = "<group>"; };
+		337828072108272A00373A20 /* Hamburger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hamburger.h; sourceTree = "<group>"; };
+		337828082108272A00373A20 /* Hamburger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hamburger.m; sourceTree = "<group>"; };
+		3378280A2108278C00373A20 /* DecoratorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecoratorViewController.h; sourceTree = "<group>"; };
+		3378280B2108278C00373A20 /* DecoratorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DecoratorViewController.m; sourceTree = "<group>"; };
+		3378280D210842DB00373A20 /* Condiment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Condiment.h; sourceTree = "<group>"; };
+		3378280E210842DB00373A20 /* Condiment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Condiment.m; sourceTree = "<group>"; };
+		337828102108480300373A20 /* pie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pie.h; sourceTree = "<group>"; };
+		337828112108480300373A20 /* pie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pie.m; sourceTree = "<group>"; };
 		33888FC120EDCCCB00E4A119 /* CAGradientLayerDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAGradientLayerDemo.h; sourceTree = "<group>"; };
 		33888FC220EDCCCB00E4A119 /* CAGradientLayerDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAGradientLayerDemo.m; sourceTree = "<group>"; };
 		33888FCB20F05ADB00E4A119 /* ViewControllerChildOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerChildOne.m; sourceTree = "<group>"; };
@@ -432,6 +445,22 @@
 			path = DrawWaveLine;
 			sourceTree = "<group>";
 		};
+		3378280521081E5D00373A20 /* 装饰者模式 */ = {
+			isa = PBXGroup;
+			children = (
+				337828062108239C00373A20 /* Decorator.h */,
+				337828072108272A00373A20 /* Hamburger.h */,
+				337828082108272A00373A20 /* Hamburger.m */,
+				337828102108480300373A20 /* pie.h */,
+				337828112108480300373A20 /* pie.m */,
+				3378280D210842DB00373A20 /* Condiment.h */,
+				3378280E210842DB00373A20 /* Condiment.m */,
+				3378280A2108278C00373A20 /* DecoratorViewController.h */,
+				3378280B2108278C00373A20 /* DecoratorViewController.m */,
+			);
+			path = "装饰者模式";
+			sourceTree = "<group>";
+		};
 		33828F1120D3CAB800318AE5 /* BaseModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,9 +541,10 @@
 		33888FF520F0C25400E4A119 /* DesignMode */ = {
 			isa = PBXGroup;
 			children = (
+				339B533820F4AA9D003444CB /* 策略模式  */,
+				3378280521081E5D00373A20 /* 装饰者模式 */,
 				33CCB12C20FDFBAE002C4FF4 /* 组合模式 */,
 				33CCB0E420FDDFF3002C4FF4 /* 责任链模式 */,
-				339B533820F4AA9D003444CB /* 策略模式  */,
 				339B533620F4AA9C003444CB /* 工厂模式 */,
 				339B533720F4AA9C003444CB /* 适配器模式 */,
 			);
@@ -1073,6 +1103,7 @@
 				33888FE820F06AC900E4A119 /* PaternalSViewController.m in Sources */,
 				33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */,
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
+				337828122108480300373A20 /* pie.m in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
 				338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */,
 				33A32AF920DB3909008C3969 /* SegementChildViewController.m in Sources */,
@@ -1088,6 +1119,7 @@
 				33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */,
 				33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */,
 				33E6CE0521006D2000422FC7 /* CreatTreeView.m in Sources */,
+				3378280F210842DB00373A20 /* Condiment.m in Sources */,
 				33888FD420F05ADB00E4A119 /* PaternalViewController.m in Sources */,
 				33A32AF520DA8044008C3969 /* SegementPersonDemoViewController.m in Sources */,
 				33A32AEF20DA795E008C3969 /* UIButton+SegementCustomButton.m in Sources */,
@@ -1118,6 +1150,7 @@
 				33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */,
 				339B536C20F4B450003444CB /* AbstractPlayerHelperManager.m in Sources */,
 				339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */,
+				337828092108272A00373A20 /* Hamburger.m in Sources */,
 				33888FDE20F05E3500E4A119 /* SegmentContentCell.m in Sources */,
 				339B536620F4B39B003444CB /* ZSPlaterHelper.m in Sources */,
 				33CCB0E920FDEF2E002C4FF4 /* ResponOfChainManager.m in Sources */,
@@ -1127,6 +1160,7 @@
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */,
 				33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */,
+				3378280C2108278C00373A20 /* DecoratorViewController.m in Sources */,
 				338FEC0520E0F5B70025631B /* UIButton+Decorate.m in Sources */,
 				33CCB0F020FDF077002C4FF4 /* HTTopControlView.m in Sources */,
 				333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */,
@@ -1307,7 +1341,10 @@
 				DEVELOPMENT_TEAM = B4Q6JBQZP4;
 				INFOPLIST_FILE = MyProjectModule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1323,7 +1360,10 @@
 				DEVELOPMENT_TEAM = B4Q6JBQZP4;
 				INFOPLIST_FILE = MyProjectModule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1337,7 +1377,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MR4GTF2765;
 				INFOPLIST_FILE = MyProjectModuleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModuleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1352,7 +1396,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MR4GTF2765;
 				INFOPLIST_FILE = MyProjectModuleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModuleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1366,7 +1414,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MR4GTF2765;
 				INFOPLIST_FILE = MyProjectModuleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModuleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1380,7 +1432,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MR4GTF2765;
 				INFOPLIST_FILE = MyProjectModuleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModuleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
