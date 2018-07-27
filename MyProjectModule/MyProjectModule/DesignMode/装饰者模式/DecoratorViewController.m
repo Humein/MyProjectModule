@@ -31,7 +31,7 @@
     
     pie *BB = [[pie alloc] initWithChickenBurger:AA];
     
-    NSLog(@"BB>>>>>%@,%@",@([BB getCost]).stringValue,[BB getDescription]);
+    NSLog(@"BB>>>>>%@,%@，%@",@([BB getCost]).stringValue,[BB getDescription],[BB pieDescription]);
     
     Condiment *CC = [[Condiment alloc]initWithChickenBurger:BB];
     

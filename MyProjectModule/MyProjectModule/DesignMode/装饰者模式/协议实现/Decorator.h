@@ -19,6 +19,7 @@
 - (NSInteger)getCost;
 
 
+-(NSString *)pieDescription;
 
 
 @end

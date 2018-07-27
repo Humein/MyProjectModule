@@ -26,4 +26,8 @@
     return [NSString stringWithFormat:@"%@%@",[_burger getDescription],@"馅饼"];
 }
 
+- (NSString *)pieDescription{
+    return @"pieDescription";
+}
+
 @end

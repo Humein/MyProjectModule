@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "Hamburger.h"
-
 @interface pie : NSObject<Decorator>
 @property (nonatomic, strong, readonly) Hamburger *burger;
 

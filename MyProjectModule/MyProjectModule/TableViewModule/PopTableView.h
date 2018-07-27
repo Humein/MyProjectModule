@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DecoratorProtocol.h"
 @class MatchesSwitchMdoel;
 
 @protocol MatchesSwitchMdoelCellDelegate <NSObject>
@@ -14,7 +15,7 @@
 -(void)cellClick:(MatchesSwitchMdoel *)viewModel;
 
 @end
-@interface PopTableView : UIView
+@interface PopTableView : UIView <DecoratorProtocols>
 @property(nonatomic,assign) id<MatchesSwitchMdoelCellDelegate> delegate;
 - (instancetype)initWithFrame:(CGRect)frame dataSource:(NSArray<NSArray *> *)dataSource withBGView:(NSString *)bgView;
 -(void)show;

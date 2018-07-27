@@ -30,6 +30,8 @@
 		33782829210853B800373A20 /* UIImage+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 33782828210853B800373A20 /* UIImage+Shadow.m */; };
 		3378282C2108544300373A20 /* UIImage+Title.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378282B2108544300373A20 /* UIImage+Title.m */; };
 		337828312108772600373A20 /* ThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337828302108772600373A20 /* ThreadViewController.m */; };
+		3378285B210AF28300373A20 /* DecoratorAView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378285A210AF28300373A20 /* DecoratorAView.m */; };
+		3378285E210AF50900373A20 /* TablePopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378285D210AF50900373A20 /* TablePopDemoViewController.m */; };
 		33888FC320EDCCCB00E4A119 /* CAGradientLayerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FC220EDCCCB00E4A119 /* CAGradientLayerDemo.m */; };
 		33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FCB20F05ADB00E4A119 /* ViewControllerChildOne.m */; };
 		33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FD020F05ADB00E4A119 /* ViewControllerChildTwo.m */; };
@@ -167,6 +169,11 @@
 		3378282B2108544300373A20 /* UIImage+Title.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Title.m"; sourceTree = "<group>"; };
 		3378282F2108772600373A20 /* ThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadViewController.h; sourceTree = "<group>"; };
 		337828302108772600373A20 /* ThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadViewController.m; sourceTree = "<group>"; };
+		33782858210AF16200373A20 /* DecoratorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecoratorProtocol.h; sourceTree = "<group>"; };
+		33782859210AF28300373A20 /* DecoratorAView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecoratorAView.h; sourceTree = "<group>"; };
+		3378285A210AF28300373A20 /* DecoratorAView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DecoratorAView.m; sourceTree = "<group>"; };
+		3378285C210AF50900373A20 /* TablePopDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TablePopDemoViewController.h; sourceTree = "<group>"; };
+		3378285D210AF50900373A20 /* TablePopDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TablePopDemoViewController.m; sourceTree = "<group>"; };
 		33888FC120EDCCCB00E4A119 /* CAGradientLayerDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAGradientLayerDemo.h; sourceTree = "<group>"; };
 		33888FC220EDCCCB00E4A119 /* CAGradientLayerDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAGradientLayerDemo.m; sourceTree = "<group>"; };
 		33888FCB20F05ADB00E4A119 /* ViewControllerChildOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerChildOne.m; sourceTree = "<group>"; };
@@ -411,10 +418,15 @@
 		333D108720CF5AAB004D9241 /* TableViewModule */ = {
 			isa = PBXGroup;
 			children = (
-				33E6CDCD210034E200422FC7 /* AlertTableView */,
-				33A32ADF20D91234008C3969 /* 折叠的TableView */,
+				33782858210AF16200373A20 /* DecoratorProtocol.h */,
 				333D108920CF60A5004D9241 /* PopTableView.h */,
 				333D108A20CF60A5004D9241 /* PopTableView.m */,
+				33782859210AF28300373A20 /* DecoratorAView.h */,
+				3378285A210AF28300373A20 /* DecoratorAView.m */,
+				3378285C210AF50900373A20 /* TablePopDemoViewController.h */,
+				3378285D210AF50900373A20 /* TablePopDemoViewController.m */,
+				33E6CDCD210034E200422FC7 /* AlertTableView */,
+				33A32ADF20D91234008C3969 /* 折叠的TableView */,
 			);
 			path = TableViewModule;
 			sourceTree = "<group>";
@@ -1236,11 +1248,13 @@
 				33E6CE0421006D2000422FC7 /* TreeViewModel.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */,
+				3378285B210AF28300373A20 /* DecoratorAView.m in Sources */,
 				33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */,
 				3378280C2108278C00373A20 /* DecoratorViewController.m in Sources */,
 				338FEC0520E0F5B70025631B /* UIButton+Decorate.m in Sources */,
 				33CCB0F020FDF077002C4FF4 /* HTTopControlView.m in Sources */,
 				333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */,
+				3378285E210AF50900373A20 /* TablePopDemoViewController.m in Sources */,
 				33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */,
 				33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */,
 				33E6CE0621006D2000422FC7 /* TreeModel.m in Sources */,
