@@ -75,6 +75,9 @@
 		33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AFB20DB4910008C3969 /* PersonalCenterChildViewController.m */; };
 		33A32B0020DB7D5C008C3969 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AFF20DB7D5C008C3969 /* SectionModel.m */; };
 		33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32B0220DC95AF008C3969 /* DrawLine.m */; };
+		33C97111211E7C3700EAAD5E /* APPPayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C97110211E7C3700EAAD5E /* APPPayTool.m */; };
+		33C97118211E81D800EAAD5E /* ApplePay.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C97117211E81D800EAAD5E /* ApplePay.m */; };
+		33C9711B211E899400EAAD5E /* AliPay.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C9711A211E899400EAAD5E /* AliPay.m */; };
 		33CCB0E920FDEF2E002C4FF4 /* ResponOfChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0E820FDEF2E002C4FF4 /* ResponOfChainManager.m */; };
 		33CCB0ED20FDF030002C4FF4 /* HTMiddleControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0EC20FDF030002C4FF4 /* HTMiddleControlView.m */; };
 		33CCB0F020FDF077002C4FF4 /* HTTopControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0EF20FDF077002C4FF4 /* HTTopControlView.m */; };
@@ -264,6 +267,13 @@
 		33A32AFF20DB7D5C008C3969 /* SectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectionModel.m; sourceTree = "<group>"; };
 		33A32B0120DC95AF008C3969 /* DrawLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawLine.h; sourceTree = "<group>"; };
 		33A32B0220DC95AF008C3969 /* DrawLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawLine.m; sourceTree = "<group>"; };
+		33C9710F211E7C3700EAAD5E /* APPPayTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPPayTool.h; sourceTree = "<group>"; };
+		33C97110211E7C3700EAAD5E /* APPPayTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPPayTool.m; sourceTree = "<group>"; };
+		33C97113211E7F7100EAAD5E /* APPPayProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPPayProtocol.h; sourceTree = "<group>"; };
+		33C97116211E81D800EAAD5E /* ApplePay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplePay.h; sourceTree = "<group>"; };
+		33C97117211E81D800EAAD5E /* ApplePay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplePay.m; sourceTree = "<group>"; };
+		33C97119211E899400EAAD5E /* AliPay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliPay.h; sourceTree = "<group>"; };
+		33C9711A211E899400EAAD5E /* AliPay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliPay.m; sourceTree = "<group>"; };
 		33CCB0E720FDEF2E002C4FF4 /* ResponOfChainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponOfChainManager.h; sourceTree = "<group>"; };
 		33CCB0E820FDEF2E002C4FF4 /* ResponOfChainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponOfChainManager.m; sourceTree = "<group>"; };
 		33CCB0EA20FDEF6B002C4FF4 /* ActionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionProtocol.h; sourceTree = "<group>"; };
@@ -676,6 +686,7 @@
 				339B534C20F4AE74003444CB /* DownLoadViewController.m */,
 				339B535320F4B078003444CB /* PlayerViewController.h */,
 				339B535420F4B078003444CB /* PlayerViewController.m */,
+				33C9710E211E7C0400EAAD5E /* 支付方式 */,
 				3378281F21084C5C00373A20 /* 申论批改详情 */,
 				339B536F20F4DE65003444CB /* 模考大赛 */,
 				339B533920F4AB06003444CB /* DownLoad */,
@@ -851,6 +862,28 @@
 				33A32AFF20DB7D5C008C3969 /* SectionModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		33C9710E211E7C0400EAAD5E /* 支付方式 */ = {
+			isa = PBXGroup;
+			children = (
+				33C97112211E7C5600EAAD5E /* 支付SDK */,
+				33C9710F211E7C3700EAAD5E /* APPPayTool.h */,
+				33C97110211E7C3700EAAD5E /* APPPayTool.m */,
+				33C97113211E7F7100EAAD5E /* APPPayProtocol.h */,
+			);
+			path = "支付方式";
+			sourceTree = "<group>";
+		};
+		33C97112211E7C5600EAAD5E /* 支付SDK */ = {
+			isa = PBXGroup;
+			children = (
+				33C97116211E81D800EAAD5E /* ApplePay.h */,
+				33C97117211E81D800EAAD5E /* ApplePay.m */,
+				33C97119211E899400EAAD5E /* AliPay.h */,
+				33C9711A211E899400EAAD5E /* AliPay.m */,
+			);
+			path = "支付SDK";
 			sourceTree = "<group>";
 		};
 		33CCB0E420FDDFF3002C4FF4 /* 责任链模式 */ = {
@@ -1237,9 +1270,12 @@
 				339B536320F4B29B003444CB /* ZSPlayer.m in Sources */,
 				33E6CDD9210035FF00422FC7 /* ThreeLevelTreeView.m in Sources */,
 				33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */,
+				33C9711B211E899400EAAD5E /* AliPay.m in Sources */,
 				337828232108539800373A20 /* UIImage+BaseFilter.m in Sources */,
 				339B536C20F4B450003444CB /* AbstractPlayerHelperManager.m in Sources */,
+				33C97118211E81D800EAAD5E /* ApplePay.m in Sources */,
 				339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */,
+				33C97111211E7C3700EAAD5E /* APPPayTool.m in Sources */,
 				33888FDE20F05E3500E4A119 /* SegmentContentCell.m in Sources */,
 				339B536620F4B39B003444CB /* ZSPlaterHelper.m in Sources */,
 				33CCB0E920FDEF2E002C4FF4 /* ResponOfChainManager.m in Sources */,

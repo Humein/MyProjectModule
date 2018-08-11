@@ -9,6 +9,7 @@
 #import "PlayerViewController.h"
 #import "UIButton+ButtonBlockCategory.h"
 #import "AbstractPlayerHelperManager.h"
+#import "APPPayTool.h"
 @interface PlayerViewController (){
     AbstractPlayerHelperManager *_player;
 
@@ -84,6 +85,18 @@
 }
 
 
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    [[APPPayTool sharedPayManager] payType:PayType_AliPay orderId:@"1" completionBlock:^(PayStatus payStatus, PayType type) {
+        
+        if (payStatus == PayStatus_Success) {
+            
+        
+        }
+        
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
