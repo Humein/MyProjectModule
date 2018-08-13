@@ -78,6 +78,10 @@
 		33C97111211E7C3700EAAD5E /* APPPayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C97110211E7C3700EAAD5E /* APPPayTool.m */; };
 		33C97118211E81D800EAAD5E /* ApplePay.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C97117211E81D800EAAD5E /* ApplePay.m */; };
 		33C9711B211E899400EAAD5E /* AliPay.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C9711A211E899400EAAD5E /* AliPay.m */; };
+		33C9711F211EB8DC00EAAD5E /* AbstractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C9711E211EB8DC00EAAD5E /* AbstractViewController.m */; };
+		33C971222121313300EAAD5E /* CorrectResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971212121313300EAAD5E /* CorrectResolver.m */; };
+		33C971252121315500EAAD5E /* ResovlerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971242121315500EAAD5E /* ResovlerModel.m */; };
+		33C971282121317D00EAAD5E /* CorrectTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971272121317D00EAAD5E /* CorrectTagModel.m */; };
 		33CCB0E920FDEF2E002C4FF4 /* ResponOfChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0E820FDEF2E002C4FF4 /* ResponOfChainManager.m */; };
 		33CCB0ED20FDF030002C4FF4 /* HTMiddleControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0EC20FDF030002C4FF4 /* HTMiddleControlView.m */; };
 		33CCB0F020FDF077002C4FF4 /* HTTopControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0EF20FDF077002C4FF4 /* HTTopControlView.m */; };
@@ -274,6 +278,14 @@
 		33C97117211E81D800EAAD5E /* ApplePay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplePay.m; sourceTree = "<group>"; };
 		33C97119211E899400EAAD5E /* AliPay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliPay.h; sourceTree = "<group>"; };
 		33C9711A211E899400EAAD5E /* AliPay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliPay.m; sourceTree = "<group>"; };
+		33C9711D211EB8DC00EAAD5E /* AbstractViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractViewController.h; sourceTree = "<group>"; };
+		33C9711E211EB8DC00EAAD5E /* AbstractViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractViewController.m; sourceTree = "<group>"; };
+		33C971202121313300EAAD5E /* CorrectResolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CorrectResolver.h; sourceTree = "<group>"; };
+		33C971212121313300EAAD5E /* CorrectResolver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CorrectResolver.m; sourceTree = "<group>"; };
+		33C971232121315500EAAD5E /* ResovlerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResovlerModel.h; sourceTree = "<group>"; };
+		33C971242121315500EAAD5E /* ResovlerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResovlerModel.m; sourceTree = "<group>"; };
+		33C971262121317D00EAAD5E /* CorrectTagModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CorrectTagModel.h; sourceTree = "<group>"; };
+		33C971272121317D00EAAD5E /* CorrectTagModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CorrectTagModel.m; sourceTree = "<group>"; };
 		33CCB0E720FDEF2E002C4FF4 /* ResponOfChainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponOfChainManager.h; sourceTree = "<group>"; };
 		33CCB0E820FDEF2E002C4FF4 /* ResponOfChainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponOfChainManager.m; sourceTree = "<group>"; };
 		33CCB0EA20FDEF6B002C4FF4 /* ActionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionProtocol.h; sourceTree = "<group>"; };
@@ -385,10 +397,10 @@
 		333D105420CE74A8004D9241 /* MyProjectModule */ = {
 			isa = PBXGroup;
 			children = (
+				33828F1120D3CAB800318AE5 /* BaseModule */,
 				33888FF520F0C25400E4A119 /* DesignMode */,
 				339D6C7420EA285700AC535E /* DataTransmission  */,
 				33A32AC920D8AF8F008C3969 /* NetRequstAndSocket */,
-				33828F1120D3CAB800318AE5 /* BaseModule */,
 				333D109E20D23810004D9241 /* BezierPath&ShapLayer&Animation */,
 				333D108820CF5AB2004D9241 /* CollectionViewModule */,
 				333D108720CF5AAB004D9241 /* TableViewModule */,
@@ -525,6 +537,12 @@
 		3378281F21084C5C00373A20 /* 申论批改详情 */ = {
 			isa = PBXGroup;
 			children = (
+				33C971202121313300EAAD5E /* CorrectResolver.h */,
+				33C971212121313300EAAD5E /* CorrectResolver.m */,
+				33C971232121315500EAAD5E /* ResovlerModel.h */,
+				33C971242121315500EAAD5E /* ResovlerModel.m */,
+				33C971262121317D00EAAD5E /* CorrectTagModel.h */,
+				33C971272121317D00EAAD5E /* CorrectTagModel.m */,
 			);
 			path = "申论批改详情";
 			sourceTree = "<group>";
@@ -555,6 +573,7 @@
 		33828F1120D3CAB800318AE5 /* BaseModule */ = {
 			isa = PBXGroup;
 			children = (
+				33C9711C211EB8C900EAAD5E /* AbstractBase */,
 				33888FD820F05C3600E4A119 /* ImitateWMPage */,
 				33FAE4B820E1E37300BE7175 /* BookMarkSegement */,
 				338FEBFC20E0F2390025631B /* BaseUIKitFactory */,
@@ -884,6 +903,15 @@
 				33C9711A211E899400EAAD5E /* AliPay.m */,
 			);
 			path = "支付SDK";
+			sourceTree = "<group>";
+		};
+		33C9711C211EB8C900EAAD5E /* AbstractBase */ = {
+			isa = PBXGroup;
+			children = (
+				33C9711D211EB8DC00EAAD5E /* AbstractViewController.h */,
+				33C9711E211EB8DC00EAAD5E /* AbstractViewController.m */,
+			);
+			path = AbstractBase;
 			sourceTree = "<group>";
 		};
 		33CCB0E420FDDFF3002C4FF4 /* 责任链模式 */ = {
@@ -1247,9 +1275,11 @@
 				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
 				33E6CE0821006D2000422FC7 /* TreeViewCell.m in Sources */,
 				33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */,
+				33C9711F211EB8DC00EAAD5E /* AbstractViewController.m in Sources */,
 				33888FE420F0683C00E4A119 /* UIView+frameAdjust.m in Sources */,
 				339B534620F4AB2A003444CB /* ZTKBJDownHelper.m in Sources */,
 				33888FEB20F06ADD00E4A119 /* ChildViewController.m in Sources */,
+				33C971282121317D00EAAD5E /* CorrectTagModel.m in Sources */,
 				3378282C2108544300373A20 /* UIImage+Title.m in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
 				3378281D21084A6E00373A20 /* Hamburger.m in Sources */,
@@ -1261,6 +1291,7 @@
 				338FEBFF20E0F25A0025631B /* UIControlFactory.m in Sources */,
 				339B535520F4B078003444CB /* PlayerViewController.m in Sources */,
 				33FAE4E620E2445500BE7175 /* CarouselLayout.m in Sources */,
+				33C971222121313300EAAD5E /* CorrectResolver.m in Sources */,
 				33A32AEC20DA78FA008C3969 /* UIView+ChainFrameView.m in Sources */,
 				333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */,
 				33FAE4E720E2445500BE7175 /* WaterfallLayout.m in Sources */,
@@ -1282,6 +1313,7 @@
 				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
 				339B535020F4AF35003444CB /* UIButton+ButtonBlockCategory.m in Sources */,
 				33E6CE0421006D2000422FC7 /* TreeViewModel.m in Sources */,
+				33C971252121315500EAAD5E /* ResovlerModel.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */,
 				3378285B210AF28300373A20 /* DecoratorAView.m in Sources */,

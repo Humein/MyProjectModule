@@ -25,6 +25,9 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+#warning ---TODO 通 链表的方式 将各个控制层 绑定起来
+    
     HTTopControlView *top = [[HTTopControlView alloc] init];
     HTBottomControlView *bot = [[HTBottomControlView alloc] init];
     HTMiddleControlView *mid = [[HTMiddleControlView alloc] init];
