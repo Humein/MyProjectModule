@@ -82,6 +82,8 @@
 		33C971222121313300EAAD5E /* CorrectResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971212121313300EAAD5E /* CorrectResolver.m */; };
 		33C971252121315500EAAD5E /* ResovlerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971242121315500EAAD5E /* ResovlerModel.m */; };
 		33C971282121317D00EAAD5E /* CorrectTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971272121317D00EAAD5E /* CorrectTagModel.m */; };
+		33C9712B2122F45D00EAAD5E /* CustomKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C9712A2122F45D00EAAD5E /* CustomKVO.m */; };
+		33C9712E2122F4C100EAAD5E /* PersonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C9712D2122F4C100EAAD5E /* PersonInfo.m */; };
 		33CCB0E920FDEF2E002C4FF4 /* ResponOfChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0E820FDEF2E002C4FF4 /* ResponOfChainManager.m */; };
 		33CCB0ED20FDF030002C4FF4 /* HTMiddleControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0EC20FDF030002C4FF4 /* HTMiddleControlView.m */; };
 		33CCB0F020FDF077002C4FF4 /* HTTopControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0EF20FDF077002C4FF4 /* HTTopControlView.m */; };
@@ -286,6 +288,10 @@
 		33C971242121315500EAAD5E /* ResovlerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResovlerModel.m; sourceTree = "<group>"; };
 		33C971262121317D00EAAD5E /* CorrectTagModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CorrectTagModel.h; sourceTree = "<group>"; };
 		33C971272121317D00EAAD5E /* CorrectTagModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CorrectTagModel.m; sourceTree = "<group>"; };
+		33C971292122F45D00EAAD5E /* CustomKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomKVO.h; sourceTree = "<group>"; };
+		33C9712A2122F45D00EAAD5E /* CustomKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomKVO.m; sourceTree = "<group>"; };
+		33C9712C2122F4C100EAAD5E /* PersonInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonInfo.h; sourceTree = "<group>"; };
+		33C9712D2122F4C100EAAD5E /* PersonInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonInfo.m; sourceTree = "<group>"; };
 		33CCB0E720FDEF2E002C4FF4 /* ResponOfChainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponOfChainManager.h; sourceTree = "<group>"; };
 		33CCB0E820FDEF2E002C4FF4 /* ResponOfChainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponOfChainManager.m; sourceTree = "<group>"; };
 		33CCB0EA20FDEF6B002C4FF4 /* ActionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionProtocol.h; sourceTree = "<group>"; };
@@ -601,6 +607,10 @@
 		33888FD520F05B0F00E4A119 /* KVO:KVC */ = {
 			isa = PBXGroup;
 			children = (
+				33C971292122F45D00EAAD5E /* CustomKVO.h */,
+				33C9712A2122F45D00EAAD5E /* CustomKVO.m */,
+				33C9712C2122F4C100EAAD5E /* PersonInfo.h */,
+				33C9712D2122F4C100EAAD5E /* PersonInfo.m */,
 			);
 			path = "KVO:KVC";
 			sourceTree = "<group>";
@@ -1268,6 +1278,7 @@
 				3378281C21084A6E00373A20 /* Condiment.m in Sources */,
 				33E6CE0521006D2000422FC7 /* CreatTreeView.m in Sources */,
 				33888FD420F05ADB00E4A119 /* PaternalViewController.m in Sources */,
+				33C9712E2122F4C100EAAD5E /* PersonInfo.m in Sources */,
 				33A32AF520DA8044008C3969 /* SegementPersonDemoViewController.m in Sources */,
 				33A32AEF20DA795E008C3969 /* UIButton+SegementCustomButton.m in Sources */,
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
@@ -1276,6 +1287,7 @@
 				33E6CE0821006D2000422FC7 /* TreeViewCell.m in Sources */,
 				33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */,
 				33C9711F211EB8DC00EAAD5E /* AbstractViewController.m in Sources */,
+				33C9712B2122F45D00EAAD5E /* CustomKVO.m in Sources */,
 				33888FE420F0683C00E4A119 /* UIView+frameAdjust.m in Sources */,
 				339B534620F4AB2A003444CB /* ZTKBJDownHelper.m in Sources */,
 				33888FEB20F06ADD00E4A119 /* ChildViewController.m in Sources */,
