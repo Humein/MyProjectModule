@@ -33,6 +33,8 @@
         make.right.equalTo(self).offset(-20);
         make.height.equalTo(@200);
     }];
+    
+//    测试
     _alertBtn = [UIButton new];
     _alertBtn.backgroundColor = [UIColor redColor];
     [_alertBtn addTarget:self action:@selector(popTabel) forControlEvents:UIControlEventTouchDown];
@@ -65,6 +67,17 @@
     self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2];
     
 }
+
+- (void)showCustomView:(UIView *)customView InView:(UIView*)view{
+    self.frame= view.bounds;
+    [self addSubview:customView];
+    [customView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self ->_alertView).offset(10);
+    }];
+    [view addSubview:self];
+    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2];
+}
+
 
 - (void)hidden
 {

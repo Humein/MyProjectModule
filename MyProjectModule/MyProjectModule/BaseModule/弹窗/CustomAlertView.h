@@ -15,4 +15,8 @@
 - (void)showInView:(UIView*)view;
 //隐藏
 -(void)hidden;
+
+// 自定义
+- (void)showCustomView:(UIView *)customView InView:(UIView*)view;
+
 @end
