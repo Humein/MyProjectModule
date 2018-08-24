@@ -45,14 +45,6 @@ static NSString *keyWithBlock = @"keyWithBlock";
     return button;
 }
 
-- (void)setActionBlock:(ActionBlock)actionBlock{
-    objc_setAssociatedObject(self, &keyWithBlock, actionBlock, OBJC_ASSOCIATION_COPY_NONATOMIC );
-}
-
-- (ActionBlock)actionBlock{
-    return objc_getAssociatedObject(self ,&keyWithBlock);
-}
-
 - (void)buttonTapAction:(UIButton *)button {
     //通过key获取被关联对象
     //objc_getAssociatedObject(id object, const void *key)
@@ -67,5 +59,19 @@ static NSString *keyWithBlock = @"keyWithBlock";
         block2(button);
     }
 }
+
+
+// 为分类增加伪属性
+- (void)setActionBlock:(ActionBlock)actionBlock{
+    objc_setAssociatedObject(self, &keyWithBlock, actionBlock, OBJC_ASSOCIATION_COPY_NONATOMIC );
+}
+
+- (ActionBlock)actionBlock{
+    return objc_getAssociatedObject(self ,&keyWithBlock);
+}
+
+
+
+
 
 @end

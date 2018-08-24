@@ -9,10 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomAlertView : UIView
+
 //显示在window上的
+
 - (void)show;
+
 //显示在view中
 - (void)showInView:(UIView*)view;
+
+-(void)showInView:(UIView *)view dely:(NSTimeInterval )time;
+
 //隐藏
 -(void)hidden;
 

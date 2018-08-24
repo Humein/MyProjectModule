@@ -7,8 +7,11 @@
 //
 #import <UIKit/UIKit.h>
 typedef void (^ActionBlock)(UIButton *button);
-#warning 1-添加属性
+
+#pragma mark ---- 1:利用关联对象为分类增加伪属性
+
 @interface UIButton (ButtonBlockCategory)
+
 @property (nonatomic,copy) ActionBlock actionBlock;
 
 /**

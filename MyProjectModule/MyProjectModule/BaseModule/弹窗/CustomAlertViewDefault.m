@@ -11,7 +11,9 @@
 
 
 @implementation CustomAlertViewDefault
-
+-(void)dealloc{
+    NSLog(@"%@======销毁",NSStringFromClass(self.class));
+}
 - (id)initWithFrame:(CGRect)frame
 {
     if (self= [super initWithFrame:CGRectZero]) {

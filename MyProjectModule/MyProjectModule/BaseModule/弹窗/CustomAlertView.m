@@ -14,6 +14,12 @@
 @property(nonatomic,strong) UIView *alertView;
 @end
 @implementation CustomAlertView
+
+
+-(void)dealloc{
+    NSLog(@"%@======销毁",NSStringFromClass(self.class));
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -68,11 +74,20 @@
     
 }
 
+-(void)showInView:(UIView *)view dely:(NSTimeInterval )time{
+    self.frame= view.bounds;
+    [view addSubview:self];
+    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:(time) target:self selector:@selector(hidden) userInfo:nil repeats:NO];
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+}
+
+
 - (void)showCustomView:(UIView *)customView InView:(UIView*)view{
     self.frame= view.bounds;
     [self addSubview:customView];
     [customView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self ->_alertView).offset(10);
+        make.edges.equalTo(self ->_alertView).with.insets(UIEdgeInsetsMake(10, 10, 10, 10));
     }];
     [view addSubview:self];
     self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2];
@@ -81,6 +96,9 @@
 
 - (void)hidden
 {
+    for (UIView *view in self.subviews) {
+        [view removeFromSuperview];
+    }
     [self removeFromSuperview];
 }
 
