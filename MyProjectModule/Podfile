@@ -6,4 +6,6 @@ target 'MyProjectModule' do
   pod 'pop', '~> 1.0'
   pod 'MJExtension'
   pod 'AFNetworking'
+  pod 'KVOController'
+
 end

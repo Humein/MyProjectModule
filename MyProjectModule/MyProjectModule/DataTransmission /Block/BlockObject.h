@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 @interface BlockObject : UIViewController
+//@property (nonatomic, copy) void(^popBlock)(void);
 
 //As a property 逆向传值
 @property (nonatomic,copy) void (^rightBarItemClickBlock)(UIButton *button, NSInteger index);

@@ -20,6 +20,9 @@
 		333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109920D0ECA0004D9241 /* CollectionModuleView.m */; };
 		333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109C20D14489004D9241 /* AbstractCollectionViewCell.m */; };
 		333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D10A120D24FD5004D9241 /* DrawViewController.m */; };
+		3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3362E69A2130FBEF00A4B26D /* PersonInfo.m */; };
+		3362E69F2130FBEF00A4B26D /* CustomKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3362E69B2130FBEF00A4B26D /* CustomKVO.m */; };
+		3362E6A22130FC1300A4B26D /* FBKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3362E6A12130FC1300A4B26D /* FBKVOViewController.m */; };
 		33759E6E212F9FD500D801C1 /* UITableViewCell+AnimationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 33759E6D212F9FD500D801C1 /* UITableViewCell+AnimationType.m */; };
 		33759E71212FA08900D801C1 /* UIView+MethodSwizze.m in Sources */ = {isa = PBXBuildFile; fileRef = 33759E70212FA08900D801C1 /* UIView+MethodSwizze.m */; };
 		33759E74212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.m in Sources */ = {isa = PBXBuildFile; fileRef = 33759E72212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.m */; };
@@ -84,8 +87,6 @@
 		33C971222121313300EAAD5E /* CorrectResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971212121313300EAAD5E /* CorrectResolver.m */; };
 		33C971252121315500EAAD5E /* ResovlerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971242121315500EAAD5E /* ResovlerModel.m */; };
 		33C971282121317D00EAAD5E /* CorrectTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971272121317D00EAAD5E /* CorrectTagModel.m */; };
-		33C9712B2122F45D00EAAD5E /* CustomKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C9712A2122F45D00EAAD5E /* CustomKVO.m */; };
-		33C9712E2122F4C100EAAD5E /* PersonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C9712D2122F4C100EAAD5E /* PersonInfo.m */; };
 		33C9713F2124108D00EAAD5E /* PopTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971332124108D00EAAD5E /* PopTableView.m */; };
 		33C971402124108D00EAAD5E /* CustomAlertViewDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971342124108D00EAAD5E /* CustomAlertViewDefault.m */; };
 		33C971412124108D00EAAD5E /* DecoratorAView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971382124108D00EAAD5E /* DecoratorAView.m */; };
@@ -164,6 +165,12 @@
 		333D109C20D14489004D9241 /* AbstractCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractCollectionViewCell.m; sourceTree = "<group>"; };
 		333D10A020D24FD5004D9241 /* DrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
 		333D10A120D24FD5004D9241 /* DrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
+		3362E6992130FBEF00A4B26D /* CustomKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomKVO.h; sourceTree = "<group>"; };
+		3362E69A2130FBEF00A4B26D /* PersonInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfo.m; sourceTree = "<group>"; };
+		3362E69B2130FBEF00A4B26D /* CustomKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKVO.m; sourceTree = "<group>"; };
+		3362E69C2130FBEF00A4B26D /* PersonInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfo.h; sourceTree = "<group>"; };
+		3362E6A02130FC1300A4B26D /* FBKVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBKVOViewController.h; sourceTree = "<group>"; };
+		3362E6A12130FC1300A4B26D /* FBKVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBKVOViewController.m; sourceTree = "<group>"; };
 		33759E6C212F9FD500D801C1 /* UITableViewCell+AnimationType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+AnimationType.h"; sourceTree = "<group>"; };
 		33759E6D212F9FD500D801C1 /* UITableViewCell+AnimationType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+AnimationType.m"; sourceTree = "<group>"; };
 		33759E6F212FA08900D801C1 /* UIView+MethodSwizze.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+MethodSwizze.h"; sourceTree = "<group>"; };
@@ -298,10 +305,6 @@
 		33C971242121315500EAAD5E /* ResovlerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResovlerModel.m; sourceTree = "<group>"; };
 		33C971262121317D00EAAD5E /* CorrectTagModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CorrectTagModel.h; sourceTree = "<group>"; };
 		33C971272121317D00EAAD5E /* CorrectTagModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CorrectTagModel.m; sourceTree = "<group>"; };
-		33C971292122F45D00EAAD5E /* CustomKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomKVO.h; sourceTree = "<group>"; };
-		33C9712A2122F45D00EAAD5E /* CustomKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomKVO.m; sourceTree = "<group>"; };
-		33C9712C2122F4C100EAAD5E /* PersonInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonInfo.h; sourceTree = "<group>"; };
-		33C9712D2122F4C100EAAD5E /* PersonInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonInfo.m; sourceTree = "<group>"; };
 		33C971332124108D00EAAD5E /* PopTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTableView.m; sourceTree = "<group>"; };
 		33C971342124108D00EAAD5E /* CustomAlertViewDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlertViewDefault.m; sourceTree = "<group>"; };
 		33C971362124108D00EAAD5E /* TablePopDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TablePopDemoViewController.h; sourceTree = "<group>"; };
@@ -514,6 +517,26 @@
 			path = DrawWaveLine;
 			sourceTree = "<group>";
 		};
+		3362E6982130FBEF00A4B26D /* 系统手动KVO */ = {
+			isa = PBXGroup;
+			children = (
+				3362E6992130FBEF00A4B26D /* CustomKVO.h */,
+				3362E69B2130FBEF00A4B26D /* CustomKVO.m */,
+				3362E69C2130FBEF00A4B26D /* PersonInfo.h */,
+				3362E69A2130FBEF00A4B26D /* PersonInfo.m */,
+			);
+			path = "系统手动KVO";
+			sourceTree = "<group>";
+		};
+		3362E69D2130FBEF00A4B26D /* FacebookKVO */ = {
+			isa = PBXGroup;
+			children = (
+				3362E6A02130FC1300A4B26D /* FBKVOViewController.h */,
+				3362E6A12130FC1300A4B26D /* FBKVOViewController.m */,
+			);
+			path = FacebookKVO;
+			sourceTree = "<group>";
+		};
 		33759E6B212F9F9500D801C1 /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,10 +650,8 @@
 		33888FD520F05B0F00E4A119 /* KVO:KVC */ = {
 			isa = PBXGroup;
 			children = (
-				33C971292122F45D00EAAD5E /* CustomKVO.h */,
-				33C9712A2122F45D00EAAD5E /* CustomKVO.m */,
-				33C9712C2122F4C100EAAD5E /* PersonInfo.h */,
-				33C9712D2122F4C100EAAD5E /* PersonInfo.m */,
+				3362E6982130FBEF00A4B26D /* 系统手动KVO */,
+				3362E69D2130FBEF00A4B26D /* FacebookKVO */,
 			);
 			path = "KVO:KVC";
 			sourceTree = "<group>";
@@ -1262,6 +1283,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/KVOController/KVOController.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
@@ -1269,6 +1292,8 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVOController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
@@ -1321,6 +1346,7 @@
 				33888FE820F06AC900E4A119 /* PaternalSViewController.m in Sources */,
 				33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */,
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
+				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
 				338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */,
 				33A32AF920DB3909008C3969 /* SegementChildViewController.m in Sources */,
@@ -1332,6 +1358,7 @@
 				339B534A20F4AB2A003444CB /* ZTKLLDownHelper.m in Sources */,
 				33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */,
 				338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */,
+				3362E6A22130FC1300A4B26D /* FBKVOViewController.m in Sources */,
 				339B536920F4B3CC003444CB /* BJPlayerHelper.m in Sources */,
 				33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */,
 				33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */,
@@ -1339,7 +1366,6 @@
 				33E6CE0521006D2000422FC7 /* CreatTreeView.m in Sources */,
 				33759E74212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.m in Sources */,
 				33888FD420F05ADB00E4A119 /* PaternalViewController.m in Sources */,
-				33C9712E2122F4C100EAAD5E /* PersonInfo.m in Sources */,
 				33A32AF520DA8044008C3969 /* SegementPersonDemoViewController.m in Sources */,
 				33A32AEF20DA795E008C3969 /* UIButton+SegementCustomButton.m in Sources */,
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
@@ -1348,10 +1374,10 @@
 				33E6CE0821006D2000422FC7 /* TreeViewCell.m in Sources */,
 				33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */,
 				33C9711F211EB8DC00EAAD5E /* AbstractViewController.m in Sources */,
-				33C9712B2122F45D00EAAD5E /* CustomKVO.m in Sources */,
 				33888FE420F0683C00E4A119 /* UIView+frameAdjust.m in Sources */,
 				339B534620F4AB2A003444CB /* ZTKBJDownHelper.m in Sources */,
 				33888FEB20F06ADD00E4A119 /* ChildViewController.m in Sources */,
+				3362E69F2130FBEF00A4B26D /* CustomKVO.m in Sources */,
 				33C971282121317D00EAAD5E /* CorrectTagModel.m in Sources */,
 				3378282C2108544300373A20 /* UIImage+Title.m in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
