@@ -123,6 +123,7 @@
 		79BFDCDF2142A15200C81069 /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BFDCDE2142A14700C81069 /* Detail.md */; };
 		79BFDCE52142A16000C81069 /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BFDCE22142A16000C81069 /* Detail.md */; };
 		79BFDCE62142A16000C81069 /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BFDCE42142A16000C81069 /* Detail.md */; };
+		79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFDCE82142A28700C81069 /* StartWaterView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -376,6 +377,8 @@
 		79BFDCDE2142A14700C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = SOURCE_ROOT; };
 		79BFDCE22142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE42142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
+		79BFDCE72142A28700C81069 /* StartWaterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartWaterView.h; sourceTree = "<group>"; };
+		79BFDCE82142A28700C81069 /* StartWaterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartWaterView.m; sourceTree = "<group>"; };
 		A36D58F14EAF98187791F3CA /* Pods-MyProjectModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -511,6 +514,8 @@
 				338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */,
 				33A32B0120DC95AF008C3969 /* DrawLine.h */,
 				33A32B0220DC95AF008C3969 /* DrawLine.m */,
+				79BFDCE72142A28700C81069 /* StartWaterView.h */,
+				79BFDCE82142A28700C81069 /* StartWaterView.m */,
 				338FEB5D20DCFC7D0025631B /* DrawBaseAnimaltionView.h */,
 				338FEB5E20DCFC7D0025631B /* DrawBaseAnimaltionView.m */,
 				33888FC120EDCCCB00E4A119 /* CAGradientLayerDemo.h */,
@@ -1440,6 +1445,7 @@
 				33E6CE0621006D2000422FC7 /* TreeModel.m in Sources */,
 				33C971402124108D00EAAD5E /* CustomAlertViewDefault.m in Sources */,
 				33782826210853AD00373A20 /* UIImage+Transform.m in Sources */,
+				79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
