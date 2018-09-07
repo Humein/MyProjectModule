@@ -120,7 +120,6 @@
 		33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F320E2459200BE7175 /* SectionFModel.m */; };
 		33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F420E2459200BE7175 /* CellFModel.m */; };
 		33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */; };
-		33FAE51920E5E61400BE7175 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 33FAE51820E5E61400BE7175 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -369,7 +368,6 @@
 		33FAE4F620E2459200BE7175 /* SectionFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionFModel.h; sourceTree = "<group>"; };
 		33FAE50520E3693400BE7175 /* AbstractFCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractFCollectionView.h; sourceTree = "<group>"; };
 		33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractFCollectionView.m; sourceTree = "<group>"; };
-		33FAE51820E5E61400BE7175 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		37274BAA150B3CCC94945653 /* Pods_MyProjectModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C26993B1DAA4E4068C6E736 /* Pods-MyProjectModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.debug.xcconfig"; sourceTree = "<group>"; };
 		A36D58F14EAF98187791F3CA /* Pods-MyProjectModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.release.xcconfig"; sourceTree = "<group>"; };
@@ -404,7 +402,6 @@
 		333D104920CE74A8004D9241 = {
 			isa = PBXGroup;
 			children = (
-				33FAE51820E5E61400BE7175 /* README.md */,
 				333D105420CE74A8004D9241 /* MyProjectModule */,
 				333D106D20CE74AB004D9241 /* MyProjectModuleTests */,
 				333D107820CE74AB004D9241 /* MyProjectModuleUITests */,
@@ -430,7 +427,6 @@
 				33828F1120D3CAB800318AE5 /* BaseModule */,
 				33888FF520F0C25400E4A119 /* DesignMode */,
 				339D6C7420EA285700AC535E /* DataTransmission  */,
-				33A32AC920D8AF8F008C3969 /* NetRequstAndSocket */,
 				333D109E20D23810004D9241 /* BezierPath&ShapLayer&Animation */,
 				333D108820CF5AB2004D9241 /* CollectionViewModule */,
 				333D108720CF5AAB004D9241 /* TableViewModule */,
@@ -602,13 +598,6 @@
 			children = (
 			);
 			path = "抽象类";
-			sourceTree = "<group>";
-		};
-		3378282D2108726F00373A20 /* NetRequest */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NetRequest;
 			sourceTree = "<group>";
 		};
 		3378282E2108770600373A20 /* 线程 */ = {
@@ -867,15 +856,6 @@
 			path = "DataTransmission ";
 			sourceTree = "<group>";
 		};
-		33A32AC920D8AF8F008C3969 /* NetRequstAndSocket */ = {
-			isa = PBXGroup;
-			children = (
-				3378282D2108726F00373A20 /* NetRequest */,
-				33A32ACC20D8B4EB008C3969 /* socket */,
-			);
-			path = NetRequstAndSocket;
-			sourceTree = "<group>";
-		};
 		33A32ACA20D8B4D5008C3969 /* 详情页 */ = {
 			isa = PBXGroup;
 			children = (
@@ -906,13 +886,6 @@
 				33A32AE420DA2FA3008C3969 /* SegementTitleConfigured.m */,
 			);
 			path = SegmentView;
-			sourceTree = "<group>";
-		};
-		33A32ACC20D8B4EB008C3969 /* socket */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = socket;
 			sourceTree = "<group>";
 		};
 		33A32ADF20D91234008C3969 /* 折叠的TableView */ = {
@@ -1251,7 +1224,6 @@
 				333D106220CE74AB004D9241 /* LaunchScreen.storyboard in Resources */,
 				333D105F20CE74AB004D9241 /* Assets.xcassets in Resources */,
 				33FAE4F120E2452D00BE7175 /* JHHeaderReusableView.xib in Resources */,
-				33FAE51920E5E61400BE7175 /* README.md in Resources */,
 				33E6CE0A21006DA000422FC7 /* Tree.plist in Resources */,
 				333D105D20CE74A9004D9241 /* Main.storyboard in Resources */,
 				33FAE4EF20E2452D00BE7175 /* JHBodyCell.xib in Resources */,
