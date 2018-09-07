@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2F5DA074C8EFBF11C9B01B34 /* Pods_MyProjectModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37274BAA150B3CCC94945653 /* Pods_MyProjectModule.framework */; };
-		331101262142A0C700B0D7DE /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 331101252142A0C700B0D7DE /* Detail.md */; };
-		3311012C2142A0E900B0D7DE /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 331101292142A0E900B0D7DE /* Detail.md */; };
-		3311012D2142A0E900B0D7DE /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 3311012B2142A0E900B0D7DE /* Detail.md */; };
 		333D105720CE74A9004D9241 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D105620CE74A9004D9241 /* AppDelegate.m */; };
 		333D105A20CE74A9004D9241 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D105920CE74A9004D9241 /* ViewController.m */; };
 		333D105D20CE74A9004D9241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 333D105B20CE74A9004D9241 /* Main.storyboard */; };
@@ -123,6 +120,9 @@
 		33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F320E2459200BE7175 /* SectionFModel.m */; };
 		33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F420E2459200BE7175 /* CellFModel.m */; };
 		33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */; };
+		79BFDCDF2142A15200C81069 /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BFDCDE2142A14700C81069 /* Detail.md */; };
+		79BFDCE52142A16000C81069 /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BFDCE22142A16000C81069 /* Detail.md */; };
+		79BFDCE62142A16000C81069 /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BFDCE42142A16000C81069 /* Detail.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,9 +143,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		331101252142A0C700B0D7DE /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = SOURCE_ROOT; };
-		331101292142A0E900B0D7DE /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
-		3311012B2142A0E900B0D7DE /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		333D105220CE74A8004D9241 /* MyProjectModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProjectModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		333D105520CE74A8004D9241 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		333D105620CE74A9004D9241 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -376,6 +373,9 @@
 		33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractFCollectionView.m; sourceTree = "<group>"; };
 		37274BAA150B3CCC94945653 /* Pods_MyProjectModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C26993B1DAA4E4068C6E736 /* Pods-MyProjectModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.debug.xcconfig"; sourceTree = "<group>"; };
+		79BFDCDE2142A14700C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = SOURCE_ROOT; };
+		79BFDCE22142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
+		79BFDCE42142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		A36D58F14EAF98187791F3CA /* Pods-MyProjectModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -405,31 +405,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		331101272142A0E900B0D7DE /* NetRequstAndSocket */ = {
-			isa = PBXGroup;
-			children = (
-				331101282142A0E900B0D7DE /* NetRequest */,
-				3311012A2142A0E900B0D7DE /* socket */,
-			);
-			path = NetRequstAndSocket;
-			sourceTree = "<group>";
-		};
-		331101282142A0E900B0D7DE /* NetRequest */ = {
-			isa = PBXGroup;
-			children = (
-				331101292142A0E900B0D7DE /* Detail.md */,
-			);
-			path = NetRequest;
-			sourceTree = "<group>";
-		};
-		3311012A2142A0E900B0D7DE /* socket */ = {
-			isa = PBXGroup;
-			children = (
-				3311012B2142A0E900B0D7DE /* Detail.md */,
-			);
-			path = socket;
-			sourceTree = "<group>";
-		};
 		333D104920CE74A8004D9241 = {
 			isa = PBXGroup;
 			children = (
@@ -455,8 +430,8 @@
 		333D105420CE74A8004D9241 /* MyProjectModule */ = {
 			isa = PBXGroup;
 			children = (
-				331101252142A0C700B0D7DE /* Detail.md */,
-				331101272142A0E900B0D7DE /* NetRequstAndSocket */,
+				79BFDCDE2142A14700C81069 /* Detail.md */,
+				79BFDCE02142A16000C81069 /* NetRequstAndSocket */,
 				33828F1120D3CAB800318AE5 /* BaseModule */,
 				33888FF520F0C25400E4A119 /* DesignMode */,
 				339D6C7420EA285700AC535E /* DataTransmission  */,
@@ -1141,6 +1116,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		79BFDCE02142A16000C81069 /* NetRequstAndSocket */ = {
+			isa = PBXGroup;
+			children = (
+				79BFDCE12142A16000C81069 /* NetRequest */,
+				79BFDCE32142A16000C81069 /* socket */,
+			);
+			path = NetRequstAndSocket;
+			sourceTree = "<group>";
+		};
+		79BFDCE12142A16000C81069 /* NetRequest */ = {
+			isa = PBXGroup;
+			children = (
+				79BFDCE22142A16000C81069 /* Detail.md */,
+			);
+			path = NetRequest;
+			sourceTree = "<group>";
+		};
+		79BFDCE32142A16000C81069 /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				79BFDCE42142A16000C81069 /* Detail.md */,
+			);
+			path = socket;
+			sourceTree = "<group>";
+		};
 		7C2E54819E680FA111814D28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1257,10 +1257,10 @@
 				333D106220CE74AB004D9241 /* LaunchScreen.storyboard in Resources */,
 				333D105F20CE74AB004D9241 /* Assets.xcassets in Resources */,
 				33FAE4F120E2452D00BE7175 /* JHHeaderReusableView.xib in Resources */,
-				331101262142A0C700B0D7DE /* Detail.md in Resources */,
+				79BFDCDF2142A15200C81069 /* Detail.md in Resources */,
 				33E6CE0A21006DA000422FC7 /* Tree.plist in Resources */,
-				3311012D2142A0E900B0D7DE /* Detail.md in Resources */,
-				3311012C2142A0E900B0D7DE /* Detail.md in Resources */,
+				79BFDCE62142A16000C81069 /* Detail.md in Resources */,
+				79BFDCE52142A16000C81069 /* Detail.md in Resources */,
 				333D105D20CE74A9004D9241 /* Main.storyboard in Resources */,
 				33FAE4EF20E2452D00BE7175 /* JHBodyCell.xib in Resources */,
 				33FAE4CC20E23DE500BE7175 /* HomeDatas.plist in Resources */,
