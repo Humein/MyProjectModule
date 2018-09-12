@@ -33,6 +33,8 @@
     _alertView = [UIView new];
     _alertView.backgroundColor = [UIColor whiteColor];
     [self addSubview:_alertView];
+    
+//    TODO 自定义
     [_alertView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self);
         make.left.equalTo(self).offset(20);
@@ -108,7 +110,7 @@
 //    背景 alertView button  各自的响应处理
     UITouch *touch = [touches anyObject];
     NSLog(@"touch>>>>>>>%@",NSStringFromClass([touch.view class]));
-    if([NSStringFromClass([touch.view class]) isEqualToString:@"CustomAlertView"]){
+    if([NSStringFromClass([touch.view class]) isEqualToString:NSStringFromClass([self class])]){
         [self hidden];
     }
 }

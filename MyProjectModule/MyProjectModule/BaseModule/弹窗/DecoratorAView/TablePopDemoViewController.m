@@ -30,15 +30,15 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
 //    自定义弹窗
-    CustomAlertViewDefault *defaultVC = [CustomAlertViewDefault new];
+    CustomAlertViewDefault *defaultVC = [[CustomAlertViewDefault alloc]initWithFrame:CGRectMake(0, 0, 200, 44)];
+
     defaultVC.backgroundColor = [UIColor blueColor];
-    [defaultVC setFrame:CGRectMake(0, 0, 200, 44)];
 
     
     
     CustomAlertView *VC = [[CustomAlertView alloc] init];
-//    [VC showCustomView:defaultVC InView:self.view];
-    [VC showInView:self.view dely:3];
+    [VC showCustomView:defaultVC InView:self.view];
+//    [VC showInView:self.view dely:3];
     
     
     __weak typeof(self) WeakSelf = self;
