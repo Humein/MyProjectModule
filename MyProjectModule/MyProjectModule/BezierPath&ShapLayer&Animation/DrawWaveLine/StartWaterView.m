@@ -1,22 +1,22 @@
 //
-//  LCStarView.m
-//  StarView
+//  StartWaterView.m
+//  MyProjectModule
 //
-//  Created by bawn on 9/15/15.
-//  Copyright (c) 2015 bawn. All rights reserved.
+//  Created by Zhang Xin Xin on 2018/9/7.
+//  Copyright © 2018年 xinxin. All rights reserved.
 //
 
-#import "LCStarView.h"
+#import "StartWaterView.h"
 
-@interface LCStarView ()
 
+@interface StartWaterView()
 @property (nonatomic, strong) CALayer *maskLayer;
 @property (nonatomic, strong) UIImageView *borderImageView;
 @property (nonatomic, strong) UITapGestureRecognizer *tap;
 @property (nonatomic, strong) UIView *fillView;
-
 @end
-@implementation LCStarView
+
+@implementation StartWaterView
 
 - (instancetype)init{
     self = [super init];
@@ -78,7 +78,7 @@
     self.userInteractionEnabled = NO;
     if (CGAffineTransformIsIdentity(_fillView.transform)) {
         [UIView animateWithDuration:0.25f delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-           self.fillView.transform = CGAffineTransformMakeScale(FLT_MIN, FLT_MIN);
+            self.fillView.transform = CGAffineTransformMakeScale(FLT_MIN, FLT_MIN);
         } completion:^(BOOL finished) {
             self.userInteractionEnabled = YES;
         }];
@@ -91,5 +91,6 @@
         }];
     }
 }
+
 
 @end

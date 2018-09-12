@@ -1,17 +1,15 @@
 //
-//  LCStarView.h
-//  StarView
+//  StartWaterView.h
+//  MyProjectModule
 //
-//  Created by bawn on 9/15/15.
-//  Copyright (c) 2015 bawn. All rights reserved.
+//  Created by Zhang Xin Xin on 2018/9/7.
+//  Copyright © 2018年 xinxin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface LCStarView : UIView
-
+@interface StartWaterView : UIView
 @property (nonatomic, strong) UIImage *maskImage;
 @property (nonatomic, strong) UIImage *borderImage;
 @property (nonatomic, strong) UIColor *fillColor;
-
 @end

@@ -10,9 +10,9 @@
 #import "DrawUnlineAndScore.h"
 #import "DrawLine.h"
 #import "DrawBaseAnimaltionView.h"
+#import "StartWaterView.h"
 @interface DrawViewController ()
 @property (nonatomic, strong) UITextView *textView;
-
 @end
 
 @implementation DrawViewController
@@ -52,6 +52,23 @@
         heartBeat.backgroundColor = [UIColor grayColor];
         [self.view addSubview:heartBeat];
 
+    }
+    
+    
+    
+    {
+//        💗
+        UIImage *maskImage = [UIImage imageNamed:@"btn_link_fill"];
+        UIImage *lineImage = [UIImage imageNamed:@"btn_link_line"];
+        
+        StartWaterView *starView = [[StartWaterView alloc] init];
+        starView.frame = CGRectMake(100, 100, maskImage.size.width, maskImage.size.height);
+        starView.maskImage = maskImage;
+        starView.borderImage = lineImage;
+        starView.fillColor = [UIColor colorWithRed:0.94 green:0.27 blue:0.32 alpha:1];
+        [self.view addSubview:starView];
+        
+        
     }
     
 }
