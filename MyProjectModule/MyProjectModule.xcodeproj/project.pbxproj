@@ -125,6 +125,8 @@
 		79BFDCE62142A16000C81069 /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BFDCE42142A16000C81069 /* Detail.md */; };
 		79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFDCE82142A28700C81069 /* StartWaterView.m */; };
 		79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */; };
+		79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EE2151F84E003704D7 /* BlockViewController.m */; };
+		79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -382,6 +384,10 @@
 		79BFDCE82142A28700C81069 /* StartWaterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartWaterView.m; sourceTree = "<group>"; };
 		79F9A5EA214FB09B003704D7 /* AlgorithmsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmsViewController.h; sourceTree = "<group>"; };
 		79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmsViewController.m; sourceTree = "<group>"; };
+		79F9A5ED2151F84E003704D7 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
+		79F9A5EE2151F84E003704D7 /* BlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
+		79F9A5F02151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallbackAndCompletionHandlerForBlock.h; sourceTree = "<group>"; };
+		79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallbackAndCompletionHandlerForBlock.m; sourceTree = "<group>"; };
 		A36D58F14EAF98187791F3CA /* Pods-MyProjectModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -667,6 +673,10 @@
 			children = (
 				338FEBF920E0E3FC0025631B /* BlockObject.h */,
 				338FEBFA20E0E3FC0025631B /* BlockObject.m */,
+				79F9A5F02151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.h */,
+				79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */,
+				79F9A5ED2151F84E003704D7 /* BlockViewController.h */,
+				79F9A5EE2151F84E003704D7 /* BlockViewController.m */,
 			);
 			path = Block;
 			sourceTree = "<group>";
@@ -1395,6 +1405,7 @@
 				33888FD420F05ADB00E4A119 /* PaternalViewController.m in Sources */,
 				33A32AF520DA8044008C3969 /* SegementPersonDemoViewController.m in Sources */,
 				33A32AEF20DA795E008C3969 /* UIButton+SegementCustomButton.m in Sources */,
+				79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */,
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
 				33A32AE920DA789D008C3969 /* UIScrollView+SlideGestureBack.m in Sources */,
 				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
@@ -1437,6 +1448,7 @@
 				339B536C20F4B450003444CB /* AbstractPlayerHelperManager.m in Sources */,
 				33C97118211E81D800EAAD5E /* ApplePay.m in Sources */,
 				339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */,
+				79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */,
 				33C97111211E7C3700EAAD5E /* APPPayTool.m in Sources */,
 				33888FDE20F05E3500E4A119 /* SegmentContentCell.m in Sources */,
 				339B536620F4B39B003444CB /* ZSPlaterHelper.m in Sources */,

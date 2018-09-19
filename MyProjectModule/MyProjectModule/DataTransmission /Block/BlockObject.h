@@ -13,6 +13,8 @@
 
 //As a property 逆向传值
 @property (nonatomic,copy) void (^rightBarItemClickBlock)(UIButton *button, NSInteger index);
-//创建NavigationBarItem    返回值,链式编程实现原理
+
+
+//创建NavigationBarItem    block作为返回值,链式编程
 - (BlockObject * (^) (NSString * rightName,CGRect frame,BOOL isImage))rightBarItem;
 @end
