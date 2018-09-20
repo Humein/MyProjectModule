@@ -127,6 +127,7 @@
 		79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */; };
 		79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EE2151F84E003704D7 /* BlockViewController.m */; };
 		79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */; };
+		79F9A5F5215214B4003704D7 /* NSTimer+WeakTimerBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5F4215214B4003704D7 /* NSTimer+WeakTimerBlock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -388,6 +389,8 @@
 		79F9A5EE2151F84E003704D7 /* BlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
 		79F9A5F02151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallbackAndCompletionHandlerForBlock.h; sourceTree = "<group>"; };
 		79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallbackAndCompletionHandlerForBlock.m; sourceTree = "<group>"; };
+		79F9A5F3215214B4003704D7 /* NSTimer+WeakTimerBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+WeakTimerBlock.h"; sourceTree = "<group>"; };
+		79F9A5F4215214B4003704D7 /* NSTimer+WeakTimerBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+WeakTimerBlock.m"; sourceTree = "<group>"; };
 		A36D58F14EAF98187791F3CA /* Pods-MyProjectModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -675,6 +678,8 @@
 				338FEBFA20E0E3FC0025631B /* BlockObject.m */,
 				79F9A5F02151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.h */,
 				79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */,
+				79F9A5F3215214B4003704D7 /* NSTimer+WeakTimerBlock.h */,
+				79F9A5F4215214B4003704D7 /* NSTimer+WeakTimerBlock.m */,
 				79F9A5ED2151F84E003704D7 /* BlockViewController.h */,
 				79F9A5EE2151F84E003704D7 /* BlockViewController.m */,
 			);
@@ -1417,6 +1422,7 @@
 				33888FEB20F06ADD00E4A119 /* ChildViewController.m in Sources */,
 				3362E69F2130FBEF00A4B26D /* CustomKVO.m in Sources */,
 				33C971282121317D00EAAD5E /* CorrectTagModel.m in Sources */,
+				79F9A5F5215214B4003704D7 /* NSTimer+WeakTimerBlock.m in Sources */,
 				3378282C2108544300373A20 /* UIImage+Title.m in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
 				33759E7A212FAB2A00D801C1 /* NSObject+RuntimeNSCodingHelper.m in Sources */,
