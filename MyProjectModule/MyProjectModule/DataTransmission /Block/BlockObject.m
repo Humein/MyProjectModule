@@ -11,7 +11,16 @@
 #import "BlockObject.h"
 #import "UIControlFactory.h"
 #import "UIButton+Decorate.h"
+
+@interface BlockObject()
+
+@property (nonatomic, copy) MiniProgramResultBlock completeBlock;
+
+@end
+
 @implementation BlockObject
+
+// <1> x属性
 - (BlockObject * (^) (NSString * rightName,CGRect frame,BOOL isImage))rightBarItem
 {
     BlockObject * (^rightItemBlock) (NSString * rightName,CGRect frame,BOOL isImage)= ^(NSString * rightName,CGRect frame,BOOL isImage){
@@ -52,6 +61,7 @@
     return rightItemBlock;
 }
 
+
 - (void)rightButtonClick:(UIButton*)rightButton
 {
     int index= 0;
@@ -66,4 +76,39 @@
     self.rightBarItemClickBlock ? self.rightBarItemClickBlock (rightButton,index) : nil;
 }
 
+
+//<2>
+ //网络请求
+- (void)requestNoticeDataWithParameter:(NSDictionary *)dic isWaiting:(BOOL)isWaiting success:(Success)success failure:(Failure)failure{
+    
+    if (success) {
+        success(@"");
+    }
+    
+    if (failure) {
+        failure(@"");
+    }
+    
+}
+
+- (void)jumpConfig:(modelBlock)configBlock completeBlock:(MiniProgramResultBlock)completeBlock{
+
+    // 正传
+//    __block HTMiniProgramModel *configItem = [[HTMiniProgramModel alloc] init];
+//    if (configBlock)
+//    {
+//        configBlock(configItem);
+//    }
+//    _configItem = configItem;
+//
+    //逆传
+    _completeBlock = completeBlock;
+    if (YES)
+    {
+        _completeBlock ? _completeBlock(YES) : nil;
+        return;
+    }
+    
+    
+}
 @end
