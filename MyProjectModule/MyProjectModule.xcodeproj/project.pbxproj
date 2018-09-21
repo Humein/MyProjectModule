@@ -20,6 +20,7 @@
 		333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109920D0ECA0004D9241 /* CollectionModuleView.m */; };
 		333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109C20D14489004D9241 /* AbstractCollectionViewCell.m */; };
 		333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D10A120D24FD5004D9241 /* DrawViewController.m */; };
+		3340363D2154C69C006FCBA3 /* MemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3340363C2154C69C006FCBA3 /* MemoryCache.m */; };
 		3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3362E69A2130FBEF00A4B26D /* PersonInfo.m */; };
 		3362E69F2130FBEF00A4B26D /* CustomKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3362E69B2130FBEF00A4B26D /* CustomKVO.m */; };
 		3362E6A22130FC1300A4B26D /* FBKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3362E6A12130FC1300A4B26D /* FBKVOViewController.m */; };
@@ -172,6 +173,8 @@
 		333D109C20D14489004D9241 /* AbstractCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractCollectionViewCell.m; sourceTree = "<group>"; };
 		333D10A020D24FD5004D9241 /* DrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
 		333D10A120D24FD5004D9241 /* DrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
+		3340363B2154C69C006FCBA3 /* MemoryCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryCache.h; sourceTree = "<group>"; };
+		3340363C2154C69C006FCBA3 /* MemoryCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryCache.m; sourceTree = "<group>"; };
 		3362E6992130FBEF00A4B26D /* CustomKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomKVO.h; sourceTree = "<group>"; };
 		3362E69A2130FBEF00A4B26D /* PersonInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfo.m; sourceTree = "<group>"; };
 		3362E69B2130FBEF00A4B26D /* CustomKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKVO.m; sourceTree = "<group>"; };
@@ -539,6 +542,15 @@
 			path = DrawWaveLine;
 			sourceTree = "<group>";
 		};
+		3340363A2154C67E006FCBA3 /* MemoryAndDiskCache */ = {
+			isa = PBXGroup;
+			children = (
+				3340363B2154C69C006FCBA3 /* MemoryCache.h */,
+				3340363C2154C69C006FCBA3 /* MemoryCache.m */,
+			);
+			path = MemoryAndDiskCache;
+			sourceTree = "<group>";
+		};
 		3362E6982130FBEF00A4B26D /* 系统手动KVO */ = {
 			isa = PBXGroup;
 			children = (
@@ -878,6 +890,7 @@
 		339D6C7420EA285700AC535E /* DataTransmission  */ = {
 			isa = PBXGroup;
 			children = (
+				3340363A2154C67E006FCBA3 /* MemoryAndDiskCache */,
 				33759E6B212F9F9500D801C1 /* RunLoop */,
 				3378282E2108770600373A20 /* 线程 */,
 				33888FD720F05B1400E4A119 /* Rumtime */,
@@ -1451,6 +1464,7 @@
 				33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */,
 				33C9711B211E899400EAAD5E /* AliPay.m in Sources */,
 				337828232108539800373A20 /* UIImage+BaseFilter.m in Sources */,
+				3340363D2154C69C006FCBA3 /* MemoryCache.m in Sources */,
 				339B536C20F4B450003444CB /* AbstractPlayerHelperManager.m in Sources */,
 				33C97118211E81D800EAAD5E /* ApplePay.m in Sources */,
 				339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */,
