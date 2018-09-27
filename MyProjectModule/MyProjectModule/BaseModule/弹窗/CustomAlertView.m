@@ -14,11 +14,10 @@
 @property(nonatomic,strong) UIView *alertView;
 @end
 @implementation CustomAlertView
-
-
 -(void)dealloc{
     NSLog(@"%@======销毁",NSStringFromClass(self.class));
 }
+
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -30,29 +29,20 @@
 }
 
 -(void)initView{
-    _alertView = [UIView new];
-    _alertView.backgroundColor = [UIColor whiteColor];
-    [self addSubview:_alertView];
     
-//    TODO 自定义
-    [_alertView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self);
-        make.left.equalTo(self).offset(20);
-        make.right.equalTo(self).offset(-20);
-        make.height.equalTo(@200);
-    }];
-    
-//    测试
-    _alertBtn = [UIButton new];
-    _alertBtn.backgroundColor = [UIColor redColor];
-    [_alertBtn addTarget:self action:@selector(popTabel) forControlEvents:UIControlEventTouchDown];
-    [_alertView addSubview:_alertBtn];
-    [_alertBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.alertView);
-        make.left.equalTo(self.alertView).offset(20);
-        make.right.equalTo(self.alertView).offset(-20);
-        make.height.equalTo(@100);
-    }];
+    //     TODO 默认
+    //    _alertView = [UIButton new];
+    //    _alertView.backgroundColor = [UIColor grayColor];
+    //    [self addSubview:_alertView];
+    //
+    ////
+    //    [_alertView mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.centerY.equalTo(self);
+    //        make.left.equalTo(self).offset(20);
+    //        make.right.equalTo(self).offset(-20);
+    //        make.height.equalTo(@347);
+    //    }];
+    //
     
 }
 
@@ -88,11 +78,31 @@
 - (void)showCustomView:(UIView *)customView InView:(UIView*)view{
     self.frame= view.bounds;
     [self addSubview:customView];
-    [customView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self ->_alertView).with.insets(UIEdgeInsetsMake(10, 10, 10, 10));
+    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.0];
+
+    /*
+     上-下
+    [customView setFrame:CGRectMake((view.frame.size.width-customView.frame.size.width) / 2, -customView.frame.size.height, customView.frame.size.width, customView.frame.size.height)];
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        [customView setFrame:CGRectMake((view.frame.size.width-customView.frame.size.width) / 2, (view.frame.size.height-customView.frame.size.height) / 2, customView.frame.size.width, customView.frame.size.height)];
+
     }];
+    */
+    
+//    下 - 上
+    [customView setFrame:CGRectMake((view.frame.size.width-customView.frame.size.width) / 2, view.frame.size.height + customView.frame.size.height, customView.frame.size.width, customView.frame.size.height)];
+
+    [UIView animateWithDuration:0.4 animations:^{
+        [customView setFrame:CGRectMake((view.frame.size.width-customView.frame.size.width) / 2, (view.frame.size.height-customView.frame.size.height)-1, customView.frame.size.width, customView.frame.size.height)];
+        self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2];
+
+    }];
+
+    
+
+    
     [view addSubview:self];
-    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2];
 }
 
 
@@ -107,13 +117,12 @@
 //点击事件
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-//    背景 alertView button  各自的响应处理
+    //    背景 alertView button  各自的响应处理
     UITouch *touch = [touches anyObject];
     NSLog(@"touch>>>>>>>%@",NSStringFromClass([touch.view class]));
     if([NSStringFromClass([touch.view class]) isEqualToString:NSStringFromClass([self class])]){
         [self hidden];
     }
 }
-
 
 @end

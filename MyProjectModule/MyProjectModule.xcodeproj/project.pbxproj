@@ -50,7 +50,6 @@
 		33888FE820F06AC900E4A119 /* PaternalSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FE720F06AC900E4A119 /* PaternalSViewController.m */; };
 		33888FEB20F06ADD00E4A119 /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FEA20F06ADD00E4A119 /* ChildViewController.m */; };
 		338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */; };
-		338FEB5B20DCCF8D0025631B /* POPNumberAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEB5920DCCF8D0025631B /* POPNumberAnimation.m */; };
 		338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEB5E20DCFC7D0025631B /* DrawBaseAnimaltionView.m */; };
 		338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEBFA20E0E3FC0025631B /* BlockObject.m */; };
 		338FEBFF20E0F25A0025631B /* UIControlFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEBFE20E0F25A0025631B /* UIControlFactory.m */; };
@@ -81,6 +80,7 @@
 		33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AFB20DB4910008C3969 /* PersonalCenterChildViewController.m */; };
 		33A32B0020DB7D5C008C3969 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AFF20DB7D5C008C3969 /* SectionModel.m */; };
 		33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32B0220DC95AF008C3969 /* DrawLine.m */; };
+		33A6A8DC215CC5F3001BE659 /* POPNumberAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6A8DB215CC5F3001BE659 /* POPNumberAnimation.m */; };
 		33C97111211E7C3700EAAD5E /* APPPayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C97110211E7C3700EAAD5E /* APPPayTool.m */; };
 		33C97118211E81D800EAAD5E /* ApplePay.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C97117211E81D800EAAD5E /* ApplePay.m */; };
 		33C9711B211E899400EAAD5E /* AliPay.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C9711A211E899400EAAD5E /* AliPay.m */; };
@@ -235,8 +235,6 @@
 		33888FEA20F06ADD00E4A119 /* ChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
 		338ECBA320D25D080059BE0D /* DrawUnlineAndScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawUnlineAndScore.h; sourceTree = "<group>"; };
 		338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawUnlineAndScore.m; sourceTree = "<group>"; };
-		338FEB5920DCCF8D0025631B /* POPNumberAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPNumberAnimation.m; sourceTree = "<group>"; };
-		338FEB5A20DCCF8D0025631B /* POPNumberAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPNumberAnimation.h; sourceTree = "<group>"; };
 		338FEB5D20DCFC7D0025631B /* DrawBaseAnimaltionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawBaseAnimaltionView.h; sourceTree = "<group>"; };
 		338FEB5E20DCFC7D0025631B /* DrawBaseAnimaltionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawBaseAnimaltionView.m; sourceTree = "<group>"; };
 		338FEBF920E0E3FC0025631B /* BlockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockObject.h; sourceTree = "<group>"; };
@@ -300,6 +298,8 @@
 		33A32AFF20DB7D5C008C3969 /* SectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectionModel.m; sourceTree = "<group>"; };
 		33A32B0120DC95AF008C3969 /* DrawLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawLine.h; sourceTree = "<group>"; };
 		33A32B0220DC95AF008C3969 /* DrawLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawLine.m; sourceTree = "<group>"; };
+		33A6A8DA215CC5F3001BE659 /* POPNumberAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPNumberAnimation.h; sourceTree = "<group>"; };
+		33A6A8DB215CC5F3001BE659 /* POPNumberAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPNumberAnimation.m; sourceTree = "<group>"; };
 		33C9710F211E7C3700EAAD5E /* APPPayTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPPayTool.h; sourceTree = "<group>"; };
 		33C97110211E7C3700EAAD5E /* APPPayTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPPayTool.m; sourceTree = "<group>"; };
 		33C97113211E7F7100EAAD5E /* APPPayProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPPayProtocol.h; sourceTree = "<group>"; };
@@ -517,7 +517,7 @@
 		333D109E20D23810004D9241 /* BezierPath&ShapLayer&Animation */ = {
 			isa = PBXGroup;
 			children = (
-				338FEB5C20DCFC290025631B /* abstractOBJ */,
+				33A6A8D9215CC5F3001BE659 /* POPAnimation */,
 				333D109F20D2383A004D9241 /* DrawWaveLine */,
 			);
 			path = "BezierPath&ShapLayer&Animation";
@@ -758,15 +758,6 @@
 			path = DesignMode;
 			sourceTree = "<group>";
 		};
-		338FEB5C20DCFC290025631B /* abstractOBJ */ = {
-			isa = PBXGroup;
-			children = (
-				338FEB5A20DCCF8D0025631B /* POPNumberAnimation.h */,
-				338FEB5920DCCF8D0025631B /* POPNumberAnimation.m */,
-			);
-			path = abstractOBJ;
-			sourceTree = "<group>";
-		};
 		338FEBFC20E0F2390025631B /* BaseUIKitFactory */ = {
 			isa = PBXGroup;
 			children = (
@@ -963,6 +954,15 @@
 				33A32AFF20DB7D5C008C3969 /* SectionModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		33A6A8D9215CC5F3001BE659 /* POPAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				33A6A8DA215CC5F3001BE659 /* POPNumberAnimation.h */,
+				33A6A8DB215CC5F3001BE659 /* POPNumberAnimation.m */,
+			);
+			path = POPAnimation;
 			sourceTree = "<group>";
 		};
 		33C9710E211E7C0400EAAD5E /* 支付方式 */ = {
@@ -1396,12 +1396,12 @@
 				33759E77212FAA7200D801C1 /* NSObject+RuntimeHelper.m in Sources */,
 				339B534920F4AB2A003444CB /* ZTKDownHelperManager.m in Sources */,
 				33759E71212FA08900D801C1 /* UIView+MethodSwizze.m in Sources */,
-				338FEB5B20DCCF8D0025631B /* POPNumberAnimation.m in Sources */,
 				33888FE820F06AC900E4A119 /* PaternalSViewController.m in Sources */,
 				33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */,
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
+				33A6A8DC215CC5F3001BE659 /* POPNumberAnimation.m in Sources */,
 				338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */,
 				33A32AF920DB3909008C3969 /* SegementChildViewController.m in Sources */,
 				33888FDB20F05DBA00E4A119 /* ImitateSegmentViewController.m in Sources */,

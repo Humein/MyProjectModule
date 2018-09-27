@@ -19,10 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    PopTableView *popVC = [[PopTableView alloc]initWithFrame:CGRectMake(0, 100, 200, 400) dataSource:@[@[@"1"],@[@"2"]] withBGView:@""];
-    DecoratorAView *alertVC = [[DecoratorAView alloc]initWithChickenBurger:popVC];
-    
-    [alertVC cellClicks:nil];
+//    PopTableView *popVC = [[PopTableView alloc]initWithFrame:CGRectMake(0, 100, 200, 400) dataSource:@[@[@"1"],@[@"2"]] withBGView:@""];
+//    DecoratorAView *alertVC = [[DecoratorAView alloc]initWithChickenBurger:popVC];
+//    
+//    [alertVC cellClicks:nil];
     
     
 }
@@ -30,7 +30,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
 //    自定义弹窗
-    CustomAlertViewDefault *defaultVC = [[CustomAlertViewDefault alloc]initWithFrame:CGRectMake(0, 0, 200, 44)];
+    CustomAlertViewDefault *defaultVC = [[CustomAlertViewDefault alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
 
     defaultVC.backgroundColor = [UIColor blueColor];
 
