@@ -13,7 +13,7 @@
     UIImageView *_imageView;
     
 }
-@property(nonatomic,copy) NSMutableArray *cellDataSource;
+@property(nonatomic,strong) NSMutableArray *cellDataSource;
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) NSString *bgImage;
 @property (nonatomic, strong) UIView *containerView;

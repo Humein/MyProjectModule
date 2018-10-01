@@ -21,6 +21,7 @@
 		333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D109C20D14489004D9241 /* AbstractCollectionViewCell.m */; };
 		333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D10A120D24FD5004D9241 /* DrawViewController.m */; };
 		3340363D2154C69C006FCBA3 /* MemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3340363C2154C69C006FCBA3 /* MemoryCache.m */; };
+		335ABFAE2160C0BD00770703 /* AnimationExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 335ABFAD2160C0BD00770703 /* AnimationExample.m */; };
 		3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3362E69A2130FBEF00A4B26D /* PersonInfo.m */; };
 		3362E69F2130FBEF00A4B26D /* CustomKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3362E69B2130FBEF00A4B26D /* CustomKVO.m */; };
 		3362E6A22130FC1300A4B26D /* FBKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3362E6A12130FC1300A4B26D /* FBKVOViewController.m */; };
@@ -175,6 +176,8 @@
 		333D10A120D24FD5004D9241 /* DrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
 		3340363B2154C69C006FCBA3 /* MemoryCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryCache.h; sourceTree = "<group>"; };
 		3340363C2154C69C006FCBA3 /* MemoryCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryCache.m; sourceTree = "<group>"; };
+		335ABFAC2160C0BD00770703 /* AnimationExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationExample.h; sourceTree = "<group>"; };
+		335ABFAD2160C0BD00770703 /* AnimationExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationExample.m; sourceTree = "<group>"; };
 		3362E6992130FBEF00A4B26D /* CustomKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomKVO.h; sourceTree = "<group>"; };
 		3362E69A2130FBEF00A4B26D /* PersonInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfo.m; sourceTree = "<group>"; };
 		3362E69B2130FBEF00A4B26D /* CustomKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKVO.m; sourceTree = "<group>"; };
@@ -961,6 +964,8 @@
 			children = (
 				33A6A8DA215CC5F3001BE659 /* POPNumberAnimation.h */,
 				33A6A8DB215CC5F3001BE659 /* POPNumberAnimation.m */,
+				335ABFAC2160C0BD00770703 /* AnimationExample.h */,
+				335ABFAD2160C0BD00770703 /* AnimationExample.m */,
 			);
 			path = POPAnimation;
 			sourceTree = "<group>";
@@ -1470,6 +1475,7 @@
 				339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */,
 				79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */,
 				33C97111211E7C3700EAAD5E /* APPPayTool.m in Sources */,
+				335ABFAE2160C0BD00770703 /* AnimationExample.m in Sources */,
 				33888FDE20F05E3500E4A119 /* SegmentContentCell.m in Sources */,
 				339B536620F4B39B003444CB /* ZSPlaterHelper.m in Sources */,
 				33CCB0E920FDEF2E002C4FF4 /* ResponOfChainManager.m in Sources */,
