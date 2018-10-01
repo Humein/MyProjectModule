@@ -7,13 +7,14 @@
 //
 
 #import "CustomAlertView.h"
-#import <Masonry/Masonry.h>
-@interface CustomAlertView(){
-    UIButton *_alertBtn;
+
+@interface CustomAlertView()<CAAnimationDelegate>{
 }
 @property(nonatomic,strong) UIView *alertView;
 @end
 @implementation CustomAlertView
+
+
 -(void)dealloc{
     NSLog(@"%@======销毁",NSStringFromClass(self.class));
 }
@@ -79,28 +80,53 @@
     self.frame= view.bounds;
     [self addSubview:customView];
     self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.0];
-
-    /*
-     上-下
-    [customView setFrame:CGRectMake((view.frame.size.width-customView.frame.size.width) / 2, -customView.frame.size.height, customView.frame.size.width, customView.frame.size.height)];
+    //    [customView mas_makeConstraints:^(MASConstraintMaker *make) {
+    ////        make.edges.equalTo(self ->_alertView).with.insets(UIEdgeInsetsMake(0, 0, 0, 0));
+    //        make.width.mas_equalTo(customView.frame.size.width);
+    //        make.height.mas_equalTo(customView.frame.size.height);
+    //        make.centerX.equalTo(self);
+    //        make.centerY.equalTo(self);
+    //
+    //    }];
     
-    [UIView animateWithDuration:1.0 animations:^{
+    if (self.transferType == DefaultTransfer) {
+        
         [customView setFrame:CGRectMake((view.frame.size.width-customView.frame.size.width) / 2, (view.frame.size.height-customView.frame.size.height) / 2, customView.frame.size.width, customView.frame.size.height)];
-
-    }];
-    */
-    
-//    下 - 上
-    [customView setFrame:CGRectMake((view.frame.size.width-customView.frame.size.width) / 2, view.frame.size.height + customView.frame.size.height, customView.frame.size.width, customView.frame.size.height)];
-
-    [UIView animateWithDuration:0.4 animations:^{
-        [customView setFrame:CGRectMake((view.frame.size.width-customView.frame.size.width) / 2, (view.frame.size.height-customView.frame.size.height)-1, customView.frame.size.width, customView.frame.size.height)];
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2];
-
-    }];
-
+        
+    }else if (self.transferType == TopTransferDown){
+        [customView setFrame:CGRectMake((view.frame.size.width-customView.frame.size.width) / 2, -customView.frame.size.height, customView.frame.size.width, customView.frame.size.height)];
+        
+        [UIView animateWithDuration:0.4 animations:^{
+            [customView setFrame:CGRectMake((view.frame.size.width-customView.frame.size.width) / 2, (view.frame.size.height-customView.frame.size.height) / 2, customView.frame.size.width, customView.frame.size.height)];
+            self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2];
+            
+        }];
+    }else if (self.transferType == DownTransferTop){
+        [customView setFrame:CGRectMake((view.frame.size.width-customView.frame.size.width) / 2, view.frame.size.height + customView.frame.size.height, customView.frame.size.width, customView.frame.size.height)];
+        
+        [UIView animateWithDuration:0.4 animations:^{
+            [customView setFrame:CGRectMake((view.frame.size.width-customView.frame.size.width) / 2, (view.frame.size.height-customView.frame.size.height)-1, customView.frame.size.width, customView.frame.size.height)];
+            self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2];
+            
+        }];
+        
+    }else if (self.transferType == ZoomTransfer){
+        
+        [customView setFrame:CGRectMake((view.frame.size.width-customView.frame.size.width) / 2, (view.frame.size.height-customView.frame.size.height) / 2, customView.frame.size.width, customView.frame.size.height)];
+        
+        CABasicAnimation *Animation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        Animation.duration= 0.4;
+        Animation.fromValue= [NSNumber numberWithFloat:0.0];
+        Animation.toValue  = [NSNumber numberWithFloat:1.0];
+        Animation.delegate = self;
+        [customView.layer addAnimation:Animation forKey:@"scale-layer"];
+        
+        self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2];
+        
+    }
     
-
+    
     
     [view addSubview:self];
 }
@@ -108,9 +134,16 @@
 
 - (void)hidden
 {
+    
+    [self.layer removeAllAnimations];
+    for (CALayer *layer in self.layer.sublayers) {
+        [layer removeAllAnimations];
+    }
+    
     for (UIView *view in self.subviews) {
         [view removeFromSuperview];
     }
+    
     [self removeFromSuperview];
 }
 
@@ -124,5 +157,7 @@
         [self hidden];
     }
 }
+
+
 
 @end

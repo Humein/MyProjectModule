@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    DefaultTransfer,
+    TopTransferDown,
+    DownTransferTop,
+    ZoomTransfer
+} POPAnimation;
+
+
 @interface CustomAlertView : UIView
+
+//显示方式
+@property (nonatomic,assign) POPAnimation transferType;
 
 //显示在window上的
 
