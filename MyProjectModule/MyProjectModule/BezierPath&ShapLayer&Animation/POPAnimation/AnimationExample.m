@@ -66,6 +66,7 @@
     imageView.layer.speed = 1.0;
 }
 
+//抖动
 - (void)shakeImage {
 //     APP图标长按抖动效果的实现
     //创建动画对象,绕Z轴旋转
@@ -86,6 +87,8 @@
     
     [imageView.layer addAnimation:animation forKey:@"rotation"];
 }
+
+
 //浮动
 -(void)upAndDown:(UIView *)view{
     
