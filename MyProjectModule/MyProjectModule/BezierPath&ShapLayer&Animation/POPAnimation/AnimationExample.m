@@ -103,4 +103,20 @@
     
 }
 
+//心跳
+-(void)heartShake:(UIView *)view{
+    CASpringAnimation *springAnimation = [CASpringAnimation animationWithKeyPath:@"transform.scale"];
+    springAnimation.fromValue= @(0.95);
+    springAnimation.toValue=@(1);
+    springAnimation.mass=1;
+    springAnimation.stiffness=50;
+    springAnimation.damping=10;
+    springAnimation.initialVelocity=50;
+    springAnimation.duration= 1;
+    springAnimation.repeatCount = CGFLOAT_MAX;
+    
+    
+    [view.layer addAnimation:springAnimation forKey:@"springAnimation"];
+}
+
 @end
