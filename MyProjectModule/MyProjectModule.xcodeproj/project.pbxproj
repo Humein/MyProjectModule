@@ -126,6 +126,7 @@
 		79BFDCE52142A16000C81069 /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BFDCE22142A16000C81069 /* Detail.md */; };
 		79BFDCE62142A16000C81069 /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BFDCE42142A16000C81069 /* Detail.md */; };
 		79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFDCE82142A28700C81069 /* StartWaterView.m */; };
+		79CFB323216C879D00218C92 /* NSInvocationForStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */; };
 		79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */; };
 		79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EE2151F84E003704D7 /* BlockViewController.m */; };
 		79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */; };
@@ -389,6 +390,8 @@
 		79BFDCE42142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE72142A28700C81069 /* StartWaterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartWaterView.h; sourceTree = "<group>"; };
 		79BFDCE82142A28700C81069 /* StartWaterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartWaterView.m; sourceTree = "<group>"; };
+		79CFB321216C879D00218C92 /* NSInvocationForStrategyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSInvocationForStrategyViewController.h; sourceTree = "<group>"; };
+		79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSInvocationForStrategyViewController.m; sourceTree = "<group>"; };
 		79F9A5EA214FB09B003704D7 /* AlgorithmsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmsViewController.h; sourceTree = "<group>"; };
 		79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmsViewController.m; sourceTree = "<group>"; };
 		79F9A5ED2151F84E003704D7 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
@@ -795,6 +798,8 @@
 				339B534C20F4AE74003444CB /* DownLoadViewController.m */,
 				339B535320F4B078003444CB /* PlayerViewController.h */,
 				339B535420F4B078003444CB /* PlayerViewController.m */,
+				79CFB321216C879D00218C92 /* NSInvocationForStrategyViewController.h */,
+				79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */,
 				33C9710E211E7C0400EAAD5E /* 支付方式 */,
 				3378281F21084C5C00373A20 /* 申论批改详情 */,
 				339B536F20F4DE65003444CB /* 模考大赛 */,
@@ -1482,6 +1487,7 @@
 				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
 				339B535020F4AF35003444CB /* UIButton+ButtonBlockCategory.m in Sources */,
 				33E6CE0421006D2000422FC7 /* TreeViewModel.m in Sources */,
+				79CFB323216C879D00218C92 /* NSInvocationForStrategyViewController.m in Sources */,
 				33C971252121315500EAAD5E /* ResovlerModel.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */,
