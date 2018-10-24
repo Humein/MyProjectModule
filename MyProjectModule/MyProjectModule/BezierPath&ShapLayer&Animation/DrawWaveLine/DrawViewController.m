@@ -11,6 +11,7 @@
 #import "DrawLine.h"
 #import "DrawBaseAnimaltionView.h"
 #import "StartWaterView.h"
+#import "AttributeAndPredicateWithLink.h"
 @interface DrawViewController ()
 @property (nonatomic, strong) UITextView *textView;
 @end
@@ -69,6 +70,14 @@
         [self.view addSubview:starView];
         
         
+    }
+    
+// 正则 富文本 超链接
+    {
+        AttributeAndPredicateWithLink *link = [[AttributeAndPredicateWithLink alloc]initWithFrame:CGRectMake(50, 484, 100, 80)];
+        link.backgroundColor = [UIColor grayColor];
+        [link refersheTheViewWithModel:nil];
+        [self.view addSubview:link];
     }
     
 }
