@@ -6,6 +6,9 @@
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
 
+// 文字画波浪线
+
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 

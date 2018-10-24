@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F5DA074C8EFBF11C9B01B34 /* Pods_MyProjectModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37274BAA150B3CCC94945653 /* Pods_MyProjectModule.framework */; };
+		333651B82180543E00286C7A /* AttributeAndPredicateWithLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 333651B72180543E00286C7A /* AttributeAndPredicateWithLink.m */; };
 		333D105720CE74A9004D9241 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D105620CE74A9004D9241 /* AppDelegate.m */; };
 		333D105A20CE74A9004D9241 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D105920CE74A9004D9241 /* ViewController.m */; };
 		333D105D20CE74A9004D9241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 333D105B20CE74A9004D9241 /* Main.storyboard */; };
@@ -151,6 +152,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		333651B62180543E00286C7A /* AttributeAndPredicateWithLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributeAndPredicateWithLink.h; sourceTree = "<group>"; };
+		333651B72180543E00286C7A /* AttributeAndPredicateWithLink.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttributeAndPredicateWithLink.m; sourceTree = "<group>"; };
 		333D105220CE74A8004D9241 /* MyProjectModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProjectModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		333D105520CE74A8004D9241 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		333D105620CE74A9004D9241 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -542,6 +545,8 @@
 				338FEB5E20DCFC7D0025631B /* DrawBaseAnimaltionView.m */,
 				33888FC120EDCCCB00E4A119 /* CAGradientLayerDemo.h */,
 				33888FC220EDCCCB00E4A119 /* CAGradientLayerDemo.m */,
+				333651B62180543E00286C7A /* AttributeAndPredicateWithLink.h */,
+				333651B72180543E00286C7A /* AttributeAndPredicateWithLink.m */,
 				333D10A020D24FD5004D9241 /* DrawViewController.h */,
 				333D10A120D24FD5004D9241 /* DrawViewController.m */,
 			);
@@ -1485,6 +1490,7 @@
 				339B536620F4B39B003444CB /* ZSPlaterHelper.m in Sources */,
 				33CCB0E920FDEF2E002C4FF4 /* ResponOfChainManager.m in Sources */,
 				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
+				333651B82180543E00286C7A /* AttributeAndPredicateWithLink.m in Sources */,
 				339B535020F4AF35003444CB /* UIButton+ButtonBlockCategory.m in Sources */,
 				33E6CE0421006D2000422FC7 /* TreeViewModel.m in Sources */,
 				79CFB323216C879D00218C92 /* NSInvocationForStrategyViewController.m in Sources */,

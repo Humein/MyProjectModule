@@ -6,6 +6,9 @@
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
 
+
+// 进度动画
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 @interface DrawLine : UIView
