@@ -172,7 +172,7 @@ static NSString *const threeEvent = @"three";
     
     [invocation invoke];
     
-    // 如果需要让事件继续往上传递，则调用下面的语句 (+ 责任链（响应脸）模式)
+    // 如果需要让事件继续往上传递，则调用下面的语句 (+ 责任链（响应脸）模式（多响应） + Decorator(组合))
     // [super routerEventWithName:eventName userInfo:userInfo];
 }
 
