@@ -47,6 +47,7 @@
     NSMutableAttributedString *text = [NSMutableAttributedString new];
 
     HTStr = @"以做好前期<准备(+1.0分)>，真准确定位，认清自我，加强<调查(+2.0分)>研究，了解<市场需求(+11.0分)>";
+//    HTStr =  @"<拼团活动(111)>，加强<红包活动(id:222,isLive:1)>研究，了解<其他活动(id:333,isLive:1)>";
     
     NSMutableAttributedString *one1 = [[NSMutableAttributedString alloc] initWithString:[self displayStringWithRawString:HTStr]];
     one1.font = [UIFont boldSystemFontOfSize:12];
@@ -108,10 +109,10 @@
         NSString *subStr = [rawString substringWithRange:NSMakeRange(prelocation, res.range.location - prelocation)];
         [dealString appendString:subStr];
         tagString = [rawString substringWithRange:res.range];
-        // 去除标签的tag
+// 去除标签的tag
         NSString *emptyTagString = [self displayStringWithRawString:tagString];
-        
         [dealString appendString:emptyTagString];
+// 处理()内部
         NSString *url= [self getScoreFromTag:tagString];
         NSString *key = emptyTagString;
         [dicHandle setValue:url forKey:key];
@@ -119,6 +120,11 @@
     }
     
     return dicHandle;
+}
+
+-(NSString *)getTheotherTag:(NSString *)tagString{
+    
+    return @"";
 }
 
 // get URL
