@@ -49,7 +49,9 @@
     HTStr = @"以做好前期<准备(+1.0分)>，真准确定位，认清自我，加强<调查(+2.0分)>研究，了解<市场需求(+11.0分)>";
     HTStr =  @"<红包活动{\"classId\":\"1\",\"collageActiveId\":\"1\"}>，加强<活动1{\"classId\":\"2\",\"collageActiveId\":\"1\"}>研究，了解<红包1{\"classId\":\"3\",\"collageActiveId\":\"1\"}>";
     
-//    过滤标签
+    HTStr = [HTStr stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n"];
+
+//    1过滤标签
 //    NSMutableAttributedString *one2 = [[NSMutableAttributedString alloc] initWithString:[self displayStringWithRawString:HTStr]];
     NSMutableAttributedString *one1 = [[NSMutableAttributedString alloc] initWithString:[self filterTheTagWithStr:HTStr]];
 
@@ -57,7 +59,7 @@
     one1.font = [UIFont boldSystemFontOfSize:12];
     one1.underlineStyle = NSUnderlineStyleNone;
     
-//  组装成字典/模型
+// 2 组装成字典/模型
     NSDictionary *dic1 =  [self handleTheStringWithRegularExpression:HTStr].copy;
 
     [dic1.allKeys enumerateObjectsUsingBlock:^(NSString*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -91,9 +93,8 @@
 -(NSDictionary *)handleTheStringWithRegularExpression:(NSString *)rawString{
     
     NSMutableDictionary *dicHandle = [NSMutableDictionary dictionary];
-    NSString *pattern = @"<.+?>|\\[.+?\\]";
+    NSString *pattern = @"<.+?>";
     NSError *error = nil;
-    NSMutableString *dealString = [NSMutableString new];
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
     NSArray<NSTextCheckingResult *> *result = [regex matchesInString:rawString options:0 range:NSMakeRange(0, rawString.length)];
     
@@ -102,25 +103,22 @@
         return dicHandle;
     }
     
-    NSInteger prelocation = 0;
     NSString *tagString = nil;
     
     for (int i = 0; i< result.count; i++)
     {
         NSTextCheckingResult *res = result[i];
-        NSString *subStr = [rawString substringWithRange:NSMakeRange(prelocation, res.range.location - prelocation)];
-        [dealString appendString:subStr];
         tagString = [rawString substringWithRange:res.range];
 // 去除标签的tag
 //        NSString *emptyTagString = [self displayStringWithRawString:tagString];
-        NSString *emptyTagString = [self filterTheTagWithStr:tagString];
-        [dealString appendString:emptyTagString];
 // 处理()内部
 //        NSString *url= [self getScoreFromTag:tagString];
-        NSString *url = [NSString stringWithFormat:@"{%@}",[self getTheotherTag:tagString]];
-        NSString *key = emptyTagString;
+        
+        NSString *url = [NSString stringWithFormat:@"{%@}",[self filterTheJsonTagWithStr:tagString]];
+        
+        NSString *key = [self filterTheTagWithStr:tagString];
+        
         [dicHandle setValue:url forKey:key];
-        prelocation = res.range.location + tagString.length;
     }
     
     return dicHandle;
@@ -130,22 +128,19 @@
 #pragma mark --- 正则处理
 
 // get tag1
--(NSString *)getTheotherTag:(NSString *)tagString{
+-(NSString *)filterTheJsonTagWithStr:(NSString *)tagString{
     
     NSMutableString *dealString = [NSMutableString string];
-
-    
     NSError *error = nil;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\{.+?\\}" options:NSRegularExpressionCaseInsensitive error:&error];
     NSArray<NSTextCheckingResult *> *result = [regex matchesInString:tagString options:0 range:NSMakeRange(0, tagString.length)];
     if (result.count)
     {
-        NSString *defen = [tagString substringWithRange:result[0].range];
-//        截取（）
-        NSString *content = [tagString substringWithRange:NSMakeRange(tagString.length-defen.length, defen.length-2)];
+        NSString *handleStr = [tagString substringWithRange:result[0].range];
+        //        截取{}
+        NSString *content = [tagString substringWithRange:NSMakeRange(tagString.length-handleStr.length, handleStr.length-2)];
         [dealString appendString:content];
     }
-    
     
     return dealString.copy;
     
@@ -219,8 +214,8 @@
                 NSArray<NSTextCheckingResult *> *result = [regex matchesInString:tagStr options:0 range:NSMakeRange(0, tagStr.length)];
                 if (result.count)
                 {
-                    NSString *defen = [tagStr substringWithRange:result[0].range];
-                    NSString *content = [tagStr substringWithRange:NSMakeRange(1, tagStr.length - 2 - defen.length)];
+                    NSString *handleStr = [tagStr substringWithRange:result[0].range];
+                    NSString *content = [tagStr substringWithRange:NSMakeRange(1, tagStr.length - 2 - handleStr.length)];
                     [dealString appendString:content];
                 }
                 else
@@ -229,7 +224,6 @@
                     [dealString appendString:content];
                 }
             }
-            // model
             prelocation = res.range.location + tagStr.length;
         }
         NSString *subStr = [searchText substringWithRange:NSMakeRange(prelocation, searchText.length - prelocation)];
