@@ -47,9 +47,13 @@
     NSMutableAttributedString *text = [NSMutableAttributedString new];
 
     HTStr = @"以做好前期<准备(+1.0分)>，真准确定位，认清自我，加强<调查(+2.0分)>研究，了解<市场需求(+11.0分)>";
-    HTStr =  @"<拼团活动(111)>，加强<红包活动(id:222,isLive:1)>研究，了解<其他活动(id:333,isLive:1)>";
+    HTStr =  @"<红包活动{\"classId\":\"1\",\"collageActiveId\":\"1\"}>，加强<活动1{\"classId\":\"2\",\"collageActiveId\":\"1\"}>研究，了解<红包1{\"classId\":\"3\",\"collageActiveId\":\"1\"}>";
     
-    NSMutableAttributedString *one1 = [[NSMutableAttributedString alloc] initWithString:[self displayStringWithRawString:HTStr]];
+//    过滤标签
+//    NSMutableAttributedString *one2 = [[NSMutableAttributedString alloc] initWithString:[self displayStringWithRawString:HTStr]];
+    NSMutableAttributedString *one1 = [[NSMutableAttributedString alloc] initWithString:[self filterTheTagWithStr:HTStr]];
+
+    
     one1.font = [UIFont boldSystemFontOfSize:12];
     one1.underlineStyle = NSUnderlineStyleNone;
     
@@ -60,7 +64,7 @@
         
         [one1 setTextHighlightRange:[one1.string rangeOfString:dic1.allKeys[idx]] color:[UIColor colorWithRed:0.093 green:0.492 blue:1.000 alpha:1.000] backgroundColor:[UIColor colorWithWhite:0.000 alpha:0.220] userInfo:nil tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
             
-            NSLog(@"%@",[NSString stringWithFormat:@"Tap: %@",[dic1 objectForKey:[text.string substringWithRange:range]]]);
+            NSLog(@"tag====%@",[self dictionaryWithJsonString:[dic1 objectForKey:[text.string substringWithRange:range]]]);
 
             
         } longPressAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
@@ -83,9 +87,7 @@
     pad.font = [UIFont systemFontOfSize:4];
     return pad;
 }
-#pragma mark --- 正则处理
-
-// 处理b文本
+#pragma mark --- 正则处理 数据组合
 -(NSDictionary *)handleTheStringWithRegularExpression:(NSString *)rawString{
     
     NSMutableDictionary *dicHandle = [NSMutableDictionary dictionary];
@@ -110,11 +112,12 @@
         [dealString appendString:subStr];
         tagString = [rawString substringWithRange:res.range];
 // 去除标签的tag
-        NSString *emptyTagString = [self displayStringWithRawString:tagString];
+//        NSString *emptyTagString = [self displayStringWithRawString:tagString];
+        NSString *emptyTagString = [self filterTheTagWithStr:tagString];
         [dealString appendString:emptyTagString];
 // 处理()内部
 //        NSString *url= [self getScoreFromTag:tagString];
-        NSString *url = [self getTheotherTag:tagString];
+        NSString *url = [NSString stringWithFormat:@"{%@}",[self getTheotherTag:tagString]];
         NSString *key = emptyTagString;
         [dicHandle setValue:url forKey:key];
         prelocation = res.range.location + tagString.length;
@@ -123,13 +126,17 @@
     return dicHandle;
 }
 
+
+#pragma mark --- 正则处理
+
+// get tag1
 -(NSString *)getTheotherTag:(NSString *)tagString{
     
     NSMutableString *dealString = [NSMutableString string];
 
     
     NSError *error = nil;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\(.+?\\)" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\{.+?\\}" options:NSRegularExpressionCaseInsensitive error:&error];
     NSArray<NSTextCheckingResult *> *result = [regex matchesInString:tagString options:0 range:NSMakeRange(0, tagString.length)];
     if (result.count)
     {
@@ -144,7 +151,7 @@
     
 }
 
-// get URL
+// get tag2
 - (NSString *)getScoreFromTag:(NSString *)tagString
 {
     NSString *str = [tagString stringByReplacingOccurrencesOfString:@"" withString:@""];
@@ -188,7 +195,56 @@
 }
 
 
-// 去标签
+// 去标签1
+- (NSString *)filterTheTagWithStr:(NSString *)searchText
+{
+    NSString *pattern = @"<.+?>";
+    NSError *error = nil;
+    NSMutableString *dealString = [NSMutableString string];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
+    NSArray<NSTextCheckingResult *> *result = [regex matchesInString:searchText options:0 range:NSMakeRange(0, searchText.length)];
+    if (result)
+    {
+        NSInteger prelocation = 0;
+        NSString *tagStr = nil;
+        for (int i = 0; i<result.count; i++)
+        {
+            NSTextCheckingResult *res = result[i];
+            NSString *subStr = [searchText substringWithRange:NSMakeRange(prelocation, res.range.location - prelocation)];
+            [dealString appendString:subStr];
+            tagStr = [searchText substringWithRange:res.range];
+            if ([tagStr hasPrefix:@"<"])
+            {
+                NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\{.+?\\}" options:NSRegularExpressionCaseInsensitive error:&error];
+                NSArray<NSTextCheckingResult *> *result = [regex matchesInString:tagStr options:0 range:NSMakeRange(0, tagStr.length)];
+                if (result.count)
+                {
+                    NSString *defen = [tagStr substringWithRange:result[0].range];
+                    NSString *content = [tagStr substringWithRange:NSMakeRange(1, tagStr.length - 2 - defen.length)];
+                    [dealString appendString:content];
+                }
+                else
+                {
+                    NSString *content = [tagStr substringWithRange:NSMakeRange(1, tagStr.length - 2)];
+                    [dealString appendString:content];
+                }
+            }
+            // model
+            prelocation = res.range.location + tagStr.length;
+        }
+        NSString *subStr = [searchText substringWithRange:NSMakeRange(prelocation, searchText.length - prelocation)];
+        [dealString appendString:subStr];
+        return [dealString copy];
+    }
+    else
+    {
+        return nil;
+    }
+}
+
+
+
+// 去标签2
 - (NSString *)displayStringWithRawString:(NSString *)searchText
 {
     NSString *pattern = @"<.+?>|\\[.+?\\]";
@@ -251,6 +307,28 @@
     {
         return nil;
     }
+}
+
+
+#pragma mark ---- PrivateMethod
+
+- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString
+{
+    if (jsonString == nil) {
+        return nil;
+    }
+    
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:&err];
+    if(err)
+    {
+        NSLog(@"json解析失败：%@",err);
+        return nil;
+    }
+    return dic;
 }
 
 /*
