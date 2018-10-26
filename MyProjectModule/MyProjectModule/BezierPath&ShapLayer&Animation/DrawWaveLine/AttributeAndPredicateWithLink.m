@@ -47,7 +47,7 @@
     NSMutableAttributedString *text = [NSMutableAttributedString new];
 
     HTStr = @"以做好前期<准备(+1.0分)>，真准确定位，认清自我，加强<调查(+2.0分)>研究，了解<市场需求(+11.0分)>";
-//    HTStr =  @"<拼团活动(111)>，加强<红包活动(id:222,isLive:1)>研究，了解<其他活动(id:333,isLive:1)>";
+    HTStr =  @"<拼团活动(111)>，加强<红包活动(id:222,isLive:1)>研究，了解<其他活动(id:333,isLive:1)>";
     
     NSMutableAttributedString *one1 = [[NSMutableAttributedString alloc] initWithString:[self displayStringWithRawString:HTStr]];
     one1.font = [UIFont boldSystemFontOfSize:12];
@@ -113,7 +113,8 @@
         NSString *emptyTagString = [self displayStringWithRawString:tagString];
         [dealString appendString:emptyTagString];
 // 处理()内部
-        NSString *url= [self getScoreFromTag:tagString];
+//        NSString *url= [self getScoreFromTag:tagString];
+        NSString *url = [self getTheotherTag:tagString];
         NSString *key = emptyTagString;
         [dicHandle setValue:url forKey:key];
         prelocation = res.range.location + tagString.length;
@@ -124,7 +125,23 @@
 
 -(NSString *)getTheotherTag:(NSString *)tagString{
     
-    return @"";
+    NSMutableString *dealString = [NSMutableString string];
+
+    
+    NSError *error = nil;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\(.+?\\)" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSArray<NSTextCheckingResult *> *result = [regex matchesInString:tagString options:0 range:NSMakeRange(0, tagString.length)];
+    if (result.count)
+    {
+        NSString *defen = [tagString substringWithRange:result[0].range];
+//        截取（）
+        NSString *content = [tagString substringWithRange:NSMakeRange(tagString.length-defen.length, defen.length-2)];
+        [dealString appendString:content];
+    }
+    
+    
+    return dealString.copy;
+    
 }
 
 // get URL

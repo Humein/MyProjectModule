@@ -128,6 +128,12 @@
 		79BFDCE62142A16000C81069 /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BFDCE42142A16000C81069 /* Detail.md */; };
 		79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFDCE82142A28700C81069 /* StartWaterView.m */; };
 		79CFB323216C879D00218C92 /* NSInvocationForStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */; };
+		79EEEA4C2182BD4700848B59 /* UITableView滚动到底部时崩溃的解决方法 - 简书.html in Resources */ = {isa = PBXBuildFile; fileRef = 79EEEA492182BD4700848B59 /* UITableView滚动到底部时崩溃的解决方法 - 简书.html */; };
+		79EEEA4D2182BD4700848B59 /* scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客 - CSDN博客.html in Resources */ = {isa = PBXBuildFile; fileRef = 79EEEA4A2182BD4700848B59 /* scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客 - CSDN博客.html */; };
+		79EEEA4E2182BD4700848B59 /* iOS开发、教你一步步实现直播间评论效果功能 - 简书.html in Resources */ = {isa = PBXBuildFile; fileRef = 79EEEA4B2182BD4700848B59 /* iOS开发、教你一步步实现直播间评论效果功能 - 简书.html */; };
+		79EEEA512182BD8C00848B59 /* LiveCommetChatTV.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA502182BD8C00848B59 /* LiveCommetChatTV.m */; };
+		79EEEA562182C09200848B59 /* liveChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA552182C09200848B59 /* liveChatModel.m */; };
+		79EEEA592182C13A00848B59 /* LiveCommentDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA582182C13A00848B59 /* LiveCommentDemoViewController.m */; };
 		79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */; };
 		79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EE2151F84E003704D7 /* BlockViewController.m */; };
 		79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */; };
@@ -395,6 +401,15 @@
 		79BFDCE82142A28700C81069 /* StartWaterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartWaterView.m; sourceTree = "<group>"; };
 		79CFB321216C879D00218C92 /* NSInvocationForStrategyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSInvocationForStrategyViewController.h; sourceTree = "<group>"; };
 		79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSInvocationForStrategyViewController.m; sourceTree = "<group>"; };
+		79EEEA492182BD4700848B59 /* UITableView滚动到底部时崩溃的解决方法 - 简书.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "UITableView滚动到底部时崩溃的解决方法 - 简书.html"; sourceTree = "<group>"; };
+		79EEEA4A2182BD4700848B59 /* scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客 - CSDN博客.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客 - CSDN博客.html"; sourceTree = "<group>"; };
+		79EEEA4B2182BD4700848B59 /* iOS开发、教你一步步实现直播间评论效果功能 - 简书.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "iOS开发、教你一步步实现直播间评论效果功能 - 简书.html"; sourceTree = "<group>"; };
+		79EEEA4F2182BD8C00848B59 /* LiveCommetChatTV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveCommetChatTV.h; sourceTree = "<group>"; };
+		79EEEA502182BD8C00848B59 /* LiveCommetChatTV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveCommetChatTV.m; sourceTree = "<group>"; };
+		79EEEA542182C09200848B59 /* liveChatModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = liveChatModel.h; sourceTree = "<group>"; };
+		79EEEA552182C09200848B59 /* liveChatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = liveChatModel.m; sourceTree = "<group>"; };
+		79EEEA572182C13A00848B59 /* LiveCommentDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveCommentDemoViewController.h; sourceTree = "<group>"; };
+		79EEEA582182C13A00848B59 /* LiveCommentDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveCommentDemoViewController.m; sourceTree = "<group>"; };
 		79F9A5EA214FB09B003704D7 /* AlgorithmsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmsViewController.h; sourceTree = "<group>"; };
 		79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmsViewController.m; sourceTree = "<group>"; };
 		79F9A5ED2151F84E003704D7 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
@@ -502,6 +517,7 @@
 		333D108720CF5AAB004D9241 /* TableViewModule */ = {
 			isa = PBXGroup;
 			children = (
+				79EEEA412182BCD300848B59 /* LiveComment180TC */,
 				33E6CDCD210034E200422FC7 /* AlertTableView */,
 				33A32ADF20D91234008C3969 /* 折叠的TableView */,
 			);
@@ -1193,6 +1209,30 @@
 			path = socket;
 			sourceTree = "<group>";
 		};
+		79EEEA412182BCD300848B59 /* LiveComment180TC */ = {
+			isa = PBXGroup;
+			children = (
+				79EEEA482182BD4700848B59 /* QuoteDoc */,
+				79EEEA4F2182BD8C00848B59 /* LiveCommetChatTV.h */,
+				79EEEA502182BD8C00848B59 /* LiveCommetChatTV.m */,
+				79EEEA542182C09200848B59 /* liveChatModel.h */,
+				79EEEA552182C09200848B59 /* liveChatModel.m */,
+				79EEEA572182C13A00848B59 /* LiveCommentDemoViewController.h */,
+				79EEEA582182C13A00848B59 /* LiveCommentDemoViewController.m */,
+			);
+			path = LiveComment180TC;
+			sourceTree = "<group>";
+		};
+		79EEEA482182BD4700848B59 /* QuoteDoc */ = {
+			isa = PBXGroup;
+			children = (
+				79EEEA492182BD4700848B59 /* UITableView滚动到底部时崩溃的解决方法 - 简书.html */,
+				79EEEA4A2182BD4700848B59 /* scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客 - CSDN博客.html */,
+				79EEEA4B2182BD4700848B59 /* iOS开发、教你一步步实现直播间评论效果功能 - 简书.html */,
+			);
+			path = QuoteDoc;
+			sourceTree = "<group>";
+		};
 		79F9A5E9214FB082003704D7 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
@@ -1317,9 +1357,12 @@
 			files = (
 				333D106220CE74AB004D9241 /* LaunchScreen.storyboard in Resources */,
 				333D105F20CE74AB004D9241 /* Assets.xcassets in Resources */,
+				79EEEA4C2182BD4700848B59 /* UITableView滚动到底部时崩溃的解决方法 - 简书.html in Resources */,
 				33FAE4F120E2452D00BE7175 /* JHHeaderReusableView.xib in Resources */,
 				79BFDCDF2142A15200C81069 /* Detail.md in Resources */,
 				33E6CE0A21006DA000422FC7 /* Tree.plist in Resources */,
+				79EEEA4E2182BD4700848B59 /* iOS开发、教你一步步实现直播间评论效果功能 - 简书.html in Resources */,
+				79EEEA4D2182BD4700848B59 /* scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客 - CSDN博客.html in Resources */,
 				79BFDCE62142A16000C81069 /* Detail.md in Resources */,
 				79BFDCE52142A16000C81069 /* Detail.md in Resources */,
 				333D105D20CE74A9004D9241 /* Main.storyboard in Resources */,
@@ -1413,6 +1456,7 @@
 				33759E71212FA08900D801C1 /* UIView+MethodSwizze.m in Sources */,
 				33888FE820F06AC900E4A119 /* PaternalSViewController.m in Sources */,
 				33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */,
+				79EEEA512182BD8C00848B59 /* LiveCommetChatTV.m in Sources */,
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
@@ -1483,6 +1527,7 @@
 				339B536C20F4B450003444CB /* AbstractPlayerHelperManager.m in Sources */,
 				33C97118211E81D800EAAD5E /* ApplePay.m in Sources */,
 				339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */,
+				79EEEA592182C13A00848B59 /* LiveCommentDemoViewController.m in Sources */,
 				79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */,
 				33C97111211E7C3700EAAD5E /* APPPayTool.m in Sources */,
 				335ABFAE2160C0BD00770703 /* AnimationExample.m in Sources */,
@@ -1496,6 +1541,7 @@
 				79CFB323216C879D00218C92 /* NSInvocationForStrategyViewController.m in Sources */,
 				33C971252121315500EAAD5E /* ResovlerModel.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
+				79EEEA562182C09200848B59 /* liveChatModel.m in Sources */,
 				33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */,
 				33C971432124108D00EAAD5E /* CustomAlertView.m in Sources */,
 				33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */,

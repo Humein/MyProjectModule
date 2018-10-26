@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="canonical" href="https://blog.csdn.net/base_zhu/article/details/51017260"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="referrer" content="always">
+    <meta name="description" content="一、scrollToRowAtIndexPath 会发生崩溃：
+//scroll to previously selected cell
+  [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.lastIdx inSection:0] atScrollPosition:UITableViewScroll" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+    <script src="https://csdnimg.cn/release/phoenix/vendor/tingyun/tingyun-rum-blog.js"></script>
+
+    <link href="https://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
+    <title>scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客 - CSDN博客</title>
+
+            <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/detail-1d7a61b254.min.css">
+        <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/themes/skin3-template/skin3-template-9b39979775.min.css">
+
+    <script type="text/javascript">
+        var username = "base_zhu";
+        var blog_address = "https://blog.csdn.net/base_zhu";
+        var static_host = "https://csdnimg.cn/release/phoenix/";
+        var currentUserName = "";
+        var isShowAds = true;
+        var isOwner = false;
+        var loginUrl = "http://passport.csdn.net/account/login?from=https://blog.csdn.net/base_zhu/article/details/51017260"
+        var blogUrl = "https://blog.csdn.net/";
+        //页面皮肤样式
+        var curSkin = "skin3-template";
+        // 第四范式所需数据
+        var articleTitles = "scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客";
+        var articleID = "51017260";
+
+        var nickName = "base_";
+    </script>
+    <script type="text/javascript">
+        // Traffic Stats of the entire Web site By baidu
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?6bcd52f51e9b3dce32bec4a3997715ac";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+        // Traffic Stats of the entire Web site By baidu end
+    </script>
+    <script src="https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="https://csdnimg.cn/rabbit/exposure-click/main-1.0.6.js"></script>
+    <!-- 新版上报 -->
+    <script src="//g.csdnimg.cn/track/1.1.1/track.js" type="text/javascript"></script>
+    <!-- 新版上报end -->
+            <link rel="stylesheet" href="https://csdnimg.cn/public/sandalstrap/1.4/css/sandalstrap.min.css">
+    <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview{
+            display: none
+        }
+    </style>
+</head>
+<!-- nodata 第三栏接口无数据时样式不变 -->
+<body class="nodata"> 
+    <link rel="stylesheet" href="https://csdnimg.cn/public/common/toolbar/content_toolbar_css/content_toolbar.css">
+    <script id="toolbar-tpl-scriptId" src="https://csdnimg.cn/public/common/toolbar/js/content_toolbar.js" type="text/javascript" domain="https://blog.csdn.net/"></script>
+<link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/blog_code-c3a0c33d5c.css">
+<link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/vendor/pagination/paging.css">
+<script type="text/javascript" src="//static.mediav.com/js/mvf_news_feed.js"></script>
+<script type="text/javascript" src="//g.csdnimg.cn/copyright/1.0.3/copyright.js"></script>
+<div style="display:none;">
+	<img src="" onerror='setTimeout(function(){if(!/(csdn.net|iteye.com|baiducontent.com|googleusercontent.com|360webcache.com|sogoucdn.com|bingj.com|baidu.com)$/.test(window.location.hostname)){window.location.href="\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x77\x77\x2e\x63\x73\x64\x6e\x2e\x6e\x65\x74"}},3000);'>
+</div>
+<link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/chart-3456820cac.css" />
+
+
+
+<script src="https://dup.baidustatic.com/js/ds.js"></script>
+<div class="container clearfix" id="mainBox">
+		<div class="recommend-right">
+  <ul class="recommend-fixed-box">
+    
+  </ul>
+</div>
+    <main>
+        <div class="blog-content-box">
+	<div class="article-header-box">
+		<div class="article-header">
+			<div class="article-title-box">
+				<span class="article-type type-1 float-left">原</span>				<h1 class="title-article">scrollToRowAtIndexPath 问题分析（crash 和 不执行问题）</h1>
+			</div>
+			<div class="article-info-box">
+				<div class="article-bar-top">
+																				<span class="time">2016年03月30日 17:22:39</span>
+					<a class="follow-nickName" href="https://me.csdn.net/base_zhu" target="_blank">base_</a>
+						<span class="read-count">阅读数：4283</span>
+										</div>
+				<div class="operating">
+														</div>
+			</div>
+		</div>
+	</div>
+	<article>
+		<div id="article_content" class="article_content clearfix csdn-tracking-statistics" data-pid="blog"  data-mod=popu_307  data-dsm = "post" >
+								            <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-e4c7a3727d.css" />
+						<div class="htmledit_views">
+                
+<p>一、scrollToRowAtIndexPath 会发生崩溃：</p>
+<p></p><pre><code class="language-objc">//scroll to previously selected cell
+  [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.lastIdx inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];</code></pre><br />
+崩溃的原因是：
+<p style="border:0px;font-size:13px;line-height:24.05px;font-family:Menlo;">
+<span style="border:0px;font-size:14px;background:transparent;">比如数据源中有3个元素，而tableview中只显示了2个元素，当调用<span style="border:0px;color:rgb(61,29,129);background:transparent;">scrollToRowAtIndexPath</span><span style="border:0px;background:transparent;">:[</span><span style="border:0px;color:rgb(112,61,170);background:transparent;">NSIndexPath</span><span style="border:0px;background:transparent;"> </span><span style="border:0px;color:rgb(61,29,129);background:transparent;">indexPathForRow</span><span style="border:0px;background:transparent;">:2<br />
+时肯定就出错了。</span><span style="border:0px;color:rgb(79,129,135);background:transparent;"><span style="border:0px;background:transparent;"></span></span></span></p>
+<p style="border:0px;font-size:13px;line-height:24.05px;font-family:Menlo;">
+<span style="border:0px;font-size:14px;background:transparent;"><span style="border:0px;background:transparent;"><br /></span></span></p>
+<p style="border:0px;font-size:13px;line-height:24.05px;font-family:Menlo;">
+<span style="border:0px;font-size:14px;background:transparent;"><span style="border:0px;background:transparent;">解决方法是: 在调用这个方法之前刷新数据源</span></span></p>
+<p style="border:0px;font-size:13px;line-height:24.05px;font-family:Menlo;">
+</p><pre><code class="language-objc">[self.tableView reloadData];</code></pre><br />
+二、不执行或者执行错误的问题：
+<p style="border:0px;font-size:13px;line-height:24.05px;font-family:Menlo;">
+<br /></p>
+<p style="border:0px;font-size:13px;line-height:24.05px;font-family:Menlo;">
+背景：在用纯代码（purelauout布局的情况下），给tableView设置了约束，但是没有给frame</p>
+<p style="border:0px;font-size:13px;line-height:24.05px;font-family:Menlo;">
+</p><pre><code class="language-objc">- (void)initializeTableView
+{
+    self.view.backgroundColor = HEXCOLOR(0xf0f0f0);
+    self.tableView = [[TPKeyboardAvoidingTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.backgroundColor = HEXCOLOR(0xf0f0f0);
+    [self.view addSubview:self.tableView];
+    
+    [self.tableView tn_pinEdgeToSuperviewEdge:TNAEdgeLeading withInset:0.0f];
+    [self.tableView tn_pinEdgeToSuperviewEdge:TNAEdgeTop withInset:self.topBarView.height];
+    [self.tableView tn_matchDimension:TNADimensionWidth toDimension:TNADimensionWidth ofView:self.view];
+    [self.tableView tn_pinEdgeToSuperviewEdge:TNAEdgeBottom withInset:0.0f];
+}
+</code></pre>
+<p style="border:0px;font-size:13px;line-height:24.05px;font-family:Menlo;">
+<br /></p>
+<p style="border:0px;font-size:13px;line-height:24.05px;font-family:Menlo;">
+在执行<span style="line-height:24.05px;background-color:rgb(240,240,240);">scrollToRowAtIndexPath 是不知道tableView的frame的，所有滚冬到相对应的cell就有问题。</span></p>
+<p style="border:0px;font-size:13px;line-height:24.05px;font-family:Menlo;">
+<span style="line-height:24.05px;background-color:rgb(240,240,240);"><br /></span></p>
+给定tableView的frame：
+<p style="border:0px;font-size:13px;line-height:24.05px;font-family:Menlo;">
+</p><pre><code class="language-objc">self.tableView = [[TPKeyboardAvoidingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+</code></pre>
+<p style="border:0px;font-size:13px;line-height:24.05px;font-family:Menlo;">
+就可以。</p>
+<p style="border:0px;font-size:13px;line-height:24.05px;font-family:Menlo;">
+其次，防止crash，可以设置代码保护：</p>
+<p style="border:0px;font-size:13px;line-height:24.05px;font-family:Menlo;">
+</p><pre><code class="language-objc">- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    //protect code
+    if ([self tableView:self.tableView numberOfRowsInSection:[NSIndexPath indexPathForRow:self.lastIdx inSection:0].section] &gt; [NSIndexPath indexPathForRow:self.lastIdx inSection:0].row) {
+        if (self.lastIdx != NSNotFound &amp;&amp; self.lastIdx &lt; self.holder.customers.count) {
+            //scroll to previously selected cell
+            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.lastIdx inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+            self.lastIdx = NSNotFound;
+        }
+    }
+}
+</code></pre>因为业务本身只有一组，所以我没有设置组的判断，可以的话设置上，注意要实现tableView的组方法，否则会报 unresgonized selector ！！！<br /><br /><br /><p style="border:0px;font-size:13px;line-height:24.05px;font-family:Menlo;">
+<br /></p>
+<div><span style="border:0px;font-size:14px;"><span style="border:0px;background:transparent;"><br /></span></span></div>
+            </div>
+                </div>
+									<div class="hide-article-box text-center">
+						<a class="btn" id="btn-readmore" data-track-view='{"mod":"popu_376","con":",https://blog.csdn.net/base_zhu/article/details/51017260,"}' data-track-click='{"mod":"popu_376","con":",https://blog.csdn.net/base_zhu/article/details/51017260,"}'>阅读更多</a>
+					</div>
+					<script>
+						(function(){
+							function setArticleH(btnReadmore,posi){
+								var winH = $(window).height();
+								var articleBox = $("div.article_content");
+								var artH = articleBox.height();
+								if(artH > winH*posi){
+									articleBox.css({
+										'height':winH*posi+'px',
+										'overflow':'hidden'
+									})
+									btnReadmore.click(function(){
+										articleBox.removeAttr("style");
+										$(this).parent().remove();
+									})
+								}else{
+									btnReadmore.parent().remove();
+								}
+							}
+							var btnReadmore = $("#btn-readmore");
+							if(btnReadmore.length>0){
+								if(currentUserName){
+									setArticleH(btnReadmore,3);
+								}else{
+									setArticleH(btnReadmore,1.2);
+								}
+							}
+						})()
+					</script>
+					</article>
+	
+</div>
+<script>
+		$(".MathJax").remove();
+		if($('div.markdown_views pre.prettyprint code.hljs').length > 0 ){
+				$('div.markdown_views')[0].className = 'markdown_views';
+		}
+</script>
+        <div class="p4course_target" ></div><script>window.p4sdk_enable_courseBox=true</script>        <a id="commentBox"></a>
+<div class="comment-box">
+	  	<div class="unlogin-box text-center">
+		想对作者说点什么？
+		<!-- $curl 当前地址 -->
+		<button id="btnCommentUnlogin" class="btn btn-sm btn-red">我来说一句</button>
+	</div>
+			<div class="comment-list-container">
+		<a id="comments"></a>
+		<div class="comment-list-box">
+		</div>
+		<div id="commentPage" class="pagination-box d-none"></div>
+		<div class="opt-box text-center">
+			<button class="btn btn-sm btn-link-blue" id="btnMoreComment"></button>
+		</div>
+	</div>
+</div>
+        <div class="recommend-box">
+            		<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_387","con":",https://blog.csdn.net/andypan1314/article/details/6457328,BlogCommendFromBaidu_0"}' data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/andypan1314/article/details/6457328,BlogCommendFromBaidu_0"}'>
+			<div class="content">
+				<a href="https://blog.csdn.net/andypan1314/article/details/6457328?utm_source=blogxgwz0" target="_blank" title="iphone程序崩溃原因总结(不断更新中。。。)">
+				<h4 class="text-truncate oneline">
+						iphone程序崩溃原因总结(不断更新中。。。)				</h4>
+				<div class="info-box d-flex align-content-center">
+					<!-- <p class="avatar">
+							<img src="https://avatar.csdn.net/3/D/9/3_andypan1314.jpg" alt="andypan1314" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">andypan1314</span>
+								<span class="triangle"></span>
+							</span>
+					</p> -->
+					<p class="date-and-readNum">
+						<span class="date hover-show">05-31</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-m-passwords-visible"></use>
+							</svg>
+							2914</span>
+						</p>
+					</div>
+				</a>
+					<p class="content">
+						<a href="https://blog.csdn.net/andypan1314/article/details/6457328?utm_source=blogxgwz0" target="_blank" title="iphone程序崩溃原因总结(不断更新中。。。)">
+							<span class="desc oneline">看到一篇文章专门总结iphone程序崩溃原因，感觉总结的很好，也很方便当出现崩溃情况时有针对的检查，贴出来，以后会持续更新可能出现的情况。1.访问某个对象不存在的属性。 2.访问已经被dealloc的...</span>
+						</a>
+                        						<span class="blog_title_box oneline"><a target="_blank" href="https://blog.csdn.net/andypan1314?utm_source=blog_pc_recommand">来自：	<span class="blog_title"> 安迪·潘  的专栏</span></a></span>
+                        					</p>
+			</div>
+					</div>
+	
+    
+	
+    		<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_387","con":",https://blog.csdn.net/hangqiang321/article/details/27543871,BlogCommendFromBaidu_1"}' data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/hangqiang321/article/details/27543871,BlogCommendFromBaidu_1"}'>
+			<div class="content">
+				<a href="https://blog.csdn.net/hangqiang321/article/details/27543871?utm_source=blogxgwz1" target="_blank" title="UITableView的scrollToRowAtIndexPath:atScrollPosition:animated的崩溃">
+				<h4 class="text-truncate oneline">
+						UITableView的<em>scrollToRowAtIndexPath</em>:atScrollPosition:animated的崩溃				</h4>
+				<div class="info-box d-flex align-content-center">
+					<!-- <p class="avatar">
+							<img src="https://avatar.csdn.net/C/C/5/3_hangqiang321.jpg" alt="hangqiang321" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">hangqiang321</span>
+								<span class="triangle"></span>
+							</span>
+					</p> -->
+					<p class="date-and-readNum">
+						<span class="date hover-show">05-29</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-m-passwords-visible"></use>
+							</svg>
+							7423</span>
+						</p>
+					</div>
+				</a>
+					<p class="content">
+						<a href="https://blog.csdn.net/hangqiang321/article/details/27543871?utm_source=blogxgwz1" target="_blank" title="UITableView的scrollToRowAtIndexPath:atScrollPosition:animated的崩溃">
+							<span class="desc oneline">reason: '-[UITableView _contentOffsetForScrollingToRowAtIndexPath:atScrollPosition:]: row (0) beyond...</span>
+						</a>
+                        						<span class="blog_title_box oneline"><a target="_blank" href="https://blog.csdn.net/hangqiang321?utm_source=blog_pc_recommand">来自：	<span class="blog_title"> 仙贝的技术博</span></a></span>
+                        					</p>
+			</div>
+					</div>
+	
+    
+	
+    		<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_387","con":",https://blog.csdn.net/ws1352864983/article/details/77936805,BlogCommendFromBaidu_2"}' data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/ws1352864983/article/details/77936805,BlogCommendFromBaidu_2"}'>
+			<div class="content">
+				<a href="https://blog.csdn.net/ws1352864983/article/details/77936805?utm_source=blogxgwz2" target="_blank" title="[self.tableView scrollToRowAtIndexPath:]方法滑动崩溃">
+				<h4 class="text-truncate oneline">
+						[self.tableView <em>scrollToRowAtIndexPath</em>:]方法滑动崩溃				</h4>
+				<div class="info-box d-flex align-content-center">
+					<!-- <p class="avatar">
+							<img src="https://avatar.csdn.net/C/3/8/3_ws1352864983.jpg" alt="ws1352864983" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">ws1352864983</span>
+								<span class="triangle"></span>
+							</span>
+					</p> -->
+					<p class="date-and-readNum">
+						<span class="date hover-show">09-11</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-m-passwords-visible"></use>
+							</svg>
+							663</span>
+						</p>
+					</div>
+				</a>
+					<p class="content">
+						<a href="https://blog.csdn.net/ws1352864983/article/details/77936805?utm_source=blogxgwz2" target="_blank" title="[self.tableView scrollToRowAtIndexPath:]方法滑动崩溃">
+							<span class="desc oneline">业务场景如下：类似美团、饿了么点餐界面的分类与菜品联动
+当分类中某一个分类下面菜品数量为零时，点击此分类，导致程序Crash解决办法：
+[self.tableView scrollToRowAtInd...</span>
+						</a>
+                        						<span class="blog_title_box oneline"><a target="_blank" href="https://blog.csdn.net/ws1352864983?utm_source=blog_pc_recommand">来自：	<span class="blog_title"> BearsG</span></a></span>
+                        					</p>
+			</div>
+					</div>
+	
+    <!-- 第四范式广告开关 -->
+				<div class="p4courset3_target _4paradigm_box recommend-item-box clearfix" ></div>
+				<script>window.p4sdk_enable_recommendBox=true</script>
+	
+    		<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_387","con":",https://blog.csdn.net/liwenjin1992/article/details/52402091,BlogCommendFromBaidu_3"}' data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/liwenjin1992/article/details/52402091,BlogCommendFromBaidu_3"}'>
+			<div class="content">
+				<a href="https://blog.csdn.net/liwenjin1992/article/details/52402091?utm_source=blogxgwz3" target="_blank" title="tableviewcell动态高度和scrollToRowAtIndexPath:atScrollPosition:同用卡顿问题解决方案">
+				<h4 class="text-truncate oneline">
+						tableviewcell动态高度和<em>scrollToRowAtIndexPath</em>:atScrollPosition:同用卡顿<em>问题</em>解决方案				</h4>
+				<div class="info-box d-flex align-content-center">
+					<!-- <p class="avatar">
+							<img src="https://avatar.csdn.net/B/C/2/3_liwenjin1992.jpg" alt="liwenjin1992" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">liwenjin1992</span>
+								<span class="triangle"></span>
+							</span>
+					</p> -->
+					<p class="date-and-readNum">
+						<span class="date hover-show">09-01</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-m-passwords-visible"></use>
+							</svg>
+							870</span>
+						</p>
+					</div>
+				</a>
+					<p class="content">
+						<a href="https://blog.csdn.net/liwenjin1992/article/details/52402091?utm_source=blogxgwz3" target="_blank" title="tableviewcell动态高度和scrollToRowAtIndexPath:atScrollPosition:同用卡顿问题解决方案">
+							<span class="desc oneline">最近在做聊天页面，开始时用 _chatTableView.estimatedRowHeight = 25;    _chatTableView.rowHeight = UITableViewAutom...</span>
+						</a>
+                        						<span class="blog_title_box oneline"><a target="_blank" href="https://blog.csdn.net/liwenjin1992?utm_source=blog_pc_recommand">来自：	<span class="blog_title"> liwenjin1992的博客</span></a></span>
+                        					</p>
+			</div>
+					</div>
+	
+    
+	
+    		<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_387","con":",https://blog.csdn.net/yinyignfenlei/article/details/53390890,BlogCommendFromBaidu_4"}' data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/yinyignfenlei/article/details/53390890,BlogCommendFromBaidu_4"}'>
+			<div class="content">
+				<a href="https://blog.csdn.net/yinyignfenlei/article/details/53390890?utm_source=blogxgwz4" target="_blank" title="实现UITableView的reloadData完成之后做一些操作">
+				<h4 class="text-truncate oneline">
+						实现UITableView的reloadData完成之后做一些操作				</h4>
+				<div class="info-box d-flex align-content-center">
+					<!-- <p class="avatar">
+							<img src="https://avatar.csdn.net/5/7/C/3_yinyignfenlei.jpg" alt="yinyignfenlei" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">yinyignfenlei</span>
+								<span class="triangle"></span>
+							</span>
+					</p> -->
+					<p class="date-and-readNum">
+						<span class="date hover-show">11-29</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-m-passwords-visible"></use>
+							</svg>
+							3379</span>
+						</p>
+					</div>
+				</a>
+					<p class="content">
+						<a href="https://blog.csdn.net/yinyignfenlei/article/details/53390890?utm_source=blogxgwz4" target="_blank" title="实现UITableView的reloadData完成之后做一些操作">
+							<span class="desc oneline">要想实现在reload之后弹出alertView，或者滚动到特定一行， 
+也许你会这么写[_tableView reloadData];
+[_tableView scrollToRowAtIndexP...</span>
+						</a>
+                        						<span class="blog_title_box oneline"><a target="_blank" href="https://blog.csdn.net/yinyignfenlei?utm_source=blog_pc_recommand">来自：	<span class="blog_title"> chenyingSunny的专栏</span></a></span>
+                        					</p>
+			</div>
+					</div>
+	
+    
+	
+    		<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_387","con":",https://blog.csdn.net/xyt8023y/article/details/46842121,BlogCommendFromBaidu_5"}' data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/xyt8023y/article/details/46842121,BlogCommendFromBaidu_5"}'>
+			<div class="content">
+				<a href="https://blog.csdn.net/xyt8023y/article/details/46842121?utm_source=blogxgwz5" target="_blank" title="（七十一）关于UITableView退出崩溃的问题和滚动到底部的方法">
+				<h4 class="text-truncate oneline">
+						（七十一）关于UITableView退出崩溃的<em>问题</em>和滚动到底部的方法				</h4>
+				<div class="info-box d-flex align-content-center">
+					<!-- <p class="avatar">
+							<img src="https://avatar.csdn.net/F/9/E/3_xyt8023y.jpg" alt="xyt8023y" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">xyt8023y</span>
+								<span class="triangle"></span>
+							</span>
+					</p> -->
+					<p class="date-and-readNum">
+						<span class="date hover-show">07-11</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-m-passwords-visible"></use>
+							</svg>
+							2444</span>
+						</p>
+					</div>
+				</a>
+					<p class="content">
+						<a href="https://blog.csdn.net/xyt8023y/article/details/46842121?utm_source=blogxgwz5" target="_blank" title="（七十一）关于UITableView退出崩溃的问题和滚动到底部的方法">
+							<span class="desc oneline">【TableView退出崩溃的问题】
+最近在使用TableView时偶然发现在TableView中数据较多时，如果在滚动过程中退出TableView到上一界面，会引起程序的崩溃，经过网上查阅和思考我发...</span>
+						</a>
+                        						<span class="blog_title_box oneline"><a target="_blank" href="https://blog.csdn.net/xyt8023y?utm_source=blog_pc_recommand">来自：	<span class="blog_title"> 最美的时光</span></a></span>
+                        					</p>
+			</div>
+					</div>
+	
+    
+	
+    		<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_387","con":",https://blog.csdn.net/jiang314/article/details/51376256,BlogCommendFromBaidu_6"}' data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/jiang314/article/details/51376256,BlogCommendFromBaidu_6"}'>
+			<div class="content">
+				<a href="https://blog.csdn.net/jiang314/article/details/51376256?utm_source=blogxgwz6" target="_blank" title="IOS开发中遇到的各种问题">
+				<h4 class="text-truncate oneline">
+						IOS开发中遇到的各种<em>问题</em>				</h4>
+				<div class="info-box d-flex align-content-center">
+					<!-- <p class="avatar">
+							<img src="https://avatar.csdn.net/5/6/B/3_jiang314.jpg" alt="jiang314" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">jiang314</span>
+								<span class="triangle"></span>
+							</span>
+					</p> -->
+					<p class="date-and-readNum">
+						<span class="date hover-show">05-11</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-m-passwords-visible"></use>
+							</svg>
+							9095</span>
+						</p>
+					</div>
+				</a>
+					<p class="content">
+						<a href="https://blog.csdn.net/jiang314/article/details/51376256?utm_source=blogxgwz6" target="_blank" title="IOS开发中遇到的各种问题">
+							<span class="desc oneline">问题有摘自 http://ayjkdev.top/2016/03/18/solve-questions/
+
+问题排序
+1.报错Switch is in protect scope
+解决方法：...</span>
+						</a>
+                        						<span class="blog_title_box oneline"><a target="_blank" href="https://blog.csdn.net/jiang314?utm_source=blog_pc_recommand">来自：	<span class="blog_title"> Kiven's Program Space</span></a></span>
+                        					</p>
+			</div>
+					</div>
+	
+    
+	
+    		<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_387","con":",https://blog.csdn.net/qq11231325/article/details/40209465,BlogCommendFromBaidu_7"}' data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/qq11231325/article/details/40209465,BlogCommendFromBaidu_7"}'>
+			<div class="content">
+				<a href="https://blog.csdn.net/qq11231325/article/details/40209465?utm_source=blogxgwz7" target="_blank" title="UI 常用方法总结之--- UITableView (不断更新中)">
+				<h4 class="text-truncate oneline">
+						UI 常用方法总结之--- UITableView (不断更新中)				</h4>
+				<div class="info-box d-flex align-content-center">
+					<!-- <p class="avatar">
+							<img src="https://avatar.csdn.net/8/9/F/3_qq11231325.jpg" alt="qq11231325" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">qq11231325</span>
+								<span class="triangle"></span>
+							</span>
+					</p> -->
+					<p class="date-and-readNum">
+						<span class="date hover-show">10-18</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-m-passwords-visible"></use>
+							</svg>
+							2720</span>
+						</p>
+					</div>
+				</a>
+					<p class="content">
+						<a href="https://blog.csdn.net/qq11231325/article/details/40209465?utm_source=blogxgwz7" target="_blank" title="UI 常用方法总结之--- UITableView (不断更新中)">
+							<span class="desc oneline">UI 常用方法总结之--- UITableView (不断更新中)
+ 转载请注明出处:http://blog.csdn.net/qq11231325...</span>
+						</a>
+                        						<span class="blog_title_box oneline"><a target="_blank" href="https://blog.csdn.net/qq11231325?utm_source=blog_pc_recommand">来自：	<span class="blog_title"> qq11231325的专栏</span></a></span>
+                        					</p>
+			</div>
+					</div>
+	
+    <div class="recommend-item-box recommend-ad-box"><div id="kp_box_43" data-pid="60" data-track-view='{"mod":"kp_popu_43","con":",,"}'><div id="three_ad8" class="mediav_ad" ></div>
+<script type="text/javascript" src="//static.mediav.com/js/mvf_news_feed.js"></script>
+<script>
+                                               NEWS_FEED({
+                w: 900,
+                h : 84,
+                showid : 'Afihld',
+                placeholderId: "three_ad8",
+                inject : 'define',
+                define : {
+                    imagePosition : 'left',
+                    imageBorderRadius : 3,
+                    imageWidth: 90,
+                    imageHeight: 60,
+                    imageFill : 'clip',
+                    displayImage : true,
+                    displayTitle : true,
+                    titleFontSize: 16,
+                    titleFontColor: '#000',
+                    titleFontFamily : 'Microsoft Yahei',
+                    titleFontWeight: 'bold',
+                    titlePaddingTop : 0,
+                    titlePaddingRight : 0,
+                    titlePaddingBottom : 5,
+                    titlePaddingLeft : 16,
+                    displayDesc : true,
+                    descFontSize: 12,
+                    descFontColor: '#8e959a',
+                    descFontFamily : 'Microsoft Yahei',
+                    paddingTop : 10,
+                    paddingRight : 0,
+                    paddingBottom : 0,
+                    paddingLeft : 0,
+                    backgroundColor: '#fff',
+                    hoverColor: '#000'
+                      }
+                  })
+                                        </script></div><script>$(function(){csdn.track.viewCheck($("#kp_box_43"));});</script></div>
+	
+    		<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_387","con":",https://blog.csdn.net/bolei0354/article/details/53974316,BlogCommendFromBaidu_8"}' data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/bolei0354/article/details/53974316,BlogCommendFromBaidu_8"}'>
+			<div class="content">
+				<a href="https://blog.csdn.net/bolei0354/article/details/53974316?utm_source=blogxgwz8" target="_blank" title="求助，想点击按钮让UITableView滑动，试了几个方法没效果">
+				<h4 class="text-truncate oneline">
+						求助，想点击按钮让UITableView滑动，试了几个方法没效果				</h4>
+				<div class="info-box d-flex align-content-center">
+					<!-- <p class="avatar">
+							<img src="https://avatar.csdn.net/4/B/1/3_bolei0354.jpg" alt="bolei0354" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">bolei0354</span>
+								<span class="triangle"></span>
+							</span>
+					</p> -->
+					<p class="date-and-readNum">
+						<span class="date hover-show">01-02</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-m-passwords-visible"></use>
+							</svg>
+							146</span>
+						</p>
+					</div>
+				</a>
+					<p class="content">
+						<a href="https://blog.csdn.net/bolei0354/article/details/53974316?utm_source=blogxgwz8" target="_blank" title="求助，想点击按钮让UITableView滑动，试了几个方法没效果">
+							<span class="desc oneline">在学ios  ， 这两天练着画表单界面，用UITableView做了一个表单。表单加载了三种单元格，其中有一种Cell放的是Textfield，现在想实现一个功能（这个功能在招商银行app的理财计算器...</span>
+						</a>
+                        						<span class="blog_title_box oneline"><a target="_blank" href="https://blog.csdn.net/bolei0354?utm_source=blog_pc_recommand">来自：	<span class="blog_title"> bolei0354的博客</span></a></span>
+                        					</p>
+			</div>
+					</div>
+	
+    
+	
+    		<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_387","con":",https://blog.csdn.net/yuanya/article/details/11644243,BlogCommendFromBaidu_9"}' data-track-click='{"mod":"popu_387","con":",https://blog.csdn.net/yuanya/article/details/11644243,BlogCommendFromBaidu_9"}'>
+			<div class="content">
+				<a href="https://blog.csdn.net/yuanya/article/details/11644243?utm_source=blogxgwz9" target="_blank" title="scrollToRowAtIndexPath出错原因分析">
+				<h4 class="text-truncate oneline">
+						<em>scrollToRowAtIndexPath</em>出错原因分析				</h4>
+				<div class="info-box d-flex align-content-center">
+					<!-- <p class="avatar">
+							<img src="https://avatar.csdn.net/2/7/6/3_yuanya.jpg" alt="yuanya" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">yuanya</span>
+								<span class="triangle"></span>
+							</span>
+					</p> -->
+					<p class="date-and-readNum">
+						<span class="date hover-show">09-13</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-m-passwords-visible"></use>
+							</svg>
+							8677</span>
+						</p>
+					</div>
+				</a>
+					<p class="content">
+						<a href="https://blog.csdn.net/yuanya/article/details/11644243?utm_source=blogxgwz9" target="_blank" title="scrollToRowAtIndexPath出错原因分析">
+							<span class="desc oneline">在项目中用到scrollToRowAtIndexPath，但程序一旦调用scrollToRowAtIndexPath就出错，经分析是数据源和tableview中cell不同步的原因， 比如，dataA...</span>
+						</a>
+                        						<span class="blog_title_box oneline"><a target="_blank" href="https://blog.csdn.net/yuanya?utm_source=blog_pc_recommand">来自：	<span class="blog_title"> yuanya的专栏</span></a></span>
+                        					</p>
+			</div>
+					</div>
+	
+    
+	
+    	<div class="recommend-item-box blog-expert-recommend-box">
+			<h4 class="text-truncate">博主推荐
+			</h4>
+			<div class="blog-expert-recommend">
+				<div class="blog-expert-load-new" data-index="3">
+					<svg version="1.1" viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+					<path d="M142.5,57.5c-1.3-1.2-2.1-3.3-2.1-5.4c0-4.2,3.3-7.5,7.5-7.5h19.6c4.2,0,7.5,3.3,7.5,7.5s-3.3,7.5-7.5,7.5h-4.2
+					 C170.8,71.2,175,85,175,100c0,41.7-33.8,75-75,75c-4.2,0-7.5-3.3-7.5-7.5c0-4.2,3.3-7.5,7.5-7.5c33.3,0,60-27.1,60-60
+					 C160,83.7,153.8,68.7,142.5,57.5L142.5,57.5z M57.5,142.5c1.2,1.2,2.1,3.3,2.1,5.4c0,4.2-3.3,7.5-7.5,7.5H32.5
+					 c-4.2,0-7.5-3.3-7.5-7.5c0-4.2,3.3-7.5,7.5-7.5h4.2C29.2,128.8,25,115,25,100c0-41.7,33.7-75,75-75c4.2,0,7.5,3.3,7.5,7.5
+					 S104.2,40,100,40c-33.3,0-60,27.1-60,60C40,116.2,46.2,131.2,57.5,142.5z"/>
+					</svg>
+					<span>换一批</span>
+				</div>
+				<div class="blog-expert">
+				</div>
+			</div>
+		</div>
+
+
+            <div class="recommend-loading-box">
+                <img src='https://csdnimg.cn/release/phoenix/images/feedLoading.gif'>
+            </div>
+            <div class="recommend-end-box">
+                <p class="text-center">没有更多推荐了，<a href="https://blog.csdn.net/" class="c-blue c-blue-hover c-blue-focus">返回首页</a></p>
+            </div>
+        </div>
+    </main>
+
+    <aside>
+		    <div id="asideProfile" class="aside-box">
+    <!-- <h3 class="aside-title">个人资料</h3> -->
+    <div class="profile-intro d-flex">
+        <div class="avatar-box d-flex justify-content-center flex-column">
+            <a href="https://blog.csdn.net/base_zhu">
+                <img src="https://avatar.csdn.net/5/D/4/3_base_zhu.jpg" class="avatar_pic">
+            </a>
+        </div>
+        <div class="user-info d-flex justify-content-center flex-column">
+            <p class="name csdn-tracking-statistics tracking-click" data-mod="popu_379">
+                <a href="https://blog.csdn.net/base_zhu" target="_blank" class="" id="uid">base_</a>
+            </p>
+                    </div>
+                <div class="opt-box d-flex justify-content-center flex-column">
+            <span  class="csdn-tracking-statistics tracking-click" data-mod="popu_379">
+                <a class="btn btn-sm btn-red-hollow" id="btnAttent">关注</a>
+            </span>
+                    </div>
+            </div>
+    <div class="data-info d-flex item-tiling">
+                <dl class="text-center" title="25">
+                        <dt><a href="https://blog.csdn.net/base_zhu?t=1">原创</a></dt>
+            <dd><a href="https://blog.csdn.net/base_zhu?t=1"><span class="count">25</span></a></dd>
+                    </dl>
+        <dl class="text-center" id="fanBox" title="2">
+            <dt>粉丝</dt>
+            <dd><span class="count" id="fan">2</span></dd>
+        </dl>
+        <dl class="text-center" title="3">
+            <dt>喜欢</dt>
+            <dd><span class="count">3</span></dd>
+        </dl>
+        <dl class="text-center" title="1">
+            <dt>评论</dt>
+            <dd><span class="count">1</span></dd>
+        </dl>
+    </div>
+    <div class="grade-box clearfix">
+        <dl>
+            <dt>等级：</dt>
+            <dd>
+                <a href="https://blog.csdn.net/home/help.html#level" title="2级,点击查看等级说明" target="_blank">
+                    <svg class="icon icon-level" aria-hidden="true">
+                        <use xlink:href="#csdnc-bloglevel-2"></use>
+                    </svg>
+                </a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>访问：</dt>
+            <dd title="16891">
+                1万+            </dd>
+        </dl>
+        <dl>
+            <dt>积分：</dt>
+            <dd title="415">
+                415            </dd>
+        </dl>
+        <dl title="135872">
+            <dt>排名：</dt>
+            <dd>13万+</dd>
+        </dl>
+    </div>
+    </div>
+		    <div class="csdn-tracking-statistics mb8 box-shadow" data-pid="blog" data-mod="popu_4" style="height:250px;">
+    <div class="aside-content text-center" id="cpro_u2734133">
+      <div id="kp_box_76" data-pid="56" data-track-view='{"mod":"kp_popu_76","con":",,"}'><script type="text/javascript" src="//rabc1.iteye.com/source/openjs/api/mbxf4.js?b=wocoltly"></script></div><script>$(function(){csdn.track.viewCheck($("#kp_box_76"));});</script>    </div>
+</div>
+		    <div id="asideNewArticle" class="aside-box">
+    <h3 class="aside-title">最新文章</h3>
+    <div class="aside-content">
+        <ul class="inf_list clearfix csdn-tracking-statistics tracking-click" data-mod="popu_382">
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/base_zhu/article/details/80375491" target="_blank">MKMapView父控件拦截子控件点击时的解决办法</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/base_zhu/article/details/79928514" target="_blank">iOS逆向 theos的使用</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/base_zhu/article/details/79565412" target="_blank">UIPageController 间距大小</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/base_zhu/article/details/79240385" target="_blank">iOS逆向 Reveal查看UI界面</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/base_zhu/article/details/78611511" target="_blank">iOS  火星坐标系 与  地球坐标系</a>
+            </li>
+                    </ul>
+    </div>
+</div>
+		    		    <div id="asideCategory" class="aside-box">
+    <h3 class="aside-title">个人分类</h3>
+    <div class="aside-content">
+        <ul>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/base_zhu/article/category/6214278">
+                    <span class="title oneline">swift</span>
+                    <span class="count float-right">4篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/base_zhu/article/category/6214279">
+                    <span class="title oneline">基础语法</span>
+                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/base_zhu/article/category/6233877">
+                    <span class="title oneline">闭包</span>
+                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/base_zhu/article/category/7440607">
+                    <span class="title oneline">Reveal</span>
+                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                    </ul>
+    </div>
+    </div>
+		    <div id="asideArchive" class="aside-box flexible-box">
+    <h3 class="aside-title">归档</h3>
+    <div class="aside-content">
+        <ul class="archive-list">
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/base_zhu/article/month/2018/05">
+                    2018年5月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/base_zhu/article/month/2018/04">
+                    2018年4月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/base_zhu/article/month/2018/03">
+                    2018年3月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/base_zhu/article/month/2018/02">
+                    2018年2月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/base_zhu/article/month/2017/11">
+                    2017年11月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/base_zhu/article/month/2017/04">
+                    2017年4月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/base_zhu/article/month/2017/02">
+                    2017年2月                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/base_zhu/article/month/2016/07">
+                    2016年7月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/base_zhu/article/month/2016/05">
+                    2016年5月                    <span class="count float-right">5篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/base_zhu/article/month/2016/04">
+                    2016年4月                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/base_zhu/article/month/2016/03">
+                    2016年3月                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/base_zhu/article/month/2016/02">
+                    2016年2月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/base_zhu/article/month/2016/01">
+                    2016年1月                    <span class="count float-right">4篇</span>
+                </a>
+            </li>
+                    </ul>
+    </div>
+        <p class="text-center">
+        <a class="btn btn-link-blue flexible-btn" data-fbox="aside-archive">展开</a>
+    </p>
+    </div>
+		    <div id="asideHotArticle" class="aside-box">
+	<h3 class="aside-title">热门文章</h3>
+	<div class="aside-content">
+		<ul class="hotArticle-list csdn-tracking-statistics tracking-click" data-mod="popu_521">
+							<li>
+					<a href="https://blog.csdn.net/base_zhu/article/details/51850458">react-native及npm install 安装问题</a>
+					<p class="read">阅读量：<span>5877</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/base_zhu/article/details/51017260">scrollToRowAtIndexPath 问题分析（crash 和 不执行问题）</a>
+					<p class="read">阅读量：<span>4274</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/base_zhu/article/details/70184214">iOS debug与release解决的</a>
+					<p class="read">阅读量：<span>709</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/base_zhu/article/details/50688548">pureLayout的九宫格布局</a>
+					<p class="read">阅读量：<span>660</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/base_zhu/article/details/50819347">autoLayout  cell中添加UILabel   多行显示问题</a>
+					<p class="read">阅读量：<span>591</span></p>
+				</li>
+					</ul>
+	</div>
+</div>
+		    <div id="asideNewComments" class="aside-box">
+    <h3 class="aside-title">最新评论</h3>
+    <div class="aside-content">
+        <ul class="newcomment-list">
+                        <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/base_zhu/article/details/51017260#comments">scrollToRowAtInde...</a>
+                <p class="comment">
+                    <a href="https://my.csdn.net/wang1992326" class="user-name" target="_blank">wang1992326</a>：页面布局完成之后，视图才能做动画效果
+所以可以在viewDidLoad中加上一下代码
+dispat...                </p>
+            </li>
+                    </ul>
+    </div>
+</div>
+		<div id="asideFooter">
+			
+		<div class="aside-box">
+			<div id="kp_box_77" data-pid="57" data-track-view='{"mod":"kp_popu_77","con":",,"}'><script type="text/javascript" src="//rabc1.iteye.com/site/mqkz9.js?avneunk=wb"></script></div><script>$(function(){csdn.track.viewCheck($("#kp_box_77"));});</script>		</div>
+				<div class="aside-box">
+			<div class="persion_article">
+			</div>
+		</div>
+	</div>
+</aside>
+<script src="https://csdnimg.cn/pubfooter/js/publib_footer-1.0.3.js" data-isfootertrack="false" type="text/javascript"></script>
+<script>
+	$("a.flexible-btn").click(function(){
+		$(this).parents('div.aside-box').removeClass('flexible-box');
+		$(this).remove();
+	})
+</script>
+</div>
+<div class="mask-dark"></div>
+<div class="pulllog-box" style="display: block;">
+	<div class="pulllog clearfix">
+		<span class="text float-left">
+            <div id="dmp_ad_69"><div id="kp_box_75" data-pid="69" data-track-view='{"mod":"kp_popu_75","con":",,"}'><div style="float:left;margin-right:5px;border:1px solid #f13d3d;padding:2px 5px 0px 5px;">
+<a href="https://www.csdn.net/2018dev/?utm_source=blogtextlink" target="_blank" style="color:#f13d3d;font-weight:bold;text-decoration:none;font-size:15px;">开发者调查</a>
+</div>
+
+<div style="float:left;margin-right:5px;border:1px solid #000;padding:2px 5px 0px 5px;background:#000;">
+<a href="http://ai2018.csdn.net/?utm_source=bkxxl" target="_blank" style="color:#fff;font-weight:bold;text-decoration:none;font-size:15px;">AI开发者大会日程曝光</a>
+</div>
+
+<div style="float:left;margin-right:5px;border:1px solid #f13d3d;padding:2px 5px 0px 5px;">
+<a href="https://gitbook.cn/gitchat/1024developer?utm_source=wzl1022" target="_blank" style="color:#f13d3d;font-weight:bold;text-decoration:none;font-size:15px;">全场课程、电子书5折起</a>
+</div>
+
+<div style="float:left;">
+<script type="text/javascript" src="//rabc1.iteye.com/common/js/ndr3h.js?b=wosyvccl"></script>
+</div></div><script>$(function(){csdn.track.viewCheck($("#kp_box_75"));});</script></div>            		</span>
+		<div class="pulllog-btn float-right clearfix">
+            <div class="float-left csdn-tracking-statistics tracking-click" data-mod="popu_557">
+                <a class="pulllog-login">登录</a>
+            </div>
+            <div class="pulllog-sigin float-left csdn-tracking-statistics tracking-click" data-mod="popu_558">
+                <a href="https://passport.csdn.net/account/mobileregister" target="_blank">注册</a>
+            </div>
+            <button class="btn-close">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#csdnc-times"></use>
+                </svg>
+            </button>
+		</div>
+	</div>
+</div>
+<div id="loginWrap" style="display:none"></div>
+<div class="tool-box">
+	<ul class="meau-list">
+		<li class="btn-like-box ">
+			<button class=" low-height hover-box btn-like " title="点赞">
+				<svg class="icon active hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-thumbsup-ok"></use>
+				</svg>
+				<svg class="icon no-active hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-thumbsup"></use>
+				</svg>
+				<span class="hover-show text-box text">
+					<span class="no-active">点赞</span>
+					<span class="active">取消点赞</span>
+				</span>
+				<p>0</p>
+			</button>
+		</li>
+		<li class="">
+						<a class="btn-comments long-height hover-box" title="写评论" href="#commentBox">
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-comments"></use>
+				</svg>
+				<span class="hover-show text">评论</span>
+				<p class="">
+						1				</p>
+			</a>
+		</li>
+		<li class="toc-container-box" id="liTocBox">
+			<button class="btn-toc low-height hover-box" title="目录">
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-contents"></use>
+				</svg>
+				<span class="hover-show text">目录</span>
+			</button>
+			<div class="toc-container">
+				<div class="pos-box">
+					<div class="icon-arrow"></div>
+					<div class="scroll-box">
+						<div class="toc-box"></div>
+					</div>
+				</div>
+				<div class="opt-box">
+					<button class="btn-opt prev nomore" title="向上">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#csdnc-chevronup"></use>
+						</svg>
+					</button>
+					<button class="btn-opt next">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#csdnc-chevrondown"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</li>
+		<li>
+			<button class="btn-bookmark low-height hover-box" title="收藏">
+				<svg class="icon active hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-bookmark-ok"></use>
+				</svg>
+				<svg class="icon no-active hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-bookmark"></use>
+				</svg>
+					<span class="hover-show text">收藏</span>
+				<!-- <span class="hover-show text-box text">
+					<span class="no-active">收藏</span>
+					<span class="active">取消收藏</span>
+				</span> -->
+			</button>
+		</li>
+				<li class="bdsharebuttonbox">
+			<button class="btn-comments low-height hover-box" >
+				<a href="#" class="bds_weixin clear-share-style" data-cmd="weixin" title="手机看"></a>
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-wechat"></use>
+				</svg>
+				<span class="hover-show text text3">
+					手机看
+				</span>
+			</button>
+		</li>
+							<li class="widescreen-hide">
+				<a class="btn-comments low-height hover-box" href="https://blog.csdn.net/base_zhu/article/details/50994255" title="管理工具git--submodule">
+					<svg class="icon hover-hide" aria-hidden="true">
+						<use xlink:href="#csdnc-chevronleft"></use>
+					</svg>
+					<span class="hover-show text text3">上一篇</span>
+				</a>
+			</li>
+								<li class="widescreen-hide">
+			<a class="btn-comments hover-box low-height" href="https://blog.csdn.net/base_zhu/article/details/51243708" title="UIViewController数据刷新">
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-chevronright"></use>
+				</svg>
+				<span class="hover-show text text3">下一篇</span>
+			</a>
+		</li>
+				<li class="bdsharebuttonbox _360_interactive"style="margin-top: 8px;"><div id="kp_box_97" data-pid="73" data-track-view='{"mod":"kp_popu_97","con":",,"}'><script type="text/javascript" src="//cjhd.mediav.com/js/interactive_plugin.js"></script> 
+			<style>
+				#_360_interactive > *{
+					 margin-left: -8px;
+				}
+			</style>
+			<div id="_360_interactive" > 
+				<script> INTERACTIVE_PLUGIN.render({ showid : 'N0ufqn', w: 60, h: 60, type: 'hover', placeholderId: '_360_interactive' }); </script> 
+			</div>
+			<img src="//img-ads.csdn.net/2016/201608021757063065.png" style="margin: 0 auto;display: block;" alt=""></div><script>$(function(){csdn.track.viewCheck($("#kp_box_97"));});</script></li>		<!-- 宽屏更多按钮 -->
+		<li class="widescreen-more">
+			<a class="btn-comments chat-ask-button low-height hover-box" title="快问" href="#chatqa">
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-more"></use>
+				</svg>
+				<span class="hover-show text">更多</span>
+				
+			</a>
+			<ul class="widescreen-more-box">
+													<li class="widescreen-more">
+						<a class="btn-comments low-height hover-box" href="https://blog.csdn.net/base_zhu/article/details/50994255" title="管理工具git--submodule">
+							<svg class="icon hover-hide" aria-hidden="true">
+								<use xlink:href="#csdnc-chevronleft"></use>
+							</svg>
+							<span class="hover-show text text3">上一篇</span>
+						</a>
+					</li>
+																<li class="widescreen-more">
+					<a class="btn-comments hover-box low-height" href="https://blog.csdn.net/base_zhu/article/details/51243708" title="UIViewController数据刷新">
+						<svg class="icon hover-hide" aria-hidden="true">
+							<use xlink:href="#csdnc-chevronright"></use>
+						</svg>
+						<span class="hover-show text text3">下一篇</span>
+					</a>
+				</li>
+							</ul>
+		</li>
+	</ul>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'https://csdnimg.cn/static/api/js/share.js?v=89860594'];</script>
+<script>
+    var recommendCount = 10;
+    recommendCount = recommendCount > 1 ? (recommendCount + (recommendCount>6 ? 2 : 1)) : recommendCount;
+    var articleTit = articleTitles;
+    var ChannelId = 1;
+    var articleId = "51017260";
+    var commentscount = 1;
+    var islock = false;
+    var curentUrl = "https://blog.csdn.net/base_zhu/article/details/51017260";
+    var myUrl = "https://my.csdn.net/";
+    //1禁止评论，2正常
+    var commentAuth = 2;
+    //百度搜索
+    var baiduKey = "scrolltorowatindexpath%3Apath+%E6%8A%A5%E9%94%99";
+    var needInsertBaidu = false;
+    // 代码段样式
+    var codeStyle = '';
+		var highlight = ["scrolltorowatindexpath","\u95ee\u9898\u5206\u6790","crash","\u4e0d\u6267\u884c","\u95ee\u9898"];//高亮数组
+		// 相关推荐博主数据
+    var RecommendBlogExpertList = [{"user_name":"zhangcanyan","nick_name":"\u706b\u5c71\u77f3","avatar":"https:\/\/avatar.csdn.net\/E\/5\/5\/3_zhangcanyan.jpg","is_expert":true,"article_count":237},{"user_name":"y851992774","nick_name":"zoneq","avatar":"https:\/\/avatar.csdn.net\/A\/1\/1\/3_y851992774.jpg","is_expert":false,"article_count":2},{"user_name":"qq_27485935","nick_name":"\u6234\u7ef4\u5c3c\u8001\u7237\u7237","avatar":"https:\/\/avatar.csdn.net\/5\/1\/8\/3_qq_27485935.jpg","is_expert":false,"article_count":17},{"user_name":"heartofthesea","nick_name":"Bruce_Z","avatar":"https:\/\/avatar.csdn.net\/7\/A\/2\/3_heartofthesea.jpg","is_expert":false,"article_count":34},{"user_name":"u012411480","nick_name":"\u5439\u6ce1\u6ce1\u7684\u661f\u661fkoky","avatar":"https:\/\/avatar.csdn.net\/5\/9\/7\/3_u012411480.jpg","is_expert":false,"article_count":106},{"user_name":"wei_lei","nick_name":"wei_lei","avatar":"https:\/\/avatar.csdn.net\/4\/2\/3\/3_wei_lei.jpg","is_expert":false,"article_count":75},{"user_name":"ffmpeg4976","nick_name":"\u6211\u628a\u8461\u8404\u917f\u6210\u9152","avatar":"https:\/\/avatar.csdn.net\/0\/6\/B\/3_ffmpeg4976.jpg","is_expert":false,"article_count":215},{"user_name":"juS3Ve","nick_name":"Linuxer_","avatar":"https:\/\/avatar.csdn.net\/5\/0\/5\/3_jus3ve.jpg","is_expert":false,"article_count":315},{"user_name":"kuangshow0227","nick_name":"AwesomeOcean","avatar":"https:\/\/avatar.csdn.net\/5\/1\/7\/3_kuangshow0227.jpg","is_expert":false,"article_count":42},{"user_name":"sunnyabner","nick_name":"\u9189\u5a74","avatar":"https:\/\/avatar.csdn.net\/3\/E\/A\/3_sunnyabner.jpg","is_expert":false,"article_count":43}];
+
+		var articleType = 1;
+		var CopyrightContent = '';
+</script>
+<script src="https://csdnimg.cn/public/sandalstrap/1.4/js/sandalstrap.min.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/vendor/pagination/paging.js"></script>
+<script src='https://csdnimg.cn/public/common/gotop/js/goTop-v1.0.min.js?v201803151422'></script>
+<script>
+    GoTop({
+        right: 8,
+        hasReport: true,
+        reportFun: function() {
+            showReport(false,articleTit);
+        }
+    })
+</script>
+<script src="https://g.csdnimg.cn/login-box/1.0.1/login-box.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/template/js/common-946dc75567.min.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/template/js/detail-8fab6c9fc5.min.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/themes/skin3-template/skin3-template-9376486353.min.js"></script>
+<script src="//g.csdnimg.cn/fixed-sidebar/1.0.5/fixed-sidebar.js" type="text/javascript"></script>
+<script src="https://csdnimg.cn/search/baidu_search-1.1.2.js?v=201802071056&autorun=true&install=true&keyword=scrolltorowatindexpath%3Apath+%E6%8A%A5%E9%94%99"  type="text/javascript"></script>
+</body>
+<!-- 第四范式SDK -->
+
+<!-- 高亮未与 markdown兼容  -->
+	<link rel="stylesheet" href="https://csdnimg.cn/release/blog_editor_html/release1.3.1/ckeditor/plugins/chart/chart.css" />
+	<script type="text/javascript" src="https://csdnimg.cn/release/blog_editor_html/release1.3.1/ckeditor/plugins/chart/lib/chart.min.js"></script>
+	<script type="text/javascript" src="https://csdnimg.cn/release/blog_editor_html/release1.3.1/ckeditor/plugins/chart/widget2chart.js"></script>
+	<link rel="stylesheet" href="https://csdnimg.cn/release/blog_editor_html/release1.3.1/ckeditor/plugins/codesnippet/lib/highlight/styles/atom-one-dark.css">
+	<script type="text/javascript" src="https://csdnimg.cn/release/phoenix/production/pc_wap_common-9e177e0136.js" /></script>
+
+	<script type="text/javascript">
+	$(function(){
+		var allEscRegex = /&(lt|gt|amp|quot|nbsp|shy|#\d{1,5});/g,
+		    namedEntities = {
+					lt: '<',
+					gt: '>',
+					amp: '&',
+					quot: '"',
+					nbsp: '\u00a0',
+					shy: '\u00ad'
+				}
+		var allEscDecode = function( match, code ) {
+				return namedEntities[ code ];
+		};
+		htmlDecodeAttr = function( text ) {
+				return text.replace( allEscRegex, allEscDecode );
+		}
+	  hljs.initHighlightingOnLoad();
+	  hljs.initCopyButtonOnLoad();
+	  hljs.initLineNumbersOnLoad();
+		if($('pre .language-plain').length>0){
+			$('pre .language-plain').each(function(i,e){
+				var highlightRe = hljs.highlightAuto(htmlDecodeAttr(e.innerHTML))
+				e.innerHTML = highlightRe.value;
+				e.className = 'language-'+highlightRe.language;
+			});
+		}
+	})
+	</script>
+<script type="text/javascript" src="//g.csdnimg.cn/check-adblock/1.0.9/check-adblock.js"></script>
+
+<script type="text/javascript" src="https://static-blog.csdn.net/mdeditor/public/res/bower-libs/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            "HTML-CSS": {
+                    linebreaks: { automatic: true, width: "94%container" },
+                    imageFont: null
+            },
+            tex2jax: {
+                preview: "none"
+            },
+            mml2jax: {
+                preview: 'none'
+            }
+    });
+</script>
+</html>
