@@ -55,6 +55,15 @@
     objc_setAssociatedObject(self, @selector(hitTestEdgeInsets), value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+
+
+/** 1
+扩大UIButton的响应热区
+
+重载UIButton的-(BOOL)pointInside: withEvent:方法，让Point即使落在Button的Frame外围也返回YES。
+ //in custom button .m
+ //overide this method
+ */
 - (BOOL)bk_pointInside:(CGPoint)point withEvent:(UIEvent*)event
 {
     UIEdgeInsets insets = self.hitTestEdgeInsets;
@@ -69,8 +78,78 @@
     }
 }
 
+//in custom button .m
+//overide this method
+//- (BOOL)pointInside:(CGPoint)point withEvent:(nullable UIEvent *)event {
+//
+//    return CGRectContainsPoint(HitTestingBounds(self.bounds, self.minimumHitTestWidth, self.minimumHitTestHeight), point);
+//}
+//
+//CGRect HitTestingBounds(CGRect bounds, CGFloat minimumHitTestWidth, CGFloat minimumHitTestHeight) {
+//    CGRect hitTestingBounds = bounds;
+//    if (minimumHitTestWidth > bounds.size.width) {
+//        hitTestingBounds.size.width = minimumHitTestWidth;
+//        hitTestingBounds.origin.x -= (hitTestingBounds.size.width - bounds.size.width)/2;
+//    }
+//    if (minimumHitTestHeight > bounds.size.height) {
+//        hitTestingBounds.size.height = minimumHitTestHeight;
+//        hitTestingBounds.origin.y -= (hitTestingBounds.size.height - bounds.size.height)/2;
+//    }
+//    return hitTestingBounds;
+//}
 
 
+
+
+
+
+
+/* 2
+ 子view超出了父view的bounds响应事件
+ 项目中常常遇到button已经超出了父view的范围但仍需可点击的情况，比如自定义Tabbar中间的大按钮
+ 点击超出Tabbar bounds的区域也需要响应，此时重载父view的-(UIView *)hitTest: withEvent:方法，去掉点击必须在父view内的判断，然后子view就能成为 hit-test view用于响应事件了
+ */
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    
+    if (!self.isUserInteractionEnabled || self.isHidden || self.alpha <= 0.01) {
+        return nil;
+    }
+    /**
+     *  此注释掉的方法用来判断点击是否在父View Bounds内，
+     *  如果不在父view内，就会直接不会去其子View中寻找HitTestView，return 返回
+     */
+    //    if ([self pointInside:point withEvent:event]) {
+    for (UIView *subview in [self.subviews reverseObjectEnumerator]) {
+        CGPoint convertedPoint = [subview convertPoint:point fromView:self];
+        UIView *hitTestView = [subview hitTest:convertedPoint withEvent:event];
+        if (hitTestView) {
+            return hitTestView;
+        }
+    }
+//    return self;
+    //    }
+    return nil;
+}
+
+
+
+/*  3
+ 
+ 让边侧留出的 非scrollview 部分
+ 
+ 在scrollview的父view中把蓝色部分的事件都传递给scrollView就可以了，
+ 
+ in scrollView.superView .m
+ */
+
+//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+//
+//    UIView *hitTestView = [super hitTest:point withEvent:event];
+//    if (hitTestView) {
+//        hitTestView = self.scrollView;
+//    }
+//    return hitTestView;
+//}
 
 
 
