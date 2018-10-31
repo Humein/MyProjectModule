@@ -134,6 +134,7 @@
 		79EEEA512182BD8C00848B59 /* LiveCommetChatTV.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA502182BD8C00848B59 /* LiveCommetChatTV.m */; };
 		79EEEA562182C09200848B59 /* liveChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA552182C09200848B59 /* liveChatModel.m */; };
 		79EEEA592182C13A00848B59 /* LiveCommentDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA582182C13A00848B59 /* LiveCommentDemoViewController.m */; };
+		79EEEA792189D4A900848B59 /* UIResponder+UIResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA782189D4A900848B59 /* UIResponder+UIResponderChain.m */; };
 		79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */; };
 		79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EE2151F84E003704D7 /* BlockViewController.m */; };
 		79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */; };
@@ -410,6 +411,8 @@
 		79EEEA552182C09200848B59 /* liveChatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = liveChatModel.m; sourceTree = "<group>"; };
 		79EEEA572182C13A00848B59 /* LiveCommentDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveCommentDemoViewController.h; sourceTree = "<group>"; };
 		79EEEA582182C13A00848B59 /* LiveCommentDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveCommentDemoViewController.m; sourceTree = "<group>"; };
+		79EEEA772189D4A900848B59 /* UIResponder+UIResponderChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIResponder+UIResponderChain.h"; sourceTree = "<group>"; };
+		79EEEA782189D4A900848B59 /* UIResponder+UIResponderChain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+UIResponderChain.m"; sourceTree = "<group>"; };
 		79F9A5EA214FB09B003704D7 /* AlgorithmsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmsViewController.h; sourceTree = "<group>"; };
 		79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmsViewController.m; sourceTree = "<group>"; };
 		79F9A5ED2151F84E003704D7 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
@@ -821,6 +824,8 @@
 				339B535420F4B078003444CB /* PlayerViewController.m */,
 				79CFB321216C879D00218C92 /* NSInvocationForStrategyViewController.h */,
 				79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */,
+				79EEEA772189D4A900848B59 /* UIResponder+UIResponderChain.h */,
+				79EEEA782189D4A900848B59 /* UIResponder+UIResponderChain.m */,
 				33C9710E211E7C0400EAAD5E /* 支付方式 */,
 				3378281F21084C5C00373A20 /* 申论批改详情 */,
 				339B536F20F4DE65003444CB /* 模考大赛 */,
@@ -1484,6 +1489,7 @@
 				33A32AEF20DA795E008C3969 /* UIButton+SegementCustomButton.m in Sources */,
 				79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */,
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
+				79EEEA792189D4A900848B59 /* UIResponder+UIResponderChain.m in Sources */,
 				33A32AE920DA789D008C3969 /* UIScrollView+SlideGestureBack.m in Sources */,
 				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
 				33E6CE0821006D2000422FC7 /* TreeViewCell.m in Sources */,

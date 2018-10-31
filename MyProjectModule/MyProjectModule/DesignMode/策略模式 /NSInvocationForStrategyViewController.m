@@ -10,6 +10,7 @@
 
 
 #import "NSInvocationForStrategyViewController.h"
+#import "UIResponder+UIResponderChain.h"
 
 static NSString *const oneEvent = @"one";
 static NSString *const twoEvent = @"two";
@@ -160,7 +161,7 @@ static NSString *const threeEvent = @"three";
 
 
 
-// 4 结合strategy
+// 4 结合strategy  + ResponderChain UIResponder添加分类
 
 #pragma mark - event response
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo
@@ -173,7 +174,7 @@ static NSString *const threeEvent = @"three";
     [invocation invoke];
     
     // 如果需要让事件继续往上传递，则调用下面的语句 (+ 责任链（响应脸）模式（多响应） + Decorator(组合))
-    // [super routerEventWithName:eventName userInfo:userInfo];
+     [super routerEventWithName:eventName userInfo:userInfo];
 }
 
 
