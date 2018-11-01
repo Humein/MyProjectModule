@@ -16,4 +16,12 @@
  @param userInfo 附加参数
  */
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo;
+
+/**
+ 通过方法SEL生成NSInvocation
+ 
+ @param selector 方法
+ @return Invocation对象
+ */
+- (NSInvocation *)createInvocationWithSelector:(SEL)selector;
 @end

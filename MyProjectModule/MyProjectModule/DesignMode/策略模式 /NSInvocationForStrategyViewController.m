@@ -192,29 +192,19 @@ static NSString *const threeEvent = @"three";
     return _eventStrategy;
 }
 
--(NSInvocation *)createInvocationWithSelector:(SEL)selector{
-    
-    NSMethodSignature*signature = [[self class] instanceMethodSignatureForSelector:@selector(selector)];
-    NSInvocation*invocation = [NSInvocation invocationWithMethodSignature:signature];
-    invocation.target = self;
-    invocation.selector = @selector(selector);
-    return invocation;
+#pragma mark ------eventMethod
+
+-(void)ticketEvent:(NSDictionary *)paramter{
+    NSLog(@"paramter=====%@",paramter);
     
 }
+-(void)promotionEvent:(NSDictionary *)paramter{
+    NSLog(@"paramter=====%@",paramter);
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+-(void)scoreEvent:(NSDictionary *)paramter{
+    NSLog(@"paramter=====%@",paramter);
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
 
 @end

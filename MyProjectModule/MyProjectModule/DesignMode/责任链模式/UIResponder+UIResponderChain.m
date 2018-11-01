@@ -18,5 +18,20 @@
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo {
     [[self nextResponder] routerEventWithName:eventName userInfo:userInfo];
 }
+/**
+ 通过方法SEL生成NSInvocation
+ 
+ @param selector 方法
+ @return Invocation对象
+ */
+- (NSInvocation *)createInvocationWithSelector:(SEL)selector {
+    //通过方法名创建方法签名
+    NSMethodSignature *signature = [[self class] instanceMethodSignatureForSelector:selector];
+    //创建invocation
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+    [invocation setTarget:self];
+    [invocation setSelector:selector];
+    return invocation;
+}
 
 @end
