@@ -13,20 +13,29 @@
 @end
 
 @implementation AppDelegate
-
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    CGRect bounds = [[UIScreen mainScreen] bounds];
+    [self.window setFrame:bounds];
+    [self.window setBounds:bounds];
+    
+    return YES;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    self.window = [UIWindow new];
     
     ViewController *animationsListViewController = [ViewController new];
     UINavigationController *navigationController = [[UINavigationController alloc]
                                                     initWithRootViewController:animationsListViewController];
     
     [self.window setRootViewController:navigationController];
-    self.window.backgroundColor = [UIColor whiteColor];
-    self.window.tintColor = [UIColor redColor];
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    self.window.tintColor = [UIColor redColor];
     [self.window makeKeyAndVisible];
+//    self.window.frame = [[UIScreen mainScreen] bounds];
+
     return YES;
 }
 
