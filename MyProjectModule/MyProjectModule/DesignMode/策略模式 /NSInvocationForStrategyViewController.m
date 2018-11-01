@@ -16,7 +16,6 @@ static NSString *const oneEvent = @"one";
 static NSString *const twoEvent = @"two";
 static NSString *const threeEvent = @"three";
 
-
 @interface NSInvocationForStrategyViewController ()
 
 

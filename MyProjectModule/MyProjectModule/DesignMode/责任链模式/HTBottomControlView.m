@@ -7,6 +7,9 @@
 //
 
 #import "HTBottomControlView.h"
+#import "UIResponder+UIResponderChain.h"
+
+extern NSString *kEventOneName;
 
 @implementation HTBottomControlView
 - (void)responseEvent:(NSInteger)eventType playItem:(id)playItem{
@@ -21,4 +24,24 @@
         self.superior ? [self.superior responseEvent:eventType playItem:nil] : nil;
     }
 }
+
+
+#pragma mark - Event Handle
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [self routerEventWithName:kEventOneName userInfo:@{@"key": @"3"}];
+    
+}
+
+- (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo{
+    
+    NSLog(@"eventName ===== %@,userInfo =====%@",eventName,userInfo);
+
+    // 把响应链继续传递下去
+    [super routerEventWithName:eventName userInfo:userInfo];
+    
+    
+}
+
+
 @end

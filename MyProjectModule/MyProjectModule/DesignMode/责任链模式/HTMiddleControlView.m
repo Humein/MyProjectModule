@@ -7,6 +7,9 @@
 //
 
 #import "HTMiddleControlView.h"
+#import "UIResponder+UIResponderChain.h"
+
+extern NSString *kEventTwoName;
 
 @implementation HTMiddleControlView
 
@@ -24,12 +27,23 @@
 
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+
+#pragma mark - Event Handle
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [self routerEventWithName:kEventTwoName userInfo:@{@"key": @"2"}];
+    
 }
-*/
+
+- (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo{
+    
+    NSLog(@"eventName ===== %@,userInfo =====%@",eventName,userInfo);
+    
+    // 把响应链继续传递下去
+    [super routerEventWithName:eventName userInfo:userInfo];
+    
+    
+}
+
 
 @end

@@ -7,8 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "ActionProtocol.h"
-@interface ResponOfChainManager : NSObject<ActionProtocol>
+
+
+
+@interface ResponOfChainManager : UIView <ActionProtocol>
 
 @property (nonatomic, strong) id<ActionProtocol> superior;
 
