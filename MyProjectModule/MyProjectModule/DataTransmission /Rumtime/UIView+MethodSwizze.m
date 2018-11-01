@@ -58,7 +58,9 @@
 
 
 /** 1
-扩大UIButton的响应热区
+ 
+ 
+扩大UIButton的响应热区 swizzle
 
 重载UIButton的-(BOOL)pointInside: withEvent:方法，让Point即使落在Button的Frame外围也返回YES。
  //in custom button .m
@@ -78,58 +80,82 @@
     }
 }
 
-//in custom button .m
-//overide this method
-//- (BOOL)pointInside:(CGPoint)point withEvent:(nullable UIEvent *)event {
-//
-//    return CGRectContainsPoint(HitTestingBounds(self.bounds, self.minimumHitTestWidth, self.minimumHitTestHeight), point);
-//}
-//
-//CGRect HitTestingBounds(CGRect bounds, CGFloat minimumHitTestWidth, CGFloat minimumHitTestHeight) {
-//    CGRect hitTestingBounds = bounds;
-//    if (minimumHitTestWidth > bounds.size.width) {
-//        hitTestingBounds.size.width = minimumHitTestWidth;
-//        hitTestingBounds.origin.x -= (hitTestingBounds.size.width - bounds.size.width)/2;
-//    }
-//    if (minimumHitTestHeight > bounds.size.height) {
-//        hitTestingBounds.size.height = minimumHitTestHeight;
-//        hitTestingBounds.origin.y -= (hitTestingBounds.size.height - bounds.size.height)/2;
-//    }
-//    return hitTestingBounds;
-//}
 
 
 
 
 
+// TEST
+
+
+
+//in custom button .m  overide this method
+//扩大UIButton
+
+- (BOOL)CP0_pointInside:(CGPoint)point withEvent:(nullable UIEvent *)event {
+
+    CGFloat minimumHitTestWidth = 100;
+    CGFloat minimumHitTestHeight = 100;
+    return CGRectContainsPoint(HitTestingBounds(self.bounds, minimumHitTestWidth, minimumHitTestHeight), point);
+}
+
+
+- (BOOL)CP1_pointInside:(CGPoint)point withEvent:(nullable UIEvent *)event {
+    BOOL success = CGRectContainsPoint(self.bounds, point);
+    if (success) {
+        NSLog(@"点在%@里",self.class);
+    }else {
+        NSLog(@"点不在%@里",self.class);
+    }
+    return success;
+}
+
+
+CGRect HitTestingBounds(CGRect bounds, CGFloat minimumHitTestWidth, CGFloat minimumHitTestHeight) {
+    CGRect hitTestingBounds = bounds;
+    if (minimumHitTestWidth > bounds.size.width) {
+        hitTestingBounds.size.width = minimumHitTestWidth;
+        hitTestingBounds.origin.x -= (hitTestingBounds.size.width - bounds.size.width)/2;
+    }
+    if (minimumHitTestHeight > bounds.size.height) {
+        hitTestingBounds.size.height = minimumHitTestHeight;
+        hitTestingBounds.origin.y -= (hitTestingBounds.size.height - bounds.size.height)/2;
+    }
+    return hitTestingBounds;
+}
 
 
 /* 2
+ 
+ 
+ //模拟一下系统点击事件， OverWirte
  子view超出了父view的bounds响应事件
  项目中常常遇到button已经超出了父view的范围但仍需可点击的情况，比如自定义Tabbar中间的大按钮
  点击超出Tabbar bounds的区域也需要响应，此时重载父view的-(UIView *)hitTest: withEvent:方法，去掉点击必须在父view内的判断，然后子view就能成为 hit-test view用于响应事件了
  */
 #warning -------- 滥用导致无法定位的bug 不可以点击屏幕 self.isHidden == YES
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    
-    if (!self.isUserInteractionEnabled || self.isHidden || self.alpha <= 0.01) {
-        return nil;
-    }
-    /**
-     *  此注释掉的方法用来判断点击是否在父View Bounds内，
-     *  如果不在父view内，就会直接不会去其子View中寻找HitTestView，return 返回
-     */
-    //    if ([self pointInside:point withEvent:event]) {
-    for (UIView *subview in [self.subviews reverseObjectEnumerator]) {
-        CGPoint convertedPoint = [subview convertPoint:point fromView:self];
-        UIView *hitTestView = [subview hitTest:convertedPoint withEvent:event];
-        if (hitTestView) {
-            return hitTestView;
+- (UIView *)CP0_hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    if (!self.isUserInteractionEnabled || self.isHidden || self.alpha <= 0.01) return nil;
+    //判断点在不在这个视图里
+    if ([self pointInside:point withEvent:event]) {
+        //在这个视图 遍历该视图的子视图
+        for (UIView *subview in [self.subviews reverseObjectEnumerator]) {
+            //转换坐标到子视图
+            CGPoint convertedPoint = [subview convertPoint:point fromView:self];
+            //递归调用hitTest:withEvent继续判断
+            UIView *hitTestView = [subview hitTest:convertedPoint withEvent:event];
+            if (hitTestView) {
+                //在这里打印self.class可以看到递归返回的顺序。
+                return hitTestView;
+            }
         }
+        //这里就是该视图没有子视图了 点在该视图中，所以直接返回本身，上面的hitTestView就是这个。
+        NSLog(@"命中的view:%@",self.class);
+        return self;
     }
-//    return self;
-    //    }
+    //不在这个视图直接返回nil
     return nil;
+
 }
 
 
@@ -143,14 +169,14 @@
  in scrollView.superView .m
  */
 
-//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-//
+- (UIView *)CP1_hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+
 //    UIView *hitTestView = [super hitTest:point withEvent:event];
 //    if (hitTestView) {
 //        hitTestView = self.scrollView;
 //    }
 //    return hitTestView;
-//}
+}
 
 
 
