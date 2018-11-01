@@ -35,6 +35,7 @@
 #pragma mark --- lifeCycle
 -(void)viewDidLoad{
     [super viewDidLoad];
+//    self.view.backgroundColor = [UIColor grayColor];
     self.itemList = [NSMutableArray array];
     NSArray *list = [NSArray arrayWithObjects: @"colloctionViewController",@"DrawViewController",@"SegementDemoViewController",@"SegementPersonDemoViewController",@"SegementChildViewController",@"CollectionSectionViewController",@"PaternalViewController",@"PaternalSViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",nil];
     [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { 
@@ -45,13 +46,27 @@
     }];
 
     [self.tableView registCell:[AbstractTableViewCell class] forItem:[CellModel class]];
+    
+    
+//    [self aleartView];
+
 
 }
 
 
 #pragma mark ---NetWorkRequest
+
+
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//  AlertTableView
+
+    [self aleartView];
+
+}
+
+
+#pragma mark --- PrivateMetho
+-(void)aleartView{
+    //  AlertTableView
     self.tableView.FromPoint = CGPointMake(0, 100);
     self.tableView.isSelectIndexToHidden= YES;
     self.tableView.tableViewFrame= CGRectMake(0, 0, self.view.frame.size.width, 30*self.itemList.count + 20);
@@ -63,13 +78,13 @@
     
     [self.tableView showInView:self.view];
     [self.tableView reloadData];
-// scrollView 偏移量
-//    NSIndexPath * IndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-//    [self.tableView scrollToRowAtIndexPath:IndexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
-
+    // scrollView 偏移量
+    //    NSIndexPath * IndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    //    [self.tableView scrollToRowAtIndexPath:IndexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
+    
     [self.tableView.tableView scrollRectToVisible:CGRectMake(0, 0, 10000, 10000) animated:YES];
-
 }
+
 #pragma mark ----Delegate
 
 #pragma mark- tableview的代理

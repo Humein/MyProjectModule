@@ -176,6 +176,7 @@ CGRect HitTestingBounds(CGRect bounds, CGFloat minimumHitTestWidth, CGFloat mini
 //        hitTestView = self.scrollView;
 //    }
 //    return hitTestView;
+    return nil;
 }
 
 

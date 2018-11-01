@@ -31,8 +31,8 @@
                                                     initWithRootViewController:animationsListViewController];
     
     [self.window setRootViewController:navigationController];
-//    self.window.backgroundColor = [UIColor whiteColor];
-//    self.window.tintColor = [UIColor redColor];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.tintColor = [UIColor redColor];
     [self.window makeKeyAndVisible];
 //    self.window.frame = [[UIScreen mainScreen] bounds];
 
