@@ -6,6 +6,9 @@
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
 
+
+
+
 @protocol ActionProtocol <NSObject>
 
 - (void)responseEvent:(NSInteger )eventType playItem:(id)playItem;

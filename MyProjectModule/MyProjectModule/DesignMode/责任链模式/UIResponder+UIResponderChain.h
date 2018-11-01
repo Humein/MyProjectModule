@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+static NSString *const kEventOneName = @"QFCellOneEvent";
+static NSString *const kEventTwoName = @"QFCellTwoEvent";
+
 @interface UIResponder (UIResponderChain)
 /**
  通过事件响应链条传递事件

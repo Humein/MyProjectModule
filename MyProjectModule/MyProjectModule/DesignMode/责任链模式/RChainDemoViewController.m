@@ -7,15 +7,8 @@
 //
 
 #import "RChainDemoViewController.h"
-#import "HTTopControlView.h"
-#import "HTBottomControlView.h"
-#import "HTMiddleControlView.h"
 #import "UIResponder+UIResponderChain.h"
-
-
-
-NSString *const kEventOneName = @"QFCellOneEvent";
-NSString *const kEventTwoName = @"QFCellTwoEvent";
+#import "ResponderAbstractView.h"
 
 @interface RChainDemoViewController ()
 /// 事件策略字典 key:事件名 value:事件的invocation对象
@@ -69,22 +62,11 @@ NSString *const kEventTwoName = @"QFCellTwoEvent";
 //    方式 2 UIResponder 链接 只能从底到上的 父子关系（不能建立平级关系 ）
 -(void)initALLView{
     
-    HTTopControlView *top = [[HTTopControlView alloc] initWithFrame:CGRectMake(0, 60, 44, 44)];
-    HTMiddleControlView *mid = [[HTMiddleControlView alloc] initWithFrame:CGRectMake(0, 104, 44, 44)];
-    HTBottomControlView *bot = [[HTBottomControlView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-    HTTopControlView *top1 = [[HTTopControlView alloc] initWithFrame:CGRectMake(0, 10, 10, 10)];
-
-    top.backgroundColor = [UIColor redColor];
-    mid.backgroundColor = [UIColor yellowColor];
-    bot.backgroundColor = [UIColor grayColor];
-    top1.backgroundColor = [UIColor greenColor];
+ 
+    ResponderAbstractView  *RAView = [[ResponderAbstractView alloc]initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, 400)];
+    RAView.backgroundColor = [UIColor grayColor];
     
-    [self.view addSubview:top];
-    [self.view addSubview:mid];
-    [mid addSubview:bot];
-    [bot addSubview:top1];
-
-
+    [self.view addSubview:RAView];
     
     
 }

@@ -24,16 +24,18 @@
 #pragma mark - Event Handle
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    [self routerEventWithName:NSStringFromClass([self class]) userInfo:@{@"key": @"1"}];
+    [self routerEventWithName:kEventOneName userInfo:@{@"key": @"1"}];
     
 }
 
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo{
-    
+//    Decorator模式  可以结合装饰者模式
     NSLog(@"eventName ===== %@,userInfo =====%@",eventName,userInfo);
-    
+    NSMutableDictionary *decoratedUserInfo = [[NSMutableDictionary alloc] initWithDictionary:userInfo];
+    decoratedUserInfo[@"newParam"] = [UIColor redColor]; // 添加数据
+
     // 把响应链继续传递下去
-    [super routerEventWithName:eventName userInfo:userInfo];
+    [super routerEventWithName:eventName userInfo:decoratedUserInfo];
     
     
 }

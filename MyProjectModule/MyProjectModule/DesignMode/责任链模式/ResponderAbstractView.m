@@ -1,53 +1,58 @@
 //
-//  HTBottomControlView.m
+//  ResponderAbstractView.m
 //  MyProjectModule
 //
-//  Created by 鑫鑫 on 2018/7/17.
-//  Copyright © 2018年 xinxin. All rights reserved.
+//  Created by Zhang Xin Xin on 2018/11/1.
+//  Copyright © 2018 xinxin. All rights reserved.
 //
 
+#import "ResponderAbstractView.h"
+#import "HTTopControlView.h"
 #import "HTBottomControlView.h"
+#import "HTMiddleControlView.h"
 #import "UIResponder+UIResponderChain.h"
-
-@interface HTBottomControlView()
+@interface ResponderAbstractView()
 /// 事件策略字典 key:事件名 value:事件的invocation对象
 @property (nonatomic, strong) NSDictionary *eventStrategy;
 @end
+@implementation ResponderAbstractView
 
-@implementation HTBottomControlView
-- (void)responseEvent:(NSInteger)eventType playItem:(id)playItem{
-    if (eventType == 2) {
-        NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
-    }else if (eventType == 100){
-        NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
-        self.superior ? [self.superior responseEvent:eventType playItem:nil] : nil;
-
+-(instancetype)initWithFrame:(CGRect)frame{
+    if (self= [super initWithFrame:frame]) {
+        [self setupContentView];
     }
-    else{
-        self.superior ? [self.superior responseEvent:eventType playItem:nil] : nil;
-    }
+    return self;
 }
 
-
-#pragma mark - Event Handle
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+-(void)setupContentView{
+    HTTopControlView *top = [[HTTopControlView alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+    HTMiddleControlView *mid = [[HTMiddleControlView alloc] initWithFrame:CGRectMake(0, 104, 88, 88)];
+    HTBottomControlView *bot = [[HTBottomControlView alloc] initWithFrame:CGRectMake(0, 148, 88, 88)];
     
-    [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor lightGrayColor]}];
+    top.backgroundColor = [UIColor redColor];
+    mid.backgroundColor = [UIColor yellowColor];
+    bot.backgroundColor = [UIColor greenColor];
+    
+    [self addSubview:mid];
+    [mid addSubview:top];
+    [self addSubview:bot];
+    [bot addSubview:top];
+
+
     
 }
+
 
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo{
     
     NSLog(@"eventName ===== %@,userInfo =====%@",eventName,userInfo);
+    
     [self handleEventWithName:eventName parameter:userInfo];
-
     // 把响应链继续传递下去
     [super routerEventWithName:eventName userInfo:userInfo];
     
     
 }
-
-
 
 // 用 invocation 封装方法 策略 集中处理当前点击视图响应链上的所有事件
 
@@ -59,6 +64,7 @@
     // 调用方法
     [invocation invoke];
 }
+
 
 - (NSDictionary <NSString *, NSInvocation *>*)strategyDictionary {
     if (!_eventStrategy) {
@@ -72,13 +78,13 @@
 
 - (void)cellOneEventWithParamter:(NSDictionary *)paramter {
     
-    self.backgroundColor = [UIColor lightGrayColor];
-    
+    self.backgroundColor = (UIColor *)paramter[@"key"];
 }
 
 - (void)cellTwoEventWithParamter:(NSDictionary *)paramter {
     NSLog(@"---------参数：%@",paramter);
     
 }
+
 
 @end
