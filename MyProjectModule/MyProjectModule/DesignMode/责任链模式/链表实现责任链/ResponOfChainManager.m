@@ -56,7 +56,7 @@
 
 //绑定数据
 - (void)attachPlayItem:(id )playItem{
-//    初始化下一节点 需要的对象
+//    初始化下一节点 需要的对象 (UIResponder ???)
 //    self.superior ? [self.superior attachPlayItem:playItem] : nil;
       self.nextNodeView ? [self.nextNodeView attachPlayItem:playItem] : nil;
 
