@@ -15,11 +15,32 @@
 @end
 
 @implementation HTBottomControlView
+
+
+#pragma mark --- linkedChain
+
+
+- (void)attachPlayItem:(id )playItem
+{
+    [super attachPlayItem:playItem];
+    
+    
+    
+}
+
+
 - (void)responseEvent:(NSInteger)eventType playItem:(id)playItem{
+    self.superior ? [self.superior responseEvent:eventType playItem:playItem] : nil;
+
+    
+    NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
+
+    
+    return;
+    
     if (eventType == 2) {
-        NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
+
     }else if (eventType == 100){
-        NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
         self.superior ? [self.superior responseEvent:eventType playItem:nil] : nil;
 
     }
@@ -29,12 +50,17 @@
 }
 
 
-#pragma mark - Event Handle
+#pragma mark --- Action
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor lightGrayColor]}];
     
+    [self requestEvent:HTVideoPlayerBackEvent playItem:@""];
+    
 }
+
+
+#pragma mark -Chain Event Handle
 
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo{
     

@@ -95,7 +95,6 @@
 		33C971412124108D00EAAD5E /* DecoratorAView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971382124108D00EAAD5E /* DecoratorAView.m */; };
 		33C971422124108D00EAAD5E /* TablePopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971392124108D00EAAD5E /* TablePopDemoViewController.m */; };
 		33C971432124108D00EAAD5E /* CustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C9713B2124108D00EAAD5E /* CustomAlertView.m */; };
-		33CCB0E920FDEF2E002C4FF4 /* ResponOfChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0E820FDEF2E002C4FF4 /* ResponOfChainManager.m */; };
 		33CCB0ED20FDF030002C4FF4 /* HTMiddleControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0EC20FDF030002C4FF4 /* HTMiddleControlView.m */; };
 		33CCB0F020FDF077002C4FF4 /* HTTopControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0EF20FDF077002C4FF4 /* HTTopControlView.m */; };
 		33CCB0F320FDF099002C4FF4 /* HTBottomControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB0F220FDF099002C4FF4 /* HTBottomControlView.m */; };
@@ -134,8 +133,9 @@
 		79EEEA512182BD8C00848B59 /* LiveCommetChatTV.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA502182BD8C00848B59 /* LiveCommetChatTV.m */; };
 		79EEEA562182C09200848B59 /* liveChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA552182C09200848B59 /* liveChatModel.m */; };
 		79EEEA592182C13A00848B59 /* LiveCommentDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA582182C13A00848B59 /* LiveCommentDemoViewController.m */; };
-		79EEEA7C218ADFB700848B59 /* UIResponder+UIResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA7A218ADFB600848B59 /* UIResponder+UIResponderChain.m */; };
-		79EEEA7F218B17F500848B59 /* ResponderAbstractView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA7E218B17F500848B59 /* ResponderAbstractView.m */; };
+		79EEEA8A218BF30E00848B59 /* ResponderAbstractView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA84218BF30E00848B59 /* ResponderAbstractView.m */; };
+		79EEEA8B218BF30E00848B59 /* ResponOfChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA88218BF30E00848B59 /* ResponOfChainManager.m */; };
+		79EEEA8F218BF31600848B59 /* UIResponder+UIResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA8D218BF31600848B59 /* UIResponder+UIResponderChain.m */; };
 		79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */; };
 		79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EE2151F84E003704D7 /* BlockViewController.m */; };
 		79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */; };
@@ -341,9 +341,6 @@
 		33C9713C2124108D00EAAD5E /* CustomAlertViewDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertViewDefault.h; sourceTree = "<group>"; };
 		33C9713D2124108D00EAAD5E /* PopTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopTableView.h; sourceTree = "<group>"; };
 		33C9713E2124108D00EAAD5E /* CustomAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertView.h; sourceTree = "<group>"; };
-		33CCB0E720FDEF2E002C4FF4 /* ResponOfChainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponOfChainManager.h; sourceTree = "<group>"; };
-		33CCB0E820FDEF2E002C4FF4 /* ResponOfChainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponOfChainManager.m; sourceTree = "<group>"; };
-		33CCB0EA20FDEF6B002C4FF4 /* ActionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionProtocol.h; sourceTree = "<group>"; };
 		33CCB0EB20FDF030002C4FF4 /* HTMiddleControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTMiddleControlView.h; sourceTree = "<group>"; };
 		33CCB0EC20FDF030002C4FF4 /* HTMiddleControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTMiddleControlView.m; sourceTree = "<group>"; };
 		33CCB0EE20FDF077002C4FF4 /* HTTopControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTopControlView.h; sourceTree = "<group>"; };
@@ -412,10 +409,13 @@
 		79EEEA552182C09200848B59 /* liveChatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = liveChatModel.m; sourceTree = "<group>"; };
 		79EEEA572182C13A00848B59 /* LiveCommentDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveCommentDemoViewController.h; sourceTree = "<group>"; };
 		79EEEA582182C13A00848B59 /* LiveCommentDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveCommentDemoViewController.m; sourceTree = "<group>"; };
-		79EEEA7A218ADFB600848B59 /* UIResponder+UIResponderChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+UIResponderChain.m"; sourceTree = "<group>"; };
-		79EEEA7B218ADFB700848B59 /* UIResponder+UIResponderChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+UIResponderChain.h"; sourceTree = "<group>"; };
-		79EEEA7D218B17F500848B59 /* ResponderAbstractView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponderAbstractView.h; sourceTree = "<group>"; };
-		79EEEA7E218B17F500848B59 /* ResponderAbstractView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponderAbstractView.m; sourceTree = "<group>"; };
+		79EEEA84218BF30E00848B59 /* ResponderAbstractView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderAbstractView.m; sourceTree = "<group>"; };
+		79EEEA85218BF30E00848B59 /* ResponderAbstractView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderAbstractView.h; sourceTree = "<group>"; };
+		79EEEA87218BF30E00848B59 /* ActionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionProtocol.h; sourceTree = "<group>"; };
+		79EEEA88218BF30E00848B59 /* ResponOfChainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponOfChainManager.m; sourceTree = "<group>"; };
+		79EEEA89218BF30E00848B59 /* ResponOfChainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponOfChainManager.h; sourceTree = "<group>"; };
+		79EEEA8D218BF31600848B59 /* UIResponder+UIResponderChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+UIResponderChain.m"; sourceTree = "<group>"; };
+		79EEEA8E218BF31600848B59 /* UIResponder+UIResponderChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+UIResponderChain.h"; sourceTree = "<group>"; };
 		79F9A5EA214FB09B003704D7 /* AlgorithmsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmsViewController.h; sourceTree = "<group>"; };
 		79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmsViewController.m; sourceTree = "<group>"; };
 		79F9A5ED2151F84E003704D7 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
@@ -1062,13 +1062,9 @@
 		33CCB0E420FDDFF3002C4FF4 /* 责任链模式 */ = {
 			isa = PBXGroup;
 			children = (
-				79EEEA7B218ADFB700848B59 /* UIResponder+UIResponderChain.h */,
-				79EEEA7A218ADFB600848B59 /* UIResponder+UIResponderChain.m */,
-				33CCB0EA20FDEF6B002C4FF4 /* ActionProtocol.h */,
-				33CCB0E720FDEF2E002C4FF4 /* ResponOfChainManager.h */,
-				33CCB0E820FDEF2E002C4FF4 /* ResponOfChainManager.m */,
-				79EEEA7D218B17F500848B59 /* ResponderAbstractView.h */,
-				79EEEA7E218B17F500848B59 /* ResponderAbstractView.m */,
+				79EEEA8C218BF31600848B59 /* UIRespender责任链 */,
+				79EEEA83218BF30E00848B59 /* 对外API */,
+				79EEEA86218BF30E00848B59 /* 链表实现责任链 */,
 				33CCB0EE20FDF077002C4FF4 /* HTTopControlView.h */,
 				33CCB0EF20FDF077002C4FF4 /* HTTopControlView.m */,
 				33CCB0EB20FDF030002C4FF4 /* HTMiddleControlView.h */,
@@ -1241,6 +1237,34 @@
 				79EEEA4B2182BD4700848B59 /* iOS开发、教你一步步实现直播间评论效果功能 - 简书.html */,
 			);
 			path = QuoteDoc;
+			sourceTree = "<group>";
+		};
+		79EEEA83218BF30E00848B59 /* 对外API */ = {
+			isa = PBXGroup;
+			children = (
+				79EEEA85218BF30E00848B59 /* ResponderAbstractView.h */,
+				79EEEA84218BF30E00848B59 /* ResponderAbstractView.m */,
+			);
+			path = "对外API";
+			sourceTree = "<group>";
+		};
+		79EEEA86218BF30E00848B59 /* 链表实现责任链 */ = {
+			isa = PBXGroup;
+			children = (
+				79EEEA87218BF30E00848B59 /* ActionProtocol.h */,
+				79EEEA89218BF30E00848B59 /* ResponOfChainManager.h */,
+				79EEEA88218BF30E00848B59 /* ResponOfChainManager.m */,
+			);
+			path = "链表实现责任链";
+			sourceTree = "<group>";
+		};
+		79EEEA8C218BF31600848B59 /* UIRespender责任链 */ = {
+			isa = PBXGroup;
+			children = (
+				79EEEA8E218BF31600848B59 /* UIResponder+UIResponderChain.h */,
+				79EEEA8D218BF31600848B59 /* UIResponder+UIResponderChain.m */,
+			);
+			path = "UIRespender责任链";
 			sourceTree = "<group>";
 		};
 		79F9A5E9214FB082003704D7 /* Algorithms */ = {
@@ -1470,6 +1494,7 @@
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
+				79EEEA8B218BF30E00848B59 /* ResponOfChainManager.m in Sources */,
 				33A6A8DC215CC5F3001BE659 /* POPNumberAnimation.m in Sources */,
 				338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */,
 				33A32AF920DB3909008C3969 /* SegementChildViewController.m in Sources */,
@@ -1505,8 +1530,9 @@
 				3362E69F2130FBEF00A4B26D /* CustomKVO.m in Sources */,
 				33C971282121317D00EAAD5E /* CorrectTagModel.m in Sources */,
 				79F9A5F5215214B4003704D7 /* NSTimer+WeakTimerBlock.m in Sources */,
+				79EEEA8A218BF30E00848B59 /* ResponderAbstractView.m in Sources */,
+				79EEEA8F218BF31600848B59 /* UIResponder+UIResponderChain.m in Sources */,
 				3378282C2108544300373A20 /* UIImage+Title.m in Sources */,
-				79EEEA7C218ADFB700848B59 /* UIResponder+UIResponderChain.m in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
 				33759E7A212FAB2A00D801C1 /* NSObject+RuntimeNSCodingHelper.m in Sources */,
 				33C971412124108D00EAAD5E /* DecoratorAView.m in Sources */,
@@ -1538,14 +1564,12 @@
 				339B536C20F4B450003444CB /* AbstractPlayerHelperManager.m in Sources */,
 				33C97118211E81D800EAAD5E /* ApplePay.m in Sources */,
 				339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */,
-				79EEEA7F218B17F500848B59 /* ResponderAbstractView.m in Sources */,
 				79EEEA592182C13A00848B59 /* LiveCommentDemoViewController.m in Sources */,
 				79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */,
 				33C97111211E7C3700EAAD5E /* APPPayTool.m in Sources */,
 				335ABFAE2160C0BD00770703 /* AnimationExample.m in Sources */,
 				33888FDE20F05E3500E4A119 /* SegmentContentCell.m in Sources */,
 				339B536620F4B39B003444CB /* ZSPlaterHelper.m in Sources */,
-				33CCB0E920FDEF2E002C4FF4 /* ResponOfChainManager.m in Sources */,
 				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
 				333651B82180543E00286C7A /* AttributeAndPredicateWithLink.m in Sources */,
 				339B535020F4AF35003444CB /* UIButton+ButtonBlockCategory.m in Sources */,

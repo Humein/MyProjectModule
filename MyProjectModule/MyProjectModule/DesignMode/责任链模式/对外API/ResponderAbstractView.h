@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ResponderAbstractView : UIView
+#import "ResponOfChainManager.h"
+@interface ResponderAbstractView : ResponOfChainManager
 
 @end

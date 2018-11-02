@@ -20,6 +20,7 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self= [super initWithFrame:frame]) {
         [self setupContentView];
+        [self setupLinkedChainView];
     }
     return self;
 }
@@ -38,9 +39,42 @@
     [self addSubview:bot];
     [bot addSubview:top];
 
+    
 
     
 }
+
+#pragma mark --- linkedChain
+-(void)setupLinkedChainView{
+    
+    
+    HTTopControlView *top = [[HTTopControlView alloc] initWithFrame:CGRectMake(120, 0, 44, 44)];
+    HTMiddleControlView *mid = [[HTMiddleControlView alloc] initWithFrame:CGRectMake(120, 104, 88, 88)];
+    HTBottomControlView *bot = [[HTBottomControlView alloc] initWithFrame:CGRectMake(120, 148, 88, 88)];
+    
+    top.backgroundColor = [UIColor redColor];
+    mid.backgroundColor = [UIColor yellowColor];
+    bot.backgroundColor = [UIColor greenColor];
+    
+    [self addSubview:top];
+    [self addSubview:mid];
+    [self addSubview:bot];
+    
+    
+
+    mid.superior = top;
+    bot.superior = mid;
+
+    
+
+
+    
+}
+
+
+
+
+#pragma mark -Chain Event Handle
 
 
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo{
