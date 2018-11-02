@@ -19,7 +19,7 @@
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self= [super initWithFrame:frame]) {
-        [self setupContentView];
+//        [self setupContentView];
         [self setupLinkedChainView];
     }
     return self;
@@ -62,10 +62,18 @@
     
     
 
-    mid.superior = top;
-    bot.superior = mid;
-
+//    mid.superior = top;
+//    bot.superior = mid;
+//    top.superior = bot;
     
+    
+    
+//    绑定视图
+    
+    self.nextView(top).nextView(mid).nextView(bot);
+    
+    [self logAllNextNode];
+
 
 
     

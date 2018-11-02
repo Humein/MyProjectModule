@@ -27,8 +27,11 @@
 
 
 - (void)responseEvent:(NSInteger)eventType playItem:(id)playItem{
-    self.superior ? [self.superior responseEvent:eventType playItem:playItem] : nil;
-
+    
+    //  self.superior ? [self.superior responseEvent:eventType playItem:playItem] : nil; 类似UIResponder 链条
+    
+    self.nextNodeView ? [self.nextNodeView responseEvent:eventType playItem:playItem] : nil;
+    
     NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
 
     return;
@@ -52,7 +55,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor brownColor]}];
+//    [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor brownColor]}];
     
     [self requestEvent:HTVideoPlayEvent playItem:@""];
     

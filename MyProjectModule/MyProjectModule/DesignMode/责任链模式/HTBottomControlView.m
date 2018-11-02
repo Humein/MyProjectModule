@@ -30,8 +30,12 @@
 
 
 - (void)responseEvent:(NSInteger)eventType playItem:(id)playItem{
-    self.superior ? [self.superior responseEvent:eventType playItem:playItem] : nil;
-
+    
+//  self.superior ? [self.superior responseEvent:eventType playItem:playItem] : nil; 类似UIResponder 链条
+    
+    
+    self.nextNodeView ? [self.nextNodeView responseEvent:eventType playItem:playItem] : nil;
+ 
     
     NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
 
@@ -53,8 +57,9 @@
 #pragma mark --- Action
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor lightGrayColor]}];
+//    [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor lightGrayColor]}];
     
+//    [self attachPlayItem:@""];
     [self requestEvent:HTVideoPlayerBackEvent playItem:@""];
     
 }
