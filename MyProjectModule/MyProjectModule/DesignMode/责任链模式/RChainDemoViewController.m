@@ -28,42 +28,23 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//  方式1
-#warning ---TODO 通 链表的方式 将各个控制层 绑定起来
-    
-//    HTTopControlView *top = [[HTTopControlView alloc] init];
-//    HTMiddleControlView *mid = [[HTMiddleControlView alloc] init];
-//    HTBottomControlView *bot = [[HTBottomControlView alloc] init];
-//
-//    bot.superior = mid;
-//    mid.superior = top;
-//
-////    NSArray *responseEvent = @[@"0",@"1",@"3"];
-////    for (NSString *string in responseEvent) {
-////        [bot responseEvent:[string integerValue] playItem:nil];
-////    }
-////   模拟点击
-//     [mid responseEvent:1 playItem:nil];
-
     
     
     
-//    2
-    [self routerEventWithName:NSStringFromClass([self class]) userInfo:@{@"key": @"Super"}];
-
+    
+    
 }
 
 
 
 
 
-#pragma mark ------------ 2222
 
-//    方式 2 UIResponder 链接 只能从底到上的 父子关系（不能建立平级关系 ）
 -(void)initALLView{
     
  
     ResponderAbstractView  *RAView = [[ResponderAbstractView alloc]initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, 400)];
+    
     RAView.backgroundColor = [UIColor grayColor];
     
     [self.view addSubview:RAView];
@@ -71,6 +52,11 @@
     
 }
 
+
+
+
+
+#pragma Mark --- Responder 链条事件
 
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo{
     

@@ -102,7 +102,7 @@
 //   链表全部遍历
     while (nodeView) {
 
-        if (nodeView.proNodeView== nil) {
+        if (nodeView.proNodeView == nil) {
             break;
         }
         nodeView= nodeView.proNodeView;

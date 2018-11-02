@@ -51,7 +51,7 @@
     
 //    [self routerEventWithName:kEventOneName userInfo:@{@"key": @"1"}];
     
-    
+    [self attachPlayItem:@"1"];
     [self requestEvent:HTVideoStopEvent playItem:@""];
 
     

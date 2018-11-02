@@ -57,6 +57,7 @@
     
 //    [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor brownColor]}];
     
+    [self attachPlayItem:@"2"];
     [self requestEvent:HTVideoPlayEvent playItem:@""];
     
 }

@@ -19,7 +19,15 @@
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self= [super initWithFrame:frame]) {
-//        [self setupContentView];
+        //  方式1 通 链表的方式 将各个控制层 绑定起来
+
+//      [self setupContentView];
+        
+    /* 方式 2  通 UIResponder的方式 将各个控制层 绑定起来(有限性 无法全部相应)
+       只能从底到上的 父子关系（不能建立平级关系 ）
+
+     */
+
         [self setupLinkedChainView];
     }
     return self;
@@ -79,6 +87,18 @@
     
 }
 
+#pragma mark --- Action
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    
+    //        [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor lightGrayColor]}];
+
+    
+    //    [self attachPlayItem:@""];
+    [self requestEvent:HTVideoPauseEvent playItem:@""];
+    
+
+}
 
 
 
