@@ -136,6 +136,8 @@
 		79EEEA8A218BF30E00848B59 /* ResponderAbstractView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA84218BF30E00848B59 /* ResponderAbstractView.m */; };
 		79EEEA8B218BF30E00848B59 /* ResponOfChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA88218BF30E00848B59 /* ResponOfChainManager.m */; };
 		79EEEA8F218BF31600848B59 /* UIResponder+UIResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA8D218BF31600848B59 /* UIResponder+UIResponderChain.m */; };
+		79EEEA96218EEBA200848B59 /* InterfacePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA94218EEBA100848B59 /* InterfacePlayerView.m */; };
+		79EEEA99218EEBCF00848B59 /* FullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA98218EEBCF00848B59 /* FullScreenViewController.m */; };
 		79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */; };
 		79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EE2151F84E003704D7 /* BlockViewController.m */; };
 		79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */; };
@@ -416,6 +418,10 @@
 		79EEEA89218BF30E00848B59 /* ResponOfChainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponOfChainManager.h; sourceTree = "<group>"; };
 		79EEEA8D218BF31600848B59 /* UIResponder+UIResponderChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+UIResponderChain.m"; sourceTree = "<group>"; };
 		79EEEA8E218BF31600848B59 /* UIResponder+UIResponderChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+UIResponderChain.h"; sourceTree = "<group>"; };
+		79EEEA94218EEBA100848B59 /* InterfacePlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfacePlayerView.m; sourceTree = "<group>"; };
+		79EEEA95218EEBA100848B59 /* InterfacePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfacePlayerView.h; sourceTree = "<group>"; };
+		79EEEA97218EEBCF00848B59 /* FullScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FullScreenViewController.h; sourceTree = "<group>"; };
+		79EEEA98218EEBCF00848B59 /* FullScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FullScreenViewController.m; sourceTree = "<group>"; };
 		79F9A5EA214FB09B003704D7 /* AlgorithmsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmsViewController.h; sourceTree = "<group>"; };
 		79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmsViewController.m; sourceTree = "<group>"; };
 		79F9A5ED2151F84E003704D7 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
@@ -1242,6 +1248,7 @@
 		79EEEA83218BF30E00848B59 /* 对外API */ = {
 			isa = PBXGroup;
 			children = (
+				79EEEA93218EEBA100848B59 /* 旋转屏解决 */,
 				79EEEA85218BF30E00848B59 /* ResponderAbstractView.h */,
 				79EEEA84218BF30E00848B59 /* ResponderAbstractView.m */,
 			);
@@ -1265,6 +1272,17 @@
 				79EEEA8D218BF31600848B59 /* UIResponder+UIResponderChain.m */,
 			);
 			path = "UIRespender责任链";
+			sourceTree = "<group>";
+		};
+		79EEEA93218EEBA100848B59 /* 旋转屏解决 */ = {
+			isa = PBXGroup;
+			children = (
+				79EEEA95218EEBA100848B59 /* InterfacePlayerView.h */,
+				79EEEA94218EEBA100848B59 /* InterfacePlayerView.m */,
+				79EEEA97218EEBCF00848B59 /* FullScreenViewController.h */,
+				79EEEA98218EEBCF00848B59 /* FullScreenViewController.m */,
+			);
+			path = "旋转屏解决";
 			sourceTree = "<group>";
 		};
 		79F9A5E9214FB082003704D7 /* Algorithms */ = {
@@ -1492,6 +1510,7 @@
 				33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */,
 				79EEEA512182BD8C00848B59 /* LiveCommetChatTV.m in Sources */,
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
+				79EEEA99218EEBCF00848B59 /* FullScreenViewController.m in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
 				79EEEA8B218BF30E00848B59 /* ResponOfChainManager.m in Sources */,
@@ -1518,6 +1537,7 @@
 				33A32AF520DA8044008C3969 /* SegementPersonDemoViewController.m in Sources */,
 				33A32AEF20DA795E008C3969 /* UIButton+SegementCustomButton.m in Sources */,
 				79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */,
+				79EEEA96218EEBA200848B59 /* InterfacePlayerView.m in Sources */,
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
 				33A32AE920DA789D008C3969 /* UIScrollView+SlideGestureBack.m in Sources */,
 				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,

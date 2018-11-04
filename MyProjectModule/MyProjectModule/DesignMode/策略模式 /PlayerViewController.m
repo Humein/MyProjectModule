@@ -10,6 +10,7 @@
 #import "UIButton+ButtonBlockCategory.h"
 #import "AbstractPlayerHelperManager.h"
 #import "APPPayTool.h"
+#import "FullScreenViewController.h"
 @interface PlayerViewController (){
     AbstractPlayerHelperManager *_player;
 
@@ -72,6 +73,11 @@
 
 -(void)play{
     NSLog(@"%@",_player ? [_player abs_play] : @"空"  );
+    
+
+//    TODO 旋转屏
+    
+    
 }
 
 -(void)pause{

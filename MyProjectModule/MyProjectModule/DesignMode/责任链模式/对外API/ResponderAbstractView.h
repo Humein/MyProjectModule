@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "ResponOfChainManager.h"
+
+/*
+ 都继承 ResponOfChainManager
+ HTPlayerView { HTVideoPlayerView + HTPlayerControlView}
+ HTVideoPlayerView { HTVideoPlayer < 播放API > }
+ HTPlayerControlView(ResponderAbstractView) {各个控制层（Top mid Bot）}
+ */
+
 @interface ResponderAbstractView : ResponOfChainManager
 
 @end
