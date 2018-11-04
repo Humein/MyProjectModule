@@ -6,6 +6,17 @@
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
 
+/*
+ 
+ 一下都继承 ResponOfChainManager
+ 
+ HTPlayerView(InterfacePlayerView) { HTVideoPlayerView + HTPlayerControlView}
+ HTVideoPlayerView { HTVideoPlayer < 播放API > }
+ HTPlayerControlView(ResponderAbstractView) {各个控制层（Top mid Bot）}
+ 
+ */
+
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "ActionProtocol.h"
