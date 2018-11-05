@@ -103,11 +103,8 @@
 		33E6CDD5210034E300422FC7 /* CellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDD0210034E200422FC7 /* CellModel.m */; };
 		33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDD1210034E200422FC7 /* AbstractTableViewCell.m */; };
 		33E6CDD9210035FF00422FC7 /* ThreeLevelTreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDD8210035FF00422FC7 /* ThreeLevelTreeView.m */; };
-		33E6CE0421006D2000422FC7 /* TreeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDFB21006D1F00422FC7 /* TreeViewModel.m */; };
 		33E6CE0521006D2000422FC7 /* CreatTreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDFD21006D1F00422FC7 /* CreatTreeView.m */; };
-		33E6CE0621006D2000422FC7 /* TreeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDFF21006D1F00422FC7 /* TreeModel.m */; };
 		33E6CE0721006D2000422FC7 /* UITableViewCell+AnimationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CE0021006D1F00422FC7 /* UITableViewCell+AnimationType.m */; };
-		33E6CE0821006D2000422FC7 /* TreeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CE0221006D1F00422FC7 /* TreeViewCell.m */; };
 		33E6CE0A21006DA000422FC7 /* Tree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33E6CE0921006DA000422FC7 /* Tree.plist */; };
 		33FAE4CC20E23DE500BE7175 /* HomeDatas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33FAE4CB20E23DE500BE7175 /* HomeDatas.plist */; };
 		33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4CE20E2427100BE7175 /* CollectionSectionViewController.m */; };
@@ -138,6 +135,12 @@
 		79EEEA8F218BF31600848B59 /* UIResponder+UIResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA8D218BF31600848B59 /* UIResponder+UIResponderChain.m */; };
 		79EEEA96218EEBA200848B59 /* InterfacePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA94218EEBA100848B59 /* InterfacePlayerView.m */; };
 		79EEEA99218EEBCF00848B59 /* FullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA98218EEBCF00848B59 /* FullScreenViewController.m */; };
+		79EEEAA1218FF5E600848B59 /* TreeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA9C218FF5E500848B59 /* TreeViewModel.m */; };
+		79EEEAA2218FF5E600848B59 /* TreeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEA9E218FF5E500848B59 /* TreeModel.m */; };
+		79EEEAA3218FF5E600848B59 /* TreeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEAA0218FF5E500848B59 /* TreeViewCell.m */; };
+		79EEEAA6218FF6CC00848B59 /* Multi-CellTree-TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEAA5218FF6CC00848B59 /* Multi-CellTree-TableViewController.m */; };
+		79EEEAA9219014BD00848B59 /* PointTreeStatisTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEAA8219014BD00848B59 /* PointTreeStatisTableViewCell.m */; };
+		79EEEAAC2190156500848B59 /* PointTreeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEAAB2190156500848B59 /* PointTreeModel.m */; };
 		79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */; };
 		79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EE2151F84E003704D7 /* BlockViewController.m */; };
 		79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */; };
@@ -359,15 +362,9 @@
 		33E6CDD3210034E200422FC7 /* CellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellModel.h; sourceTree = "<group>"; };
 		33E6CDD7210035FF00422FC7 /* ThreeLevelTreeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeLevelTreeView.h; sourceTree = "<group>"; };
 		33E6CDD8210035FF00422FC7 /* ThreeLevelTreeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeLevelTreeView.m; sourceTree = "<group>"; };
-		33E6CDFA21006D1F00422FC7 /* TreeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeModel.h; sourceTree = "<group>"; };
-		33E6CDFB21006D1F00422FC7 /* TreeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeViewModel.m; sourceTree = "<group>"; };
 		33E6CDFC21006D1F00422FC7 /* UITableViewCell+AnimationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+AnimationType.h"; sourceTree = "<group>"; };
 		33E6CDFD21006D1F00422FC7 /* CreatTreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatTreeView.m; sourceTree = "<group>"; };
-		33E6CDFE21006D1F00422FC7 /* TreeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeViewCell.h; sourceTree = "<group>"; };
-		33E6CDFF21006D1F00422FC7 /* TreeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeModel.m; sourceTree = "<group>"; };
 		33E6CE0021006D1F00422FC7 /* UITableViewCell+AnimationType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+AnimationType.m"; sourceTree = "<group>"; };
-		33E6CE0121006D1F00422FC7 /* TreeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeViewModel.h; sourceTree = "<group>"; };
-		33E6CE0221006D1F00422FC7 /* TreeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeViewCell.m; sourceTree = "<group>"; };
 		33E6CE0321006D1F00422FC7 /* CreatTreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatTreeView.h; sourceTree = "<group>"; };
 		33E6CE0921006DA000422FC7 /* Tree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tree.plist; sourceTree = "<group>"; };
 		33FAE4CB20E23DE500BE7175 /* HomeDatas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomeDatas.plist; sourceTree = "<group>"; };
@@ -422,6 +419,18 @@
 		79EEEA95218EEBA100848B59 /* InterfacePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfacePlayerView.h; sourceTree = "<group>"; };
 		79EEEA97218EEBCF00848B59 /* FullScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FullScreenViewController.h; sourceTree = "<group>"; };
 		79EEEA98218EEBCF00848B59 /* FullScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FullScreenViewController.m; sourceTree = "<group>"; };
+		79EEEA9B218FF5E500848B59 /* TreeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeModel.h; sourceTree = "<group>"; };
+		79EEEA9C218FF5E500848B59 /* TreeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeViewModel.m; sourceTree = "<group>"; };
+		79EEEA9D218FF5E500848B59 /* TreeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeViewCell.h; sourceTree = "<group>"; };
+		79EEEA9E218FF5E500848B59 /* TreeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeModel.m; sourceTree = "<group>"; };
+		79EEEA9F218FF5E500848B59 /* TreeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeViewModel.h; sourceTree = "<group>"; };
+		79EEEAA0218FF5E500848B59 /* TreeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeViewCell.m; sourceTree = "<group>"; };
+		79EEEAA4218FF6CC00848B59 /* Multi-CellTree-TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Multi-CellTree-TableViewController.h"; sourceTree = "<group>"; };
+		79EEEAA5218FF6CC00848B59 /* Multi-CellTree-TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Multi-CellTree-TableViewController.m"; sourceTree = "<group>"; };
+		79EEEAA7219014BD00848B59 /* PointTreeStatisTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PointTreeStatisTableViewCell.h; sourceTree = "<group>"; };
+		79EEEAA8219014BD00848B59 /* PointTreeStatisTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PointTreeStatisTableViewCell.m; sourceTree = "<group>"; };
+		79EEEAAA2190156500848B59 /* PointTreeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PointTreeModel.h; sourceTree = "<group>"; };
+		79EEEAAB2190156500848B59 /* PointTreeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PointTreeModel.m; sourceTree = "<group>"; };
 		79F9A5EA214FB09B003704D7 /* AlgorithmsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmsViewController.h; sourceTree = "<group>"; };
 		79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmsViewController.m; sourceTree = "<group>"; };
 		79F9A5ED2151F84E003704D7 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
@@ -1106,16 +1115,13 @@
 		33E6CDF921006D1F00422FC7 /* KnowledgePointsTree */ = {
 			isa = PBXGroup;
 			children = (
-				33E6CDFA21006D1F00422FC7 /* TreeModel.h */,
-				33E6CDFF21006D1F00422FC7 /* TreeModel.m */,
+				79EEEA9A218FF5E500848B59 /* ModelAndView */,
 				33E6CDFC21006D1F00422FC7 /* UITableViewCell+AnimationType.h */,
 				33E6CE0021006D1F00422FC7 /* UITableViewCell+AnimationType.m */,
 				33E6CE0321006D1F00422FC7 /* CreatTreeView.h */,
 				33E6CDFD21006D1F00422FC7 /* CreatTreeView.m */,
-				33E6CDFE21006D1F00422FC7 /* TreeViewCell.h */,
-				33E6CE0221006D1F00422FC7 /* TreeViewCell.m */,
-				33E6CE0121006D1F00422FC7 /* TreeViewModel.h */,
-				33E6CDFB21006D1F00422FC7 /* TreeViewModel.m */,
+				79EEEAA4218FF6CC00848B59 /* Multi-CellTree-TableViewController.h */,
+				79EEEAA5218FF6CC00848B59 /* Multi-CellTree-TableViewController.m */,
 			);
 			path = KnowledgePointsTree;
 			sourceTree = "<group>";
@@ -1283,6 +1289,23 @@
 				79EEEA98218EEBCF00848B59 /* FullScreenViewController.m */,
 			);
 			path = "旋转屏解决";
+			sourceTree = "<group>";
+		};
+		79EEEA9A218FF5E500848B59 /* ModelAndView */ = {
+			isa = PBXGroup;
+			children = (
+				79EEEA9B218FF5E500848B59 /* TreeModel.h */,
+				79EEEA9E218FF5E500848B59 /* TreeModel.m */,
+				79EEEA9F218FF5E500848B59 /* TreeViewModel.h */,
+				79EEEA9C218FF5E500848B59 /* TreeViewModel.m */,
+				79EEEA9D218FF5E500848B59 /* TreeViewCell.h */,
+				79EEEAA0218FF5E500848B59 /* TreeViewCell.m */,
+				79EEEAA7219014BD00848B59 /* PointTreeStatisTableViewCell.h */,
+				79EEEAA8219014BD00848B59 /* PointTreeStatisTableViewCell.m */,
+				79EEEAAA2190156500848B59 /* PointTreeModel.h */,
+				79EEEAAB2190156500848B59 /* PointTreeModel.m */,
+			);
+			path = ModelAndView;
 			sourceTree = "<group>";
 		};
 		79F9A5E9214FB082003704D7 /* Algorithms */ = {
@@ -1501,6 +1524,7 @@
 				33A32B0020DB7D5C008C3969 /* SectionModel.m in Sources */,
 				33FAE4F020E2452D00BE7175 /* JHHeaderReusableView.m in Sources */,
 				33888FC320EDCCCB00E4A119 /* CAGradientLayerDemo.m in Sources */,
+				79EEEAAC2190156500848B59 /* PointTreeModel.m in Sources */,
 				33FAE4D820E243B800BE7175 /* CollectionDetaiDemo.m in Sources */,
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
 				33759E77212FAA7200D801C1 /* NSObject+RuntimeHelper.m in Sources */,
@@ -1541,12 +1565,12 @@
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
 				33A32AE920DA789D008C3969 /* UIScrollView+SlideGestureBack.m in Sources */,
 				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
-				33E6CE0821006D2000422FC7 /* TreeViewCell.m in Sources */,
 				33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */,
 				33C9711F211EB8DC00EAAD5E /* AbstractViewController.m in Sources */,
 				33888FE420F0683C00E4A119 /* UIView+frameAdjust.m in Sources */,
 				339B534620F4AB2A003444CB /* ZTKBJDownHelper.m in Sources */,
 				33888FEB20F06ADD00E4A119 /* ChildViewController.m in Sources */,
+				79EEEAA9219014BD00848B59 /* PointTreeStatisTableViewCell.m in Sources */,
 				3362E69F2130FBEF00A4B26D /* CustomKVO.m in Sources */,
 				33C971282121317D00EAAD5E /* CorrectTagModel.m in Sources */,
 				79F9A5F5215214B4003704D7 /* NSTimer+WeakTimerBlock.m in Sources */,
@@ -1577,12 +1601,14 @@
 				33888FE120F05E6B00E4A119 /* SegmentSliderView.m in Sources */,
 				339B536320F4B29B003444CB /* ZSPlayer.m in Sources */,
 				33E6CDD9210035FF00422FC7 /* ThreeLevelTreeView.m in Sources */,
+				79EEEAA6218FF6CC00848B59 /* Multi-CellTree-TableViewController.m in Sources */,
 				33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */,
 				33C9711B211E899400EAAD5E /* AliPay.m in Sources */,
 				337828232108539800373A20 /* UIImage+BaseFilter.m in Sources */,
 				3340363D2154C69C006FCBA3 /* MemoryCache.m in Sources */,
 				339B536C20F4B450003444CB /* AbstractPlayerHelperManager.m in Sources */,
 				33C97118211E81D800EAAD5E /* ApplePay.m in Sources */,
+				79EEEAA2218FF5E600848B59 /* TreeModel.m in Sources */,
 				339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */,
 				79EEEA592182C13A00848B59 /* LiveCommentDemoViewController.m in Sources */,
 				79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */,
@@ -1593,22 +1619,22 @@
 				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
 				333651B82180543E00286C7A /* AttributeAndPredicateWithLink.m in Sources */,
 				339B535020F4AF35003444CB /* UIButton+ButtonBlockCategory.m in Sources */,
-				33E6CE0421006D2000422FC7 /* TreeViewModel.m in Sources */,
 				79CFB323216C879D00218C92 /* NSInvocationForStrategyViewController.m in Sources */,
 				33C971252121315500EAAD5E /* ResovlerModel.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				79EEEA562182C09200848B59 /* liveChatModel.m in Sources */,
 				33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */,
 				33C971432124108D00EAAD5E /* CustomAlertView.m in Sources */,
+				79EEEAA3218FF5E600848B59 /* TreeViewCell.m in Sources */,
 				33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */,
 				3378280C2108278C00373A20 /* DecoratorViewController.m in Sources */,
 				338FEC0520E0F5B70025631B /* UIButton+Decorate.m in Sources */,
 				33CCB0F020FDF077002C4FF4 /* HTTopControlView.m in Sources */,
 				333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */,
 				33759E7D212FABBA00D801C1 /* NSObject+KVOHelper.m in Sources */,
+				79EEEAA1218FF5E600848B59 /* TreeViewModel.m in Sources */,
 				33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */,
 				33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */,
-				33E6CE0621006D2000422FC7 /* TreeModel.m in Sources */,
 				33C971402124108D00EAAD5E /* CustomAlertViewDefault.m in Sources */,
 				33782826210853AD00373A20 /* UIImage+Transform.m in Sources */,
 				79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */,
