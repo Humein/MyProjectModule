@@ -139,28 +139,45 @@
     TreeViewModel *cellViewModel = [self.cellViewModelArray objectAtIndex:indexPath.row];
     
     if(cellViewModel.openstate == ErrorQuestionCellClose){
+//        展开
         cellViewModel.openstate = ErrorQuestionCellOpen;
+        
         NSArray *childCellNode = [self generateCellViewModelArrayWithKnowledgeModelArray:cellViewModel.knowledgeModel.childrenKnowledgeModelArray];
+        
         [self.cellViewModelArray insertObjects:childCellNode atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(indexPath.row+1, childCellNode.count)]];
+        
         NSMutableArray *indexPathArray = [[NSMutableArray alloc]init];
+        
         for(NSInteger i = indexPath.row+1 ; i <= indexPath.row + childCellNode.count ; i++){
             NSIndexPath *obj = [NSIndexPath indexPathForRow:i inSection:0];
             [indexPathArray addObject:obj];
         }
+        
         [self setCellIndex];
+        
         [_tableView insertRowsAtIndexPaths:indexPathArray withRowAnimation:UITableViewRowAnimationFade];
+        
     }else{
+//      合并
         cellViewModel.openstate = ErrorQuestionCellClose;
+        
         NSArray *showingChildCellNode = [self allShowingChildNodeWithCellViewModel:cellViewModel];
+        
         [self.cellViewModelArray removeObjectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(indexPath.row+1, showingChildCellNode.count)]];
+        
         NSMutableArray *indexPathArray = [[NSMutableArray alloc]init];
+        
         for(NSInteger i = indexPath.row+1 ; i <= indexPath.row + showingChildCellNode.count ; i++){
             NSIndexPath *obj = [NSIndexPath indexPathForRow:i inSection:0];
             [indexPathArray addObject:obj];
         }
+        
         [self setCellIndex];
+        
         [_tableView deleteRowsAtIndexPaths:indexPathArray withRowAnimation:UITableViewRowAnimationFade];
     }
+    
+//    刷新数据源
     [_tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 
     if (_cellClickBlcok) {
@@ -168,17 +185,18 @@
     }
     
 }
+
+
 #pragma mark - Cell Animation
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    
     if (self.sectionFirstLoad) {
             [cell tableView:tableView forRowAtIndexPath:indexPath animationStyle: UITableViewCellDisplayAnimationLeft];
     }
-
     
 }
-
+// 展开数据
 - (NSArray *)generateCellViewModelArrayWithKnowledgeModelArray:(NSArray *)modelArray{
     NSMutableArray *mArray = [[NSMutableArray alloc]init];
     for(TreeModel *model in modelArray){
@@ -190,6 +208,20 @@
     }
     return mArray;
 }
+// 合并数据
+-(NSArray *)allShowingChildNodeWithCellViewModel:(TreeViewModel *)cellViewModel{
+    NSMutableArray *mArray = [[NSMutableArray alloc]init];
+    NSArray *knowledgeModelArray = [TreeModel allChildNodeWithKnowledgeModel:cellViewModel.knowledgeModel];
+    for(TreeModel *knowledgeMdeol in knowledgeModelArray){
+        for(TreeViewModel *obj in self.cellViewModelArray){
+            if([knowledgeMdeol.knowledgeID isEqualToString:obj.knowledgeModel.knowledgeID]){
+                [mArray addObject:obj];
+            }
+        }
+    }
+    return mArray;
+}
+
 
 -(void)setCellIndex{
     for(TreeViewModel *cellModel in self.cellViewModelArray){
@@ -210,18 +242,7 @@
     }
 }
 
--(NSArray *)allShowingChildNodeWithCellViewModel:(TreeViewModel *)cellViewModel{
-    NSMutableArray *mArray = [[NSMutableArray alloc]init];
-    NSArray *knowledgeModelArray = [TreeModel allChildNodeWithKnowledgeModel:cellViewModel.knowledgeModel];
-    for(TreeModel *knowledgeMdeol in knowledgeModelArray){
-        for(TreeViewModel *obj in self.cellViewModelArray){
-            if([knowledgeMdeol.knowledgeID isEqualToString:obj.knowledgeModel.knowledgeID]){
-                [mArray addObject:obj];
-            }
-        }
-    }
-    return mArray;
-}
+
 
 -(BOOL)isLevelOneModelWithCellViewModel:(TreeViewModel *)cellModel{
     return [self.levelOneModelArray containsObject:cellModel.knowledgeModel];
