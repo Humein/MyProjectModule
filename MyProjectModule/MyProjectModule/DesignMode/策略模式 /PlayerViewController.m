@@ -11,6 +11,7 @@
 #import "AbstractPlayerHelperManager.h"
 #import "APPPayTool.h"
 #import "FullScreenViewController.h"
+#import "Masonry.h"
 @interface PlayerViewController (){
     AbstractPlayerHelperManager *_player;
 
@@ -76,7 +77,21 @@
     
 
 //    TODO 旋转屏
+    UIViewController* ctrl = [UIApplication sharedApplication].keyWindow.rootViewController;
+    while (ctrl.presentedViewController && !ctrl.presentedViewController.isBeingDismissed) {
+        ctrl = ctrl.presentedViewController;
+    }
     
+    UIView *videoView = [UIView new];
+    videoView.backgroundColor = [UIColor redColor];
+    
+    FullScreenViewController *vc = [[FullScreenViewController alloc] init];
+    [vc.view addSubview:videoView];
+    [videoView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(0.f);
+    }];
+    
+    [ctrl presentViewController:vc animated:NO completion:nil];
     
 }
 

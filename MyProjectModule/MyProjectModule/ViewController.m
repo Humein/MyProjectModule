@@ -20,11 +20,17 @@
 
 
 
+#define WEAKSELF typeof(self) __weak weakSelf = self;
+
+#define STRONGSELF typeof(weakSelf) __strong strongSelf = weakSelf;
+
+
 #import "ViewController.h"
 #import "PopTableView.h"
 #import "AlertTableView.h"
 #import "CellModel.h"
 #import "AbstractTableViewCell.h"
+#import "HitEventStrikeView.h"
 @interface ViewController ()<AlertTableViewDelegate>
 @property (nonatomic,strong)AlertTableView *tableView;
 @property (nonatomic,strong)NSMutableArray *itemList;
@@ -33,6 +39,20 @@
 @implementation ViewController
 
 #pragma mark --- lifeCycle
+
+- (void)loadView {
+    //    AlertTableView事件穿透
+    WEAKSELF;
+    self.view = [HitEventStrikeView viewWithFrame:[UIScreen mainScreen].bounds hitTestBlock:^UIView * _Nullable(UIView * _Nullable hitView, CGPoint point, UIEvent * _Nullable event) {
+        STRONGSELF;
+        if ([hitView isKindOfClass:[AlertTableView class]]) {
+            return strongSelf.view;
+        }
+        return hitView;
+    }];
+}
+
+
 -(void)viewDidLoad{
     [super viewDidLoad];
 //    self.view.backgroundColor = [UIColor grayColor];
@@ -67,9 +87,10 @@
 #pragma mark --- PrivateMetho
 -(void)aleartView{
     //  AlertTableView
-    self.tableView.FromPoint = CGPointMake(0, 100);
+    self.view.backgroundColor = [UIColor redColor];
+    self.tableView.FromPoint = CGPointMake(0, 80);
     self.tableView.isSelectIndexToHidden= YES;
-    self.tableView.tableViewFrame= CGRectMake(0, 0, self.view.frame.size.width, 30*self.itemList.count + 20);
+    self.tableView.tableViewFrame= CGRectMake(0, 0 , self.view.frame.size.width, 30 * self.itemList.count);
     self.tableView.tableView.layer.cornerRadius= 4;
     self.tableView.tableView.contentInset=UIEdgeInsetsMake(0, 0, 0, 0);
     

@@ -141,6 +141,7 @@
 		79EEEAA6218FF6CC00848B59 /* Multi-CellTree-TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEAA5218FF6CC00848B59 /* Multi-CellTree-TableViewController.m */; };
 		79EEEAA9219014BD00848B59 /* PointTreeStatisTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEAA8219014BD00848B59 /* PointTreeStatisTableViewCell.m */; };
 		79EEEAAC2190156500848B59 /* PointTreeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEAAB2190156500848B59 /* PointTreeModel.m */; };
+		79EEEAB02191707A00848B59 /* HitEventStrikeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEAAF2191707A00848B59 /* HitEventStrikeView.m */; };
 		79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */; };
 		79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EE2151F84E003704D7 /* BlockViewController.m */; };
 		79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */; };
@@ -431,6 +432,8 @@
 		79EEEAA8219014BD00848B59 /* PointTreeStatisTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PointTreeStatisTableViewCell.m; sourceTree = "<group>"; };
 		79EEEAAA2190156500848B59 /* PointTreeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PointTreeModel.h; sourceTree = "<group>"; };
 		79EEEAAB2190156500848B59 /* PointTreeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PointTreeModel.m; sourceTree = "<group>"; };
+		79EEEAAE2191707A00848B59 /* HitEventStrikeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HitEventStrikeView.h; sourceTree = "<group>"; };
+		79EEEAAF2191707A00848B59 /* HitEventStrikeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HitEventStrikeView.m; sourceTree = "<group>"; };
 		79F9A5EA214FB09B003704D7 /* AlgorithmsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmsViewController.h; sourceTree = "<group>"; };
 		79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmsViewController.m; sourceTree = "<group>"; };
 		79F9A5ED2151F84E003704D7 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
@@ -931,6 +934,7 @@
 		339D6C7420EA285700AC535E /* DataTransmission  */ = {
 			isa = PBXGroup;
 			children = (
+				79EEEAAD2191704700848B59 /* Category */,
 				3340363A2154C67E006FCBA3 /* MemoryAndDiskCache */,
 				33759E6B212F9F9500D801C1 /* RunLoop */,
 				3378282E2108770600373A20 /* 线程 */,
@@ -1308,6 +1312,15 @@
 			path = ModelAndView;
 			sourceTree = "<group>";
 		};
+		79EEEAAD2191704700848B59 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				79EEEAAE2191707A00848B59 /* HitEventStrikeView.h */,
+				79EEEAAF2191707A00848B59 /* HitEventStrikeView.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		79F9A5E9214FB082003704D7 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
@@ -1534,6 +1547,7 @@
 				33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */,
 				79EEEA512182BD8C00848B59 /* LiveCommetChatTV.m in Sources */,
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
+				79EEEAB02191707A00848B59 /* HitEventStrikeView.m in Sources */,
 				79EEEA99218EEBCF00848B59 /* FullScreenViewController.m in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
