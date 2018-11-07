@@ -12,11 +12,13 @@
 #import "APPPayTool.h"
 #import "FullScreenViewController.h"
 #import "Masonry.h"
+#import "InterfacePlayerView.h"
 @interface PlayerViewController (){
     AbstractPlayerHelperManager *_player;
 
     
 }
+@property (nonatomic,strong) InterfacePlayerView *videoPlayer;
 
 @end
 
@@ -63,7 +65,7 @@
 }
 
 // 初始化播放器
-
+#warning ------- 
 - (void)initPlayerWithType:(EPlayerType)type{
     if (_player) {
         _player = nil;
@@ -82,12 +84,16 @@
         ctrl = ctrl.presentedViewController;
     }
     
-    UIView *videoView = [UIView new];
-    videoView.backgroundColor = [UIColor redColor];
+    
+    self.videoPlayer = [InterfacePlayerView new];
+    
+    self.videoPlayer.backgroundColor = [UIColor redColor];
+    
+    [self.videoPlayer.videoPlayer abs_play];
     
     FullScreenViewController *vc = [[FullScreenViewController alloc] init];
-    [vc.view addSubview:videoView];
-    [videoView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [vc.view addSubview:self.videoPlayer];
+    [self.videoPlayer mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0.f);
     }];
     

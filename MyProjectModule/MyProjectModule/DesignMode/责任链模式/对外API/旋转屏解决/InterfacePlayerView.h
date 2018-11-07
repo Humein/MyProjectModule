@@ -9,5 +9,7 @@
 #import "ResponOfChainManager.h"
 
 @interface InterfacePlayerView : ResponOfChainManager
+@property (nonatomic, strong) AbstractPlayerHelperManager *videoPlayer;
+@property (nonatomic, strong) ResponderAbstractView *controlView;
 
 @end

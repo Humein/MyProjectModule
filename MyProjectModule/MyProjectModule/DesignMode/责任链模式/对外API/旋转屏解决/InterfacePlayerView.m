@@ -12,14 +12,11 @@
 
 @interface InterfacePlayerView()
 
-@property (nonatomic, strong) AbstractPlayerHelperManager *videoPlayer;
-@property (nonatomic, strong) ResponderAbstractView *controlView;
 
 @end
 
 
 @implementation InterfacePlayerView
-
 
 
 
