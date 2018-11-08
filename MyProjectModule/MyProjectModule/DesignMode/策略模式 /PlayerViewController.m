@@ -89,7 +89,7 @@
     
     self.videoPlayer.backgroundColor = [UIColor redColor];
     
-    [self.videoPlayer.videoPlayer abs_play];
+    [self.videoPlayer exchangePlayItem:nil];
     
     FullScreenViewController *vc = [[FullScreenViewController alloc] init];
     [vc.view addSubview:self.videoPlayer];

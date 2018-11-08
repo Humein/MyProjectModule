@@ -9,7 +9,17 @@
 #import "ResponOfChainManager.h"
 
 @interface InterfacePlayerView : ResponOfChainManager
-@property (nonatomic, strong) AbstractPlayerHelperManager *videoPlayer;
-@property (nonatomic, strong) ResponderAbstractView *controlView;
 
+
+#pragma mark ---- 具体业务
+
+//界面出现
+- (void)viewWillAppear;
+
+//界面消失
+- (void)viewWilDisappear;
+
+//做播放的切换
+
+- (void)exchangePlayItem:(id )playItem;
 @end
