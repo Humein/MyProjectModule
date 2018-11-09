@@ -27,17 +27,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     __weak typeof (self) weakSelf = self;
-    [self initPlayerWithType:EPlayerType_ZSPlayer];
+//    [self initPlayerWithType:EPlayerType_ZSPlayer];
 
     UIButton *P1 = [UIButton createButtonWithFrame:CGRectMake(20, 150, 44, 44) title:@"ZS" titleColor:[UIColor blueColor] bgImageName:@"" actionBlock:^(UIButton *button) {
         
-        [weakSelf initPlayerWithType:EPlayerType_ZSPlayer];
+//        [weakSelf initPlayerWithType:EPlayerType_ZSPlayer];
     }];
     [self.view addSubview:P1];
     
     UIButton *P2 = [UIButton createButtonWithFrame:CGRectMake(64, 150, 44, 44) title:@"BJ" titleColor:[UIColor blueColor] bgImageName:@"" actionBlock:^(UIButton *button) {
         
-        [weakSelf initPlayerWithType:EPlayerType_BJPlayer];
+//        [weakSelf initPlayerWithType:EPlayerType_BJPlayer];
 
     }];
     [self.view addSubview:P2];
@@ -65,13 +65,9 @@
 }
 
 // 初始化播放器
-#warning ------- 
-- (void)initPlayerWithType:(EPlayerType)type{
-    if (_player) {
-        _player = nil;
-    }
-    _player = [[AbstractPlayerHelperManager alloc] initWithType:type];
-}
+
+
+
 
 
 -(void)play{

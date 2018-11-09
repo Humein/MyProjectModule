@@ -10,6 +10,8 @@
 #import "BJPlayerHelper.h"
 #import "ZSPlaterHelper.h"
 #import "AbstractPlayerProtocol.h"
+
+
 @interface AbstractPlayerHelperManager(){
     id <AbstractPlayerProtocol> _player;
 }
@@ -18,16 +20,10 @@
 
 @implementation AbstractPlayerHelperManager
 
-- (instancetype)initWithType:(EPlayerType)type{
-    self = [super init];
-    if (self) {
-        [self initPlayerWithType:type];
-    }
-    return self;
-}
+
 
 // 初始化播放器
-- (void)initPlayerWithType:(EPlayerType)type{
+- (void)exchangeItem:(EPlayerType)type{
     switch (type) {
         case EPlayerType_ZSPlayer:
         {
@@ -59,4 +55,6 @@
 {
     _player = nil;
 }
+
+
 @end

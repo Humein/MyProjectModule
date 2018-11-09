@@ -8,13 +8,13 @@
 
 #import "InterfacePlayerView.h"
 #import "AbstractPlayerHelperManager.h"//播放层
-#import "ResponderAbstractView.h"//控制层
+#import "ResponderControlView.h"//控制层
 
 @interface InterfacePlayerView()
 
 @property (nonatomic, strong) AbstractPlayerHelperManager *videoPlayer;
 
-@property (nonatomic, strong) ResponderAbstractView *controlView;
+@property (nonatomic, strong) ResponderControlView *controlView;
 
 @end
 
@@ -36,6 +36,8 @@
 
 -(void)setupContentView{
     
+    
+    
     [self addSubview:self.controlView];
     
     //设置链表
@@ -46,26 +48,26 @@
 
 
 #pragma mark ---- 事件联动
+
 - (void)attachPlayItem:(id )playItem
 {
     
     [super attachPlayItem:playItem];
-  
     
     [self logAllNextNode];
     
 }
 
 - (void)responseEvent:(NSInteger)eventType playItem:(id)playItem{
-    [self logAllNextNode];
-
+    
     self.nextNodeView ? [self.nextNodeView responseEvent:eventType playItem:playItem] : nil;
+    
+//  可以根据处理当前view
     
 
 }
 
-#pragma mark ---- 接口
-
+#pragma mark ---- 对外留的接口
 
 - (void)exchangePlayItem:(id )playItem
 {
@@ -93,10 +95,10 @@
 
 #pragma mark --- lazyload
 
-- (ResponderAbstractView*)controlView
+- (ResponderControlView *)controlView
 {
     if (_controlView == nil) {
-        _controlView= [[ResponderAbstractView alloc] initWithFrame:self.bounds];
+        _controlView= [[ResponderControlView alloc] initWithFrame:self.bounds];
     }
     return _controlView;
 }

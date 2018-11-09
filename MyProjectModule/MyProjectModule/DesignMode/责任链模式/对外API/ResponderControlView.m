@@ -6,16 +6,16 @@
 //  Copyright © 2018 xinxin. All rights reserved.
 //
 
-#import "ResponderAbstractView.h"
+#import "ResponderControlView.h"
 #import "HTTopControlView.h"
 #import "HTBottomControlView.h"
 #import "HTMiddleControlView.h"
 #import "UIResponder+UIResponderChain.h"
-@interface ResponderAbstractView()
+@interface ResponderControlView()
 /// 事件策略字典 key:事件名 value:事件的invocation对象
 @property (nonatomic, strong) NSDictionary *eventStrategy;
 @end
-@implementation ResponderAbstractView
+@implementation ResponderControlView
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self= [super initWithFrame:frame]) {

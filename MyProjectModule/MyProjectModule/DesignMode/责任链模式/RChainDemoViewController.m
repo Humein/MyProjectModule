@@ -8,7 +8,7 @@
 
 #import "RChainDemoViewController.h"
 #import "UIResponder+UIResponderChain.h"
-#import "ResponderAbstractView.h"
+#import "ResponderControlView.h"
 
 @interface RChainDemoViewController ()
 /// 事件策略字典 key:事件名 value:事件的invocation对象
@@ -43,7 +43,7 @@
 -(void)initALLView{
     
  
-    ResponderAbstractView  *RAView = [[ResponderAbstractView alloc]initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, 400)];
+    ResponderControlView  *RAView = [[ResponderControlView alloc]initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, 400)];
     
     RAView.backgroundColor = [UIColor grayColor];
     

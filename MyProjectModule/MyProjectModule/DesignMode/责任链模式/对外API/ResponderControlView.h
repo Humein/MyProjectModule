@@ -11,6 +11,6 @@
 
 
 
-@interface ResponderAbstractView : ResponOfChainManager
+@interface ResponderControlView : ResponOfChainManager
 
 @end

@@ -6,7 +6,8 @@
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+
+#import "ResponOfChainManager.h"
 // 播放器的类型
 typedef enum : NSUInteger {
     EPlayerType_ZSPlayer,
@@ -14,8 +15,14 @@ typedef enum : NSUInteger {
 } EPlayerType;
 
 
-@interface AbstractPlayerHelperManager : NSObject
-- (instancetype)initWithType:(EPlayerType)type;
+@interface AbstractPlayerHelperManager : ResponOfChainManager
+
+
+
+//这里的切换，只让切换播放器即可
+
+- (void)exchangeItem:(EPlayerType )playItem;
+
 
 /**
  *  Player开启视频
