@@ -66,8 +66,6 @@
 		339B535520F4B078003444CB /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B535420F4B078003444CB /* PlayerViewController.m */; };
 		339B536020F4B28B003444CB /* BJPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B535F20F4B28B003444CB /* BJPlayer.m */; };
 		339B536320F4B29B003444CB /* ZSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B536220F4B29B003444CB /* ZSPlayer.m */; };
-		339B536620F4B39B003444CB /* ZSPlaterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B536520F4B39B003444CB /* ZSPlaterHelper.m */; };
-		339B536920F4B3CC003444CB /* BJPlayerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B536820F4B3CC003444CB /* BJPlayerHelper.m */; };
 		339B536C20F4B450003444CB /* AbstractPlayerHelperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B536B20F4B450003444CB /* AbstractPlayerHelperManager.m */; };
 		339B536E20F4B486003444CB /* AbstractPlayerProtocol.h in Sources */ = {isa = PBXBuildFile; fileRef = 339B536D20F4B486003444CB /* AbstractPlayerProtocol.h */; };
 		33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32ADA20D90681008C3969 /* SegmentContentView.m */; };
@@ -143,6 +141,9 @@
 		79EEEAAC2190156500848B59 /* PointTreeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEAAB2190156500848B59 /* PointTreeModel.m */; };
 		79EEEAB02191707A00848B59 /* HitEventStrikeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEAAF2191707A00848B59 /* HitEventStrikeView.m */; };
 		79EEEAB321957A5A00848B59 /* ResponderPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEAB221957A5A00848B59 /* ResponderPlayerView.m */; };
+		79EEEAB92195973B00848B59 /* BJPlayerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEAB52195973B00848B59 /* BJPlayerHelper.m */; };
+		79EEEABA2195973B00848B59 /* ZSPlaterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEAB62195973B00848B59 /* ZSPlaterHelper.m */; };
+		79EEEABD2195975B00848B59 /* AbstractPlayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEEABC2195975B00848B59 /* AbstractPlayHelper.m */; };
 		79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */; };
 		79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EE2151F84E003704D7 /* BlockViewController.m */; };
 		79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */; };
@@ -288,10 +289,6 @@
 		339B535F20F4B28B003444CB /* BJPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJPlayer.m; sourceTree = "<group>"; };
 		339B536120F4B29B003444CB /* ZSPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSPlayer.h; sourceTree = "<group>"; };
 		339B536220F4B29B003444CB /* ZSPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSPlayer.m; sourceTree = "<group>"; };
-		339B536420F4B39B003444CB /* ZSPlaterHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSPlaterHelper.h; sourceTree = "<group>"; };
-		339B536520F4B39B003444CB /* ZSPlaterHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSPlaterHelper.m; sourceTree = "<group>"; };
-		339B536720F4B3CC003444CB /* BJPlayerHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJPlayerHelper.h; sourceTree = "<group>"; };
-		339B536820F4B3CC003444CB /* BJPlayerHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJPlayerHelper.m; sourceTree = "<group>"; };
 		339B536A20F4B450003444CB /* AbstractPlayerHelperManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractPlayerHelperManager.h; sourceTree = "<group>"; };
 		339B536B20F4B450003444CB /* AbstractPlayerHelperManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractPlayerHelperManager.m; sourceTree = "<group>"; };
 		339B536D20F4B486003444CB /* AbstractPlayerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractPlayerProtocol.h; sourceTree = "<group>"; };
@@ -437,6 +434,12 @@
 		79EEEAAF2191707A00848B59 /* HitEventStrikeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HitEventStrikeView.m; sourceTree = "<group>"; };
 		79EEEAB121957A5A00848B59 /* ResponderPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponderPlayerView.h; sourceTree = "<group>"; };
 		79EEEAB221957A5A00848B59 /* ResponderPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponderPlayerView.m; sourceTree = "<group>"; };
+		79EEEAB52195973B00848B59 /* BJPlayerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJPlayerHelper.m; sourceTree = "<group>"; };
+		79EEEAB62195973B00848B59 /* ZSPlaterHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSPlaterHelper.m; sourceTree = "<group>"; };
+		79EEEAB72195973B00848B59 /* ZSPlaterHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSPlaterHelper.h; sourceTree = "<group>"; };
+		79EEEAB82195973B00848B59 /* BJPlayerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJPlayerHelper.h; sourceTree = "<group>"; };
+		79EEEABB2195975B00848B59 /* AbstractPlayHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractPlayHelper.h; sourceTree = "<group>"; };
+		79EEEABC2195975B00848B59 /* AbstractPlayHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractPlayHelper.m; sourceTree = "<group>"; };
 		79F9A5EA214FB09B003704D7 /* AlgorithmsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmsViewController.h; sourceTree = "<group>"; };
 		79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmsViewController.m; sourceTree = "<group>"; };
 		79F9A5ED2151F84E003704D7 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
@@ -896,10 +899,7 @@
 		339B535220F4B05C003444CB /* PlayerStrategy */ = {
 			isa = PBXGroup;
 			children = (
-				339B536420F4B39B003444CB /* ZSPlaterHelper.h */,
-				339B536520F4B39B003444CB /* ZSPlaterHelper.m */,
-				339B536720F4B3CC003444CB /* BJPlayerHelper.h */,
-				339B536820F4B3CC003444CB /* BJPlayerHelper.m */,
+				79EEEAB42195973B00848B59 /* AbstractPlayerSDKAPI */,
 				339B536A20F4B450003444CB /* AbstractPlayerHelperManager.h */,
 				339B536B20F4B450003444CB /* AbstractPlayerHelperManager.m */,
 				339B536D20F4B486003444CB /* AbstractPlayerProtocol.h */,
@@ -1326,6 +1326,19 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		79EEEAB42195973B00848B59 /* AbstractPlayerSDKAPI */ = {
+			isa = PBXGroup;
+			children = (
+				79EEEAB52195973B00848B59 /* BJPlayerHelper.m */,
+				79EEEAB62195973B00848B59 /* ZSPlaterHelper.m */,
+				79EEEAB72195973B00848B59 /* ZSPlaterHelper.h */,
+				79EEEAB82195973B00848B59 /* BJPlayerHelper.h */,
+				79EEEABB2195975B00848B59 /* AbstractPlayHelper.h */,
+				79EEEABC2195975B00848B59 /* AbstractPlayHelper.m */,
+			);
+			path = AbstractPlayerSDKAPI;
+			sourceTree = "<group>";
+		};
 		79F9A5E9214FB082003704D7 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
@@ -1565,12 +1578,12 @@
 				333D106520CE74AB004D9241 /* main.m in Sources */,
 				33E6CDD5210034E300422FC7 /* CellModel.m in Sources */,
 				339B536E20F4B486003444CB /* AbstractPlayerProtocol.h in Sources */,
+				79EEEABD2195975B00848B59 /* AbstractPlayHelper.m in Sources */,
 				33A32ADE20D90717008C3969 /* SegementTitleView.m in Sources */,
 				339B534A20F4AB2A003444CB /* ZTKLLDownHelper.m in Sources */,
 				33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */,
 				338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */,
 				3362E6A22130FC1300A4B26D /* FBKVOViewController.m in Sources */,
-				339B536920F4B3CC003444CB /* BJPlayerHelper.m in Sources */,
 				33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */,
 				79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */,
 				33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */,
@@ -1627,15 +1640,16 @@
 				337828232108539800373A20 /* UIImage+BaseFilter.m in Sources */,
 				3340363D2154C69C006FCBA3 /* MemoryCache.m in Sources */,
 				339B536C20F4B450003444CB /* AbstractPlayerHelperManager.m in Sources */,
+				79EEEABA2195973B00848B59 /* ZSPlaterHelper.m in Sources */,
 				33C97118211E81D800EAAD5E /* ApplePay.m in Sources */,
 				79EEEAA2218FF5E600848B59 /* TreeModel.m in Sources */,
 				339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */,
 				79EEEA592182C13A00848B59 /* LiveCommentDemoViewController.m in Sources */,
+				79EEEAB92195973B00848B59 /* BJPlayerHelper.m in Sources */,
 				79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */,
 				33C97111211E7C3700EAAD5E /* APPPayTool.m in Sources */,
 				335ABFAE2160C0BD00770703 /* AnimationExample.m in Sources */,
 				33888FDE20F05E3500E4A119 /* SegmentContentCell.m in Sources */,
-				339B536620F4B39B003444CB /* ZSPlaterHelper.m in Sources */,
 				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
 				333651B82180543E00286C7A /* AttributeAndPredicateWithLink.m in Sources */,
 				339B535020F4AF35003444CB /* UIButton+ButtonBlockCategory.m in Sources */,

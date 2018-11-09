@@ -76,7 +76,7 @@
     
     
     
-//    绑定视图
+//    控制层 绑定视图
     
     self.nextView(top).nextView(mid).nextView(bot);
     

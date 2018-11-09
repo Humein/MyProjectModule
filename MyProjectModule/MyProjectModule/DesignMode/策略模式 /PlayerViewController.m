@@ -71,7 +71,7 @@
 
 
 -(void)play{
-    NSLog(@"%@",_player ? [_player abs_play] : @"空"  );
+//    NSLog(@"%@",_player ? [_player abs_play] : @"空"  );
     
 
 //    TODO 旋转屏
@@ -98,12 +98,12 @@
 }
 
 -(void)pause{
-    NSLog(@"%@",_player ? [_player abs_pause] : @"空"  );
+//    NSLog(@"%@",_player ? [_player abs_pause] : @"空"  );
 
 }
 
 -(void)stop{
-    NSLog(@"%@",_player ? [_player abs_stop] : @"空"  );
+//    NSLog(@"%@",_player ? [_player abs_stop] : @"空"  );
 
 }
 

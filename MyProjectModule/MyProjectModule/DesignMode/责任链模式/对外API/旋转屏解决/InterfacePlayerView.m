@@ -7,12 +7,12 @@
 //
 
 #import "InterfacePlayerView.h"
-#import "AbstractPlayerHelperManager.h"//播放层
+#import "ResponderPlayerView.h"//播放层
 #import "ResponderControlView.h"//控制层
 
 @interface InterfacePlayerView()
 
-@property (nonatomic, strong) AbstractPlayerHelperManager *videoPlayer;
+@property (nonatomic, strong) ResponderPlayerView *videoPlayer;
 
 @property (nonatomic, strong) ResponderControlView *controlView;
 
@@ -37,11 +37,11 @@
 -(void)setupContentView{
     
     
-    
+    [self addSubview:self.videoPlayer];
     [self addSubview:self.controlView];
     
     //设置链表
-    self.nextView(self.controlView);
+    self.nextView(self.controlView).nextView(self.videoPlayer);
     
 }
 
@@ -101,6 +101,14 @@
         _controlView= [[ResponderControlView alloc] initWithFrame:self.bounds];
     }
     return _controlView;
+}
+
+- (ResponderPlayerView *)videoPlayer
+{
+    if (_videoPlayer == nil) {
+        _videoPlayer= [[ResponderPlayerView alloc] initWithFrame:self.bounds];
+    }
+    return _videoPlayer;
 }
 
 

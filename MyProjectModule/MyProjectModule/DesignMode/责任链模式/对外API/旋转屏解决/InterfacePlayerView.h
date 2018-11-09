@@ -6,6 +6,19 @@
 //  Copyright © 2018 xinxin. All rights reserved.
 //
 
+/*
+ 
+ 一下都继承 ResponOfChainManager
+ 
+ HTPlayerView(InterfacePlayerView) { ResponderPlayerView + ResponderControlView}
+ ResponderPlayerView { AbstractPlayerHelperManager < 播放API > }
+ ResponderControlView(ResponderControlView) {各个控制层（Top mid Bot）}
+ 
+ */
+
+
+
+
 #import "ResponOfChainManager.h"
 
 @interface InterfacePlayerView : ResponOfChainManager

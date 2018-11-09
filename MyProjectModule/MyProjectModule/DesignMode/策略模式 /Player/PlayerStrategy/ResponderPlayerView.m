@@ -21,10 +21,10 @@
 {
     if (self= [super initWithFrame:frame]) {
         
-//        链条绑定
+//       视频 链条绑定
         [self addSubview:self.videoPlayer];
         
-        self.nextView(self.videoPlayer);
+         self.nextView(self.videoPlayer);
     }
     return self;
 }
@@ -33,7 +33,26 @@
 
 
 
+// 播放器事件入口
+- (void)responseEvent:(NSInteger)eventType playItem:(id )playItem{
+    
+    NSLog(@"%@======%ld",NSStringFromClass([self class]),(long)eventType);
+    
+    [super responseEvent:eventType playItem:playItem];
 
+    switch (eventType) {
+        case HTVideoPlayEvent:
+
+
+            break;
+            
+        default:
+            break;
+    }
+    
+    
+    
+}
 
 
 
