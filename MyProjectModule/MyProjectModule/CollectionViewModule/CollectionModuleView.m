@@ -8,7 +8,7 @@
 
 #import "CollectionModuleView.h"
 #import "CarouselLayout.h"
-
+#import "WaterfallLayout.h"
 
 @interface CollectionModuleView ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate>
 @property (nonatomic,strong)UICollectionView *collectionView;
@@ -80,10 +80,17 @@
         };
         carouselLayout.itemSize                         = CGSizeMake(190, 262);
         
-//        瀑布流
+//        瀑布流(标签)
+        
+        UICollectionViewFlowLayout *waterLayout = [self setupFlowLayout];
+
+        
+        
         
         
         _collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:carouselLayout];
+        
+        
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.dataSource=self;
@@ -97,6 +104,24 @@
     }
     return _collectionView;
 }
+
+
+//collectionCell自适应宽度 1
+- (UICollectionViewFlowLayout *)setupFlowLayout {
+    
+    WaterfallLayout *layout = [[WaterfallLayout alloc] init];
+    
+    layout.estimatedItemSize = CGSizeMake(80, 30);
+    
+    CGFloat space = 15;
+    layout.minimumInteritemSpacing = space;
+    layout.minimumLineSpacing = space;
+    layout.sectionInset = UIEdgeInsetsMake((10), space, (10), space);
+    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    
+    return layout;
+}
+
 
 - (void)setDirection:(ScrollDirection)direction
 {

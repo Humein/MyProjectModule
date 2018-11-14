@@ -36,4 +36,23 @@
     self.titleLabel.text = @"23212131231232";
 }
 
+// overLoad collectionCell自适应宽度 2
+- (UICollectionViewLayoutAttributes *)preferredLayoutAttributesFittingAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes {
+    // 获得每个cell的属性集
+    UICollectionViewLayoutAttributes *attributes = [super preferredLayoutAttributesFittingAttributes:layoutAttributes];
+    // 计算cell里面textfield的宽度
+    CGRect frame = [self.titleLabel.text boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, 30) options:(NSStringDrawingUsesLineFragmentOrigin) attributes:[NSDictionary dictionaryWithObjectsAndKeys:self.titleLabel.font,NSFontAttributeName, nil] context:nil];
+    
+    // 这里在本身宽度的基础上 又增加了10
+    frame.size.width += 10;
+    frame.size.height = 30;
+    
+    // 重新赋值给属性集
+    attributes.frame = frame;
+    
+    return attributes;
+}
+
+
+
 @end
