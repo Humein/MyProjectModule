@@ -8,6 +8,7 @@
 
 #import "BlockViewController.h"
 #import "CallbackAndCompletionHandlerForBlock.h"
+#import "SimulationChainFucCode.h"
 @interface BlockViewController ()
 
 @end
@@ -27,6 +28,7 @@
     
     [self chanedCode];
     
+    [self simulation];
 }
 
 //导航
@@ -125,6 +127,18 @@
     
     BlockObject *bjOvew = [[BlockObject alloc] init];
     bjOvew.eat5(@"面包").run5(18.5).eat5(@"牛奶").run5(28.5);
+    
+    
+}
+
+// 模拟 masonry
+-(void)simulation{
+    
+    [self.view addSubview:[SimulationChainFucCode initWith:^(SimulationChainFucCode *View) {
+        
+        View.viewFrame(CGRectMake(100, 200, 20, 20)).layerCornerRadious(2).ColorString(@"颜色自己设置");
+        
+    }]];
     
     
 }

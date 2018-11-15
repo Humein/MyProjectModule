@@ -117,6 +117,7 @@
 		33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F320E2459200BE7175 /* SectionFModel.m */; };
 		33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F420E2459200BE7175 /* CellFModel.m */; };
 		33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */; };
+		79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79402223219D59A20008A3AD /* SimulationChainFucCode.m */; };
 		79BFDCDF2142A15200C81069 /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BFDCDE2142A14700C81069 /* Detail.md */; };
 		79BFDCE52142A16000C81069 /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BFDCE22142A16000C81069 /* Detail.md */; };
 		79BFDCE62142A16000C81069 /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BFDCE42142A16000C81069 /* Detail.md */; };
@@ -391,6 +392,8 @@
 		33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractFCollectionView.m; sourceTree = "<group>"; };
 		37274BAA150B3CCC94945653 /* Pods_MyProjectModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C26993B1DAA4E4068C6E736 /* Pods-MyProjectModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.debug.xcconfig"; sourceTree = "<group>"; };
+		79402222219D59A20008A3AD /* SimulationChainFucCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulationChainFucCode.h; sourceTree = "<group>"; };
+		79402223219D59A20008A3AD /* SimulationChainFucCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulationChainFucCode.m; sourceTree = "<group>"; };
 		79BFDCDE2142A14700C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = SOURCE_ROOT; };
 		79BFDCE22142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE42142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
@@ -745,6 +748,8 @@
 			children = (
 				338FEBF920E0E3FC0025631B /* BlockObject.h */,
 				338FEBFA20E0E3FC0025631B /* BlockObject.m */,
+				79402222219D59A20008A3AD /* SimulationChainFucCode.h */,
+				79402223219D59A20008A3AD /* SimulationChainFucCode.m */,
 				79F9A5F02151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.h */,
 				79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */,
 				79F9A5F3215214B4003704D7 /* NSTimer+WeakTimerBlock.h */,
@@ -1557,6 +1562,7 @@
 				33888FC320EDCCCB00E4A119 /* CAGradientLayerDemo.m in Sources */,
 				79EEEAAC2190156500848B59 /* PointTreeModel.m in Sources */,
 				33FAE4D820E243B800BE7175 /* CollectionDetaiDemo.m in Sources */,
+				79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */,
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
 				33759E77212FAA7200D801C1 /* NSObject+RuntimeHelper.m in Sources */,
 				339B534920F4AB2A003444CB /* ZTKDownHelperManager.m in Sources */,

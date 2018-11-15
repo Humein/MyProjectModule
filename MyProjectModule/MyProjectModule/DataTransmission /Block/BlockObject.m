@@ -102,7 +102,6 @@
             mutableArray = [NSMutableArray array];
         }
         
-        
 //         通过 函数式编程和链式编程 将barButtonItem 一一添加到数组里面（装饰者？？？）
         [mutableArray insertObject:barButtonItem atIndex:0];
         

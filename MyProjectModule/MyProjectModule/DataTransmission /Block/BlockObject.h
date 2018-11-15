@@ -11,14 +11,14 @@
 @interface BlockObject : UIViewController
 
 
-//>>>>> 1 无返回值 有参数 非匿名(属性) block
+#pragma mark ---  1 无返回值 有参数 非匿名(属性) block
 typedef void (^PopBlock)(void);
 @property (nonatomic,copy)  void (^rightBarItemClickBlock)(UIButton *button, NSInteger index);
 @property (nonatomic,copy) PopBlock popBlock;
 
 
 
-//>>>>2 无返回值 有参数 匿名(参数)  block （1-异步回调  2- 无需实例对象 配置对象的参数）
+#pragma mark --- 2 无返回值 有参数 匿名(参数)  block （1-异步回调  2- 无需实例对象 配置对象的参数）
 
 typedef void(^Success)(id data);
 typedef void(^Failure)(NSString *errorMessage);
@@ -35,9 +35,11 @@ typedef void (^IDBlock)(id configModel);
 
 
 
-//>>>>>3 有返回值 有参数 匿名 block
+#pragma mark --- 3 有返回值 有参数 匿名 block
 //创建NavigationBarItem    block作为返回值,链式编程
 - (BlockObject * (^) (NSString * rightName,CGRect frame,BOOL isImage))rightBarItem;
+
+
 
 
 
@@ -53,18 +55,23 @@ typedef void (^IDBlock)(id configModel);
 
 
 //函数式编程
-#pragma mark -- 函数式编程步骤1 -> 调用方法使用小括号
+// -- 函数式编程步骤1 -> 调用方法使用小括号
 
 - (void (^)(void))run3;
 - (void (^)(void))eat3;
 
-#pragma mark -- 函数式编程步骤2 --> 链式调用多个方法
+// -- 函数式编程步骤2 --> 链式调用多个方法
 - (BlockObject * (^)(void))run4;
 - (BlockObject * (^)(void))eat4;
 
-#pragma mark -- 函数式编程步骤3 --> 传递参数
+// -- 函数式编程步骤3 --> 传递参数
 //函数式编程和链式编程
 - (BlockObject * (^)(double distance))run5;
 - (BlockObject * (^)(NSString *kindOfFood))eat5;
+
+
+
+
+
 
 @end
