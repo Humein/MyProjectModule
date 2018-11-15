@@ -22,6 +22,11 @@
     [self CallbackAndCompletionHandlerForBlock];
     
     
+    
+    [self fucntionCode];
+    
+    [self chanedCode];
+    
 }
 
 //导航
@@ -88,5 +93,40 @@
     
 }
 
+
+//实现链式编程
+-(void)chanedCode{
+
+    BlockObject *bj = [[BlockObject alloc] init];
+    
+    [[[[bj run2] eat2] eat2] run2];
+    
+//    BlockObject *bjN = bj.run2.eat2;
+    
+    
+    
+}
+
+
+//实现函数式编程
+-(void)fucntionCode{
+    
+    // 第一步  使用小括号
+    BlockObject *bj = [[BlockObject alloc] init];
+    bj.run3();
+    bj.eat3();
+    
+    // 第二步  实现多个方法调用
+    BlockObject *bj1 = [[BlockObject alloc] init];
+    bj1.eat4().eat4().run4().eat4();
+    
+    
+    // 第三步 传递参数
+    
+    BlockObject *bjOvew = [[BlockObject alloc] init];
+    bjOvew.eat5(@"面包").run5(18.5).eat5(@"牛奶").run5(28.5);
+    
+    
+}
 
 @end

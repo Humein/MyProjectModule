@@ -20,7 +20,60 @@
 
 @implementation BlockObject
 
-// <1> x属性
+
+
+- (void)rightButtonClick:(UIButton*)rightButton
+{
+    int index= 0;
+    
+    for (UIBarButtonItem *buttonItem in self.navigationItem.rightBarButtonItems) {
+        
+        if (buttonItem.customView == rightButton) {
+            break;
+        }
+        index++;
+    }
+    self.rightBarItemClickBlock ? self.rightBarItemClickBlock (rightButton,index) : nil;
+}
+
+
+
+- (void)requestNoticeDataWithParameter:(NSDictionary *)dic isWaiting:(BOOL)isWaiting success:(Success)success failure:(Failure)failure{
+    
+    if (success) {
+        success(@"");
+    }
+    
+    if (failure) {
+        failure(@"");
+    }
+    
+}
+
+- (void)jumpConfig:(IDBlock )configBlock completeBlock:(MiniProgramResultBlock)completeBlock{
+
+    // 正传
+//    __block HTMiniProgramModel *configItem = [[HTMiniProgramModel alloc] init];
+//    if (configBlock)
+//    {
+//        configBlock(configItem);
+//    }
+//    _configItem = configItem;
+//
+    //逆传
+    _completeBlock = completeBlock;
+    if (YES)
+    {
+        _completeBlock ? _completeBlock(YES) : nil;
+        return;
+    }
+    
+    
+}
+
+
+// Masonry中正是使用了 函数式编程与链式编程 的方式
+
 - (BlockObject * (^) (NSString * rightName,CGRect frame,BOOL isImage))rightBarItem
 {
     BlockObject * (^rightItemBlock) (NSString * rightName,CGRect frame,BOOL isImage)= ^(NSString * rightName,CGRect frame,BOOL isImage){
@@ -49,6 +102,8 @@
             mutableArray = [NSMutableArray array];
         }
         
+        
+//         通过 函数式编程和链式编程 将barButtonItem 一一添加到数组里面（装饰者？？？）
         [mutableArray insertObject:barButtonItem atIndex:0];
         
         self.navigationItem.rightBarButtonItems= nil;
@@ -62,53 +117,69 @@
 }
 
 
-- (void)rightButtonClick:(UIButton*)rightButton
-{
-    int index= 0;
+
+
+#pragma mark -- 链式编程
+- (BlockObject *)run2{
+    NSLog(@"跑肚");
+    return self;
+}
+- (BlockObject *)eat2{
+    NSLog(@"吃东西");
+    return self;
+}
+
+#pragma mark -- 函数式编程 1
+- (void (^)(void))run3{
     
-    for (UIBarButtonItem *buttonItem in self.navigationItem.rightBarButtonItems) {
+    void(^MyBlock)(void) = ^{
+        NSLog(@"跑步3");
+    };
+    
+    return MyBlock;
+
+}
+
+- (void (^)(void))eat3{
+    
+    // 在run3的基础上,将block的定义和返回合并
+    return ^{
+        NSLog(@"吃饭3");
+    };
+}
+
+#pragma mark -- 函数式编程 2
+- (BlockObject * (^)(void))run4{
+    
+    BlockObject * (^MyBlock)(void) = ^{
         
-        if (buttonItem.customView == rightButton) {
-            break;
-        }
-        index++;
-    }
-    self.rightBarItemClickBlock ? self.rightBarItemClickBlock (rightButton,index) : nil;
+        NSLog(@"跑步4");
+        return self;
+    };
+    
+    return MyBlock;
+}
+- (BlockObject * (^)(void))eat4{
+    
+    return ^{
+        NSLog(@"吃饭4");
+        return self;
+    };
+}
+
+#pragma mark -- 函数式编程 3
+- (BlockObject *(^)(double))run5{
+    return ^(double distance){
+        NSLog(@"跑了%.2f米",distance);
+        return self;
+    };
+}
+- (BlockObject *(^)(NSString *))eat5{
+    return ^(NSString *kindOfFood){
+        NSLog(@"吃了%@",kindOfFood);
+        return self;
+    };
 }
 
 
-//<2>
- //网络请求
-- (void)requestNoticeDataWithParameter:(NSDictionary *)dic isWaiting:(BOOL)isWaiting success:(Success)success failure:(Failure)failure{
-    
-    if (success) {
-        success(@"");
-    }
-    
-    if (failure) {
-        failure(@"");
-    }
-    
-}
-
-- (void)jumpConfig:(modelBlock)configBlock completeBlock:(MiniProgramResultBlock)completeBlock{
-
-    // 正传
-//    __block HTMiniProgramModel *configItem = [[HTMiniProgramModel alloc] init];
-//    if (configBlock)
-//    {
-//        configBlock(configItem);
-//    }
-//    _configItem = configItem;
-//
-    //逆传
-    _completeBlock = completeBlock;
-    if (YES)
-    {
-        _completeBlock ? _completeBlock(YES) : nil;
-        return;
-    }
-    
-    
-}
 @end

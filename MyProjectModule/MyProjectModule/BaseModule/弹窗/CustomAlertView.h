@@ -16,11 +16,15 @@ typedef enum : NSUInteger {
     ZoomTransfer
 } POPAnimation;
 
-// 无返回值 有参数 非匿名 block
+// 1 无返回值 有参数 非匿名 block
 typedef void(^ClickButtonBlock)(POPAnimation buttonType, UIButton * clickButton);
 
 
 @interface CustomAlertView : UIView
+
+@property (nonatomic,copy) ClickButtonBlock clickBlock;
+
+
 
 //显示方式
 @property (nonatomic,assign) POPAnimation transferType;
@@ -42,11 +46,10 @@ typedef void(^ClickButtonBlock)(POPAnimation buttonType, UIButton * clickButton)
 - (void)showCustomView:(UIView *)customView InView:(UIView*)view;
 
 
-//无返回值 有参数 匿名  block （1-异步回调  2- 无需实例对象 配置对象的参数）
+//2 无返回值 有参数 匿名  block （1-异步回调  2- 无需实例对象 配置对象的参数）
 
 -(void)showCustomView:(void(^)(UIView *customView))config completionBlock:(void (^)(NSInteger index))block;
 
 
-@property (nonatomic,copy) ClickButtonBlock clickBlock;
 
 @end
