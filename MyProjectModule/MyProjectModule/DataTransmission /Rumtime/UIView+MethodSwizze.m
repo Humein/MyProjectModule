@@ -134,6 +134,7 @@ CGRect HitTestingBounds(CGRect bounds, CGFloat minimumHitTestWidth, CGFloat mini
  点击超出Tabbar bounds的区域也需要响应，此时重载父view的-(UIView *)hitTest: withEvent:方法，去掉点击必须在父view内的判断，然后子view就能成为 hit-test view用于响应事件了
  */
 #warning -------- 滥用导致无法定位的bug 不可以点击屏幕 self.isHidden == YES
+
 - (UIView *)CP0_hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     if (!self.isUserInteractionEnabled || self.isHidden || self.alpha <= 0.01) return nil;
     //判断点在不在这个视图里

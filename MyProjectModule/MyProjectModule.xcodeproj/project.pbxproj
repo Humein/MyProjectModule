@@ -117,6 +117,7 @@
 		33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F320E2459200BE7175 /* SectionFModel.m */; };
 		33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F420E2459200BE7175 /* CellFModel.m */; };
 		33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */; };
+		7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */; };
 		79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79402223219D59A20008A3AD /* SimulationChainFucCode.m */; };
 		79BFDCDF2142A15200C81069 /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BFDCDE2142A14700C81069 /* Detail.md */; };
 		79BFDCE52142A16000C81069 /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BFDCE22142A16000C81069 /* Detail.md */; };
@@ -392,6 +393,8 @@
 		33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractFCollectionView.m; sourceTree = "<group>"; };
 		37274BAA150B3CCC94945653 /* Pods_MyProjectModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C26993B1DAA4E4068C6E736 /* Pods-MyProjectModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.debug.xcconfig"; sourceTree = "<group>"; };
+		7929B49B219FE74B004D335E /* RunLoopDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopDemoViewController.h; sourceTree = "<group>"; };
+		7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopDemoViewController.m; sourceTree = "<group>"; };
 		79402222219D59A20008A3AD /* SimulationChainFucCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulationChainFucCode.h; sourceTree = "<group>"; };
 		79402223219D59A20008A3AD /* SimulationChainFucCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulationChainFucCode.m; sourceTree = "<group>"; };
 		79BFDCDE2142A14700C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = SOURCE_ROOT; };
@@ -605,6 +608,7 @@
 		3340363A2154C67E006FCBA3 /* MemoryAndDiskCache */ = {
 			isa = PBXGroup;
 			children = (
+				7929B499219FE705004D335E /* RunLoop */,
 				3340363B2154C69C006FCBA3 /* MemoryCache.h */,
 				3340363C2154C69C006FCBA3 /* MemoryCache.m */,
 			);
@@ -629,13 +633,6 @@
 				3362E6A12130FC1300A4B26D /* FBKVOViewController.m */,
 			);
 			path = FacebookKVO;
-			sourceTree = "<group>";
-		};
-		33759E6B212F9F9500D801C1 /* RunLoop */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RunLoop;
 			sourceTree = "<group>";
 		};
 		3378280521081E5D00373A20 /* 装饰者模式 */ = {
@@ -944,9 +941,9 @@
 		339D6C7420EA285700AC535E /* DataTransmission  */ = {
 			isa = PBXGroup;
 			children = (
+				7929B49A219FE72A004D335E /* RunLoop */,
 				79EEEAAD2191704700848B59 /* Category */,
 				3340363A2154C67E006FCBA3 /* MemoryAndDiskCache */,
-				33759E6B212F9F9500D801C1 /* RunLoop */,
 				3378282E2108770600373A20 /* 线程 */,
 				33888FD720F05B1400E4A119 /* Rumtime */,
 				33888FD620F05B0F00E4A119 /* Block */,
@@ -1214,6 +1211,23 @@
 				A36D58F14EAF98187791F3CA /* Pods-MyProjectModule.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		7929B499219FE705004D335E /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RunLoop;
+			path = "MyProjectModule/DataTransmission /RunLoop";
+			sourceTree = SOURCE_ROOT;
+		};
+		7929B49A219FE72A004D335E /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				7929B49B219FE74B004D335E /* RunLoopDemoViewController.h */,
+				7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */,
+			);
+			path = RunLoop;
 			sourceTree = "<group>";
 		};
 		79BFDCE02142A16000C81069 /* NetRequstAndSocket */ = {
@@ -1674,6 +1688,7 @@
 				33759E7D212FABBA00D801C1 /* NSObject+KVOHelper.m in Sources */,
 				79EEEAA1218FF5E600848B59 /* TreeViewModel.m in Sources */,
 				33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */,
+				7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */,
 				33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */,
 				33C971402124108D00EAAD5E /* CustomAlertViewDefault.m in Sources */,
 				33782826210853AD00373A20 /* UIImage+Transform.m in Sources */,
