@@ -7,9 +7,11 @@
 //
 
 #import "ThreadViewController.h"
-#import "ThraadSafeViewController.h"
-@interface ThreadViewController ()
-
+#import "NSTimerObserver.h"
+@interface ThreadViewController ()<TimerObserver>
+{
+    int _i;
+}
 @property (strong, nonatomic, nonnull) dispatch_queue_t coderQueue; // the queue to do image decoding
 
 @end
@@ -22,7 +24,7 @@
     [self GCDGroup];
     [self semaphore];
     
-    
+    [[NSTimerObserver sharedInstance] addTimerObserver:self];
 
     
 }
@@ -63,13 +65,16 @@
     
     
     
-    ThraadSafeViewController *safeVC = [ThraadSafeViewController new];
-    [self.navigationController pushViewController:safeVC animated:YES];
+    [[NSTimerObserver sharedInstance] removeTimerObserver:self];
     
 }
 
 
 
+- (void)timerCallBack:(NSTimerObserver *)timer{
+    _i++;
+    NSLog(@"%@====%d",[self class],_i);
+}
 
 
 
