@@ -41,9 +41,16 @@ return self;\
  
  在项目开发过程中，经常会出现 Model 中的属性会变更，这个时候总是会忘记去修改对应的属性 code 和 encode，这里就会导致 crash；为了避免这个现象和让 Model 中的方法更加简洁可控，这里我们会利用 class_copyIvarList 来获取对象中的成员变量列表，然后利用 KVC 来 code 和 encode。实例代码如下：(这里我们将这个通用的代码抽象成宏，这样子在需要的 Model 中直接调用就可以了)
  
+ code 和 encode 缓存model
+ 
+ 
  利用 Runtime 实现自动归档 & 解档
 
  */
-@interface NSObject (RuntimeNSCodingHelper)
+@interface AbstractItem : NSObject<NSCopying,NSMutableCopying,NSCoding>
+
+@property (nonatomic,assign)float itemHeight;
+
+@property (nonatomic,assign)float itemWidth;
 
 @end

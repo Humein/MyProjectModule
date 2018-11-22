@@ -30,7 +30,7 @@
 		33759E71212FA08900D801C1 /* UIView+MethodSwizze.m in Sources */ = {isa = PBXBuildFile; fileRef = 33759E70212FA08900D801C1 /* UIView+MethodSwizze.m */; };
 		33759E74212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.m in Sources */ = {isa = PBXBuildFile; fileRef = 33759E72212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.m */; };
 		33759E77212FAA7200D801C1 /* NSObject+RuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 33759E76212FAA7200D801C1 /* NSObject+RuntimeHelper.m */; };
-		33759E7A212FAB2A00D801C1 /* NSObject+RuntimeNSCodingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 33759E79212FAB2A00D801C1 /* NSObject+RuntimeNSCodingHelper.m */; };
+		33759E7A212FAB2A00D801C1 /* AbstractItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 33759E79212FAB2A00D801C1 /* AbstractItem.m */; };
 		33759E7D212FABBA00D801C1 /* NSObject+KVOHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 33759E7C212FABBA00D801C1 /* NSObject+KVOHelper.m */; };
 		3378280C2108278C00373A20 /* DecoratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378280B2108278C00373A20 /* DecoratorViewController.m */; };
 		3378281B21084A6E00373A20 /* pie.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378281721084A6D00373A20 /* pie.m */; };
@@ -117,6 +117,7 @@
 		33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F320E2459200BE7175 /* SectionFModel.m */; };
 		33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F420E2459200BE7175 /* CellFModel.m */; };
 		33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */; };
+		7901F9A221A678CE005BE8A6 /* ThraadSafeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901F9A121A678CE005BE8A6 /* ThraadSafeViewController.m */; };
 		7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */; };
 		79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79402223219D59A20008A3AD /* SimulationChainFucCode.m */; };
 		79BFDCDF2142A15200C81069 /* Detail.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BFDCDE2142A14700C81069 /* Detail.md */; };
@@ -214,8 +215,8 @@
 		33759E73212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITapGestureRecognizer+TapGestureforceHit.h"; sourceTree = "<group>"; };
 		33759E75212FAA7200D801C1 /* NSObject+RuntimeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+RuntimeHelper.h"; sourceTree = "<group>"; };
 		33759E76212FAA7200D801C1 /* NSObject+RuntimeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RuntimeHelper.m"; sourceTree = "<group>"; };
-		33759E78212FAB2A00D801C1 /* NSObject+RuntimeNSCodingHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+RuntimeNSCodingHelper.h"; sourceTree = "<group>"; };
-		33759E79212FAB2A00D801C1 /* NSObject+RuntimeNSCodingHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RuntimeNSCodingHelper.m"; sourceTree = "<group>"; };
+		33759E78212FAB2A00D801C1 /* AbstractItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractItem.h; sourceTree = "<group>"; };
+		33759E79212FAB2A00D801C1 /* AbstractItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractItem.m; sourceTree = "<group>"; };
 		33759E7B212FABBA00D801C1 /* NSObject+KVOHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVOHelper.h"; sourceTree = "<group>"; };
 		33759E7C212FABBA00D801C1 /* NSObject+KVOHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVOHelper.m"; sourceTree = "<group>"; };
 		3378280A2108278C00373A20 /* DecoratorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecoratorViewController.h; sourceTree = "<group>"; };
@@ -393,6 +394,8 @@
 		33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractFCollectionView.m; sourceTree = "<group>"; };
 		37274BAA150B3CCC94945653 /* Pods_MyProjectModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C26993B1DAA4E4068C6E736 /* Pods-MyProjectModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.debug.xcconfig"; sourceTree = "<group>"; };
+		7901F9A021A678CE005BE8A6 /* ThraadSafeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThraadSafeViewController.h; sourceTree = "<group>"; };
+		7901F9A121A678CE005BE8A6 /* ThraadSafeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThraadSafeViewController.m; sourceTree = "<group>"; };
 		7929B49B219FE74B004D335E /* RunLoopDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopDemoViewController.h; sourceTree = "<group>"; };
 		7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopDemoViewController.m; sourceTree = "<group>"; };
 		79402222219D59A20008A3AD /* SimulationChainFucCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulationChainFucCode.h; sourceTree = "<group>"; };
@@ -700,6 +703,8 @@
 			children = (
 				3378282F2108772600373A20 /* ThreadViewController.h */,
 				337828302108772600373A20 /* ThreadViewController.m */,
+				7901F9A021A678CE005BE8A6 /* ThraadSafeViewController.h */,
+				7901F9A121A678CE005BE8A6 /* ThraadSafeViewController.m */,
 			);
 			path = "线程";
 			sourceTree = "<group>";
@@ -772,8 +777,8 @@
 				33759E76212FAA7200D801C1 /* NSObject+RuntimeHelper.m */,
 				33759E7B212FABBA00D801C1 /* NSObject+KVOHelper.h */,
 				33759E7C212FABBA00D801C1 /* NSObject+KVOHelper.m */,
-				33759E78212FAB2A00D801C1 /* NSObject+RuntimeNSCodingHelper.h */,
-				33759E79212FAB2A00D801C1 /* NSObject+RuntimeNSCodingHelper.m */,
+				33759E78212FAB2A00D801C1 /* AbstractItem.h */,
+				33759E79212FAB2A00D801C1 /* AbstractItem.m */,
 			);
 			path = Rumtime;
 			sourceTree = "<group>";
@@ -1631,12 +1636,13 @@
 				79EEEA8F218BF31600848B59 /* UIResponder+UIResponderChain.m in Sources */,
 				3378282C2108544300373A20 /* UIImage+Title.m in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
-				33759E7A212FAB2A00D801C1 /* NSObject+RuntimeNSCodingHelper.m in Sources */,
+				33759E7A212FAB2A00D801C1 /* AbstractItem.m in Sources */,
 				33C971412124108D00EAAD5E /* DecoratorAView.m in Sources */,
 				33C971422124108D00EAAD5E /* TablePopDemoViewController.m in Sources */,
 				3378281D21084A6E00373A20 /* Hamburger.m in Sources */,
 				33E6CE0721006D2000422FC7 /* UITableViewCell+AnimationType.m in Sources */,
 				33FAE4E520E2445500BE7175 /* HeaderSuspendedLayout.m in Sources */,
+				7901F9A221A678CE005BE8A6 /* ThraadSafeViewController.m in Sources */,
 				338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */,
 				33782829210853B800373A20 /* UIImage+Shadow.m in Sources */,
 				339B536020F4B28B003444CB /* BJPlayer.m in Sources */,

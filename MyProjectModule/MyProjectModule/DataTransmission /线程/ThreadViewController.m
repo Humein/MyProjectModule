@@ -7,7 +7,7 @@
 //
 
 #import "ThreadViewController.h"
-
+#import "ThraadSafeViewController.h"
 @interface ThreadViewController ()
 
 @property (strong, nonatomic, nonnull) dispatch_queue_t coderQueue; // the queue to do image decoding
@@ -60,6 +60,11 @@
             NSLog(@"异步主线程");
         });
     });
+    
+    
+    
+    ThraadSafeViewController *safeVC = [ThraadSafeViewController new];
+    [self.navigationController pushViewController:safeVC animated:YES];
     
 }
 
@@ -194,6 +199,8 @@
     dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
     
 }
+
+
 
 
 @end
