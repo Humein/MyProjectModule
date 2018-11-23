@@ -9,8 +9,9 @@
 #import "CollectionModuleView.h"
 #import "CarouselLayout.h"
 #import "WaterfallLayout.h"
-
-@interface CollectionModuleView ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate>
+#import "FilterCollectionViewLayout.h"
+@class FilterTeacherItem;
+@interface CollectionModuleView ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate,filterLayoutDeleaget>
 @property (nonatomic,strong)UICollectionView *collectionView;
 @property (nonatomic,strong)NSMutableArray *dataArray;
 
@@ -82,13 +83,14 @@
         
 //        瀑布流(标签)
         
-        UICollectionViewFlowLayout *waterLayout = [self setupFlowLayout];
-
+//        UICollectionViewFlowLayout *waterLayout = [self setupFlowLayout];  废弃
+        FilterCollectionViewLayout * waterFallLayout = [[FilterCollectionViewLayout alloc]init];
+        waterFallLayout.delegate = self;
         
         
         
         
-        _collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:carouselLayout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:waterFallLayout];
         
         
         _collectionView.showsHorizontalScrollIndicator = NO;
@@ -147,5 +149,29 @@
     }
     return self;
 }
+
+
+#pragma mark  - <WaterFallLayoutDeleaget>
+- (CGFloat)waterFallLayout:(FilterCollectionViewLayout *)waterFallLayout heightForItemAtIndexPath:(NSUInteger)indexPath itemWidth:(CGFloat)itemWidth{
+    
+    FilterTeacherItem *deselectModel = self.dataArray[indexPath];
+//    deselectModel.h = 30;
+//    deselectModel.w = 100;
+    return itemWidth * 30 / 100;
+}
+
+- (CGFloat)rowMarginInWaterFallLayout:(FilterCollectionViewLayout *)waterFallLayout{
+    
+    return 20;
+    
+}
+
+- (NSUInteger)columnCountInWaterFallLayout:(FilterCollectionViewLayout *)waterFallLayout{
+    
+    return 2;
+    
+}
+
+
 
 @end
