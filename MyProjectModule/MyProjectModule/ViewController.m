@@ -62,6 +62,7 @@
         CellModel *model =  [CellModel new];
         model.itemHeight = [model titleHeight];
         model.title = (NSString*)obj;
+        model.timeCount = arc4random() % 30;
         [self.itemList addObject:model];
     }];
 

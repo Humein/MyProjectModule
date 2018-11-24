@@ -11,6 +11,8 @@
  
  多线程加锁 防止 野指针  https://satanwoo.github.io/2016/10/23/multithread-dangling-pointer/
 
+ // 倒计时 不能通过改变数据源 因为cellforrow
+
  */
 
 #import "AbstractViewController.h"

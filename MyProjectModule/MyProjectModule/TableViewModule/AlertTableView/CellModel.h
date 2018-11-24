@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-//所有自己创建的对象都继承这个类，把原型模式加进来,以及归档等等
+//  Runtime 归档   所有自己创建的对象都继承这个类，  把原型模式加进来,等等
 
 @interface CellModel : NSObject <NSCopying,NSMutableCopying,NSCoding>
 
@@ -19,5 +19,9 @@
 
 @property (nonatomic,copy)NSString *title;
 
+@property (nonatomic,assign)NSInteger timeCount;
+
+
 -(CGFloat)titleHeight;
+
 @end

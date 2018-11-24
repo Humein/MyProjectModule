@@ -9,7 +9,14 @@
 #import "CellModel.h"
 #import <objc/runtime.h>
 
+@interface CellModel()
+
+@end
+
 @implementation CellModel
+
+
+
 - (id)copyWithZone:(nullable NSZone *)zone
 {
     return self;
@@ -69,5 +76,9 @@
 -(CGFloat )titleHeight{
     return 50;
 }
+
+
+
+
 
 @end

@@ -9,20 +9,79 @@
 #import "AbstractTableViewCell.h"
 #import "CellModel.h"
 #import "NSTimerObserver.h"
+
+
+@interface AbstractTableViewCell()<TimerObserver>
+@property (nonatomic,strong)  UILabel *timeLabel;
+@property (nonatomic,strong) CellModel *model;
+
+@end
+
 @implementation AbstractTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
 }
+
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        
+        [self setupUI];
+    }
+    
+    return self;
+}
+
+-(void)setupUI{
+    UILabel *timeLabel =  [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 44, 30)];
+    
+    timeLabel.backgroundColor = [UIColor grayColor];
+    
+    self.timeLabel = timeLabel;
+    
+    [self.contentView addSubview:self.timeLabel];
+    
+    [[NSTimerObserver sharedInstance] addTimerObserver:self];
+    
+}
+
 - (void)updateByItem:(CellModel *)item
 {
-    self.textLabel.text = item.title;
+    // 过滤 数据源 影响
+//    _model = _model.timeCount ? _model : item;
+    
+    if (_model.timeCount) {
+        
+    }else{
+        _model = item;
+        self.timeLabel.text =[NSString stringWithFormat:@"%ld",(long)_model.timeCount];
+    }
+    
+    
+    self.textLabel.text = [NSString stringWithFormat:@"%@-----%ld",item.title,(long)item.timeCount];
+    
 }
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+
+- (void)timerCallBack:(NSTimerObserver *)timer {
+    
+    
+    if (_model.timeCount>0) {
+        
+        _model.timeCount -- ;
+        
+        self.timeLabel.text =[NSString stringWithFormat:@"%ld",(long)_model.timeCount];
+
+        
+    }else{
+        
+        [[NSTimerObserver sharedInstance] removeTimerObserver:self];
+        
+    }
+    
+    
 }
 
 @end
