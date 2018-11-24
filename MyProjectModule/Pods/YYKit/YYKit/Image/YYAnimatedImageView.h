@@ -11,8 +11,6 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  An image view for displaying animated image.
  
@@ -40,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  The default value is `YES`.
  */
-@property (nonatomic) BOOL autoPlayAnimatedImage;
+@property (nonatomic, assign) BOOL autoPlayAnimatedImage;
 
 /**
  Index of the currently displayed frame (index from 0).
@@ -50,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  You can add an observer to this property to observe the playing status.
  */
-@property (nonatomic) NSUInteger currentAnimatedImageIndex;
+@property (nonatomic, assign) NSUInteger currentAnimatedImageIndex;
 
 /**
  Whether the image view is playing animation currently.
@@ -78,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
  When receive memory warning or app enter background, the buffer will be released 
  immediately, and may grow back at the right time.
  */
-@property (nonatomic) NSUInteger maxBufferSize;
+@property (nonatomic, assign) NSUInteger maxBufferSize;
 
 @end
 
@@ -97,7 +95,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol YYAnimatedImage <NSObject>
 @required
 /// Total animated frame count.
-/// If the frame count is less than 1, then the methods below will be ignored.
+/// It the frame count is less than 1, then the methods below will be ignored.
 - (NSUInteger)animatedImageFrameCount;
 
 /// Animation loop count, 0 means infinite looping.
@@ -109,7 +107,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Returns the frame image from a specified index.
 /// This method may be called on background thread.
 /// @param index  Frame index (zero based).
-- (nullable UIImage *)animatedImageFrameAtIndex:(NSUInteger)index;
+- (UIImage *)animatedImageFrameAtIndex:(NSUInteger)index;
 
 /// Returns the frames's duration from a specified index.
 /// @param index  Frame index (zero based).
@@ -121,5 +119,3 @@ NS_ASSUME_NONNULL_BEGIN
 /// It may used to display sprite animation with a single image (sprite sheet).
 - (CGRect)animatedImageContentsRectAtIndex:(NSUInteger)index;
 @end
-
-NS_ASSUME_NONNULL_END

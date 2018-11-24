@@ -29,12 +29,6 @@
  */
 + (BOOL)disableBackgroundThread;
 + (void)setDisableBackgroundThread:(BOOL)flag;
-
-/**
- Determines the frequency (Hz) of the timer used when no display is available. Defaults to 60Hz.
- */
-+ (uint64_t)displayTimerFrequency;
-+ (void)setDisplayTimerFrequency:(uint64_t)frequency;
 #endif
 
 /**

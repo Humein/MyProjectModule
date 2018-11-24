@@ -11,8 +11,6 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  Provides extensions for `UIDevice`.
  */
@@ -25,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///=============================================================================
 
 /// Device system version (e.g. 8.1)
-+ (double)systemVersion;
++ (float)systemVersion;
 
 /// Whether the device is iPad/iPad mini.
 @property (nonatomic, readonly) BOOL isPad;
@@ -41,11 +39,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// The device's machine model.  e.g. "iPhone6,1" "iPad4,6"
 /// @see http://theiphonewiki.com/wiki/Models
-@property (nullable, nonatomic, readonly) NSString *machineModel;
+@property (nonatomic, readonly) NSString *machineModel;
 
 /// The device's machine model name. e.g. "iPhone 5s" "iPad mini 2"
 /// @see http://theiphonewiki.com/wiki/Models
-@property (nullable, nonatomic, readonly) NSString *machineModelName;
+@property (nonatomic, readonly) NSString *machineModelName;
 
 /// The System's startup time.
 @property (nonatomic, readonly) NSDate *systemUptime;
@@ -57,10 +55,10 @@ NS_ASSUME_NONNULL_BEGIN
 ///=============================================================================
 
 /// WIFI IP address of this device (can be nil). e.g. @"192.168.1.111"
-@property (nullable, nonatomic, readonly) NSString *ipAddressWIFI;
+@property (nonatomic, readonly) NSString *ipAddressWIFI;
 
 /// Cell IP address of this device (can be nil). e.g. @"10.2.2.222"
-@property (nullable, nonatomic, readonly) NSString *ipAddressCell;
+@property (nonatomic, readonly) NSString *ipAddressCell;
 
 
 /**
@@ -165,11 +163,9 @@ typedef NS_OPTIONS(NSUInteger, YYNetworkTrafficType) {
 @property (nonatomic, readonly) float cpuUsage;
 
 /// Current CPU usage per processor (array of NSNumber), 1.0 means 100%. (nil when error occurs)
-@property (nullable, nonatomic, readonly) NSArray<NSNumber *> *cpuUsagePerProcessor;
+@property (nonatomic, readonly) NSArray *cpuUsagePerProcessor;
 
 @end
-
-NS_ASSUME_NONNULL_END
 
 
 #ifndef kSystemVersion

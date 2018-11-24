@@ -17,8 +17,6 @@
 #import "YYWebImageManager.h"
 #endif
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  Web image methods for UIButton.
  */
@@ -30,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  Current image URL for the specified state.
  @return The image URL, or nil.
  */
-- (nullable NSURL *)imageURLForState:(UIControlState)state;
+- (NSURL *)imageURLForState:(UIControlState)state;
 
 /**
  Set the button's image with a specified URL for the specified state.
@@ -39,9 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param state       The state that uses the specified image.
  @param placeholder The image to be set initially, until the image request finishes.
  */
-- (void)setImageWithURL:(nullable NSURL *)imageURL
-                  forState:(UIControlState)state
-               placeholder:(nullable UIImage *)placeholder;
+- (void)setImageWithURL:(NSURL *)imageURL forState:(UIControlState)state placeholder:(UIImage *)placeholder;
 
 /**
  Set the button's image with a specified URL for the specified state.
@@ -50,9 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param state    The state that uses the specified image.
  @param options  The options to use when request the image.
  */
-- (void)setImageWithURL:(nullable NSURL *)imageURL
-                  forState:(UIControlState)state
-                   options:(YYWebImageOptions)options;
+- (void)setImageWithURL:(NSURL *)imageURL forState:(UIControlState)state options:(YYWebImageOptions)options;
 
 /**
  Set the button's image with a specified URL for the specified state.
@@ -63,11 +57,11 @@ NS_ASSUME_NONNULL_BEGIN
  @param options     The options to use when request the image.
  @param completion  The block invoked (on main thread) when image request completed.
  */
-- (void)setImageWithURL:(nullable NSURL *)imageURL
-                  forState:(UIControlState)state
-               placeholder:(nullable UIImage *)placeholder
-                   options:(YYWebImageOptions)options
-                completion:(nullable YYWebImageCompletionBlock)completion;
+- (void)setImageWithURL:(NSURL *)imageURL
+               forState:(UIControlState)state
+            placeholder:(UIImage *)placeholder
+                options:(YYWebImageOptions)options
+             completion:(YYWebImageCompletionBlock)completion;
 
 /**
  Set the button's image with a specified URL for the specified state.
@@ -80,13 +74,13 @@ NS_ASSUME_NONNULL_BEGIN
  @param transform   The block invoked (on background thread) to do additional image process.
  @param completion  The block invoked (on main thread) when image request completed.
  */
-- (void)setImageWithURL:(nullable NSURL *)imageURL
-                  forState:(UIControlState)state
-               placeholder:(nullable UIImage *)placeholder
-                   options:(YYWebImageOptions)options
-                  progress:(nullable YYWebImageProgressBlock)progress
-                 transform:(nullable YYWebImageTransformBlock)transform
-                completion:(nullable YYWebImageCompletionBlock)completion;
+- (void)setImageWithURL:(NSURL *)imageURL
+               forState:(UIControlState)state
+            placeholder:(UIImage *)placeholder
+                options:(YYWebImageOptions)options
+               progress:(YYWebImageProgressBlock)progress
+              transform:(YYWebImageTransformBlock)transform
+             completion:(YYWebImageCompletionBlock)completion;
 
 /**
  Set the button's image with a specified URL for the specified state.
@@ -100,14 +94,14 @@ NS_ASSUME_NONNULL_BEGIN
  @param transform   The block invoked (on background thread) to do additional image process.
  @param completion  The block invoked (on main thread) when image request completed.
  */
-- (void)setImageWithURL:(nullable NSURL *)imageURL
-                  forState:(UIControlState)state
-               placeholder:(nullable UIImage *)placeholder
-                   options:(YYWebImageOptions)options
-                   manager:(nullable YYWebImageManager *)manager
-                  progress:(nullable YYWebImageProgressBlock)progress
-                 transform:(nullable YYWebImageTransformBlock)transform
-                completion:(nullable YYWebImageCompletionBlock)completion;
+- (void)setImageWithURL:(NSURL *)imageURL
+               forState:(UIControlState)state
+            placeholder:(UIImage *)placeholder
+                options:(YYWebImageOptions)options
+                manager:(YYWebImageManager *)manager
+               progress:(YYWebImageProgressBlock)progress
+              transform:(YYWebImageTransformBlock)transform
+             completion:(YYWebImageCompletionBlock)completion;
 
 /**
  Cancel the current image request for a specified state.
@@ -123,7 +117,7 @@ NS_ASSUME_NONNULL_BEGIN
  Current backgroundImage URL for the specified state.
  @return The image URL, or nil.
  */
-- (nullable NSURL *)backgroundImageURLForState:(UIControlState)state;
+- (NSURL *)backgroundImageURLForState:(UIControlState)state;
 
 /**
  Set the button's backgroundImage with a specified URL for the specified state.
@@ -132,9 +126,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param state       The state that uses the specified image.
  @param placeholder The image to be set initially, until the image request finishes.
  */
-- (void)setBackgroundImageWithURL:(nullable NSURL *)imageURL
-                            forState:(UIControlState)state
-                         placeholder:(nullable UIImage *)placeholder;
+- (void)setBackgroundImageWithURL:(NSURL *)imageURL forState:(UIControlState)state placeholder:(UIImage *)placeholder;
 
 /**
  Set the button's backgroundImage with a specified URL for the specified state.
@@ -143,9 +135,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param state    The state that uses the specified image.
  @param options  The options to use when request the image.
  */
-- (void)setBackgroundImageWithURL:(nullable NSURL *)imageURL
-                            forState:(UIControlState)state
-                             options:(YYWebImageOptions)options;
+- (void)setBackgroundImageWithURL:(NSURL *)imageURL forState:(UIControlState)state options:(YYWebImageOptions)options;
 
 /**
  Set the button's backgroundImage with a specified URL for the specified state.
@@ -156,11 +146,11 @@ NS_ASSUME_NONNULL_BEGIN
  @param options     The options to use when request the image.
  @param completion  The block invoked (on main thread) when image request completed.
  */
-- (void)setBackgroundImageWithURL:(nullable NSURL *)imageURL
-                            forState:(UIControlState)state
-                         placeholder:(nullable UIImage *)placeholder
-                             options:(YYWebImageOptions)options
-                          completion:(nullable YYWebImageCompletionBlock)completion;
+- (void)setBackgroundImageWithURL:(NSURL *)imageURL
+                         forState:(UIControlState)state
+                      placeholder:(UIImage *)placeholder
+                          options:(YYWebImageOptions)options
+                       completion:(YYWebImageCompletionBlock)completion;
 
 /**
  Set the button's backgroundImage with a specified URL for the specified state.
@@ -173,13 +163,13 @@ NS_ASSUME_NONNULL_BEGIN
  @param transform   The block invoked (on background thread) to do additional image process.
  @param completion  The block invoked (on main thread) when image request completed.
  */
-- (void)setBackgroundImageWithURL:(nullable NSURL *)imageURL
-                            forState:(UIControlState)state
-                         placeholder:(nullable UIImage *)placeholder
-                             options:(YYWebImageOptions)options
-                            progress:(nullable YYWebImageProgressBlock)progress
-                           transform:(nullable YYWebImageTransformBlock)transform
-                          completion:(nullable YYWebImageCompletionBlock)completion;
+- (void)setBackgroundImageWithURL:(NSURL *)imageURL
+                         forState:(UIControlState)state
+                      placeholder:(UIImage *)placeholder
+                          options:(YYWebImageOptions)options
+                         progress:(YYWebImageProgressBlock)progress
+                        transform:(YYWebImageTransformBlock)transform
+                       completion:(YYWebImageCompletionBlock)completion;
 
 /**
  Set the button's backgroundImage with a specified URL for the specified state.
@@ -193,14 +183,14 @@ NS_ASSUME_NONNULL_BEGIN
  @param transform   The block invoked (on background thread) to do additional image process.
  @param completion  The block invoked (on main thread) when image request completed.
  */
-- (void)setBackgroundImageWithURL:(nullable NSURL *)imageURL
-                            forState:(UIControlState)state
-                         placeholder:(nullable UIImage *)placeholder
-                             options:(YYWebImageOptions)options
-                             manager:(nullable YYWebImageManager *)manager
-                            progress:(nullable YYWebImageProgressBlock)progress
-                           transform:(nullable YYWebImageTransformBlock)transform
-                          completion:(nullable YYWebImageCompletionBlock)completion;
+- (void)setBackgroundImageWithURL:(NSURL *)imageURL
+                         forState:(UIControlState)state
+                      placeholder:(UIImage *)placeholder
+                          options:(YYWebImageOptions)options
+                          manager:(YYWebImageManager *)manager
+                         progress:(YYWebImageProgressBlock)progress
+                        transform:(YYWebImageTransformBlock)transform
+                       completion:(YYWebImageCompletionBlock)completion;
 
 /**
  Cancel the current backgroundImage request for a specified state.
@@ -209,5 +199,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)cancelBackgroundImageRequestForState:(UIControlState)state;
 
 @end
-
-NS_ASSUME_NONNULL_END

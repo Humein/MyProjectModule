@@ -19,7 +19,6 @@
 
 @class YYWebImageOperation;
 
-NS_ASSUME_NONNULL_BEGIN
 
 /// The options to control image operation.
 typedef NS_OPTIONS(NSUInteger, YYWebImageOptions) {
@@ -139,7 +138,7 @@ typedef void(^YYWebImageProgressBlock)(NSInteger receivedSize, NSInteger expecte
  @param url   The image url (remote or local file path).
  @return The transformed image.
  */
-typedef UIImage * _Nullable (^YYWebImageTransformBlock)(UIImage *image, NSURL *url);
+typedef UIImage *(^YYWebImageTransformBlock)(UIImage *image, NSURL *url);
 
 /**
  The block invoked when image fetch finished or cancelled.
@@ -150,11 +149,7 @@ typedef UIImage * _Nullable (^YYWebImageTransformBlock)(UIImage *image, NSURL *u
  @param error       Error during image fetching.
  @param finished    If the operation is cancelled, this value is NO, otherwise YES.
  */
-typedef void (^YYWebImageCompletionBlock)(UIImage * _Nullable image,
-                                          NSURL *url,
-                                          YYWebImageFromType from,
-                                          YYWebImageStage stage,
-                                          NSError * _Nullable error);
+typedef void (^YYWebImageCompletionBlock)(UIImage *image, NSURL *url, YYWebImageFromType from, YYWebImageStage stage, NSError *error);
 
 
 
@@ -179,8 +174,7 @@ typedef void (^YYWebImageCompletionBlock)(UIImage * _Nullable image,
                 (pass nil to make the new operation start immediately without queue).
  @return A new manager.
  */
-- (instancetype)initWithCache:(nullable YYImageCache *)cache
-                        queue:(nullable NSOperationQueue *)queue NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithCache:(YYImageCache *)cache queue:(NSOperationQueue *)queue NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
 + (instancetype)new UNAVAILABLE_ATTRIBUTE;
@@ -195,17 +189,17 @@ typedef void (^YYWebImageCompletionBlock)(UIImage * _Nullable image,
  @param completion Completion block which will be invoked on background thread  (pass nil to avoid).
  @return A new image operation.
  */
-- (nullable YYWebImageOperation *)requestImageWithURL:(NSURL *)url
-                                              options:(YYWebImageOptions)options
-                                             progress:(nullable YYWebImageProgressBlock)progress
-                                            transform:(nullable YYWebImageTransformBlock)transform
-                                           completion:(nullable YYWebImageCompletionBlock)completion;
+- (YYWebImageOperation *)requestImageWithURL:(NSURL *)url
+                                     options:(YYWebImageOptions)options
+                                    progress:(YYWebImageProgressBlock)progress
+                                   transform:(YYWebImageTransformBlock)transform
+                                  completion:(YYWebImageCompletionBlock)completion;
 
 /**
  The image cache used by image operation. 
  You can set it to nil to avoid image cache.
  */
-@property (nullable, nonatomic, strong) YYImageCache *cache;
+@property (nonatomic, strong) YYImageCache *cache;
 
 /**
  The operation queue on which image operations are scheduled and run.
@@ -214,7 +208,7 @@ typedef void (^YYWebImageCompletionBlock)(UIImage * _Nullable image,
  You can use this queue to control maximum number of concurrent operations, to obtain 
  the status of the current operations, or to cancel all operations in this manager.
  */
-@property (nullable, nonatomic, strong) NSOperationQueue *queue;
+@property (nonatomic, strong) NSOperationQueue *queue;
 
 /**
  The shared transform block to process image. Default is nil.
@@ -222,27 +216,27 @@ typedef void (^YYWebImageCompletionBlock)(UIImage * _Nullable image,
  When called `requestImageWithURL:options:progress:transform:completion` and
  the `transform` is nil, this block will be used.
  */
-@property (nullable, nonatomic, copy) YYWebImageTransformBlock sharedTransformBlock;
+@property (nonatomic, copy) YYWebImageTransformBlock sharedTransformBlock;
 
 /**
  The image request timeout interval in seconds. Default is 15.
  */
-@property (nonatomic) NSTimeInterval timeout;
+@property (nonatomic, assign) NSTimeInterval timeout;
 
 /**
  The username used by NSURLCredential, default is nil.
  */
-@property (nullable, nonatomic, copy) NSString *username;
+@property (nonatomic, strong) NSString *username;
 
 /**
  The password used by NSURLCredential, default is nil.
  */
-@property (nullable, nonatomic, copy) NSString *password;
+@property (nonatomic, strong) NSString *password;
 
 /**
  The image HTTP request header. Default is "Accept:image/webp,image/\*;q=0.8".
  */
-@property (nullable, nonatomic, copy) NSDictionary<NSString *, NSString *> *headers;
+@property (nonatomic, copy) NSDictionary *headers;
 
 /**
  A block which will be invoked for each image HTTP request to do additional
@@ -250,14 +244,14 @@ typedef void (^YYWebImageCompletionBlock)(UIImage * _Nullable image,
  
  Use this block to add or remove HTTP header field for a specified URL.
  */
-@property (nullable, nonatomic, copy) NSDictionary<NSString *, NSString *> *(^headersFilter)(NSURL *url, NSDictionary<NSString *, NSString *> * _Nullable header);
+@property (nonatomic, copy) NSDictionary *(^headersFilter)(NSURL *url, NSDictionary *header);
 
 /**
  A block which will be invoked for each image operation. Default is nil.
  
  Use this block to provide a custom image cache key for a specified URL.
  */
-@property (nullable, nonatomic, copy) NSString *(^cacheKeyFilter)(NSURL *url);
+@property (nonatomic, copy) NSString *(^cacheKeyFilter)(NSURL *url);
 
 /**
  Returns the HTTP headers for a specified URL.
@@ -265,7 +259,7 @@ typedef void (^YYWebImageCompletionBlock)(UIImage * _Nullable image,
  @param url A specified URL.
  @return HTTP headers.
  */
-- (nullable NSDictionary<NSString *, NSString *> *)headersForURL:(NSURL *)url;
+- (NSDictionary *)headersForURL:(NSURL *)url;
 
 /**
  Returns the cache key for a specified URL.
@@ -276,5 +270,3 @@ typedef void (^YYWebImageCompletionBlock)(UIImage * _Nullable image,
 - (NSString *)cacheKeyForURL:(NSURL *)url;
 
 @end
-
-NS_ASSUME_NONNULL_END

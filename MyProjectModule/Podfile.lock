@@ -1,26 +1,29 @@
 PODS:
-  - AFNetworking (3.2.1):
-    - AFNetworking/NSURLSession (= 3.2.1)
-    - AFNetworking/Reachability (= 3.2.1)
-    - AFNetworking/Security (= 3.2.1)
-    - AFNetworking/Serialization (= 3.2.1)
-    - AFNetworking/UIKit (= 3.2.1)
-  - AFNetworking/NSURLSession (3.2.1):
+  - AFNetworking (3.0.4):
+    - AFNetworking/NSURLSession (= 3.0.4)
+    - AFNetworking/Reachability (= 3.0.4)
+    - AFNetworking/Security (= 3.0.4)
+    - AFNetworking/Serialization (= 3.0.4)
+    - AFNetworking/UIKit (= 3.0.4)
+  - AFNetworking/NSURLSession (3.0.4):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.1)
-  - AFNetworking/Security (3.2.1)
-  - AFNetworking/Serialization (3.2.1)
-  - AFNetworking/UIKit (3.2.1):
+  - AFNetworking/Reachability (3.0.4)
+  - AFNetworking/Security (3.0.4)
+  - AFNetworking/Serialization (3.0.4)
+  - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
-  - KVOController (1.2.0)
-  - Masonry (1.1.0)
-  - MJExtension (3.0.15.1)
-  - pop (1.0.10)
-  - YYKit (1.0.9):
-    - YYKit/no-arc (= 1.0.9)
-  - YYKit/no-arc (1.0.9)
+  - KVOController (1.0.3)
+  - Masonry (0.6.4)
+  - MJExtension (3.0.10)
+  - pop (1.0.8)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
+  - YYKit (0.9.11):
+    - YYKit/no-arc (= 0.9.11)
+  - YYKit/no-arc (0.9.11)
 
 DEPENDENCIES:
   - AFNetworking
@@ -28,25 +31,28 @@ DEPENDENCIES:
   - Masonry
   - MJExtension
   - pop (~> 1.0)
+  - SDWebImage (~> 4.3.3)
   - YYKit
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
     - KVOController
     - Masonry
     - MJExtension
     - pop
+    - SDWebImage
     - YYKit
 
 SPEC CHECKSUMS:
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
-  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
-  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
-  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  KVOController: 9fd8f0343670994e4b6f9f0b31f5a45663f3e1cf
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  YYKit: 76c3f2cee1a72d3c5b1d7fd8d170ee507fe5df68
 
-PODFILE CHECKSUM: 55af8e461ccb2ead15008067ca9826bb29b7a3b9
+PODFILE CHECKSUM: ebf588bbaa0c89115597744124b20883bc232c8f
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

@@ -12,8 +12,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreText/CoreText.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  Wrapper for CTRunDelegateRef.
  
@@ -41,28 +39,26 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return The CTRunDelegate object.
  */
-- (nullable CTRunDelegateRef)CTRunDelegate CF_RETURNS_RETAINED;
+- (CTRunDelegateRef)CTRunDelegate CF_RETURNS_RETAINED;
 
 /**
  Additional information about the the run delegate.
  */
-@property (nullable, nonatomic, strong) NSDictionary *userInfo;
+@property (nonatomic, strong) NSDictionary *userInfo;
 
 /**
  The typographic ascent of glyphs in the run.
  */
-@property (nonatomic) CGFloat ascent;
+@property (nonatomic, assign) CGFloat ascent;
 
 /**
  The typographic descent of glyphs in the run.
  */
-@property (nonatomic) CGFloat descent;
+@property (nonatomic, assign) CGFloat descent;
 
 /**
  The typographic width of glyphs in the run.
  */
-@property (nonatomic) CGFloat width;
+@property (nonatomic, assign) CGFloat width;
 
 @end
-
-NS_ASSUME_NONNULL_END

@@ -11,8 +11,6 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  A subclass of `NSKeyedArchiver` which implement `NSKeyedArchiverDelegate` protocol.
  
@@ -29,5 +27,3 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface YYTextUnarchiver : NSKeyedUnarchiver <NSKeyedUnarchiverDelegate>
 @end
-
-NS_ASSUME_NONNULL_END

@@ -152,7 +152,7 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding) {
 
 - (instancetype)initWithProperty:(objc_property_t)property {
     if (!property) return nil;
-    self = [super init];
+    self = [self init];
     _property = property;
     const char *name = property_getName(property);
     if (name) {
@@ -168,28 +168,14 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding) {
                 if (attrs[i].value) {
                     _typeEncoding = [NSString stringWithUTF8String:attrs[i].value];
                     type = YYEncodingGetType(attrs[i].value);
-                    
-                    if ((type & YYEncodingTypeMask) == YYEncodingTypeObject && _typeEncoding.length) {
-                        NSScanner *scanner = [NSScanner scannerWithString:_typeEncoding];
-                        if (![scanner scanString:@"@\"" intoString:NULL]) continue;
-                        
-                        NSString *clsName = nil;
-                        if ([scanner scanUpToCharactersFromSet: [NSCharacterSet characterSetWithCharactersInString:@"\"<"] intoString:&clsName]) {
-                            if (clsName.length) _cls = objc_getClass(clsName.UTF8String);
+                    if ((type & YYEncodingTypeMask) == YYEncodingTypeObject) {
+                        size_t len = strlen(attrs[i].value);
+                        if (len > 3) {
+                            char name[len - 2];
+                            name[len - 3] = '\0';
+                            memcpy(name, attrs[i].value + 2, len - 3);
+                            _cls = objc_getClass(name);
                         }
-                        
-                        NSMutableArray *protocols = nil;
-                        while ([scanner scanString:@"<" intoString:NULL]) {
-                            NSString* protocol = nil;
-                            if ([scanner scanUpToString:@">" intoString: &protocol]) {
-                                if (protocol.length) {
-                                    if (!protocols) protocols = [NSMutableArray new];
-                                    [protocols addObject:protocol];
-                                }
-                            }
-                            [scanner scanString:@">" intoString:NULL];
-                        }
-                        _protocols = protocols;
                     }
                 }
             } break;
@@ -219,15 +205,15 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding) {
             case 'G': {
                 type |= YYEncodingTypePropertyCustomGetter;
                 if (attrs[i].value) {
-                    _getter = NSSelectorFromString([NSString stringWithUTF8String:attrs[i].value]);
+                    _getter = [NSString stringWithUTF8String:attrs[i].value];
                 }
             } break;
             case 'S': {
                 type |= YYEncodingTypePropertyCustomSetter;
                 if (attrs[i].value) {
-                    _setter = NSSelectorFromString([NSString stringWithUTF8String:attrs[i].value]);
+                    _setter = [NSString stringWithUTF8String:attrs[i].value];
                 }
-            } // break; commented for code coverage in next line
+            } break;
             default: break;
         }
     }
@@ -239,10 +225,10 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding) {
     _type = type;
     if (_name.length) {
         if (!_getter) {
-            _getter = NSSelectorFromString(_name);
+            _getter = _name;
         }
         if (!_setter) {
-            _setter = NSSelectorFromString([NSString stringWithFormat:@"set%@%@:", [_name substringToIndex:1].uppercaseString, [_name substringFromIndex:1]]);
+            _setter = [NSString stringWithFormat:@"set%@%@:", [_name substringToIndex:1].uppercaseString, [_name substringFromIndex:1]];
         }
     }
     return self;
@@ -310,20 +296,11 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding) {
         }
         free(ivars);
     }
-    
-    if (!_ivarInfos) _ivarInfos = @{};
-    if (!_methodInfos) _methodInfos = @{};
-    if (!_propertyInfos) _propertyInfos = @{};
-    
     _needUpdate = NO;
 }
 
 - (void)setNeedUpdate {
     _needUpdate = YES;
-}
-
-- (BOOL)needUpdate {
-    return _needUpdate;
 }
 
 + (instancetype)classInfoWithClass:(Class)cls {

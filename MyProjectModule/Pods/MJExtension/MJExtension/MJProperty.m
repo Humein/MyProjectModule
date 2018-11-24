@@ -18,28 +18,32 @@
 
 @implementation MJProperty
 
-#pragma mark - 初始化
-- (instancetype)init
+#pragma mark - 懒加载
+- (NSMutableDictionary *)propertyKeysDict
 {
-    if (self = [super init]) {
+    if (!_propertyKeysDict) {
         _propertyKeysDict = [NSMutableDictionary dictionary];
+    }
+    return _propertyKeysDict;
+}
+
+- (NSMutableDictionary *)objectClassInArrayDict
+{
+    if (!_objectClassInArrayDict) {
         _objectClassInArrayDict = [NSMutableDictionary dictionary];
     }
-    return self;
+    return _objectClassInArrayDict;
 }
 
 #pragma mark - 缓存
 + (instancetype)cachedPropertyWithProperty:(objc_property_t)property
 {
-    MJExtensionSemaphoreCreate
-    MJExtensionSemaphoreWait
     MJProperty *propertyObj = objc_getAssociatedObject(self, property);
     if (propertyObj == nil) {
         propertyObj = [[self alloc] init];
         propertyObj.property = property;
         objc_setAssociatedObject(self, property, propertyObj, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
-    MJExtensionSemaphoreSignal
     return propertyObj;
 }
 
@@ -153,39 +157,21 @@
 - (void)setPorpertyKeys:(NSArray *)propertyKeys forClass:(Class)c
 {
     if (propertyKeys.count == 0) return;
-    NSString *key = NSStringFromClass(c);
-    if (!key) return;
-    
-    MJExtensionSemaphoreCreate
-    MJExtensionSemaphoreWait
-    self.propertyKeysDict[key] = propertyKeys;
-    MJExtensionSemaphoreSignal
+    self.propertyKeysDict[NSStringFromClass(c)] = propertyKeys;
 }
-
 - (NSArray *)propertyKeysForClass:(Class)c
 {
-    NSString *key = NSStringFromClass(c);
-    if (!key) return nil;
-    return self.propertyKeysDict[key];
+    return self.propertyKeysDict[NSStringFromClass(c)];
 }
 
 /** 模型数组中的模型类型 */
 - (void)setObjectClassInArray:(Class)objectClass forClass:(Class)c
 {
     if (!objectClass) return;
-    NSString *key = NSStringFromClass(c);
-    if (!key) return;
-    
-    MJExtensionSemaphoreCreate
-    MJExtensionSemaphoreWait
-    self.objectClassInArrayDict[key] = objectClass;
-    MJExtensionSemaphoreSignal
+    self.objectClassInArrayDict[NSStringFromClass(c)] = objectClass;
 }
-
 - (Class)objectClassInArrayForClass:(Class)c
 {
-    NSString *key = NSStringFromClass(c);
-    if (!key) return nil;
-    return self.objectClassInArrayDict[key];
+    return self.objectClassInArrayDict[NSStringFromClass(c)];
 }
 @end

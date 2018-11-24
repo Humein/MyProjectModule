@@ -11,8 +11,6 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  Text position affinity. For example, the offset appears after the last
  character on a line is backward affinity, before the first character on
@@ -83,5 +81,3 @@ typedef NS_ENUM(NSInteger, YYTextAffinity) {
 @property (nonatomic, readwrite) BOOL isVertical;
 
 @end
-
-NS_ASSUME_NONNULL_END

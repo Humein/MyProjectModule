@@ -19,7 +19,6 @@
 #endif
 
 YY_EXTERN_C_BEGIN
-NS_ASSUME_NONNULL_BEGIN
 
 /**
  Whether the character is 'line break char':
@@ -54,7 +53,7 @@ static inline BOOL YYTextIsLinebreakChar(unichar c) {
  @param str A string
  @return YES or NO.
  */
-static inline BOOL YYTextIsLinebreakString(NSString * _Nullable str) {
+static inline BOOL YYTextIsLinebreakString(NSString *str) {
     if (str.length > 2 || str.length == 0) return NO;
     if (str.length == 1) {
         unichar c = [str characterAtIndex:0];
@@ -70,7 +69,7 @@ static inline BOOL YYTextIsLinebreakString(NSString * _Nullable str) {
  @param str  A string.
  @return The length of the tail line break: 0, 1 or 2.
  */
-static inline NSUInteger YYTextLinebreakTailLength(NSString * _Nullable str) {
+static inline NSUInteger YYTextLinebreakTailLength(NSString *str) {
     if (str.length >= 2) {
         unichar c2 = [str characterAtIndex:str.length - 1];
         if (YYTextIsLinebreakChar(c2)) {
@@ -259,5 +258,4 @@ NSCharacterSet *YYTextVerticalFormRotateCharacterSet();
  */
 NSCharacterSet *YYTextVerticalFormRotateAndMoveCharacterSet();
 
-NS_ASSUME_NONNULL_END
 YY_EXTERN_C_END

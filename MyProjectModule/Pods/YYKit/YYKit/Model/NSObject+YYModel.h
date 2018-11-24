@@ -11,8 +11,6 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  Provide some data-model method:
  
@@ -75,7 +73,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return A new instance created from the json, or nil if an error occurs.
  */
-+ (nullable instancetype)modelWithJSON:(id)json;
++ (instancetype)modelWithJSON:(id)json;
 
 /**
  Creates and returns a new instance of the receiver from a key-value dictionary.
@@ -96,7 +94,7 @@ NS_ASSUME_NONNULL_BEGIN
      `NSValue` -> struct or union, such as CGRect, CGSize, ...
      `NSString` -> SEL, Class.
  */
-+ (nullable instancetype)modelWithDictionary:(NSDictionary *)dictionary;
++ (instancetype)modelWithDictionary:(NSDictionary *)dictionary;
 
 /**
  Set the receiver's properties with a json object.
@@ -140,7 +138,7 @@ NS_ASSUME_NONNULL_BEGIN
  If the reciver is `NSArray`, `NSDictionary` or `NSSet`, it just convert
  the inner object to json object.
  */
-- (nullable id)modelToJSONObject;
+- (id)modelToJSONObject;
 
 /**
  Generate a json string's data from the receiver's properties.
@@ -151,7 +149,7 @@ NS_ASSUME_NONNULL_BEGIN
  If the reciver is `NSArray`, `NSDictionary` or `NSSet`, it will also convert the 
  inner object to json string.
  */
-- (nullable NSData *)modelToJSONData;
+- (NSData *)modelToJSONData;
 
 /**
  Generate a json string from the receiver's properties.
@@ -162,14 +160,14 @@ NS_ASSUME_NONNULL_BEGIN
  If the reciver is `NSArray`, `NSDictionary` or `NSSet`, it will also convert the 
  inner object to json string.
  */
-- (nullable NSString *)modelToJSONString;
+- (NSString *)modelToJSONString;
 
 /**
  Copy a instance with the receiver's properties.
  
  @return A copied instance, or nil if an error occurs.
  */
-- (nullable id)modelCopy;
+- (id)modelCopy;
 
 /**
  Encode the receiver's properties to a coder.
@@ -229,7 +227,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return A array, or nil if an error occurs.
  */
-+ (nullable NSArray *)modelArrayWithClass:(Class)cls json:(id)json;
++ (NSArray *)modelArrayWithClass:(Class)cls json:(id)json;
 
 @end
 
@@ -248,9 +246,9 @@ NS_ASSUME_NONNULL_BEGIN
  @param json  A json dictionary of `NSDictionary`, `NSString` or `NSData`.
               Example: {"user1":{"name","Mary"}, "user2": {name:"Joe"}}
  
- @return A dictionary, or nil if an error occurs.
+ @return A array, or nil if an error occurs.
  */
-+ (nullable NSDictionary *)modelDictionaryWithClass:(Class)cls json:(id)json;
++ (NSDictionary *)modelDictionaryWithClass:(Class)cls json:(id)json;
 @end
 
 
@@ -300,7 +298,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return A custom mapper for properties.
  */
-+ (nullable NSDictionary<NSString *, id> *)modelCustomPropertyMapper;
++ (NSDictionary *)modelCustomPropertyMapper;
 
 /**
  The generic class mapper for container properties.
@@ -329,7 +327,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return A class mapper.
  */
-+ (nullable NSDictionary<NSString *, id> *)modelContainerPropertyGenericClass;
++ (NSDictionary *)modelContainerPropertyGenericClass;
 
 /**
  If you need to create instances of different classes during json->object transform,
@@ -363,37 +361,23 @@ NS_ASSUME_NONNULL_BEGIN
  @return Class to create from this dictionary, `nil` to use current class.
 
  */
-+ (nullable Class)modelCustomClassForDictionary:(NSDictionary *)dictionary;
++ (Class)modelCustomClassForDictionary:(NSDictionary*)dictionary;
 
 /**
  All the properties in blacklist will be ignored in model transform process.
  Returns nil to ignore this feature.
  
- @return An array of property's name.
+ @return An array of property's name (Array<NSString>).
  */
-+ (nullable NSArray<NSString *> *)modelPropertyBlacklist;
++ (NSArray *)modelPropertyBlacklist;
 
 /**
  If a property is not in the whitelist, it will be ignored in model transform process.
  Returns nil to ignore this feature.
  
- @return An array of property's name.
+ @return An array of property's name (Array<NSString>).
  */
-+ (nullable NSArray<NSString *> *)modelPropertyWhitelist;
-
-/**
- This method's behavior is similar to `- (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic;`, 
- but be called before the model transform.
- 
- @discussion If the model implements this method, it will be called before
- `+modelWithJSON:`, `+modelWithDictionary:`, `-modelSetWithJSON:` and `-modelSetWithDictionary:`.
- If this method returns nil, the transform process will ignore this model.
- 
- @param dic  The json/kv dictionary.
- 
- @return Returns the modified dictionary, or nil to ignore this model.
- */
-- (NSDictionary *)modelCustomWillTransformFromDictionary:(NSDictionary *)dic;
++ (NSArray *)modelPropertyWhitelist;
 
 /**
  If the default json-to-model transform does not fit to your model object, implement
@@ -426,5 +410,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)modelCustomTransformToDictionary:(NSMutableDictionary *)dic;
 
 @end
-
-NS_ASSUME_NONNULL_END

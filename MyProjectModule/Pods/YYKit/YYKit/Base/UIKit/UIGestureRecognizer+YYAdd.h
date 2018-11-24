@@ -11,8 +11,6 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  Provides extensions for `UIGestureRecognizer`.
  */
@@ -43,5 +41,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeAllActionBlocks;
 
 @end
-
-NS_ASSUME_NONNULL_END

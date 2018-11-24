@@ -11,8 +11,6 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  Provide some some common method for `NSDictionary`.
  */
@@ -29,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param plist   A property list data whose root object is a dictionary.
  @return A new dictionary created from the binary plist data, or nil if an error occurs.
  */
-+ (nullable NSDictionary *)dictionaryWithPlistData:(NSData *)plist;
++ (NSDictionary *)dictionaryWithPlistData:(NSData *)plist;
 
 /**
  Creates and returns a dictionary from a specified property list xml string.
@@ -39,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @discussion Apple has implemented this method, but did not make it public.
  */
-+ (nullable NSDictionary *)dictionaryWithPlistString:(NSString *)plist;
++ (NSDictionary *)dictionaryWithPlistString:(NSString *)plist;
 
 /**
  Serialize the dictionary to a binary property list data.
@@ -48,14 +46,14 @@ NS_ASSUME_NONNULL_BEGIN
  
  @discussion Apple has implemented this method, but did not make it public.
  */
-- (nullable NSData *)plistData;
+- (NSData *)plistData;
 
 /**
  Serialize the dictionary to a xml property list string.
  
  @return A plist xml string, or nil if an error occurs.
  */
-- (nullable NSString *)plistString;
+- (NSString *)plistString;
 
 /**
  Returns a new array containing the dictionary's keys sorted.
@@ -96,12 +94,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Convert dictionary to json string. return nil if an error occurs.
  */
-- (nullable NSString *)jsonStringEncoded;
+- (NSString *)jsonStringEncoded;
 
 /**
  Convert dictionary to json string formatted. return nil if an error occurs.
  */
-- (nullable NSString *)jsonPrettyStringEncoded;
+- (NSString *)jsonPrettyStringEncoded;
 
 /**
  Try to parse an XML and wrap it into a dictionary.
@@ -113,7 +111,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param xmlDataOrString XML in NSData or NSString format.
  @return Return a new dictionary, or nil if an error occurs.
  */
-+ (nullable NSDictionary *)dictionaryWithXML:(id)xmlDataOrString;
++ (NSDictionary *)dictionaryWithXML:(id)xmlDataOrString;
 
 #pragma mark - Dictionary Value Getter
 ///=============================================================================
@@ -143,8 +141,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSInteger)integerValueForKey:(NSString *)key default:(NSInteger)def;
 - (NSUInteger)unsignedIntegerValueForKey:(NSString *)key default:(NSUInteger)def;
 
-- (nullable NSNumber *)numberValueForKey:(NSString *)key default:(nullable NSNumber *)def;
-- (nullable NSString *)stringValueForKey:(NSString *)key default:(nullable NSString *)def;
+- (NSNumber *)numverValueForKey:(NSString *)key default:(NSNumber *)def;
+- (NSString *)stringValueForKey:(NSString *)key default:(NSString *)def;
 
 @end
 
@@ -163,7 +161,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @discussion Apple has implemented this method, but did not make it public.
  */
-+ (nullable NSMutableDictionary *)dictionaryWithPlistData:(NSData *)plist;
++ (NSMutableDictionary *)dictionaryWithPlistData:(NSData *)plist;
 
 /**
  Creates and returns a dictionary from a specified property list xml string.
@@ -171,7 +169,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param plist   A property list xml string whose root object is a dictionary.
  @return A new dictionary created from the plist string, or nil if an error occurs.
  */
-+ (nullable NSMutableDictionary *)dictionaryWithPlistString:(NSString *)plist;
++ (NSMutableDictionary *)dictionaryWithPlistString:(NSString *)plist;
 
 
 /**
@@ -180,7 +178,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param aKey The key for which to return and remove the corresponding value.
  @return The value associated with aKey, or nil if no value is associated with aKey.
  */
-- (nullable id)popObjectForKey:(id)aKey;
+- (id)popObjectForKey:(id)aKey;
 
 /**
  Returns a new dictionary containing the entries for keys, and remove these
@@ -193,5 +191,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSDictionary *)popEntriesForKeys:(NSArray *)keys;
 
 @end
-
-NS_ASSUME_NONNULL_END

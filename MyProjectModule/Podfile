@@ -7,5 +7,6 @@ target 'MyProjectModule' do
   pod 'MJExtension'
   pod 'AFNetworking'
   pod 'KVOController'
+  pod 'SDWebImage', '~> 4.3.3'
 
 end

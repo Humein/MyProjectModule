@@ -53,7 +53,6 @@ static NSData *JPEGSOSMarker() {
     return marker;
 }
 
-
 static NSMutableSet *URLBlacklist;
 static dispatch_semaphore_t URLBlacklistLock;
 
@@ -170,7 +169,7 @@ static void URLInBlackListAdd(NSURL *url) {
 
 - (instancetype)init {
     @throw [NSException exceptionWithName:@"YYWebImageOperation init error" reason:@"YYWebImageOperation must be initialized with a request. Use the designated initializer to init." userInfo:nil];
-    return [self initWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@""]] options:0 cache:nil cacheKey:nil progress:nil transform:nil completion:nil];
+    return [self initWithRequest:nil options:0 cache:nil cacheKey:nil progress:nil transform:nil completion:nil];
 }
 
 - (instancetype)initWithRequest:(NSURLRequest *)request
@@ -195,7 +194,6 @@ static void URLInBlackListAdd(NSURL *url) {
     _finished = NO;
     _cancelled = NO;
     _taskID = UIBackgroundTaskInvalid;
-    _lock = [NSRecursiveLock new];
     return self;
 }
 
@@ -436,7 +434,7 @@ static void URLInBlackListAdd(NSURL *url) {
             _data = [NSMutableData dataWithCapacity:_expectedSize > 0 ? _expectedSize : 0];
             if (_progress) {
                 [_lock lock];
-                if (![self isCancelled]) _progress(0, _expectedSize);
+                if ([self isCancelled]) _progress(0, _expectedSize);
                 [_lock unlock];
             }
         }

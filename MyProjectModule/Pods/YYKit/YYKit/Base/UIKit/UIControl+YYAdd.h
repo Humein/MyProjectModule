@@ -11,8 +11,6 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  Provides extensions for `UIControl`.
  */
@@ -74,5 +72,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeAllBlocksForControlEvents:(UIControlEvents)controlEvents;
 
 @end
-
-NS_ASSUME_NONNULL_END

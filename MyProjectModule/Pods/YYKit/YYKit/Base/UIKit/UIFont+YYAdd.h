@@ -13,8 +13,6 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <CoreText/CoreText.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  Provides extensions for `UIFont`.
  */
@@ -35,25 +33,25 @@ NS_ASSUME_NONNULL_BEGIN
  Create a bold font from receiver.
  @return A bold font, or nil if failed.
  */
-- (nullable UIFont *)fontWithBold NS_AVAILABLE_IOS(7_0);
+- (UIFont *)fontWithBold NS_AVAILABLE_IOS(7_0);
 
 /**
  Create a italic font from receiver.
  @return A italic font, or nil if failed.
  */
-- (nullable UIFont *)fontWithItalic NS_AVAILABLE_IOS(7_0);
+- (UIFont *)fontWithItalic NS_AVAILABLE_IOS(7_0);
 
 /**
  Create a bold and italic font from receiver.
  @return A bold and italic font, or nil if failed.
  */
-- (nullable UIFont *)fontWithBoldItalic NS_AVAILABLE_IOS(7_0);
+- (UIFont *)fontWithBoldItalic NS_AVAILABLE_IOS(7_0);
 
 /**
  Create a normal (no bold/italic/...) font from receiver.
  @return A normal font, or nil if failed.
  */
-- (nullable UIFont *)fontWithNormal NS_AVAILABLE_IOS(7_0);
+- (UIFont *)fontWithNormal NS_AVAILABLE_IOS(7_0);
 
 #pragma mark - Create font
 ///=============================================================================
@@ -65,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param CTFont  CoreText font.
  */
-+ (nullable UIFont *)fontWithCTFont:(CTFontRef)CTFont;
++ (UIFont *)fontWithCTFont:(CTFontRef)CTFont;
 
 /**
  Creates and returns a font object for the specified CGFontRef and size.
@@ -73,17 +71,17 @@ NS_ASSUME_NONNULL_BEGIN
  @param CGFont  CoreGraphic font.
  @param size    Font size.
  */
-+ (nullable UIFont *)fontWithCGFont:(CGFontRef)CGFont size:(CGFloat)size;
++ (UIFont *)fontWithCGFont:(CGFontRef)CGFont size:(CGFloat)size;
 
 /**
  Creates and returns the CTFontRef object. (need call CFRelease() after used)
  */
-- (nullable CTFontRef)CTFontRef CF_RETURNS_RETAINED;
+- (CTFontRef)CTFontRef CF_RETURNS_RETAINED;
 
 /**
  Creates and returns the CGFontRef object. (need call CFRelease() after used)
  */
-- (nullable CGFontRef)CGFontRef CF_RETURNS_RETAINED;
+- (CGFontRef)CGFontRef CF_RETURNS_RETAINED;
 
 
 #pragma mark - Load and unload font
@@ -113,7 +111,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return UIFont object if load succeed, otherwise nil.
  */
-+ (nullable UIFont *)loadFontFromData:(NSData *)data;
++ (UIFont *)loadFontFromData:(NSData *)data;
 
 /**
  Unload font which is loaded by loadFontFromData: function.
@@ -137,7 +135,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return data in TTF, or nil if an error occurs.
  */
-+ (nullable NSData *)dataFromFont:(UIFont *)font;
++ (NSData *)dataFromFont:(UIFont *)font;
 
 /**
  Serialize and return the font data.
@@ -146,8 +144,6 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return data in TTF, or nil if an error occurs.
  */
-+ (nullable NSData *)dataFromCGFont:(CGFontRef)cgFont;
++ (NSData *)dataFromCGFont:(CGFontRef)cgFont;
 
 @end
-
-NS_ASSUME_NONNULL_END

@@ -13,8 +13,6 @@
 
 @class YYKeychainItem;
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  A wrapper for system keychain API.
  
@@ -44,11 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return Password string, or nil when not found or error occurs.
  */
-+ (nullable NSString *)getPasswordForService:(NSString *)serviceName
-                                     account:(NSString *)account
-                                       error:(NSError **)error;
-+ (nullable NSString *)getPasswordForService:(NSString *)serviceName
-                                     account:(NSString *)account;
++ (NSString *)getPasswordForService:(NSString *)serviceName account:(NSString *)account error:(__autoreleasing NSError **)error;
 
 /**
  Deletes a password from the Keychain.
@@ -66,8 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return Whether succeed.
  */
-+ (BOOL)deletePasswordForService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error;
-+ (BOOL)deletePasswordForService:(NSString *)serviceName account:(NSString *)account;
++ (BOOL)deletePasswordForService:(NSString *)serviceName account:(NSString *)account error:(__autoreleasing NSError **)error;
 
 /**
  Insert or update the password for a given account and service.
@@ -87,13 +80,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return Whether succeed.
  */
-+ (BOOL)setPassword:(NSString *)password
-         forService:(NSString *)serviceName
-            account:(NSString *)account
-              error:(NSError **)error;
-+ (BOOL)setPassword:(NSString *)password
-         forService:(NSString *)serviceName
-            account:(NSString *)account;
++ (BOOL)setPassword:(NSString *)password forService:(NSString *)serviceName account:(NSString *)account error:(__autoreleasing NSError **)error;
 
 
 #pragma mark - Full query for keychain (SQL-like)
@@ -116,8 +103,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return Whether succeed.
  */
-+ (BOOL)insertItem:(YYKeychainItem *)item error:(NSError **)error;
-+ (BOOL)insertItem:(YYKeychainItem *)item;
++ (BOOL)insertItem:(YYKeychainItem *)item error:(__autoreleasing NSError **)error;
 
 /**
  Update item in keychain.
@@ -134,8 +120,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return Whether succeed.
  */
-+ (BOOL)updateItem:(YYKeychainItem *)item error:(NSError **)error;
-+ (BOOL)updateItem:(YYKeychainItem *)item;
++ (BOOL)updateItem:(YYKeychainItem *)item error:(__autoreleasing NSError **)error;
 
 /**
  Delete items from keychain.
@@ -152,8 +137,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return Whether succeed.
  */
-+ (BOOL)deleteItem:(YYKeychainItem *)item error:(NSError **)error;
-+ (BOOL)deleteItem:(YYKeychainItem *)item;
++ (BOOL)deleteItem:(YYKeychainItem *)item error:(__autoreleasing NSError **)error;
 
 /**
  Find an item from keychain.
@@ -170,8 +154,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return An item or nil.
  */
-+ (nullable YYKeychainItem *)selectOneItem:(YYKeychainItem *)item error:(NSError **)error;
-+ (nullable YYKeychainItem *)selectOneItem:(YYKeychainItem *)item;
++ (YYKeychainItem *)selectOneItem:(YYKeychainItem *)item error:(__autoreleasing NSError **)error;
 
 /**
  Find all items matches the query.
@@ -188,9 +171,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return An array of YYKeychainItem.
  */
-+ (nullable NSArray<YYKeychainItem *> *)selectItems:(YYKeychainItem *)item error:(NSError **)error;
-+ (nullable NSArray<YYKeychainItem *> *)selectItems:(YYKeychainItem *)item;
-
++ (NSArray *)selectItems:(YYKeychainItem *)item error:(__autoreleasing NSError **)error;
 @end
 
 
@@ -305,24 +286,22 @@ typedef NS_ENUM (NSUInteger, YYKeychainQuerySynchronizationMode) {
  */
 @interface YYKeychainItem : NSObject <NSCopying>
 
-@property (nullable, nonatomic, copy) NSString *service; ///< kSecAttrService
-@property (nullable, nonatomic, copy) NSString *account; ///< kSecAttrAccount
-@property (nullable, nonatomic, copy) NSData *passwordData; ///< kSecValueData
-@property (nullable, nonatomic, copy) NSString *password; ///< shortcut for `passwordData`
-@property (nullable, nonatomic, copy) id <NSCoding> passwordObject; ///< shortcut for `passwordData`
+@property (nonatomic, copy) NSString *service; ///< kSecAttrService
+@property (nonatomic, copy) NSString *account; ///< kSecAttrAccount
+@property (nonatomic, copy) NSData *passwordData; ///< kSecValueData
+@property (nonatomic, copy) NSString *password; ///< shortcut for `passwordData`
+@property (nonatomic, copy) id <NSCoding> passwordObject; ///< shortcut for `passwordData`
 
-@property (nullable, nonatomic, copy) NSString *label; ///< kSecAttrLabel
-@property (nullable, nonatomic, copy) NSNumber *type; ///< kSecAttrType (FourCC)
-@property (nullable, nonatomic, copy) NSNumber *creater; ///< kSecAttrCreator (FourCC)
-@property (nullable, nonatomic, copy) NSString *comment; ///< kSecAttrComment
-@property (nullable, nonatomic, copy) NSString *descr; ///< kSecAttrDescription
-@property (nullable, nonatomic, readonly, strong) NSDate *modificationDate; ///< kSecAttrModificationDate
-@property (nullable, nonatomic, readonly, strong) NSDate *creationDate; ///< kSecAttrCreationDate
-@property (nullable, nonatomic, copy) NSString *accessGroup; ///< kSecAttrAccessGroup
+@property (nonatomic, copy) NSString *label; ///< kSecAttrLabel
+@property (nonatomic, copy) NSNumber *type; ///< kSecAttrType (FourCC)
+@property (nonatomic, copy) NSNumber *creater; ///< kSecAttrCreator (FourCC)
+@property (nonatomic, copy) NSString *comment; ///< kSecAttrComment
+@property (nonatomic, copy) NSString *descr; ///< kSecAttrDescription
+@property (nonatomic, readonly, copy) NSDate *modificationDate; ///< kSecAttrModificationDate
+@property (nonatomic, readonly, copy) NSDate *creationDate; ///< kSecAttrCreationDate
+@property (nonatomic, copy) NSString *accessGroup; ///< kSecAttrAccessGroup
 
-@property (nonatomic) YYKeychainAccessible accessible; ///< kSecAttrAccessible
-@property (nonatomic) YYKeychainQuerySynchronizationMode synchronizable NS_AVAILABLE_IOS(7_0); ///< kSecAttrSynchronizable
+@property (nonatomic, assign) YYKeychainAccessible accessible; ///< kSecAttrAccessible
+@property (nonatomic, assign) YYKeychainQuerySynchronizationMode synchronizable NS_AVAILABLE_IOS(7_0); ///< kSecAttrSynchronizable
 
 @end
-
-NS_ASSUME_NONNULL_END

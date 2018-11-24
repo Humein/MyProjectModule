@@ -19,8 +19,6 @@
 #import "YYWebImageManager.h"
 #endif
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  The YYWebImageOperation class is an NSOperation subclass used to fetch image 
  from URL request.
@@ -39,11 +37,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface YYWebImageOperation : NSOperation
 
-@property (nonatomic, strong, readonly)           NSURLRequest      *request;  ///< The image URL request.
-@property (nullable, nonatomic, strong, readonly) NSURLResponse     *response; ///< The response for request.
-@property (nullable, nonatomic, strong, readonly) YYImageCache      *cache;    ///< The image cache.
-@property (nonatomic, strong, readonly)           NSString          *cacheKey; ///< The image cache key.
-@property (nonatomic, readonly)                   YYWebImageOptions options;   ///< The operation's option.
+@property (nonatomic, strong, readonly) NSURLRequest *request;     ///< The image URL request.
+@property (nonatomic, strong, readonly) NSURLResponse *response;   ///< The response for request.
+@property (nonatomic, assign, readonly) YYWebImageOptions options; ///< The operation's option.
+@property (nonatomic, strong, readonly) YYImageCache *cache;       ///< The image cache.
+@property (nonatomic, strong, readonly) NSString *cacheKey;        ///< The image cache key.
 
 /**
  Whether the URL connection should consult the credential storage for authenticating 
@@ -52,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
  @discussion This is the value that is returned in the `NSURLConnectionDelegate` 
  method `-connectionShouldUseCredentialStorage:`.
  */
-@property (nonatomic) BOOL shouldUseCredentialStorage;
+@property (nonatomic, assign) BOOL shouldUseCredentialStorage;
 
 /**
  The credential used for authentication challenges in `-connection:didReceiveAuthenticationChallenge:`.
@@ -60,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
  @discussion This will be overridden by any shared credentials that exist for the 
  username or password of the request URL, if present.
  */
-@property (nullable, nonatomic, strong) NSURLCredential *credential;
+@property (nonatomic, strong) NSURLCredential *credential;
 
 /**
  Creates and returns a new operation.
@@ -83,15 +81,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithRequest:(NSURLRequest *)request
                         options:(YYWebImageOptions)options
-                          cache:(nullable YYImageCache *)cache
-                       cacheKey:(nullable NSString *)cacheKey
-                       progress:(nullable YYWebImageProgressBlock)progress
-                      transform:(nullable YYWebImageTransformBlock)transform
-                     completion:(nullable YYWebImageCompletionBlock)completion NS_DESIGNATED_INITIALIZER;
+                          cache:(YYImageCache *)cache
+                       cacheKey:(NSString *)cacheKey
+                       progress:(YYWebImageProgressBlock)progress
+                      transform:(YYWebImageTransformBlock)transform
+                     completion:(YYWebImageCompletionBlock)completion NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
 + (instancetype)new UNAVAILABLE_ATTRIBUTE;
 
 @end
-
-NS_ASSUME_NONNULL_END

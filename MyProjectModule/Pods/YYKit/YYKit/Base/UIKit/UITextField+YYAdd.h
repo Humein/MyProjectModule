@@ -11,8 +11,6 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  Provides extensions for `UITextField`.
  */
@@ -31,5 +29,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setSelectedRange:(NSRange)range;
 
 @end
-
-NS_ASSUME_NONNULL_END

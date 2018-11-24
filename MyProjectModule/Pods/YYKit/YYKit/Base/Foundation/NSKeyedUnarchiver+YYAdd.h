@@ -11,8 +11,6 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  Provides extensions for `NSKeyedUnarchiver`.
  */
@@ -26,8 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param exception  Pointer which will, upon return, if an exception occurred and
  said pointer is not NULL, point to said NSException.
  */
-+ (nullable id)unarchiveObjectWithData:(NSData *)data
-                             exception:(NSException *_Nullable *_Nullable)exception;
++ (id)unarchiveObjectWithData:(NSData *)data exception:(__autoreleasing NSException **)exception;
 
 /**
  Same as unarchiveObjectWithFile:, except it returns the exception by reference.
@@ -37,9 +34,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param exception  Pointer which will, upon return, if an exception occurred and
  said  pointer is not NULL, point to said NSException.
  */
-+ (nullable id)unarchiveObjectWithFile:(NSString *)path
-                             exception:(NSException *_Nullable *_Nullable)exception;
++ (id)unarchiveObjectWithFile:(NSString *)path exception:(__autoreleasing NSException **)exception;
 
 @end
-
-NS_ASSUME_NONNULL_END

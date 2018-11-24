@@ -11,8 +11,6 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  Provides extensions for `NSTimer`.
  */
@@ -62,5 +60,3 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSTimer *)timerWithTimeInterval:(NSTimeInterval)seconds block:(void (^)(NSTimer *timer))block repeats:(BOOL)repeats;
 
 @end
-
-NS_ASSUME_NONNULL_END

@@ -11,8 +11,6 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  A proxy used to hold a weak object.
  It can be used to avoid retain cycles, such as the target in NSTimer or CADisplayLink.
@@ -36,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The proxy target.
  */
-@property (nullable, nonatomic, weak, readonly) id target;
+@property (nonatomic, weak, readonly) id target;
 
 /**
  Creates a new weak proxy for target.
@@ -57,5 +55,3 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)proxyWithTarget:(id)target;
 
 @end
-
-NS_ASSUME_NONNULL_END

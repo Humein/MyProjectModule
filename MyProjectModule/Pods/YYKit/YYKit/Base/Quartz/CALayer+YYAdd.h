@@ -12,8 +12,6 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  Provides extensions for `CALayer`.
  */
@@ -22,12 +20,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Take snapshot without transform, image's size equals to bounds.
  */
-- (nullable UIImage *)snapshotImage;
+- (UIImage *)snapshotImage;
 
 /**
  Take snapshot without transform, PDF's page size equals to bounds.
  */
-- (nullable NSData *)snapshotPDF;
+- (NSData *)snapshotPDF;
 
 /**
  Shortcut to set the layer's shadow
@@ -72,12 +70,12 @@ NS_ASSUME_NONNULL_BEGIN
  Shortcut for transform.m34, -1/1000 is a good value.
  It should be set before other transform shortcut.
  */
-@property (nonatomic) CGFloat transformDepth;
+@property (nonatomic, assign) CGFloat transformDepth;
 
 /**
  Wrapper for `contentsGravity` property.
  */
-@property (nonatomic) UIViewContentMode contentMode;
+@property (nonatomic, assign) UIViewContentMode contentMode;
 
 /**
  Add a fade animation to layer's contents when the contents is changed.
@@ -93,5 +91,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removePreviousFadeAnimation;
 
 @end
-
-NS_ASSUME_NONNULL_END

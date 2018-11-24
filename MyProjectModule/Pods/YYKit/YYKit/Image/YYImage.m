@@ -30,12 +30,12 @@
     CGFloat scale = 1;
     
     // If no extension, guess by system supported (same as UIImage).
-    NSArray *exts = ext.length > 0 ? @[ext] : @[@"", @"png", @"jpeg", @"jpg", @"gif", @"webp", @"apng"];
+    NSArray *supportedExtensions = ext.length > 0 ? @[ext] : @[@"", @"png", @"jpeg", @"jpg", @"gif", @"webp", @"apng"];
     NSArray *scales = [NSBundle preferredScales];
     for (int s = 0; s < scales.count; s++) {
         scale = ((NSNumber *)scales[s]).floatValue;
         NSString *scaledName = [res stringByAppendingNameScale:scale];
-        for (NSString *e in exts) {
+        for (NSString *e in supportedExtensions) {
             path = [[NSBundle mainBundle] pathForResource:scaledName ofType:e];
             if (path) break;
         }

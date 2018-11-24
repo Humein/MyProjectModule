@@ -19,8 +19,6 @@
 #import "YYImageCoder.h"
 #endif
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  A YYImage object is a high-level way to display animated image data.
  
@@ -41,10 +39,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface YYImage : UIImage <YYAnimatedImage>
 
-+ (nullable YYImage *)imageNamed:(NSString *)name; // no cache!
-+ (nullable YYImage *)imageWithContentsOfFile:(NSString *)path;
-+ (nullable YYImage *)imageWithData:(NSData *)data;
-+ (nullable YYImage *)imageWithData:(NSData *)data scale:(CGFloat)scale;
++ (YYImage *)imageNamed:(NSString *)name; // no cache!
++ (YYImage *)imageWithContentsOfFile:(NSString *)path;
++ (YYImage *)imageWithData:(NSData *)data;
++ (YYImage *)imageWithData:(NSData *)data scale:(CGFloat)scale;
 
 /**
  If the image is created from data or file, then the value indicates the data type.
@@ -55,7 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
  If the image is created from animated image data (multi-frame GIF/APNG/WebP),
  this property stores the original image data.
  */
-@property (nullable, nonatomic, readonly) NSData *animatedImageData;
+@property (nonatomic, readonly) NSData *animatedImageData;
 
 /**
  The total memory usage (in bytes) if all frame images was loaded into memory.
@@ -73,8 +71,6 @@ NS_ASSUME_NONNULL_BEGIN
  
  See `animatedImageMemorySize` for memory cost.
  */
-@property (nonatomic) BOOL preloadAllAnimatedImageFrames;
+@property (nonatomic, assign) BOOL preloadAllAnimatedImageFrames;
 
 @end
-
-NS_ASSUME_NONNULL_END

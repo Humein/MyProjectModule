@@ -204,18 +204,11 @@ CGRect YYCGRectFitWithContentMode(CGRect rect, CGSize size, UIViewContentMode mo
                 rect.size = CGSizeZero;
             } else {
                 CGFloat scale;
-                if (mode == UIViewContentModeScaleAspectFit) {
-                    if (size.width / size.height < rect.size.width / rect.size.height) {
-                        scale = rect.size.height / size.height;
-                    } else {
-                        scale = rect.size.width / size.width;
-                    }
+                if (size.width / size.height < rect.size.width / rect.size.height &&
+                    mode == UIViewContentModeScaleAspectFit) {
+                    scale = rect.size.height / size.height;
                 } else {
-                    if (size.width / size.height < rect.size.width / rect.size.height) {
-                        scale = rect.size.width / size.width;
-                    } else {
-                        scale = rect.size.height / size.height;
-                    }
+                    scale = rect.size.width / size.width;
                 }
                 size.width *= scale;
                 size.height *= scale;

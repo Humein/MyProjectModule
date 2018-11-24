@@ -87,9 +87,9 @@ CGColorRef POPCGColorWithColor(id color)
       CGColorRef colorRef = (__bridge CGColorRef)objc_getAssociatedObject(color, key);
 
       if (!colorRef) {
-        size_t numberOfComponents = [(NSColor *)color numberOfComponents];
+        size_t numberOfComponents = [color numberOfComponents];
         CGFloat components[numberOfComponents];
-        CGColorSpaceRef colorSpace = [[(NSColor *)color colorSpace] CGColorSpace];
+        CGColorSpaceRef colorSpace = [[color colorSpace] CGColorSpace];
 
         [color getComponents:components];
 

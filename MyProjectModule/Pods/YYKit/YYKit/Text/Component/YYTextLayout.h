@@ -23,12 +23,6 @@
 #endif
 
 @protocol YYTextLinePositionModifier;
-
-NS_ASSUME_NONNULL_BEGIN
-
-/**
- The max text container size in layout.
- */
 extern const CGSize YYTextContainerMaxSize;
 
 /**
@@ -65,43 +59,43 @@ extern const CGSize YYTextContainerMaxSize;
 + (instancetype)containerWithSize:(CGSize)size insets:(UIEdgeInsets)insets;
 
 /// Creates a container with the specified path. @param size The path.
-+ (instancetype)containerWithPath:(nullable UIBezierPath *)path;
++ (instancetype)containerWithPath:(UIBezierPath *)path;
 
 /// The constrained size. (if the size is larger than YYTextContainerMaxSize, it will be clipped)
-@property CGSize size;
+@property (assign) CGSize size;
 
 /// The insets for constrained size. The inset value should not be negative. Default is UIEdgeInsetsZero.
-@property UIEdgeInsets insets;
+@property (assign) UIEdgeInsets insets;
 
 /// Custom constrained path. Set this property to ignore `size` and `insets`. Default is nil.
-@property (nullable, copy) UIBezierPath *path;
+@property (copy) UIBezierPath *path;
 
 /// An array of `UIBezierPath` for path exclusion. Default is nil.
-@property (nullable, copy) NSArray<UIBezierPath *> *exclusionPaths;
+@property (copy) NSArray *exclusionPaths;
 
 /// Path line width. Default is 0;
-@property CGFloat pathLineWidth;
+@property (assign) CGFloat pathLineWidth;
 
 /// YES:(PathFillEvenOdd) Text is filled in the area that would be painted if the path were given to CGContextEOFillPath.
 /// NO: (PathFillWindingNumber) Text is fill in the area that would be painted if the path were given to CGContextFillPath.
 /// Default is YES;
-@property (getter=isPathFillEvenOdd) BOOL pathFillEvenOdd;
+@property (assign, getter=isPathFillEvenOdd) BOOL pathFillEvenOdd;
 
 /// Whether the text is vertical form (may used for CJK text layout). Default is NO.
-@property (getter=isVerticalForm) BOOL verticalForm;
+@property (assign, getter=isVerticalForm) BOOL verticalForm;
 
 /// Maximum number of rows, 0 means no limit. Default is 0.
-@property NSUInteger maximumNumberOfRows;
+@property (assign) NSUInteger maximumNumberOfRows;
 
 /// The line truncation type, default is none.
-@property YYTextTruncationType truncationType;
+@property (assign) YYTextTruncationType truncationType;
 
 /// The truncation token. If nil, the layout will use "…" instead. Default is nil.
-@property (nullable, copy) NSAttributedString *truncationToken;
+@property (copy) NSAttributedString *truncationToken;
 
 /// This modifier is applied to the lines before the layout is completed,
 /// give you a chance to modify the line position. Default is nil.
-@property (nullable, copy) id<YYTextLinePositionModifier> linePositionModifier;
+@property (copy) id<YYTextLinePositionModifier> linePositionModifier;
 @end
 
 
@@ -117,7 +111,7 @@ extern const CGSize YYTextContainerMaxSize;
  @param text      The full text.
  @param container The layout container.
  */
-- (void)modifyLines:(NSArray<YYTextLine *> *)lines fromText:(NSAttributedString *)text inContainer:(YYTextContainer *)container;
+- (void)modifyLines:(NSArray *)lines fromText:(NSAttributedString *)text inContainer:(YYTextContainer *)container;
 @end
 
 
@@ -163,8 +157,7 @@ extern const CGSize YYTextContainerMaxSize;
  @param text The text (if nil, returns nil).
  @return A new layout, or nil when an error occurs.
 */
-+ (nullable YYTextLayout *)layoutWithContainerSize:(CGSize)size
-                                              text:(NSAttributedString *)text;
++ (YYTextLayout *)layoutWithContainerSize:(CGSize)size text:(NSAttributedString *)text;
 
 /**
  Generate a layout with the given container and text.
@@ -173,8 +166,7 @@ extern const CGSize YYTextContainerMaxSize;
  @param text      The text (if nil, returns nil).
  @return A new layout, or nil when an error occurs.
  */
-+ (nullable YYTextLayout *)layoutWithContainer:(YYTextContainer *)container
-                                          text:(NSAttributedString *)text;
++ (YYTextLayout *)layoutWithContainer:(YYTextContainer *)container text:(NSAttributedString *)text;
 
 /**
  Generate a layout with the given container and text.
@@ -185,9 +177,7 @@ extern const CGSize YYTextContainerMaxSize;
     length of the range is 0, it means the length is no limit.
  @return A new layout, or nil when an error occurs.
  */
-+ (nullable YYTextLayout *)layoutWithContainer:(YYTextContainer *)container
-                                          text:(NSAttributedString *)text
-                                         range:(NSRange)range;
++ (YYTextLayout *)layoutWithContainer:(YYTextContainer *)container text:(NSAttributedString *)text range:(NSRange)range;
 
 /**
  Generate layouts with the given containers and text.
@@ -197,8 +187,7 @@ extern const CGSize YYTextContainerMaxSize;
  @return An array of YYTextLayout object (the count is same as containers),
     or nil when an error occurs.
  */
-+ (nullable NSArray<YYTextLayout *> *)layoutWithContainers:(NSArray<YYTextContainer *> *)containers
-                                                      text:(NSAttributedString *)text;
++ (NSArray *)layoutWithContainers:(NSArray *)containers text:(NSAttributedString *)text;
 
 /**
  Generate layouts with the given containers and text.
@@ -210,9 +199,7 @@ extern const CGSize YYTextContainerMaxSize;
  @return An array of YYTextLayout object (the count is same as containers),
     or nil when an error occurs.
  */
-+ (nullable NSArray<YYTextLayout *> *)layoutWithContainers:(NSArray<YYTextContainer *> *)containers
-                                                      text:(NSAttributedString *)text
-                                                     range:(NSRange)range;
++ (NSArray *)layoutWithContainers:(NSArray *)containers text:(NSAttributedString *)text range:(NSRange)range;
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
 + (instancetype)new UNAVAILABLE_ATTRIBUTE;
@@ -223,56 +210,31 @@ extern const CGSize YYTextContainerMaxSize;
 /// @name Text layout attributes
 ///=============================================================================
 
-///< The text container
-@property (nonatomic, strong, readonly) YYTextContainer *container;
-///< The full text
-@property (nonatomic, strong, readonly) NSAttributedString *text;
-///< The text range in full text
-@property (nonatomic, readonly) NSRange range;
-///< CTFrameSetter
-@property (nonatomic, readonly) CTFramesetterRef frameSetter;
-///< CTFrame
-@property (nonatomic, readonly) CTFrameRef frame;
-///< Array of `YYTextLine`, no truncated
-@property (nonatomic, strong, readonly) NSArray<YYTextLine *> *lines;
-///< YYTextLine with truncated token, or nil
-@property (nullable, nonatomic, strong, readonly) YYTextLine *truncatedLine;
-///< Array of `YYTextAttachment`
-@property (nullable, nonatomic, strong, readonly) NSArray<YYTextAttachment *> *attachments;
-///< Array of NSRange(wrapped by NSValue) in text
-@property (nullable, nonatomic, strong, readonly) NSArray<NSValue *> *attachmentRanges;
-///< Array of CGRect(wrapped by NSValue) in container
-@property (nullable, nonatomic, strong, readonly) NSArray<NSValue *> *attachmentRects;
-///< Set of Attachment (UIImage/UIView/CALayer)
-@property (nullable, nonatomic, strong, readonly) NSSet *attachmentContentsSet;
-///< Number of rows
-@property (nonatomic, readonly) NSUInteger rowCount;
-///< Visible text range
-@property (nonatomic, readonly) NSRange visibleRange;
-///< Bounding rect (glyphs)
-@property (nonatomic, readonly) CGRect textBoundingRect;
-///< Bounding size (glyphs and insets, ceil to pixel)
-@property (nonatomic, readonly) CGSize textBoundingSize;
-///< Has highlight attribute
-@property (nonatomic, readonly) BOOL containsHighlight;
-///< Has block border attribute
-@property (nonatomic, readonly) BOOL needDrawBlockBorder;
-///< Has background border attribute
-@property (nonatomic, readonly) BOOL needDrawBackgroundBorder;
-///< Has shadow attribute
-@property (nonatomic, readonly) BOOL needDrawShadow;
-///< Has underline attribute
-@property (nonatomic, readonly) BOOL needDrawUnderline;
-///< Has visible text
-@property (nonatomic, readonly) BOOL needDrawText;
-///< Has attachment attribute
-@property (nonatomic, readonly) BOOL needDrawAttachment;
-///< Has inner shadow attribute
-@property (nonatomic, readonly) BOOL needDrawInnerShadow;
-///< Has strickthrough attribute
-@property (nonatomic, readonly) BOOL needDrawStrikethrough;
-///< Has border attribute
-@property (nonatomic, readonly) BOOL needDrawBorder;
+@property (nonatomic, readonly) YYTextContainer *container;    ///< The text contaner
+@property (nonatomic, readonly) NSAttributedString *text;      ///< The full text
+@property (nonatomic, readonly) NSRange range;                 ///< The text range in full text
+@property (nonatomic, readonly) CTFramesetterRef frameSetter;  ///< CTFrameSetter
+@property (nonatomic, readonly) CTFrameRef frame;              ///< CTFrame
+@property (nonatomic, readonly) NSArray *lines;                ///< Array of `YYTextLine`, no truncated
+@property (nonatomic, readonly) YYTextLine *truncatedLine;     ///< YYTextLine with truncated token, or nil
+@property (nonatomic, readonly) NSArray *attachments;          ///< Array of `YYTextAttachment`
+@property (nonatomic, readonly) NSArray *attachmentRanges;     ///< Array of NSRange(wrapped by NSValue) in text
+@property (nonatomic, readonly) NSArray *attachmentRects;      ///< Array of CGRect(wrapped by NSValue) in container
+@property (nonatomic, readonly) NSSet *attachmentContentsSet;  ///< Set of Attachment (UIImage/UIView/CALayer)
+@property (nonatomic, readonly) NSUInteger rowCount;           ///< Number of rows
+@property (nonatomic, readonly) NSRange visibleRange;          ///< Visible text range
+@property (nonatomic, readonly) CGRect textBoundingRect;       ///< Text bounding rect (only contains text glyph)
+@property (nonatomic, readonly) CGSize textBoundingSize;       ///< Text bounding size (encompasses all text and insets)
+@property (nonatomic, readonly) BOOL containsHighlight;        ///< Has highlight attribute
+@property (nonatomic, readonly) BOOL needDrawBlockBorder;      ///< Has block border attribute
+@property (nonatomic, readonly) BOOL needDrawBackgroundBorder; ///< Has background border attribute
+@property (nonatomic, readonly) BOOL needDrawShadow;           ///< Has shadow attribute
+@property (nonatomic, readonly) BOOL needDrawUnderline;        ///< Has underline attribute
+@property (nonatomic, readonly) BOOL needDrawText;             ///< Has visible text
+@property (nonatomic, readonly) BOOL needDrawAttachment;       ///< Has attachment attribute
+@property (nonatomic, readonly) BOOL needDrawInnerShadow;      ///< Has inner shadow attribute
+@property (nonatomic, readonly) BOOL needDrawStrikethrough;    ///< Has strickthrough attribute
+@property (nonatomic, readonly) BOOL needDrawBorder;           ///< Has border attribute
 
 
 #pragma mark - Query information from text layout
@@ -356,7 +318,7 @@ extern const CGSize YYTextContainerMaxSize;
  @param point  A point in the container.
  @return A text position, or nil if not found.
  */
-- (nullable YYTextPosition *)closestPositionToPoint:(CGPoint)point;
+- (YYTextPosition *)closestPositionToPoint:(CGPoint)point;
 
 /**
  Returns the new position when moving selection grabber in text view.
@@ -370,9 +332,9 @@ extern const CGSize YYTextContainerMaxSize;
  
  @return A text position, or nil if not found.
  */
-- (nullable YYTextPosition *)positionForPoint:(CGPoint)point
-                                  oldPosition:(YYTextPosition *)oldPosition
-                                otherPosition:(YYTextPosition *)otherPosition;
+- (YYTextPosition *)positionForPoint:(CGPoint)point
+                         oldPosition:(YYTextPosition *)oldPosition
+                       otherPosition:(YYTextPosition *)otherPosition;
 
 /**
  Returns the character or range of characters that is at a given point in the container.
@@ -385,7 +347,7 @@ extern const CGSize YYTextContainerMaxSize;
  @return An object representing a range that encloses a character (or characters) 
  at point. Or nil if not found.
  */
-- (nullable YYTextRange *)textRangeAtPoint:(CGPoint)point;
+- (YYTextRange *)textRangeAtPoint:(CGPoint)point;
 
 /**
  Returns the closest character or range of characters that is at a given point in 
@@ -398,7 +360,7 @@ extern const CGSize YYTextContainerMaxSize;
  @return An object representing a range that encloses a character (or characters)
  at point. Or nil if not found.
  */
-- (nullable YYTextRange *)closestTextRangeAtPoint:(CGPoint)point;
+- (YYTextRange *)closestTextRangeAtPoint:(CGPoint)point;
 
 /**
  If the position is inside an emoji, composed character sequences, line break '\\r\\n'
@@ -409,7 +371,7 @@ extern const CGSize YYTextContainerMaxSize;
  
  @return A text-range object that extend the position. Or nil if an error occurs
  */
-- (nullable YYTextRange *)textRangeByExtendingPosition:(YYTextPosition *)position;
+- (YYTextRange *)textRangeByExtendingPosition:(YYTextPosition *)position;
 
 /**
  Returns a text range at a given offset in a specified direction from another 
@@ -422,9 +384,9 @@ extern const CGSize YYTextContainerMaxSize;
  @return A text-range object that represents the distance from position to the
  farthest extent in direction. Or nil if an error occurs.
  */
-- (nullable YYTextRange *)textRangeByExtendingPosition:(YYTextPosition *)position
-                                           inDirection:(UITextLayoutDirection)direction
-                                                offset:(NSInteger)offset;
+- (YYTextRange *)textRangeByExtendingPosition:(YYTextPosition *)position
+                                  inDirection:(UITextLayoutDirection)direction
+                                       offset:(NSInteger)offset;
 
 /**
  Returns the line index for a given text position.
@@ -484,7 +446,7 @@ extern const CGSize YYTextContainerMaxSize;
  @return An array of `YYTextSelectionRect` objects that encompass the selection.
  If not found, the array is empty.
  */
-- (NSArray<YYTextSelectionRect *> *)selectionRectsForRange:(YYTextRange *)range;
+- (NSArray *)selectionRectsForRange:(YYTextRange *)range;
 
 /**
  Returns an array of selection rects corresponding to the range of text.
@@ -493,7 +455,7 @@ extern const CGSize YYTextContainerMaxSize;
  @return An array of `YYTextSelectionRect` objects that encompass the selection.
  If not found, the array is empty.
  */
-- (NSArray<YYTextSelectionRect *> *)selectionRectsWithoutStartAndEndForRange:(YYTextRange *)range;
+- (NSArray *)selectionRectsWithoutStartAndEndForRange:(YYTextRange *)range;
 
 /**
  Returns the start and end selection rects corresponding to the range of text.
@@ -503,7 +465,7 @@ extern const CGSize YYTextContainerMaxSize;
  @return An array of `YYTextSelectionRect` objects contains the start and end to
  the selection. If not found, the array is empty.
  */
-- (NSArray<YYTextSelectionRect *> *)selectionRectsWithOnlyStartAndEndForRange:(YYTextRange *)range;
+- (NSArray *)selectionRectsWithOnlyStartAndEndForRange:(YYTextRange *)range;
 
 
 #pragma mark - Draw text layout
@@ -532,13 +494,13 @@ extern const CGSize YYTextContainerMaxSize;
                     If it returns YES, the further draw progress will be canceled.
                     Pass nil to ignore this feature.
  */
-- (void)drawInContext:(nullable CGContextRef)context
+- (void)drawInContext:(CGContextRef)context
                  size:(CGSize)size
                 point:(CGPoint)point
-                 view:(nullable UIView *)view
-                layer:(nullable CALayer *)layer
-                debug:(nullable YYTextDebugOption *)debug
-               cancel:(nullable BOOL (^)(void))cancel;
+                 view:(UIView *)view
+                layer:(CALayer *)layer
+                debug:(YYTextDebugOption *)debug
+               cancel:(BOOL (^)(void))cancel;
 
 /**
  Draw the layout text and image (without view or layer attachments).
@@ -549,9 +511,8 @@ extern const CGSize YYTextContainerMaxSize;
  @param size    The context size.
  @param debug   The debug option. Pass nil to avoid debug drawing.
  */
-- (void)drawInContext:(nullable CGContextRef)context
-                 size:(CGSize)size
-                debug:(nullable YYTextDebugOption *)debug;
+- (void)drawInContext:(CGContextRef)context size:(CGSize)size debug:(YYTextDebugOption *)debug;
+
 /**
  Show view and layer attachments.
  
@@ -560,7 +521,7 @@ extern const CGSize YYTextContainerMaxSize;
  @param view  The attachment views will add to this view.
  @param layer The attachment layers will add to this layer.
  */
-- (void)addAttachmentToView:(nullable UIView *)view layer:(nullable CALayer *)layer;
+- (void)addAttachmentToView:(UIView *)view layer:(CALayer *)layer;
 
 /**
  Remove attachment views and layers from their super container.
@@ -570,5 +531,3 @@ extern const CGSize YYTextContainerMaxSize;
 - (void)removeAttachmentFromViewAndLayer;
 
 @end
-
-NS_ASSUME_NONNULL_END

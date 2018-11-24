@@ -14,8 +14,6 @@
 #ifndef YYDispatchQueuePool_h
 #define YYDispatchQueuePool_h
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  A dispatch queue pool holds multiple serial queues.
  Use this class to control queue's thread count (instead of concurrent queue).
@@ -31,10 +29,10 @@ NS_ASSUME_NONNULL_BEGIN
  @param qos        Queue quality of service (QOS).
  @return A new pool, or nil if an error occurs.
  */
-- (instancetype)initWithName:(nullable NSString *)name queueCount:(NSUInteger)queueCount qos:(NSQualityOfService)qos;
+- (instancetype)initWithName:(NSString *)name queueCount:(NSUInteger)queueCount qos:(NSQualityOfService)qos;
 
 /// Pool's name.
-@property (nullable, nonatomic, readonly) NSString *name;
+@property (nonatomic, readonly) NSString *name;
 
 /// Get a serial queue from pool.
 - (dispatch_queue_t)queue;
@@ -45,7 +43,5 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Get a serial queue from global queue pool with a specified qos.
 extern dispatch_queue_t YYDispatchQueueGetForQOS(NSQualityOfService qos);
-
-NS_ASSUME_NONNULL_END
 
 #endif

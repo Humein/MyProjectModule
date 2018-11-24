@@ -11,20 +11,18 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  YYKVStorageItem is used by `YYKVStorage` to store key-value pair and meta data.
  Typically, you should not use this class directly.
  */
 @interface YYKVStorageItem : NSObject
-@property (nonatomic, strong) NSString *key;                ///< key
-@property (nonatomic, strong) NSData *value;                ///< value
-@property (nullable, nonatomic, strong) NSString *filename; ///< filename (nil if inline)
-@property (nonatomic) int size;                             ///< value's size in bytes
-@property (nonatomic) int modTime;                          ///< modification unix timestamp
-@property (nonatomic) int accessTime;                       ///< last access unix timestamp
-@property (nullable, nonatomic, strong) NSData *extendedData; ///< extended data (nil if no extended data)
+@property (nonatomic, strong) NSString *key;        ///< key
+@property (nonatomic, strong) NSData *value;        ///< value
+@property (nonatomic, strong) NSString *filename;   ///< filename (nil if inline)
+@property (nonatomic, assign) int size;             ///< value's size in bytes
+@property (nonatomic, assign) int modTime;          ///< modification unix timestamp
+@property (nonatomic, assign) int accessTime;       ///< last access unix timestamp
+@property (nonatomic, strong) NSData *extendedData; ///< extended data (nil if no extended data)
 @end
 
 /**
@@ -82,7 +80,7 @@ typedef NS_ENUM(NSUInteger, YYKVStorageType) {
 
 @property (nonatomic, readonly) NSString *path;        ///< The path of this storage.
 @property (nonatomic, readonly) YYKVStorageType type;  ///< The type of this storage.
-@property (nonatomic) BOOL errorLogsEnabled;           ///< Set `YES` to enable error logs for debug.
+@property (nonatomic, assign) BOOL errorLogsEnabled;   ///< Set `YES` to enable error logs for debug.
 
 #pragma mark - Initializer
 ///=============================================================================
@@ -102,7 +100,7 @@ typedef NS_ENUM(NSUInteger, YYKVStorageType) {
  @return  A new storage object, or nil if an error occurs.
  @warning Multiple instances with the same path will make the storage unstable.
  */
-- (nullable instancetype)initWithPath:(NSString *)path type:(YYKVStorageType)type NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithPath:(NSString *)path type:(YYKVStorageType)type NS_DESIGNATED_INITIALIZER;
 
 
 #pragma mark - Save Items
@@ -157,8 +155,8 @@ typedef NS_ENUM(NSUInteger, YYKVStorageType) {
  */
 - (BOOL)saveItemWithKey:(NSString *)key
                   value:(NSData *)value
-               filename:(nullable NSString *)filename
-           extendedData:(nullable NSData *)extendedData;
+               filename:(NSString *)filename
+           extendedData:(NSData *)extendedData;
 
 #pragma mark - Remove Items
 ///=============================================================================
@@ -180,7 +178,7 @@ typedef NS_ENUM(NSUInteger, YYKVStorageType) {
  
  @return Whether succeed.
  */
-- (BOOL)removeItemForKeys:(NSArray<NSString *> *)keys;
+- (BOOL)removeItemForKeys:(NSArray *)keys;
 
 /**
  Remove all items which `value` is larger than a specified size.
@@ -234,8 +232,8 @@ typedef NS_ENUM(NSUInteger, YYKVStorageType) {
  @param progress This block will be invoked during removing, pass nil to ignore.
  @param end      This block will be invoked at the end, pass nil to ignore.
  */
-- (void)removeAllItemsWithProgressBlock:(nullable void(^)(int removedCount, int totalCount))progress
-                               endBlock:(nullable void(^)(BOOL error))end;
+- (void)removeAllItemsWithProgressBlock:(void(^)(int removedCount, int totalCount))progress
+                               endBlock:(void(^)(BOOL error))end;
 
 
 #pragma mark - Get Items
@@ -249,7 +247,7 @@ typedef NS_ENUM(NSUInteger, YYKVStorageType) {
  @param key A specified key.
  @return Item for the key, or nil if not exists / error occurs.
  */
-- (nullable YYKVStorageItem *)getItemForKey:(NSString *)key;
+- (YYKVStorageItem *)getItemForKey:(NSString *)key;
 
 /**
  Get item information with a specified key.
@@ -258,7 +256,7 @@ typedef NS_ENUM(NSUInteger, YYKVStorageType) {
  @param key A specified key.
  @return Item information for the key, or nil if not exists / error occurs.
  */
-- (nullable YYKVStorageItem *)getItemInfoForKey:(NSString *)key;
+- (YYKVStorageItem *)getItemInfoForKey:(NSString *)key;
 
 /**
  Get item value with a specified key.
@@ -266,7 +264,7 @@ typedef NS_ENUM(NSUInteger, YYKVStorageType) {
  @param key  A specified key.
  @return Item's value, or nil if not exists / error occurs.
  */
-- (nullable NSData *)getItemValueForKey:(NSString *)key;
+- (NSData *)getItemValueForKey:(NSString *)key;
 
 /**
  Get items with an array of keys.
@@ -274,7 +272,7 @@ typedef NS_ENUM(NSUInteger, YYKVStorageType) {
  @param keys  An array of specified keys.
  @return An array of `YYKVStorageItem`, or nil if not exists / error occurs.
  */
-- (nullable NSArray<YYKVStorageItem *> *)getItemForKeys:(NSArray<NSString *> *)keys;
+- (NSArray *)getItemForKeys:(NSArray *)keys;
 
 /**
  Get item infomartions with an array of keys.
@@ -283,7 +281,7 @@ typedef NS_ENUM(NSUInteger, YYKVStorageType) {
  @param keys  An array of specified keys.
  @return An array of `YYKVStorageItem`, or nil if not exists / error occurs.
  */
-- (nullable NSArray<YYKVStorageItem *> *)getItemInfoForKeys:(NSArray<NSString *> *)keys;
+- (NSArray *)getItemInfoForKeys:(NSArray *)keys;
 
 /**
  Get items value with an array of keys.
@@ -292,7 +290,7 @@ typedef NS_ENUM(NSUInteger, YYKVStorageType) {
  @return A dictionary which key is 'key' and value is 'value', or nil if not 
     exists / error occurs.
  */
-- (nullable NSDictionary<NSString *, NSData *> *)getItemValueForKeys:(NSArray<NSString *> *)keys;
+- (NSDictionary *)getItemValueForKeys:(NSArray *)keys;
 
 #pragma mark - Get Storage Status
 ///=============================================================================
@@ -321,5 +319,3 @@ typedef NS_ENUM(NSUInteger, YYKVStorageType) {
 - (int)getItemsSize;
 
 @end
-
-NS_ASSUME_NONNULL_END

@@ -19,8 +19,6 @@
 #import "YYTextSelectionView.h"
 #endif
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  A window to display magnifier and extra contents for text view.
  
@@ -30,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface YYTextEffectWindow : UIWindow
 
 /// Returns the shared instance (returns nil in App Extension).
-+ (nullable instancetype)sharedWindow;
++ (instancetype)sharedWindow;
 
 /// Show the magnifier in this window with a 'popup' animation. @param mag A magnifier.
 - (void)showMagnifier:(YYTextMagnifier *)mag;
@@ -48,5 +46,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)hideSelectionDot:(YYTextSelectionView *)selection;
 
 @end
-
-NS_ASSUME_NONNULL_END

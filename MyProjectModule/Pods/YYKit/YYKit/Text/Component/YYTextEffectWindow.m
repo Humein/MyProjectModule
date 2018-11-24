@@ -21,16 +21,6 @@
 
 + (instancetype)sharedWindow {
     static YYTextEffectWindow *one = nil;
-    if (one == nil) {
-        // iOS 9 compatible
-        NSString *mode = [NSRunLoop currentRunLoop].currentMode;
-        if (mode.length == 27 &&
-            [mode hasPrefix:@"UI"] &&
-            [mode hasSuffix:@"InitializationRunLoopMode"]) {
-            return nil;
-        }
-    }
-    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         if (![UIApplication isAppExtension]) {
@@ -47,11 +37,6 @@
         }
     });
     return one;
-}
-
-// stop self from becoming the KeyWindow
-- (void)becomeKeyWindow {
-    [[[UIApplication sharedExtensionApplication].delegate window] makeKeyWindow];
 }
 
 - (UIViewController *)rootViewController {
@@ -406,11 +391,7 @@
         }
     }
     CGPoint center = [dot convertPoint:CGPointMake(CGRectGetWidth(dot.frame) / 2, CGRectGetHeight(dot.frame) / 2) toViewOrWindow:self];
-    if (isnan(center.x) || isnan(center.y) || isinf(center.x) || isinf(center.y)) {
-        dot.mirror.hidden = YES;
-    } else {
-        dot.mirror.center = center;
-    }
+    dot.mirror.center = center;
 }
 
 - (void)showSelectionDot:(YYTextSelectionView *)selection {

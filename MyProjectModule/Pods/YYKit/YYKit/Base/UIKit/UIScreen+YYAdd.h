@@ -11,8 +11,6 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  Provides extensions for `UIScreen`.
  */
@@ -59,5 +57,3 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) CGFloat pixelsPerInch;
 
 @end
-
-NS_ASSUME_NONNULL_END

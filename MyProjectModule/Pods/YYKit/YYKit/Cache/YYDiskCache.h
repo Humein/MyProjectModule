@@ -11,8 +11,6 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  YYDiskCache is a thread-safe cache that stores key-value pairs backed by SQLite
  and file system (similar to NSURLCache's disk cache).
@@ -36,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///=============================================================================
 
 /** The name of the cache. Default is nil. */
-@property (nullable, copy) NSString *name;
+@property (copy) NSString *name;
 
 /** The path of the cache (read-only). */
 @property (readonly) NSString *path;
@@ -53,22 +51,22 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) NSUInteger inlineThreshold;
 
 /**
- If this block is not nil, then the block will be used to archive object instead
+ If this block in not nil, then the block will be used to archive object instead
  of NSKeyedArchiver. You can use this block to support the objects which do not
  conform to the `NSCoding` protocol.
  
  The default value is nil.
  */
-@property (nullable, copy) NSData *(^customArchiveBlock)(id object);
+@property (copy) NSData *(^customArchiveBlock)(id object);
 
 /**
- If this block is not nil, then the block will be used to unarchive object instead
+ If this block in not nil, then the block will be used to unarchive object instead
  of NSKeyedUnarchiver. You can use this block to support the objects which do not
  conform to the `NSCoding` protocol.
  
  The default value is nil.
  */
-@property (nullable, copy) id (^customUnarchiveBlock)(NSData *data);
+@property (copy) id (^customUnarchiveBlock)(NSData *data);
 
 /**
  When an object needs to be saved as a file, this block will be invoked to generate
@@ -77,7 +75,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  The default value is nil.
  */
-@property (nullable, copy) NSString *(^customFileNameBlock)(NSString *key);
+@property (copy) NSString *(^customFilenameBlock)(NSString *key);
 
 
 
@@ -93,7 +91,7 @@ NS_ASSUME_NONNULL_BEGIN
  This is not a strict limit — if the cache goes over the limit, some objects in the
  cache could be evicted later in background queue.
  */
-@property NSUInteger countLimit;
+@property (assign) NSUInteger countLimit;
 
 /**
  The maximum total cost that the cache can hold before it starts evicting objects.
@@ -102,7 +100,7 @@ NS_ASSUME_NONNULL_BEGIN
  This is not a strict limit — if the cache goes over the limit, some objects in the
  cache could be evicted later in background queue.
  */
-@property NSUInteger costLimit;
+@property (assign) NSUInteger costLimit;
 
 /**
  The maximum expiry time of objects in cache.
@@ -111,7 +109,7 @@ NS_ASSUME_NONNULL_BEGIN
  This is not a strict limit — if an object goes over the limit, the objects could
  be evicted later in background queue.
  */
-@property NSTimeInterval ageLimit;
+@property (assign) NSTimeInterval ageLimit;
 
 /**
  The minimum free disk space (in bytes) which the cache should kept.
@@ -121,7 +119,7 @@ NS_ASSUME_NONNULL_BEGIN
  to free some disk space. This is not a strict limit—if the free disk space goes
  over the limit, the objects could be evicted later in background queue.
  */
-@property NSUInteger freeDiskSpaceLimit;
+@property (assign) NSUInteger freeDiskSpaceLimit;
 
 /**
  The auto trim check time interval in seconds. Default is 60 (1 minute).
@@ -129,12 +127,8 @@ NS_ASSUME_NONNULL_BEGIN
  @discussion The cache holds an internal timer to check whether the cache reaches
  its limits, and if the limit is reached, it begins to evict objects.
  */
-@property NSTimeInterval autoTrimInterval;
+@property (assign) NSTimeInterval autoTrimInterval;
 
-/**
- Set `YES` to enable error logs for debug.
- */
-@property BOOL errorLogsEnabled;
 
 #pragma mark - Initializer
 ///=============================================================================
@@ -154,7 +148,7 @@ NS_ASSUME_NONNULL_BEGIN
  @warning If the cache instance for the specified path already exists in memory,
      this method will return it directly, instead of creating a new instance.
  */
-- (nullable instancetype)initWithPath:(NSString *)path;
+- (instancetype)initWithPath:(NSString *)path;
 
 /**
  The designated initializer.
@@ -174,8 +168,8 @@ NS_ASSUME_NONNULL_BEGIN
  @warning If the cache instance for the specified path already exists in memory,
      this method will return it directly, instead of creating a new instance.
  */
-- (nullable instancetype)initWithPath:(NSString *)path
-                      inlineThreshold:(NSUInteger)threshold NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithPath:(NSString *)path
+             inlineThreshold:(NSUInteger)threshold NS_DESIGNATED_INITIALIZER;
 
 
 #pragma mark - Access Methods
@@ -209,7 +203,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param key A string identifying the value. If nil, just return nil.
  @return The value associated with key, or nil if no value is associated with key.
  */
-- (nullable id<NSCoding>)objectForKey:(NSString *)key;
+- (id<NSCoding>)objectForKey:(NSString *)key;
 
 /**
  Returns the value associated with a given key.
@@ -219,7 +213,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param key A string identifying the value. If nil, just return nil.
  @param block A block which will be invoked in background queue when finished.
  */
-- (void)objectForKey:(NSString *)key withBlock:(void(^)(NSString *key, id<NSCoding> _Nullable object))block;
+- (void)objectForKey:(NSString *)key withBlock:(void(^)(NSString *key, id<NSCoding> object))block;
 
 /**
  Sets the value of the specified key in the cache.
@@ -228,7 +222,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param object The object to be stored in the cache. If nil, it calls `removeObjectForKey:`.
  @param key    The key with which to associate the value. If nil, this method has no effect.
  */
-- (void)setObject:(nullable id<NSCoding>)object forKey:(NSString *)key;
+- (void)setObject:(id<NSCoding>)object forKey:(NSString *)key;
 
 /**
  Sets the value of the specified key in the cache.
@@ -238,7 +232,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param object The object to be stored in the cache. If nil, it calls `removeObjectForKey:`.
  @param block  A block which will be invoked in background queue when finished.
  */
-- (void)setObject:(nullable id<NSCoding>)object forKey:(NSString *)key withBlock:(void(^)(void))block;
+- (void)setObject:(id<NSCoding>)object forKey:(NSString *)key withBlock:(void(^)(void))block;
 
 /**
  Removes the value of the specified key in the cache.
@@ -281,8 +275,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param progress This block will be invoked during removing, pass nil to ignore.
  @param end      This block will be invoked at the end, pass nil to ignore.
  */
-- (void)removeAllObjectsWithProgressBlock:(nullable void(^)(int removedCount, int totalCount))progress
-                                 endBlock:(nullable void(^)(BOOL error))end;
+- (void)removeAllObjectsWithProgressBlock:(void(^)(int removedCount, int totalCount))progress
+                                 endBlock:(void(^)(BOOL error))end;
 
 
 /**
@@ -393,7 +387,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param object An object.
  @return The extended data.
  */
-+ (nullable NSData *)getExtendedDataFromObject:(id)object;
++ (NSData *)getExtendedDataFromObject:(id)object;
 
 /**
  Set extended data to an object.
@@ -405,8 +399,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param extendedData The extended data (pass nil to remove).
  @param object       The object.
  */
-+ (void)setExtendedData:(nullable NSData *)extendedData toObject:(id)object;
++ (void)setExtendedData:(NSData *)extendedData toObject:(id)object;
 
 @end
-
-NS_ASSUME_NONNULL_END
