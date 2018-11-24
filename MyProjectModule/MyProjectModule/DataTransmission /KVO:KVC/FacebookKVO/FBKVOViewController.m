@@ -7,7 +7,7 @@
 //
 
 #import "FBKVOViewController.h"
-#import <KVOController/KVOController.h>
+#import "FBKVOController.h"
 #import "PersonInfo.h"
 @interface FBKVOViewController ()
 @property (nonatomic, strong) PersonInfo *person;

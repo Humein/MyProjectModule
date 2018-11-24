@@ -8,6 +8,7 @@
 
 #import "AbstractTableViewCell.h"
 #import "CellModel.h"
+#import "NSTimerObserver.h"
 @implementation AbstractTableViewCell
 
 - (void)awakeFromNib {
