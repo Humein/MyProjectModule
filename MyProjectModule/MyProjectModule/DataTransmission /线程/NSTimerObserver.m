@@ -28,6 +28,9 @@
 @property (nonatomic, strong, nonnull) dispatch_semaphore_t weakCacheLock; // a lock to keep the access to `weakCache` thread-safe
 
 
+@property (nonatomic, strong) NSTimer *timer;
+
+
 @end
 
 @implementation NSTimerObserver
@@ -48,9 +51,6 @@
     _timerMap = [[NSHashTable alloc] initWithOptions:NSPointerFunctionsWeakMemory|NSPointerFunctionsObjectPointerPersonality capacity:0];
 
     
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(trigger:) userInfo:nil repeats:YES];
-    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-    
 }
 
 - (void)trigger:(NSTimer *)timer {
@@ -64,13 +64,37 @@
 
 -(void)startTimer{
     
-}
+    if (_timer == nil) {
+        
+        _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(trigger:) userInfo:nil repeats:YES];
+        [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    }
 
--(void)stopTimer{
     
 }
 
+-(void)stopTimer{
+    [_timer invalidate];
+    _timer = nil;
+}
+
 #pragma mark - public
+- (void)addTimerObserver:(id<TimerObserver>)listener withCount:(NSUInteger )count{
+{
+        
+        LOCK(self.operationsLock)
+        if(![self.timerMap containsObject:listener]){
+            [self.timerMap addObject:listener];
+            if(self.timerMap.count > 0){
+                //启动
+                
+                [self startTimer];
+            }
+        }
+        UNLOCK(self.operationsLock)
+    }
+}
+
 - (void)addTimerObserver:(id<TimerObserver>)listener {
     
     LOCK(self.operationsLock)

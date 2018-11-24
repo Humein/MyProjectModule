@@ -43,7 +43,11 @@
     
     [self.contentView addSubview:self.timeLabel];
     
+    
     [[NSTimerObserver sharedInstance] addTimerObserver:self];
+
+ 
+    
     
 }
 
@@ -52,11 +56,18 @@
     // 过滤 数据源 影响
 //    _model = _model.timeCount ? _model : item;
     
-    if (_model.timeCount) {
+    if (_model.timeCount || _model.timeCount == -1) {
+        
+        if (_model.timeCount == -1) {
+            
+            self.timeLabel.text =[NSString stringWithFormat:@"%d",0];
+        }
         
     }else{
+        
         _model = item;
         self.timeLabel.text =[NSString stringWithFormat:@"%ld",(long)_model.timeCount];
+        
     }
     
     
@@ -67,16 +78,13 @@
 
 - (void)timerCallBack:(NSTimerObserver *)timer {
     
-    
+
     if (_model.timeCount>0) {
-        
         _model.timeCount -- ;
-        
         self.timeLabel.text =[NSString stringWithFormat:@"%ld",(long)_model.timeCount];
 
-        
     }else{
-        
+        _model.timeCount = -1;
         [[NSTimerObserver sharedInstance] removeTimerObserver:self];
         
     }

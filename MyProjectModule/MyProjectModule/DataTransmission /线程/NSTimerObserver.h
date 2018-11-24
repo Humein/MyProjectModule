@@ -35,6 +35,10 @@
 
 - (void)addTimerObserver:(id<TimerObserver>)listener;
 
+//TODO
+- (void)addTimerObserver:(id<TimerObserver>)listener withCount:(NSUInteger )count;
+
+
 - (void)removeTimerObserver:(id<TimerObserver>)listener;
 
 @end
