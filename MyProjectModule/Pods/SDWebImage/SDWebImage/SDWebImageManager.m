@@ -342,6 +342,15 @@
 @implementation SDWebImageCombinedOperation
 
 - (void)cancel {
+    
+//    <1.cancel掉self.cacheOperation <NSOperation>
+//    <2.manager的imageDownloader cancel掉 self.downloadToken
+//    <3.manager.runningOperation中删掉self
+//
+//    其中第<2点，调用的SDWebImageDownloader 的-cancel:方法
+    
+
+    
     @synchronized(self) {
         self.cancelled = YES;
         if (self.cacheOperation) {

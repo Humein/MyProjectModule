@@ -63,6 +63,23 @@ static char TAG_ACTIVITY_SHOW;
                           progress:(nullable SDWebImageDownloaderProgressBlock)progressBlock
                          completed:(nullable SDExternalCompletionBlock)completedBlock
                            context:(nullable NSDictionary<NSString *, id> *)context {
+    
+//    1.在FLAnimatedImageView(WebCache)中创建了线程组dispatch_group_t，然后通过key为SDWebImageInternalSetImageGroupKey的字典传入UIView(WebCache)中
+//    — 如果是展示占位图
+//
+//    2.在UIView(WebCache)中设置占位图时，首先获取到是否存在SetImageGroupKey，也就是说是否是FLAnimatedImageView，是就获取到FLAnimatedImageView(WebCache)中传来的group，先enter，然后调用setImageBlock中的方法。
+//
+//    3.在setImageBlock中设置self.image，然后leave。
+//    — 通过url加载到图片后
+//    
+//    4.通过url加载到图片后，拿到group，先enter，然后执行setImageBlock。若此时的图片是GIF类型的，首先从GIF图中取出第一张，设为静态海报图像，避免闪烁。其次在全局队列中异步创建FLAnimatedImage，然后在主线程中设置self.animatedImage，并leave group。
+//
+//    5.notify中的block，也就是当group中的所有任务都完成后，调用下[self setNeedsLayout]; - setNeedsLayout 的作用是标记，标记为需要重新布局，异步调用layoutIfNeeds 刷新布局，不利己刷新，但layoutSubviews一定会被调用。
+    
+
+    
+    
+    
     NSString *validOperationKey = operationKey ?: NSStringFromClass([self class]);
     [self sd_cancelImageLoadOperationWithKey:validOperationKey];
     objc_setAssociatedObject(self, &imageURLKey, url, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -156,6 +173,8 @@ static char TAG_ACTIVITY_SHOW;
                     [sself sd_setImage:targetImage imageData:targetData basedOnClassOrViaCustomSetImageBlock:setImageBlock transition:transition cacheType:cacheType imageURL:imageURL];
                 });
                 // ensure completion block is called after custom setImage process finish
+//                5.notify中的block，也就是当group中的所有任务都完成后，调用下[self setNeedsLayout]; - setNeedsLayout 的作用是标记，标记为需要重新布局，异步调用layoutIfNeeds 刷新布局，不利己刷新，但layoutSubviews一定会被调用。
+
                 dispatch_group_notify(group, dispatch_get_main_queue(), ^{
                     callCompletedBlockClojure();
                 });

@@ -108,8 +108,14 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
 
 - (BOOL)cancel:(nullable id)token {
     BOOL shouldCancel = NO;
+    //同步 阻塞当前队列和当前线程（用的信号量）
     LOCK(self.callbacksLock);
+    //删除数组中回调块数组中的token对象，token是key为string，value是block的字典
+    //removeObjectIdenticalTo 删掉地址该token的地址，而不是值。
+
     [self.callbackBlocks removeObjectIdenticalTo:token];
+    //判断数组是否为0.则取消下载任务
+
     if (self.callbackBlocks.count == 0) {
         shouldCancel = YES;
     }
@@ -118,6 +124,16 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
         [self cancel];
     }
     return shouldCancel;
+    
+    
+//    <<<1.从callbackBlocks中删掉token（删掉回调的字典）
+//    <<<2.如果Blocks数组为0，取消下载任务，shouldCancel = YES;
+//    <<<3.如果Blocks数组为0，调用 [self cancel];
+//    <<<4.返回shouldCancel
+//
+//    对于<<<3中的[self cancel]; 实际上调用的是SDWebImageDownloaderOperation的cancel方法
+    
+ 
 }
 
 - (void)start {
@@ -229,6 +245,7 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
 - (void)cancelInternal {
     if (self.isFinished) return;
     [super cancel];
+    //如果下载图片的任务仍在 则立即取消cancel，并且发送结束下载的通知
 
     if (self.dataTask) {
         [self.dataTask cancel];
@@ -242,7 +259,9 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
         if (self.isExecuting) self.executing = NO;
         if (!self.isFinished) self.finished = YES;
     }
-
+//    <<<<1.super cancel
+//    <<<<2.如果还有任务，NSURLSessionTask cancel
+//    <<<<3.通知结束下载
     [self reset];
 }
 
