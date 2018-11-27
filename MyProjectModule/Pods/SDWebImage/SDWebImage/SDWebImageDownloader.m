@@ -198,11 +198,17 @@
     }
 }
 
+
+//这个方法是实际请求网络的实现
+
 - (nullable SDWebImageDownloadToken *)downloadImageWithURL:(nullable NSURL *)url
                                                    options:(SDWebImageDownloaderOptions)options
                                                   progress:(nullable SDWebImageDownloaderProgressBlock)progressBlock
                                                  completed:(nullable SDWebImageDownloaderCompletedBlock)completedBlock {
-//    1.调用addProgressCallback方法 return token，addProgressCallback的回调里进行以下操作
+    //    1.调用addProgressCallback方法 return token，addProgressCallback的回调里进行以下操作
+//           来实现相同url是否发起网络请求的判断
+    
+
 //    {
 //        1.1设置下载超时时间
 //        1.2创建request
@@ -233,6 +239,7 @@
                                                                     cachePolicy:cachePolicy
                                                                 timeoutInterval:timeoutInterval];
         
+        //身份认证 当移动端和服务器在传输过程中，服务端有可能在返回Response时附带认证，询问 HTTP 请求的发起方是谁，这时候发起方应提供正确的用户名和密码（即认证信息）。这时候就需要NSURLCredential身份认证
         request.HTTPShouldHandleCookies = (options & SDWebImageDownloaderHandleCookies);
         request.HTTPShouldUsePipelining = YES;
         if (sself.headersFilter) {
@@ -256,8 +263,12 @@
             operation.queuePriority = NSOperationQueuePriorityLow;
         }
         
+        
+        //设置下载的顺序 是按照队列还是栈
         if (sself.executionOrder == SDWebImageDownloaderLIFOExecutionOrder) {
             // Emulate LIFO execution order by systematically adding new operations as last operation's dependency
+            //通过依赖来模拟LIFO
+
             [sself.lastAddedOperation addDependency:operation];
             sself.lastAddedOperation = operation;
         }

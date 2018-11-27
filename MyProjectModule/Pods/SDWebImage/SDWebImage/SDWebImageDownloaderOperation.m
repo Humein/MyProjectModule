@@ -101,6 +101,13 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
     LOCK(self.callbacksLock);
     NSMutableArray<id> *callbacks = [[self.callbackBlocks valueForKey:key] mutableCopy];
     UNLOCK(self.callbacksLock);
+    
+//    这个方法来进行一套回调，在获取到网络回调的时候，会先遍历数组，然后会根据url来作为key，获取这里所有key对应的回调。 这里为了保证不出线程冲突，使用了dispatch_semaphore_wait这个lock。
+    
+//    有dictionary属性array的原因，是因为array是有序的。可以变相的使这个兼具array和dictionary的特性。利用dictionary的hash能力，保证同一个url只会下载一次。
+
+    
+    
     // We need to remove [NSNull null] because there might not always be a progress block for each callback
     [callbacks removeObjectIdenticalTo:[NSNull null]];
     return [callbacks copy]; // strip mutability here
@@ -114,8 +121,8 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
     //removeObjectIdenticalTo 删掉地址该token的地址，而不是值。
 
     [self.callbackBlocks removeObjectIdenticalTo:token];
+    
     //判断数组是否为0.则取消下载任务
-
     if (self.callbackBlocks.count == 0) {
         shouldCancel = YES;
     }
@@ -171,6 +178,8 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
              *  Create the session for this task
              *  We send nil as delegate queue so that the session creates a serial operation queue for performing all delegate
              *  method calls and completion handler calls.
+             
+             delegateQueue为nil，所以回调方法默认在一个子线程的串行队列中执行
              */
             session = [NSURLSession sessionWithConfiguration:sessionConfig
                                                     delegate:self
@@ -185,7 +194,9 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
                 URLCache = [NSURLCache sharedURLCache];
             }
             NSCachedURLResponse *cachedResponse;
+            
             // NSURLCache's `cachedResponseForRequest:` is not thread-safe, see https://developer.apple.com/documentation/foundation/nsurlcache#2317483
+            
             @synchronized (URLCache) {
                 cachedResponse = [URLCache cachedResponseForRequest:self.request];
             }
@@ -245,6 +256,7 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
 - (void)cancelInternal {
     if (self.isFinished) return;
     [super cancel];
+    
     //如果下载图片的任务仍在 则立即取消cancel，并且发送结束下载的通知
 
     if (self.dataTask) {
