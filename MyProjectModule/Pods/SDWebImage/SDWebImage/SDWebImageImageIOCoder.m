@@ -114,6 +114,7 @@ static const CGFloat kDestSeemOverlap = 2.0f;   // the numbers of pixels to over
 #endif
 }
 
+//图像 渲染
 - (UIImage *)incrementallyDecodedImageWithData:(NSData *)data finished:(BOOL)finished {
     if (!_imageSource) {
         _imageSource = CGImageSourceCreateIncremental(NULL);

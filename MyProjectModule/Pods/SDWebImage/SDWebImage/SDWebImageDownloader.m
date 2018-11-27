@@ -16,6 +16,9 @@
 
 @property (nonatomic, weak, nullable) NSOperation<SDWebImageDownloaderOperationInterface> *downloadOperation;
 
+//下载url作为key value是具体的下载operation 用字典来存储，方便cancel等操作
+@property (strong, nonatomic, nonnull) NSMutableDictionary<NSURL *, NSOperation<SDWebImageDownloaderOperationInterface> *> *URLOperations;
+
 @end
 
 @implementation SDWebImageDownloadToken
@@ -234,6 +237,8 @@
         }
 
         // In order to prevent from potential duplicate caching (NSURLCache + SDImageCache) we disable the cache for image requests if told otherwise
+        //为了防止潜在的重复缓存(NSURLCache + SDImageCache)，如果被告知，我们会禁用图像请求的缓存。
+
         NSURLRequestCachePolicy cachePolicy = options & SDWebImageDownloaderUseNSURLCache ? NSURLRequestUseProtocolCachePolicy : NSURLRequestReloadIgnoringLocalCacheData;
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url
                                                                     cachePolicy:cachePolicy

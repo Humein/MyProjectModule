@@ -351,9 +351,15 @@ didReceiveResponse:(NSURLResponse *)response
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
     if (!self.imageData) {
+        //根据response返回的文件大小创建可变data
+
         self.imageData = [[NSMutableData alloc] initWithCapacity:self.expectedSize];
     }
+    //向可变数据中添加接收到的数据
+
     [self.imageData appendData:data];
+    
+    //如果调用者配置了需要支持progressive下载，即展示已经下载的部分，并expectedSize返回的图片size大于0
 
     if ((self.options & SDWebImageDownloaderProgressiveDownload) && self.expectedSize > 0) {
         // Get the image data
@@ -363,6 +369,7 @@ didReceiveResponse:(NSURLResponse *)response
         // Get the finish status
         BOOL finished = (totalSize >= self.expectedSize);
         
+        //如果不存在解压对象就去创建一个新的
         if (!self.progressiveCoder) {
             // We need to create a new instance for progressive decoding to avoid conflicts
             for (id<SDWebImageCoder>coder in [SDWebImageCodersManager sharedInstance].coders) {
@@ -376,11 +383,19 @@ didReceiveResponse:(NSURLResponse *)response
         
         // progressive decode the image in coder queue
         dispatch_async(self.coderQueue, ^{
+            
+            //将imageData转化为image
+            
             UIImage *image = [self.progressiveCoder incrementallyDecodedImageWithData:imageData finished:finished];
             if (image) {
+                //通过URL获取缓存的key
+
+                
                 NSString *key = [[SDWebImageManager sharedManager] cacheKeyForURL:self.request.URL];
                 image = [self scaledImageForKey:key image:image];
                 if (self.shouldDecompressImages) {
+                    //如果调用者选择了解压图片，那么在这里执行图片解压，这里注意，传入的data是一个**，指向指针的指针，要用&data表示
+
                     image = [[SDWebImageCodersManager sharedInstance] decompressedImageWithImage:image data:&imageData options:@{SDWebImageCoderScaleDownLargeImagesKey: @(NO)}];
                 }
                 
