@@ -53,13 +53,41 @@
 - (void)jumpConfig:(IDBlock )configBlock completeBlock:(MiniProgramResultBlock)completeBlock{
 
     // 正传
+
 //    __block HTMiniProgramModel *configItem = [[HTMiniProgramModel alloc] init];
+    
 //    if (configBlock)
 //    {
 //        configBlock(configItem);
 //    }
 //    _configItem = configItem;
 //
+    
+    // useage
+    /*
+     [vc pushWithConfigModel:^(NSMutableArray<ParaModel *> * _Nullable paramArray) {
+     ParaModel *videoModel = [ParaModel new];
+     videoModel.title = VideoCache;
+     videoModel.classId = weakSelf.classId;
+     videoModel.classUrl = weakSelf.scheduleModel.scaleimg;
+     videoModel.className = weakSelf.scheduleModel.title;
+     videoModel.coursewareHours = weakSelf.scheduleModel.coursewareHours;
+     ParaModel *PDFModel = [ParaModel new];
+     PDFModel.title = PDFCache;
+     [paramArray addObject:videoModel];
+     [paramArray addObject:PDFModel];
+     } completeBlock:^(BOOL isCanPush) {
+     if (isCanPush && weakSelf.isDone) {
+     [weakSelf.navigationController pushViewController:vc animated:YES];
+     }else{
+     [weakSelf showInfoText:@"该课程暂时没有视频可以缓存" type:InfoNone];
+     }
+     }]
+     */
+    
+    
+    
+    
     //逆传
     _completeBlock = completeBlock;
     if (YES)
