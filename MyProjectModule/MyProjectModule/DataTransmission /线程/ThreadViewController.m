@@ -20,9 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //请求依赖
     [self GCDGroup];
     [self semaphore];
+    // 异步刷新
+    [self asyncRefrsh];
     
     [[NSTimerObserver sharedInstance] addTimerObserver:self];
 
@@ -205,6 +207,17 @@
     
 }
 
+
+//异步刷新
+-(void)asyncRefrsh{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // 1.子线程下载图片
+        NSURL *url = [NSURL URLWithString:@"http://d.jpg"];
+        // 2.回到主线程设置图片
+        dispatch_async(dispatch_get_main_queue(), ^{
+        });
+    });
+}
 
 
 
