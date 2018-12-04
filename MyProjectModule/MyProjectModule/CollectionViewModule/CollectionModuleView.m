@@ -36,7 +36,7 @@
 
 
 
-#pragma mark --- Delegate
+#pragma mark --- 正常Normal-Delegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([self.delegate respondsToSelector:@selector(autoViewSelectCellForIndexPath:inAutoView:)]) {
@@ -59,6 +59,10 @@
     return self.dataArray.count;
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(30, 50);
+}
 
 
 #pragma mark --- LazyLoad
