@@ -163,7 +163,7 @@ CGRect HitTestingBounds(CGRect bounds, CGFloat minimumHitTestWidth, CGFloat mini
 
 /*  3
  
- 让边侧留出的 非scrollview 部分
+ 让边侧留出的 非scrollview 部分   可以用于扩大（转移）button点击区域 （注意 forControlEvents：UIControlEventTouchDown 事件类型不同响应的也不同）
  
  在scrollview的父view中把蓝色部分的事件都传递给scrollView就可以了，
  
