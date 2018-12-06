@@ -29,13 +29,15 @@
     [self.autoView registCell:[AbstractCollectionViewCell class] forItem:[CellModel class]];
     [self.autoView reloadData];
     //        整合到 layout 里
-//    self.autoView.pagingEnabled = YES;
+    self.autoView.pagingEnabled = YES;
     
     [self.view addSubview:self.autoView];
    
 }
 
 #pragma mark ----Delegate
+
+
 //cell的宽高
 - (CGSize)autoViewsizeCellIndexPath:(NSIndexPath*)indexPath autoView:(CollectionModuleView *)autoView {
     return CGSizeMake(self.view.frame.size.width, 120);

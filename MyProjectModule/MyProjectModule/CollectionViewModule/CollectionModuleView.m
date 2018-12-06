@@ -10,6 +10,21 @@
 #import "CarouselLayout.h"
 #import "WaterfallLayout.h"
 #import "FilterCollectionViewLayout.h"
+#import "AbstractCollectionViewCell.h"
+
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define SCROLLVIEW_WIDTH SCREEN_WIDTH
+
+#define BaseTag 10
+
+/**
+ 动画偏移量 是指rightView相对于leftView的偏移量
+ */
+#define AnimationOffset 100
+
+
+
 @class FilterTeacherItem;
 @interface CollectionModuleView ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate,filterLayoutDeleaget>
 @property (nonatomic,strong)UICollectionView *collectionView;
@@ -37,6 +52,30 @@
 
 
 #pragma mark --- 正常Normal-Delegate
+
+
+// 偏移动画，，，
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat x = scrollView.contentOffset.x;
+    
+    NSInteger leftIndex = x/SCROLLVIEW_WIDTH;    
+    //这里的left和right是区分拖动中可见的两个视图
+    AbstractCollectionViewCell * leftView = [scrollView viewWithTag:(leftIndex + BaseTag)];
+    AbstractCollectionViewCell * rightView = [scrollView viewWithTag:(leftIndex + 1 + BaseTag)];
+    
+    
+    //    leftView.contentX = -(SCROLLVIEW_WIDTH - x + (leftIndex * SCROLLVIEW_WIDTH));
+    //    rightView.contentX = (SCROLLVIEW_WIDTH + x - ((leftIndex + 1) * SCROLLVIEW_WIDTH));
+    
+    
+    rightView.contentX = -(SCROLLVIEW_WIDTH - AnimationOffset) + (x - (leftIndex * SCROLLVIEW_WIDTH))/SCROLLVIEW_WIDTH * (SCROLLVIEW_WIDTH - AnimationOffset);
+    leftView.contentX = ((SCROLLVIEW_WIDTH - AnimationOffset) + (x - ((leftIndex + 1) * SCROLLVIEW_WIDTH))/SCROLLVIEW_WIDTH * (SCROLLVIEW_WIDTH - AnimationOffset));
+}
+
+
+
+
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([self.delegate respondsToSelector:@selector(autoViewSelectCellForIndexPath:inAutoView:)]) {
@@ -74,8 +113,8 @@
         UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
         flowLayout.scrollDirection=UICollectionViewScrollDirectionHorizontal;
         flowLayout.itemSize=CGSizeMake(self.frame.size.width, self.frame.size.height);
-        flowLayout.minimumInteritemSpacing = 0.0;
-        flowLayout.minimumLineSpacing=0.0;
+        flowLayout.minimumInteritemSpacing = 23.0;
+//        flowLayout.minimumLineSpacing=0.0;
         flowLayout.sectionInset=UIEdgeInsetsMake(0, 0, 0, 0);
         
 //        旋转木马      
@@ -94,7 +133,7 @@
         
         
         
-        _collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:waterFallLayout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:carouselLayout];
         
         
         _collectionView.showsHorizontalScrollIndicator = NO;

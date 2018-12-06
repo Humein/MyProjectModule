@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 @class CellModel;
 @interface AbstractCollectionViewCell : UICollectionViewCell
+
+/**
+ 横坐标 用于拖拽过程中的动画
+ */
+@property (nonatomic, assign) CGFloat contentX;
+
 - (void)updateByItem:(CellModel *)item;
 
 @end

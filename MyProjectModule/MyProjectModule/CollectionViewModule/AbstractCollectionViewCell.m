@@ -32,6 +32,14 @@
     }];
 }
 
+- (void)setContentX:(CGFloat)contentX{
+    
+    _contentX = contentX;
+    self.frame = CGRectMake(contentX, 0, self.frame.size.width, self.frame.size.height);
+    
+}
+
+
 -(void)updateByItem:(CellModel *)item{
     self.titleLabel.text = @"23212131231232";
 }
