@@ -25,6 +25,13 @@ typedef void(^Failure)(NSString *errorMessage);
 //异步回调
 - (void)requestNoticeDataWithParameter:(NSDictionary *)dic isWaiting:(BOOL)isWaiting success:(Success)success failure:(Failure)failure;
 
+-(void)activeEventBlock:(void(^)(BOOL state))block;
+
+
+// 我 先抛出 后 更新
+typedef void (^EventBlock)(id titleTyple);
+typedef void(^SessionHeaderEvent)(id eventType,UIButton *sender, EventBlock event);
+@property (nonatomic, copy) SessionHeaderEvent buttonCallback;
 
 
 
