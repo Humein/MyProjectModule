@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic , assign) NSInteger rnum;
 @property (nonatomic , assign) NSInteger level;
 @property (nonatomic , assign) long long unfinishedPracticeId;
-@property (nonatomic , copy) NSArray<PointTreeModel *> * children;
+@property (nonatomic , copy) NSArray<PointTreeOnlyOneModel *> * children;
 @property (nonatomic , assign) NSInteger times;
 @property (nonatomic , assign) NSInteger accuracy;
 @property (nonatomic , copy) NSString * name;
