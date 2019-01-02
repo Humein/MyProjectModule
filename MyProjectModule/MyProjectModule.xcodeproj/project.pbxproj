@@ -81,6 +81,12 @@
 		33A32B0020DB7D5C008C3969 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AFF20DB7D5C008C3969 /* SectionModel.m */; };
 		33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32B0220DC95AF008C3969 /* DrawLine.m */; };
 		33A6A8DC215CC5F3001BE659 /* POPNumberAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6A8DB215CC5F3001BE659 /* POPNumberAnimation.m */; };
+		33C2DF3521DCC5D400F96F32 /* PointTreeOnlyOneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C2DF2921DCC5D400F96F32 /* PointTreeOnlyOneModel.m */; };
+		33C2DF3621DCC5D400F96F32 /* CompositePointTreeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C2DF2C21DCC5D400F96F32 /* CompositePointTreeModel.m */; };
+		33C2DF3721DCC5D400F96F32 /* PointTreeTypeOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C2DF3021DCC5D400F96F32 /* PointTreeTypeOne.m */; };
+		33C2DF3821DCC5D400F96F32 /* PointTreeTypeTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C2DF3121DCC5D400F96F32 /* PointTreeTypeTwo.m */; };
+		33C2DF3921DCC5D400F96F32 /* PointTreeTypeThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C2DF3221DCC5D400F96F32 /* PointTreeTypeThree.m */; };
+		33C2DF3E21DCC66C00F96F32 /* PointTreeOneModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C2DF3D21DCC66C00F96F32 /* PointTreeOneModelViewController.m */; };
 		33C97111211E7C3700EAAD5E /* APPPayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C97110211E7C3700EAAD5E /* APPPayTool.m */; };
 		33C97118211E81D800EAAD5E /* ApplePay.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C97117211E81D800EAAD5E /* ApplePay.m */; };
 		33C9711B211E899400EAAD5E /* AliPay.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C9711A211E899400EAAD5E /* AliPay.m */; };
@@ -119,7 +125,6 @@
 		33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */; };
 		7901F9A221A678CE005BE8A6 /* NSTimerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901F9A121A678CE005BE8A6 /* NSTimerObserver.m */; };
 		7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */; };
-		792E0CB521DCAE2000CE2F2E /* CompositePointTreeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 792E0CB421DCAE2000CE2F2E /* CompositePointTreeModel.m */; };
 		7931A51B21A7DAA5002A26C0 /* FilterCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7931A51A21A7DAA5002A26C0 /* FilterCollectionViewLayout.m */; };
 		79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79402223219D59A20008A3AD /* SimulationChainFucCode.m */; };
 		79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFDCE82142A28700C81069 /* StartWaterView.m */; };
@@ -321,6 +326,19 @@
 		33A32B0220DC95AF008C3969 /* DrawLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawLine.m; sourceTree = "<group>"; };
 		33A6A8DA215CC5F3001BE659 /* POPNumberAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPNumberAnimation.h; sourceTree = "<group>"; };
 		33A6A8DB215CC5F3001BE659 /* POPNumberAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPNumberAnimation.m; sourceTree = "<group>"; };
+		33C2DF2921DCC5D400F96F32 /* PointTreeOnlyOneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointTreeOnlyOneModel.m; sourceTree = "<group>"; };
+		33C2DF2A21DCC5D400F96F32 /* CompositePointTreeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompositePointTreeModel.h; sourceTree = "<group>"; };
+		33C2DF2B21DCC5D400F96F32 /* PointTreeOnlyOneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointTreeOnlyOneModel.h; sourceTree = "<group>"; };
+		33C2DF2C21DCC5D400F96F32 /* CompositePointTreeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompositePointTreeModel.m; sourceTree = "<group>"; };
+		33C2DF2E21DCC5D400F96F32 /* PointTreeTypeTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointTreeTypeTwo.h; sourceTree = "<group>"; };
+		33C2DF2F21DCC5D400F96F32 /* PointTreeTypeThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointTreeTypeThree.h; sourceTree = "<group>"; };
+		33C2DF3021DCC5D400F96F32 /* PointTreeTypeOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointTreeTypeOne.m; sourceTree = "<group>"; };
+		33C2DF3121DCC5D400F96F32 /* PointTreeTypeTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointTreeTypeTwo.m; sourceTree = "<group>"; };
+		33C2DF3221DCC5D400F96F32 /* PointTreeTypeThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointTreeTypeThree.m; sourceTree = "<group>"; };
+		33C2DF3321DCC5D400F96F32 /* ModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelProtocol.h; sourceTree = "<group>"; };
+		33C2DF3421DCC5D400F96F32 /* PointTreeTypeOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointTreeTypeOne.h; sourceTree = "<group>"; };
+		33C2DF3C21DCC66C00F96F32 /* PointTreeOneModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PointTreeOneModelViewController.h; sourceTree = "<group>"; };
+		33C2DF3D21DCC66C00F96F32 /* PointTreeOneModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PointTreeOneModelViewController.m; sourceTree = "<group>"; };
 		33C9710F211E7C3700EAAD5E /* APPPayTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPPayTool.h; sourceTree = "<group>"; };
 		33C97110211E7C3700EAAD5E /* APPPayTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPPayTool.m; sourceTree = "<group>"; };
 		33C97113211E7F7100EAAD5E /* APPPayProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPPayProtocol.h; sourceTree = "<group>"; };
@@ -397,8 +415,6 @@
 		7901F9A121A678CE005BE8A6 /* NSTimerObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTimerObserver.m; sourceTree = "<group>"; };
 		7929B49B219FE74B004D335E /* RunLoopDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopDemoViewController.h; sourceTree = "<group>"; };
 		7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopDemoViewController.m; sourceTree = "<group>"; };
-		792E0CB321DCAE2000CE2F2E /* CompositePointTreeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompositePointTreeModel.h; sourceTree = "<group>"; };
-		792E0CB421DCAE2000CE2F2E /* CompositePointTreeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompositePointTreeModel.m; sourceTree = "<group>"; };
 		7931A51921A7DAA5002A26C0 /* FilterCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterCollectionViewLayout.h; sourceTree = "<group>"; };
 		7931A51A21A7DAA5002A26C0 /* FilterCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterCollectionViewLayout.m; sourceTree = "<group>"; };
 		79402222219D59A20008A3AD /* SimulationChainFucCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulationChainFucCode.h; sourceTree = "<group>"; };
@@ -1035,6 +1051,48 @@
 			path = POPAnimation;
 			sourceTree = "<group>";
 		};
+		33C2DF1B21DCBCCE00F96F32 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33C2DF2D21DCC5D400F96F32 /* 多种Model */,
+				33C2DF2A21DCC5D400F96F32 /* CompositePointTreeModel.h */,
+				33C2DF2C21DCC5D400F96F32 /* CompositePointTreeModel.m */,
+				33C2DF2B21DCC5D400F96F32 /* PointTreeOnlyOneModel.h */,
+				33C2DF2921DCC5D400F96F32 /* PointTreeOnlyOneModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33C2DF2D21DCC5D400F96F32 /* 多种Model */ = {
+			isa = PBXGroup;
+			children = (
+				33C2DF2E21DCC5D400F96F32 /* PointTreeTypeTwo.h */,
+				33C2DF2F21DCC5D400F96F32 /* PointTreeTypeThree.h */,
+				33C2DF3021DCC5D400F96F32 /* PointTreeTypeOne.m */,
+				33C2DF3121DCC5D400F96F32 /* PointTreeTypeTwo.m */,
+				33C2DF3221DCC5D400F96F32 /* PointTreeTypeThree.m */,
+				33C2DF3321DCC5D400F96F32 /* ModelProtocol.h */,
+				33C2DF3421DCC5D400F96F32 /* PointTreeTypeOne.h */,
+			);
+			path = "多种Model";
+			sourceTree = "<group>";
+		};
+		33C2DF3A21DCC60200F96F32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				33C2DF3C21DCC66C00F96F32 /* PointTreeOneModelViewController.h */,
+				33C2DF3D21DCC66C00F96F32 /* PointTreeOneModelViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		33C2DF3B21DCC60700F96F32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		33C9710E211E7C0400EAAD5E /* 支付方式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1242,8 +1300,9 @@
 		792E0CB221DCADD500CE2F2E /* 组合模式TreeView */ = {
 			isa = PBXGroup;
 			children = (
-				792E0CB321DCAE2000CE2F2E /* CompositePointTreeModel.h */,
-				792E0CB421DCAE2000CE2F2E /* CompositePointTreeModel.m */,
+				33C2DF3B21DCC60700F96F32 /* View */,
+				33C2DF3A21DCC60200F96F32 /* Controller */,
+				33C2DF1B21DCBCCE00F96F32 /* Model */,
 			);
 			path = "组合模式TreeView";
 			sourceTree = "<group>";
@@ -1601,13 +1660,15 @@
 				33888FE820F06AC900E4A119 /* PaternalSViewController.m in Sources */,
 				33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */,
 				79EEEA512182BD8C00848B59 /* LiveCommetChatTV.m in Sources */,
-				792E0CB521DCAE2000CE2F2E /* CompositePointTreeModel.m in Sources */,
+				33C2DF3821DCC5D400F96F32 /* PointTreeTypeTwo.m in Sources */,
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
 				79EEEAB02191707A00848B59 /* HitEventStrikeView.m in Sources */,
 				79EEEA99218EEBCF00848B59 /* FullScreenViewController.m in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
 				79EEEAB321957A5A00848B59 /* ResponderPlayerView.m in Sources */,
+				33C2DF3721DCC5D400F96F32 /* PointTreeTypeOne.m in Sources */,
+				33C2DF3621DCC5D400F96F32 /* CompositePointTreeModel.m in Sources */,
 				79EEEA8B218BF30E00848B59 /* ResponOfChainManager.m in Sources */,
 				33A6A8DC215CC5F3001BE659 /* POPNumberAnimation.m in Sources */,
 				338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */,
@@ -1626,6 +1687,7 @@
 				79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */,
 				33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */,
 				3378281C21084A6E00373A20 /* Condiment.m in Sources */,
+				33C2DF3521DCC5D400F96F32 /* PointTreeOnlyOneModel.m in Sources */,
 				33E6CE0521006D2000422FC7 /* CreatTreeView.m in Sources */,
 				33759E74212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.m in Sources */,
 				33888FD420F05ADB00E4A119 /* PaternalViewController.m in Sources */,
@@ -1637,6 +1699,7 @@
 				33A32AE920DA789D008C3969 /* UIScrollView+SlideGestureBack.m in Sources */,
 				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
 				33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */,
+				33C2DF3E21DCC66C00F96F32 /* PointTreeOneModelViewController.m in Sources */,
 				33C9711F211EB8DC00EAAD5E /* AbstractViewController.m in Sources */,
 				33888FE420F0683C00E4A119 /* UIView+frameAdjust.m in Sources */,
 				339B534620F4AB2A003444CB /* ZTKBJDownHelper.m in Sources */,
@@ -1697,6 +1760,7 @@
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				79EEEA562182C09200848B59 /* liveChatModel.m in Sources */,
 				33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */,
+				33C2DF3921DCC5D400F96F32 /* PointTreeTypeThree.m in Sources */,
 				33C971432124108D00EAAD5E /* CustomAlertView.m in Sources */,
 				79EEEAA3218FF5E600848B59 /* TreeViewCell.m in Sources */,
 				33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */,
