@@ -136,6 +136,13 @@
 
 //设置next节点，默认在最后一个位置插入，链式操作，比较方便 Block（链式编程+函数式编程） 实现 链表  （Masonry中正是使用了函数式编程与链式编程的方式）
 
+// -- 函数式编程步骤3 --> 传递参数
+//函数式编程和链式编程
+//- (BlockObject * (^)(double distance))run5;
+//- (BlockObject * (^)(NSString *kindOfFood))eat5;
+
+
+
 - (ResponOfChainManager * (^)(ResponOfChainManager* nextView))nextView{
     
     ResponOfChainManager *(^playViewBlock)(ResponOfChainManager *nextView) = ^(ResponOfChainManager* nextView){
