@@ -21,6 +21,8 @@ PODS:
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
+  - YTKNetwork (2.0.4):
+    - AFNetworking (~> 3.0)
   - YYKit (0.9.11):
     - YYKit/no-arc (= 0.9.11)
   - YYKit/no-arc (0.9.11)
@@ -32,6 +34,7 @@ DEPENDENCIES:
   - MJExtension
   - pop (~> 1.0)
   - SDWebImage (~> 4.3.3)
+  - YTKNetwork
   - YYKit
 
 SPEC REPOS:
@@ -42,6 +45,7 @@ SPEC REPOS:
     - MJExtension
     - pop
     - SDWebImage
+    - YTKNetwork
     - YYKit
 
 SPEC CHECKSUMS:
@@ -51,8 +55,9 @@ SPEC CHECKSUMS:
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYKit: 76c3f2cee1a72d3c5b1d7fd8d170ee507fe5df68
 
-PODFILE CHECKSUM: ebf588bbaa0c89115597744124b20883bc232c8f
+PODFILE CHECKSUM: caccb37035057a1f8fedc86e213e46c1f99b1827
 
 COCOAPODS: 1.5.3
