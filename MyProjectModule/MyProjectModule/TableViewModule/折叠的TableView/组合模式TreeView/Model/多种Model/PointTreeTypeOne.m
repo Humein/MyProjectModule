@@ -10,4 +10,8 @@
 
 @implementation PointTreeTypeOne
 
+- (NSString *)showTitle{
+    return self.title;
+}
+
 @end
