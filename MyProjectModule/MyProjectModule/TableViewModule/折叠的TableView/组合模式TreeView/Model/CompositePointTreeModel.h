@@ -24,13 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface CompositePointTreeModel : NSObject
-//业务属性
 
-@property (nonatomic,copy) NSString *showTitle;
-
-@property (nonatomic , copy) NSArray<CompositePointTreeModel *> * children;
-
-@property (nonatomic, assign) BOOL isSpread;
+@property (nonatomic , copy) NSArray<CompositePointTreeModel<ModelProtocol> *> * children;
 
 
 @end

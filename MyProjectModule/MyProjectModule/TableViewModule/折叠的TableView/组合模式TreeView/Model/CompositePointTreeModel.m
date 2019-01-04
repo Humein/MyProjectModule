@@ -9,10 +9,5 @@
 #import "CompositePointTreeModel.h"
 
 @implementation CompositePointTreeModel
-//+ (NSDictionary *)objectClassInArray {
-//    return @{
-//             @"children": @"CompositePointTreeModel",
-//             };
-//}
 
 @end

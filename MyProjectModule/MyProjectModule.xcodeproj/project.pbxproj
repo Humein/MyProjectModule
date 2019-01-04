@@ -1084,13 +1084,13 @@
 		33C2DF2D21DCC5D400F96F32 /* 多种Model */ = {
 			isa = PBXGroup;
 			children = (
-				33C2DF2E21DCC5D400F96F32 /* PointTreeTypeTwo.h */,
-				33C2DF2F21DCC5D400F96F32 /* PointTreeTypeThree.h */,
+				33C2DF3421DCC5D400F96F32 /* PointTreeTypeOne.h */,
 				33C2DF3021DCC5D400F96F32 /* PointTreeTypeOne.m */,
+				33C2DF2E21DCC5D400F96F32 /* PointTreeTypeTwo.h */,
 				33C2DF3121DCC5D400F96F32 /* PointTreeTypeTwo.m */,
+				33C2DF2F21DCC5D400F96F32 /* PointTreeTypeThree.h */,
 				33C2DF3221DCC5D400F96F32 /* PointTreeTypeThree.m */,
 				33C2DF3321DCC5D400F96F32 /* ModelProtocol.h */,
-				33C2DF3421DCC5D400F96F32 /* PointTreeTypeOne.h */,
 			);
 			path = "多种Model";
 			sourceTree = "<group>";
