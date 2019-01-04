@@ -11,6 +11,7 @@
 #import "PointsTreeTableViewCell.h"
 #import "MJExtension.h"
 
+#import "TreeDiffModelViewController.h"
 @interface PointTreeOneModelViewController ()
 
 @end
@@ -31,9 +32,19 @@
     }];
     
     
-    self.rightBarItem(@"刷新树", CGRectMake(0, 0, 30, 30), NO);
+    self.rightBarItem(@"刷新树", CGRectMake(0, 0, 30, 30), NO).rightBarItem(@"TreeDiffModelViewController",CGRectMake(0, 0, 30, 30),NO);
     self.rightBarItemClickBlock = ^(UIButton *button, NSInteger index) {
-        [weakSelf requestAllPointTreeData];
+        TreeDiffModelViewController *VC = [TreeDiffModelViewController new];
+        switch (index) {
+            case 0:
+                [weakSelf requestAllPointTreeData];
+                break;
+            case 1:
+                [weakSelf.navigationController pushViewController:VC animated:YES];
+                break;
+            default:
+                break;
+        }
     };
 }
 

@@ -129,6 +129,7 @@
 		79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79402223219D59A20008A3AD /* SimulationChainFucCode.m */; };
 		794B100621DEF98300B91405 /* PointsTreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */; };
 		794B100921DF02E300B91405 /* AbstractTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100821DF02E300B91405 /* AbstractTableViewController.m */; };
+		794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */; };
 		79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFDCE82142A28700C81069 /* StartWaterView.m */; };
 		79CFB323216C879D00218C92 /* NSInvocationForStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */; };
 		79E3D63321DE57D60038CACB /* ZTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63221DE57D60038CACB /* ZTKBaseRequest.m */; };
@@ -428,6 +429,8 @@
 		794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PointsTreeTableViewCell.m; path = MyProjectModule/NetRequstAndSocket/PointsTreeTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		794B100721DF02E300B91405 /* AbstractTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractTableViewController.h; sourceTree = "<group>"; };
 		794B100821DF02E300B91405 /* AbstractTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractTableViewController.m; sourceTree = "<group>"; };
+		794B100A21DF2CF700B91405 /* TreeDiffModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeDiffModelViewController.h; sourceTree = "<group>"; };
+		794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreeDiffModelViewController.m; sourceTree = "<group>"; };
 		79BFDCE22142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE42142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE72142A28700C81069 /* StartWaterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartWaterView.h; sourceTree = "<group>"; };
@@ -1097,6 +1100,8 @@
 			children = (
 				33C2DF3C21DCC66C00F96F32 /* PointTreeOneModelViewController.h */,
 				33C2DF3D21DCC66C00F96F32 /* PointTreeOneModelViewController.m */,
+				794B100A21DF2CF700B91405 /* TreeDiffModelViewController.h */,
+				794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1814,6 +1819,7 @@
 				33759E7D212FABBA00D801C1 /* NSObject+KVOHelper.m in Sources */,
 				79EEEAA1218FF5E600848B59 /* TreeViewModel.m in Sources */,
 				33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */,
+				794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */,
 				7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */,
 				33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */,
 				33C971402124108D00EAAD5E /* CustomAlertViewDefault.m in Sources */,
