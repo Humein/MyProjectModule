@@ -176,7 +176,7 @@
     [requestheaders setValue:@"2" forKey:@"appType"];
     [requestheaders setValue:@"2" forKey:@"cv"];
     [requestheaders setValue:@"1" forKey:@"terminal"];
-    [requestheaders setValue:@"06468a6bb89c41f1a5b3c426972963ed" forKey:@"token"];
+    [requestheaders setValue:@"3aacf52fc7674037a98393d82edb919a" forKey:@"token"];
     
     return requestheaders;
     

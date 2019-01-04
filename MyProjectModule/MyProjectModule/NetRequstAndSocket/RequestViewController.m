@@ -31,6 +31,7 @@
     } withParameter:nil withSuccess:^(NSString * _Nonnull succMessage, id  _Nonnull responseObject, NSInteger succCode) {
         
     } andFailure:^(NSString * _Nonnull errorMessage, id  _Nonnull result, NSInteger errorCode) {
+        NSLog(@"业务错误==%@，%@，http错误码===%ld",errorMessage,result,(long)errorCode);
         
     }];
 }
