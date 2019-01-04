@@ -17,6 +17,7 @@ PODS:
   - KVOController (1.0.3)
   - Masonry (0.6.4)
   - MJExtension (3.0.10)
+  - MJRefresh (3.1.15.7)
   - pop (1.0.8)
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - KVOController
   - Masonry
   - MJExtension
+  - MJRefresh
   - pop (~> 1.0)
   - SDWebImage (~> 4.3.3)
   - YTKNetwork
@@ -43,6 +45,7 @@ SPEC REPOS:
     - KVOController
     - Masonry
     - MJExtension
+    - MJRefresh
     - pop
     - SDWebImage
     - YTKNetwork
@@ -53,11 +56,12 @@ SPEC CHECKSUMS:
   KVOController: 9fd8f0343670994e4b6f9f0b31f5a45663f3e1cf
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYKit: 76c3f2cee1a72d3c5b1d7fd8d170ee507fe5df68
 
-PODFILE CHECKSUM: caccb37035057a1f8fedc86e213e46c1f99b1827
+PODFILE CHECKSUM: 161760daa5d222aa04b0e299d810ca99e6092402
 
 COCOAPODS: 1.5.3
