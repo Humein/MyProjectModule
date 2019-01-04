@@ -37,7 +37,7 @@
 - (void)requestPointTreeDataWithParentId:(NSInteger)parentId isWaiting:(BOOL)isWaiting finished:(void (^)(id data))finished{
     [RequestMediatorBaseBusniess requestConfig:^(RequestMediatorBaseBusniess * _Nullable configObject) {
         configObject.requestUrl = @"http://123.103.86.52/k/v1/points/collectionsByNode";
-        configObject.requestArgument = @{@"parentId":@"0"};
+        configObject.requestArgument = @{@"parentId":@(parentId).stringValue};
         configObject.requestMethod = YTKRequestMethodGET;
     } withSuccess:^(NSString * _Nonnull succMessage, id  _Nonnull responseObject, NSInteger succCode) {
         NSMutableArray<PointTreeOnlyOneModel *> *dataArrM = [PointTreeOnlyOneModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
@@ -65,17 +65,16 @@
     WEAKSELF
     cell.spreadBtnBlock = ^{
         PointTreeOnlyOneModel *model = weakSelf.dataArray[indexPath.row];
-        
         if (model.children && model.children.count != 0 && model.isNextDataRequest) {
             [weakSelf treeSeparate:indexPath];
-            [self.tableView reloadData];
+//            [self.tableView reloadData];
         } else {
             // 分级请求知识树数据
             [weakSelf requestPointTreeDataWithParentId:model.id isWaiting:YES finished:^(id data) {
                 model.children = data;
                 model.isNextDataRequest = YES;
                 [weakSelf treeSeparate:indexPath];
-                [self.tableView reloadData];
+//                [self.tableView reloadData];
             }];
         }
     };
@@ -128,6 +127,9 @@
         [self.dataArray removeObjectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(indexPath.row + 1, model.children.count + childrenCount)]];
         [self.tableView deleteRowsAtIndexPaths:indexPathArray withRowAnimation:UITableViewRowAnimationFade];
     }
+    
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+
 }
 
 
