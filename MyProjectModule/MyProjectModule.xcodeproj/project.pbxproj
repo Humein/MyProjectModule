@@ -130,6 +130,8 @@
 		79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFDCE82142A28700C81069 /* StartWaterView.m */; };
 		79CFB323216C879D00218C92 /* NSInvocationForStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */; };
 		79E3D63321DE57D60038CACB /* ZTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63221DE57D60038CACB /* ZTKBaseRequest.m */; };
+		79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63521DE60E80038CACB /* RequestMediatorBaseBusniess.m */; };
+		79E3D63921DE67E00038CACB /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63821DE67E00038CACB /* RequestViewController.m */; };
 		79EEEA4C2182BD4700848B59 /* UITableView滚动到底部时崩溃的解决方法 - 简书.html in Resources */ = {isa = PBXBuildFile; fileRef = 79EEEA492182BD4700848B59 /* UITableView滚动到底部时崩溃的解决方法 - 简书.html */; };
 		79EEEA4D2182BD4700848B59 /* scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客 - CSDN博客.html in Resources */ = {isa = PBXBuildFile; fileRef = 79EEEA4A2182BD4700848B59 /* scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客 - CSDN博客.html */; };
 		79EEEA4E2182BD4700848B59 /* iOS开发、教你一步步实现直播间评论效果功能 - 简书.html in Resources */ = {isa = PBXBuildFile; fileRef = 79EEEA4B2182BD4700848B59 /* iOS开发、教你一步步实现直播间评论效果功能 - 简书.html */; };
@@ -428,6 +430,10 @@
 		79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSInvocationForStrategyViewController.m; sourceTree = "<group>"; };
 		79E3D63121DE57D60038CACB /* ZTKBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTKBaseRequest.h; sourceTree = "<group>"; };
 		79E3D63221DE57D60038CACB /* ZTKBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTKBaseRequest.m; sourceTree = "<group>"; };
+		79E3D63421DE60E80038CACB /* RequestMediatorBaseBusniess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestMediatorBaseBusniess.h; sourceTree = "<group>"; };
+		79E3D63521DE60E80038CACB /* RequestMediatorBaseBusniess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestMediatorBaseBusniess.m; sourceTree = "<group>"; };
+		79E3D63721DE67E00038CACB /* RequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
+		79E3D63821DE67E00038CACB /* RequestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestViewController.m; sourceTree = "<group>"; };
 		79EEEA492182BD4700848B59 /* UITableView滚动到底部时崩溃的解决方法 - 简书.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "UITableView滚动到底部时崩溃的解决方法 - 简书.html"; sourceTree = "<group>"; };
 		79EEEA4A2182BD4700848B59 /* scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客 - CSDN博客.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客 - CSDN博客.html"; sourceTree = "<group>"; };
 		79EEEA4B2182BD4700848B59 /* iOS开发、教你一步步实现直播间评论效果功能 - 简书.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "iOS开发、教你一步步实现直播间评论效果功能 - 简书.html"; sourceTree = "<group>"; };
@@ -732,7 +738,6 @@
 		33828F1120D3CAB800318AE5 /* BaseModule */ = {
 			isa = PBXGroup;
 			children = (
-				79E3D62F21DE56880038CACB /* YTKNetRequest */,
 				33C971322124108D00EAAD5E /* 弹窗 */,
 				33C9711C211EB8C900EAAD5E /* AbstractBase */,
 				33888FD820F05C3600E4A119 /* ImitateWMPage */,
@@ -1316,6 +1321,8 @@
 			children = (
 				79BFDCE12142A16000C81069 /* NetRequest */,
 				79BFDCE32142A16000C81069 /* socket */,
+				79E3D63721DE67E00038CACB /* RequestViewController.h */,
+				79E3D63821DE67E00038CACB /* RequestViewController.m */,
 			);
 			path = NetRequstAndSocket;
 			sourceTree = "<group>";
@@ -1337,18 +1344,13 @@
 			path = socket;
 			sourceTree = "<group>";
 		};
-		79E3D62F21DE56880038CACB /* YTKNetRequest */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = YTKNetRequest;
-			sourceTree = "<group>";
-		};
 		79E3D63021DE57720038CACB /* YTKNetRequest */ = {
 			isa = PBXGroup;
 			children = (
 				79E3D63121DE57D60038CACB /* ZTKBaseRequest.h */,
 				79E3D63221DE57D60038CACB /* ZTKBaseRequest.m */,
+				79E3D63421DE60E80038CACB /* RequestMediatorBaseBusniess.h */,
+				79E3D63521DE60E80038CACB /* RequestMediatorBaseBusniess.m */,
 			);
 			path = YTKNetRequest;
 			sourceTree = "<group>";
@@ -1689,6 +1691,7 @@
 				79EEEA99218EEBCF00848B59 /* FullScreenViewController.m in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
+				79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */,
 				79EEEAB321957A5A00848B59 /* ResponderPlayerView.m in Sources */,
 				33C2DF3721DCC5D400F96F32 /* PointTreeTypeOne.m in Sources */,
 				33C2DF3621DCC5D400F96F32 /* CompositePointTreeModel.m in Sources */,
@@ -1738,6 +1741,7 @@
 				33759E7A212FAB2A00D801C1 /* AbstractItem.m in Sources */,
 				33C971412124108D00EAAD5E /* DecoratorAView.m in Sources */,
 				33C971422124108D00EAAD5E /* TablePopDemoViewController.m in Sources */,
+				79E3D63921DE67E00038CACB /* RequestViewController.m in Sources */,
 				3378281D21084A6E00373A20 /* Hamburger.m in Sources */,
 				33E6CE0721006D2000422FC7 /* UITableViewCell+AnimationType.m in Sources */,
 				33FAE4E520E2445500BE7175 /* HeaderSuspendedLayout.m in Sources */,

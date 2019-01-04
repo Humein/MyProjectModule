@@ -74,8 +74,8 @@
  */
 -(YTKBaseRequest*)getNetRequestErrorState:(YTKBaseRequest*)request{
     ZTKBaseRequest * childRequest=(ZTKBaseRequest*)request;
-    //    NSLog(@"%@", [NSString stringWithFormat:@"Request %@ failed, status code = %ld",
-    //                  NSStringFromClass([request class]), (long)request.responseStatusCode]);
+    NSLog(@"%@", [NSString stringWithFormat:@"Request %@ failed, status code = %ld",
+                      NSStringFromClass([request class]), (long)request.responseStatusCode]);
     
     int networkState = 1;
     if (networkState == 0) {
