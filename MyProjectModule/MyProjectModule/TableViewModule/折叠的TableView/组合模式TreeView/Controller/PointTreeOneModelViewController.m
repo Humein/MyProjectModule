@@ -13,16 +13,12 @@
 
 @interface PointTreeOneModelViewController ()
 
-@property (nonatomic,strong)NSMutableArray *dataArray;
-
 @end
 
 @implementation PointTreeOneModelViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataArray = [NSMutableArray array];
-
     
 }
 
@@ -34,8 +30,8 @@
         configObject.requestMethod = YTKRequestMethodGET;
     } withSuccess:^(NSString * _Nonnull succMessage, id  _Nonnull responseObject, NSInteger succCode) {
         NSMutableArray<PointTreeOnlyOneModel *> *dataArrM = [PointTreeOnlyOneModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
-        
-        
+        self.dataArray = dataArrM;
+    
     } andFailure:^(NSString * _Nonnull errorMessage, id  _Nonnull result, NSInteger errorCode) {
         
         
@@ -47,5 +43,16 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataArray.count;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 @end

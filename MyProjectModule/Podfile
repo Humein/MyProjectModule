@@ -5,6 +5,7 @@ target 'MyProjectModule' do
   pod 'YYKit'
   pod 'pop', '~> 1.0'
   pod 'MJExtension'
+  pod 'MJRefresh'
   pod 'AFNetworking'
   pod 'KVOController'
   pod 'SDWebImage', '~> 4.3.3'

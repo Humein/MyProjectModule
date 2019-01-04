@@ -6,11 +6,11 @@
 //  Copyright © 2019 xinxin. All rights reserved.
 //
 
-#import "AbstractViewController.h"
+#import "AbstractTableViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PointTreeOneModelViewController : AbstractViewController
+@interface PointTreeOneModelViewController : AbstractTableViewController
 
 @end
 
