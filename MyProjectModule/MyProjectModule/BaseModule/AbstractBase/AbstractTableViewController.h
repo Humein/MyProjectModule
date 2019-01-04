@@ -7,10 +7,10 @@
 //
 
 #import "AbstractViewController.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AbstractTableViewController : AbstractViewController
+
+@interface AbstractTableViewController : AbstractViewController<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,assign)UITableViewStyle tableViewStyle;

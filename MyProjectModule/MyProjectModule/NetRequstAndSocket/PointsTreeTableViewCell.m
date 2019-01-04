@@ -26,6 +26,17 @@
 
 @end
 @implementation PointsTreeTableViewCell
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        
+        [self configSubView];
+        [self layout];
+
+    }
+    
+    return self;
+}
 
 // MARK: - UI
 - (void)configSubView {
@@ -153,6 +164,7 @@
 - (UIView *)lineView {
     if (!_lineView) {
         _lineView = [UIView new];
+        _lineView.backgroundColor = [UIColor redColor];
     }
     return _lineView;
 }

@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#define WEAKSELF typeof(self) __weak weakSelf = self;
+#define SCREEN_BOUNDS [UIScreen mainScreen].bounds
+#define SCREEN_H SCREEN_BOUNDS.size.height
+#define SCREEN_W SCREEN_BOUNDS.size.width
+
 
 @interface AbstractViewController : UIViewController
 //左边按钮，点击回调

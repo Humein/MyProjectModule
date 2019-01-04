@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PointsTreeTableViewCell : AbstractTableViewCell
+@interface PointsTreeTableViewCell : UITableViewCell
 /**
  cell数据Model
  */
