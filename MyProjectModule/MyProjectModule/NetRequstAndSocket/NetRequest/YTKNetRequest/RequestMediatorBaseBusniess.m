@@ -11,9 +11,12 @@
 #define STR_NET_RETURN_TYPE_SUCCSESS @"请求成功"
 
 @implementation RequestMediatorBaseBusniess
+
+
 +(void)requestConfig:(RequestMediatorBaseBusniessBlock)configBlock withParameter:(NSDictionary *)dic withSuccess:(Succsess)succsess andFailure:(Failure)failure{
     
     __block RequestMediatorBaseBusniess *configAPI = [[RequestMediatorBaseBusniess alloc] init];
+
     configBlock ? configBlock(configAPI) : nil;
 
     [configAPI startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
@@ -41,8 +44,7 @@
             failure([configAPI.ZTKErrorDic objectForKey:@"message"],NSStringFromClass([request class]),request.responseStatusCode);
         }
     }];
-    
-    
-    
+
 }
+
 @end

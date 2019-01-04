@@ -72,6 +72,10 @@ typedef void(^CacheFileNameFilterForRequestArgumentBlock)(id argument);
  */
 @property(nonatomic,strong) id requestArgument;
 @property(nonatomic,strong) NSArray *requestAuthorizationHeaderFieldArray;
+
+/**
+ 请求头
+ */
 @property(nonatomic,strong) NSDictionary *requestHeaderFieldValueDictionary;
 @property(nonatomic,strong) NSURLRequest *buildCustomUrlRequest;
 @property(nonatomic,assign) BOOL useCDN;

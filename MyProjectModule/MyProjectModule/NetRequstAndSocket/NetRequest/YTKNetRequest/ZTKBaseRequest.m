@@ -172,13 +172,19 @@
 }
 
 - (NSDictionary *)requestHeaderFieldValueDictionary {
-    NSMutableDictionary *requestheaders = [[NSMutableDictionary alloc] initWithCapacity:4];
-    [requestheaders setValue:@"2" forKey:@"appType"];
-    [requestheaders setValue:@"2" forKey:@"cv"];
-    [requestheaders setValue:@"1" forKey:@"terminal"];
-    [requestheaders setValue:@"3aacf52fc7674037a98393d82edb919a" forKey:@"token"];
     
-    return requestheaders;
+    if (_requestHeaderFieldValueDictionary) {
+        return _requestHeaderFieldValueDictionary;
+    }else{
+        NSMutableDictionary *requestheaders = [[NSMutableDictionary alloc] initWithCapacity:4];
+        [requestheaders setValue:@"2" forKey:@"appType"];
+        [requestheaders setValue:@"2" forKey:@"cv"];
+        [requestheaders setValue:@"1" forKey:@"terminal"];
+        [requestheaders setValue:@"3aacf52fc7674037a98393d82edb919a" forKey:@"token"];
+
+        return requestheaders;
+        
+    }
     
 }
 

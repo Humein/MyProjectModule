@@ -33,7 +33,9 @@ typedef void (^RequestMediatorBaseBusniessBlock)(RequestMediatorBaseBusniess  * 
 
 
 - (void)noNetWork;//无网络
+
 - (void)dataError;//网络请求发生错误
+
 - (void)recoverNormal;//数据恢复正常
 
 
