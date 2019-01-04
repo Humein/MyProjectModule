@@ -7,6 +7,9 @@
 //
 
 #import "PointTreeOneModelViewController.h"
+#import "RequestMediatorBaseBusniess.h"
+#import "PointsTreeTableViewCell.h"
+#import "MJExtension.h"
 
 @interface PointTreeOneModelViewController ()
 
@@ -18,7 +21,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.dataArray = [NSMutableArray array];
+
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+
+    [RequestMediatorBaseBusniess requestConfig:^(RequestMediatorBaseBusniess * _Nullable configObject) {
+        configObject.requestUrl = @"http://123.103.86.52/k/v1/points/collectionsByNode";
+        configObject.requestArgument = @{@"parentId":@"0"};
+        configObject.requestMethod = YTKRequestMethodGET;
+    } withSuccess:^(NSString * _Nonnull succMessage, id  _Nonnull responseObject, NSInteger succCode) {
+        NSMutableArray<PointTreeOnlyOneModel *> *dataArrM = [PointTreeOnlyOneModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        
+        
+    } andFailure:^(NSString * _Nonnull errorMessage, id  _Nonnull result, NSInteger errorCode) {
+        
+        
+    }];
+    
 }
 
 //MARK: - tableViewDataSource

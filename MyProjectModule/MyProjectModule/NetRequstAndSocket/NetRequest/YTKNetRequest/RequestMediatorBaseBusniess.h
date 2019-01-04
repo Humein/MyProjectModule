@@ -29,7 +29,7 @@ typedef void(^Failure)(NSString *errorMessage, id result, NSInteger errorCode);
 
  @param configObject ZTKBaseRequest
  */
-typedef void (^RequestMediatorBaseBusniessBlock)(RequestMediatorBaseBusniess  * _Nullable configObject);
+typedef void (^RequestMediatorBaseBusniessBlock)(RequestMediatorBaseBusniess  *configObject);
 
 
 - (void)noNetWork;//无网络
@@ -39,7 +39,7 @@ typedef void (^RequestMediatorBaseBusniessBlock)(RequestMediatorBaseBusniess  * 
 - (void)recoverNormal;//数据恢复正常
 
 
-+(void)requestConfig:(RequestMediatorBaseBusniessBlock)configBlock withParameter:(NSDictionary *)dic withSuccess:(Succsess)succsess andFailure:(Failure)failure;
++(void)requestConfig:(RequestMediatorBaseBusniessBlock)configBlock withSuccess:(Succsess)succsess andFailure:(Failure)failure;
 
 @end
 

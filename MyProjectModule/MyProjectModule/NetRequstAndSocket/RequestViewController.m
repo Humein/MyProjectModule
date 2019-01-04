@@ -16,19 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
-    
-    
+
     NSDictionary *dicPram = [NSDictionary dictionary];
-    [RequestMediatorBaseBusniess requestConfig:^(RequestMediatorBaseBusniess * _Nonnull configObject) {
+    [RequestMediatorBaseBusniess requestConfig:^(RequestMediatorBaseBusniess *configObject) {
         configObject.requestUrl = @"http://123.103.86.52/p/v1/practices/91504021211538936";
         configObject.requestMethod = YTKRequestMethodGET;
         configObject.requestArgument = dicPram;
         configObject.cacheTimeInSecond = 5;
         
-    } withParameter:nil withSuccess:^(NSString * _Nonnull succMessage, id  _Nonnull responseObject, NSInteger succCode) {
+    }withSuccess:^(NSString * _Nonnull succMessage, id  _Nonnull responseObject, NSInteger succCode) {
         
     } andFailure:^(NSString * _Nonnull errorMessage, id  _Nonnull result, NSInteger errorCode) {
         

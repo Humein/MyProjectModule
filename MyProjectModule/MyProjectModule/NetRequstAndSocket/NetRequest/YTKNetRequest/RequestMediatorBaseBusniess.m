@@ -13,7 +13,7 @@
 @implementation RequestMediatorBaseBusniess
 
 
-+(void)requestConfig:(RequestMediatorBaseBusniessBlock)configBlock withParameter:(NSDictionary *)dic withSuccess:(Succsess)succsess andFailure:(Failure)failure{
++(void)requestConfig:(RequestMediatorBaseBusniessBlock)configBlock withSuccess:(Succsess)succsess andFailure:(Failure)failure{
     
     __block RequestMediatorBaseBusniess *configAPI = [[RequestMediatorBaseBusniess alloc] init];
 

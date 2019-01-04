@@ -127,6 +127,7 @@
 		7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */; };
 		7931A51B21A7DAA5002A26C0 /* FilterCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7931A51A21A7DAA5002A26C0 /* FilterCollectionViewLayout.m */; };
 		79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79402223219D59A20008A3AD /* SimulationChainFucCode.m */; };
+		794B100621DEF98300B91405 /* PointsTreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */; };
 		79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFDCE82142A28700C81069 /* StartWaterView.m */; };
 		79CFB323216C879D00218C92 /* NSInvocationForStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */; };
 		79E3D63321DE57D60038CACB /* ZTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63221DE57D60038CACB /* ZTKBaseRequest.m */; };
@@ -422,6 +423,8 @@
 		7931A51A21A7DAA5002A26C0 /* FilterCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterCollectionViewLayout.m; sourceTree = "<group>"; };
 		79402222219D59A20008A3AD /* SimulationChainFucCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulationChainFucCode.h; sourceTree = "<group>"; };
 		79402223219D59A20008A3AD /* SimulationChainFucCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulationChainFucCode.m; sourceTree = "<group>"; };
+		794B100421DEF98300B91405 /* PointsTreeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PointsTreeTableViewCell.h; path = MyProjectModule/NetRequstAndSocket/PointsTreeTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PointsTreeTableViewCell.m; path = MyProjectModule/NetRequstAndSocket/PointsTreeTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		79BFDCE22142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE42142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE72142A28700C81069 /* StartWaterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartWaterView.h; sourceTree = "<group>"; };
@@ -1095,13 +1098,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		33C2DF3B21DCC60700F96F32 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		33C9710E211E7C0400EAAD5E /* 支付方式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1309,11 +1305,20 @@
 		792E0CB221DCADD500CE2F2E /* 组合模式TreeView */ = {
 			isa = PBXGroup;
 			children = (
-				33C2DF3B21DCC60700F96F32 /* View */,
+				794B100321DEF97200B91405 /* View */,
 				33C2DF3A21DCC60200F96F32 /* Controller */,
 				33C2DF1B21DCBCCE00F96F32 /* Model */,
 			);
 			path = "组合模式TreeView";
+			sourceTree = "<group>";
+		};
+		794B100321DEF97200B91405 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				794B100421DEF98300B91405 /* PointsTreeTableViewCell.h */,
+				794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		79BFDCE02142A16000C81069 /* NetRequstAndSocket */ = {
@@ -1749,6 +1754,7 @@
 				338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */,
 				33782829210853B800373A20 /* UIImage+Shadow.m in Sources */,
 				339B536020F4B28B003444CB /* BJPlayer.m in Sources */,
+				794B100621DEF98300B91405 /* PointsTreeTableViewCell.m in Sources */,
 				338FEBFF20E0F25A0025631B /* UIControlFactory.m in Sources */,
 				33C9713F2124108D00EAAD5E /* PopTableView.m in Sources */,
 				339B535520F4B078003444CB /* PlayerViewController.m in Sources */,
