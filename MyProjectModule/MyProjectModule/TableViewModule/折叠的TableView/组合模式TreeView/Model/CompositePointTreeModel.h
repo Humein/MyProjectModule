@@ -13,14 +13,27 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol ModelProtocol <NSObject>
 @optional
 /**
- 展视
+ 
  */
 -(NSString *)showTitle;
 
+// 请求下一级
+-(NSString *)cParentId;
 
 @end
 
 @interface CompositePointTreeModel : NSObject
+
+
+@property (nonatomic , copy) NSString *showTitle;
+
+@property (nonatomic , copy) NSString *cParentId;
+
+
+
+
+
+
 
 @property (nonatomic , copy) NSArray<CompositePointTreeModel<ModelProtocol> *> * children;
 
@@ -28,10 +41,6 @@ NS_ASSUME_NONNULL_BEGIN
  是否展开
  */
 @property (nonatomic, assign) BOOL isSpread;
-
-
-@property (nonatomic , copy) NSString *showTitle;
-
 @end
 
 NS_ASSUME_NONNULL_END

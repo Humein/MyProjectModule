@@ -12,6 +12,7 @@
 #import "MJExtension.h"
 #import "PointTreeTypeTwo.h"
 #import "PointTreeTypeThree.h"
+#import "PointsTreeTableViewCell.h"
 
 @interface TreeDiffModelViewController ()
 
@@ -21,20 +22,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    WEAKSELF;
+    [self requestPointTreeDataWithParentId:0 isWaiting:NO finished:^(id data) {
         
+        weakSelf.dataArray = data;
+    }];
+    
+    
+    self.rightBarItem(@"下一级", CGRectMake(0, 0, 30, 30), NO).rightBarItem(@"再下一级",CGRectMake(0, 0, 30, 30),NO);
+    self.rightBarItemClickBlock = ^(UIButton *button, NSInteger index) {
+        CompositePointTreeModel *model = weakSelf.dataArray[index];
+        // 分级请求知识树数据
+        [weakSelf requestPointTreeDataWithParentId:[[model cParentId] integerValue] isWaiting:YES finished:^(id data) {
+            //树形结构模型 存储 数据源  ([self.dataArray insertObjects:model.children atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(indexPath.row + 1, model.children.count)]])
+            model.children = data;
+            
+        }];
+    };
+
+}
+
+// 分级请求知识树数据
+- (void)requestPointTreeDataWithParentId:(NSInteger)parentId isWaiting:(BOOL)isWaiting finished:(void (^)(id data))finished{
+
     [RequestMediatorBaseBusniess requestConfig:^(RequestMediatorBaseBusniess * _Nullable configObject) {
         configObject.requestUrl = @"https://ns.huatu.com/c/v5/courses/70969/classSyllabus";
         configObject.requestArgument = @{
                                          @"page":@1,
                                          @"pageSize":@20,
-                                         @"parentId":@0
+                                         @"parentId":@(parentId).stringValue
                                          };
         configObject.requestMethod = YTKRequestMethodGET;
     } withSuccess:^(NSString * _Nonnull succMessage, id  _Nonnull responseObject, NSInteger succCode) {
         
         NSArray * listArray = responseObject[@"data"][@"list"];
+        NSMutableArray *dataArrM = [NSMutableArray array];
         [listArray enumerateObjectsUsingBlock:^(NSDictionary*  _Nonnull objDic, NSUInteger idx, BOOL * _Nonnull stop) {
-//            同一个数据源里面 有多个模型组合
+            //            同一个数据源里面 有多个模型组合
+            
+            // 用字典取
             id <ModelProtocol>abstmodel;
             if([objDic[@"type"] integerValue] == 0) {
                 
@@ -49,21 +76,19 @@
             
             CompositePointTreeModel *dataModle = [CompositePointTreeModel  new];
             dataModle.showTitle = [abstmodel showTitle];
-            [self.dataArray addObject:dataModle];
+            dataModle.cParentId = [abstmodel cParentId];
+            [dataArrM addObject:dataModle];
         }];
         
-        
-//        NSMutableArray<PointTreeTypeOne *> *dataArrM = [PointTreeTypeOne mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]];
-//        [dataArrM enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//            CompositePointTreeModel *dataModle = [CompositePointTreeModel  new];
-//            dataModle.showTitle = [obj showTitle];
-//            [self.dataArray addObject:dataModle];
-//
-//        }];
- 
+        finished(dataArrM);
+
+
     } andFailure:^(NSString * _Nonnull errorMessage, id  _Nonnull result, NSInteger errorCode) {
         
     }];
+    
 }
+
+
 
 @end

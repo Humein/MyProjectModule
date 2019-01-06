@@ -9,5 +9,10 @@
 #import "PointTreeTypeTwo.h"
 
 @implementation PointTreeTypeTwo
-
+- (NSString *)showTitle{
+    return self.title;
+}
+- (NSString *)cParentId{
+    return @(self.parentId).stringValue;
+}
 @end
