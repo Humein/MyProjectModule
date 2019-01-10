@@ -68,7 +68,6 @@
     [self addSubview:mid];
     [self addSubview:bot];
     
-    
 
 //    mid.superior = top;
 //    bot.superior = mid;
@@ -116,7 +115,7 @@
     
 }
 
-// 用 invocation 封装方法 策略 集中处理当前点击视图响应链上的所有事件
+// 用 invocation(命令模式) 封装方法 策略 集中处理当前点击视图响应链上的所有事件
 
 - (void)handleEventWithName:(NSString *)eventName parameter:(NSDictionary *)parameter {
     // 获取invocation对象

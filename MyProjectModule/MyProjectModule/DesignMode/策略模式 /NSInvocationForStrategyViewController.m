@@ -42,6 +42,7 @@ static NSString *const threeEvent = @"three";
     
     [self invocationTestOne];
     [self invocationTestTwo];
+    [self invocationTree];
     
  
     
@@ -84,6 +85,7 @@ static NSString *const threeEvent = @"three";
         NSLog(@"%@",str);
     }
     
+
     
     
 }
@@ -146,6 +148,10 @@ static NSString *const threeEvent = @"three";
 
 -(void)invocationTree{
     
+    
+    
+//    setOrientation:   被苹果隐藏  这里是调用私有方法
+    
     if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {
         SEL selector = NSSelectorFromString(@"setOrientation:");
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
@@ -154,6 +160,27 @@ static NSString *const threeEvent = @"three";
         int val = UIInterfaceOrientationLandscapeRight;
         [invocation setArgument:&val atIndex:2];
         [invocation invoke];
+    }
+    
+//    or
+    
+    if([[UIDevice currentDevice]respondsToSelector:@selector(setOrientation:)]) {
+        [[UIDevice currentDevice]performSelector:@selector(setOrientation:)
+                                      withObject:@(UIInterfaceOrientationLandscapeRight).stringValue];
+    }
+    
+    
+//    Class UIView = NSClassFromString(@"UIView");
+//#define MJRefreshMsgSend(...) ((void (*)(void *, SEL, UIView *))objc_msgSend)(__VA_ARGS__)
+//#define MJRefreshMsgTarget(target) (__bridge void *)(target)
+//    objc_msgSend(self,@selector(view)),@selector(recursiveDescription);
+    
+    if([self.view respondsToSelector:@selector(recursiveDescription)]) {
+        UIView *blueView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
+        [self.view addSubview:blueView];
+        NSLog(@"当前页面层级结构%@",[self.view performSelector:@selector(recursiveDescription)]);
+        
+        
     }
     
 }
