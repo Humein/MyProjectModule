@@ -18,6 +18,10 @@
 
 @implementation ThreadViewController
 
+
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     //请求依赖
@@ -92,7 +96,8 @@
             
             NSLog(@"status === %@",@(status).stringValue);
 
-            dispatch_semaphore_wait(dsema, dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC));
+            // 等待处理结果 最多等20秒
+            dispatch_semaphore_wait(dsema, dispatch_time(DISPATCH_TIME_NOW, 20 * NSEC_PER_SEC));
             
             NSLog(@"status === %@",@(status).stringValue);
             
@@ -107,7 +112,7 @@
     
 }
 
-// semaphone 控制线程数量  先降低再提高
+// semaphone 控制线程数量 并发/做锁    先降低再提高
 -(void)testDispatch_semaphone_Thread{
     //crate的value表示，最多几个资源可访问
     
