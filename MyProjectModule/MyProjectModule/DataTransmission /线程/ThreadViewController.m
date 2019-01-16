@@ -23,32 +23,42 @@
     //请求依赖
     [self GCDGroup];
     [self semaphore];
-    // 异步刷新
-    [self asyncRefrsh];
+    
+    [self threadTestOne];
     
     [[NSTimerObserver sharedInstance] addTimerObserver:self];
-
-    
 }
 
 
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    //DISPATCH_QUEUE_SERIAL 串行
-    //DISPATCH_QUEUE_CONCURRENT 并发
-    
-    _coderQueue =  dispatch_queue_create("com.hackemist.SDWebImageDownloaderOperationCoderQueue", DISPATCH_QUEUE_CONCURRENT);
 
+    [[NSTimerObserver sharedInstance] removeTimerObserver:self];
+    
+    [self testSemaphone_process_delay];
+    
+}
+
+
+#pragma mark - 回调
+- (void)timerCallBack:(NSTimerObserver *)timer{
+    _i++;
+    NSLog(@"%@====%d",[self class],_i);
+}
+
+
+#pragma mark - 多线程测试
+-(void)threadTestOne{
+    //1--   DISPATCH_QUEUE_SERIAL 串行  DISPATCH_QUEUE_CONCURRENT 并发
+    _coderQueue =  dispatch_queue_create("com.hackemist.SDWebImageDownloaderOperationCoderQueue", DISPATCH_QUEUE_CONCURRENT);
     // 开启一个子线程
     dispatch_async(self.coderQueue, ^{
-       
+        
         sleep(1);
         [[NSThread currentThread] setName:@"1"];
         NSLog(@"1------%@", [NSThread currentThread]); // 打印当前线程
-
+        
     });
-   
-    
     
     dispatch_async(self.coderQueue, ^{
         
@@ -57,30 +67,88 @@
     });
     
     
-//    dispatch_get_global_queue 获取一个全局的队列
+    //2--  dispatch_get_global_queue 获取一个全局的队列  异步刷新
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"异步线程");
         dispatch_async(dispatch_get_main_queue(), ^{
             NSLog(@"异步主线程");
         });
     });
-    
-    
-    
-    [[NSTimerObserver sharedInstance] removeTimerObserver:self];
-    
 }
 
 
+// 控制处理延时  先提高再降低
+-(void)testSemaphone_process_delay{
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        __block BOOL status = NO;
+        for (int i = 0; i < 3; i++) {
+            dispatch_semaphore_t dsema = dispatch_semaphore_create(0);
+            
+            [self simulateTime_consumingOperation:^(BOOL suc) {
+                status = suc;
+                dispatch_semaphore_signal(dsema);
+            }];
+            
+            NSLog(@"status === %@",@(status).stringValue);
 
-- (void)timerCallBack:(NSTimerObserver *)timer{
-    _i++;
-    NSLog(@"%@====%d",[self class],_i);
+            dispatch_semaphore_wait(dsema, dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC));
+            
+            NSLog(@"status === %@",@(status).stringValue);
+            
+            if (status)
+            {
+                // do Something
+                break;
+            }
+        }
+        
+    });
+    
+}
+
+// semaphone 控制线程数量  先降低再提高
+-(void)testDispatch_semaphone_Thread{
+    //crate的value表示，最多几个资源可访问
+    
+    //设定的信号值为2，先执行两个线程，等执行完一个，才会继续执行下一个，保证同一时间执行的线程数不超过2。
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(2);
+    
+    //设定为3，就是不限制线程执行了，因为一共才只有3个线程
+//    dispatch_semaphore_t semaphore = dispatch_semaphore_create(3);
+
+    dispatch_queue_t quene = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    //任务1
+    dispatch_async(quene, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"run task 1");
+        sleep(1);
+        NSLog(@"complete task 1");
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    //任务2
+    dispatch_async(quene, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"run task 2");
+        sleep(1);
+        NSLog(@"complete task 2");
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    //任务3
+    dispatch_async(quene, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"run task 3");
+        sleep(1);
+        NSLog(@"complete task 3");
+        dispatch_semaphore_signal(semaphore);
+    });
 }
 
 
-
-#pragma mark ---GCDGroup   1： dispatch_group_create dispatch_group_enter dispatch_group_leave
+#pragma mark - GCDGroup   1： dispatch_group_create dispatch_group_enter dispatch_group_leave
 
 -(void)GCDGroup{
     dispatch_group_t group = dispatch_group_create();
@@ -123,7 +191,7 @@
 }
 
 
-#pragma mark --- 信号量
+#pragma mark - 信号量
 
 //    dispatch_semaphore_create：创建一个信号量（semaphore）
 //    dispatch_semaphore_signal：信号通知，即让信号量+1
@@ -155,12 +223,12 @@
 }
 
 -(void)request_A{
-    
+//1    创建
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://www.cocoachina.com"]];
     NSURLSessionDownloadTask *task = [[NSURLSession sharedSession] downloadTaskWithRequest:request completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        //计数+1操作
+        //2 计数+1操作
         dispatch_semaphore_signal(sema);
         
         NSLog(@"第一步网络请求完成");
@@ -169,7 +237,7 @@
     
     [task resume];
     
-    //若计数为0则一直等待
+    //3 若计数为0则一直等待
     dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
     
 }
@@ -205,18 +273,6 @@
     
     dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
     
-}
-
-
-//异步刷新
--(void)asyncRefrsh{
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        // 1.子线程下载图片
-        NSURL *url = [NSURL URLWithString:@"http://d.jpg"];
-        // 2.回到主线程设置图片
-        dispatch_async(dispatch_get_main_queue(), ^{
-        });
-    });
 }
 
 

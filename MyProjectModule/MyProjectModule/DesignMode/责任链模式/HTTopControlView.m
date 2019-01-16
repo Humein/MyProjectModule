@@ -61,7 +61,7 @@
 
 
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo{
-//    Decorator模式  可以结合装饰者模式
+//    Decorator模式  结合Decorator(装饰者)模式
     NSLog(@"eventName ===== %@,userInfo =====%@",eventName,userInfo);
     NSMutableDictionary *decoratedUserInfo = [[NSMutableDictionary alloc] initWithDictionary:userInfo];
     decoratedUserInfo[@"key"] = [UIColor redColor]; // 添加数据

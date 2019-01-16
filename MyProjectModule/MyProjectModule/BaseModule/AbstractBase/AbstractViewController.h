@@ -13,6 +13,8 @@
 #define SCREEN_W SCREEN_BOUNDS.size.width
 
 
+typedef void(^ResultStatus)(BOOL suc);
+
 @interface AbstractViewController : UIViewController
 //左边按钮，点击回调
 @property (nonatomic,copy) void (^leftBarItemClickBlock)(UIButton *button, NSInteger index);
@@ -25,5 +27,7 @@
 
 //从左到右排列
 - (AbstractViewController * (^) (NSString * rightName,CGRect frame,BOOL isImage))rightBarItem;
+
+-(void)simulateTime_consumingOperation:(ResultStatus)status;
 
 @end

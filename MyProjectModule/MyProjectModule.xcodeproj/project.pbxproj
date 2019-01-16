@@ -130,6 +130,7 @@
 		794B100621DEF98300B91405 /* PointsTreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */; };
 		794B100921DF02E300B91405 /* AbstractTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100821DF02E300B91405 /* AbstractTableViewController.m */; };
 		794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */; };
+		794B101121E84A2500B91405 /* ClassClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B101021E84A2500B91405 /* ClassClusterViewController.m */; };
 		79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFDCE82142A28700C81069 /* StartWaterView.m */; };
 		79CFB323216C879D00218C92 /* NSInvocationForStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */; };
 		79E3D63321DE57D60038CACB /* ZTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63221DE57D60038CACB /* ZTKBaseRequest.m */; };
@@ -431,6 +432,8 @@
 		794B100821DF02E300B91405 /* AbstractTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractTableViewController.m; sourceTree = "<group>"; };
 		794B100A21DF2CF700B91405 /* TreeDiffModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeDiffModelViewController.h; sourceTree = "<group>"; };
 		794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreeDiffModelViewController.m; sourceTree = "<group>"; };
+		794B100F21E84A2500B91405 /* ClassClusterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassClusterViewController.h; sourceTree = "<group>"; };
+		794B101021E84A2500B91405 /* ClassClusterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassClusterViewController.m; sourceTree = "<group>"; };
 		79BFDCE22142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE42142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE72142A28700C81069 /* StartWaterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartWaterView.h; sourceTree = "<group>"; };
@@ -846,6 +849,7 @@
 		33888FF520F0C25400E4A119 /* DesignMode */ = {
 			isa = PBXGroup;
 			children = (
+				794B100E21E849EE00B91405 /* 类族 */,
 				3378282021084DFC00373A20 /* 抽象类 */,
 				339B533820F4AA9D003444CB /* 策略模式  */,
 				3378280521081E5D00373A20 /* 装饰者模式 */,
@@ -1331,6 +1335,39 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		794B100E21E849EE00B91405 /* 类族 */ = {
+			isa = PBXGroup;
+			children = (
+				794B101221E84A6900B91405 /* module */,
+				794B100F21E84A2500B91405 /* ClassClusterViewController.h */,
+				794B101021E84A2500B91405 /* ClassClusterViewController.m */,
+			);
+			path = "类族";
+			sourceTree = "<group>";
+		};
+		794B101221E84A6900B91405 /* module */ = {
+			isa = PBXGroup;
+			children = (
+				794B101321E84A6900B91405 /* Model */,
+				794B101421E84A6900B91405 /* View */,
+			);
+			path = module;
+			sourceTree = "<group>";
+		};
+		794B101321E84A6900B91405 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		794B101421E84A6900B91405 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		79BFDCE02142A16000C81069 /* NetRequstAndSocket */ = {
 			isa = PBXGroup;
 			children = (
@@ -1806,6 +1843,7 @@
 				33C971252121315500EAAD5E /* ResovlerModel.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				79EEEA562182C09200848B59 /* liveChatModel.m in Sources */,
+				794B101121E84A2500B91405 /* ClassClusterViewController.m in Sources */,
 				33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */,
 				33C2DF3921DCC5D400F96F32 /* PointTreeTypeThree.m in Sources */,
 				33C971432124108D00EAAD5E /* CustomAlertView.m in Sources */,

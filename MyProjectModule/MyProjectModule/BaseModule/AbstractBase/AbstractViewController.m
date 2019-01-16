@@ -172,5 +172,15 @@
     self.rightBarItemClickBlock ? self.rightBarItemClickBlock (rightButton,index) : nil;
 }
 
+-(void)simulateTime_consumingOperation:(ResultStatus)status{
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        for (int i = 0; i < 30; i++) {
+            NSLog(@"%@",@"");
+        }
+        status(YES);
+    });
+                   
 
+}
 @end

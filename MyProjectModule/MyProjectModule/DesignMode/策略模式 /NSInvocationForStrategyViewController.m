@@ -110,7 +110,8 @@ static NSString *const threeEvent = @"three";
     NSString *arg2 = @"arg2";
     [invocation setArgument:&arg1 atIndex:2];
     [invocation setArgument:&arg2 atIndex:3];
-    
+
+
     /*
      // invocation 有2个隐藏参数，所以 argument 从2开始
      if ([arguments isKindOfClass:[NSArray class]]) {
