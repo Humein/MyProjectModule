@@ -56,4 +56,7 @@
     self.leftLabel.text = self.rightLabel.text = model.title;
 }
 
+
+
+
 @end

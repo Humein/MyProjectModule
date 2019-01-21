@@ -23,6 +23,10 @@
      
 }
 
+
+
+
+
 -(void)initDataAndTabel{
     self.tableFrame= CGRectMake(0, 0, SCREEN_W,SCREEN_H);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;

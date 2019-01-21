@@ -135,7 +135,7 @@ CGRect HitTestingBounds(CGRect bounds, CGFloat minimumHitTestWidth, CGFloat mini
  */
 #warning -------- 滥用导致无法定位的bug 不可以点击屏幕 self.isHidden == YES
 
-- (UIView *)CP0_hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     if (!self.isUserInteractionEnabled || self.isHidden || self.alpha <= 0.01) return nil;
     //判断点在不在这个视图里
     if ([self pointInside:point withEvent:event]) {
