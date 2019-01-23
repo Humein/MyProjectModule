@@ -180,6 +180,12 @@ CGRect HitTestingBounds(CGRect bounds, CGFloat minimumHitTestWidth, CGFloat mini
     return nil;
 }
 
-
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//    UITouch *touch = [touches anyObject];
+//    CGPoint point = [touch locationInView:self];
+//    if (!CGRectContainsPoint(_imageView.frame, point)) {
+//        _headBlock ? _headBlock () : nil;
+//    }
+//}
 
 @end
