@@ -90,3 +90,13 @@
 - (void)removeAll;
 
 @end
+
+
+
+@interface LRUCacheOperation : NSObject
+
+//get
+
+//put
+
+@end
