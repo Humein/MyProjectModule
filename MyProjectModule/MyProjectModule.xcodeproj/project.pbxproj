@@ -139,6 +139,7 @@
 		794B101121E84A2500B91405 /* ClassClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B101021E84A2500B91405 /* ClassClusterViewController.m */; };
 		79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFDCE82142A28700C81069 /* StartWaterView.m */; };
 		79CFB323216C879D00218C92 /* NSInvocationForStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */; };
+		79DF39392200499400977BB4 /* LRULinkedMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DF39382200499400977BB4 /* LRULinkedMap.m */; };
 		79E3D63321DE57D60038CACB /* ZTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63221DE57D60038CACB /* ZTKBaseRequest.m */; };
 		79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63521DE60E80038CACB /* RequestMediatorBaseBusniess.m */; };
 		79E3D63921DE67E00038CACB /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63821DE67E00038CACB /* RequestViewController.m */; };
@@ -457,6 +458,8 @@
 		79BFDCE82142A28700C81069 /* StartWaterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartWaterView.m; sourceTree = "<group>"; };
 		79CFB321216C879D00218C92 /* NSInvocationForStrategyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSInvocationForStrategyViewController.h; sourceTree = "<group>"; };
 		79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSInvocationForStrategyViewController.m; sourceTree = "<group>"; };
+		79DF39372200499400977BB4 /* LRULinkedMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRULinkedMap.h; sourceTree = "<group>"; };
+		79DF39382200499400977BB4 /* LRULinkedMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRULinkedMap.m; sourceTree = "<group>"; };
 		79E3D63121DE57D60038CACB /* ZTKBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTKBaseRequest.h; sourceTree = "<group>"; };
 		79E3D63221DE57D60038CACB /* ZTKBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTKBaseRequest.m; sourceTree = "<group>"; };
 		79E3D63421DE60E80038CACB /* RequestMediatorBaseBusniess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestMediatorBaseBusniess.h; sourceTree = "<group>"; };
@@ -1001,6 +1004,7 @@
 		339D6C7420EA285700AC535E /* DataTransmission  */ = {
 			isa = PBXGroup;
 			children = (
+				79DF39362200498400977BB4 /* LRULinkedMap */,
 				7929B49A219FE72A004D335E /* RunLoop */,
 				79EEEAAD2191704700848B59 /* Category */,
 				3340363A2154C67E006FCBA3 /* MemoryAndDiskCache */,
@@ -1464,6 +1468,15 @@
 			path = socket;
 			sourceTree = "<group>";
 		};
+		79DF39362200498400977BB4 /* LRULinkedMap */ = {
+			isa = PBXGroup;
+			children = (
+				79DF39372200499400977BB4 /* LRULinkedMap.h */,
+				79DF39382200499400977BB4 /* LRULinkedMap.m */,
+			);
+			path = LRULinkedMap;
+			sourceTree = "<group>";
+		};
 		79E3D63021DE57720038CACB /* YTKNetRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -1847,6 +1860,7 @@
 				79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */,
 				79EEEA96218EEBA200848B59 /* InterfacePlayerView.m in Sources */,
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
+				79DF39392200499400977BB4 /* LRULinkedMap.m in Sources */,
 				33A32AE920DA789D008C3969 /* UIScrollView+SlideGestureBack.m in Sources */,
 				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
 				33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */,
