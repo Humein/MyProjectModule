@@ -156,6 +156,19 @@
 #pragma mark - GCDGroup   1： dispatch_group_create dispatch_group_enter dispatch_group_leave
 
 -(void)GCDGroup{
+    
+//    group = dispatch_group_create();
+//    for (url in urlsToFetch) {
+//        dispatch_group_enter(group);
+//        dispatch_async(dispatch_get_global_queue(…), ^{
+//            … fetch `url` synchronously …
+//            dispatch_group_leave(group);
+//        });
+//    }
+//    dispatch_group_wait(group, …);
+    
+
+    
     dispatch_group_t group = dispatch_group_create();
     
     dispatch_group_enter(group);
