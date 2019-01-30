@@ -208,5 +208,8 @@
     };
 }
 
+-(void)activeEventBlock:(void(^)(BOOL state))block{
+    
+}
 
 @end

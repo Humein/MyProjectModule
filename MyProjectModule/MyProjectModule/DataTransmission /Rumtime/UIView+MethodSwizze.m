@@ -180,12 +180,53 @@ CGRect HitTestingBounds(CGRect bounds, CGFloat minimumHitTestWidth, CGFloat mini
     return nil;
 }
 
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//   缺点会 阻断 cell 的didselected 方法
+//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 //    UITouch *touch = [touches anyObject];
 //    CGPoint point = [touch locationInView:self];
-//    if (!CGRectContainsPoint(_imageView.frame, point)) {
-//        _headBlock ? _headBlock () : nil;
+//    if (CGRectContainsPoint(_imageView.frame, point) && [[[event allTouches] anyObject] phase] == UITouchPhaseEnded) {
+//        _headBlock ? _headBlock (_historyModelmodel) : nil;
 //    }
 //}
 
+// 通过hitTest 代替事件传递，缺点hitTest会掉2次 官方解释
+//    Yes, it’s normal. The system may tweak the point being hit tested between the calls. Since hitTest should be a pure function with no side-effects, this should be fine.
+//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
+//    if (CGRectContainsPoint(self.courseImage.frame, point)) {
+//        if ((_tostFlag % 2 == 0)) {
+//            if ([[_model plCourseID] intValue]>0) {
+//                _courseBlock ? _courseBlock(_model) : nil;
+//            }
+//        }
+//        _tostFlag += 1;
+//    }
+//    return [super hitTest:point withEvent:event];
+//}
+
+// 避免按钮禁用状态下点击穿透到 contentView，导致 controls 被隐藏
+// @see https://stackoverflow.com/a/40786920/456536
+//for (UIView *superview in containerViews) {
+//    for (UIView *subview in superview.subviews) {
+//        UIControl *control = bjl_cast(UIControl, subview);
+//        CGPoint pointInControl = [self.view convertPoint:point toView:control];
+//        if (control && !control.enabled && [control pointInside:pointInControl withEvent:event]) {
+//            return self.view; // !!!: self.view.userInteractionEnabled = YES;
+//        }
+//    }
+//}
+
+// 解决 button 超出 bounds 之后点击失效的问题
+// @see https://stackoverflow.com/questions/5432995/interaction-beyond-bounds-of-uiview
+// @see https://developer.apple.com/library/content/qa/qa2013/qa1812.html
+//- (BOOL)pointInside:(CGPoint)point withEvent:(nullable UIEvent *)event {
+//    if (CGRectContainsPoint(self.exitButton.frame, point)) {
+//        return YES;
+//    }
+//    for (UIView *subview in self.customContainerView.subviews) {
+//        if (CGRectContainsPoint([self convertRect:subview.bounds fromView:subview], point)) {
+//            return YES;
+//        }
+//    }
+//    return [super pointInside:point withEvent:event];
+//}
 @end
