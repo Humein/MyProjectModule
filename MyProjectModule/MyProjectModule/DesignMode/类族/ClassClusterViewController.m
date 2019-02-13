@@ -20,10 +20,27 @@
     // Do any additional setup after loading the view.
     [self initDataAndTabel];
     
+    
+    // TEST EXTERN  
+    NSString * const HTCommonGuideViewType_toString[] =
+    {
+        [0] = @"HTCommonGuideViewTypeVedio",
+        [1] = @"HTCommonGuideViewTypeOther"
+    };
+    NSLog(@"HTCommonGuideViewType_toString======%@",HTCommonGuideViewType_toString[0]);
+
+    
+    
      
 }
 
-
+//递归测试
+-(void)recursionTest{
+    
+    NSLog(@"++++++++");
+    
+    [self recursionTest];
+}
 
 
 

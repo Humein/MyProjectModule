@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    HTCommonGuideViewTypeVedio,
+    HTCommonGuideViewTypeOther,
+} HTCommonGuideViewType;
+
 @interface ViewController : UIViewController
+
+extern NSString * const HTCommonGuideViewType_toString[];
 
 
 @end

@@ -66,5 +66,29 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+/*   web 跳转到指定页面
+ iOS 9 通用链接（Universal Links）  https://www.jianshu.com/p/c2ca5b5f391f
+ web 调起 App？ 光知道 scheme 可不够！ https://juejin.im/post/5ac44a9c6fb9a028d82bf98b
+ js在微信、微博、QQ、Safari唤起App的解决方案 https://segmentfault.com/a/1190000012940046
+ 
+ 
+ 怎么把网页的信息通过通用链接传过来呢，比如正在浏览的商品信息等？
+ 
+ 需要实现： - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *restorableObjects))restorationHandler方法，在里面捕获网页链接，然后做一个本地映射，或者取出你想要的参数，再做本地跳转就可以了
+ */
 
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *restorableObjects))restorationHandler{
+
+    if ([userActivity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]) {
+        NSURL *webUrl = userActivity.webpageURL;
+        if ([webUrl.host isEqualToString:@"hatu.com"]) {
+            // 打开对应页面
+        }else{
+            // 谓识别 直接打开
+            [[UIApplication sharedApplication] openURL:webUrl];
+        }
+    }
+    
+    return YES;
+}
 @end

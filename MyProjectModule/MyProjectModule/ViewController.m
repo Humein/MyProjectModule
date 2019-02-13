@@ -55,6 +55,8 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+
+    
 //    self.view.backgroundColor = [UIColor grayColor];
     self.itemList = [NSMutableArray array];
     NSArray *list = [NSArray arrayWithObjects: @"PointTreeOneModelViewController",@"colloctionViewController",@"DrawViewController",@"SegementDemoViewController",@"SegementPersonDemoViewController",@"SegementChildViewController",@"CollectionSectionViewController",@"PaternalViewController",@"PaternalSViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RequestViewController",@"ClassClusterViewController",nil];
