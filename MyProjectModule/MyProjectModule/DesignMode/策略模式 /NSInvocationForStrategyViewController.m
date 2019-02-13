@@ -194,6 +194,9 @@ static NSString *const threeEvent = @"three";
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo
 {
     
+    NSLog(@"%@->eventName ===== %@,userInfo =====%@",[self class],eventName,userInfo);
+
+    
     NSInvocation *invocation = self.eventStrategy[eventName];
     
     [invocation setArgument:&userInfo atIndex:2];

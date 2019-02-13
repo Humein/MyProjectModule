@@ -60,7 +60,7 @@
 
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo{
     
-    NSLog(@"eventName ===== %@,userInfo =====%@",eventName,userInfo);
+    NSLog(@"%@->eventName ===== %@,userInfo =====%@",[self class],eventName,userInfo);
 
     [self handleEventWithName:eventName parameter:userInfo];
 

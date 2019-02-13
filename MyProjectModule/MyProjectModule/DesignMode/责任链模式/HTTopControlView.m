@@ -29,16 +29,8 @@
     self.nextNodeView ? [self.nextNodeView responseEvent:eventType playItem:playItem] : nil;
     
     NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
+    
 
-    return;
-    if (eventType == 0) {
-        NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
-    }else if (eventType == 100){
-        NSLog(@"联动事件");
-    }
-    else{
-        NSLog(@"无法响应");
-    }
 }
 
 
@@ -62,13 +54,20 @@
 
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo{
 //    Decorator模式  结合Decorator(装饰者)模式
-    NSLog(@"eventName ===== %@,userInfo =====%@",eventName,userInfo);
+    NSLog(@"%@->eventName ===== %@,userInfo =====%@",[self class],eventName,userInfo);
     NSMutableDictionary *decoratedUserInfo = [[NSMutableDictionary alloc] initWithDictionary:userInfo];
     decoratedUserInfo[@"key"] = [UIColor redColor]; // 添加数据
     [decoratedUserInfo removeObjectForKey:@"key"];
     // 把响应链继续传递下去
     [super routerEventWithName:eventName userInfo:decoratedUserInfo];
     
+    
+}
+
+
+- (void)cellDistributeEventWithParamter:(NSDictionary *)paramter {
+    
+    self.backgroundColor = [UIColor blackColor];
     
 }
 
