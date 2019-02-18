@@ -34,6 +34,9 @@
 @interface ViewController ()<AlertTableViewDelegate>
 @property (nonatomic,strong)AlertTableView *tableView;
 @property (nonatomic,strong)NSMutableArray *itemList;
+@property (nonatomic,weak)AlertTableView *weakTableView;
+@property (nonatomic,weak)NSArray *weakArray;
+
 @end
 
 @implementation ViewController
@@ -57,7 +60,7 @@
     [super viewDidLoad];
 //    self.view.backgroundColor = [UIColor grayColor];
     self.itemList = [NSMutableArray array];
-    NSArray *list = [NSArray arrayWithObjects: @"colloctionViewController",@"DrawViewController",@"SegementDemoViewController",@"SegementPersonDemoViewController",@"SegementChildViewController",@"CollectionSectionViewController",@"PaternalViewController",@"PaternalSViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",nil];
+    NSArray *list = [NSArray arrayWithObjects: @"colloctionViewController",@"DrawViewController",@"SegementDemoViewController",@"SegementPersonDemoViewController",@"SegementChildViewController",@"CollectionSectionViewController",@"PaternalViewController",@"PaternalSViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",nil];
     [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { 
         CellModel *model =  [CellModel new];
         model.itemHeight = [model titleHeight];
@@ -72,7 +75,25 @@
 //    [self aleartView];
 
 
+    
+    id a = nil;
+    NSString *b = @"1";
+    a = b;
+    NSLog(@"%@",a);
+    
+    
+//    self.weakTableView = [AlertTableView new];
+    AlertTableView *weakView = [AlertTableView new];
+    self.weakTableView = weakView;
+    self.weakArray = [NSArray array];
+    
+    
+    
+    
 }
+
+
+
 
 
 #pragma mark ---NetWorkRequest

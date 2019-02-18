@@ -14,6 +14,8 @@ typedef void (^ActionBlock)(UIButton *button);
 
 @property (nonatomic,copy) ActionBlock actionBlock;
 
+
+
 /**
  通过block对Button的点击事件进行封装
  

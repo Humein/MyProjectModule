@@ -12,6 +12,30 @@ static NSString *keyWithMethod = @"keyWithMethod"; //关联对象的key
 static NSString *keyWithBlock = @"keyWithBlock";
 
 @implementation UIButton (ButtonBlockCategory)
+
+
+// RunTime增加方法
+void studyEngilsh(id self, SEL _cmd) {
+    
+    NSLog(@"动态添加了一个学习英语的方法");
+}
+
++ (BOOL)resolveInstanceMethod:(SEL)sel {
+    
+    if (sel == NSSelectorFromString(@"studyEngilsh")) {
+        // 注意:这里需要强转成IMP类型
+        class_addMethod(self, sel, (IMP)studyEngilsh, "v@:");
+        return YES;
+    }
+    // 先恢复, 不然会覆盖系统的方法
+    return [super resolveInstanceMethod:sel];
+}
+
+
+
+
+
+
 + (UIButton *)createButtonWithFrame:(CGRect)frame
                               title:(NSString *)title
                          titleColor:(UIColor *)titleColor

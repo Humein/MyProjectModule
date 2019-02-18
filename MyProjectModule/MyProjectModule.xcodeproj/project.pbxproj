@@ -122,6 +122,7 @@
 		7931A51B21A7DAA5002A26C0 /* FilterCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7931A51A21A7DAA5002A26C0 /* FilterCollectionViewLayout.m */; };
 		79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79402223219D59A20008A3AD /* SimulationChainFucCode.m */; };
 		79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFDCE82142A28700C81069 /* StartWaterView.m */; };
+		79C2B663221A646200C40F3A /* RunTimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C2B662221A646200C40F3A /* RunTimeTestViewController.m */; };
 		79CFB323216C879D00218C92 /* NSInvocationForStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */; };
 		79EEEA4C2182BD4700848B59 /* UITableView滚动到底部时崩溃的解决方法 - 简书.html in Resources */ = {isa = PBXBuildFile; fileRef = 79EEEA492182BD4700848B59 /* UITableView滚动到底部时崩溃的解决方法 - 简书.html */; };
 		79EEEA4D2182BD4700848B59 /* scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客 - CSDN博客.html in Resources */ = {isa = PBXBuildFile; fileRef = 79EEEA4A2182BD4700848B59 /* scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客 - CSDN博客.html */; };
@@ -404,6 +405,8 @@
 		79BFDCE42142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE72142A28700C81069 /* StartWaterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartWaterView.h; sourceTree = "<group>"; };
 		79BFDCE82142A28700C81069 /* StartWaterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartWaterView.m; sourceTree = "<group>"; };
+		79C2B661221A646200C40F3A /* RunTimeTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunTimeTestViewController.h; sourceTree = "<group>"; };
+		79C2B662221A646200C40F3A /* RunTimeTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTimeTestViewController.m; sourceTree = "<group>"; };
 		79CFB321216C879D00218C92 /* NSInvocationForStrategyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSInvocationForStrategyViewController.h; sourceTree = "<group>"; };
 		79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSInvocationForStrategyViewController.m; sourceTree = "<group>"; };
 		79EEEA492182BD4700848B59 /* UITableView滚动到底部时崩溃的解决方法 - 简书.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "UITableView滚动到底部时崩溃的解决方法 - 简书.html"; sourceTree = "<group>"; };
@@ -777,6 +780,8 @@
 				33759E7C212FABBA00D801C1 /* NSObject+KVOHelper.m */,
 				33759E78212FAB2A00D801C1 /* AbstractItem.h */,
 				33759E79212FAB2A00D801C1 /* AbstractItem.m */,
+				79C2B661221A646200C40F3A /* RunTimeTestViewController.h */,
+				79C2B662221A646200C40F3A /* RunTimeTestViewController.m */,
 			);
 			path = Rumtime;
 			sourceTree = "<group>";
@@ -1601,6 +1606,7 @@
 				33888FDB20F05DBA00E4A119 /* ImitateSegmentViewController.m in Sources */,
 				333D106520CE74AB004D9241 /* main.m in Sources */,
 				33E6CDD5210034E300422FC7 /* CellModel.m in Sources */,
+				79C2B663221A646200C40F3A /* RunTimeTestViewController.m in Sources */,
 				339B536E20F4B486003444CB /* AbstractPlayerProtocol.h in Sources */,
 				79EEEABD2195975B00848B59 /* AbstractPlayHelper.m in Sources */,
 				33A32ADE20D90717008C3969 /* SegementTitleView.m in Sources */,

@@ -7,11 +7,20 @@
 //
 
 #import "NSObject+RuntimeHelper.h"
+#import <UIKit/UIKit.h>
 #import <objc/message.h>
 
 @implementation NSObject (RuntimeHelper)
 
+
+
 #pragma mark - Plubic Methods
+
+-(void)runTimeAddInstanceMethod{
+    UIButton *newBtn = [UIButton  new];
+    [newBtn performSelector:@selector(studyEngilsh)];
+}
+
 /**
  交换方法
  */
