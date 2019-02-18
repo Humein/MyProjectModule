@@ -67,7 +67,7 @@
         
         _model = item;
         self.timeLabel.text =[NSString stringWithFormat:@"%ld",(long)_model.timeCount];
-        
+
     }
     
     
@@ -75,13 +75,13 @@
     
 }
 
-
+// 代理
 - (void)timerCallBack:(NSTimerObserver *)timer {
     
 
     if (_model.timeCount>0) {
         _model.timeCount -- ;
-        self.timeLabel.text =[NSString stringWithFormat:@"%ld",(long)_model.timeCount];
+        self.timeLabel.text = [NSString stringWithFormat:@"%ld",(long)_model.timeCount];
 
     }else{
         _model.timeCount = -1;

@@ -9,7 +9,7 @@
 #import "RunTimeTestViewController.h"
 #import "NSObject+RuntimeHelper.h"
 @interface RunTimeTestViewController ()
-
+@property (nonatomic , assign) NSObject *weakObject;
 @end
 
 @implementation RunTimeTestViewController
@@ -17,6 +17,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSObject *newObje = [NSObject new];
+    
+    self.weakObject = newObje;
+    
+    __weak NSObject *weakObje = newObje;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+
+        NSLog(@"newObje=====%@",weakObje);
+
+    });
+    
+    NSLog(@"end");
+}
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"%@",[self.weakObject description]);
     
 }
 
