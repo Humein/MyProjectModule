@@ -46,12 +46,21 @@ typedef NSMapTable<NSString *, id<SDWebImageOperation>> SDOperationsDictionary;
 
 - (void)sd_cancelImageLoadOperationWithKey:(nullable NSString *)key {
     // Cancel in progress downloader from queue
+    
+//    在UIView(WebCache)里，首先就调用了取消当前的加载任务。
+    
+    // 从队列中取消进度下载
+
     SDOperationsDictionary *operationDictionary = [self sd_operationDictionary];
     id<SDWebImageOperation> operation;
     @synchronized (self) {
+        // 根据key取出当前的操作 (这里取出的operation是实现了SDWebImageOperation协议的 SDWebImageCombinedOperation)
+
         operation = [operationDictionary objectForKey:key];
     }
     if (operation) {
+        //检查是否实现了SDWebImageOperation协议的方法
+
         if ([operation conformsToProtocol:@protocol(SDWebImageOperation)]){
             [operation cancel];
         }

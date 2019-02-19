@@ -16,6 +16,9 @@
 
 @property (nonatomic, weak, nullable) NSOperation<SDWebImageDownloaderOperationInterface> *downloadOperation;
 
+//下载url作为key value是具体的下载operation 用字典来存储，方便cancel等操作
+@property (strong, nonatomic, nonnull) NSMutableDictionary<NSURL *, NSOperation<SDWebImageDownloaderOperationInterface> *> *URLOperations;
+
 @end
 
 @implementation SDWebImageDownloadToken
@@ -54,6 +57,11 @@
     // To use it, just add #import "SDNetworkActivityIndicator.h" in addition to the SDWebImage import
     if (NSClassFromString(@"SDNetworkActivityIndicator")) {
 
+        
+//        忽略clang编译器警告，如下面的代码如果不写会提示 Undeclared selector ‘dynamicSelector’，
+//    动态方式  引入SDNetworkActivityIndicator 不会报错
+
+        
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
         id activityIndicator = [NSClassFromString(@"SDNetworkActivityIndicator") performSelector:NSSelectorFromString(@"sharedActivityIndicator")];
@@ -193,10 +201,32 @@
     }
 }
 
+
+//这个方法是实际请求网络的实现
+
 - (nullable SDWebImageDownloadToken *)downloadImageWithURL:(nullable NSURL *)url
                                                    options:(SDWebImageDownloaderOptions)options
                                                   progress:(nullable SDWebImageDownloaderProgressBlock)progressBlock
                                                  completed:(nullable SDWebImageDownloaderCompletedBlock)completedBlock {
+    //    1.调用addProgressCallback方法 return token，addProgressCallback的回调里进行以下操作
+//           来实现相同url是否发起网络请求的判断
+    
+
+//    {
+//        1.1设置下载超时时间
+//        1.2创建request
+//        1.3创建operation对象 传入 request session options
+//        1.4设置身份认证
+//        1.5设置下载优先级
+//        1.6设置下载顺序
+//    }
+//
+  
+//    通过__weak来避免循环引用，weakSelf是附有__weak修饰符的变量，它并不会持有对象，一旦它指向的对象被废弃了，它将自动被赋值为nil。
+//    在多线程情况下，可能weakSelf指向的对象会在 Block 执行前被废弃。
+//    通过__strong来持有weakSelf指向的对象，保证在执行 Block 期间该对象不会被废弃。
+ 
+    
     __weak SDWebImageDownloader *wself = self;
 
     return [self addProgressCallback:progressBlock completedBlock:completedBlock forURL:url createCallback:^SDWebImageDownloaderOperation *{
@@ -207,11 +237,14 @@
         }
 
         // In order to prevent from potential duplicate caching (NSURLCache + SDImageCache) we disable the cache for image requests if told otherwise
+        //为了防止潜在的重复缓存(NSURLCache + SDImageCache)，如果被告知，我们会禁用图像请求的缓存。
+
         NSURLRequestCachePolicy cachePolicy = options & SDWebImageDownloaderUseNSURLCache ? NSURLRequestUseProtocolCachePolicy : NSURLRequestReloadIgnoringLocalCacheData;
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url
                                                                     cachePolicy:cachePolicy
                                                                 timeoutInterval:timeoutInterval];
         
+        //身份认证 当移动端和服务器在传输过程中，服务端有可能在返回Response时附带认证，询问 HTTP 请求的发起方是谁，这时候发起方应提供正确的用户名和密码（即认证信息）。这时候就需要NSURLCredential身份认证
         request.HTTPShouldHandleCookies = (options & SDWebImageDownloaderHandleCookies);
         request.HTTPShouldUsePipelining = YES;
         if (sself.headersFilter) {
@@ -235,8 +268,12 @@
             operation.queuePriority = NSOperationQueuePriorityLow;
         }
         
+        
+        //设置下载的顺序 是按照队列还是栈
         if (sself.executionOrder == SDWebImageDownloaderLIFOExecutionOrder) {
             // Emulate LIFO execution order by systematically adding new operations as last operation's dependency
+            //通过依赖来模拟LIFO
+
             [sself.lastAddedOperation addDependency:operation];
             sself.lastAddedOperation = operation;
         }
@@ -246,6 +283,12 @@
 }
 
 - (void)cancel:(nullable SDWebImageDownloadToken *)token {
+//
+//    <<1.从manager的URLOperations中找到 SDWebImageDownloaderOperation < SDWebImageDownloaderOperationInterface,SDWebImageOperation>
+//    <<2.operation 调用cancel token.downloadOperationCancelToken (这个token.downloadOperationCancelToken 就是回调的字典)
+//    <<3.如果需要取消，从URLOperation中删掉url
+    
+
     NSURL *url = token.url;
     if (!url) {
         return;
@@ -265,6 +308,14 @@
                                            completedBlock:(SDWebImageDownloaderCompletedBlock)completedBlock
                                                    forURL:(nullable NSURL *)url
                                            createCallback:(SDWebImageDownloaderOperation *(^)(void))createCallback {
+    
+//    1.生成URLOperations字典 下载url作为key value是具体的下载operation
+//    2.将操作添加到操作队列中
+//    3.将进度progressBlock和下载结束completedBlock封装成字典SDCallbacksDictionary，装入数组callbackBlocks，
+//    4.生成token标识，并返回token
+
+    
+    
     // The URL will be used as the key to the callbacks dictionary so it cannot be nil. If it is nil immediately call the completed block with no image or data.
     if (url == nil) {
         if (completedBlock != nil) {

@@ -187,13 +187,21 @@
             }
             
             // `SDWebImageCombinedOperation` -> `SDWebImageDownloadToken` -> `downloadOperationCancelToken`, which is a `SDCallbacksDictionary` and retain the completed block below, so we need weak-strong again to avoid retain cycle
+            
+//            SDCallbacksDictionary 使用注意 weak-strong
+            
             __weak typeof(strongOperation) weakSubOperation = strongOperation;
+            
             strongOperation.downloadToken = [self.imageDownloader downloadImageWithURL:url options:downloaderOptions progress:progressBlock completed:^(UIImage *downloadedImage, NSData *downloadedData, NSError *error, BOOL finished) {
+                
                 __strong typeof(weakSubOperation) strongSubOperation = weakSubOperation;
+                
                 if (!strongSubOperation || strongSubOperation.isCancelled) {
+                    
                     // Do nothing if the operation was cancelled
                     // See #699 for more details
                     // if we would call the completedBlock, there could be a race condition between this block and another completedBlock for the same object, so if this one is called second, we will overwrite the new data
+                    
                 } else if (error) {
                     [self callCompletionBlockForOperation:strongSubOperation completion:completedBlock error:error url:url];
                     BOOL shouldBlockFailedURL;
@@ -342,6 +350,15 @@
 @implementation SDWebImageCombinedOperation
 
 - (void)cancel {
+    
+//    <1.cancel掉self.cacheOperation <NSOperation>
+//    <2.manager的imageDownloader cancel掉 self.downloadToken
+//    <3.manager.runningOperation中删掉self
+//
+//    其中第<2点，调用的SDWebImageDownloader 的-cancel:方法
+    
+
+    
     @synchronized(self) {
         self.cancelled = YES;
         if (self.cacheOperation) {

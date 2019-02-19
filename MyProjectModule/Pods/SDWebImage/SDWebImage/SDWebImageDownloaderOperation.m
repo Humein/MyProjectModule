@@ -101,6 +101,13 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
     LOCK(self.callbacksLock);
     NSMutableArray<id> *callbacks = [[self.callbackBlocks valueForKey:key] mutableCopy];
     UNLOCK(self.callbacksLock);
+    
+//    这个方法来进行一套回调，在获取到网络回调的时候，会先遍历数组，然后会根据url来作为key，获取这里所有key对应的回调。 这里为了保证不出线程冲突，使用了dispatch_semaphore_wait这个lock。
+    
+//    有dictionary属性array的原因，是因为array是有序的。可以变相的使这个兼具array和dictionary的特性。利用dictionary的hash能力，保证同一个url只会下载一次。
+
+    
+    
     // We need to remove [NSNull null] because there might not always be a progress block for each callback
     [callbacks removeObjectIdenticalTo:[NSNull null]];
     return [callbacks copy]; // strip mutability here
@@ -108,8 +115,14 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
 
 - (BOOL)cancel:(nullable id)token {
     BOOL shouldCancel = NO;
+    //同步 阻塞当前队列和当前线程（用的信号量）
     LOCK(self.callbacksLock);
+    //删除数组中回调块数组中的token对象，token是key为string，value是block的字典
+    //removeObjectIdenticalTo 删掉地址该token的地址，而不是值。
+
     [self.callbackBlocks removeObjectIdenticalTo:token];
+    
+    //判断数组是否为0.则取消下载任务
     if (self.callbackBlocks.count == 0) {
         shouldCancel = YES;
     }
@@ -118,6 +131,16 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
         [self cancel];
     }
     return shouldCancel;
+    
+    
+//    <<<1.从callbackBlocks中删掉token（删掉回调的字典）
+//    <<<2.如果Blocks数组为0，取消下载任务，shouldCancel = YES;
+//    <<<3.如果Blocks数组为0，调用 [self cancel];
+//    <<<4.返回shouldCancel
+//
+//    对于<<<3中的[self cancel]; 实际上调用的是SDWebImageDownloaderOperation的cancel方法
+    
+ 
 }
 
 - (void)start {
@@ -155,6 +178,8 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
              *  Create the session for this task
              *  We send nil as delegate queue so that the session creates a serial operation queue for performing all delegate
              *  method calls and completion handler calls.
+             
+             delegateQueue为nil，所以回调方法默认在一个子线程的串行队列中执行
              */
             session = [NSURLSession sessionWithConfiguration:sessionConfig
                                                     delegate:self
@@ -169,7 +194,9 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
                 URLCache = [NSURLCache sharedURLCache];
             }
             NSCachedURLResponse *cachedResponse;
+            
             // NSURLCache's `cachedResponseForRequest:` is not thread-safe, see https://developer.apple.com/documentation/foundation/nsurlcache#2317483
+            
             @synchronized (URLCache) {
                 cachedResponse = [URLCache cachedResponseForRequest:self.request];
             }
@@ -229,6 +256,8 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
 - (void)cancelInternal {
     if (self.isFinished) return;
     [super cancel];
+    
+    //如果下载图片的任务仍在 则立即取消cancel，并且发送结束下载的通知
 
     if (self.dataTask) {
         [self.dataTask cancel];
@@ -242,7 +271,9 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
         if (self.isExecuting) self.executing = NO;
         if (!self.isFinished) self.finished = YES;
     }
-
+//    <<<<1.super cancel
+//    <<<<2.如果还有任务，NSURLSessionTask cancel
+//    <<<<3.通知结束下载
     [self reset];
 }
 
@@ -320,9 +351,15 @@ didReceiveResponse:(NSURLResponse *)response
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
     if (!self.imageData) {
+        //根据response返回的文件大小创建可变data
+
         self.imageData = [[NSMutableData alloc] initWithCapacity:self.expectedSize];
     }
+    //向可变数据中添加接收到的数据
+
     [self.imageData appendData:data];
+    
+    //如果调用者配置了需要支持progressive下载，即展示已经下载的部分，并expectedSize返回的图片size大于0
 
     if ((self.options & SDWebImageDownloaderProgressiveDownload) && self.expectedSize > 0) {
         // Get the image data
@@ -332,6 +369,7 @@ didReceiveResponse:(NSURLResponse *)response
         // Get the finish status
         BOOL finished = (totalSize >= self.expectedSize);
         
+        //如果不存在解压对象就去创建一个新的
         if (!self.progressiveCoder) {
             // We need to create a new instance for progressive decoding to avoid conflicts
             for (id<SDWebImageCoder>coder in [SDWebImageCodersManager sharedInstance].coders) {
@@ -345,11 +383,19 @@ didReceiveResponse:(NSURLResponse *)response
         
         // progressive decode the image in coder queue
         dispatch_async(self.coderQueue, ^{
+            
+            //将imageData转化为image
+            
             UIImage *image = [self.progressiveCoder incrementallyDecodedImageWithData:imageData finished:finished];
             if (image) {
+                //通过URL获取缓存的key
+
+                
                 NSString *key = [[SDWebImageManager sharedManager] cacheKeyForURL:self.request.URL];
                 image = [self scaledImageForKey:key image:image];
                 if (self.shouldDecompressImages) {
+                    //如果调用者选择了解压图片，那么在这里执行图片解压，这里注意，传入的data是一个**，指向指针的指针，要用&data表示
+
                     image = [[SDWebImageCodersManager sharedInstance] decompressedImageWithImage:image data:&imageData options:@{SDWebImageCoderScaleDownLargeImagesKey: @(NO)}];
                 }
                 

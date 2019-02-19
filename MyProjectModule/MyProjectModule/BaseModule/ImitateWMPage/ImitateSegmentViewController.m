@@ -199,6 +199,7 @@ static NSString * const kCellID = @"SegmentHorizontalCell";
     for (SegmentSliderView *label in [self getLabelArrayFromSubviews])
         label.textColor = [UIColor blackColor];
     
+    // __strong and __weak
     __weak typeof(self) weakSelf = self;
     [UIView animateWithDuration:0.35 animations:^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -206,6 +207,7 @@ static NSString * const kCellID = @"SegmentHorizontalCell";
         strongSelf->_underline.centerX = titleLable.centerX;
         titleLable.textColor = [UIColor redColor];
     }];
+    
     _currentIndex = index;
     if (self.sliderDelegate)
         [self.sliderDelegate sliderViewDidChangedCurrentIndex:_currentIndex];

@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (RuntimeHelper)
+
+// RunTime增加方法
+-(void)runTimeAddInstanceMethod;
+
 /**
  交换方法
  */
