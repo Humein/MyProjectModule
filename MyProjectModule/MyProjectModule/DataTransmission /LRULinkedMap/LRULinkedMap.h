@@ -100,8 +100,3 @@
 //put
 
 @end
-
-
-@interface SimulaCache : NSObject
-
-@end
