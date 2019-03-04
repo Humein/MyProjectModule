@@ -317,4 +317,36 @@
     return -1;
 }
 
+
+#pragma mark --- 爬楼梯
+-(int)clibStairsbyRecursionWithN:(int )num{
+    if (num == 1) {
+        return 1;
+    }
+    if (num == 2) {
+        return 2;
+    }
+    
+    return [self clibStairsbyRecursionWithN:num-1] + [self clibStairsbyRecursionWithN:num-2];
+}
+
+
+
+
+
+// 递归打印二维数组
+-(NSMutableArray *)outputArray:(NSArray *)mutArray
+{
+    NSMutableArray *tmpArray;
+    for (int i = 0;i< mutArray.count ; i++) {
+        if ([mutArray[i] isKindOfClass:[NSArray class]]) {
+            [self outputArray:mutArray[i]];
+        }else{
+            [tmpArray addObject:mutArray[i]];
+        }
+    }
+    return tmpArray;
+}
+
+
 @end

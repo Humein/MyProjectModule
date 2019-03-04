@@ -106,12 +106,17 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 
     [self aleartView];
+    
+    
 
 }
 
 
+
+
 #pragma mark --- PrivateMetho
 -(void)aleartView{
+    
     //  AlertTableView
     self.view.backgroundColor = [UIColor redColor];
     self.tableView.FromPoint = CGPointMake(0, 80);
