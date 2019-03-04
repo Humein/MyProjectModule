@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ResponOfChainManager.h"
 
-extern NSString *const kEventOneName;
-extern NSString *const kEventTwoName;
-extern NSString *const kDistributeEvent;
 
 
 @interface ResponderControlView : ResponOfChainManager

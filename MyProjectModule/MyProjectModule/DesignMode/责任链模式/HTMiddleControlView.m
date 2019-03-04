@@ -9,10 +9,6 @@
 #import "HTMiddleControlView.h"
 #import "UIResponder+UIResponderChain.h"
 
-NSString * const kDistributeEvent = @"1";
-NSString * const kEventOneName = @"2";
-NSString * const kEventTwoName = @"3";
-
 @interface HTMiddleControlView()
 /// 事件策略字典 key:事件名 value:事件的invocation对象
 @property (nonatomic, strong) NSDictionary *eventStrategy;
@@ -70,7 +66,7 @@ NSString * const kEventTwoName = @"3";
 
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo{
     
-    NSLog(@"%@->eventName ===== %@,userInfo =====%@",[self class],eventName,userInfo);
+    NSLog(@"eventName ===== %@,userInfo =====%@",eventName,userInfo);
     [self handleEventWithName:eventName parameter:userInfo];
     
     // 把响应链继续传递下去
@@ -102,7 +98,7 @@ NSString * const kEventTwoName = @"3";
 }
 
 - (void)cellOneEventWithParamter:(NSDictionary *)paramter {
-
+    
     self.backgroundColor = [UIColor brownColor];
 
 }
@@ -111,7 +107,7 @@ NSString * const kEventTwoName = @"3";
     NSLog(@"---------参数：%@",paramter);
     self.backgroundColor = [UIColor greenColor];
 
-
+    
 }
 
 @end

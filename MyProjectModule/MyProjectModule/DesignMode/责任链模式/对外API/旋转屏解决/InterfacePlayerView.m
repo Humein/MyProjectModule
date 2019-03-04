@@ -80,9 +80,8 @@
 
 - (void)viewWillAppear
 {
-//    [self viewController] presentViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#> completion:<#^(void)completion#>
-    [[self viewController].navigationController pushViewController:[UIViewController new] animated:YES];
 
+    
 }
 
 
@@ -92,19 +91,6 @@
     [self requestEvent:HTVideoPauseEvent playItem:nil];
     
 }
-
-//   在View里push或者presentViewController
-// 获取View 所在的 Viewcontroller 方法
-- (UIViewController *)viewController {
-    for (UIView* next = [self superview]; next; next = next.superview) {
-        UIResponder *nextResponder = [next nextResponder];
-        if ([nextResponder isKindOfClass:[UIViewController class]]) {
-            return (UIViewController *)nextResponder;
-        }
-    }
-    return nil;
-}
-
 
 
 #pragma mark --- lazyload
