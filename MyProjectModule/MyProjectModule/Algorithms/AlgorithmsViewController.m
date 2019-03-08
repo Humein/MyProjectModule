@@ -332,6 +332,30 @@
 
 
 
+// 递归获取子视图
+- (void)getSub:(UIView *)view andLevel:(int)level {
+    NSArray *subviews = [view subviews];
+    
+    // 如果没有子视图就直接返回
+    if ([subviews count] == 0) return;
+    
+    for (UIView *subview in subviews) {
+        
+        // 根据层级决定前面空格个数，来缩进显示
+        NSString *blank = @"";
+        for (int i = 1; i < level; i++) {
+            blank = [NSString stringWithFormat:@"  %@", blank];
+        }
+        
+        // 打印子视图类名
+        NSLog(@"%@%d: %@", blank, level, subview.class);
+        
+        // 递归获取此视图的子视图
+        [self getSub:subview andLevel:(level+1)];
+        
+    }
+}
+
 
 
 // 递归打印二维数组
@@ -348,5 +372,54 @@
     return tmpArray;
 }
 
+
+#pragma mark - 检查后台Json合法性(递归)  jsonValidator如果重写
+
++ (BOOL)validateJSON:(id)json withValidator:(id)jsonValidator {
+    if ([json isKindOfClass:[NSDictionary class]] &&
+        [jsonValidator isKindOfClass:[NSDictionary class]]) {
+        NSDictionary * dict = json;
+        NSDictionary * validator = jsonValidator;
+        BOOL result = YES;
+        NSEnumerator * enumerator = [validator keyEnumerator];
+        NSString * key;
+        while ((key = [enumerator nextObject]) != nil) {
+            id value = dict[key];
+            id format = validator[key];
+            if ([value isKindOfClass:[NSDictionary class]]
+                || [value isKindOfClass:[NSArray class]]) {
+                result = [self validateJSON:value withValidator:format];
+                if (!result) {
+                    break;
+                }
+            } else {
+                if ([value isKindOfClass:format] == NO &&
+                    [value isKindOfClass:[NSNull class]] == NO) {
+                    result = NO;
+                    break;
+                }
+            }
+        }
+        return result;
+    } else if ([json isKindOfClass:[NSArray class]] &&
+               [jsonValidator isKindOfClass:[NSArray class]]) {
+        NSArray * validatorArray = (NSArray *)jsonValidator;
+        if (validatorArray.count > 0) {
+            NSArray * array = json;
+            NSDictionary * validator = jsonValidator[0];
+            for (id item in array) {
+                BOOL result = [self validateJSON:item withValidator:validator];
+                if (!result) {
+                    return NO;
+                }
+            }
+        }
+        return YES;
+    } else if ([json isKindOfClass:jsonValidator]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 
 @end

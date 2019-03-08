@@ -10,6 +10,8 @@
 #import "NSObject+RuntimeHelper.h"
 @interface RunTimeTestViewController ()
 @property (nonatomic , assign) NSObject *weakObject;
+@property (nonatomic , strong) NSObject *strongObject;
+
 @end
 
 @implementation RunTimeTestViewController
@@ -21,14 +23,17 @@
     
     self.weakObject = newObje;
     
+    self.strongObject = [NSObject new];
+    
     __weak NSObject *weakObje = newObje;
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 
-        NSLog(@"newObje=====%@",weakObje);
+//        NSLog(@"newObje=====%@",weakObje);
 
     });
     
+    self.weakObject = nil;
     NSLog(@"end");
 }
 
@@ -36,6 +41,27 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     NSLog(@"%@",[self.weakObject description]);
+    
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+
+    [UIView animateWithDuration:5 animations:^{
+
+        self.strongObject = [NSObject new];
+        
+    } completion:^(BOOL finished) {
+        
+        NSLog(@"animated=====%@",@(finished));
+        
+    }];
+    
+}
+
+-(void)dealloc{
+    
+    NSLog(@"%@=====nil",[self description]);
     
 }
 
