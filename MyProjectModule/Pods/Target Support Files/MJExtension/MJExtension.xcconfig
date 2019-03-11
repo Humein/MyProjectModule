@@ -6,5 +6,5 @@ PODS_ROOT = ${SRCROOT}
 PODS_TARGET_SRCROOT = ${PODS_ROOT}/MJExtension
 PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.${PRODUCT_NAME:rfc1034identifier}
 SKIP_INSTALL = YES
-#include "/Users/zhangxinxin/Code/FlutterDoc/my_flutter/.ios/Flutter/Generated.xcconfig"
-#include "/Users/zhangxinxin/Code/FlutterDoc/my_flutter/.ios/Flutter/Generated.xcconfig"
+#include "/Users/zhangxinxin/AndroidStudioProjects/flutter_module/.ios/Flutter/Generated.xcconfig"
+#include "/Users/zhangxinxin/AndroidStudioProjects/flutter_module/.ios/Flutter/Generated.xcconfig"

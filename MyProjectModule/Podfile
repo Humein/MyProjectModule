@@ -12,7 +12,7 @@ target 'MyProjectModule' do
   pod 'YTKNetwork'
   
   # Flutter 引入 现有 Native 工程
-  flutter_application_path = "/Users/zhangxinxin/Code/FlutterDoc/my_flutter"
+  flutter_application_path = "/Users/zhangxinxin/AndroidStudioProjects/flutter_module"
   eval(File.read(File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')), binding)
 
 end
