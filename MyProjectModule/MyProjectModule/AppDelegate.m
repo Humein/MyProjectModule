@@ -13,6 +13,20 @@
 @end
 
 @implementation AppDelegate
+{
+    FlutterPluginAppLifeCycleDelegate *_lifeCycleDelegate;
+}
+
+- (instancetype)init {
+    if (self = [super init]) {
+        _lifeCycleDelegate = [[FlutterPluginAppLifeCycleDelegate alloc] init];
+    }
+    return self;
+}
+
+
+
+
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     CGRect bounds = [[UIScreen mainScreen] bounds];

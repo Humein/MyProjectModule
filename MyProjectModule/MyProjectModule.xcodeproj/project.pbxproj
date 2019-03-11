@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -122,6 +122,7 @@
 		33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F420E2459200BE7175 /* CellFModel.m */; };
 		33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */; };
 		7901F9A221A678CE005BE8A6 /* NSTimerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901F9A121A678CE005BE8A6 /* NSTimerObserver.m */; };
+		79040D8B2236462A0085335E /* FlutterSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79040D8A2236462A0085335E /* FlutterSubViewController.m */; };
 		7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */; };
 		792A730B21EF2FBF0098B94C /* Tree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 792A730921EF2FBE0098B94C /* Tree.plist */; };
 		792A730C21EF2FBF0098B94C /* HomeDatas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 792A730A21EF2FBE0098B94C /* HomeDatas.plist */; };
@@ -426,6 +427,8 @@
 		4C26993B1DAA4E4068C6E736 /* Pods-MyProjectModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.debug.xcconfig"; sourceTree = "<group>"; };
 		7901F9A021A678CE005BE8A6 /* NSTimerObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTimerObserver.h; sourceTree = "<group>"; };
 		7901F9A121A678CE005BE8A6 /* NSTimerObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTimerObserver.m; sourceTree = "<group>"; };
+		79040D892236462A0085335E /* FlutterSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlutterSubViewController.h; sourceTree = "<group>"; };
+		79040D8A2236462A0085335E /* FlutterSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlutterSubViewController.m; sourceTree = "<group>"; };
 		7929B49B219FE74B004D335E /* RunLoopDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopDemoViewController.h; sourceTree = "<group>"; };
 		7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopDemoViewController.m; sourceTree = "<group>"; };
 		792A730921EF2FBE0098B94C /* Tree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tree.plist; sourceTree = "<group>"; };
@@ -573,6 +576,7 @@
 		333D105420CE74A8004D9241 /* MyProjectModule */ = {
 			isa = PBXGroup;
 			children = (
+				79040D882236460F0085335E /* FlutterDemo */,
 				79F9A5E9214FB082003704D7 /* Algorithms */,
 				79BFDCE02142A16000C81069 /* NetRequstAndSocket */,
 				33828F1120D3CAB800318AE5 /* BaseModule */,
@@ -1324,6 +1328,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		79040D882236460F0085335E /* FlutterDemo */ = {
+			isa = PBXGroup;
+			children = (
+				79040D892236462A0085335E /* FlutterSubViewController.h */,
+				79040D8A2236462A0085335E /* FlutterSubViewController.m */,
+			);
+			path = FlutterDemo;
+			sourceTree = "<group>";
+		};
 		7929B499219FE705004D335E /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
@@ -1625,6 +1638,7 @@
 				333D104F20CE74A8004D9241 /* Frameworks */,
 				333D105020CE74A8004D9241 /* Resources */,
 				2CE45A9DEFE8C1A0493F7F4F /* [CP] Embed Pods Frameworks */,
+				79040D87223642D00085335E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1754,34 +1768,34 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/KVOController/KVOController.framework",
-				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
-				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
-				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVOController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		79040D87223642D00085335E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build \n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed \n";
 		};
 		A1174853C5C8859EE1933F3D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1820,6 +1834,7 @@
 				33FAE4D820E243B800BE7175 /* CollectionDetaiDemo.m in Sources */,
 				79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */,
 				794B100921DF02E300B91405 /* AbstractTableViewController.m in Sources */,
+				79040D8B2236462A0085335E /* FlutterSubViewController.m in Sources */,
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
 				33759E77212FAA7200D801C1 /* NSObject+RuntimeHelper.m in Sources */,
 				339B534920F4AB2A003444CB /* ZTKDownHelperManager.m in Sources */,
@@ -2128,6 +2143,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XQXQPB7PG5;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MyProjectModule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2147,6 +2163,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XQXQPB7PG5;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MyProjectModule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

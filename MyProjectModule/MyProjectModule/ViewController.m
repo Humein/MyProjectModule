@@ -31,6 +31,9 @@
 #import "CellModel.h"
 #import "AbstractTableViewCell.h"
 #import "HitEventStrikeView.h"
+
+#import <Flutter/Flutter.h>
+
 @interface ViewController ()<AlertTableViewDelegate>
 @property (nonatomic,strong)AlertTableView *tableView;
 @property (nonatomic,strong)NSMutableArray *itemList;
@@ -58,11 +61,15 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    WEAKSELF
+    self.rightBarItem(@"FlutterDemo", CGRectMake(0, 0, 40, 40), NO);
+    self.rightBarItemClickBlock = ^(UIButton *button, NSInteger index) {
+        [weakSelf pushFlutter];
+    };
+    
 
     
-//    self.view.backgroundColor = [UIColor grayColor];
     self.itemList = [NSMutableArray array];
-
     NSArray *list = [NSArray arrayWithObjects: @"colloctionViewController",@"DrawViewController",@"SegementDemoViewController",@"SegementPersonDemoViewController",@"SegementChildViewController",@"CollectionSectionViewController",@"PaternalViewController",@"PaternalSViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",nil];
 
     [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { 
@@ -74,11 +81,10 @@
     }];
 
     [self.tableView registCell:[AbstractTableViewCell class] forItem:[CellModel class]];
+ 
     
     
-//    [self aleartView];
-
-
+    
     
     id a = nil;
     NSString *b = @"1";
@@ -106,8 +112,6 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 
     [self aleartView];
-    
-    
 
 }
 
@@ -175,10 +179,30 @@
 }
 
 
+#pragma mark - Flutter
+-(void)pushFlutter{
+    FlutterViewController* flutterViewController = [[FlutterViewController alloc] initWithProject:nil nibName:nil bundle:nil];
+    FlutterBasicMessageChannel* messageChannel = [FlutterBasicMessageChannel messageChannelWithName:@"channel"
+                                                                                    binaryMessenger:flutterViewController
+                                                                                              codec:[FlutterStandardMessageCodec sharedInstance]];//消息发送代码，本文不做解释
+    __weak __typeof(self) weakSelf = self;
+    [messageChannel setMessageHandler:^(id message, FlutterReply reply) {
+        // Any message on this channel pops the Flutter view.
+        [[weakSelf navigationController] popViewControllerAnimated:YES];
+        reply(@"");
+    }];
+    NSAssert([self navigationController], @"Must have a NaviationController");
+    [[self navigationController]  pushViewController:flutterViewController animated:YES];
 
-#pragma mark ----popOverDelegate
+}
 
-#pragma mark --- PrivateMethod
+
+#pragma mark -popOverDelegate
+
+#pragma mark - PrivateMethod
+
+
+
 //-(void)popOver{
 //    NSArray *arr = @[@"colloctionView",@"2",@"3",@"1",@"2",@"3"];
 //    PopTableView *pooView = [[PopTableView alloc]initWithFrame:CGRectMake(0,100, 258*0.5, arr.count * 30 + 20) dataSource:arr withBGView:@"弹窗"];
@@ -189,9 +213,9 @@
 //        [pooView dismiss];
 //    });
 //}
-#pragma mark --- PublicMethod
+#pragma mark - PublicMethod
 
-#pragma mark --- LazyLoad
+#pragma mark - LazyLoad
 - (AlertTableView *)tableView
 {
     if (_tableView == nil) {
@@ -208,5 +232,8 @@
     }
     return _itemList;
 }
+
+
+
 
 @end

@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AbstractViewController.h"
 typedef enum : NSUInteger {
     HTCommonGuideViewTypeVedio,
     HTCommonGuideViewTypeOther,
 } HTCommonGuideViewType;
 
-@interface ViewController : UIViewController
+@interface ViewController : AbstractViewController
 
 extern NSString * const HTCommonGuideViewType_toString[];
 
