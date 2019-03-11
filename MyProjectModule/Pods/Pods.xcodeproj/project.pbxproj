@@ -94,7 +94,7 @@
 		2A49E615073B8D0D39A1F77898F5A3B5 /* YTKRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 01C02801155645D36CD34B7BDBAFE954 /* YTKRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B232AB7FE9069B395E06F2EB9F58AD2 /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 827EC60D3C7502866C8678B55485E0C0 /* AFNetworking-dummy.m */; };
 		2C62A0AA5E681F7A22CD2FC08837DA45 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE839653A0BD9A59614C3D8CB84DDA2 /* MJExtensionConst.m */; };
-		2C69F7794D8EB2576AFA0CB36B4F38AE /* FlutterPluginRegistrant-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA46E7DD8452FF7BCC098E6E43881EE0 /* FlutterPluginRegistrant-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C69F7794D8EB2576AFA0CB36B4F38AE /* FlutterPluginRegistrant-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4982174EE0EA33F9B20F9FA3348D90A2 /* FlutterPluginRegistrant-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C9118D136171283CFB9033C334D4885 /* NSBundle+MJRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 68A2062729DCB97DD8996E6313FDCF9B /* NSBundle+MJRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CA9C9B075F7CFBE5FAC6350996D868A /* POPSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 841FAD1B8D0E4BCEAB5ADB6C8F729CAB /* POPSpringAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CCA958C2158D0637A2F8DFFE4E724C3 /* YYImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E7498A7945A6A829F617F15AC63E9A /* YYImageCache.m */; };
@@ -236,7 +236,7 @@
 		7C1A1DE6C4AA35B8DD4EACD0F929CA85 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 7746E94DCB7329CD5C012F5279344886 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C1D2362F1ECE51470259562920D00EC /* POPBasicAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CE1BCD95BB9E5A88245B678166C9FC7 /* POPBasicAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7CB3F87C6DA2890AA6DEDD9832C94AC0 /* UIGestureRecognizer+YYAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E998C4FD67136CA37E165CA948E058 /* UIGestureRecognizer+YYAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7DCE0A1DC569E3FA59F5B3E1B6CA37AB /* FlutterPluginRegistrant-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDFD549C574DBDD8E4162C113E34FF4 /* FlutterPluginRegistrant-dummy.m */; };
+		7DCE0A1DC569E3FA59F5B3E1B6CA37AB /* FlutterPluginRegistrant-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8D8D59C2C2FAF7A13C2B53265F70EE /* FlutterPluginRegistrant-dummy.m */; };
 		7DEFFEB7533661DBC23C74908693B3E0 /* SDWebImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = D188CB6F6406BACB2FE4EC466B1D9CB7 /* SDWebImageCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E3C5B16DEE5D654FA25FCFAB9814EF3 /* NSAttributedString+YYText.h in Headers */ = {isa = PBXBuildFile; fileRef = 998DDA7E15548922CBBDF4CA4CCD3759 /* NSAttributedString+YYText.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E52C6528DC1D548EA94548D723DF5A5 /* YYTextAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A06DC4D6B801317BFC24470264160F /* YYTextAttribute.m */; };
@@ -279,7 +279,7 @@
 		957AD5C73E3B0B9A2935FE66ECFD9A52 /* UIPasteboard+YYText.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F3480720FDBFC54FA25913F226B7A78 /* UIPasteboard+YYText.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		95E1D99388EC0E78346383A521686B72 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E14F27D2855CAF97872A7163E2AC5D7 /* MASCompositeConstraint.m */; };
 		968A94029039D6C042BB873A2C3E00DF /* POPBasicAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA9FDD3AB835D3F29F99E15777C0CA31 /* POPBasicAnimation.mm */; };
-		974F728E74EC2B37434868BF1AF7EB06 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 97531927F7737DD0AD3C128D21D7DFFF /* GeneratedPluginRegistrant.m */; };
+		974F728E74EC2B37434868BF1AF7EB06 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46910A83E805D8E1746B751649E04B /* GeneratedPluginRegistrant.m */; };
 		97A1B21E89058B8588B7F22653E1754D /* MJPropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C89A288E631D2C659C2636E4C6D297C /* MJPropertyType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97F8F0D1EE8B54725F51D52F02997B52 /* POPSpringAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2B7DC1047A8A5586095946CCC4BE40 /* POPSpringAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9817960642FD1EECD418A7E0BE7EB4B5 /* POPDecayAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11981052B62F342CC47BB9E6F678B1EB /* POPDecayAnimation.mm */; };
@@ -394,7 +394,7 @@
 		D11C9DDDC8FBCE8DD4662A3AB79EF025 /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 464B8B87B27DDCBFAFD654656A960CB6 /* UIKit+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D2843FD7807D26CC99430E2DB11C322F /* NSString+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E59746644E7A6BF8B4C0F0FD96FEEAF /* NSString+MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D2C70F642F4C9D4B9B87020093D7672C /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF540FF0F47C7405804C844812D4E2D /* YYMemoryCache.m */; };
-		D2F51EBB0072CE8ED46B5728F175BBDA /* GeneratedPluginRegistrant.h in Headers */ = {isa = PBXBuildFile; fileRef = F62A24F908AE3510823600F1D8C34790 /* GeneratedPluginRegistrant.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2F51EBB0072CE8ED46B5728F175BBDA /* GeneratedPluginRegistrant.h in Headers */ = {isa = PBXBuildFile; fileRef = 10A496D6071474D549E70CCFD64A5BF1 /* GeneratedPluginRegistrant.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3446C6C57AB9CADFD8C3EA62436AB2D /* YTKBatchRequestAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E913A4B0E80A4F437C079C439EE70DC /* YTKBatchRequestAgent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3972BE9712E2A83269148FF2CB29B9E /* YYSpriteSheetImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 50DF7260452F3B37D11BD11EC942D2A3 /* YYSpriteSheetImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D419F9E85AFBB921925A61A8D1F4A3F5 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 52C13595B3151382516BF174E8F3DA6A /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -602,13 +602,13 @@
 		0BDD4B4496A6F4B94A2688B6406182A7 /* YYTextSelectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextSelectionView.h; path = YYKit/Text/Component/YYTextSelectionView.h; sourceTree = "<group>"; };
 		0D7A04CDA4506E554E46320651546A09 /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
 		0D95403833CD78F7B0194B4EB6913273 /* YYTextSelectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextSelectionView.m; path = YYKit/Text/Component/YYTextSelectionView.m; sourceTree = "<group>"; };
-		0DB39F33E0BD15CEBE13FA4509273DDE /* Flutter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Flutter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0DBC9DB65AF50267F1B3DA58AED8060B /* SDImageCacheConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCacheConfig.h; path = SDWebImage/SDImageCacheConfig.h; sourceTree = "<group>"; };
 		0E14F27D2855CAF97872A7163E2AC5D7 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		0E59746644E7A6BF8B4C0F0FD96FEEAF /* NSString+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MJExtension.h"; path = "MJExtension/NSString+MJExtension.h"; sourceTree = "<group>"; };
 		0E913A4B0E80A4F437C079C439EE70DC /* YTKBatchRequestAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YTKBatchRequestAgent.h; path = YTKNetwork/YTKBatchRequestAgent.h; sourceTree = "<group>"; };
 		0EC3617EFDC28DE1FC365B6770644593 /* YYTextKeyboardManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextKeyboardManager.h; path = YYKit/Text/Component/YYTextKeyboardManager.h; sourceTree = "<group>"; };
 		0FF1C3909C0CEB599F10FAFF204A3969 /* POPAnimationPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationPrivate.h; path = pop/POPAnimationPrivate.h; sourceTree = "<group>"; };
+		10A496D6071474D549E70CCFD64A5BF1 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeneratedPluginRegistrant.h; path = Classes/GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		10ABEF71BA19788A7413EF9C8FFBA4AD /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoFooter.m; path = MJRefresh/Base/MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		1106009AE8877F627B165A2B62D004BC /* Pods-MyProjectModule-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyProjectModule-acknowledgements.plist"; sourceTree = "<group>"; };
 		112CA8A8EA048C48337A699C4EB4B63C /* POPAnimationExtras.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationExtras.h; path = pop/POPAnimationExtras.h; sourceTree = "<group>"; };
@@ -620,9 +620,7 @@
 		129223494FE2797E7738758DDA1D5CA5 /* FloatConversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FloatConversion.h; path = pop/WebCore/FloatConversion.h; sourceTree = "<group>"; };
 		129297B6CA938365CA7082B297AFD724 /* YYKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YYKit.framework; path = YYKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12FB86E87B88DCFA72F8BD7151AC9B0D /* UIButton+YYWebImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+YYWebImage.m"; path = "YYKit/Image/Categories/UIButton+YYWebImage.m"; sourceTree = "<group>"; };
-		131003F907E00ABC3775721F6E3BEB44 /* FlutterPluginRegistrant-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlutterPluginRegistrant-prefix.pch"; sourceTree = "<group>"; };
 		1399E4C35952EB2A394461218D9F8CD9 /* MJRefreshAutoStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoStateFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.m; sourceTree = "<group>"; };
-		13D95C3E9D4F23A1D859B02EBE229B00 /* Flutter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Flutter.framework; sourceTree = "<group>"; };
 		13E9AA26B736CB97093BC6E7B622E05A /* MJRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoNormalFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
 		146CCC0471F816F3290B49D3EB251737 /* YYImageCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYImageCoder.h; path = YYKit/Image/YYImageCoder.h; sourceTree = "<group>"; };
 		147B3796326A95D6228A77D4881ACCE5 /* POPPropertyAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimation.h; path = pop/POPPropertyAnimation.h; sourceTree = "<group>"; };
@@ -705,7 +703,6 @@
 		3AED9893FAEE52F52F66ACF2F73C223E /* POPDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPDefines.h; path = pop/POPDefines.h; sourceTree = "<group>"; };
 		3B17525283CE3EAF9A5DC341A766ECED /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoFooter.h; path = MJRefresh/Base/MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		3BB7A6475BF0CEB4BC4C8BCB43D7875A /* POPAnimatableProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimatableProperty.h; path = pop/POPAnimatableProperty.h; sourceTree = "<group>"; };
-		3DDFD549C574DBDD8E4162C113E34FF4 /* FlutterPluginRegistrant-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FlutterPluginRegistrant-dummy.m"; sourceTree = "<group>"; };
 		3E6A3FA64E36BEF84906548D1F97261C /* NSArray+YYAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+YYAdd.h"; path = "YYKit/Base/Foundation/NSArray+YYAdd.h"; sourceTree = "<group>"; };
 		3E8A457E1ADA451C7A4056C3F04995BF /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		3F77033CD9F5D3B070AC131A58158398 /* pop-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "pop-prefix.pch"; sourceTree = "<group>"; };
@@ -718,12 +715,14 @@
 		44512EFDFE5FE836150025F2A0D12872 /* AFNetworking-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AFNetworking-Info.plist"; sourceTree = "<group>"; };
 		44C6FCF3C053454FE8814C22CD770731 /* KVOController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KVOController.xcconfig; sourceTree = "<group>"; };
 		4535AD934308316B7F4418FD8F286933 /* YYTextRunDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextRunDelegate.m; path = YYKit/Text/String/YYTextRunDelegate.m; sourceTree = "<group>"; };
+		453F4592CD3281D14B1A013C283B77F3 /* FlutterPluginRegistrant.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlutterPluginRegistrant.xcconfig; sourceTree = "<group>"; };
 		462819A9C6BA9AF43EE4D8B4651F72ED /* YTKNetworkConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YTKNetworkConfig.m; path = YTKNetwork/YTKNetworkConfig.m; sourceTree = "<group>"; };
 		464B8B87B27DDCBFAFD654656A960CB6 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
 		46F566B481AEEF390E6885AF6D469BCF /* YYAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYAnimatedImageView.m; path = YYKit/Image/YYAnimatedImageView.m; sourceTree = "<group>"; };
 		4754724738AFC38718B9CF18732894D7 /* YTKBaseRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YTKBaseRequest.h; path = YTKNetwork/YTKBaseRequest.h; sourceTree = "<group>"; };
 		488D36BB2C5FE13D5103242090337B3A /* MJPropertyKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyKey.m; path = MJExtension/MJPropertyKey.m; sourceTree = "<group>"; };
 		4950135EF239596F0FCB2AF57843D49F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		4982174EE0EA33F9B20F9FA3348D90A2 /* FlutterPluginRegistrant-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlutterPluginRegistrant-umbrella.h"; sourceTree = "<group>"; };
 		49DC989526AF0798F478687D44DBEED7 /* POPAnimationTracer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationTracer.h; path = pop/POPAnimationTracer.h; sourceTree = "<group>"; };
 		4A6E6BEA62010F5633A1E6FE3D60E154 /* YYGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYGestureRecognizer.h; path = YYKit/Utility/YYGestureRecognizer.h; sourceTree = "<group>"; };
 		4AAFDA3835F0AE7D9C068FAFF89677EB /* MJRefreshFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshFooter.m; path = MJRefresh/Base/MJRefreshFooter.m; sourceTree = "<group>"; };
@@ -843,12 +842,12 @@
 		8540BAF1470DE7A4FB335B606730836F /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshStateHeader.m; path = MJRefresh/Custom/Header/MJRefreshStateHeader.m; sourceTree = "<group>"; };
 		85883B9008BCAFD2263154907E71A8C1 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
 		868E380A1B796FB51B59B56CF07C85FD /* pop-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "pop-Info.plist"; sourceTree = "<group>"; };
-		86C9AC6997685BB56946A388C4A49320 /* Flutter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flutter.xcconfig; sourceTree = "<group>"; };
 		877655F9E10EFDF440BB4228CE314BB0 /* Pods-MyProjectModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MyProjectModule-umbrella.h"; sourceTree = "<group>"; };
 		87A06DC4D6B801317BFC24470264160F /* YYTextAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextAttribute.m; path = YYKit/Text/String/YYTextAttribute.m; sourceTree = "<group>"; };
 		88A93368B6DE16C942C8649C066FF4C2 /* YYTextArchiver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextArchiver.m; path = YYKit/Text/String/YYTextArchiver.m; sourceTree = "<group>"; };
 		88E8E34491E48602EED58C930D104F72 /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
 		898365F8B20F9386CD05C594029D6BE7 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		8995DE851A3773FDE2088F6F1D61EF91 /* FlutterPluginRegistrant.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FlutterPluginRegistrant.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		89C4C81A8E5140170D9B861F9872A323 /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/SDImageCache.h; sourceTree = "<group>"; };
 		8A82432F93098B840B80DDFD3D928A73 /* UIControl+YYAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIControl+YYAdd.m"; path = "YYKit/Base/UIKit/UIControl+YYAdd.m"; sourceTree = "<group>"; };
 		8AD0382DF36089FC20A568C85645E3EA /* UIScreen+YYAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+YYAdd.m"; path = "YYKit/Base/UIKit/UIScreen+YYAdd.m"; sourceTree = "<group>"; };
@@ -880,12 +879,12 @@
 		95EDF160877FDE854531DC33AF320744 /* UIImage+ForceDecode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ForceDecode.h"; path = "SDWebImage/UIImage+ForceDecode.h"; sourceTree = "<group>"; };
 		9700197755A51A8C6C7D36F409D09570 /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
 		971BBB691E811BBB537935BD277B4372 /* SDWebImageTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageTransition.m; path = SDWebImage/SDWebImageTransition.m; sourceTree = "<group>"; };
-		97531927F7737DD0AD3C128D21D7DFFF /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GeneratedPluginRegistrant.m; path = Classes/GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		97DCF527031E930AC9829D30F38E939C /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		9856DE050B0322262B541B77854C9DDA /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJKeyValue.m"; path = "MJExtension/NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
 		98B4F9F6349A58C204390F491F69E073 /* YYGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYGestureRecognizer.m; path = YYKit/Utility/YYGestureRecognizer.m; sourceTree = "<group>"; };
 		98F9B703DA154225342AB5CD96D315C3 /* Pods_MyProjectModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MyProjectModule.framework; path = "Pods-MyProjectModule.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		991285DE71785188951A1960F331BE1B /* POPAnimationEvent.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPAnimationEvent.mm; path = pop/POPAnimationEvent.mm; sourceTree = "<group>"; };
+		994F560AAE349CF60C999D4A17E35AD2 /* FlutterPluginRegistrant-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlutterPluginRegistrant-prefix.pch"; sourceTree = "<group>"; };
 		99539726BE31F6F5A065EC62A0456241 /* SDWebImageCoderHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCoderHelper.m; path = SDWebImage/SDWebImageCoderHelper.m; sourceTree = "<group>"; };
 		996F15FB5A4F34FDDF66CA9E80D2264F /* AFImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = "UIKit+AFNetworking/AFImageDownloader.h"; sourceTree = "<group>"; };
 		99826167694940F9C5F52FF709978B92 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
@@ -904,7 +903,6 @@
 		A251F1612846CF69894D72E648F37496 /* pop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = pop.framework; path = pop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30151C2E2AFC08D7B6BC2AD2DDCF0F1 /* POPAnimationEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationEvent.h; path = pop/POPAnimationEvent.h; sourceTree = "<group>"; };
 		A3FF7BB9E7AEFD101627ADC2DFE2C898 /* UIBarButtonItem+YYAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+YYAdd.h"; path = "YYKit/Base/UIKit/UIBarButtonItem+YYAdd.h"; sourceTree = "<group>"; };
-		A458C63384A297324C57371E51BE6895 /* FlutterPluginRegistrant.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FlutterPluginRegistrant.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A4A382AAA38995542377186F764C5B29 /* YYKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYKeychain.m; path = YYKit/Utility/YYKeychain.m; sourceTree = "<group>"; };
 		A4C5A50115BD3FA14FC4D03B4C8E935C /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
 		A4CA4DEA89D0C09134C46AAA88489F0F /* MJRefreshBackStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackStateFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.m; sourceTree = "<group>"; };
@@ -914,6 +912,7 @@
 		A5D5C722F4EC4DD7F3B01B2C799C345E /* MJRefreshConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshConst.m; path = MJRefresh/MJRefreshConst.m; sourceTree = "<group>"; };
 		A5DA4387EF8E2F31E48E253E4294C9B6 /* YYSentinel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYSentinel.h; path = YYKit/Utility/YYSentinel.h; sourceTree = "<group>"; };
 		A5FBF14D35E5C8D4667EEC077A80972A /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/SDWebImageManager.h; sourceTree = "<group>"; };
+		A6E96E1623A6C1FD9B601FD6B7B6D710 /* FlutterPluginRegistrant-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FlutterPluginRegistrant-Info.plist"; sourceTree = "<group>"; };
 		A7448F775F35D0E0DFF7AF8C896B2FEA /* YYTextUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextUtilities.m; path = YYKit/Text/String/YYTextUtilities.m; sourceTree = "<group>"; };
 		A7D0201990AB85BADB901B6677082423 /* UIApplication+YYAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+YYAdd.h"; path = "YYKit/Base/UIKit/UIApplication+YYAdd.h"; sourceTree = "<group>"; };
 		A7FE7B9C29C63777B4EF8D3467DFD7E0 /* MJRefresh.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = MJRefresh.bundle; path = MJRefresh/MJRefresh.bundle; sourceTree = "<group>"; };
@@ -941,7 +940,7 @@
 		B23BDF255E3BA8B6AF1A06A51346660F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		B2F8754731195272DD3E466C315498CA /* YYTextEffectWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextEffectWindow.m; path = YYKit/Text/Component/YYTextEffectWindow.m; sourceTree = "<group>"; };
 		B308761D4F5AED2639D72A45BCAAD533 /* YYKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYKeychain.h; path = YYKit/Utility/YYKeychain.h; sourceTree = "<group>"; };
-		B4D64BDBCAE1FBFF08773BF306684587 /* FlutterPluginRegistrant-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FlutterPluginRegistrant-Info.plist"; sourceTree = "<group>"; };
+		B37DEA4291D632CC83C089A3A012F362 /* Flutter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Flutter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B500A50593F652A6AF225B6E41ED3FD8 /* KVOController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KVOController-prefix.pch"; sourceTree = "<group>"; };
 		B5037AD233F0D82FC78D9CEC284B768B /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
 		B75B01C512ABF65E12698BD49CCF2016 /* Pods-MyProjectModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MyProjectModule.modulemap"; sourceTree = "<group>"; };
@@ -953,6 +952,7 @@
 		B9AF6ED83AE2DA49C8D7CE8BEF15578C /* NSThread+YYAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSThread+YYAdd.h"; path = "YYKit/Base/Foundation/NSThread+YYAdd.h"; sourceTree = "<group>"; };
 		BAB90BD107F8137FE5A488C658D42248 /* YYTextContainerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextContainerView.m; path = YYKit/Text/Component/YYTextContainerView.m; sourceTree = "<group>"; };
 		BAF0DE2A66482E247602CA6E6BE2F01C /* YYTextEffectWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextEffectWindow.h; path = YYKit/Text/Component/YYTextEffectWindow.h; sourceTree = "<group>"; };
+		BB23ABC1F439136E14B225A18F88996E /* FlutterPluginRegistrant.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FlutterPluginRegistrant.modulemap; sourceTree = "<group>"; };
 		BBE2BF22887FA514F31607EB9EA6D80A /* SDImageCacheConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheConfig.m; path = SDWebImage/SDImageCacheConfig.m; sourceTree = "<group>"; };
 		BC27FF7209432C20442ADAECDE92FE5D /* YYCGUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYCGUtilities.m; path = YYKit/Base/Quartz/YYCGUtilities.m; sourceTree = "<group>"; };
 		BC4268A022B348292B454F2DE36E7EB8 /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/SDWebImageManager.m; sourceTree = "<group>"; };
@@ -974,7 +974,6 @@
 		C18ECFF91751CC89012E27280D2680AC /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		C2A842F8A56ADD0FE67E43E028E6DF84 /* UIView+YYAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+YYAdd.h"; path = "YYKit/Base/UIKit/UIView+YYAdd.h"; sourceTree = "<group>"; };
 		C3135695DA2F1A3DD793B77B0E11F862 /* YTKNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YTKNetwork.framework; path = YTKNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3E8B57D300488C88CF8CF8C63E8161B /* FlutterPluginRegistrant.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlutterPluginRegistrant.xcconfig; sourceTree = "<group>"; };
 		C52AD569297663E505E5DA270160054F /* MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJProperty.m; path = MJExtension/MJProperty.m; sourceTree = "<group>"; };
 		C58740613DA04C77C6872BF02D828325 /* KVOController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KVOController-Info.plist"; sourceTree = "<group>"; };
 		C6052ECC74626FE0A458C94C3C2DB1B0 /* UITableView+YYAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+YYAdd.h"; path = "YYKit/Base/UIKit/UITableView+YYAdd.h"; sourceTree = "<group>"; };
@@ -986,6 +985,7 @@
 		C937849E79565B1541C67DCE007E5479 /* YYWebImageOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYWebImageOperation.m; path = YYKit/Image/YYWebImageOperation.m; sourceTree = "<group>"; };
 		C99646205405647A7A6ADCBA434AF783 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
 		C9E4F107CFD65172EEDF3E9086E7F5DC /* AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AFNetworking.modulemap; sourceTree = "<group>"; };
+		CA46910A83E805D8E1746B751649E04B /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GeneratedPluginRegistrant.m; path = Classes/GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		CA87BC8D3D4D70F625171FE3AECC72C8 /* TransformationMatrix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TransformationMatrix.h; path = pop/WebCore/TransformationMatrix.h; sourceTree = "<group>"; };
 		CB482FFE5309F104B4EC8E8D3233947A /* UIView+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+MJExtension.m"; path = "MJRefresh/UIView+MJExtension.m"; sourceTree = "<group>"; };
 		CC01C8102A1756D0ED920068B876C82A /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
@@ -1016,7 +1016,6 @@
 		D71273F6FC0226375669C06FBADD30BD /* SDWebImageCoderHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCoderHelper.h; path = SDWebImage/SDWebImageCoderHelper.h; sourceTree = "<group>"; };
 		D94C213BF29A2FF02F0721B91FEA0370 /* UIScreen+YYAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScreen+YYAdd.h"; path = "YYKit/Base/UIKit/UIScreen+YYAdd.h"; sourceTree = "<group>"; };
 		DA16BFCE279E93EE30FEE9BBD2496D10 /* SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDWebImage-dummy.m"; sourceTree = "<group>"; };
-		DA46E7DD8452FF7BCC098E6E43881EE0 /* FlutterPluginRegistrant-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlutterPluginRegistrant-umbrella.h"; sourceTree = "<group>"; };
 		DA9FDD3AB835D3F29F99E15777C0CA31 /* POPBasicAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPBasicAnimation.mm; path = pop/POPBasicAnimation.mm; sourceTree = "<group>"; };
 		DAC1B03F67CEBDF8B3E05BB46FFE7808 /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
 		DB0FD7A5AA09F8139064BE713FFC8D72 /* UnitBezier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UnitBezier.h; path = pop/WebCore/UnitBezier.h; sourceTree = "<group>"; };
@@ -1024,6 +1023,7 @@
 		DB736C42DDB5EBFD8D2318DB9F8B00D1 /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/SDWebImageOperation.h; sourceTree = "<group>"; };
 		DBB58D8FEB4A9944FDB778CEA00F4A33 /* YYCGUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYCGUtilities.h; path = YYKit/Base/Quartz/YYCGUtilities.h; sourceTree = "<group>"; };
 		DBC832E8213B9ABE989EF2FA79557878 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		DBFA73B6294AE20EEBCCEBE18CF715EB /* Flutter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flutter.xcconfig; sourceTree = "<group>"; };
 		DD346BED9E07EC4660436AA36C700E13 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJCoding.h"; path = "MJExtension/NSObject+MJCoding.h"; sourceTree = "<group>"; };
 		DE6BB50E3A671BC7D16477BB47E00D93 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		DECE5CFE130A96666A51468E12C9DB76 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -1031,7 +1031,6 @@
 		E0C5FB4D00C855D8E60A32035646E6C8 /* Pods-MyProjectModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyProjectModule-dummy.m"; sourceTree = "<group>"; };
 		E0CF11C85FB6120B36124CFFECFB913E /* YTKBatchRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YTKBatchRequest.h; path = YTKNetwork/YTKBatchRequest.h; sourceTree = "<group>"; };
 		E11D3DBB52CEC36C3AC910BECB1649B6 /* pop.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = pop.modulemap; sourceTree = "<group>"; };
-		E14B50B547938F5B39844C6A13703409 /* FlutterPluginRegistrant.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FlutterPluginRegistrant.modulemap; sourceTree = "<group>"; };
 		E2167B8CE4FB299EEFDFB24DAE36CA0A /* MJRefreshBackStateFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackStateFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.h; sourceTree = "<group>"; };
 		E2C1C2A10325E19EF7704766DFCF3C91 /* MJRefreshAutoNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoNormalFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.h; sourceTree = "<group>"; };
 		E3E8D0FC0D1D45CAAF1ABB8A738C3D9C /* YYTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextView.m; path = YYKit/Text/YYTextView.m; sourceTree = "<group>"; };
@@ -1067,15 +1066,16 @@
 		F4E7498A7945A6A829F617F15AC63E9A /* YYImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYImageCache.m; path = YYKit/Image/YYImageCache.m; sourceTree = "<group>"; };
 		F57A54DF0EB3AA756C7B3EA9BB818784 /* YYTransaction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTransaction.m; path = YYKit/Utility/YYTransaction.m; sourceTree = "<group>"; };
 		F621E7BCE99DC59437A540F4D2491866 /* YYTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTimer.h; path = YYKit/Utility/YYTimer.h; sourceTree = "<group>"; };
-		F62A24F908AE3510823600F1D8C34790 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeneratedPluginRegistrant.h; path = Classes/GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		F66EE3DBD97CED95C98BABB21A13087A /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		F693E25EDC831E8F9B514F4237E7EA5B /* POPAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimator.h; path = pop/POPAnimator.h; sourceTree = "<group>"; };
 		F6AB3A3F07A56A9F6F7C680C19BE3DA4 /* NSObject+YYAddForARC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+YYAddForARC.h"; path = "YYKit/Base/Foundation/NSObject+YYAddForARC.h"; sourceTree = "<group>"; };
 		F77ACFD08F34EB2F6A0A39A2136AEBFF /* POPPropertyAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimationInternal.h; path = pop/POPPropertyAnimationInternal.h; sourceTree = "<group>"; };
 		F89001120A81986321D10062A9AF8881 /* YYAsyncLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYAsyncLayer.h; path = YYKit/Utility/YYAsyncLayer.h; sourceTree = "<group>"; };
 		F9824D8C871544E742F5217AC7DD3342 /* YYKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYKit-umbrella.h"; sourceTree = "<group>"; };
+		F9B1AB52A1406A36E17D521E9FC8D4E5 /* Flutter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Flutter.framework; sourceTree = "<group>"; };
 		FA2B7DC1047A8A5586095946CCC4BE40 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimationInternal.h; path = pop/POPSpringAnimationInternal.h; sourceTree = "<group>"; };
 		FA82BAFDBFDBC691D1A64ECA44F2FAD0 /* SDWebImageCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCoder.m; path = SDWebImage/SDWebImageCoder.m; sourceTree = "<group>"; };
+		FA8D8D59C2C2FAF7A13C2B53265F70EE /* FlutterPluginRegistrant-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FlutterPluginRegistrant-dummy.m"; sourceTree = "<group>"; };
 		FAC51FBECFAB01DB07CBA502DE6DE226 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		FB194847E4A5E01ABDC40E7C2EBFF237 /* YYClassInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYClassInfo.h; path = YYKit/Model/YYClassInfo.h; sourceTree = "<group>"; };
 		FB21A035527EAE9E029BB7720472EE18 /* YYThreadSafeArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYThreadSafeArray.m; path = YYKit/Utility/YYThreadSafeArray.m; sourceTree = "<group>"; };
@@ -1262,6 +1262,14 @@
 			path = pop;
 			sourceTree = "<group>";
 		};
+		14E2A097132BBD9C2A532A62BDD6A88F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9B1AB52A1406A36E17D521E9FC8D4E5 /* Flutter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		17A1D9EBF1CB7E6466DA67FDFE34B820 /* KVOController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1307,14 +1315,6 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
-		1F97215713164195C77A26806BACC123 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				A458C63384A297324C57371E51BE6895 /* FlutterPluginRegistrant.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		269B6AE41872E83E05CD3BC1D4BB63DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1330,6 +1330,18 @@
 			);
 			name = Pods;
 			sourceTree = "<group>";
+		};
+		2964EE31616AA3DE22F5D500BE886804 /* FlutterPluginRegistrant */ = {
+			isa = PBXGroup;
+			children = (
+				10A496D6071474D549E70CCFD64A5BF1 /* GeneratedPluginRegistrant.h */,
+				CA46910A83E805D8E1746B751649E04B /* GeneratedPluginRegistrant.m */,
+				F0AA72A2AFB5F4842C46D8B7B2A74B2C /* Pod */,
+				A7A9B544B8C2B602B9F3A363984CC41F /* Support Files */,
+			);
+			name = FlutterPluginRegistrant;
+			path = /Users/zhangxinxin/Code/AndroidStudioProjects/flutter_module/.ios/Flutter/FlutterPluginRegistrant;
+			sourceTree = "<absolute>";
 		};
 		2B9A4F13D581B31D015DFA921BE9F14B /* SDWebImage */ = {
 			isa = PBXGroup;
@@ -1349,6 +1361,15 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		31826051B7CE625E7BF2F0192D2A7C6F /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				36A6FF19D45D6AAF9DD8C214B7766D0C /* Flutter */,
+				2964EE31616AA3DE22F5D500BE886804 /* FlutterPluginRegistrant */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		32CD19AF98F8E1BBE35B5D0D272AE4FD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1362,6 +1383,17 @@
 			name = "Support Files";
 			path = "../Target Support Files/SDWebImage";
 			sourceTree = "<group>";
+		};
+		36A6FF19D45D6AAF9DD8C214B7766D0C /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				14E2A097132BBD9C2A532A62BDD6A88F /* Frameworks */,
+				ED8F82A8F1018C5691688E5C23C59C8C /* Pod */,
+				7E8C9D2DD62E38DF7679D6FF823D691A /* Support Files */,
+			);
+			name = Flutter;
+			path = /Users/zhangxinxin/Code/AndroidStudioProjects/flutter_module/.ios/Flutter/engine;
+			sourceTree = "<absolute>";
 		};
 		3FDA94C6D9F91EF75146206A9ED80490 /* Support Files */ = {
 			isa = PBXGroup;
@@ -1484,6 +1516,15 @@
 			path = "Target Support Files/Pods-MyProjectModule";
 			sourceTree = "<group>";
 		};
+		7E8C9D2DD62E38DF7679D6FF823D691A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBFA73B6294AE20EEBCCEBE18CF715EB /* Flutter.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../../../../MyProjectModule/MyProjectModule/Pods/Target Support Files/Flutter";
+			sourceTree = "<group>";
+		};
 		83A8BA9649C5E0B2639ED5C23CADB8B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1500,20 +1541,6 @@
 				129297B6CA938365CA7082B297AFD724 /* YYKit.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		84B37AD8C635AAC64F8410290690DE08 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E14B50B547938F5B39844C6A13703409 /* FlutterPluginRegistrant.modulemap */,
-				C3E8B57D300488C88CF8CF8C63E8161B /* FlutterPluginRegistrant.xcconfig */,
-				3DDFD549C574DBDD8E4162C113E34FF4 /* FlutterPluginRegistrant-dummy.m */,
-				B4D64BDBCAE1FBFF08773BF306684587 /* FlutterPluginRegistrant-Info.plist */,
-				131003F907E00ABC3775721F6E3BEB44 /* FlutterPluginRegistrant-prefix.pch */,
-				DA46E7DD8452FF7BCC098E6E43881EE0 /* FlutterPluginRegistrant-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../../../../../Code/MyProjectModule/MyProjectModule/Pods/Target Support Files/FlutterPluginRegistrant";
 			sourceTree = "<group>";
 		};
 		870D0DFC44201012C01125F58C7CEE93 /* AFNetworking */ = {
@@ -1607,17 +1634,6 @@
 			name = UIKit;
 			sourceTree = "<group>";
 		};
-		8ED4F15865971E69D9574234C4D75E4C /* Flutter */ = {
-			isa = PBXGroup;
-			children = (
-				BFC29C99954EF3E9821B6F041BA9AE28 /* Frameworks */,
-				A4413EF56814A7EA2855DED3D9CEA969 /* Pod */,
-				A3E731B3533D4F5F1CD29CA491A33EF1 /* Support Files */,
-			);
-			name = Flutter;
-			path = /Users/zhangxinxin/AndroidStudioProjects/flutter_module/.ios/Flutter/engine;
-			sourceTree = "<absolute>";
-		};
 		9841D2AE13E09507DDA68FAF1B64086A /* MJExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -1666,21 +1682,18 @@
 			name = Reachability;
 			sourceTree = "<group>";
 		};
-		A3E731B3533D4F5F1CD29CA491A33EF1 /* Support Files */ = {
+		A7A9B544B8C2B602B9F3A363984CC41F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				86C9AC6997685BB56946A388C4A49320 /* Flutter.xcconfig */,
+				BB23ABC1F439136E14B225A18F88996E /* FlutterPluginRegistrant.modulemap */,
+				453F4592CD3281D14B1A013C283B77F3 /* FlutterPluginRegistrant.xcconfig */,
+				FA8D8D59C2C2FAF7A13C2B53265F70EE /* FlutterPluginRegistrant-dummy.m */,
+				A6E96E1623A6C1FD9B601FD6B7B6D710 /* FlutterPluginRegistrant-Info.plist */,
+				994F560AAE349CF60C999D4A17E35AD2 /* FlutterPluginRegistrant-prefix.pch */,
+				4982174EE0EA33F9B20F9FA3348D90A2 /* FlutterPluginRegistrant-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../../../../../Code/MyProjectModule/MyProjectModule/Pods/Target Support Files/Flutter";
-			sourceTree = "<group>";
-		};
-		A4413EF56814A7EA2855DED3D9CEA969 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				0DB39F33E0BD15CEBE13FA4509273DDE /* Flutter.podspec */,
-			);
-			name = Pod;
+			path = "../../../../../MyProjectModule/MyProjectModule/Pods/Target Support Files/FlutterPluginRegistrant";
 			sourceTree = "<group>";
 		};
 		ACE4BECD77218E66FBC876F1DDCC913F /* Support Files */ = {
@@ -1882,14 +1895,6 @@
 			path = "../Target Support Files/MJExtension";
 			sourceTree = "<group>";
 		};
-		BFC29C99954EF3E9821B6F041BA9AE28 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				13D95C3E9D4F23A1D859B02EBE229B00 /* Flutter.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		C76AC333ED104500E70BAD9FBD086F1F /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -1977,25 +1982,13 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				ED7CC92DB46694B774F88D1B1166C38E /* Development Pods */,
+				31826051B7CE625E7BF2F0192D2A7C6F /* Development Pods */,
 				CAB87931D33AED0B3B2E403A3A67DCB7 /* Frameworks */,
 				269B6AE41872E83E05CD3BC1D4BB63DB /* Pods */,
 				83A8BA9649C5E0B2639ED5C23CADB8B9 /* Products */,
 				2E1DC9B611EDD62128DFEFBAD2161E85 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
-		};
-		DD8EE485795BCEB81F6EA32613DC0CA7 /* FlutterPluginRegistrant */ = {
-			isa = PBXGroup;
-			children = (
-				F62A24F908AE3510823600F1D8C34790 /* GeneratedPluginRegistrant.h */,
-				97531927F7737DD0AD3C128D21D7DFFF /* GeneratedPluginRegistrant.m */,
-				1F97215713164195C77A26806BACC123 /* Pod */,
-				84B37AD8C635AAC64F8410290690DE08 /* Support Files */,
-			);
-			name = FlutterPluginRegistrant;
-			path = /Users/zhangxinxin/AndroidStudioProjects/flutter_module/.ios/Flutter/FlutterPluginRegistrant;
-			sourceTree = "<absolute>";
 		};
 		DF80869C43F35E168288FE34B550AA3E /* Frameworks */ = {
 			isa = PBXGroup;
@@ -2019,13 +2012,12 @@
 			path = "../Target Support Files/AFNetworking";
 			sourceTree = "<group>";
 		};
-		ED7CC92DB46694B774F88D1B1166C38E /* Development Pods */ = {
+		ED8F82A8F1018C5691688E5C23C59C8C /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				8ED4F15865971E69D9574234C4D75E4C /* Flutter */,
-				DD8EE485795BCEB81F6EA32613DC0CA7 /* FlutterPluginRegistrant */,
+				B37DEA4291D632CC83C089A3A012F362 /* Flutter.podspec */,
 			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		EFEE896886136E1C30692769F4B88AEA /* Support Files */ = {
@@ -2040,6 +2032,14 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/KVOController";
+			sourceTree = "<group>";
+		};
+		F0AA72A2AFB5F4842C46D8B7B2A74B2C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				8995DE851A3773FDE2088F6F1D61EF91 /* FlutterPluginRegistrant.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		F5097E24E748843EB35D9930061DDF91 /* Support Files */ = {
@@ -3540,7 +3540,7 @@
 		};
 		489F711E89800CDE816F9EDE22D637A2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3E8B57D300488C88CF8CF8C63E8161B /* FlutterPluginRegistrant.xcconfig */;
+			baseConfigurationReference = 453F4592CD3281D14B1A013C283B77F3 /* FlutterPluginRegistrant.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -3753,7 +3753,7 @@
 		};
 		915A5E39E586FE1B78B4D4B6AB92E26B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86C9AC6997685BB56946A388C4A49320 /* Flutter.xcconfig */;
+			baseConfigurationReference = DBFA73B6294AE20EEBCCEBE18CF715EB /* Flutter.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -3866,7 +3866,7 @@
 		};
 		CB4E02FAA11B3EE20E77EF3E6FB804C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3E8B57D300488C88CF8CF8C63E8161B /* FlutterPluginRegistrant.xcconfig */;
+			baseConfigurationReference = 453F4592CD3281D14B1A013C283B77F3 /* FlutterPluginRegistrant.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -3936,7 +3936,7 @@
 		};
 		DAEE4111ED231F53AC23FAA3F50A5642 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86C9AC6997685BB56946A388C4A49320 /* Flutter.xcconfig */;
+			baseConfigurationReference = DBFA73B6294AE20EEBCCEBE18CF715EB /* Flutter.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
