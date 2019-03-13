@@ -10,7 +10,8 @@ target 'MyProjectModule' do
   pod 'KVOController'
   pod 'SDWebImage', '~> 4.3.3'
   pod 'YTKNetwork'
-  
+  pod 'Aspects'
+
   # Flutter 引入 现有 Native 工程
   flutter_application_path = "/Users/zhangxinxin/Code/AndroidStudioProjects/flutter_module"
   eval(File.read(File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')), binding)

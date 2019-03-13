@@ -11,8 +11,10 @@
 #import "CustomAlertView.h"
 #import "CustomAlertViewDefault.h"
 
-@interface TablePopDemoViewController ()
-
+@interface TablePopDemoViewController (){
+    BOOL _b;
+}
+@property (nonatomic,assign)int a;
 @end
 
 @implementation TablePopDemoViewController

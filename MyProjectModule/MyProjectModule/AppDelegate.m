@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "AspectTrackMananer.h"
 @interface AppDelegate ()
 
 @end
@@ -50,6 +51,7 @@
     [self.window makeKeyAndVisible];
 //    self.window.frame = [[UIScreen mainScreen] bounds];
 
+    [AspectTrackMananer trackAspectHooks];
     return YES;
 }
 

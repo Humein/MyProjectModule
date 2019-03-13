@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - Aspects (1.4.1)
   - Flutter (1.0.0)
   - FlutterPluginRegistrant (0.0.1):
     - Flutter
@@ -33,6 +34,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - Aspects
   - Flutter (from `/Users/zhangxinxin/Code/AndroidStudioProjects/flutter_module/.ios/Flutter/engine`)
   - FlutterPluginRegistrant (from `/Users/zhangxinxin/Code/AndroidStudioProjects/flutter_module/.ios/Flutter/FlutterPluginRegistrant`)
   - KVOController
@@ -47,6 +49,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - Aspects
     - KVOController
     - Masonry
     - MJExtension
@@ -64,6 +67,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a
   FlutterPluginRegistrant: 3f4d45b679eb21eb53e786e8884a26157555ce9f
   KVOController: 9fd8f0343670994e4b6f9f0b31f5a45663f3e1cf
@@ -75,6 +79,6 @@ SPEC CHECKSUMS:
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYKit: 76c3f2cee1a72d3c5b1d7fd8d170ee507fe5df68
 
-PODFILE CHECKSUM: e1ca2c5277724cd81027aa173c2ebcd041bb6f1f
+PODFILE CHECKSUM: 6e5c6c8199c7bcea5436a5aea4993e366e0305fd
 
 COCOAPODS: 1.7.0.beta.1

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F5DA074C8EFBF11C9B01B34 /* Pods_MyProjectModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37274BAA150B3CCC94945653 /* Pods_MyProjectModule.framework */; };
 		333651B82180543E00286C7A /* AttributeAndPredicateWithLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 333651B72180543E00286C7A /* AttributeAndPredicateWithLink.m */; };
 		333D105720CE74A9004D9241 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D105620CE74A9004D9241 /* AppDelegate.m */; };
 		333D105A20CE74A9004D9241 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D105920CE74A9004D9241 /* ViewController.m */; };
@@ -121,8 +120,11 @@
 		33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F320E2459200BE7175 /* SectionFModel.m */; };
 		33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F420E2459200BE7175 /* CellFModel.m */; };
 		33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */; };
+		358041E68E5480656FDBFF93 /* Pods_MyProjectModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45212555C0193DC4B8254985 /* Pods_MyProjectModule.framework */; };
 		7901F9A221A678CE005BE8A6 /* NSTimerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901F9A121A678CE005BE8A6 /* NSTimerObserver.m */; };
 		79040D8B2236462A0085335E /* FlutterSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79040D8A2236462A0085335E /* FlutterSubViewController.m */; };
+		79040DA12238AA2D0085335E /* AspectTrackMananer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79040DA02238AA2D0085335E /* AspectTrackMananer.m */; };
+		79040DA72238D00D0085335E /* EventList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79040DA62238D00C0085335E /* EventList.plist */; };
 		7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */; };
 		792A730B21EF2FBF0098B94C /* Tree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 792A730921EF2FBE0098B94C /* Tree.plist */; };
 		792A730C21EF2FBF0098B94C /* HomeDatas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 792A730A21EF2FBE0098B94C /* HomeDatas.plist */; };
@@ -423,12 +425,15 @@
 		33FAE4F620E2459200BE7175 /* SectionFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionFModel.h; sourceTree = "<group>"; };
 		33FAE50520E3693400BE7175 /* AbstractFCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractFCollectionView.h; sourceTree = "<group>"; };
 		33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractFCollectionView.m; sourceTree = "<group>"; };
-		37274BAA150B3CCC94945653 /* Pods_MyProjectModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45212555C0193DC4B8254985 /* Pods_MyProjectModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C26993B1DAA4E4068C6E736 /* Pods-MyProjectModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.debug.xcconfig"; sourceTree = "<group>"; };
 		7901F9A021A678CE005BE8A6 /* NSTimerObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTimerObserver.h; sourceTree = "<group>"; };
 		7901F9A121A678CE005BE8A6 /* NSTimerObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTimerObserver.m; sourceTree = "<group>"; };
 		79040D892236462A0085335E /* FlutterSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlutterSubViewController.h; sourceTree = "<group>"; };
 		79040D8A2236462A0085335E /* FlutterSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlutterSubViewController.m; sourceTree = "<group>"; };
+		79040D9F2238AA2D0085335E /* AspectTrackMananer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AspectTrackMananer.h; sourceTree = "<group>"; };
+		79040DA02238AA2D0085335E /* AspectTrackMananer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AspectTrackMananer.m; sourceTree = "<group>"; };
+		79040DA62238D00C0085335E /* EventList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EventList.plist; sourceTree = "<group>"; };
 		7929B49B219FE74B004D335E /* RunLoopDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopDemoViewController.h; sourceTree = "<group>"; };
 		7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopDemoViewController.m; sourceTree = "<group>"; };
 		792A730921EF2FBE0098B94C /* Tree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tree.plist; sourceTree = "<group>"; };
@@ -530,7 +535,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F5DA074C8EFBF11C9B01B34 /* Pods_MyProjectModule.framework in Frameworks */,
+				358041E68E5480656FDBFF93 /* Pods_MyProjectModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +581,7 @@
 		333D105420CE74A8004D9241 /* MyProjectModule */ = {
 			isa = PBXGroup;
 			children = (
+				79040D9E2238AA0A0085335E /* AOPTrack */,
 				79040D882236460F0085335E /* FlutterDemo */,
 				79F9A5E9214FB082003704D7 /* Algorithms */,
 				79BFDCE02142A16000C81069 /* NetRequstAndSocket */,
@@ -1337,6 +1343,16 @@
 			path = FlutterDemo;
 			sourceTree = "<group>";
 		};
+		79040D9E2238AA0A0085335E /* AOPTrack */ = {
+			isa = PBXGroup;
+			children = (
+				79040DA62238D00C0085335E /* EventList.plist */,
+				79040D9F2238AA2D0085335E /* AspectTrackMananer.h */,
+				79040DA02238AA2D0085335E /* AspectTrackMananer.m */,
+			);
+			path = AOPTrack;
+			sourceTree = "<group>";
+		};
 		7929B499219FE705004D335E /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
@@ -1621,7 +1637,7 @@
 		7C2E54819E680FA111814D28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				37274BAA150B3CCC94945653 /* Pods_MyProjectModule.framework */,
+				45212555C0193DC4B8254985 /* Pods_MyProjectModule.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1735,6 +1751,7 @@
 				333D106220CE74AB004D9241 /* LaunchScreen.storyboard in Resources */,
 				333D105F20CE74AB004D9241 /* Assets.xcassets in Resources */,
 				79EEEA4C2182BD4700848B59 /* UITableView滚动到底部时崩溃的解决方法 - 简书.html in Resources */,
+				79040DA72238D00D0085335E /* EventList.plist in Resources */,
 				33FAE4F120E2452D00BE7175 /* JHHeaderReusableView.xib in Resources */,
 				792A730E21EF2FD50098B94C /* class_cluster_data.json in Resources */,
 				792A730B21EF2FBF0098B94C /* Tree.plist in Resources */,
@@ -1937,6 +1954,7 @@
 				33C97118211E81D800EAAD5E /* ApplePay.m in Sources */,
 				79EEEAA2218FF5E600848B59 /* TreeModel.m in Sources */,
 				339B534820F4AB2A003444CB /* ZTKZTKBJDownItem.m in Sources */,
+				79040DA12238AA2D0085335E /* AspectTrackMananer.m in Sources */,
 				79EEEA592182C13A00848B59 /* LiveCommentDemoViewController.m in Sources */,
 				79EEEAB92195973B00848B59 /* BJPlayerHelper.m in Sources */,
 				79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */,
