@@ -35,8 +35,8 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - Aspects
-  - Flutter (from `/Users/zhangxinxin/Code/AndroidStudioProjects/flutter_module/.ios/Flutter/engine`)
-  - FlutterPluginRegistrant (from `/Users/zhangxinxin/Code/AndroidStudioProjects/flutter_module/.ios/Flutter/FlutterPluginRegistrant`)
+  - Flutter (from `/Users/zhangxinxin/Code/AndroidStudioProjects/iOS-Flutter/flutter_module/.ios/Flutter/engine`)
+  - FlutterPluginRegistrant (from `/Users/zhangxinxin/Code/AndroidStudioProjects/iOS-Flutter/flutter_module/.ios/Flutter/FlutterPluginRegistrant`)
   - KVOController
   - Masonry
   - MJExtension
@@ -61,9 +61,9 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   Flutter:
-    :path: "/Users/zhangxinxin/Code/AndroidStudioProjects/flutter_module/.ios/Flutter/engine"
+    :path: "/Users/zhangxinxin/Code/AndroidStudioProjects/iOS-Flutter/flutter_module/.ios/Flutter/engine"
   FlutterPluginRegistrant:
-    :path: "/Users/zhangxinxin/Code/AndroidStudioProjects/flutter_module/.ios/Flutter/FlutterPluginRegistrant"
+    :path: "/Users/zhangxinxin/Code/AndroidStudioProjects/iOS-Flutter/flutter_module/.ios/Flutter/FlutterPluginRegistrant"
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
@@ -79,6 +79,6 @@ SPEC CHECKSUMS:
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYKit: 76c3f2cee1a72d3c5b1d7fd8d170ee507fe5df68
 
-PODFILE CHECKSUM: 6e5c6c8199c7bcea5436a5aea4993e366e0305fd
+PODFILE CHECKSUM: d75bc2a197182557ca201ad03573d9b830007a66
 
 COCOAPODS: 1.7.0.beta.1
