@@ -80,6 +80,13 @@
     return 30;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (self.handleBlock) {
+        self.handleBlock(indexPath.row);
+    }
+}
+
 
 
 #pragma mark -- CallBack

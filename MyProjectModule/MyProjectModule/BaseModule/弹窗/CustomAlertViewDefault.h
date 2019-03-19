@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^AlertViewClickBlock) (NSInteger index);
+typedef void (^AlertViewClickBlock)(NSInteger index);
 
 @interface CustomAlertViewDefault : UIView
 
-@property (nonatomic,copy)AlertViewClickBlock handleBlock;
+@property (nonatomic, copy) AlertViewClickBlock handleBlock;
 
 
 @end

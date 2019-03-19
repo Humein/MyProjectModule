@@ -8,7 +8,7 @@
 
 #import "TablePopDemoViewController.h"
 #import "DecoratorAView.h"
-#import "CustomAlertView.h"
+#import "CustomAlertManagerView.h"
 #import "CustomAlertViewDefault.h"
 
 @interface TablePopDemoViewController (){
@@ -31,24 +31,18 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
-//    自定义弹窗
-    CustomAlertViewDefault *defaultVC = [[CustomAlertViewDefault alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
 
-    defaultVC.backgroundColor = [UIColor blueColor];
-
-    
-    
-    CustomAlertView *VC = [[CustomAlertView alloc] init];
-    [VC showCustomView:defaultVC InView:self.view];
-//    [VC showInView:self.view dely:3];
-    
-    
-    __weak typeof(self) WeakSelf = self;
-    
-    defaultVC.handleBlock = ^(NSInteger index) {
-        [VC hidden];
+    CustomAlertViewDefault *defaultView = [[CustomAlertViewDefault alloc]initWithFrame:CGRectMake(0, 0, 200, 100)];
+    defaultView.handleBlock = ^(NSInteger index) {
         
     };
+
+    
+    CustomAlertManagerView *VC = [CustomAlertManagerView new];
+    VC.transferType = TopTransferDown;
+    [VC showCustomView:defaultView InView:self.view];
+
+    
 
     
 }

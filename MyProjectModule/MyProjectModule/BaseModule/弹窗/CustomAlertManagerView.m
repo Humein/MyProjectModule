@@ -6,13 +6,13 @@
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
 
-#import "CustomAlertView.h"
+#import "CustomAlertManagerView.h"
 
-@interface CustomAlertView()<CAAnimationDelegate>{
+@interface CustomAlertManagerView()<CAAnimationDelegate>{
 }
-@property(nonatomic,strong) UIView *alertView;
+@property(nonatomic,strong) AbstractAlertView *alertView;
 @end
-@implementation CustomAlertView
+@implementation CustomAlertManagerView
 
 
 -(void)dealloc{
@@ -30,7 +30,6 @@
 }
 
 -(void)initView{
-    
     //     TODO 默认
     //    _alertView = [UIButton new];
     //    _alertView.backgroundColor = [UIColor grayColor];
@@ -80,15 +79,7 @@
     self.frame= view.bounds;
     [self addSubview:customView];
     self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.0];
-    //    [customView mas_makeConstraints:^(MASConstraintMaker *make) {
-    ////        make.edges.equalTo(self ->_alertView).with.insets(UIEdgeInsetsMake(0, 0, 0, 0));
-    //        make.width.mas_equalTo(customView.frame.size.width);
-    //        make.height.mas_equalTo(customView.frame.size.height);
-    //        make.centerX.equalTo(self);
-    //        make.centerY.equalTo(self);
-    //
-    //    }];
-    
+
     if (self.transferType == DefaultTransfer) {
         
         [customView setFrame:CGRectMake((view.frame.size.width-customView.frame.size.width) / 2, (view.frame.size.height-customView.frame.size.height) / 2, customView.frame.size.width, customView.frame.size.height)];
@@ -130,6 +121,20 @@
     
     [view addSubview:self];
 }
+
+
+// 自定义View
+-(void)showCustomView:(void(^)(AbstractAlertView *customView))config completionBlock:(void (^)(NSInteger index))block{
+    
+    __block AbstractAlertView *alertView = [[AbstractAlertView alloc] init];
+    if (config)
+    {
+        config(alertView);
+    }
+    alertView.handleBlock = block;
+    [self showCustomView:alertView InView:[UIApplication sharedApplication].keyWindow];
+}
+
 
 
 - (void)hidden

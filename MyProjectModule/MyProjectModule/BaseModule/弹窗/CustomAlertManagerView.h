@@ -8,7 +8,7 @@
 
 //block 类型使用
 #import <UIKit/UIKit.h>
-
+#import "AbstractAlertView.h"
 typedef enum : NSUInteger {
     DefaultTransfer,
     TopTransferDown,
@@ -20,11 +20,9 @@ typedef enum : NSUInteger {
 typedef void(^ClickButtonBlock)(POPAnimation buttonType, UIButton * clickButton);
 
 
-@interface CustomAlertView : UIView
+@interface CustomAlertManagerView : UIView
 
 @property (nonatomic,copy) ClickButtonBlock clickBlock;
-
-
 
 //显示方式
 @property (nonatomic,assign) POPAnimation transferType;
@@ -36,7 +34,7 @@ typedef void(^ClickButtonBlock)(POPAnimation buttonType, UIButton * clickButton)
 //显示在view中
 - (void)showInView:(UIView*)view;
 
-
+//延迟
 -(void)showInView:(UIView *)view dely:(NSTimeInterval )time;
 
 //隐藏
@@ -48,7 +46,13 @@ typedef void(^ClickButtonBlock)(POPAnimation buttonType, UIButton * clickButton)
 
 //2 无返回值 有参数 匿名  block （1-异步回调  2- 无需实例对象 配置对象的参数）
 
--(void)showCustomView:(void(^)(UIView *customView))config completionBlock:(void (^)(NSInteger index))block;
+/**
+ 传入自定义View
+
+ @param config 实例化的view
+ @param block viewBlock
+ */
+-(void)showCustomView:(void(^)(AbstractAlertView *customView))config completionBlock:(void (^)(NSInteger index))block;
 
 
 
