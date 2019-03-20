@@ -6,13 +6,12 @@
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "AbstractAlertView.h"
 
 typedef void (^AlertViewClickBlock)(NSInteger index);
 
-@interface CustomAlertViewDefault : UIView
+@interface CustomAlertViewDefault : AbstractAlertView
 
-@property (nonatomic, copy) AlertViewClickBlock handleBlock;
 
 
 @end

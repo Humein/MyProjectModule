@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 @interface BlockObject : UIViewController
 
+// 1 无返回值 有参数 非匿名 block
+typedef void(^ClickButtonBlock)(NSUInteger buttonType, UIButton * clickButton);
 
 #pragma mark ---  1 无返回值 有参数 非匿名(属性) block
 typedef void (^PopBlock)(void);

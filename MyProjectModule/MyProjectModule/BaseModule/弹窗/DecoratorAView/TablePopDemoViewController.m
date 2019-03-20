@@ -33,14 +33,20 @@
     
 
     CustomAlertViewDefault *defaultView = [[CustomAlertViewDefault alloc]initWithFrame:CGRectMake(0, 0, 200, 100)];
-    defaultView.handleBlock = ^(NSInteger index) {
-        
-    };
 
-    
     CustomAlertManagerView *VC = [CustomAlertManagerView new];
     VC.transferType = TopTransferDown;
-    [VC showCustomView:defaultView InView:self.view];
+    
+    [VC showCustomViews:defaultView InView:self.view completionBlock:^(NSInteger index) {
+        
+    }];
+    
+    
+//    [VC showCustomView:defaultView InView:self.view];
+    
+//    defaultView.handleBlock = ^(NSInteger index) {
+//        [VC hidden];
+//    };
 
     
 

@@ -9,11 +9,13 @@
 #import "CustomAlertManagerView.h"
 
 @interface CustomAlertManagerView()<CAAnimationDelegate>{
+    
 }
+
 @property(nonatomic,strong) AbstractAlertView *alertView;
 @end
-@implementation CustomAlertManagerView
 
+@implementation CustomAlertManagerView
 
 -(void)dealloc{
     NSLog(@"%@======销毁",NSStringFromClass(self.class));
@@ -31,18 +33,6 @@
 
 -(void)initView{
     //     TODO 默认
-    //    _alertView = [UIButton new];
-    //    _alertView.backgroundColor = [UIColor grayColor];
-    //    [self addSubview:_alertView];
-    //
-    ////
-    //    [_alertView mas_makeConstraints:^(MASConstraintMaker *make) {
-    //        make.centerY.equalTo(self);
-    //        make.left.equalTo(self).offset(20);
-    //        make.right.equalTo(self).offset(-20);
-    //        make.height.equalTo(@347);
-    //    }];
-    //
     
 }
 
@@ -116,9 +106,7 @@
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2];
         
     }
-    
-    
-    
+        
     [view addSubview:self];
 }
 
@@ -135,6 +123,12 @@
     [self showCustomView:alertView InView:[UIApplication sharedApplication].keyWindow];
 }
 
+
+-(void)showCustomViews:(AbstractAlertView *)customView InView:(UIView*)view completionBlock:(void (^)(NSInteger index))block{
+    
+    customView.handleBlock = block;
+    [self showCustomView:customView InView:customView];
+}
 
 
 - (void)hidden

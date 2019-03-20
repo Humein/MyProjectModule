@@ -10,9 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 typedef void (^AlertViewClickBlock)(NSInteger index);
-
 @interface AbstractAlertView : UIView
-
 @property (nonatomic, copy) AlertViewClickBlock handleBlock;
 
 @end

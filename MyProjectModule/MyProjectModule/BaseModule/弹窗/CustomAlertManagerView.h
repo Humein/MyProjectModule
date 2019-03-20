@@ -6,7 +6,6 @@
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
 
-//block 类型使用
 #import <UIKit/UIKit.h>
 #import "AbstractAlertView.h"
 typedef enum : NSUInteger {
@@ -16,19 +15,12 @@ typedef enum : NSUInteger {
     ZoomTransfer
 } POPAnimation;
 
-// 1 无返回值 有参数 非匿名 block
-typedef void(^ClickButtonBlock)(POPAnimation buttonType, UIButton * clickButton);
-
-
 @interface CustomAlertManagerView : UIView
-
-@property (nonatomic,copy) ClickButtonBlock clickBlock;
 
 //显示方式
 @property (nonatomic,assign) POPAnimation transferType;
 
 //显示在window上的
-
 - (void)show;
 
 //显示在view中
@@ -43,8 +35,16 @@ typedef void(^ClickButtonBlock)(POPAnimation buttonType, UIButton * clickButton)
 // 自定义
 - (void)showCustomView:(UIView *)customView InView:(UIView*)view;
 
+//
 
-//2 无返回值 有参数 匿名  block （1-异步回调  2- 无需实例对象 配置对象的参数）
+/**
+  需要继承 AbstractAlertView
+
+ @param customView <#customView description#>
+ @param view <#view description#>
+ @param block <#block description#>
+ */
+-(void)showCustomViews:(AbstractAlertView *)customView InView:(UIView*)view completionBlock:(void (^)(NSInteger index))block;
 
 /**
  传入自定义View
