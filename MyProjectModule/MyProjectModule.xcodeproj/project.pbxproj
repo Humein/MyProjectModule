@@ -1787,7 +1787,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		2CE45A9DEFE8C1A0493F7F4F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -2166,7 +2166,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XQXQPB7PG5;
+				DEVELOPMENT_TEAM = 2DD9667W8X;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MyProjectModule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2186,7 +2186,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XQXQPB7PG5;
+				DEVELOPMENT_TEAM = 2DD9667W8X;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MyProjectModule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
