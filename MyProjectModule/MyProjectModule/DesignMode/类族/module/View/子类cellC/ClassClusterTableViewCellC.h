@@ -7,10 +7,11 @@
 //
 
 #import "ClassClusterBaseTableViewCell.h"
+#import "MultiCellProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ClassClusterTableViewCellC : ClassClusterBaseTableViewCell
+@interface ClassClusterTableViewCellC : ClassClusterBaseTableViewCell<MultiCellConfigPropotol>
 
 @end
 

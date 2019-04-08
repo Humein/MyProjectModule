@@ -9,6 +9,7 @@
 #import "ClassClusterViewController.h"
 #import "ClassClusterBaseTableViewCell.h"
 #import "MJExtension.h"
+#import "ProtoclForCMutilellViewController.h"
 @interface ClassClusterViewController ()
 
 @end
@@ -76,6 +77,13 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    // 协议模式
+    
+    ProtoclForCMutilellViewController *VC = [ProtoclForCMutilellViewController new];
+    [self.navigationController pushViewController:VC animated:YES];
+}
 
 
 #pragma mark - Net

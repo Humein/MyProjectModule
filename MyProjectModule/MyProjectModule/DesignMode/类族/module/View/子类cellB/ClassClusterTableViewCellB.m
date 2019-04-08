@@ -47,4 +47,8 @@
     self.rightLabel.text = model.title;
 }
 
+-(void)configCellWithModel:(ClassClusterModel *)model{
+    self.rightLabel.text = model.title;
+}
+
 @end

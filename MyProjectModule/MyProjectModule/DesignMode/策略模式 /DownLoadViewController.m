@@ -11,6 +11,15 @@
 #import "ZTKZTKBJDownItem.h"
 #import "UIButton+ButtonBlockCategory.h"
 
+
+/*
+ 
+从外到里
+ DownDBHelper - Model -  DownHelper(ModelHelper) - SDKDownHelper - SDKDownManger;
+ 
+
+*/
+
 @interface DownLoadViewController ()
 
 @end

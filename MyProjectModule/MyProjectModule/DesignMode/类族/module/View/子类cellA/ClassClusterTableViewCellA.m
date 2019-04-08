@@ -46,4 +46,9 @@
     self.rightImageView.image = [UIImage imageNamed:model.image];
 }
 
+-(void)configCellWithModel:(ClassClusterModel *)model{
+    self.leftLabel.text = model.title;
+    self.rightImageView.image = [UIImage imageNamed:model.image];
+}
+
 @end
