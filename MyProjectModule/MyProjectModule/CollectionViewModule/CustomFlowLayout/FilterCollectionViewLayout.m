@@ -106,7 +106,7 @@ static const UIEdgeInsets DefaultEdgeInsets = {10,10,10,10};
     [self.columnHeights removeAllObjects];
     
     // 设置每一列默认的高度
-    for (NSInteger i = 0; i < DefaultColunmCount ; i ++) {
+    for (NSInteger i = 0; i < self.colunmCount ; i ++) {
         [self.columnHeights addObject:@(DefaultEdgeInsets.top)];
     }
     
@@ -152,7 +152,7 @@ static const UIEdgeInsets DefaultEdgeInsets = {10,10,10,10};
     NSInteger destColumn = 0;
     CGFloat minColumnHeight = [self.columnHeights[0] doubleValue];
     
-    for (int i = 1; i < DefaultColunmCount; i++) {
+    for (int i = 1; i < self.colunmCount; i++) {
         
         // 取得第i列的高度
         CGFloat columnHeight = [self.columnHeights[i] doubleValue];
