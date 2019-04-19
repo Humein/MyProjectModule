@@ -142,6 +142,14 @@
 		794B101121E84A2500B91405 /* ClassClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B101021E84A2500B91405 /* ClassClusterViewController.m */; };
 		794CF999225B65AB00A90E3F /* ProtoclForCMutilellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794CF997225B65AB00A90E3F /* ProtoclForCMutilellViewController.m */; };
 		7997BE69224090A50054F4D0 /* AbstractAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997BE68224090A50054F4D0 /* AbstractAlertView.m */; };
+		79A1A5162269AD0800CEA92A /* CheckConditionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5042269AD0800CEA92A /* CheckConditionItem.m */; };
+		79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5082269AD0800CEA92A /* BaseBookmarkChildController.m */; };
+		79A1A5182269AD0800CEA92A /* SmoothBookmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A50B2269AD0800CEA92A /* SmoothBookmarkView.m */; };
+		79A1A5192269AD0800CEA92A /* CheckConditionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A50E2269AD0800CEA92A /* CheckConditionCollectionViewCell.m */; };
+		79A1A51A2269AD0800CEA92A /* BookmarkContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A50F2269AD0800CEA92A /* BookmarkContainerView.m */; };
+		79A1A51B2269AD0800CEA92A /* SmoothTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5112269AD0800CEA92A /* SmoothTitleView.m */; };
+		79A1A51C2269AD0800CEA92A /* BookmarkMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5122269AD0800CEA92A /* BookmarkMainTableView.m */; };
+		79A1A51D2269AD0800CEA92A /* SmoothBookmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5152269AD0800CEA92A /* SmoothBookmarkViewController.m */; };
 		79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFDCE82142A28700C81069 /* StartWaterView.m */; };
 		79C2B663221A646200C40F3A /* RunTimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C2B662221A646200C40F3A /* RunTimeTestViewController.m */; };
 		79CFB323216C879D00218C92 /* NSInvocationForStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */; };
@@ -468,6 +476,22 @@
 		794CF99B225B661C00A90E3F /* MultiCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiCellProtocol.h; sourceTree = "<group>"; };
 		7997BE67224090A50054F4D0 /* AbstractAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractAlertView.h; sourceTree = "<group>"; };
 		7997BE68224090A50054F4D0 /* AbstractAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractAlertView.m; sourceTree = "<group>"; };
+		79A1A5042269AD0800CEA92A /* CheckConditionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckConditionItem.m; sourceTree = "<group>"; };
+		79A1A5052269AD0800CEA92A /* SmoothBookmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothBookmarkViewController.h; sourceTree = "<group>"; };
+		79A1A5062269AD0800CEA92A /* CheckConditionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckConditionItem.h; sourceTree = "<group>"; };
+		79A1A5082269AD0800CEA92A /* BaseBookmarkChildController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseBookmarkChildController.m; sourceTree = "<group>"; };
+		79A1A5092269AD0800CEA92A /* BaseBookmarkChildController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseBookmarkChildController.h; sourceTree = "<group>"; };
+		79A1A50B2269AD0800CEA92A /* SmoothBookmarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothBookmarkView.m; sourceTree = "<group>"; };
+		79A1A50C2269AD0800CEA92A /* SmoothTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothTitleView.h; sourceTree = "<group>"; };
+		79A1A50D2269AD0800CEA92A /* BookmarkMainTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkMainTableView.h; sourceTree = "<group>"; };
+		79A1A50E2269AD0800CEA92A /* CheckConditionCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckConditionCollectionViewCell.m; sourceTree = "<group>"; };
+		79A1A50F2269AD0800CEA92A /* BookmarkContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkContainerView.m; sourceTree = "<group>"; };
+		79A1A5102269AD0800CEA92A /* CheckConditionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckConditionCollectionViewCell.h; sourceTree = "<group>"; };
+		79A1A5112269AD0800CEA92A /* SmoothTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothTitleView.m; sourceTree = "<group>"; };
+		79A1A5122269AD0800CEA92A /* BookmarkMainTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkMainTableView.m; sourceTree = "<group>"; };
+		79A1A5132269AD0800CEA92A /* SmoothBookmarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothBookmarkView.h; sourceTree = "<group>"; };
+		79A1A5142269AD0800CEA92A /* BookmarkContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkContainerView.h; sourceTree = "<group>"; };
+		79A1A5152269AD0800CEA92A /* SmoothBookmarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothBookmarkViewController.m; sourceTree = "<group>"; };
 		79BFDCE22142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE42142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE72142A28700C81069 /* StartWaterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartWaterView.h; sourceTree = "<group>"; };
@@ -790,6 +814,7 @@
 		33828F1120D3CAB800318AE5 /* BaseModule */ = {
 			isa = PBXGroup;
 			children = (
+				79A1A5032269AD0800CEA92A /* SmoothBookmarker */,
 				33C971322124108D00EAAD5E /* 弹窗 */,
 				33C9711C211EB8C900EAAD5E /* AbstractBase */,
 				33888FD820F05C3600E4A119 /* ImitateWMPage */,
@@ -1510,6 +1535,45 @@
 			path = Swift;
 			sourceTree = "<group>";
 		};
+		79A1A5032269AD0800CEA92A /* SmoothBookmarker */ = {
+			isa = PBXGroup;
+			children = (
+				79A1A5062269AD0800CEA92A /* CheckConditionItem.h */,
+				79A1A5042269AD0800CEA92A /* CheckConditionItem.m */,
+				79A1A5052269AD0800CEA92A /* SmoothBookmarkViewController.h */,
+				79A1A5152269AD0800CEA92A /* SmoothBookmarkViewController.m */,
+				79A1A5072269AD0800CEA92A /* BaseChild */,
+				79A1A50A2269AD0800CEA92A /* Views */,
+			);
+			path = SmoothBookmarker;
+			sourceTree = "<group>";
+		};
+		79A1A5072269AD0800CEA92A /* BaseChild */ = {
+			isa = PBXGroup;
+			children = (
+				79A1A5092269AD0800CEA92A /* BaseBookmarkChildController.h */,
+				79A1A5082269AD0800CEA92A /* BaseBookmarkChildController.m */,
+			);
+			path = BaseChild;
+			sourceTree = "<group>";
+		};
+		79A1A50A2269AD0800CEA92A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				79A1A50B2269AD0800CEA92A /* SmoothBookmarkView.m */,
+				79A1A50C2269AD0800CEA92A /* SmoothTitleView.h */,
+				79A1A50D2269AD0800CEA92A /* BookmarkMainTableView.h */,
+				79A1A50E2269AD0800CEA92A /* CheckConditionCollectionViewCell.m */,
+				79A1A50F2269AD0800CEA92A /* BookmarkContainerView.m */,
+				79A1A5102269AD0800CEA92A /* CheckConditionCollectionViewCell.h */,
+				79A1A5112269AD0800CEA92A /* SmoothTitleView.m */,
+				79A1A5122269AD0800CEA92A /* BookmarkMainTableView.m */,
+				79A1A5132269AD0800CEA92A /* SmoothBookmarkView.h */,
+				79A1A5142269AD0800CEA92A /* BookmarkContainerView.h */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		79BFDCE02142A16000C81069 /* NetRequstAndSocket */ = {
 			isa = PBXGroup;
 			children = (
@@ -1890,6 +1954,7 @@
 				79040D8B2236462A0085335E /* FlutterSubViewController.m in Sources */,
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
 				794CF999225B65AB00A90E3F /* ProtoclForCMutilellViewController.m in Sources */,
+				79A1A5162269AD0800CEA92A /* CheckConditionItem.m in Sources */,
 				33759E77212FAA7200D801C1 /* NSObject+RuntimeHelper.m in Sources */,
 				339B534920F4AB2A003444CB /* ZTKDownHelperManager.m in Sources */,
 				33759E71212FA08900D801C1 /* UIView+MethodSwizze.m in Sources */,
@@ -1911,6 +1976,7 @@
 				33A6A8DC215CC5F3001BE659 /* POPNumberAnimation.m in Sources */,
 				338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */,
 				33A32AF920DB3909008C3969 /* SegementChildViewController.m in Sources */,
+				79A1A51B2269AD0800CEA92A /* SmoothTitleView.m in Sources */,
 				33888FDB20F05DBA00E4A119 /* ImitateSegmentViewController.m in Sources */,
 				333D106520CE74AB004D9241 /* main.m in Sources */,
 				33E6CDD5210034E300422FC7 /* CellModel.m in Sources */,
@@ -1920,6 +1986,7 @@
 				33A32ADE20D90717008C3969 /* SegementTitleView.m in Sources */,
 				339B534A20F4AB2A003444CB /* ZTKLLDownHelper.m in Sources */,
 				33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */,
+				79A1A5182269AD0800CEA92A /* SmoothBookmarkView.m in Sources */,
 				338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */,
 				3362E6A22130FC1300A4B26D /* FBKVOViewController.m in Sources */,
 				33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */,
@@ -1937,6 +2004,7 @@
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
 				79DF39392200499400977BB4 /* LRULinkedMap.m in Sources */,
 				33A32AE920DA789D008C3969 /* UIScrollView+SlideGestureBack.m in Sources */,
+				79A1A51D2269AD0800CEA92A /* SmoothBookmarkViewController.m in Sources */,
 				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
 				33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */,
 				33C2DF3E21DCC66C00F96F32 /* PointTreeOneModelViewController.m in Sources */,
@@ -1951,7 +2019,10 @@
 				79F9A5F5215214B4003704D7 /* NSTimer+WeakTimerBlock.m in Sources */,
 				79EEEA8A218BF30E00848B59 /* ResponderControlView.m in Sources */,
 				79EEEA8F218BF31600848B59 /* UIResponder+UIResponderChain.m in Sources */,
+				79A1A5192269AD0800CEA92A /* CheckConditionCollectionViewCell.m in Sources */,
+				79A1A51C2269AD0800CEA92A /* BookmarkMainTableView.m in Sources */,
 				3378282C2108544300373A20 /* UIImage+Title.m in Sources */,
+				79A1A51A2269AD0800CEA92A /* BookmarkContainerView.m in Sources */,
 				792A731C21EF32730098B94C /* ClassClusterTableViewCellA.m in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
 				33759E7A212FAB2A00D801C1 /* AbstractItem.m in Sources */,
@@ -1978,6 +2049,7 @@
 				33FAE4E720E2445500BE7175 /* WaterfallLayout.m in Sources */,
 				339B534D20F4AE74003444CB /* DownLoadViewController.m in Sources */,
 				33CCB0ED20FDF030002C4FF4 /* HTMiddleControlView.m in Sources */,
+				79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */,
 				33888FE120F05E6B00E4A119 /* SegmentSliderView.m in Sources */,
 				339B536320F4B29B003444CB /* ZSPlayer.m in Sources */,
 				33E6CDD9210035FF00422FC7 /* ThreeLevelTreeView.m in Sources */,
