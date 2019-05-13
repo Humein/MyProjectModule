@@ -12,6 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CheckConditionItem : NSObject
 
+@property (nonatomic,copy)NSString *name;
+
+//@property (nonatomic,strong)UIColor *tintColor;//tagCell的颜色
+
+- (float)titleWidth;
+
+- (float)titleHeight;
+
 @end
 
 NS_ASSUME_NONNULL_END

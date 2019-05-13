@@ -125,6 +125,7 @@
 		79040D8B2236462A0085335E /* FlutterSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79040D8A2236462A0085335E /* FlutterSubViewController.m */; };
 		79040DA12238AA2D0085335E /* AspectTrackMananer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79040DA02238AA2D0085335E /* AspectTrackMananer.m */; };
 		79040DA72238D00D0085335E /* EventList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79040DA62238D00C0085335E /* EventList.plist */; };
+		792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792591EB2285517100E7F734 /* LearnSwiftDemosViewController.swift */; };
 		7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */; };
 		792A730B21EF2FBF0098B94C /* Tree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 792A730921EF2FBE0098B94C /* Tree.plist */; };
 		792A730C21EF2FBF0098B94C /* HomeDatas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 792A730A21EF2FBE0098B94C /* HomeDatas.plist */; };
@@ -150,6 +151,7 @@
 		79A1A51B2269AD0800CEA92A /* SmoothTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5112269AD0800CEA92A /* SmoothTitleView.m */; };
 		79A1A51C2269AD0800CEA92A /* BookmarkMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5122269AD0800CEA92A /* BookmarkMainTableView.m */; };
 		79A1A51D2269AD0800CEA92A /* SmoothBookmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5152269AD0800CEA92A /* SmoothBookmarkViewController.m */; };
+		79A61B9E22881B2300D4D14B /* MineLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 79A61B9D22881B2300D4D14B /* MineLocation.gpx */; };
 		79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFDCE82142A28700C81069 /* StartWaterView.m */; };
 		79C2B663221A646200C40F3A /* RunTimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C2B662221A646200C40F3A /* RunTimeTestViewController.m */; };
 		79CFB323216C879D00218C92 /* NSInvocationForStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CFB322216C879D00218C92 /* NSInvocationForStrategyViewController.m */; };
@@ -444,6 +446,8 @@
 		79040D9F2238AA2D0085335E /* AspectTrackMananer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AspectTrackMananer.h; sourceTree = "<group>"; };
 		79040DA02238AA2D0085335E /* AspectTrackMananer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AspectTrackMananer.m; sourceTree = "<group>"; };
 		79040DA62238D00C0085335E /* EventList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EventList.plist; sourceTree = "<group>"; };
+		792591EA2285517000E7F734 /* MyProjectModule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyProjectModule-Bridging-Header.h"; sourceTree = "<group>"; };
+		792591EB2285517100E7F734 /* LearnSwiftDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSwiftDemosViewController.swift; sourceTree = "<group>"; };
 		7929B49B219FE74B004D335E /* RunLoopDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopDemoViewController.h; sourceTree = "<group>"; };
 		7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopDemoViewController.m; sourceTree = "<group>"; };
 		792A730921EF2FBE0098B94C /* Tree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tree.plist; sourceTree = "<group>"; };
@@ -492,6 +496,7 @@
 		79A1A5132269AD0800CEA92A /* SmoothBookmarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothBookmarkView.h; sourceTree = "<group>"; };
 		79A1A5142269AD0800CEA92A /* BookmarkContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkContainerView.h; sourceTree = "<group>"; };
 		79A1A5152269AD0800CEA92A /* SmoothBookmarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothBookmarkViewController.m; sourceTree = "<group>"; };
+		79A61B9D22881B2300D4D14B /* MineLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MineLocation.gpx; sourceTree = "<group>"; };
 		79BFDCE22142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE42142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE72142A28700C81069 /* StartWaterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartWaterView.h; sourceTree = "<group>"; };
@@ -627,12 +632,15 @@
 				333D105620CE74A9004D9241 /* AppDelegate.m */,
 				333D105820CE74A9004D9241 /* ViewController.h */,
 				333D105920CE74A9004D9241 /* ViewController.m */,
+				792591EB2285517100E7F734 /* LearnSwiftDemosViewController.swift */,
+				79A61B9D22881B2300D4D14B /* MineLocation.gpx */,
 				333D105B20CE74A9004D9241 /* Main.storyboard */,
 				333D105E20CE74AB004D9241 /* Assets.xcassets */,
 				792A730821EF2FBE0098B94C /* localFile */,
 				333D106020CE74AB004D9241 /* LaunchScreen.storyboard */,
 				333D106320CE74AB004D9241 /* Info.plist */,
 				333D106420CE74AB004D9241 /* main.m */,
+				792591EA2285517000E7F734 /* MyProjectModule-Bridging-Header.h */,
 			);
 			path = MyProjectModule;
 			sourceTree = "<group>";
@@ -1812,6 +1820,7 @@
 				TargetAttributes = {
 					333D105120CE74A8004D9241 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 					};
 					333D106920CE74AB004D9241 = {
 						CreatedOnToolsVersion = 9.3;
@@ -1860,6 +1869,7 @@
 				79EEEA4D2182BD4700848B59 /* scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客 - CSDN博客.html in Resources */,
 				333D105D20CE74A9004D9241 /* Main.storyboard in Resources */,
 				33FAE4EF20E2452D00BE7175 /* JHBodyCell.xib in Resources */,
+				79A61B9E22881B2300D4D14B /* MineLocation.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2095,6 +2105,7 @@
 				33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */,
 				794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */,
 				792A731F21EF32800098B94C /* ClassClusterTableViewCellB.m in Sources */,
+				792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */,
 				7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */,
 				33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */,
 				33C971402124108D00EAAD5E /* CustomAlertViewDefault.m in Sources */,
@@ -2269,6 +2280,7 @@
 			baseConfigurationReference = 4C26993B1DAA4E4068C6E736 /* Pods-MyProjectModule.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2DD9667W8X;
 				ENABLE_BITCODE = NO;
@@ -2280,6 +2292,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyProjectModule/MyProjectModule-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2289,6 +2304,7 @@
 			baseConfigurationReference = A36D58F14EAF98187791F3CA /* Pods-MyProjectModule.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2DD9667W8X;
 				ENABLE_BITCODE = NO;
@@ -2300,6 +2316,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyProjectModule/MyProjectModule-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2307,6 +2325,7 @@
 		333D108220CE74AB004D9241 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MR4GTF2765;
@@ -2326,6 +2345,7 @@
 		333D108320CE74AB004D9241 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MR4GTF2765;
@@ -2345,6 +2365,7 @@
 		333D108520CE74AB004D9241 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MR4GTF2765;
 				INFOPLIST_FILE = MyProjectModuleUITests/Info.plist;
@@ -2363,6 +2384,7 @@
 		333D108620CE74AB004D9241 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MR4GTF2765;
 				INFOPLIST_FILE = MyProjectModuleUITests/Info.plist;
