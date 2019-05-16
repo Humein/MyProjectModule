@@ -142,6 +142,10 @@
 		794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */; };
 		794B101121E84A2500B91405 /* ClassClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B101021E84A2500B91405 /* ClassClusterViewController.m */; };
 		794CF999225B65AB00A90E3F /* ProtoclForCMutilellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794CF997225B65AB00A90E3F /* ProtoclForCMutilellViewController.m */; };
+		7993C86A228D68E6001A6BFA /* URLSessionDownManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C868228D68E6001A6BFA /* URLSessionDownManager.m */; };
+		7993C86B228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C869228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m */; };
+		7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C86D228D692A001A6BFA /* DownListViewController.m */; };
+		7993C871228D6A4E001A6BFA /* DownLoadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C870228D6A4E001A6BFA /* DownLoadCell.m */; };
 		7997BE69224090A50054F4D0 /* AbstractAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997BE68224090A50054F4D0 /* AbstractAlertView.m */; };
 		79A1A5162269AD0800CEA92A /* CheckConditionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5042269AD0800CEA92A /* CheckConditionItem.m */; };
 		79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5082269AD0800CEA92A /* BaseBookmarkChildController.m */; };
@@ -478,6 +482,14 @@
 		794CF997225B65AB00A90E3F /* ProtoclForCMutilellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtoclForCMutilellViewController.m; sourceTree = "<group>"; };
 		794CF998225B65AB00A90E3F /* ProtoclForCMutilellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtoclForCMutilellViewController.h; sourceTree = "<group>"; };
 		794CF99B225B661C00A90E3F /* MultiCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiCellProtocol.h; sourceTree = "<group>"; };
+		7993C866228D68E6001A6BFA /* AppDelegate+DownManagerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DownManagerHelper.h"; sourceTree = "<group>"; };
+		7993C867228D68E6001A6BFA /* URLSessionDownManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSessionDownManager.h; sourceTree = "<group>"; };
+		7993C868228D68E6001A6BFA /* URLSessionDownManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSessionDownManager.m; sourceTree = "<group>"; };
+		7993C869228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+DownManagerHelper.m"; sourceTree = "<group>"; };
+		7993C86C228D692A001A6BFA /* DownListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownListViewController.h; sourceTree = "<group>"; };
+		7993C86D228D692A001A6BFA /* DownListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownListViewController.m; sourceTree = "<group>"; };
+		7993C86F228D6A4E001A6BFA /* DownLoadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownLoadCell.h; sourceTree = "<group>"; };
+		7993C870228D6A4E001A6BFA /* DownLoadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownLoadCell.m; sourceTree = "<group>"; };
 		7997BE67224090A50054F4D0 /* AbstractAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractAlertView.h; sourceTree = "<group>"; };
 		7997BE68224090A50054F4D0 /* AbstractAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractAlertView.m; sourceTree = "<group>"; };
 		79A1A5042269AD0800CEA92A /* CheckConditionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckConditionItem.m; sourceTree = "<group>"; };
@@ -1470,6 +1482,18 @@
 			path = "组合模式TreeView";
 			sourceTree = "<group>";
 		};
+		7931A288228C2CC300C231FE /* DownLoadManger */ = {
+			isa = PBXGroup;
+			children = (
+				7993C865228D68E6001A6BFA /* DownHelper */,
+				7993C86C228D692A001A6BFA /* DownListViewController.h */,
+				7993C86D228D692A001A6BFA /* DownListViewController.m */,
+				7993C86F228D6A4E001A6BFA /* DownLoadCell.h */,
+				7993C870228D6A4E001A6BFA /* DownLoadCell.m */,
+			);
+			path = DownLoadManger;
+			sourceTree = "<group>";
+		};
 		794B100321DEF97200B91405 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1543,6 +1567,17 @@
 			path = Swift;
 			sourceTree = "<group>";
 		};
+		7993C865228D68E6001A6BFA /* DownHelper */ = {
+			isa = PBXGroup;
+			children = (
+				7993C867228D68E6001A6BFA /* URLSessionDownManager.h */,
+				7993C868228D68E6001A6BFA /* URLSessionDownManager.m */,
+				7993C866228D68E6001A6BFA /* AppDelegate+DownManagerHelper.h */,
+				7993C869228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m */,
+			);
+			path = DownHelper;
+			sourceTree = "<group>";
+		};
 		79A1A5032269AD0800CEA92A /* SmoothBookmarker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1585,6 +1620,7 @@
 		79BFDCE02142A16000C81069 /* NetRequstAndSocket */ = {
 			isa = PBXGroup;
 			children = (
+				7931A288228C2CC300C231FE /* DownLoadManger */,
 				79BFDCE12142A16000C81069 /* NetRequest */,
 				79BFDCE32142A16000C81069 /* socket */,
 				79E3D63721DE67E00038CACB /* RequestViewController.h */,
@@ -1955,6 +1991,7 @@
 				33CCB0F320FDF099002C4FF4 /* HTBottomControlView.m in Sources */,
 				33CCB0F620FDF185002C4FF4 /* RChainDemoViewController.m in Sources */,
 				33A32B0020DB7D5C008C3969 /* SectionModel.m in Sources */,
+				7993C86B228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m in Sources */,
 				33FAE4F020E2452D00BE7175 /* JHHeaderReusableView.m in Sources */,
 				33888FC320EDCCCB00E4A119 /* CAGradientLayerDemo.m in Sources */,
 				79EEEAAC2190156500848B59 /* PointTreeModel.m in Sources */,
@@ -1967,6 +2004,7 @@
 				79A1A5162269AD0800CEA92A /* CheckConditionItem.m in Sources */,
 				33759E77212FAA7200D801C1 /* NSObject+RuntimeHelper.m in Sources */,
 				339B534920F4AB2A003444CB /* ZTKDownHelperManager.m in Sources */,
+				7993C871228D6A4E001A6BFA /* DownLoadCell.m in Sources */,
 				33759E71212FA08900D801C1 /* UIView+MethodSwizze.m in Sources */,
 				792A731921EF324F0098B94C /* ClassClusterBaseTableViewCell.m in Sources */,
 				33888FE820F06AC900E4A119 /* PaternalSViewController.m in Sources */,
@@ -1997,6 +2035,7 @@
 				339B534A20F4AB2A003444CB /* ZTKLLDownHelper.m in Sources */,
 				33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */,
 				79A1A5182269AD0800CEA92A /* SmoothBookmarkView.m in Sources */,
+				7993C86A228D68E6001A6BFA /* URLSessionDownManager.m in Sources */,
 				338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */,
 				3362E6A22130FC1300A4B26D /* FBKVOViewController.m in Sources */,
 				33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */,
@@ -2017,6 +2056,7 @@
 				79A1A51D2269AD0800CEA92A /* SmoothBookmarkViewController.m in Sources */,
 				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
 				33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */,
+				7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */,
 				33C2DF3E21DCC66C00F96F32 /* PointTreeOneModelViewController.m in Sources */,
 				792A732221EF328D0098B94C /* ClassClusterTableViewCellC.m in Sources */,
 				33C9711F211EB8DC00EAAD5E /* AbstractViewController.m in Sources */,

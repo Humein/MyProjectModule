@@ -1,7 +1,7 @@
 //
 //  LearnSwiftDemosViewController.swift
 //  MyProjectModule
-//
+//  https://www.cnswift.org/a-swift-tour
 //  Created by Zhang Xin Xin on 2019/5/10.
 //  Copyright © 2019 xinxin. All rights reserved.
 //
@@ -30,6 +30,8 @@ class LearnSwiftDemosViewController: UIViewController {
         print(statistics.2)
         
         
+        //MARK: - 函数和闭包
+
         sumOf()
         
         
@@ -66,7 +68,113 @@ class LearnSwiftDemosViewController: UIViewController {
         let sortedNumbers = numbers.sorted { $0 > $1 }
         print(sortedNumbers)
         
+        //MARK: 对象和类
+//        实例化类 对象
+        var shape = Shape()
+        shape.numberOfSides = 10;
+        var shapeDescription = shape.simpleDescription();
+        
+        
+        var nameS = NameShape(name: "NameShape")
+        var shapeName = nameS.name
+        var sDescription = nameS.simpleDescription();
+
+        
+        let test = Square(sideLength: 5.2, name: "my test square")
+        test.area()
+        test.simpleDescription()
+        
+        
+        var triangle = EquilateralTriangle(sideLength: 3.1, name: "a triangle")
+        print(triangle.perimeter)
+        triangle.perimeter = 9.9
+        print(triangle.sideLength)
+        
+        
+        var triangleAndSquare = TriangleAndSquare(size: 10, name: "another test shape")
+        print(triangleAndSquare.square.sideLength)
+        print(triangleAndSquare.triangle.sideLength)
+        triangleAndSquare.square = Square(sideLength: 50, name: "larger square")
+        print(triangleAndSquare.triangle.sideLength)
+
     }
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //MARK: 枚举和结构体
+        let ace = Rank.ace
+        let aceRawValue = ace.rawValue
+        
+        
+        //默认情况下，Swift 从零开始给原始值赋值后边递增，但你可以通过指定特定的值来改变这一行为。在上边的栗子当中，原始值的枚举类型是 Int，所以你只需要确定第一个原始值。剩下的原始值是按照顺序指定的。你同样可以使用字符串或者浮点数作为枚举的原始值。使用 rawValue 属性来访问枚举成员的原始值。
+        
+        //使用 init?(rawValue:) 初始化器来从一个原始值创建枚举的实例。
+        
+        
+        if let convertedRank = Rank(rawValue: 3) {
+            let threeDescription = convertedRank.simpleDescription()
+        }
+        
+        
+        
+        
+        let hearts = Suit.hearts
+        let heartsDescription = hearts.simpleDescription()
+        
+        
+        
+        let success = ServerResponse.result("6:00 am", "8:09 pm")
+        let failure = ServerResponse.failure("Out of cheese.")
+        
+        switch failure {
+        case let .result(sunrise, sunset):
+            print("Sunrise is at \(sunrise) and sunset is at \(sunset).")
+        case let .failure(message):
+            print("Failure...  \(message)")
+        }
+
+        
+        
+        let threeOfSpades = Card(rank: .three, suit: .spades)
+        let threeOfSpadesDescription = threeOfSpades.simpleDescription()
+        
+        
+        //MARK: 协议和扩展
+        
+        var a = SimpleClass()
+        a.adjust()
+        let aDescription = a.simpleDescription
+        
+        var b = SimpleStructure()
+        b.adjust()
+        let bDescription = b.simpleDescription
+        
+        
+        print(7.simpleDescription)
+
+        
+//        print(protocolValue.simpleDescription)
+
+        
+        //MARK: 泛型
+        
+        makeArray(repeating: "knock", numberOfTimes:4)
+        
+        var possibleInteger: OptionalValue<Int> = .none
+        
+        possibleInteger = .some(100)
+        
+        
+    }
+    
+    
+    
+    
+    
+    
     
     //MARK:- 简单值
     
@@ -104,8 +212,52 @@ class LearnSwiftDemosViewController: UIViewController {
         let emptyDictionary = [String: Float]()
         
         
+        // 类型转换
+        let three = 3
+        let pointOneFourOneFiveNine = 0.14159
+        let pi = Double(three) + pointOneFourOneFiveNine
+        
+        //类型别名
+        typealias AudioSample = UInt16
+        
+        var maxAmplitudeFound = AudioSample.min
+
+
+ 
+        //元组 把多个值合并成单一的复合型的值。元组内的值可以是任何类型，而且可以不必是同一类型。
+        let http404Error = (404, "Not Found")
+        
+        let (statusCode, statusMessage) = http404Error
+        print("The status message is \(statusMessage)")
+        print("The status code is \(statusCode)")
+
+        //当你分解元组的时候，如果只需要使用其中的一部分数据，不需要的数据可以用下滑线（ _ ）代替：
+        
+        let (justTheStatusCode, _) = http404Error
+        print("The status code is \(justTheStatusCode)")
+        print("The status code is \(http404Error.1)")
+
+        
+        
+        let possibleNumber = "123e"
+        let convertedNumber = Int(possibleNumber)
+        
+        
+        var serverResponseCode: Int? = 404
+        // serverResponseCode contains an actual Int value of 404
+        serverResponseCode = nil
+        // serverResponseCode now contains no value
+        
+        var surveyAnswer: String?
+        // surveyAnswer is automatically set to nil
+//        Swift 中的 nil 和Objective-C 中的 nil 不同，在 Objective-C 中 nil 是一个指向不存在对象的指针。在 Swift中， nil 不是指针，他是值缺失的一种特殊类型，任何类型的可选项都可以设置成 nil 而不仅仅是对象类型。
+        
+
+
+        
         
         //MARK: - 控制流
+        
         //        使用 if和 switch来做逻辑判断，使用 for-in， for， while，以及 repeat-while来做循环。使用圆括号把条件或者循环变量括起来不再是强制的了，不过仍旧需要使用花括号来括住代码块。
         
         let individualScores = [75, 43, 103, 87, 12]
@@ -118,6 +270,21 @@ class LearnSwiftDemosViewController: UIViewController {
             }
         }
         print(teamScore)
+        
+        
+        
+//        一旦你确定可选中包含值，你可以在可选的名字后面加一个感叹号 （ ! ） 来获取值，感叹号的意思就是说“我知道这个可选项里边有值，展开吧。”这就是所谓的可选值的强制展开。
+        
+//        let convertedNumber = 123
+        
+        if convertedNumber != nil {
+            print("convertedNumber has an integer value of \(convertedNumber!).")
+        }
+        
+        
+        
+        
+        
         
         
         //        在一个 if语句当中，条件必须是布尔表达式——这意味着比如说 if score {...}将会报错，不再隐式地与零做计算了。
@@ -219,7 +386,7 @@ class LearnSwiftDemosViewController: UIViewController {
         
     }
     
-    //MARK: - 函数和闭包
+    //MARK: - 函数和闭包 https://www.cnswift.org/closures
     
     
     //使用 func来声明一个函数。通过在名字之后在圆括号内添加一系列参数来调用这个方法。使用 ->来分隔形式参数名字类型和函数返回的类型。
@@ -308,8 +475,394 @@ class LearnSwiftDemosViewController: UIViewController {
         return number < 10
     }
     
-
-
-    
    
 }
+
+
+//在Swift开发文档中是这样介绍闭包的：闭包是可以在你的代码中被传递和引用的功能性独立模块。Swift 中的闭包和 C  以及 Objective-C 中的 block 很像，还有其他语言中的匿名函数也类似。闭包的作用主要是：能够捕获和存储定义在其上下文中的任何常量和变量的引用， 能够为你处理所有关于捕获的内存管理的操作(概念性问题，可以不用纠结太多啦)。
+
+//闭包的表达式语法
+/*
+ //闭包表达式语法有如下的一般形式：
+
+{ (parameters/接收的参数) -> (return type/闭包返回值类型) in
+        statements/保存在闭包中需要执行的代码
+}
+ 
+ //闭包根据你的需求是有类型的，闭包的类型 一般形式如下:
+ 
+ (parameters/接收的参数) -> (return type/闭包返回值类型)
+ 
+ */
+
+
+//利用typealias为闭包类型定义别名
+//这里我们可以用 typealias 来为看似较为复杂的闭包类型定义别名，这样以后我们就可以用别名直接去申明这样类型的闭包了，例子如下：
+
+//typealias <type name> = <type expression>
+
+public typealias successBlk = (Any)->()
+
+public typealias failureBlk = (NSError)->()
+
+//为没有参数也没有返回值的闭包类型起一个别名
+typealias Nothing = () -> ()
+
+//如果闭包的没有返回值，那么我们还可以这样写，
+typealias Anything = () -> Void
+
+//为接受一个Int类型的参数不返回任何值的闭包类型 定义一个别名：PrintNumber
+typealias PrintNumber = (Int) -> ()
+
+//为接受两个Int类型的参数并且返回一个Int类型的值的闭包类型 定义一个别名：Adds
+typealias Adds = (Int, Int) -> (Int)
+
+
+//闭包的创建、赋值、调用 https://www.jianshu.com/p/7c599b96815b
+//闭包表达式语法能够使用常量形式参数、变量形式参数和输入输出形式参数，但不能提供默认值。可变形式参数也能使用，但需要在形式参数列表的最后面使用。元组也可被用来作为形式参数和返回类型。在闭包的中会用到一个关键字in，in 可以看做是一个分割符，他把该闭包的类型和闭包的函数体分开，in前面是该闭包的类型，in后面是具体闭包调用时保存的需要执行的代码。表示该闭包的形式参数类型和返回类型定义已经完成，并且闭包的函数体即将开始执行。这里总结了一下可能用到的几种形式实现闭包的创建、赋值、调用的过程。例子如下:
+
+
+//** 方式一：利用typealias最完整的创建**
+
+//为(_ num1: Int, _ num2: Int) -> (Int) 类型的闭包定义别名：Add
+typealias Add = (_ num1: Int, _ num2: Int) -> (Int)
+//创建一个 Add 类型的闭包常量：addClose
+//为已经创建好的常量 addClose 赋值
+let addClose: Add = {
+    (_ num1: Int, _ num2: Int) -> (Int) in
+    return num1 + num2
+}
+//调用闭包并接受返回值
+//let result = addCloser1(20, 10)
+
+typealias block = (Int, Int) -> Int
+let sum: block = {(a, b) in
+    return a + b
+}
+//print(sum(10, 15))
+
+/*
+
+//一、定义闭包名称
+typealias firstClosure = (Int,Int)->(Int)
+
+//二、创建闭包常量
+let cownUp : firstClosure
+let cownDown :firstClosure
+
+//三、为闭包赋值(定义闭包的格式及算式)
+cownUp = {(_ num1:Int,_ num2:Int) -> (Int) in
+    return num1+num2
+    
+}
+
+cownDown = {(_ num1:Int, _ num2:Int) -> (Int) in
+    return num1 - num2
+}
+
+//四、调用闭包（第三步的时候的值就有了）
+cownUp(1,3)
+cownDown(8,7)
+
+//实例
+//三 为闭包赋值
+
+newVC.getWord = { [weak self] num in
+    
+    self?.clouseLabel.text = num
+    
+}
+
+*/
+
+
+//MARK: 对象和类
+
+//    通过在 class后接类名称来创建一个类。在类里边声明属性与声明常量或者变量的方法是相同的，唯一的区别的它们在类环境下。同样的，方法和函数的声明也是相同的写法。
+
+class Shape {
+    var numberOfSides = 0
+    func simpleDescription() -> String {
+        return "A shape with \(numberOfSides) sides."
+    }
+}
+
+//这个 Shape类的版本缺失了一些重要的东西：一个用在创建实例的时候来设置类的初始化器。使用 init来创建一个初始化器。
+
+class NameShape {
+    var numberOfSides: Int = 0
+    var name: String
+    
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    func simpleDescription() -> String {
+        
+        return "A shape with \(numberOfSides) sides."
+    }
+    
+    
+}
+
+
+//声明子类就在它名字后面跟上父类的名字，用冒号分隔。创建类不需要从什么标准根类来继承，所以你可以按需包含或者去掉父类声明。
+//
+//子类的方法如果要重写父类的实现，则需要使用 override——不使用 override关键字来标记则会导致编译器报错。编译器同样也会检测使用 override的方法是否存在于父类当中。
+
+
+class Square: NameShape {
+    var sideLength: Double
+    
+    init(sideLength: Double, name: String) {
+        self.sideLength = sideLength
+        super.init(name: name)
+        numberOfSides = 4
+    }
+    
+    func area() -> Double {
+        return sideLength * sideLength
+    }
+    
+    override func simpleDescription() -> String {
+        return "A square with sides of length \(sideLength)."
+    }
+
+}
+
+
+
+//    除了存储属性，你也可以拥有带有 getter 和 setter 的计算属性。
+
+class EquilateralTriangle: NameShape {
+    var sideLength: Double = 0.0
+    
+    init(sideLength: Double, name: String) {
+        self.sideLength = sideLength
+        super.init(name: name)
+        numberOfSides = 3
+    }
+    
+    var perimeter: Double {
+        get {
+            return 3.0 * sideLength
+        }
+        set {
+            sideLength = newValue / 3.0
+        }
+    }
+    
+    override func simpleDescription() -> String {
+        return "An equilateral triangle with sides of length \(sideLength)."
+    }
+}
+
+
+//在 perimeter的 setter 中，新值被隐式地命名为 newValue。你可以提供一个显式的名字放在 set 后边的圆括号里。
+//
+//注意 EquilateralTriangle类的初始化器有三个不同的步骤：
+//
+//设定子类声明的属性的值；
+//调用父类的初始化器；
+//改变父类定义的属性中的值，以及其他任何使用方法，getter 或者 setter 等需要在这时候完成的内容。
+//如果你不需要计算属性但仍然需要在设置一个新值的前后执行代码，使用 willSet和 didSet。比如说，下面的类确保三角形的边长始终和正方形的边长相同。
+
+
+class TriangleAndSquare {
+    var triangle: EquilateralTriangle {
+        willSet {
+            square.sideLength = newValue.sideLength
+        }
+    }
+    var square: Square {
+        willSet {
+            triangle.sideLength = newValue.sideLength
+        }
+    }
+    init(size: Double, name: String) {
+        square = Square(sideLength: size, name: name)
+        triangle = EquilateralTriangle(sideLength: size, name: name)
+        
+        //当你操作可选项的值的时候，你可以在可选项前边使用 ?比如方法，属性和下标脚本。如果 ?前的值是 nil，那 ?后的所有内容都会被忽略并且整个表达式的值都是 nil。否则，可选项的值将被展开，然后 ?后边的代码根据展开的值执行。在这两种情况当中，表达式的值是一个可选的值。
+        
+        let optionalSquare: Square? = Square(sideLength: 2.5, name: "optional square")
+        let sideLength = optionalSquare?.sideLength
+        
+    }
+
+}
+
+
+
+//MARK: 枚举和结构体
+
+
+//使用 enum来创建枚举，类似于类和其他所有的命名类型，枚举也能够包含方法。
+
+
+enum Rank: Int {
+    case ace = 1
+    case two, three, four, five, six, seven, eight, nine, ten
+    case jack, queen, king
+    func simpleDescription() -> String {
+        switch self {
+        case .ace:
+            return "ace"
+        case .jack:
+            return "jack"
+        case .queen:
+            return "queen"
+        case .king:
+            return "king"
+        default:
+            return String(self.rawValue)
+        }
+    }
+}
+
+// 枚举成员的值是实际的值，不是原始值的另一种写法。事实上，在这种情况下没有一个有意义的原始值，你根本没有必要提供一个。
+
+
+enum Suit {
+    case spades, hearts, diamonds, clubs
+    func simpleDescription() -> String {
+        switch self {
+        case .spades:
+            return "spades"
+        case .hearts:
+            return "hearts"
+        case .diamonds:
+            return "diamonds"
+        case .clubs:
+            return "clubs"
+        }
+    }
+}
+
+
+//注意有两种方法可以调用枚举的 hearts成员：当给 hearts指定一个常量时，枚举成员 Suit.hearts会被以全名的方式调用因为常量并没有显式地指定类型。在 Switch 语句当中，枚举成员可以通过缩写的方式 .hearts被调用，因为 self已经明确了是 suit。你可以在任何值的类型已经明确的场景下使用使用缩写。
+//
+//如果枚举拥有原始值，这些值在声明时确定，就是说每一个这个枚举的实例都将拥有相同的原始值。另一个选择是让case与值关联——这些值在你初始化实例的时候确定，这样它们就可以在每个实例中不同了。比如说，考虑在服务器上请求日出和日落时间的case，服务器要么返回请求的信息，要么返回错误信息。
+enum ServerResponse {
+    case result(String, String)
+    case failure(String)
+}
+
+
+//
+//注意现在日出和日落时间是从 ServerResponse 值中以switch case 匹配的形式取出的。
+//
+//使用 struct来创建结构体。结构体提供很多类似与类的行为，包括方法和初始化器。
+//其中最重要的一点区别就是结构体总是会在传递的时候拷贝其自身，而类则会传递引用。
+
+struct Card {
+    var rank: Rank
+    var suit: Suit
+    func simpleDescription() -> String {
+        return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
+    }
+}
+
+
+// MARK: 协议和扩展
+
+//使用 protocol来声明协议。
+protocol ExampleProtocol {
+    var simpleDescription: String { get }
+    mutating func adjust()
+}
+
+
+//类，枚举以及结构体都兼容协议。
+
+class SimpleClass: ExampleProtocol {
+    var simpleDescription: String = "A very simple class."
+    var anotherProperty: Int = 69105
+    func adjust() {
+        simpleDescription += "  Now 100% adjusted."
+    }
+}
+
+
+struct SimpleStructure: ExampleProtocol {
+    var simpleDescription: String = "A simple structure"
+    mutating func adjust() {
+        simpleDescription += " (adjusted)"
+    }
+}
+
+//注意使用 mutating关键字来声明在 SimpleStructure中使方法可以修改结构体。在 SimpleClass中则不需要这样声明，因为类里的方法总是可以修改其自身属性的。
+//
+
+//使用 extension来给现存的类型增加功能，比如说新的方法和计算属性。你可以使用扩展来使协议来别处定义的类型，或者你导入的其他库或框架。
+
+extension Int: ExampleProtocol {
+    var simpleDescription: String {
+        return "The number \(self)"
+    }
+    mutating func adjust() {
+        self += 42
+    }
+}
+
+
+//你可以使用协议名称就像其他命名类型一样——比如说，创建一个拥有不同类型但是都遵循同一个协议的对象的集合。当你操作类型是协议类型的值的时候，协议外定义的方法是不可用的。
+
+//as! 转译类型
+//let protocolValue: ExampleProtocol = ExampleProtocol.self as! ExampleProtocol
+
+
+//MARK: 错误处理
+
+//你可以用任何遵循 Error 协议的类型来表示错误。
+enum PrinterError: Error {
+    case outOfPaper
+    case noToner
+    case onFire
+}
+
+
+//使用 throw 来抛出一个错误并且用 throws 来标记一个可以抛出错误的函数。如果你在函数里抛出一个错误，函数会立即返回并且调用函数的代码会处理错误。
+
+func send(job: Int, toPrinter printerName: String) throws -> String {
+    if printerName == "Never Has Toner" {
+        throw PrinterError.noToner
+    }
+    
+    
+    //有好几种方法来处理错误。一种是使用 do-catch 。在 do 代码块里，你用 try 来在能抛出错误的函数前标记。在 catch 代码块，错误会自动赋予名字 error ，如果你不给定其他名字的话。
+    do {
+        let printerResponse = try send(job: 1040, toPrinter: "Bi Sheng")
+        print(printerResponse)
+    } catch {
+        print(error)
+    }
+    
+    return "Job sent"
+}
+
+
+//MARK: 泛型
+//把名字写在尖括号里来创建一个泛型方法或者类型。
+
+func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
+    
+    var result = [Item]()
+    
+    for _ in 0..<numberOfTimes {
+        result.append(item)
+    }
+    
+    return result
+}
+
+//你可以从函数和方法同时还有类，枚举以及结构体创建泛型。
+
+ enum OptionalValue<Wrapped> {
+    case none
+    case some(Wrapped)
+}
+
+
+

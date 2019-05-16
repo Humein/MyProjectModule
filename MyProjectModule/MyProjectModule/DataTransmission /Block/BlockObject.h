@@ -6,6 +6,8 @@
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
 
+//(returnType(^blockName)(parameter))block
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 @interface BlockObject : UIViewController
@@ -17,7 +19,6 @@ typedef void(^ClickButtonBlock)(NSUInteger buttonType, UIButton * clickButton);
 typedef void (^PopBlock)(void);
 @property (nonatomic,copy)  void (^rightBarItemClickBlock)(UIButton *button, NSInteger index);
 @property (nonatomic,copy) PopBlock popBlock;
-
 
 
 #pragma mark --- 2 无返回值 有参数 匿名(参数)  block （1-异步回调  2- 无需实例对象 配置对象的参数）
