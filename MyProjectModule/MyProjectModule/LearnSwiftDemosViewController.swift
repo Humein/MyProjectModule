@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class LearnSwiftDemosViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -68,6 +69,11 @@ class LearnSwiftDemosViewController: UIViewController {
         let sortedNumbers = numbers.sorted { $0 > $1 }
         print(sortedNumbers)
         
+
+        
+
+        
+        
         //MARK: 对象和类
 //        实例化类 对象
         var shape = Shape()
@@ -96,6 +102,11 @@ class LearnSwiftDemosViewController: UIViewController {
         print(triangleAndSquare.triangle.sideLength)
         triangleAndSquare.square = Square(sideLength: 50, name: "larger square")
         print(triangleAndSquare.triangle.sideLength)
+        
+        
+        
+        
+        collectConatin()
 
     }
     
@@ -248,6 +259,7 @@ class LearnSwiftDemosViewController: UIViewController {
         serverResponseCode = nil
         // serverResponseCode now contains no value
         
+//        https://www.jianshu.com/p/89a2afb82488
         var surveyAnswer: String?
         // surveyAnswer is automatically set to nil
 //        Swift 中的 nil 和Objective-C 中的 nil 不同，在 Objective-C 中 nil 是一个指向不存在对象的指针。在 Swift中， nil 不是指针，他是值缺失的一种特殊类型，任何类型的可选项都可以设置成 nil 而不仅仅是对象类型。
@@ -479,6 +491,36 @@ class LearnSwiftDemosViewController: UIViewController {
 }
 
 
+
+//MARK: 闭包
+
+
+//        闭包能够捕获和存储定义在其上下文中的任何常量和变量的引用，这也就是所谓的闭合并包裹那些常量和变量，因此被称为“闭包”，Swift 能够为你处理所有关于捕获的内存管理的操作。
+//
+//        在函数章节中有介绍的全局和内嵌函数，实际上是特殊的闭包。闭包符合如下三种形式中的一种：
+//
+//        全局函数是一个有名字但不会捕获任何值的闭包；
+//        内嵌函数是一个有名字且能从其上层函数捕获值的闭包；
+//        闭包表达式是一个轻量级语法所写的可以捕获其上下文中常量或变量值的没有名字的闭包。
+
+/*https://www.cnswift.org/closures
+ Swift 的闭包表达式拥有简洁的风格，鼓励在常见场景中实现简洁，无累赘的语法。常见的优化包括：
+ 
+ 利用上下文推断形式参数和返回值的类型；
+ 单表达式的闭包可以隐式返回；
+ 简写实际参数名；
+ 尾随闭包语法。
+ */
+
+
+/*闭包表达式语法有如下的一般形式：
+ 
+{ (parameters) -> (return type) in
+    statements
+}
+*/
+
+
 //在Swift开发文档中是这样介绍闭包的：闭包是可以在你的代码中被传递和引用的功能性独立模块。Swift 中的闭包和 C  以及 Objective-C 中的 block 很像，还有其他语言中的匿名函数也类似。闭包的作用主要是：能够捕获和存储定义在其上下文中的任何常量和变量的引用， 能够为你处理所有关于捕获的内存管理的操作(概念性问题，可以不用纠结太多啦)。
 
 //闭包的表达式语法
@@ -532,6 +574,29 @@ let addClose: Add = {
     (_ num1: Int, _ num2: Int) -> (Int) in
     return num1 + num2
 }
+
+
+/*场景一：利用闭包传值
+ 
+*/
+
+/*场景二：闭包作为函数的参数
+ 
+ //为接受一个Int类型的参数并且返回一个Int类型的值的闭包类型定义一个别名：Number
+ typealias Number = (num1: Int) -> (Int)
+ //定义一个接收Number类型的参数没有返回值的方法
+ func Text(num: Number) {
+ //code
+ }
+
+*/
+
+
+/*使用闭包可能引起的循环强引用
+ Swift中不当的使用闭包可能会引起循环强引用，之所以称之为“强”引用，是因为它会将实例保持住，只要强引用还在，实例是不允许被销毁的。循环强引用会一直阻止类实例的释放，这就在你的应用程序中造成了内存泄漏。
+*/
+
+
 //调用闭包并接受返回值
 //let result = addCloser1(20, 10)
 
@@ -539,6 +604,10 @@ typealias block = (Int, Int) -> Int
 let sum: block = {(a, b) in
     return a + b
 }
+
+
+
+
 //print(sum(10, 15))
 
 /*
@@ -574,6 +643,7 @@ newVC.getWord = { [weak self] num in
 }
 
 */
+
 
 
 //MARK: 对象和类
@@ -809,7 +879,9 @@ extension Int: ExampleProtocol {
 
 //你可以使用协议名称就像其他命名类型一样——比如说，创建一个拥有不同类型但是都遵循同一个协议的对象的集合。当你操作类型是协议类型的值的时候，协议外定义的方法是不可用的。
 
-//as! 转译类型
+//as! 转译类型  向下转型（Downcasting）时使用。由于是强制类型转换，如果转换失败会报 runtime 运行错误。  as? 和 as! 操作符的转换规则完全一样。但 as? 如果转换不成功的时候便会返回一个 nil 对象。成功的话返回可选类型值。由于 as? 在转换失败的时候也不会出现错误，所以对于如果能确保100%会成功的转换则可使用 as!，否则使用 as?
+
+
 //let protocolValue: ExampleProtocol = ExampleProtocol.self as! ExampleProtocol
 
 
@@ -864,5 +936,70 @@ func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
     case some(Wrapped)
 }
 
+//MARK: 集合
 
+func collectConatin() -> () {
+    var teamArray = Array<Float>()
+    
+    
+    let someInts = [Int]()
+    
+    let sameInts = [Int]()
+    
+    var shoppingList: [String] = ["Eggs", "Milk"]
+
+
+    var sixDoubles = sameInts + someInts
+
+    print("someInts is of type [Int] with \(someInts.count) items.")
+
+    for item in sixDoubles {
+        print(item)
+    }
+    
+    for (index, value) in sixDoubles.enumerated() {
+        
+        print("Item \(index + 1): \(value)")
+    }
+    
+    var letters = Set<NSString>()
+    
+    print("letters is of type Set<Character> with \(letters.count) items.")
+
+    letters.insert("Jazz")
+    letters.contains("Funk")
+    
+    
+    var favoriteGenres: Set<String> = ["Rock", "Classical", "Hip hop"]
+
+//    Swift 的 Set类型是无序的。要以特定的顺序遍历合集的值，使用 sorted()方法，它把合集的元素作为使用 < 运算符排序了的数组返回。
+    for genre in favoriteGenres.sorted() {
+        print("\(genre)")
+    }
+
+    var namesOfIntegers = [Int: String]()
+
+    namesOfIntegers[16] = "sixteen"
+
+    namesOfIntegers = [:]
+
+    
+    var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
+    var airportsB = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
+
+    
+    airports["LHR"] = "London Heathrow"
+
+
+    if let oldValue = airports.updateValue("Dublin Airport", forKey: "DUB") {
+        print("The old value for DUB was \(oldValue).")
+    }
+    
+    for (airportCode, airportName) in airports {
+        print("\(airportCode): \(airportName)")
+    }
+    
+    
+    
+}
 

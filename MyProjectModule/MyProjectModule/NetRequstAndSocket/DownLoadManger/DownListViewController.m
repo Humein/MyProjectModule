@@ -48,10 +48,6 @@
     tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView = tableView;
     
-    
-    
-    
-    
     [[URLSessionDownManager shareInstance] addDownloadToolDelegate:self];
 }
 

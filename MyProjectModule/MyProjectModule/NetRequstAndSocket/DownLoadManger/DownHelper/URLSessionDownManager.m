@@ -553,7 +553,7 @@ static URLSessionDownManager *_shareInstance;
         
         if (currentSource) {
             currentSource.filedownState = XXDownloadStateFinished;
-            [(NSMutableArray *)self.downloadSources removeObject:currentSource];
+//            [(NSMutableArray *)self.downloadSources removeObject:currentSource];
             [self saveDownloadSource];
             for (XXDownloadToolDelegateObject *delegateObj in self.delegateArr) {
                 if ([delegateObj.delegate respondsToSelector:@selector(downloadToolDidFinish:downloadItem:)]) {
