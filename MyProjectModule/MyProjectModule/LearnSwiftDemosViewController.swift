@@ -11,6 +11,16 @@ import UIKit
 
 class LearnSwiftDemosViewController: UIViewController {
 
+    //MARK: - 惰性初始化
+    
+    private lazy var textBtn: UIButton = UIButton()
+    
+    //    第一种，简单表达式
+    lazy var first = NSArray(objects: "1","2")
+    //    第二种，闭包
+    lazy var second:String = { return "second" }()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -1002,4 +1012,146 @@ func collectConatin() -> () {
     
     
 }
+
+//MARK: 算法
+ func algorithmTest() -> Void {
+  
+    //Binary Search Algorithm is an example of O(log n) complexity.
+    var j = 1
+    let n = 10
+    while j < n {
+        // do constant time stuff
+        j *= 2
+    }
+    
+    //Array Traversal and Linear Search are examples of O(n) complexity.
+    let array =  Array<Int>()
+    for i in stride(from: 0, to: n, by: 1) {
+        print(array[i])
+    }
+    
+    // Merge Sort and Heap Sort are examples of O(n log n) complexity.
+    for i in stride(from: 0, to: n, by: 1) {
+        var j = 1
+        while j < n {
+            j *= 2
+            // do constant time stuff
+        }
+    }
+    
+    for i in stride(from: 0, to: n, by: 1) {
+        func index(after i: Int) -> Int? { // multiplies `i` by 2 until `i` >= `n`
+            return i < n ? i * 2 : nil
+        }
+        for j in sequence(first: 1, next: index(after:)) {
+            // do constant time stuff
+        }
+    }
+
+    
+//    Traversing a simple 2-D array and Bubble Sort are examples of O(n^2) complexity.
+    for i  in stride(from: 0, to: n, by: 1) {
+        for j in stride(from: 1, to: n, by: 1) {
+            // do constant time stuff
+        }
+    }
+    
+    
+//    O(n^3)
+    for i in stride(from: 0, to: n, by: 1) {
+        for j in stride(from: 1, to: n, by: 1) {
+            for k in stride(from: 1, to: n, by: 1) {
+                // do constant time stuff
+            }
+        }
+    }
+    
+    
+//    Algorithms with running time O(2^N) are often recursive algorithms that solve a problem of size N by recursively solving two smaller problems of size N-1. The following example prints all the moves necessary to solve the famous "Towers of Hanoi" problem for N disks.
+    
+    func solveHanoi(n: Int, from: String, to: String, spare: String) {
+        
+        guard n >= 1 else { return }
+        
+        if n > 1 {
+            solveHanoi(n: n - 1, from: from, to: spare, spare: to)
+        } else {
+            solveHanoi(n: n - 1, from: spare, to: to, spare: from)
+        }
+    }
+
+    
+    
+}
+
+
+//A stack is easy to create in Swift. It's just a wrapper around an array that just lets you push, pop, and look at the top element of the stack:
+/*
+ Notice that a push puts the new element at the end of the array, not the beginning. Inserting at the beginning of an array is expensive, an O(n) operation, because it requires all existing array elements to be shifted in memory. Adding at the end is O(1); it always takes the same amount of time, regardless of the size of the array.
+ 
+ Fun fact about stacks: Each time you call a function or a method, the CPU places the return address on a stack. When the function ends, the CPU uses that return address to jump back to the caller. That's why if you call too many functions -- for example in a recursive function that never ends -- you get a so-called "stack overflow" as the CPU stack has run out of space.
+ 
+ */
+
+public struct Stack<T> {
+    
+    fileprivate var array = [T]()
+    
+    public var isEmpty: Bool {
+        return array.isEmpty
+    }
+    
+    public var count: Int {
+        return array.count
+    }
+    
+    public mutating func push(_ element: T) {
+        array.append(element)
+    }
+    
+    public mutating func pop() -> T? {
+        return array.popLast()
+    }
+    
+    public var top: T? {
+        return array.last
+    }
+}
+
+
+// Here is a simplistic implementation of a queue in Swift. It is a wrapper around an array to enqueue, dequeue, and peek at the front-most item:
+
+/*
+ Note: A queue is not always the best choice. If the order in which the items are added and removed from the list is not important, you can use a stack instead of a queue. Stacks are simpler and faster.
+
+ */
+
+public struct Queue<T> {
+    fileprivate var array = [T]()
+    
+    public var isEmpty: Bool {
+        return array.isEmpty
+    }
+    
+    public var count: Int {
+        return array.count
+    }
+    
+    public mutating func enqueue(_ element: T) {
+        array.append(element)
+    }
+    
+    public mutating func dequeue() -> T? {
+        if isEmpty {
+            return nil
+        } else {
+            return array.removeFirst()
+        }
+    }
+    
+    public var front: T? {
+        return array.first
+    }
+}
+
 
