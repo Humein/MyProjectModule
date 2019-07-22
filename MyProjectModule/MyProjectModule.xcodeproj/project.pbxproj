@@ -142,6 +142,10 @@
 		794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */; };
 		794B101121E84A2500B91405 /* ClassClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B101021E84A2500B91405 /* ClassClusterViewController.m */; };
 		794CF999225B65AB00A90E3F /* ProtoclForCMutilellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794CF997225B65AB00A90E3F /* ProtoclForCMutilellViewController.m */; };
+		795FF3E522E5AE0700CCC8B9 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3E422E5AE0700CCC8B9 /* FirstView.swift */; };
+		795FF3E722E5AE1500CCC8B9 /* SecendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3E622E5AE1500CCC8B9 /* SecendView.swift */; };
+		795FF3E922E5AE2300CCC8B9 /* AbstractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3E822E5AE2300CCC8B9 /* AbstractView.swift */; };
+		795FF3EB22E5B26900CCC8B9 /* SwiftDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3EA22E5B26900CCC8B9 /* SwiftDemoViewController.swift */; };
 		7993C86A228D68E6001A6BFA /* URLSessionDownManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C868228D68E6001A6BFA /* URLSessionDownManager.m */; };
 		7993C86B228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C869228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m */; };
 		7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C86D228D692A001A6BFA /* DownListViewController.m */; };
@@ -482,6 +486,10 @@
 		794CF997225B65AB00A90E3F /* ProtoclForCMutilellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtoclForCMutilellViewController.m; sourceTree = "<group>"; };
 		794CF998225B65AB00A90E3F /* ProtoclForCMutilellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtoclForCMutilellViewController.h; sourceTree = "<group>"; };
 		794CF99B225B661C00A90E3F /* MultiCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiCellProtocol.h; sourceTree = "<group>"; };
+		795FF3E422E5AE0700CCC8B9 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		795FF3E622E5AE1500CCC8B9 /* SecendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecendView.swift; sourceTree = "<group>"; };
+		795FF3E822E5AE2300CCC8B9 /* AbstractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractView.swift; sourceTree = "<group>"; };
+		795FF3EA22E5B26900CCC8B9 /* SwiftDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemoViewController.swift; sourceTree = "<group>"; };
 		7993C866228D68E6001A6BFA /* AppDelegate+DownManagerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DownManagerHelper.h"; sourceTree = "<group>"; };
 		7993C867228D68E6001A6BFA /* URLSessionDownManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSessionDownManager.h; sourceTree = "<group>"; };
 		7993C868228D68E6001A6BFA /* URLSessionDownManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSessionDownManager.m; sourceTree = "<group>"; };
@@ -1560,9 +1568,21 @@
 			path = ProtoclHelper;
 			sourceTree = "<group>";
 		};
+		795FF3E322E5AD4900CCC8B9 /* 面向协议 */ = {
+			isa = PBXGroup;
+			children = (
+				795FF3E422E5AE0700CCC8B9 /* FirstView.swift */,
+				795FF3E622E5AE1500CCC8B9 /* SecendView.swift */,
+				795FF3E822E5AE2300CCC8B9 /* AbstractView.swift */,
+				795FF3EA22E5B26900CCC8B9 /* SwiftDemoViewController.swift */,
+			);
+			path = "面向协议";
+			sourceTree = "<group>";
+		};
 		79794CCA22520E2200784BFF /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				795FF3E322E5AD4900CCC8B9 /* 面向协议 */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -2044,6 +2064,7 @@
 				3378281C21084A6E00373A20 /* Condiment.m in Sources */,
 				33C2DF3521DCC5D400F96F32 /* PointTreeOnlyOneModel.m in Sources */,
 				33E6CE0521006D2000422FC7 /* CreatTreeView.m in Sources */,
+				795FF3EB22E5B26900CCC8B9 /* SwiftDemoViewController.swift in Sources */,
 				33759E74212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.m in Sources */,
 				33888FD420F05ADB00E4A119 /* PaternalViewController.m in Sources */,
 				33A32AF520DA8044008C3969 /* SegementPersonDemoViewController.m in Sources */,
@@ -2051,11 +2072,13 @@
 				79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */,
 				79EEEA96218EEBA200848B59 /* InterfacePlayerView.m in Sources */,
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
+				795FF3E522E5AE0700CCC8B9 /* FirstView.swift in Sources */,
 				79DF39392200499400977BB4 /* LRULinkedMap.m in Sources */,
 				33A32AE920DA789D008C3969 /* UIScrollView+SlideGestureBack.m in Sources */,
 				79A1A51D2269AD0800CEA92A /* SmoothBookmarkViewController.m in Sources */,
 				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
 				33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */,
+				795FF3E722E5AE1500CCC8B9 /* SecendView.swift in Sources */,
 				7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */,
 				33C2DF3E21DCC66C00F96F32 /* PointTreeOneModelViewController.m in Sources */,
 				792A732221EF328D0098B94C /* ClassClusterTableViewCellC.m in Sources */,
@@ -2083,6 +2106,7 @@
 				33E6CE0721006D2000422FC7 /* UITableViewCell+AnimationType.m in Sources */,
 				792A731121EF30880098B94C /* ClassClusterModel.m in Sources */,
 				33FAE4E520E2445500BE7175 /* HeaderSuspendedLayout.m in Sources */,
+				795FF3E922E5AE2300CCC8B9 /* AbstractView.swift in Sources */,
 				7901F9A221A678CE005BE8A6 /* NSTimerObserver.m in Sources */,
 				338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */,
 				33782829210853B800373A20 /* UIImage+Shadow.m in Sources */,
