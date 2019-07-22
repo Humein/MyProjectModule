@@ -1123,6 +1123,10 @@ public struct Stack<T> {
 
 /*
  Note: A queue is not always the best choice. If the order in which the items are added and removed from the list is not important, you can use a stack instead of a queue. Stacks are simpler and faster.
+ 
+ Resizing includes allocating new memory and copying all the existing data over to the new array. This is an O(n) process which is relatively slow. Since it happens occasionally, the time for appending a new element to the end of the array is still O(1) on average or O(1) "amortized".
+ 
+ The story for dequeueing is different. To dequeue, we remove the element from the beginning of the array. This is always an O(n) operation because it requires all remaining array elements to be shifted in memory.
 
  */
 
@@ -1154,4 +1158,44 @@ public struct Queue<T> {
     }
 }
 
+// 优化
+public struct QueueBetter<T> {
+    fileprivate var array = [T?]()
+    fileprivate var head = 0
+    
+    public var isEmpty: Bool {
+        return count == 0
+    }
+    
+    public var count: Int {
+        return array.count - head
+    }
+    
+    public mutating func enqueue(_ element: T) {
+        array.append(element)
+    }
+    
+    public mutating func dequeue() -> T? {
+        guard head < array.count, let element = array[head] else { return nil }
+        
+        array[head] = nil
+        head += 1
+        
+        let percentage = Double(head)/Double(array.count)
+        if array.count > 50 && percentage > 0.25 {
+            array.removeFirst(head)
+            head = 0
+        }
+        
+        return element
+    }
+    
+    public var front: T? {
+        if isEmpty {
+            return nil
+        } else {
+            return array[head]
+        }
+    }
+}
 
