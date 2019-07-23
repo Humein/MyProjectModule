@@ -72,7 +72,7 @@
 
     
     self.itemList = [NSMutableArray array];
-    NSArray *list = [NSArray arrayWithObjects:@"SwiftDemoViewController", @"DownListViewController",@"LearnSwiftDemosViewController", @"colloctionViewController",@"DrawViewController",@"SegementDemoViewController",@"SegementPersonDemoViewController",@"SegementChildViewController",@"CollectionSectionViewController",@"PaternalViewController",@"PaternalSViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",nil];
+    NSArray *list = [NSArray arrayWithObjects:@"SwiftDemosViewController", @"DownListViewController",@"LearnSwiftDemosViewController", @"colloctionViewController",@"DrawViewController",@"SegementDemoViewController",@"SegementPersonDemoViewController",@"SegementChildViewController",@"CollectionSectionViewController",@"PaternalViewController",@"PaternalSViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",nil];
 
     [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { 
         CellModel *model =  [CellModel new];
@@ -127,7 +127,7 @@
     self.view.backgroundColor = [UIColor redColor];
     self.tableView.FromPoint = CGPointMake(0, 80);
     self.tableView.isSelectIndexToHidden= YES;
-    self.tableView.tableViewFrame= CGRectMake(0, 0 , self.view.frame.size.width, 30 * self.itemList.count - 60 );
+    self.tableView.tableViewFrame= CGRectMake(0, 0 , self.view.frame.size.width, 30 * self.itemList.count - 80-50);
     self.tableView.tableView.layer.cornerRadius= 4;
     self.tableView.tableView.contentInset=UIEdgeInsetsMake(0, 0, 0, 0);
     
@@ -165,7 +165,7 @@
     Class class = NSClassFromString(item.title);
     UIViewController *VC = [[class alloc] init];
     if (VC == nil) {
-        LearnSwiftDemosViewController *userSetSwift = [[LearnSwiftDemosViewController alloc] init];
+        SwiftDemosViewController *userSetSwift = [[SwiftDemosViewController alloc] init];
         userSetSwift.hidesBottomBarWhenPushed= YES;
         [self.navigationController pushViewController:userSetSwift animated:YES];
     }

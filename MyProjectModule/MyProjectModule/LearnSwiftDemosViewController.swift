@@ -24,11 +24,7 @@ class LearnSwiftDemosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let f = FirstView()
-        let s = SecendView()
-        
-        f.eat()
-        s.eat()
+
         
         self.learnSwift()
         
