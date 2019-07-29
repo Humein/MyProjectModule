@@ -556,6 +556,10 @@ class LearnSwiftDemosViewController: UIViewController {
 
 public typealias successBlk = (Any)->()
 
+//func getExerciseData(callingViewController: NSObject, successBlock: successBlk, andFailure failureBlock: (NSError?) -> ())
+
+//static func getRequestData(urlString: String,paras: Dictionary<String,Any>?,resultBlock: ((_ result:Any?,_ error:Any?) -> Void)?) { }
+
 public typealias failureBlk = (NSError)->()
 
 //为没有参数也没有返回值的闭包类型起一个别名
@@ -927,6 +931,15 @@ func send(job: Int, toPrinter printerName: String) throws -> String {
 
 
 //MARK: 泛型
+
+//协议
+//@objc public weak var presenterDelegate: ViewPresensterProtocol?
+//// 范型
+//lazy var model:[NSObject] = [NSObject]()
+//
+//lazy var modelProtocol:[ViewPresensterProtocol] = [ViewPresensterProtocol]()
+
+
 //把名字写在尖括号里来创建一个泛型方法或者类型。
 
 func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {

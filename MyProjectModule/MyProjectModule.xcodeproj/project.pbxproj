@@ -151,6 +151,7 @@
 		7993C86B228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C869228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m */; };
 		7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C86D228D692A001A6BFA /* DownListViewController.m */; };
 		7993C871228D6A4E001A6BFA /* DownLoadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C870228D6A4E001A6BFA /* DownLoadCell.m */; };
+		79960D9922EEED5E00C96162 /* Chain_of_responsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79960D9822EEED5E00C96162 /* Chain_of_responsibility.swift */; };
 		7997BE69224090A50054F4D0 /* AbstractAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997BE68224090A50054F4D0 /* AbstractAlertView.m */; };
 		79A1A5162269AD0800CEA92A /* CheckConditionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5042269AD0800CEA92A /* CheckConditionItem.m */; };
 		79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5082269AD0800CEA92A /* BaseBookmarkChildController.m */; };
@@ -500,6 +501,7 @@
 		7993C86D228D692A001A6BFA /* DownListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownListViewController.m; sourceTree = "<group>"; };
 		7993C86F228D6A4E001A6BFA /* DownLoadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownLoadCell.h; sourceTree = "<group>"; };
 		7993C870228D6A4E001A6BFA /* DownLoadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownLoadCell.m; sourceTree = "<group>"; };
+		79960D9822EEED5E00C96162 /* Chain_of_responsibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain_of_responsibility.swift; sourceTree = "<group>"; };
 		7997BE67224090A50054F4D0 /* AbstractAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractAlertView.h; sourceTree = "<group>"; };
 		7997BE68224090A50054F4D0 /* AbstractAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractAlertView.m; sourceTree = "<group>"; };
 		79A1A5042269AD0800CEA92A /* CheckConditionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckConditionItem.m; sourceTree = "<group>"; };
@@ -1583,6 +1585,7 @@
 		795FF3F122E6B6CB00CCC8B9 /* Design-Pattern-in-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				79960D9722EEEBFE00C96162 /* Chain Of Responsibility */,
 				795FF3F222E6B7B500CCC8B9 /* StrategyDesign */,
 			);
 			path = "Design-Pattern-in-Swift";
@@ -1615,6 +1618,14 @@
 				7993C869228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m */,
 			);
 			path = DownHelper;
+			sourceTree = "<group>";
+		};
+		79960D9722EEEBFE00C96162 /* Chain Of Responsibility */ = {
+			isa = PBXGroup;
+			children = (
+				79960D9822EEED5E00C96162 /* Chain_of_responsibility.swift */,
+			);
+			path = "Chain Of Responsibility";
 			sourceTree = "<group>";
 		};
 		79A1A5032269AD0800CEA92A /* SmoothBookmarker */ = {
@@ -2126,6 +2137,7 @@
 				33E6CE0721006D2000422FC7 /* UITableViewCell+AnimationType.m in Sources */,
 				792A731121EF30880098B94C /* ClassClusterModel.m in Sources */,
 				33FAE4E520E2445500BE7175 /* HeaderSuspendedLayout.m in Sources */,
+				79960D9922EEED5E00C96162 /* Chain_of_responsibility.swift in Sources */,
 				795FF3E922E5AE2300CCC8B9 /* AbstractView.swift in Sources */,
 				7901F9A221A678CE005BE8A6 /* NSTimerObserver.m in Sources */,
 				338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */,

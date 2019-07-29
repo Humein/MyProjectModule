@@ -13,6 +13,23 @@
 #define SCREEN_W SCREEN_BOUNDS.size.width
 
 
+typedef enum : NSUInteger {
+    RealType = 100,
+    SimulateType ,
+} ExamPaperType;
+
+
+// 结构体
+typedef struct{
+    ExamPaperType examType;
+    NSNumber *ordDetailId;
+    NSNumber *subjectId;
+    NSNumber *paperCode;
+    NSNumber *recordId;
+    
+} RequestParam;
+
+
 typedef void(^ResultStatus)(BOOL suc);
 
 @interface AbstractViewController : UIViewController
