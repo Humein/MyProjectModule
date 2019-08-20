@@ -152,6 +152,7 @@
 		7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C86D228D692A001A6BFA /* DownListViewController.m */; };
 		7993C871228D6A4E001A6BFA /* DownLoadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C870228D6A4E001A6BFA /* DownLoadCell.m */; };
 		79960D9922EEED5E00C96162 /* Chain_of_responsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79960D9822EEED5E00C96162 /* Chain_of_responsibility.swift */; };
+		79960D9C22EF113300C96162 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79960D9B22EF113300C96162 /* Command.swift */; };
 		7997BE69224090A50054F4D0 /* AbstractAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997BE68224090A50054F4D0 /* AbstractAlertView.m */; };
 		79A1A5162269AD0800CEA92A /* CheckConditionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5042269AD0800CEA92A /* CheckConditionItem.m */; };
 		79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5082269AD0800CEA92A /* BaseBookmarkChildController.m */; };
@@ -502,6 +503,7 @@
 		7993C86F228D6A4E001A6BFA /* DownLoadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownLoadCell.h; sourceTree = "<group>"; };
 		7993C870228D6A4E001A6BFA /* DownLoadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownLoadCell.m; sourceTree = "<group>"; };
 		79960D9822EEED5E00C96162 /* Chain_of_responsibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain_of_responsibility.swift; sourceTree = "<group>"; };
+		79960D9B22EF113300C96162 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		7997BE67224090A50054F4D0 /* AbstractAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractAlertView.h; sourceTree = "<group>"; };
 		7997BE68224090A50054F4D0 /* AbstractAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractAlertView.m; sourceTree = "<group>"; };
 		79A1A5042269AD0800CEA92A /* CheckConditionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckConditionItem.m; sourceTree = "<group>"; };
@@ -521,6 +523,7 @@
 		79A1A5142269AD0800CEA92A /* BookmarkContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkContainerView.h; sourceTree = "<group>"; };
 		79A1A5152269AD0800CEA92A /* SmoothBookmarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothBookmarkViewController.m; sourceTree = "<group>"; };
 		79A61B9D22881B2300D4D14B /* MineLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MineLocation.gpx; sourceTree = "<group>"; };
+		79ACA43B2306B47B0027FBF8 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		79BFDCE22142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE42142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE72142A28700C81069 /* StartWaterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartWaterView.h; sourceTree = "<group>"; };
@@ -1585,6 +1588,7 @@
 		795FF3F122E6B6CB00CCC8B9 /* Design-Pattern-in-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				79960D9A22EF10E600C96162 /* Command */,
 				79960D9722EEEBFE00C96162 /* Chain Of Responsibility */,
 				795FF3F222E6B7B500CCC8B9 /* StrategyDesign */,
 			);
@@ -1595,6 +1599,7 @@
 			isa = PBXGroup;
 			children = (
 				795FF3F322E6B7E000CCC8B9 /* StrategyMethod.swift */,
+				79ACA43B2306B47B0027FBF8 /* MyPlayground.playground */,
 			);
 			path = StrategyDesign;
 			sourceTree = "<group>";
@@ -1627,6 +1632,15 @@
 			);
 			path = "Chain Of Responsibility";
 			sourceTree = "<group>";
+		};
+		79960D9A22EF10E600C96162 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				79960D9B22EF113300C96162 /* Command.swift */,
+			);
+			name = Command;
+			path = MyProjectModule/Swift/Command;
+			sourceTree = SOURCE_ROOT;
 		};
 		79A1A5032269AD0800CEA92A /* SmoothBookmarker */ = {
 			isa = PBXGroup;
@@ -2189,6 +2203,7 @@
 				33C2DF3921DCC5D400F96F32 /* PointTreeTypeThree.m in Sources */,
 				7997BE69224090A50054F4D0 /* AbstractAlertView.m in Sources */,
 				33C971432124108D00EAAD5E /* CustomAlertManagerView.m in Sources */,
+				79960D9C22EF113300C96162 /* Command.swift in Sources */,
 				79EEEAA3218FF5E600848B59 /* TreeViewCell.m in Sources */,
 				33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */,
 				3378280C2108278C00373A20 /* DecoratorViewController.m in Sources */,

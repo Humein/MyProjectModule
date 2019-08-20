@@ -972,6 +972,39 @@ func collectConatin() -> () {
     
     var shoppingList: [String] = ["Eggs", "Milk"]
 
+    var dic = [ Int: Int]()
+    let l = 0
+    let r = 0
+    let m = dic[l-r]
+//    if (info.keys.contains("postMasterId")) {
+
+    // 字符串和数字之间的转换
+//    let str = "3"
+//    let num = Int(str)
+//    let number = 3
+//    let string = String(num)
+//    
+//    // 字符串长度
+//    let len = str.count
+//
+//    // 访问字符串中的单个字符，时间复杂度为O(1)
+//    let char = str[str.index(str.startIndex, offsetBy: n)]
+//
+//    // 修改字符串
+//    str.remove(at: n)
+//    str.append("c")
+//    str += "hello world"
+    
+    // 检测字符串是否是由数字构成
+    func isStrNum(str: String) -> Bool {
+        return Int(str) != nil
+    }
+    
+    // 将字符串按字母排序(不考虑大小写)
+    func sortStr(str: String) -> String {
+        return String(str.sorted())
+    }
+    
 
     var sixDoubles = sameInts + someInts
 
