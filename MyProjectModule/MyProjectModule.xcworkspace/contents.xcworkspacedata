@@ -5,6 +5,9 @@
       location = "group:MyProjectModule/MineLocation.gpx">
    </FileRef>
    <FileRef
+      location = "group:MyProjectModule/Swift/Design-Pattern-in-Swift/StrategyDesign/../../../../MyPlayground.playground">
+   </FileRef>
+   <FileRef
       location = "group:MyProjectModule.xcodeproj">
    </FileRef>
    <FileRef

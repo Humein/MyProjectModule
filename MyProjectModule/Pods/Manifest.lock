@@ -15,9 +15,6 @@ PODS:
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
-  - Flutter (1.0.0)
-  - FlutterPluginRegistrant (0.0.1):
-    - Flutter
   - KVOController (1.0.3)
   - Masonry (0.6.4)
   - MJExtension (3.0.10)
@@ -35,8 +32,6 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - Aspects
-  - Flutter (from `/Users/zhangxinxin/Code/AndroidStudioProjects/iOS-Flutter/flutter_module/.ios/Flutter/engine`)
-  - FlutterPluginRegistrant (from `/Users/zhangxinxin/Code/AndroidStudioProjects/iOS-Flutter/flutter_module/.ios/Flutter/FlutterPluginRegistrant`)
   - KVOController
   - Masonry
   - MJExtension
@@ -59,17 +54,9 @@ SPEC REPOS:
     - YTKNetwork
     - YYKit
 
-EXTERNAL SOURCES:
-  Flutter:
-    :path: "/Users/zhangxinxin/Code/AndroidStudioProjects/iOS-Flutter/flutter_module/.ios/Flutter/engine"
-  FlutterPluginRegistrant:
-    :path: "/Users/zhangxinxin/Code/AndroidStudioProjects/iOS-Flutter/flutter_module/.ios/Flutter/FlutterPluginRegistrant"
-
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a
-  FlutterPluginRegistrant: 8855ca2b426d228cb41aa6c26c0c83b8c49e3593
   KVOController: 9fd8f0343670994e4b6f9f0b31f5a45663f3e1cf
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
