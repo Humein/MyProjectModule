@@ -13,7 +13,7 @@ target 'MyProjectModule' do
   pod 'Aspects'
 
   # Flutter 引入 现有 Native 工程
-  flutter_application_path = "/Users/zhangxinxin/Code/AndroidStudioProjects/iOS-Flutter/flutter_module"
+  flutter_application_path = "/Users/zhangxinxin/Code/FlutterDoc/my_flutter"
   eval(File.read(File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')), binding)
 
 end

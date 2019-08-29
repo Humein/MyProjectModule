@@ -32,11 +32,11 @@
 #import "AbstractTableViewCell.h"
 #import "HitEventStrikeView.h"
 
-#import <Flutter/Flutter.h>
+//#import <Flutter/Flutter.h>
 #import "FlutterSubViewController.h"
 
 #import "MyProjectModule-Swift.h"
-@interface ViewController ()<AlertTableViewDelegate,FlutterStreamHandler>
+@interface ViewController ()<AlertTableViewDelegate>
 @property (nonatomic,strong)AlertTableView *tableView;
 @property (nonatomic,strong)NSMutableArray *itemList;
 @property (nonatomic,weak)AlertTableView *weakTableView;

@@ -43,6 +43,9 @@ __has_include("webp/demux.h")  && __has_include("webp/mux.h")
 #endif
 
 
+
+
+
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Utility (for little endian platform)
 
@@ -818,7 +821,7 @@ static BOOL YYCGImageDecodeToBitmapBufferWith32BitFormat(CGImageRef srcImage, vI
     } else {
         contextBitmapInfo |= alphaFirst ? kCGImageAlphaPremultipliedFirst : kCGImageAlphaPremultipliedLast;
     }
-    CGContextRef context = CGBitmapContextCreate(NULL, width, height, 8, 32, YYCGColorSpaceGetDeviceRGB(), contextBitmapInfo);
+    CGContextRef context = CGBitmapContextCreate(NULL, width, height, 8, 0, YYCGColorSpaceGetDeviceRGB(), contextBitmapInfo);
     if (!context) goto fail;
     
     CGContextDrawImage(context, CGRectMake(0, 0, width, height), srcImage); // decode and convert
@@ -1395,13 +1398,14 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
     config.output.u.RGBA.stride = (int)bytesPerRow;
     config.output.u.RGBA.size = destLength;
     
-    if (WebPDecode(payload, payloadSize, &config) != VP8_STATUS_OK) goto fail;
+    VP8StatusCode result = WebPDecode(payload, payloadSize, &config);
+    if ((result != VP8_STATUS_OK) && (result != VP8_STATUS_NOT_ENOUGH_DATA)) goto fail;
     
     if (iter.x_offset != 0 || iter.y_offset != 0) {
         void *tmp = calloc(1, destLength);
         if (tmp) {
             vImage_Buffer src = {destBytes, canvasHeight, canvasWidth, bytesPerRow};
-            vImage_Buffer dest = {destBytes, canvasHeight, canvasWidth, bytesPerRow};
+            vImage_Buffer dest = {tmp, canvasHeight, canvasWidth, bytesPerRow};
             vImage_CGAffineTransform transform = {1, 0, 0, 1, iter.x_offset, -iter.y_offset};
             uint8_t backColor[4] = {0};
             vImageAffineWarpCG_ARGB8888(&src, &dest, NULL, &transform, backColor, kvImageBackgroundColorFill);
@@ -1525,6 +1529,7 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
     if (_webpSource) WebPDemuxDelete(_webpSource);
 #endif
     if (_blendCanvas) CFRelease(_blendCanvas);
+    pthread_mutex_destroy(&_lock);
 }
 
 + (instancetype)decoderWithData:(NSData *)data scale:(CGFloat)scale {
@@ -1824,6 +1829,13 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
     dispatch_semaphore_wait(_framesLock, DISPATCH_TIME_FOREVER);
     _frames = frames;
     dispatch_semaphore_signal(_framesLock);
+#else
+    static const char *func = __FUNCTION__;
+    static const int line = __LINE__;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSLog(@"[%s: %d] WebP is not available, check the documentation to see how to install WebP component: https://github.com/ibireme/YYImage#installation", func, line);
+    });
 #endif
 }
 
@@ -1957,8 +1969,11 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
         if (_type == YYImageTypeGIF) { // get gif loop count
             CFDictionaryRef properties = CGImageSourceCopyProperties(_source, NULL);
             if (properties) {
-                CFTypeRef loop = CFDictionaryGetValue(properties, kCGImagePropertyGIFLoopCount);
-                if (loop) CFNumberGetValue(loop, kCFNumberNSIntegerType, &_loopCount);
+                CFDictionaryRef gif = CFDictionaryGetValue(properties, kCGImagePropertyGIFDictionary);
+                if (gif) {
+                    CFTypeRef loop = CFDictionaryGetValue(gif, kCGImagePropertyGIFLoopCount);
+                    if (loop) CFNumberGetValue(loop, kCFNumberNSIntegerType, &_loopCount);
+                }
                 CFRelease(properties);
             }
         }
@@ -2140,7 +2155,8 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
         config.output.u.RGBA.rgba = pixels;
         config.output.u.RGBA.stride = (int)bytesPerRow;
         config.output.u.RGBA.size = length;
-        if (WebPDecode(payload, payloadSize, &config) != VP8_STATUS_OK) { // decode
+        VP8StatusCode result = WebPDecode(payload, payloadSize, &config); // decode
+        if ((result != VP8_STATUS_OK) && (result != VP8_STATUS_NOT_ENOUGH_DATA)) {
             WebPDemuxReleaseIterator(&iter);
             free(pixels);
             return NULL;
@@ -2299,10 +2315,16 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
 }
 
 - (instancetype)initWithType:(YYImageType)type {
-    if (type == YYImageTypeUnknown || type >= YYImageTypeOther) return nil;
+    if (type == YYImageTypeUnknown || type >= YYImageTypeOther) {
+        NSLog(@"[%s: %d] Unsupported image type:%d",__FUNCTION__, __LINE__, (int)type);
+        return nil;
+    }
     
 #if !YYIMAGE_WEBP_ENABLED
-    if (type == YYImageTypeWebP) return nil;
+    if (type == YYImageTypeWebP) {
+        NSLog(@"[%s: %d] WebP is not available, check the documentation to see how to install WebP component: https://github.com/ibireme/YYImage#installation", __FUNCTION__, __LINE__);
+        return nil;
+    }
 #endif
     
     self = [super init];
@@ -2405,27 +2427,38 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
     }
     
     for (int i = 0; i < count; i++) {
-        id imageSrc = _images[i];
-        NSDictionary *frameProperty = NULL;
-        if (_type == YYImageTypeGIF && count > 1) {
-            frameProperty = @{(NSString *)kCGImagePropertyGIFDictionary : @{(NSString *) kCGImagePropertyGIFDelayTime:_durations[i]}};
-        } else {
-            frameProperty = @{(id)kCGImageDestinationLossyCompressionQuality : @(_quality)};
-        }
-        
-        if ([imageSrc isKindOfClass:[UIImage class]]) {
-            CGImageDestinationAddImage(destination, ((UIImage *)imageSrc).CGImage, (CFDictionaryRef)frameProperty);
-        } else if ([imageSrc isKindOfClass:[NSURL class]]) {
-            CGImageSourceRef source = CGImageSourceCreateWithURL((CFURLRef)imageSrc, NULL);
-            if (source) {
-                CGImageDestinationAddImageFromSource(destination, source, i, (CFDictionaryRef)frameProperty);
-                CFRelease(source);
+        @autoreleasepool {
+            id imageSrc = _images[i];
+            NSDictionary *frameProperty = NULL;
+            if (_type == YYImageTypeGIF && count > 1) {
+                frameProperty = @{(NSString *)kCGImagePropertyGIFDictionary : @{(NSString *) kCGImagePropertyGIFDelayTime:_durations[i]}};
+            } else {
+                frameProperty = @{(id)kCGImageDestinationLossyCompressionQuality : @(_quality)};
             }
-        } else if ([imageSrc isKindOfClass:[NSData class]]) {
-            CGImageSourceRef source = CGImageSourceCreateWithData((CFDataRef)imageSrc, NULL);
-            if (source) {
-                CGImageDestinationAddImageFromSource(destination, source, i, (CFDictionaryRef)frameProperty);
-                CFRelease(source);
+            
+            if ([imageSrc isKindOfClass:[UIImage class]]) {
+                UIImage *image = imageSrc;
+                if (image.imageOrientation != UIImageOrientationUp && image.CGImage) {
+                    CGBitmapInfo info = CGImageGetBitmapInfo(image.CGImage) | CGImageGetAlphaInfo(image.CGImage);
+                    CGImageRef rotated = YYCGImageCreateCopyWithOrientation(image.CGImage, image.imageOrientation, info);
+                    if (rotated) {
+                        image = [UIImage imageWithCGImage:rotated];
+                        CFRelease(rotated);
+                    }
+                }
+                if (image.CGImage) CGImageDestinationAddImage(destination, ((UIImage *)imageSrc).CGImage, (CFDictionaryRef)frameProperty);
+            } else if ([imageSrc isKindOfClass:[NSURL class]]) {
+                CGImageSourceRef source = CGImageSourceCreateWithURL((CFURLRef)imageSrc, NULL);
+                if (source) {
+                    CGImageDestinationAddImageFromSource(destination, source, 0, (CFDictionaryRef)frameProperty);
+                    CFRelease(source);
+                }
+            } else if ([imageSrc isKindOfClass:[NSData class]]) {
+                CGImageSourceRef source = CGImageSourceCreateWithData((CFDataRef)imageSrc, NULL);
+                if (source) {
+                    CGImageDestinationAddImageFromSource(destination, source, 0, (CFDictionaryRef)frameProperty);
+                    CFRelease(source);
+                }
             }
         }
     }
@@ -2590,7 +2623,7 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
                 chunk_fcTL.sequence_number = apngSequenceIndex;
                 chunk_fcTL.width = frame->header.width;
                 chunk_fcTL.height = frame->header.height;
-                yy_png_delay_to_fraction([(NSNumber *)_durations[0] doubleValue], &chunk_fcTL.delay_num, &chunk_fcTL.delay_den);
+                yy_png_delay_to_fraction([(NSNumber *)_durations[i] doubleValue], &chunk_fcTL.delay_num, &chunk_fcTL.delay_den);
                 chunk_fcTL.delay_num = chunk_fcTL.delay_num;
                 chunk_fcTL.delay_den = chunk_fcTL.delay_den;
                 chunk_fcTL.dispose_op = YY_PNG_DISPOSE_OP_BACKGROUND;
@@ -2714,7 +2747,7 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
 }
 
 + (NSData *)encodeImageWithDecoder:(YYImageDecoder *)decoder type:(YYImageType)type quality:(CGFloat)quality {
-    if (!decoder || !decoder.frameCount == 0) return nil;
+    if (!decoder || decoder.frameCount == 0) return nil;
     YYImageEncoder *encoder = [[YYImageEncoder alloc] initWithType:type];
     encoder.quality = quality;
     for (int i = 0; i < decoder.frameCount; i++) {
@@ -2754,7 +2787,7 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
 
 - (void)saveToAlbumWithCompletionBlock:(void(^)(NSURL *assetURL, NSError *error))completionBlock {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSData *data = [self _dataRepresentationForSystem:YES];
+        NSData *data = [self _imageDataRepresentationForSystem:YES];
         ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
         [library writeImageDataToSavedPhotosAlbum:data metadata:nil completionBlock:^(NSURL *assetURL, NSError *error){
             if (!completionBlock) return;
@@ -2769,12 +2802,12 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
     });
 }
 
-- (NSData *)dataRepresentation {
-    return [self _dataRepresentationForSystem:NO];
+- (NSData *)imageDataRepresentation {
+    return [self _imageDataRepresentationForSystem:NO];
 }
 
 /// @param forSystem YES: used for system album (PNG/JPEG/GIF), NO: used for YYImage (PNG/JPEG/GIF/WebP)
-- (NSData *)_dataRepresentationForSystem:(BOOL)forSystem {
+- (NSData *)_imageDataRepresentationForSystem:(BOOL)forSystem {
     NSData *data = nil;
     if ([self isKindOfClass:[YYImage class]]) {
         YYImage *image = (id)self;

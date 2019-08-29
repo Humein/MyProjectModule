@@ -6,11 +6,13 @@
 //  Copyright © 2019 xinxin. All rights reserved.
 //
 
-#import <Flutter/Flutter.h>
+//#import <Flutter/Flutter.h>
+#import "AbstractViewController.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FlutterSubViewController : FlutterViewController
+@interface FlutterSubViewController : UIViewController
 
 @end
 

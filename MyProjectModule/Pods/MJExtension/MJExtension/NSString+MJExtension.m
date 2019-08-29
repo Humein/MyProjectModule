@@ -72,39 +72,9 @@
 - (NSURL *)mj_url
 {
 //    [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"!$&'()*+,-./:;=?@_~%#[]"]];
-    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
     return [NSURL URLWithString:(NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]", NULL,kCFStringEncodingUTF8))];
-}
-@end
-
-@implementation NSString (MJExtensionDeprecated_v_2_5_16)
-- (NSString *)underlineFromCamel
-{
-    return self.mj_underlineFromCamel;
-}
-
-- (NSString *)camelFromUnderline
-{
-    return self.mj_camelFromUnderline;
-}
-
-- (NSString *)firstCharLower
-{
-    return self.mj_firstCharLower;
-}
-
-- (NSString *)firstCharUpper
-{
-    return self.mj_firstCharUpper;
-}
-
-- (BOOL)isPureInt
-{
-    return self.mj_isPureInt;
-}
-
-- (NSURL *)url
-{
-    return self.mj_url;
+#pragma clang diagnostic pop
 }
 @end
