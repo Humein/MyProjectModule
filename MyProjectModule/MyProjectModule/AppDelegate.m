@@ -15,12 +15,12 @@
 
 @implementation AppDelegate
 {
-    FlutterPluginAppLifeCycleDelegate *_lifeCycleDelegate;
+//    FlutterPluginAppLifeCycleDelegate *_lifeCycleDelegate;
 }
 
 - (instancetype)init {
     if (self = [super init]) {
-        _lifeCycleDelegate = [[FlutterPluginAppLifeCycleDelegate alloc] init];
+//        _lifeCycleDelegate = [[FlutterPluginAppLifeCycleDelegate alloc] init];
     }
     return self;
 }

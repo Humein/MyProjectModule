@@ -19,8 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _person = [PersonInfo new];
-
-    [self.KVOController observe:_person keyPath:@"name" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld action:@selector(changeColor)];
+    
+//    [self.KVOController observe:_person keyPath:@"name" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld action:@selector(changeColor)];
 
 }
 

@@ -39,7 +39,7 @@
 -(id)initModelWithDictionary:(NSDictionary *)dic{
     self = [super init];
     if(self){
-        self = [[self class] objectWithKeyValues:dic];
+        self = [[self class] mj_objectWithKeyValues:dic];
     }
     return self;
 }

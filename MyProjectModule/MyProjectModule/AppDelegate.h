@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Flutter/Flutter.h>
+//#import <Flutter/Flutter.h>
 
-@interface AppDelegate : FlutterAppDelegate <UIApplicationDelegate,FlutterAppLifeCycleProvider>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 
 @end

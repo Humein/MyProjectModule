@@ -5,6 +5,12 @@
       location = "group:MyProjectModule/MineLocation.gpx">
    </FileRef>
    <FileRef
+      location = "group:MyProjectModule/DesignMode/Design-Pattern-in-Swift/StrategyDesign/../../../../leetCode.cpp">
+   </FileRef>
+   <FileRef
+      location = "group:MyProjectModule/DesignMode/Design-Pattern-in-Swift/StrategyDesign/../../../../leetCode.hpp">
+   </FileRef>
+   <FileRef
       location = "group:MyProjectModule/Swift/Design-Pattern-in-Swift/StrategyDesign/../../../../MyPlayground.playground">
    </FileRef>
    <FileRef
