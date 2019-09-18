@@ -658,8 +658,13 @@ newVC.getWord = { [weak self] num in
 }
 
 */
-
-
+// 闭包使用
+//cell?.optionCellClick = { (index :NSInteger) -> () in
+//    guard (self.optionCellClick != nil) else {
+//        return
+//    }
+//    self.optionCellClick!(index)
+//}
 
 //MARK: 对象和类
 

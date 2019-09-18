@@ -648,7 +648,6 @@
 			isa = PBXGroup;
 			children = (
 				79056EC2230FDE8200628D5F /* VideoToolBoxDecoder */,
-				79794CCA22520E2200784BFF /* Swift */,
 				79040D9E2238AA0A0085335E /* AOPTrack */,
 				79040D882236460F0085335E /* FlutterDemo */,
 				79F9A5E9214FB082003704D7 /* Algorithms */,
@@ -955,6 +954,7 @@
 		33888FF520F0C25400E4A119 /* DesignMode */ = {
 			isa = PBXGroup;
 			children = (
+				79794CCA22520E2200784BFF /* Swift */,
 				794BE896231D368000113B97 /* Design-Pattern-in-Swift */,
 				794BE895231D366700113B97 /* 生产者消费者 */,
 				794B100E21E849EE00B91405 /* 类族 */,

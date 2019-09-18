@@ -26,6 +26,7 @@ typedef void (^PopBlock)(void);
 typedef void(^Success)(id data);
 typedef void(^Failure)(NSString *errorMessage);
 //异步回调
+
 - (void)requestNoticeDataWithParameter:(NSDictionary *)dic isWaiting:(BOOL)isWaiting success:(Success)success failure:(Failure)failure;
 
 -(void)activeEventBlock:(void(^)(BOOL state))block;
