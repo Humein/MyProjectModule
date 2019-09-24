@@ -92,6 +92,26 @@ func reverseList(_ head: ListNode?) -> ListNode? {
     }
 }
 
+//344. 反转字符串
+func reverseString(_ s: inout [Character]) {
+    
+    if s.count < 2 {
+        return
+    }
+    var i = 0
+    var j = s.count - 1
+    var char: Character;
+
+    while i < j {
+        char = s[i]
+        s[i] = s[j]
+        s[j] = char
+        
+        i += 1
+        j -= 1
+    }
+}
+
 
 // 442. 数组中重复的数据
 func findDuplicates(_ nums: [Int]) -> [Int] {
@@ -142,7 +162,10 @@ func findClosestElements(_ arr: [Int], _ k: Int, _ x: Int) -> [Int] {
     return Array(arr[left..<(left + k)])
 }
 
-let chapter = findClosestElements([1,2,3,4,5], 1, 3)
+
+
+let chapter = findClosestElements([1,3,5,7,9], 1, 8)
+
 
 
 

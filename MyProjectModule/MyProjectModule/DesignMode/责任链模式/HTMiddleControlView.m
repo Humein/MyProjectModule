@@ -54,9 +54,10 @@
 #pragma mark --- Action
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    //ChianRe
+    [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor brownColor]}];
     
-//    [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor brownColor]}];
-    
+    //
     [self attachPlayItem:@"2"];
     [self requestEvent:HTVideoPlayEvent playItem:@""];
     

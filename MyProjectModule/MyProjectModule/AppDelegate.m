@@ -28,19 +28,19 @@
 
 
 
-- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    CGRect bounds = [[UIScreen mainScreen] bounds];
-    [self.window setFrame:bounds];
-    [self.window setBounds:bounds];
-    
-    return YES;
-}
+//- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//    
+//    CGRect bounds = [[UIScreen mainScreen] bounds];
+//    [self.window setFrame:bounds];
+//    [self.window setBounds:bounds];
+//    
+//    return YES;
+//}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-//    self.window = [UIWindow new];
-    
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = window;
     ViewController *animationsListViewController = [ViewController new];
     UINavigationController *navigationController = [[UINavigationController alloc]
                                                     initWithRootViewController:animationsListViewController];

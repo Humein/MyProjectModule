@@ -57,8 +57,10 @@
 #pragma mark --- Action
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-//    [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor lightGrayColor]}];
+    // chainRespon
+    [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor lightGrayColor]}];
     
+    // zeren
     [self attachPlayItem:@"3"];
     
     [self requestEvent:HTVideoPlayerBackEvent playItem:@""];

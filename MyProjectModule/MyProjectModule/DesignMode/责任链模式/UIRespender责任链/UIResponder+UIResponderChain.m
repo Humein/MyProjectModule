@@ -16,6 +16,8 @@
  @param userInfo 附加参数
  */
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo {
+    NSLog(@"Responder的对象:%@",self.class);
+
     [[self nextResponder] routerEventWithName:eventName userInfo:userInfo];
 }
 /**

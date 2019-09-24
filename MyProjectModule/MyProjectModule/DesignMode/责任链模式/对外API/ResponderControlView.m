@@ -89,10 +89,11 @@
 #pragma mark --- Action
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    
-    //        [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor lightGrayColor]}];
+    // 1 chainResponder
+    [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor lightGrayColor]}];
 
     
+    // 2 责任链
     //    [self attachPlayItem:@""];
     [self requestEvent:HTVideoPauseEvent playItem:@""];
     

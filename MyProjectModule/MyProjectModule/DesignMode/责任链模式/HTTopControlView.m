@@ -49,8 +49,11 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-//    [self routerEventWithName:kEventOneName userInfo:@{@"key": @"1"}];
+    //ChianRe
+    [self routerEventWithName:kEventOneName userInfo:@{@"key": @"1"}];
     
+    
+    //
     [self attachPlayItem:@"1"];
     [self requestEvent:HTVideoStopEvent playItem:@""];
 
