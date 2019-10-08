@@ -976,6 +976,13 @@ func collectConatin() -> () {
     let sameInts = [Int]()
     
     var shoppingList: [String] = ["Eggs", "Milk"]
+    
+    // 数组内部多类型
+    let  arr :[(index :Int, value :String)] = [(1,"2"),(2,"3")]
+    for (index , value) in arr {
+        print(index,value)
+    }
+    print(arr)
 
     var dic = [ Int: Int]()
     let l = 0

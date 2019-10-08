@@ -249,14 +249,111 @@ func isSubsequence(_ s: String, _ t: String) -> Bool {
     }
     return i == s.count
 }
-
-
-
-
 print(isSubsequence("acd","abcd"))
 
 
+//11. 盛最多水的容器
+func maxArea(_ height: [Int]) -> Int {
+    var maxArea: Int = 0
+    var i = 0
+    var j = height.count - 1
+    while i < j {
+        var minHeight = 0
+        let left = height[i]
+        let right = height[j]
+        
+        if left < right {
+            minHeight = left
+            i += 1
+        }else{
+            minHeight = right
+            j -= 1
+        }
+        maxArea = max(maxArea, (j - i + 1) * minHeight)
+    }
+    return maxArea
+}
+maxArea([1,8,6,2,5,4,8,3,7])
+
+
+//14. 最长公共前缀
+func longestCommonPrefix(_ strs: [String]) -> String {
+    
+    let str :String = ""
+    
+    for (idx,s) in strs.enumerated(){
+        let sarr = Array(s)
+        
+        
+    }
+    
+    return str
+}
+
+let str = longestCommonPrefix(["dog","racecar","car"])
+
+
+
 // ------------------------------------------- 动态规划 ------------------------------
+
+
+
+func longestPalindrome(_ s: String) -> String {
+       var dp:[[Bool]] = [];
+       if s.count <= 1{
+           return s;
+       }
+       
+       var longest:Int = 1;
+       var left:Int = 0;
+       var right:Int = 0;
+       
+       for var i in 0...s.count - 1{
+           var eachRow:[Bool] = [];
+           for var j in 0...s.count - 1{
+               if i == j{
+                   eachRow.append(true);
+               }else{
+                   eachRow.append(false);
+               }
+           }
+           dp.append(eachRow);
+       }
+    
+      print(dp)
+       
+       var i:Int = 0;
+       var j:Int = 0;
+       for var character_j in s {
+           if j == 0 {
+               j += 1;
+               continue;
+           }
+           i = 0;
+           for var character_i in s {
+               if character_i == character_j {
+                   dp[i][j] = dp[i + 1][j - 1] || j - i <= 1;
+                   if dp[i][j] && j - i + 1 > longest{
+                       longest = j - i + 1;
+                       left = i;
+                       right = j;
+                   }
+               }else{
+                   dp[i][j] = false;
+               }
+               i += 1;
+               if i >= j{
+                   break;
+               }
+           }
+           j += 1;
+       }
+       let leftIndex = s.index(s.startIndex, offsetBy: left);
+       let rightIndex = s.index(s.startIndex, offsetBy: right);
+       return String(s[leftIndex...rightIndex]);
+}
+
+longestPalindrome("1234aba")
 
 // 70. 爬楼梯 备忘录 递归
 func climbStairs(_ n: Int) -> Int {
@@ -373,7 +470,6 @@ func dynamicMaxProfitTwo(_ prices:[Int]) -> Int{
 
 
 // 方法二：峰谷法
-
 
 print(dynamicMaxProfit([1,2,1,5,8]))
 
