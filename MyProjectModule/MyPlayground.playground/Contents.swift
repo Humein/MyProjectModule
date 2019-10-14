@@ -100,7 +100,7 @@ func reverseString(_ s: inout [Character]) {
     }
     var i = 0
     var j = s.count - 1
-    var char: Character;
+    var char: Character
 
     while i < j {
         char = s[i]
