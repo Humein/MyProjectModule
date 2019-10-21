@@ -47,7 +47,7 @@
     NSMutableAttributedString *text = [NSMutableAttributedString new];
 
     HTStr = @"以做好前期<准备(+1.0分)>，真准确定位，认清自我，加强<调查(+2.0分)>研究，了解<市场需求(+11.0分)>";
-    HTStr =  @"<红包活动{\"classId\":\"1\",\"collageActiveId\":\"1\"}>，加强<活动1{\"classId\":\"2\",\"collageActiveId\":\"1\"}>研究，了解<红包1{\"classId\":\"3\",\"collageActiveId\":\"1\"}>";
+//    HTStr =  @"<红包活动{\"classId\":\"1\",\"collageActiveId\":\"1\"}>，加强<活动1{\"classId\":\"2\",\"collageActiveId\":\"1\"}>研究，了解<红包1{\"classId\":\"3\",\"collageActiveId\":\"1\"}>";
     
     HTStr = [HTStr stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n"];
 

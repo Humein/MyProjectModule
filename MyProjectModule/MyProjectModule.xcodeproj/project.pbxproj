@@ -585,6 +585,7 @@
 		79EEEAB82195973B00848B59 /* BJPlayerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJPlayerHelper.h; sourceTree = "<group>"; };
 		79EEEABB2195975B00848B59 /* AbstractPlayHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractPlayHelper.h; sourceTree = "<group>"; };
 		79EEEABC2195975B00848B59 /* AbstractPlayHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractPlayHelper.m; sourceTree = "<group>"; };
+		79F87FA0235578D200D01484 /* CompositePattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CompositePattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		79F9A5EA214FB09B003704D7 /* AlgorithmsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmsViewController.h; sourceTree = "<group>"; };
 		79F9A5EB214FB09B003704D7 /* AlgorithmsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmsViewController.m; sourceTree = "<group>"; };
 		79F9A5ED2151F84E003704D7 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
@@ -1582,6 +1583,7 @@
 		794BE896231D368000113B97 /* Design-Pattern-in-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				79F87F9F235578C400D01484 /* Composite Pattern */,
 				794BE897231D368000113B97 /* Chain Of Responsibility */,
 				794BE899231D368000113B97 /* StrategyDesign */,
 			);
@@ -1843,6 +1845,14 @@
 				79EEEABC2195975B00848B59 /* AbstractPlayHelper.m */,
 			);
 			path = AbstractPlayerSDKAPI;
+			sourceTree = "<group>";
+		};
+		79F87F9F235578C400D01484 /* Composite Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				79F87FA0235578D200D01484 /* CompositePattern.playground */,
+			);
+			path = "Composite Pattern";
 			sourceTree = "<group>";
 		};
 		79F9A5E9214FB082003704D7 /* Algorithms */ = {

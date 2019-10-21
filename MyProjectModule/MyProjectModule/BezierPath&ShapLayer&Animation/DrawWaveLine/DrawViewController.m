@@ -63,7 +63,7 @@
         UIImage *lineImage = [UIImage imageNamed:@"btn_link_line"];
         
         StartWaterView *starView = [[StartWaterView alloc] init];
-        starView.frame = CGRectMake(100, 100, maskImage.size.width, maskImage.size.height);
+        starView.frame = CGRectMake(200, 100, maskImage.size.width, maskImage.size.height);
         starView.maskImage = maskImage;
         starView.borderImage = lineImage;
         starView.fillColor = [UIColor colorWithRed:0.94 green:0.27 blue:0.32 alpha:1];
