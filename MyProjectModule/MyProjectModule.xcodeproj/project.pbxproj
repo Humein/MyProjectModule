@@ -155,6 +155,7 @@
 		7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C86D228D692A001A6BFA /* DownListViewController.m */; };
 		7993C871228D6A4E001A6BFA /* DownLoadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C870228D6A4E001A6BFA /* DownLoadCell.m */; };
 		7997BE69224090A50054F4D0 /* AbstractAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997BE68224090A50054F4D0 /* AbstractAlertView.m */; };
+		79A0ECA123681B79004C10B0 /* VTBEncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */; };
 		79A1A5162269AD0800CEA92A /* CheckConditionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5042269AD0800CEA92A /* CheckConditionItem.m */; };
 		79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5082269AD0800CEA92A /* BaseBookmarkChildController.m */; };
 		79A1A5182269AD0800CEA92A /* SmoothBookmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A50B2269AD0800CEA92A /* SmoothBookmarkView.m */; };
@@ -510,6 +511,8 @@
 		7993C870228D6A4E001A6BFA /* DownLoadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownLoadCell.m; sourceTree = "<group>"; };
 		7997BE67224090A50054F4D0 /* AbstractAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractAlertView.h; sourceTree = "<group>"; };
 		7997BE68224090A50054F4D0 /* AbstractAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractAlertView.m; sourceTree = "<group>"; };
+		79A0EC9F23681B79004C10B0 /* VTBEncodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBEncodeViewController.h; sourceTree = "<group>"; };
+		79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTBEncodeViewController.m; sourceTree = "<group>"; };
 		79A1A5042269AD0800CEA92A /* CheckConditionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckConditionItem.m; sourceTree = "<group>"; };
 		79A1A5052269AD0800CEA92A /* SmoothBookmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothBookmarkViewController.h; sourceTree = "<group>"; };
 		79A1A5062269AD0800CEA92A /* CheckConditionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckConditionItem.h; sourceTree = "<group>"; };
@@ -648,7 +651,7 @@
 		333D105420CE74A8004D9241 /* MyProjectModule */ = {
 			isa = PBXGroup;
 			children = (
-				79056EC2230FDE8200628D5F /* VideoToolBoxDecoder */,
+				79A0EC9D236819C5004C10B0 /* MediaCodec */,
 				79040D9E2238AA0A0085335E /* AOPTrack */,
 				79040D882236460F0085335E /* FlutterDemo */,
 				79F9A5E9214FB082003704D7 /* Algorithms */,
@@ -1431,13 +1434,6 @@
 			path = AOPTrack;
 			sourceTree = "<group>";
 		};
-		79056EC2230FDE8200628D5F /* VideoToolBoxDecoder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VideoToolBoxDecoder;
-			sourceTree = "<group>";
-		};
 		7929B499219FE705004D335E /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
@@ -1654,6 +1650,23 @@
 				7993C869228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m */,
 			);
 			path = DownHelper;
+			sourceTree = "<group>";
+		};
+		79A0EC9D236819C5004C10B0 /* MediaCodec */ = {
+			isa = PBXGroup;
+			children = (
+				79A0EC9E236819C5004C10B0 /* VideoToolBox */,
+			);
+			path = MediaCodec;
+			sourceTree = "<group>";
+		};
+		79A0EC9E236819C5004C10B0 /* VideoToolBox */ = {
+			isa = PBXGroup;
+			children = (
+				79A0EC9F23681B79004C10B0 /* VTBEncodeViewController.h */,
+				79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */,
+			);
+			path = VideoToolBox;
 			sourceTree = "<group>";
 		};
 		79A1A5032269AD0800CEA92A /* SmoothBookmarker */ = {
@@ -2130,6 +2143,7 @@
 				79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */,
 				33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */,
 				3378281C21084A6E00373A20 /* Condiment.m in Sources */,
+				79A0ECA123681B79004C10B0 /* VTBEncodeViewController.m in Sources */,
 				33C2DF3521DCC5D400F96F32 /* PointTreeOnlyOneModel.m in Sources */,
 				33E6CE0521006D2000422FC7 /* CreatTreeView.m in Sources */,
 				33759E74212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.m in Sources */,

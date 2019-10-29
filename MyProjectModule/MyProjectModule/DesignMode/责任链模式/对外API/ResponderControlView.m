@@ -72,18 +72,13 @@
 //    mid.superior = top;
 //    bot.superior = mid;
 //    top.superior = bot;
-    
-    
-    
+
 //    控制层 绑定视图
     
     self.nextView(top).nextView(mid).nextView(bot);
     
     [self logAllNextNode];
 
-
-
-    
 }
 
 #pragma mark --- Action
@@ -93,7 +88,7 @@
     [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor lightGrayColor]}];
 
     
-    // 2 责任链
+    // 2 linked 
     //    [self attachPlayItem:@""];
     [self requestEvent:HTVideoPauseEvent playItem:@""];
     

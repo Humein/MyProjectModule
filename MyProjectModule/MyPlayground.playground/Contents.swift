@@ -35,7 +35,7 @@ dic[n] = ""
 func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
     
     var dic = [Int : Int]()
-    
+
     for (idx,item) in nums.enumerated() {
         if let lastIdx = dic[target - item] {
             return [lastIdx,idx]
@@ -74,6 +74,9 @@ public class ListNode {
           self.next = nil
       }
   }
+
+
+
 func reverseList(_ head: ListNode?) -> ListNode? {
     
     if head == nil || head?.next == nil{
@@ -91,6 +94,8 @@ func reverseList(_ head: ListNode?) -> ListNode? {
         return newHead
     }
 }
+
+
 
 //344. 反转字符串
 func reverseString(_ s: inout [Character]) {
@@ -169,11 +174,33 @@ let chapter = findClosestElements([1,3,5,7,9], 1, 8)
 
 
 
-// 704. 二分查找
+// 704. 二分查找 (还是双指针)
+// while 迭代方式
+func searchs(_ nums: [Int], _ target: Int) -> Int {
+    var left = 0
+    var right = nums.count - 1
+    
+    while left <= right {
+        let mid = (right - left)/2 + left
+        if nums[mid] == target {
+            return mid
+        }else if nums[mid] < target{
+            left = mid + 1
+        }else{
+            right = mid - 1
+        }
+    }
+    
+    return -1
+    
+}
+
+
 func search(_ nums: [Int], _ target: Int) -> Int {
     return binarySearch(nums: nums, target: target, left: 0, right: nums.count - 1)
 }
 
+// 递归方式
 func binarySearch(nums: [Int], target :Int, left :Int, right: Int) -> Int{
     
     guard left <= right else{
@@ -191,7 +218,7 @@ func binarySearch(nums: [Int], target :Int, left :Int, right: Int) -> Int{
     }
 }
 
-search( [-1,0,3,5,9,12], 12)
+searchs( [-1,0,3,5,9,12], 12)
 
 // ----------------------------------------- 字符串  -----------------------
 
@@ -252,21 +279,24 @@ func isSubsequence(_ s: String, _ t: String) -> Bool {
 print(isSubsequence("acd","abcd"))
 
 
-//11. 盛最多水的容器
+//11. 盛最多水的容器  双指针
+/*
+ 现在，为了使面积最大化，我们需要考虑更长的两条线段之间的区域。如果我们试图将指向较长线段的指针向内侧移动，矩形区域的面积将受限于较短的线段而不会获得任何增加。但是，在同样的条件下，移动指向较短线段的指针尽管造成了矩形宽度的减小，但却可能会有助于面积的增大。因为移动较短线段的指针会得到一条相对较长的线段，这可以克服由宽度减小而引起的面积减小。
+ */
 func maxArea(_ height: [Int]) -> Int {
     var maxArea: Int = 0
     var i = 0
     var j = height.count - 1
     while i < j {
         var minHeight = 0
-        let left = height[i]
-        let right = height[j]
+        let leftHeight = height[i]
+        let rightHeight = height[j]
         
-        if left < right {
-            minHeight = left
+        if leftHeight < rightHeight {
+            minHeight = leftHeight
             i += 1
         }else{
-            minHeight = right
+            minHeight = rightHeight
             j -= 1
         }
         maxArea = max(maxArea, (j - i + 1) * minHeight)
@@ -274,7 +304,6 @@ func maxArea(_ height: [Int]) -> Int {
     return maxArea
 }
 maxArea([1,8,6,2,5,4,8,3,7])
-
 
 //14. 最长公共前缀
 func longestCommonPrefix(_ strs: [String]) -> String {
@@ -290,14 +319,13 @@ func longestCommonPrefix(_ strs: [String]) -> String {
     return str
 }
 
-let str = longestCommonPrefix(["dog","racecar","car"])
+//let str = longestCommonPrefix(["dog","racecar","car"])
 
 
 
 // ------------------------------------------- 动态规划 ------------------------------
 
-
-
+//409. 最长回文串
 func longestPalindrome(_ s: String) -> String {
        var dp:[[Bool]] = [];
        if s.count <= 1{
@@ -355,7 +383,7 @@ func longestPalindrome(_ s: String) -> String {
 
 longestPalindrome("1234aba")
 
-// 70. 爬楼梯 备忘录 递归
+// 70. 爬楼梯 备忘录+递归
 func climbStairs(_ n: Int) -> Int {
     var dic = [Int:Int]()
     func rec(_ n: Int) -> Int{
@@ -377,9 +405,18 @@ func climbStairs(_ n: Int) -> Int {
     return rec(n)
 }
 
+// 递归
+func climbStairsRecursion(_ n: Int) -> Int {
+    
+    if n == 2 || n == 1{
+        return n
+    }else{
+        return climbStairs(n-1) + climbStairs(n-2)
+    }
 
+}
 
-// 动态规划求解
+// 动态规划求解 1
 func DyclimbStairs(_ n: Int) -> Int {
     
     var recArray = [1,1,2]
@@ -393,6 +430,30 @@ func DyclimbStairs(_ n: Int) -> Int {
     
     return recArray[n]
 }
+// DP 2
+func DP2(_ n: Int) -> Int {
+    //1 最优子结构
+    if n == 1 {
+        return 1
+    }
+    if n == 2 {
+        return 2
+    }
+//    2 边界
+    var a = 1
+    var b = 2
+    var temp = 0
+
+    for _ in 3 ... n {
+        temp = a + b  //3 状态转移方程
+        a = b
+        b = temp
+    }
+    return temp
+}
+
+DyclimbStairs(3)
+DP2(3)
 
 
 var m = 4
@@ -413,20 +474,20 @@ func dynamicMaxProfit(_ prices:[Int]) -> Int{
         return 0
     }
     
-    // 最优子结构
+    // 1 最优子结构
     // -- 只要考虑当天买和之前买哪个收益更高，当天卖和之前卖哪个收益更高。
-    //边界
+    // 2 边界
     var buy = -prices[0], sell = 0
     
     for idx in 1 ..< prices.count{
-        //状态转移方程
+        // 3 状态转移方程
         buy = max(buy,-prices[idx]) // 一直取买入最低的价格
         sell = max(sell,prices[idx]+buy) //第i天卖出,或者上一个状态比较,取最大值.
     }
     return sell
 }
 
-// 遍历
+// 遍历 （双指针 后置指针会遍历整个数组，前置的会根据业务保存对应值 《子序列》）
 func maxProfit(_ prices:[Int]) -> Int{
     
     var maxprice = 0
@@ -445,7 +506,6 @@ func maxProfit(_ prices:[Int]) -> Int{
     
     return maxprice
 }
-
 
 
 

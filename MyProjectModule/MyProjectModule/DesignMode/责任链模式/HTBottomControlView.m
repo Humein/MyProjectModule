@@ -31,22 +31,16 @@
 
 - (void)responseEvent:(NSInteger)eventType playItem:(id)playItem{
     
-//  self.superior ? [self.superior responseEvent:eventType playItem:playItem] : nil; 类似UIResponder 链条
-    
-    
+    //   linked
+    self.superior ? [self.superior responseEvent:eventType playItem:playItem] : nil;
     self.nextNodeView ? [self.nextNodeView responseEvent:eventType playItem:playItem] : nil;
- 
-    
     NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
-
-    
-    return;
+//    return;
     
     if (eventType == 2) {
 
     }else if (eventType == 100){
         self.superior ? [self.superior responseEvent:eventType playItem:nil] : nil;
-
     }
     else{
         self.superior ? [self.superior responseEvent:eventType playItem:nil] : nil;
@@ -57,10 +51,11 @@
 #pragma mark --- Action
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    // chainRespon
+    // chainResponder
     [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor lightGrayColor]}];
     
-    // zeren
+    return;
+    // linked
     [self attachPlayItem:@"3"];
     
     [self requestEvent:HTVideoPlayerBackEvent playItem:@""];
