@@ -102,7 +102,7 @@ static NSString *const H264FilePath = @"sandbox.h264";
     
     self.captureSession = [[AVCaptureSession alloc]init];
     
-    //设置录制 4k 
+    //设置录制 4k
     self.captureSession.sessionPreset = AVCaptureSessionPreset3840x2160;
     
     AVCaptureDevice *inputCamera = [self cameraWithPostion:AVCaptureDevicePositionBack];
@@ -177,7 +177,7 @@ static NSString *const H264FilePath = @"sandbox.h264";
     dispatch_sync(encodeQueue  , ^{
         frameNO = 0;
         int width = 480, height = 640;
-        OSStatus status = VTCompressionSessionCreate(NULL, width, height, kCMVideoCodecType_H264, NULL, NULL, NULL, didCompressH264, (__bridge void *)(self),  &encodingSession);
+        OSStatus status = VTCompressionSessionCreate(NULL, width, height, kCMVideoCodecType_H264, NULL, NULL, NULL, vtbdidCompressH264, (__bridge void *)(self),  &encodingSession);
         NSLog(@"H264: VTCompressionSessionCreate %d", (int)status);
         if (status != 0)
         {
@@ -239,7 +239,7 @@ static NSString *const H264FilePath = @"sandbox.h264";
 }
 
 // 编码完成回调
-void didCompressH264(void *outputCallbackRefCon, void *sourceFrameRefCon, OSStatus status, VTEncodeInfoFlags infoFlags, CMSampleBufferRef sampleBuffer) {
+void vtbdidCompressH264(void *outputCallbackRefCon, void *sourceFrameRefCon, OSStatus status, VTEncodeInfoFlags infoFlags, CMSampleBufferRef sampleBuffer) {
     NSLog(@"didCompressH264 called with status %d infoFlags %d", (int)status, (int)infoFlags);
     if (status != 0) {
         return;

@@ -44,7 +44,7 @@
 - (void)initEncode:(int)width height:(int)height{
     
     dispatch_async(encodeQueue, ^{
-        OSStatus status = VTCompressionSessionCreate(NULL, width, height, kCMVideoCodecType_H264, NULL, NULL, NULL, didCompressH264, (__bridge void *)(self),  &encodingSession);
+        OSStatus status = VTCompressionSessionCreate(NULL, width, height, kCMVideoCodecType_H264, NULL, NULL, NULL, xxdidCompressH264, (__bridge void *)(self),  &encodingSession);
         NSLog(@"H264: VTCompressionSessionCreate %d", (int)status);
         if (status != 0)
         {
@@ -84,7 +84,7 @@
 }
 
 // 编码完成回调
-void didCompressH264(void *outputCallbackRefCon, void *sourceFrameRefCon, OSStatus status, VTEncodeInfoFlags infoFlags, CMSampleBufferRef sampleBuffer) {
+void xxdidCompressH264(void *outputCallbackRefCon, void *sourceFrameRefCon, OSStatus status, VTEncodeInfoFlags infoFlags, CMSampleBufferRef sampleBuffer) {
     NSLog(@"didCompressH264 called with status %d infoFlags %d", (int)status, (int)infoFlags);
     if (status != 0) {
         return;

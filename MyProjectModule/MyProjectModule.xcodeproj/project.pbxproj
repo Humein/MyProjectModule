@@ -158,6 +158,8 @@
 		79A0ECA123681B79004C10B0 /* VTBEncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */; };
 		79A0ECA52368262F004C10B0 /* XXH264EncodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA42368262F004C10B0 /* XXH264EncodeTool.m */; };
 		79A0ECA82368263E004C10B0 /* XXH264DecodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA72368263E004C10B0 /* XXH264DecodeTool.m */; };
+		79A0ECAB23682EFF004C10B0 /* XXPLEAGLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECAA23682EFF004C10B0 /* XXPLEAGLLayer.m */; };
+		79A0ECAE236838E5004C10B0 /* VTBEncDecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECAD236838E5004C10B0 /* VTBEncDecViewController.m */; };
 		79A1A5162269AD0800CEA92A /* CheckConditionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5042269AD0800CEA92A /* CheckConditionItem.m */; };
 		79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5082269AD0800CEA92A /* BaseBookmarkChildController.m */; };
 		79A1A5182269AD0800CEA92A /* SmoothBookmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A50B2269AD0800CEA92A /* SmoothBookmarkView.m */; };
@@ -519,6 +521,10 @@
 		79A0ECA42368262F004C10B0 /* XXH264EncodeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXH264EncodeTool.m; sourceTree = "<group>"; };
 		79A0ECA62368263E004C10B0 /* XXH264DecodeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXH264DecodeTool.h; sourceTree = "<group>"; };
 		79A0ECA72368263E004C10B0 /* XXH264DecodeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXH264DecodeTool.m; sourceTree = "<group>"; };
+		79A0ECA923682EFF004C10B0 /* XXPLEAGLLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXPLEAGLLayer.h; sourceTree = "<group>"; };
+		79A0ECAA23682EFF004C10B0 /* XXPLEAGLLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXPLEAGLLayer.m; sourceTree = "<group>"; };
+		79A0ECAC236838E5004C10B0 /* VTBEncDecViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBEncDecViewController.h; sourceTree = "<group>"; };
+		79A0ECAD236838E5004C10B0 /* VTBEncDecViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTBEncDecViewController.m; sourceTree = "<group>"; };
 		79A1A5042269AD0800CEA92A /* CheckConditionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckConditionItem.m; sourceTree = "<group>"; };
 		79A1A5052269AD0800CEA92A /* SmoothBookmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothBookmarkViewController.h; sourceTree = "<group>"; };
 		79A1A5062269AD0800CEA92A /* CheckConditionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckConditionItem.h; sourceTree = "<group>"; };
@@ -1672,6 +1678,8 @@
 				79A0ECA2236825FA004C10B0 /* Encode:Decode */,
 				79A0EC9F23681B79004C10B0 /* VTBEncodeViewController.h */,
 				79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */,
+				79A0ECAC236838E5004C10B0 /* VTBEncDecViewController.h */,
+				79A0ECAD236838E5004C10B0 /* VTBEncDecViewController.m */,
 			);
 			path = VideoToolBox;
 			sourceTree = "<group>";
@@ -1683,6 +1691,8 @@
 				79A0ECA42368262F004C10B0 /* XXH264EncodeTool.m */,
 				79A0ECA62368263E004C10B0 /* XXH264DecodeTool.h */,
 				79A0ECA72368263E004C10B0 /* XXH264DecodeTool.m */,
+				79A0ECA923682EFF004C10B0 /* XXPLEAGLLayer.h */,
+				79A0ECAA23682EFF004C10B0 /* XXPLEAGLLayer.m */,
 			);
 			path = "Encode:Decode";
 			sourceTree = "<group>";
@@ -2206,6 +2216,7 @@
 				33C971422124108D00EAAD5E /* TablePopDemoViewController.m in Sources */,
 				79E3D63921DE67E00038CACB /* RequestViewController.m in Sources */,
 				3378281D21084A6E00373A20 /* Hamburger.m in Sources */,
+				79A0ECAB23682EFF004C10B0 /* XXPLEAGLLayer.m in Sources */,
 				33E6CE0721006D2000422FC7 /* UITableViewCell+AnimationType.m in Sources */,
 				792A731121EF30880098B94C /* ClassClusterModel.m in Sources */,
 				33FAE4E520E2445500BE7175 /* HeaderSuspendedLayout.m in Sources */,
@@ -2249,6 +2260,7 @@
 				335ABFAE2160C0BD00770703 /* AnimationExample.m in Sources */,
 				33888FDE20F05E3500E4A119 /* SegmentContentCell.m in Sources */,
 				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
+				79A0ECAE236838E5004C10B0 /* VTBEncDecViewController.m in Sources */,
 				333651B82180543E00286C7A /* AttributeAndPredicateWithLink.m in Sources */,
 				79E3D63321DE57D60038CACB /* ZTKBaseRequest.m in Sources */,
 				339B535020F4AF35003444CB /* UIButton+ButtonBlockCategory.m in Sources */,

@@ -7,8 +7,6 @@
 //
 
 #import "XXH264DecodeTool.h"
-#import <AVFoundation/AVFoundation.h>
-#import <VideoToolbox/VideoToolbox.h>
 
 @interface XXH264DecodeTool(){
     
@@ -85,7 +83,7 @@ static void didDecompress( void *decompressionOutputRefCon, void *sourceFrameRef
     
     //持有pixelBuffer数据，否则会被释放
     *outputPixelBuffer = CVPixelBufferRetain(pixelBuffer);
-    H264DecodeTool *decoder = (__bridge H264DecodeTool *)decompressionOutputRefCon;
+    XXH264DecodeTool *decoder = (__bridge XXH264DecodeTool *)decompressionOutputRefCon;
     if (decoder.delegate)
     {
         [decoder.delegate gotDecodedFrame:pixelBuffer];
