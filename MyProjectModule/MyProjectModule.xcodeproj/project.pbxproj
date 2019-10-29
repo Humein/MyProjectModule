@@ -156,6 +156,8 @@
 		7993C871228D6A4E001A6BFA /* DownLoadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C870228D6A4E001A6BFA /* DownLoadCell.m */; };
 		7997BE69224090A50054F4D0 /* AbstractAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997BE68224090A50054F4D0 /* AbstractAlertView.m */; };
 		79A0ECA123681B79004C10B0 /* VTBEncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */; };
+		79A0ECA52368262F004C10B0 /* XXH264EncodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA42368262F004C10B0 /* XXH264EncodeTool.m */; };
+		79A0ECA82368263E004C10B0 /* XXH264DecodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA72368263E004C10B0 /* XXH264DecodeTool.m */; };
 		79A1A5162269AD0800CEA92A /* CheckConditionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5042269AD0800CEA92A /* CheckConditionItem.m */; };
 		79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5082269AD0800CEA92A /* BaseBookmarkChildController.m */; };
 		79A1A5182269AD0800CEA92A /* SmoothBookmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A50B2269AD0800CEA92A /* SmoothBookmarkView.m */; };
@@ -513,6 +515,10 @@
 		7997BE68224090A50054F4D0 /* AbstractAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractAlertView.m; sourceTree = "<group>"; };
 		79A0EC9F23681B79004C10B0 /* VTBEncodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBEncodeViewController.h; sourceTree = "<group>"; };
 		79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTBEncodeViewController.m; sourceTree = "<group>"; };
+		79A0ECA32368262F004C10B0 /* XXH264EncodeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXH264EncodeTool.h; sourceTree = "<group>"; };
+		79A0ECA42368262F004C10B0 /* XXH264EncodeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXH264EncodeTool.m; sourceTree = "<group>"; };
+		79A0ECA62368263E004C10B0 /* XXH264DecodeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXH264DecodeTool.h; sourceTree = "<group>"; };
+		79A0ECA72368263E004C10B0 /* XXH264DecodeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXH264DecodeTool.m; sourceTree = "<group>"; };
 		79A1A5042269AD0800CEA92A /* CheckConditionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckConditionItem.m; sourceTree = "<group>"; };
 		79A1A5052269AD0800CEA92A /* SmoothBookmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothBookmarkViewController.h; sourceTree = "<group>"; };
 		79A1A5062269AD0800CEA92A /* CheckConditionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckConditionItem.h; sourceTree = "<group>"; };
@@ -1663,10 +1669,22 @@
 		79A0EC9E236819C5004C10B0 /* VideoToolBox */ = {
 			isa = PBXGroup;
 			children = (
+				79A0ECA2236825FA004C10B0 /* Encode:Decode */,
 				79A0EC9F23681B79004C10B0 /* VTBEncodeViewController.h */,
 				79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */,
 			);
 			path = VideoToolBox;
+			sourceTree = "<group>";
+		};
+		79A0ECA2236825FA004C10B0 /* Encode:Decode */ = {
+			isa = PBXGroup;
+			children = (
+				79A0ECA32368262F004C10B0 /* XXH264EncodeTool.h */,
+				79A0ECA42368262F004C10B0 /* XXH264EncodeTool.m */,
+				79A0ECA62368263E004C10B0 /* XXH264DecodeTool.h */,
+				79A0ECA72368263E004C10B0 /* XXH264DecodeTool.m */,
+			);
+			path = "Encode:Decode";
 			sourceTree = "<group>";
 		};
 		79A1A5032269AD0800CEA92A /* SmoothBookmarker */ = {
@@ -2168,6 +2186,7 @@
 				33C9711F211EB8DC00EAAD5E /* AbstractViewController.m in Sources */,
 				33888FE420F0683C00E4A119 /* UIView+frameAdjust.m in Sources */,
 				339B534620F4AB2A003444CB /* ZTKBJDownHelper.m in Sources */,
+				79A0ECA82368263E004C10B0 /* XXH264DecodeTool.m in Sources */,
 				33888FEB20F06ADD00E4A119 /* ChildViewController.m in Sources */,
 				79EEEAA9219014BD00848B59 /* PointTreeStatisTableViewCell.m in Sources */,
 				3362E69F2130FBEF00A4B26D /* CustomKVO.m in Sources */,
@@ -2177,6 +2196,7 @@
 				79EEEA8F218BF31600848B59 /* UIResponder+UIResponderChain.m in Sources */,
 				79A1A5192269AD0800CEA92A /* CheckConditionCollectionViewCell.m in Sources */,
 				79A1A51C2269AD0800CEA92A /* BookmarkMainTableView.m in Sources */,
+				79A0ECA52368262F004C10B0 /* XXH264EncodeTool.m in Sources */,
 				3378282C2108544300373A20 /* UIImage+Title.m in Sources */,
 				79A1A51A2269AD0800CEA92A /* BookmarkContainerView.m in Sources */,
 				792A731C21EF32730098B94C /* ClassClusterTableViewCellA.m in Sources */,
