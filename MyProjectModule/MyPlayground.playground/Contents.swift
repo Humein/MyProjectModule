@@ -28,8 +28,184 @@ dic[n] = ""
 //let isMark = dic.contains(where: {$0["name"] == "Mark"})
 
 
+//MARK:                                    双指针
+// 392.判断子序列 双下标  判断 s 是否为 t 的子序列。
+/*
+ 本文主要运用的是双指针的思想，指针si指向s字符串的首部，指针ti指向t字符串的首部。
+ */
+func isSubsequence(_ s: String, _ t: String) -> Bool {
+    // 因为子序列没有改变顺序，不存在回溯一说
+    // 1 双指针
+    guard s != "" else {
+        return true
+    }
+    
+    var i = 0, j = 0
+    
+    let s = Array(s), t = Array(t)  // 字符串转数组
+    
+    while (i < s.count && j < t.count) {
+        if (s[i] == t[j]) {
+            i+=1
+        }
+        j+=1
+    }
+    return i == s.count
+}
+print(isSubsequence("acd","abcd"))
 
-// ----------------------- -------------------
+
+//11. 盛最多水的容器  双指针
+/*
+ 现在，为了使面积最大化，我们需要考虑更长的两条线段之间的区域。如果我们试图将指向较长线段的指针向内侧移动，矩形区域的面积将受限于较短的线段而不会获得任何增加。但是，在同样的条件下，移动指向较短线段的指针尽管造成了矩形宽度的减小，但却可能会有助于面积的增大。因为移动较短线段的指针会得到一条相对较长的线段，这可以克服由宽度减小而引起的面积减小。
+ */
+func maxArea(_ height: [Int]) -> Int {
+    var maxArea: Int = 0
+    var i = 0
+    var j = height.count - 1
+    while i < j {
+        var minHeight = 0
+        let leftHeight = height[i]
+        let rightHeight = height[j]
+        
+        if leftHeight < rightHeight {
+            minHeight = leftHeight
+            i += 1
+        }else{
+            minHeight = rightHeight
+            j -= 1
+        }
+        maxArea = max(maxArea, (j - i + 1) * minHeight)
+    }
+    return maxArea
+}
+maxArea([1,8,6,2,5,4,8,3,7])
+
+
+
+//MARK:                                      二分查找
+// 658. 找到 K 个最接近的元素
+/*
+ 给定一个排序好的数组，两个整数 k 和 x，从数组中找到最靠近 x（两数之差最小）的 k 个数。返回的结果必须要是按升序排好的。如果有两个数与 x 的差值一样，优先选择数值较小的那个数。
+ 二分法
+ 用于区间定位：
+  章节定位
+ */
+func findClosestElements(_ arr: [Int], _ k: Int, _ x: Int) -> [Int] {
+    
+    var leftIndex: Int = 0
+    var rightIndex: Int = arr.count - k
+    
+    while(leftIndex < rightIndex){
+        
+        let mid: Int = leftIndex + (rightIndex - leftIndex) / 2
+        
+        if x - arr[mid] > arr[mid + k] - x{
+            
+            leftIndex = mid + 1
+        }else{
+            
+            rightIndex = mid
+        }
+        
+    }
+    
+    return Array(arr[leftIndex..<(leftIndex + k)])
+}
+
+
+
+let chapter = findClosestElements([1,3,5,7,9], 1, 8)
+
+
+// 704. 二分查找 (还是双指针)
+
+// while 迭代方式
+func searchs(_ nums: [Int], _ target: Int) -> Int {
+    var left = 0
+    var right = nums.count - 1
+    
+    while left <= right {
+        let mid = (right - left)/2 + left
+        if nums[mid] == target {
+            return mid
+        }else if nums[mid] < target{
+            left = mid + 1
+        }else{
+            right = mid - 1
+        }
+    }
+    
+    return -1
+    
+}
+
+
+func search(_ nums: [Int], _ target: Int) -> Int {
+    return binarySearch(nums: nums, target: target, left: 0, right: nums.count - 1)
+}
+
+// 递归方式
+func binarySearch(nums: [Int], target :Int, left :Int, right: Int) -> Int{
+    
+    guard left <= right else{
+        return -1
+    }
+    
+    let mid = (right - left) / 2 + left
+    
+    if nums[mid] == target{
+        return mid
+    }else if nums[mid] < target{
+        return binarySearch(nums: nums, target: target, left: mid + 1, right: right)
+    }else{
+        return binarySearch(nums: nums, target: target, left: left, right: mid - 1)
+    }
+}
+
+searchs([-1,0,3,5,9,12], 12)
+
+
+//278. 第一个错误的版本
+/*
+   假设你有 n 个版本 [1, 2, ..., n]，你想找出导致之后所有版本出错的第一个错误的版本。
+   你可以通过调用 bool isBadVersion(version) 接口来判断版本号 version 是否在单元测试中出错。实现一个函数来查找第一个错误的版本。你应该尽量减少对调用 API 的次数。
+   给定 n = 5，并且 version = 4 是第一个错误的版本。
+ */
+func isBadVersions(_ target: Int) -> Bool{
+    print("isBadVersion")
+    if target >= 4 {
+        return true
+    }else{
+        return false
+    }
+}
+func findFirstError(_ nums: [Int],_ target: Int) -> Int {
+    var leftIndex = 1
+    var rightIndex = nums.count
+    
+    while leftIndex < rightIndex {
+        let mid = (rightIndex - leftIndex) / 2 + leftIndex
+        
+        if isBadVersions(mid) {
+            rightIndex = mid
+        }else{
+            leftIndex = mid + 1
+        }
+    }
+    
+    return leftIndex
+    
+}
+
+findFirstError([1,2,3,4,5], 4)
+
+
+
+
+
+
+//MARK:                                  未分类
 
 // 1. 两数之和
 func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
@@ -140,86 +316,6 @@ func findDuplicates(_ nums: [Int]) -> [Int] {
 findDuplicates([4,3,2,7,8,2,3,1])
 
 
-// 658. 找到 K 个最接近的元素
-/*
- 给定一个排序好的数组，两个整数 k 和 x，从数组中找到最靠近 x（两数之差最小）的 k 个数。返回的结果必须要是按升序排好的。如果有两个数与 x 的差值一样，优先选择数值较小的那个数。
- 二分法
- */
-func findClosestElements(_ arr: [Int], _ k: Int, _ x: Int) -> [Int] {
-    
-    var left: Int = 0
-    var right: Int = arr.count - k
-    
-    while(left < right){
-        
-        let mid: Int = left + (right - left) / 2
-        
-        if x - arr[mid] > arr[mid + k] - x{
-            
-            left = mid + 1
-        }else{
-            
-            right = mid
-        }
-        
-    }
-    
-    return Array(arr[left..<(left + k)])
-}
-
-
-
-let chapter = findClosestElements([1,3,5,7,9], 1, 8)
-
-
-
-
-// 704. 二分查找 (还是双指针)
-// while 迭代方式
-func searchs(_ nums: [Int], _ target: Int) -> Int {
-    var left = 0
-    var right = nums.count - 1
-    
-    while left <= right {
-        let mid = (right - left)/2 + left
-        if nums[mid] == target {
-            return mid
-        }else if nums[mid] < target{
-            left = mid + 1
-        }else{
-            right = mid - 1
-        }
-    }
-    
-    return -1
-    
-}
-
-
-func search(_ nums: [Int], _ target: Int) -> Int {
-    return binarySearch(nums: nums, target: target, left: 0, right: nums.count - 1)
-}
-
-// 递归方式
-func binarySearch(nums: [Int], target :Int, left :Int, right: Int) -> Int{
-    
-    guard left <= right else{
-        return -1
-    }
-    
-    let mid = (right - left) / 2 + left
-    
-    if nums[mid] == target{
-        return mid
-    }else if nums[mid] < target{
-        return binarySearch(nums: nums, target: target, left: mid + 1, right: right)
-    }else{
-        return binarySearch(nums: nums, target: target, left: left, right: mid - 1)
-    }
-}
-
-searchs( [-1,0,3,5,9,12], 12)
-
 // ----------------------------------------- 字符串  -----------------------
 
 //3. 无重复字符的最长子串 (滑动窗口)
@@ -253,57 +349,7 @@ func lengthOfLongestSubstringWD(_ s: String) -> Int {
 
 lengthOfLongestSubstringWD("bbbbbacd")
 
-// 392.判断子序列 双下标  判断 s 是否为 t 的子序列。
-/*
- 本文主要运用的是双指针的思想，指针si指向s字符串的首部，指针ti指向t字符串的首部。
- */
-func isSubsequence(_ s: String, _ t: String) -> Bool {
-    // 因为子序列没有改变顺序，不存在回溯一说
-    // 1 双指针
-    guard s != "" else {
-        return true
-    }
-    
-    var i = 0, j = 0
-    
-    let s = Array(s), t = Array(t)  // 字符串转数组
-    
-    while (i < s.count && j < t.count) {
-        if (s[i] == t[j]) {
-            i+=1
-        }
-        j+=1
-    }
-    return i == s.count
-}
-print(isSubsequence("acd","abcd"))
 
-
-//11. 盛最多水的容器  双指针
-/*
- 现在，为了使面积最大化，我们需要考虑更长的两条线段之间的区域。如果我们试图将指向较长线段的指针向内侧移动，矩形区域的面积将受限于较短的线段而不会获得任何增加。但是，在同样的条件下，移动指向较短线段的指针尽管造成了矩形宽度的减小，但却可能会有助于面积的增大。因为移动较短线段的指针会得到一条相对较长的线段，这可以克服由宽度减小而引起的面积减小。
- */
-func maxArea(_ height: [Int]) -> Int {
-    var maxArea: Int = 0
-    var i = 0
-    var j = height.count - 1
-    while i < j {
-        var minHeight = 0
-        let leftHeight = height[i]
-        let rightHeight = height[j]
-        
-        if leftHeight < rightHeight {
-            minHeight = leftHeight
-            i += 1
-        }else{
-            minHeight = rightHeight
-            j -= 1
-        }
-        maxArea = max(maxArea, (j - i + 1) * minHeight)
-    }
-    return maxArea
-}
-maxArea([1,8,6,2,5,4,8,3,7])
 
 //14. 最长公共前缀
 func longestCommonPrefix(_ strs: [String]) -> String {

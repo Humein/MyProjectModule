@@ -150,6 +150,8 @@
 		795FF3E722E5AE1500CCC8B9 /* SecendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3E622E5AE1500CCC8B9 /* SecendView.swift */; };
 		795FF3E922E5AE2300CCC8B9 /* AbstractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3E822E5AE2300CCC8B9 /* AbstractView.swift */; };
 		795FF3F622E6DBD100CCC8B9 /* SwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3F522E6DBD100CCC8B9 /* SwiftDemosViewController.swift */; };
+		797EC360236C10F900E21E44 /* SDOPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC35F236C10F900E21E44 /* SDOPickerView.swift */; };
+		797EC362236C141100E21E44 /* SDTimeAlertPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */; };
 		7993C86A228D68E6001A6BFA /* URLSessionDownManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C868228D68E6001A6BFA /* URLSessionDownManager.m */; };
 		7993C86B228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C869228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m */; };
 		7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C86D228D692A001A6BFA /* DownListViewController.m */; };
@@ -505,6 +507,8 @@
 		795FF3E622E5AE1500CCC8B9 /* SecendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecendView.swift; sourceTree = "<group>"; };
 		795FF3E822E5AE2300CCC8B9 /* AbstractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractView.swift; sourceTree = "<group>"; };
 		795FF3F522E6DBD100CCC8B9 /* SwiftDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemosViewController.swift; sourceTree = "<group>"; };
+		797EC35F236C10F900E21E44 /* SDOPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDOPickerView.swift; sourceTree = "<group>"; };
+		797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimeAlertPickerView.swift; sourceTree = "<group>"; };
 		7993C866228D68E6001A6BFA /* AppDelegate+DownManagerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DownManagerHelper.h"; sourceTree = "<group>"; };
 		7993C867228D68E6001A6BFA /* URLSessionDownManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSessionDownManager.h; sourceTree = "<group>"; };
 		7993C868228D68E6001A6BFA /* URLSessionDownManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSessionDownManager.m; sourceTree = "<group>"; };
@@ -663,6 +667,7 @@
 		333D105420CE74A8004D9241 /* MyProjectModule */ = {
 			isa = PBXGroup;
 			children = (
+				797EC357236BCCEF00E21E44 /* UIWidget */,
 				79A0EC9D236819C5004C10B0 /* MediaCodec */,
 				79040D9E2238AA0A0085335E /* AOPTrack */,
 				79040D882236460F0085335E /* FlutterDemo */,
@@ -1653,6 +1658,23 @@
 			path = Swift;
 			sourceTree = "<group>";
 		};
+		797EC357236BCCEF00E21E44 /* UIWidget */ = {
+			isa = PBXGroup;
+			children = (
+				797EC358236BCD0A00E21E44 /* TimePick */,
+			);
+			path = UIWidget;
+			sourceTree = "<group>";
+		};
+		797EC358236BCD0A00E21E44 /* TimePick */ = {
+			isa = PBXGroup;
+			children = (
+				797EC35F236C10F900E21E44 /* SDOPickerView.swift */,
+				797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */,
+			);
+			path = TimePick;
+			sourceTree = "<group>";
+		};
 		7993C865228D68E6001A6BFA /* DownHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -2141,6 +2163,7 @@
 				33C2DF3821DCC5D400F96F32 /* PointTreeTypeTwo.m in Sources */,
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
 				79EEEAB02191707A00848B59 /* HitEventStrikeView.m in Sources */,
+				797EC360236C10F900E21E44 /* SDOPickerView.swift in Sources */,
 				79EEEA99218EEBCF00848B59 /* FullScreenViewController.m in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
@@ -2189,6 +2212,7 @@
 				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
 				33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */,
 				795FF3E722E5AE1500CCC8B9 /* SecendView.swift in Sources */,
+				797EC362236C141100E21E44 /* SDTimeAlertPickerView.swift in Sources */,
 				7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */,
 				794BE89F231D368000113B97 /* leetCode.cpp in Sources */,
 				33C2DF3E21DCC66C00F96F32 /* PointTreeOneModelViewController.m in Sources */,

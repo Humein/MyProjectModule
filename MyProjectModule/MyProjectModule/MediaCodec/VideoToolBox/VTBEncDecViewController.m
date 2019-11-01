@@ -10,6 +10,7 @@
 #import "XXPLEAGLLayer.h"
 #import "XXH264EncodeTool.h"
 #import "XXH264DecodeTool.h"
+#import "MyProjectModule-Swift.h"
 
 @interface VTBEncDecViewController ()<AVCaptureVideoDataOutputSampleBufferDelegate,H264EncodeCallBackDelegate,H264DecodeFrameCallbackDelegate>{
     //录制队列
@@ -42,11 +43,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    //初始化UI和参数
-    [self initUIAndParameter];
+    [self test];
     
-    [self configH264Decoder];
-    [self configH264Encoder];
+    //初始化UI和参数
+//    [self initUIAndParameter];
+//
+//    [self configH264Decoder];
+//    [self configH264Encoder];
+}
+
+-(void)test{
+    SDTimeAlertPickerView *v = [[SDTimeAlertPickerView alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 300)];
+    [self.view addSubview:v];
+    return;
 }
 
 - (void)initUIAndParameter{
