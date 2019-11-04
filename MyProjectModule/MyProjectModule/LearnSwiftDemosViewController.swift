@@ -554,7 +554,16 @@ class LearnSwiftDemosViewController: UIViewController {
 
 //typealias <type name> = <type expression>
 
+//MARK:- 闭包声明
+
 public typealias successBlk = (Any)->()
+var buttonClick: successBlk?
+
+//MARK:- 闭包使用
+//self.buttonClick = {[weak self] (Any)in
+//    guard let self = self else {return}
+//
+//}
 
 //func getExerciseData(callingViewController: NSObject, successBlock: successBlk, andFailure failureBlock: (NSError?) -> ())
 
@@ -589,6 +598,7 @@ let addClose: Add = {
     (_ num1: Int, _ num2: Int) -> (Int) in
     return num1 + num2
 }
+
 
 
 /*场景一：利用闭包传值

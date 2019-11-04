@@ -150,6 +150,7 @@
 		795FF3E722E5AE1500CCC8B9 /* SecendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3E622E5AE1500CCC8B9 /* SecendView.swift */; };
 		795FF3E922E5AE2300CCC8B9 /* AbstractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3E822E5AE2300CCC8B9 /* AbstractView.swift */; };
 		795FF3F622E6DBD100CCC8B9 /* SwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3F522E6DBD100CCC8B9 /* SwiftDemosViewController.swift */; };
+		7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */; };
 		797EC360236C10F900E21E44 /* SDOPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC35F236C10F900E21E44 /* SDOPickerView.swift */; };
 		797EC362236C141100E21E44 /* SDTimeAlertPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */; };
 		7993C86A228D68E6001A6BFA /* URLSessionDownManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C868228D68E6001A6BFA /* URLSessionDownManager.m */; };
@@ -507,6 +508,7 @@
 		795FF3E622E5AE1500CCC8B9 /* SecendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecendView.swift; sourceTree = "<group>"; };
 		795FF3E822E5AE2300CCC8B9 /* AbstractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractView.swift; sourceTree = "<group>"; };
 		795FF3F522E6DBD100CCC8B9 /* SwiftDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemosViewController.swift; sourceTree = "<group>"; };
+		7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Radius.swift"; sourceTree = "<group>"; };
 		797EC35F236C10F900E21E44 /* SDOPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDOPickerView.swift; sourceTree = "<group>"; };
 		797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimeAlertPickerView.swift; sourceTree = "<group>"; };
 		7993C866228D68E6001A6BFA /* AppDelegate+DownManagerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DownManagerHelper.h"; sourceTree = "<group>"; };
@@ -1671,6 +1673,7 @@
 			children = (
 				797EC35F236C10F900E21E44 /* SDOPickerView.swift */,
 				797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */,
+				7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */,
 			);
 			path = TimePick;
 			sourceTree = "<group>";
@@ -2166,6 +2169,7 @@
 				797EC360236C10F900E21E44 /* SDOPickerView.swift in Sources */,
 				79EEEA99218EEBCF00848B59 /* FullScreenViewController.m in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
+				7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
 				79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */,
 				79EEEAB321957A5A00848B59 /* ResponderPlayerView.m in Sources */,

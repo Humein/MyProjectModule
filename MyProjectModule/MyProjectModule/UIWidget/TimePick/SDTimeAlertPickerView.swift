@@ -23,6 +23,8 @@ func FontRank(A:CGFloat, B:CGFloat, C:CGFloat, D:CGFloat, E:CGFloat) -> CGFloat 
 
 
 class SDTimeAlertPickerView: UIView, UIPickerViewDelegate, UIPickerViewDataSource{
+    typealias AlertPickCallBack = (_ currentHour :String,_ currentMinute :String) -> Void
+    var buttonClick: AlertPickCallBack?
     
     struct PickerDataSource {
         var isLoop :Bool = false
@@ -32,9 +34,9 @@ class SDTimeAlertPickerView: UIView, UIPickerViewDelegate, UIPickerViewDataSourc
         var label :UILabel = UILabel()
     }
     
-    private var pickerView = SDOPickerView.init(frame: CGRect.init(x: 0, y: 0, width: 300, height: 300))
-    private var currentHour :NSInteger = 0
-    private var currentMinute :NSInteger = 0
+    private var pickerView = SDOPickerView.init(frame: CGRect.zero)
+    private var currentHour :String = "00"
+    private var currentMinute :String = "00"
     private var pickerDataSize :NSInteger = 0
     private var pickerLabel :UILabel = UILabel()
     var pickerDataSources = [PickerDataSource]()
@@ -43,26 +45,57 @@ class SDTimeAlertPickerView: UIView, UIPickerViewDelegate, UIPickerViewDataSourc
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+//    touchesBegan点击事件拦截
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = ((touches as NSSet).anyObject() as AnyObject)
+        let point = touch.location(in:self)
+        if self.bgView.frame.contains(point){
+            return
+        }
+        self.hideAnimation()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setUpUI()
+        setupUI()
+        makeupData()
+        updatePickView()
     }
     
     
-    func setUpUI() -> Void {
-        self.frame = CGRect.init(x: 0, y: 0, width: 300, height: 300)
+    func setupUI() -> Void {
+        self.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         self.backgroundColor = UIColor.gray
-        pickerDataSize = 10000
+//        self.backgroundColor =  UIColor.extColorWithHex("000000", alpha: 0.4)
+        self.addSubview(self.bgView)
         pickerView.delegate = self
         pickerView.dataSource = self
+        self.bgView.addSubview(pickerView)
+        self.bgView.addSubview(pickButton)
+        
+        pickerView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.bgView).offset(0)
+            make.left.equalTo(self.bgView).offset(50)
+            make.right.equalTo(self.bgView).offset(-50)
+            make.height.equalTo(100)
+        }
+        pickButton.snp.makeConstraints { (make) in
+            make.top.equalTo(pickerView.snp_bottom).offset(10)
+            make.centerX.equalTo(pickerView)
+            make.height.equalTo(36)
+            make.width.equalTo(139)
+        }
+
+        self.showAnimation()
+    }
+    
+    func makeupData() {
         let day = PickerDataSource.init(isLoop: false, width: pickerView.frame.width / WidthRank(A: 5.5, B: 5.5, C: 5.5, D: 5.5, E: 5.5), tag: 101, pickerArray: ["每天"], label: pickerLabel)
         let hour = PickerDataSource.init(isLoop: true, width: pickerView.frame.width / WidthRank(A: 5.5, B: 5.5, C: 5.5, D: 5.5, E: 5.5), pickerArray: fetchHours, label: pickerLabel)
-        let link = PickerDataSource.init(isLoop: false, width: pickerView.frame.width / WidthRank(A: 6.5, B: 6.5, C: 6.5, D: 6.5, E: 6.5), tag: 101, pickerArray: [":"], label: pickerLabel)
+        let link = PickerDataSource.init(isLoop: false, width: pickerView.frame.width / WidthRank(A: 18.5, B: 18.5, C: 18.5, D: 18.5, E: 18.5), tag: 101, pickerArray: [":"], label: pickerLabel)
         let minute = PickerDataSource.init(isLoop: true, width: pickerView.frame.width / WidthRank(A: 5.5, B: 5.5, C: 5.5, D: 5.5, E: 5.5), pickerArray: fetchMinutes, label: pickerLabel)
         pickerDataSources = [day,hour,link,minute]
-        self.addSubview(pickerView)
-        updatePickView()
+        pickerDataSize = 10000
     }
 
     func updatePickView() -> Void {
@@ -103,16 +136,63 @@ class SDTimeAlertPickerView: UIView, UIPickerViewDelegate, UIPickerViewDataSourc
         label.font = UIFont.init(name: "PingFangSC-Semibold", size: FontRank(A: 23, B: 23, C: 23, D: 23, E: 23)) ?? UIFont.boldSystemFont(ofSize: 23)
         label.tag = pickerDataSources[component].tag
         label.text = (pickerDataSources[component].pickerArray[row % pickerDataSources[component].pickerArray.count] as! String)
-        
         return label;
     }
 
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        currentHour = pickerDataSources[component].pickerArray[row % pickerDataSources[component].pickerArray.count] as! NSInteger
+        currentHour = component == 1 ? (pickerDataSources[1].pickerArray[row % pickerDataSources[1].pickerArray.count] as! String) : currentHour
+        currentMinute = component == 3 ? (pickerDataSources[3].pickerArray[row % pickerDataSources[3].pickerArray.count] as! String) : currentMinute
         
     }
+    
+    //MARK:- Private Method
 
+    @objc func setSel(){
+        if buttonClick != nil {
+            buttonClick!(currentHour,currentMinute)
+        }
+    }
+    
+    //MARK:- Public Method
+    func showAnimation(){
+        UIView.animate(withDuration: 0.5 , delay: 0 , usingSpringWithDamping: 0.5 , initialSpringVelocity: 8 , options: [] , animations: {
+          var frame = self.bgView.frame;
+          frame.origin.y = UIScreen.main.bounds.height-170;
+          self.bgView.frame = frame
+        }, completion: nil)
+    }
+    
+    func hideAnimation(){
+        UIView.animate(withDuration: 0.5, animations: {
+            var frame = self.bgView.frame;
+            frame.origin.y = UIScreen.main.bounds.height;
+            self.bgView.frame = frame
+        }) { (finished :Bool) in
+            self.bgView.removeFromSuperview()
+            self.removeFromSuperview()
+        }
+    }
+
+    //MARK:- Lazy
+    private lazy var pickButton: UIButton = {
+        let button = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 139, height: 36))
+        button.setTitle("完成", for: .normal)
+        button.addTarget(self, action: #selector(setSel), for: .touchUpInside)
+        button.layer.cornerRadius = 18
+        button.backgroundColor = UIColor.blue
+//        button.backgroundColor = UIColor.extColorWithHex("#0C65F6", alpha: 1)
+//        button.setTitleColor(UIColor.extColorWithHex("#FFFFFF", alpha: 1), for: .normal)
+        button.titleLabel?.font = UIFont.init(name: "PingFangSC-Semibold", size: 18) ?? UIFont.boldSystemFont(ofSize: 12)
+        return button
+    }()
+    
+    lazy private var bgView :UIView = {
+        let view = UIView.init(frame: CGRect.init(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 170))
+        view.backgroundColor = UIColor.white
+        view.exCorner(byRoundingCorners: [UIRectCorner.topLeft,UIRectCorner.topRight], radii: 10)
+        return  view
+    }()
     
     lazy private var fetchHours: NSArray = {
         var hours = NSMutableArray()
@@ -140,4 +220,5 @@ class SDTimeAlertPickerView: UIView, UIPickerViewDelegate, UIPickerViewDataSourc
         return minutes.copy() as! NSArray
     }()
 
+    
 }

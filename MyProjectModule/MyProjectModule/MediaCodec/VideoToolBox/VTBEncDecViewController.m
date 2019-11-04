@@ -43,19 +43,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self test];
     
-    //初始化UI和参数
-//    [self initUIAndParameter];
-//
-//    [self configH264Decoder];
-//    [self configH264Encoder];
+//    初始化UI和参数
+    [self initUIAndParameter];
+
+    [self configH264Decoder];
+    [self configH264Encoder];
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self test];
+
 }
 
 -(void)test{
-    SDTimeAlertPickerView *v = [[SDTimeAlertPickerView alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 300)];
-    [self.view addSubview:v];
+    SDTimeAlertPickerView *picker = [[SDTimeAlertPickerView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:picker];
     return;
+}
+- (void)dealloc
+{
+    
 }
 
 - (void)initUIAndParameter{
