@@ -16,17 +16,13 @@
 
 @property (strong, nonatomic, nonnull) dispatch_semaphore_t operationsLock; // a lock to keep the access to `External Operations` thread-safe
 
-
 // key is copy, value is weak because operation instance is retained by SDWebImageManager's runningOperations property
 // we should use lock to keep thread-safe because these method may not be acessed from main queue
 @property (nonatomic, strong, nonnull) NSMapTable< NSString * , id<TimerObserver> > *weakCache; // strong-weak cache
 
-
-
 @property (nonatomic, strong, nonnull) NSHashTable *timerMap; // strong-weak cache
 
 @property (nonatomic, strong, nonnull) dispatch_semaphore_t weakCacheLock; // a lock to keep the access to `weakCache` thread-safe
-
 
 @property (nonatomic, strong) NSTimer *timer;
 

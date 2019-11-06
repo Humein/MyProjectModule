@@ -3,7 +3,15 @@ var str = "Hello, playground"
 
 /*
  VIA： https://www.cnblogs.com/strengthen/p/10299618.html swift 博客
+ VIA:  优先 剑指offer
  
+ 全排列的算法
+ LRU
+【leetcode】480 滑动窗口中位数（数组，堆）
+ 问数组里每个数都出现3次，只有一个数出现1次。
+ 两个有序数组合并
+ 一个二叉树的前中后序遍历
+ 手写一下快排序
 */
 
 
@@ -28,8 +36,50 @@ dic[n] = ""
 //let isMark = dic.contains(where: {$0["name"] == "Mark"})
 
 
+
 //MARK:                                    双指针
+
+/*88. 合并两个有序数组
+ 给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。
+
+ 标签：从后向前数组遍历
+ 因为 nums1 的空间都集中在后面，所以从后向前处理排序的数据会更好，节省空间，一边遍历一边将值填充进去
+ 设置指针 len1 和 len2 分别指向 nums1 和 nums2 的有数字尾部，从尾部值开始比较遍历，同时设置指针 len 指向 nums1 的最末尾，每次遍历比较值大小之后，则进行填充
+ 当 len1<0 时遍历结束，此时 nums2 中海油数据未拷贝完全，将其直接拷贝到 nums1 的前面，最后得到结果数组
+
+ O(m+n)  O(1)
+  
+ */
+func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+    
+    var len1 = m - 1, len2 = n - 1, len = m + n - 1
+    
+    while len1 >= 0 && len2 >= 0 {
+        if nums1[len1] >= nums2[len2] {
+            nums1[len] = nums1[len1]
+            len1 -= 1
+            len -= 1
+        }else{
+            nums1[len] = nums2[len2]
+            len -= 1
+            len2 -= 1
+        }
+    }
+    
+    while len2 >= 0 {
+        nums1[len] = nums2[len2]
+        len -= 1
+        len2 -= 1
+    }
+}
+var nums1 = [1,2,3,0,0,0], mm = 3
+var nums2 = [2,5,6],       nn = 3
+
+merge(&nums1,mm,nums2,nn)
+
+
 // 392.判断子序列 双下标  判断 s 是否为 t 的子序列。
+
 /*
  本文主要运用的是双指针的思想，指针si指向s字符串的首部，指针ti指向t字符串的首部。
  */
@@ -203,9 +253,76 @@ findFirstError([1,2,3,4,5], 4)
 
 
 
+//MARK:                                  递归
+/*
+ 递归算法的两个重要特征
+ 1. 有终止的条件，不然就成了死循环了
+ 2. 不停调用自身
+ 
+ 处理好递归的3个主要的点:
+ a)出口条件，即递归“什么时候结束”，这个通常在递归函数的开始就写好;
+ b) 如何由"情况 n" 变化到"情况 n+1", 也就是非出口情况，也就是一般情况——"正在"递归中的情况；
+ c) 初始条件，也就是这个递归调用以什么样的初始条件开始
+
+ 递归由于是函数调用自身， 而函数调用是有时间和空间的消耗的：每一次函数调用，都需要在内存栈中分配空间以保存参数、返回地址及临时变量，而且往栈里压入数据和弹出数据都需要时间。另外，递归中有可能很多计算都是重复的，从而对性能带来很大的负面影响。除了效率之外，还有可能使调用栈溢出，前面分析中提到需要为每一次函数调用在内存栈中分配空间，而每个进程的栈的容量是有限的。当递归调用的层级太多时，就会超出栈的容量，从而导致调用栈溢出。
+
+ */
+
+
+//    递归 1 - 100 和
+func recursionNum(n :Int) -> Int {
+    if n == 1 {
+        return 1
+    }
+    return self.recursionNum(n - 1) + n
+    
+}
+
+// 遍历子视图
+func getSub(view :UIView) -> Void {
+    if view.subviews.count > 0 {
+        for subView in view.subviews{
+            print(view.class)
+            getSub(view: subView)
+        }
+    }
+}
+
+//206. 反转链表
+
+public class ListNode {
+      public var val: Int
+      public var next: ListNode?
+      public init(_ val: Int) {
+          self.val = val
+          self.next = nil
+      }
+  }
+
+func reverseList(_ head: ListNode?) -> ListNode? {
+    
+    if head == nil || head?.next == nil{
+        return head
+    }else{
+        // 递归 获取最后的节点
+        print("++++++++++")
+        let newHead = reverseList(head?.next)
+        print("-----------")
+        
+         // 依次反转每个节点 <3个指针中 head?.next 为current 指针作为 反转中间轴 >
+        head?.next?.next = head
+        head?.next = nil
+        
+        return newHead
+    }
+}
+
 
 
 //MARK:                                  未分类
+
+
+
 
 // 1. 两数之和
 func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
@@ -238,39 +355,6 @@ func singleNumber(_ nums: [Int]) -> Int {
 }
 
 singleNumber([0,2,2,1,1,3,3])
-
-
-//206. 反转链表
-
-public class ListNode {
-      public var val: Int
-      public var next: ListNode?
-      public init(_ val: Int) {
-          self.val = val
-          self.next = nil
-      }
-  }
-
-
-
-func reverseList(_ head: ListNode?) -> ListNode? {
-    
-    if head == nil || head?.next == nil{
-        return head
-    }else{
-        // 递归 获取最后的节点
-        print("++++++++++")
-        let newHead = reverseList(head?.next)
-        print("-----------")
-        
-         // 依次反转每个节点 <3个指针中 head?.next 为current 指针作为 反转中间轴 >
-        head?.next?.next = head
-        head?.next = nil
-        
-        return newHead
-    }
-}
-
 
 
 //344. 反转字符串

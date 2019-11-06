@@ -112,11 +112,23 @@
 
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-
     [self aleartView];
 
+//  加 __block 前 10 后 100
+    __block int i = 10;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"====%d",i);
+    });
+    i = 100;
+
+//
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [self performSelector:@selector(aleartView) withObject:nil afterDelay:0.3];
+    });
 }
 
+
+#pragma mark - 测试代码
 
 
 

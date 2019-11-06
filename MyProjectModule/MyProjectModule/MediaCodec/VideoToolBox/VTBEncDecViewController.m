@@ -56,8 +56,9 @@
 }
 
 -(void)test{
-    SDTimeAlertPickerView *picker = [[SDTimeAlertPickerView alloc]initWithFrame:self.view.bounds];
-    [self.view addSubview:picker];
+    // 时间选择器
+//    SDTimeAlertPickerView *picker = [[SDTimeAlertPickerView alloc]initWithFrame:self.view.bounds];
+//    [self.view addSubview:picker];
     return;
 }
 - (void)dealloc
