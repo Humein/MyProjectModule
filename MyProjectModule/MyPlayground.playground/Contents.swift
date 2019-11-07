@@ -110,7 +110,7 @@ print(isSubsequence("acd","abcd"))
  现在，为了使面积最大化，我们需要考虑更长的两条线段之间的区域。如果我们试图将指向较长线段的指针向内侧移动，矩形区域的面积将受限于较短的线段而不会获得任何增加。但是，在同样的条件下，移动指向较短线段的指针尽管造成了矩形宽度的减小，但却可能会有助于面积的增大。因为移动较短线段的指针会得到一条相对较长的线段，这可以克服由宽度减小而引起的面积减小。
  */
 func maxArea(_ height: [Int]) -> Int {
-    var maxArea: Int = 0
+    var maxArea = 0
     var i = 0
     var j = height.count - 1
     while i < j {
@@ -125,6 +125,7 @@ func maxArea(_ height: [Int]) -> Int {
             minHeight = rightHeight
             j -= 1
         }
+        
         maxArea = max(maxArea, (j - i + 1) * minHeight)
     }
     return maxArea
@@ -163,8 +164,6 @@ func findClosestElements(_ arr: [Int], _ k: Int, _ x: Int) -> [Int] {
     return Array(arr[leftIndex..<(leftIndex + k)])
 }
 
-
-
 let chapter = findClosestElements([1,3,5,7,9], 1, 8)
 
 
@@ -190,12 +189,12 @@ func searchs(_ nums: [Int], _ target: Int) -> Int {
     
 }
 
+// 递归方式
 
 func search(_ nums: [Int], _ target: Int) -> Int {
     return binarySearch(nums: nums, target: target, left: 0, right: nums.count - 1)
 }
 
-// 递归方式
 func binarySearch(nums: [Int], target :Int, left :Int, right: Int) -> Int{
     
     guard left <= right else{
@@ -250,17 +249,52 @@ func findFirstError(_ nums: [Int],_ target: Int) -> Int {
 
 findFirstError([1,2,3,4,5], 4)
 
+//MARK:- 遍历
 
+// 1. 两数之和 如果有给出两个数坐标
+func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+    
+    var dic = [Int : Int]()
+
+    for (idx,item) in nums.enumerated() {
+        if let lastIdx = dic[target - item] {
+            return [lastIdx,idx]
+        }else{
+            dic[item] = idx
+        }
+    }
+    
+    return [0,0]
+}
+
+twoSum([2, 7, 11, 15], 17)
+
+//136. 只出现一次的数字
+/*
+ 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+ */
+func singleNumber(_ nums: [Int]) -> Int {
+    
+    var result = 0
+    
+    for num in nums {
+        result = result ^ num
+    }
+    
+    return result
+}
+
+singleNumber([0,2,2,1,1,3,3])
 
 
 //MARK:                                  递归
 /*
  递归算法的两个重要特征
- 1. 有终止的条件，不然就成了死循环了
- 2. 不停调用自身
+ 1. 有终止的条件，不然就成了死循环了(a)
+ 2. 不停调用自身 (b,c)
  
  处理好递归的3个主要的点:
- a)出口条件，即递归“什么时候结束”，这个通常在递归函数的开始就写好;
+ a) 出口条件，即递归“什么时候结束”，这个通常在递归函数的开始就写好;
  b) 如何由"情况 n" 变化到"情况 n+1", 也就是非出口情况，也就是一般情况——"正在"递归中的情况；
  c) 初始条件，也就是这个递归调用以什么样的初始条件开始
 
@@ -270,11 +304,11 @@ findFirstError([1,2,3,4,5], 4)
 
 
 //    递归 1 - 100 和
-func recursionNum(n :Int) -> Int {
+func recursionNum(_ n :Int) -> Int {
     if n == 1 {
         return 1
     }
-    return self.recursionNum(n - 1) + n
+    return recursionNum(n - 1) + n
     
 }
 
@@ -282,7 +316,6 @@ func recursionNum(n :Int) -> Int {
 func getSub(view :UIView) -> Void {
     if view.subviews.count > 0 {
         for subView in view.subviews{
-            print(view.class)
             getSub(view: subView)
         }
     }
@@ -320,41 +353,6 @@ func reverseList(_ head: ListNode?) -> ListNode? {
 
 
 //MARK:                                  未分类
-
-
-
-
-// 1. 两数之和
-func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-    
-    var dic = [Int : Int]()
-
-    for (idx,item) in nums.enumerated() {
-        if let lastIdx = dic[target - item] {
-            return [lastIdx,idx]
-        }else{
-            dic[item] = idx
-        }
-    }
-    
-    return [0,0]
-}
-
-twoSum([2, 7, 11, 15], 17)
-
-//136. 只出现一次的数字
-func singleNumber(_ nums: [Int]) -> Int {
-    
-    var result = 0
-    
-    for num in nums {
-        result = result ^ num
-    }
-    
-    return result
-}
-
-singleNumber([0,2,2,1,1,3,3])
 
 
 //344. 反转字符串
@@ -399,8 +397,12 @@ func findDuplicates(_ nums: [Int]) -> [Int] {
 
 findDuplicates([4,3,2,7,8,2,3,1])
 
+//Merge Two Sorted Lists
 
-// ----------------------------------------- 字符串  -----------------------
+
+//
+
+
 
 //3. 无重复字符的最长子串 (滑动窗口)
 
