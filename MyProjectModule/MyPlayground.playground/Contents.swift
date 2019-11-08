@@ -9,7 +9,6 @@ var str = "Hello, playground"
  LRU
 【leetcode】480 滑动窗口中位数（数组，堆）
  问数组里每个数都出现3次，只有一个数出现1次。
- 两个有序数组合并
  一个二叉树的前中后序遍历
  手写一下快排序
 */
@@ -396,12 +395,6 @@ func findDuplicates(_ nums: [Int]) -> [Int] {
 }
 
 findDuplicates([4,3,2,7,8,2,3,1])
-
-//Merge Two Sorted Lists
-
-
-//
-
 
 
 //3. 无重复字符的最长子串 (滑动窗口)
