@@ -450,7 +450,7 @@ func longestCommonPrefix(_ strs: [String]) -> String {
 
 // ------------------------------------------- 动态规划 ------------------------------
 
-//409. 最长回文串
+//5. 最长回文子串
 func longestPalindrome(_ s: String) -> String {
        var dp:[[Bool]] = [];
        if s.count <= 1{
@@ -460,7 +460,7 @@ func longestPalindrome(_ s: String) -> String {
        var longest:Int = 1;
        var left:Int = 0;
        var right:Int = 0;
-       
+       //DP 二维数组
        for var i in 0...s.count - 1{
            var eachRow:[Bool] = [];
            for var j in 0...s.count - 1{
@@ -506,7 +506,7 @@ func longestPalindrome(_ s: String) -> String {
        return String(s[leftIndex...rightIndex]);
 }
 
-longestPalindrome("1234aba")
+longestPalindrome("11234aba")
 
 // 70. 爬楼梯 备忘录+递归
 func climbStairs(_ n: Int) -> Int {
@@ -594,14 +594,13 @@ print(array)
 
 // 121. 买卖股票的最佳时机
 func dynamicMaxProfit(_ prices:[Int]) -> Int{
-
+    // 2 边界
     if prices.count <= 1 {
         return 0
     }
     
     // 1 最优子结构
     // -- 只要考虑当天买和之前买哪个收益更高，当天卖和之前卖哪个收益更高。
-    // 2 边界
     var buy = -prices[0], sell = 0
     
     for idx in 1 ..< prices.count{
@@ -625,7 +624,7 @@ func maxProfit(_ prices:[Int]) -> Int{
             minpirce = prices[idx]
         }else if(maxprice < prices[idx] - minpirce){
             
-            maxprice = prices[idx] - maxprice
+            maxprice = prices[idx] - minpirce
         }
     }
     
@@ -664,6 +663,9 @@ print(dynamicMaxProfit([1,2,1,5,8]))
 
 
 // 53. 最大子序和  动态
+/*
+ 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
+ */
 func maxSubArray(_ nums: [Int]) -> Int {
     
     var result = Dictionary<Int, Int>()
@@ -713,8 +715,6 @@ func maxDSubArray(_ nums: [Int]) -> Int {
     
 }
 maxDSubArray([-2,1,-3,4,-1,2,1,-5,4])
-
-
 
 
 //LeetCode 198. 打家劫舍

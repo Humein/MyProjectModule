@@ -49,7 +49,7 @@ public:
             return NULL;
         }
         
-        fast = head;
+        fast = head;// 重置快指针
         
         while (fast != slow) {
             fast = fast->next;
