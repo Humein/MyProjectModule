@@ -127,7 +127,7 @@ static const CGFloat HeightForHeaderInSection = 55;
         return CGSizeZero;
     }
     CheckConditionItem *item = [self.itemsArray objectAtIndex:indexPath.row];
-    return CGSizeMake(item.titleWidth, item.titleHeight);
+    return CGSizeMake(item.itemWidth, item.itemHeight);
 }
 
 

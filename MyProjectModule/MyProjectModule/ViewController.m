@@ -72,7 +72,7 @@
 
     
     self.itemList = [NSMutableArray array];
-    NSArray *list = [NSArray arrayWithObjects:@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController",@"LearnSwiftDemosViewController", @"colloctionViewController",@"DrawViewController",@"SegementDemoViewController",@"SegementPersonDemoViewController",@"SegementChildViewController",@"CollectionSectionViewController",@"PaternalViewController",@"PaternalSViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",nil];
+    NSArray *list = [NSArray arrayWithObjects:@"TestBlockModelViewController",@"SmoothBookmarkDemoViewController",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController",@"LearnSwiftDemosViewController", @"colloctionViewController",@"DrawViewController",@"SegementDemoViewController",@"SegementPersonDemoViewController",@"SegementChildViewController",@"CollectionSectionViewController",@"PaternalViewController",@"PaternalSViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",nil];
 
     [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { 
         CellModel *model =  [CellModel new];
@@ -152,7 +152,7 @@
     //    NSIndexPath * IndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     //    [self.tableView scrollToRowAtIndexPath:IndexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
     
-    [self.tableView.tableView scrollRectToVisible:CGRectMake(0, 0, 10000, 10000) animated:YES];
+//    [self.tableView.tableView scrollRectToVisible:CGRectMake(0, 0, 10000, 10000) animated:YES];
 }
 
 #pragma mark ----Delegate
@@ -176,6 +176,12 @@
 
     Class class = NSClassFromString(item.title);
     UIViewController *VC = [[class alloc] init];
+    if ([item.title isEqualToString:@"TestBlockModelViewController"]) {
+        TestBlockModelViewController *userSetSwift = [[TestBlockModelViewController alloc] init];
+        userSetSwift.hidesBottomBarWhenPushed= YES;
+        [self.navigationController pushViewController:userSetSwift animated:YES];
+        return;
+    }
     if (VC == nil) {
         SwiftDemosViewController *userSetSwift = [[SwiftDemosViewController alloc] init];
         userSetSwift.hidesBottomBarWhenPushed= YES;

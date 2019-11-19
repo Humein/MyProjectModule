@@ -16,9 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 //@property (nonatomic,strong)UIColor *tintColor;//tagCell的颜色
 
-- (float)titleWidth;
 
-- (float)titleHeight;
+@property (nonatomic,assign)float itemHeight;
+
+@property (nonatomic,assign)float itemWidth;
 
 @end
 
