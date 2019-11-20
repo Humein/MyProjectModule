@@ -44,12 +44,7 @@
 		33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FCB20F05ADB00E4A119 /* ViewControllerChildOne.m */; };
 		33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FD020F05ADB00E4A119 /* ViewControllerChildTwo.m */; };
 		33888FD420F05ADB00E4A119 /* PaternalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FD120F05ADB00E4A119 /* PaternalViewController.m */; };
-		33888FDB20F05DBA00E4A119 /* ImitateSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FDA20F05DBA00E4A119 /* ImitateSegmentViewController.m */; };
-		33888FDE20F05E3500E4A119 /* SegmentContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FDD20F05E3500E4A119 /* SegmentContentCell.m */; };
-		33888FE120F05E6B00E4A119 /* SegmentSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FE020F05E6B00E4A119 /* SegmentSliderView.m */; };
 		33888FE420F0683C00E4A119 /* UIView+frameAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FE320F0683C00E4A119 /* UIView+frameAdjust.m */; };
-		33888FE820F06AC900E4A119 /* PaternalSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FE720F06AC900E4A119 /* PaternalSViewController.m */; };
-		33888FEB20F06ADD00E4A119 /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FEA20F06ADD00E4A119 /* ChildViewController.m */; };
 		338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */; };
 		338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEB5E20DCFC7D0025631B /* DrawBaseAnimaltionView.m */; };
 		338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEBFA20E0E3FC0025631B /* BlockObject.m */; };
@@ -67,17 +62,6 @@
 		339B536320F4B29B003444CB /* ZSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B536220F4B29B003444CB /* ZSPlayer.m */; };
 		339B536C20F4B450003444CB /* AbstractPlayerHelperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 339B536B20F4B450003444CB /* AbstractPlayerHelperManager.m */; };
 		339B536E20F4B486003444CB /* AbstractPlayerProtocol.h in Sources */ = {isa = PBXBuildFile; fileRef = 339B536D20F4B486003444CB /* AbstractPlayerProtocol.h */; };
-		33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32ADA20D90681008C3969 /* SegmentContentView.m */; };
-		33A32ADE20D90717008C3969 /* SegementTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32ADD20D90717008C3969 /* SegementTitleView.m */; };
-		33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AE420DA2FA3008C3969 /* SegementTitleConfigured.m */; };
-		33A32AE920DA789D008C3969 /* UIScrollView+SlideGestureBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AE820DA789D008C3969 /* UIScrollView+SlideGestureBack.m */; };
-		33A32AEC20DA78FA008C3969 /* UIView+ChainFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AEB20DA78FA008C3969 /* UIView+ChainFrameView.m */; };
-		33A32AEF20DA795E008C3969 /* UIButton+SegementCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AEE20DA795E008C3969 /* UIButton+SegementCustomButton.m */; };
-		33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AF120DA7FFC008C3969 /* SegementDemoViewController.m */; };
-		33A32AF520DA8044008C3969 /* SegementPersonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AF420DA8044008C3969 /* SegementPersonDemoViewController.m */; };
-		33A32AF920DB3909008C3969 /* SegementChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AF820DB3909008C3969 /* SegementChildViewController.m */; };
-		33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AFB20DB4910008C3969 /* PersonalCenterChildViewController.m */; };
-		33A32B0020DB7D5C008C3969 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32AFF20DB7D5C008C3969 /* SectionModel.m */; };
 		33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A32B0220DC95AF008C3969 /* DrawLine.m */; };
 		33A6A8DC215CC5F3001BE659 /* POPNumberAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A6A8DB215CC5F3001BE659 /* POPNumberAnimation.m */; };
 		33C2DF3521DCC5D400F96F32 /* PointTreeOnlyOneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C2DF2921DCC5D400F96F32 /* PointTreeOnlyOneModel.m */; };
@@ -307,18 +291,8 @@
 		33888FCF20F05ADB00E4A119 /* BookVCProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookVCProtocol.h; sourceTree = "<group>"; };
 		33888FD020F05ADB00E4A119 /* ViewControllerChildTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerChildTwo.m; sourceTree = "<group>"; };
 		33888FD120F05ADB00E4A119 /* PaternalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaternalViewController.m; sourceTree = "<group>"; };
-		33888FD920F05DBA00E4A119 /* ImitateSegmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImitateSegmentViewController.h; sourceTree = "<group>"; };
-		33888FDA20F05DBA00E4A119 /* ImitateSegmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImitateSegmentViewController.m; sourceTree = "<group>"; };
-		33888FDC20F05E3500E4A119 /* SegmentContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentContentCell.h; sourceTree = "<group>"; };
-		33888FDD20F05E3500E4A119 /* SegmentContentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentContentCell.m; sourceTree = "<group>"; };
-		33888FDF20F05E6B00E4A119 /* SegmentSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentSliderView.h; sourceTree = "<group>"; };
-		33888FE020F05E6B00E4A119 /* SegmentSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentSliderView.m; sourceTree = "<group>"; };
 		33888FE220F0683C00E4A119 /* UIView+frameAdjust.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+frameAdjust.h"; sourceTree = "<group>"; };
 		33888FE320F0683C00E4A119 /* UIView+frameAdjust.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+frameAdjust.m"; sourceTree = "<group>"; };
-		33888FE620F06AC900E4A119 /* PaternalSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaternalSViewController.h; sourceTree = "<group>"; };
-		33888FE720F06AC900E4A119 /* PaternalSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaternalSViewController.m; sourceTree = "<group>"; };
-		33888FE920F06ADD00E4A119 /* ChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
-		33888FEA20F06ADD00E4A119 /* ChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
 		338ECBA320D25D080059BE0D /* DrawUnlineAndScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawUnlineAndScore.h; sourceTree = "<group>"; };
 		338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawUnlineAndScore.m; sourceTree = "<group>"; };
 		338FEB5D20DCFC7D0025631B /* DrawBaseAnimaltionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawBaseAnimaltionView.h; sourceTree = "<group>"; };
@@ -355,29 +329,6 @@
 		339B536A20F4B450003444CB /* AbstractPlayerHelperManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractPlayerHelperManager.h; sourceTree = "<group>"; };
 		339B536B20F4B450003444CB /* AbstractPlayerHelperManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractPlayerHelperManager.m; sourceTree = "<group>"; };
 		339B536D20F4B486003444CB /* AbstractPlayerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractPlayerProtocol.h; sourceTree = "<group>"; };
-		33A32AD920D90681008C3969 /* SegmentContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentContentView.h; sourceTree = "<group>"; };
-		33A32ADA20D90681008C3969 /* SegmentContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentContentView.m; sourceTree = "<group>"; };
-		33A32ADC20D90717008C3969 /* SegementTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementTitleView.h; sourceTree = "<group>"; };
-		33A32ADD20D90717008C3969 /* SegementTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegementTitleView.m; sourceTree = "<group>"; };
-		33A32AE320DA2FA3008C3969 /* SegementTitleConfigured.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementTitleConfigured.h; sourceTree = "<group>"; };
-		33A32AE420DA2FA3008C3969 /* SegementTitleConfigured.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegementTitleConfigured.m; sourceTree = "<group>"; };
-		33A32AE720DA789D008C3969 /* UIScrollView+SlideGestureBack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SlideGestureBack.h"; sourceTree = "<group>"; };
-		33A32AE820DA789D008C3969 /* UIScrollView+SlideGestureBack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SlideGestureBack.m"; sourceTree = "<group>"; };
-		33A32AEA20DA78FA008C3969 /* UIView+ChainFrameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ChainFrameView.h"; sourceTree = "<group>"; };
-		33A32AEB20DA78FA008C3969 /* UIView+ChainFrameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ChainFrameView.m"; sourceTree = "<group>"; };
-		33A32AED20DA795E008C3969 /* UIButton+SegementCustomButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+SegementCustomButton.h"; sourceTree = "<group>"; };
-		33A32AEE20DA795E008C3969 /* UIButton+SegementCustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SegementCustomButton.m"; sourceTree = "<group>"; };
-		33A32AF020DA7FFC008C3969 /* SegementDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementDemoViewController.h; sourceTree = "<group>"; };
-		33A32AF120DA7FFC008C3969 /* SegementDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegementDemoViewController.m; sourceTree = "<group>"; };
-		33A32AF320DA8044008C3969 /* SegementPersonDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementPersonDemoViewController.h; sourceTree = "<group>"; };
-		33A32AF420DA8044008C3969 /* SegementPersonDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegementPersonDemoViewController.m; sourceTree = "<group>"; };
-		33A32AF620DA82B7008C3969 /* SegementHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementHeader.h; sourceTree = "<group>"; };
-		33A32AF720DB3909008C3969 /* SegementChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementChildViewController.h; sourceTree = "<group>"; };
-		33A32AF820DB3909008C3969 /* SegementChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegementChildViewController.m; sourceTree = "<group>"; };
-		33A32AFA20DB4910008C3969 /* PersonalCenterChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalCenterChildViewController.h; sourceTree = "<group>"; };
-		33A32AFB20DB4910008C3969 /* PersonalCenterChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalCenterChildViewController.m; sourceTree = "<group>"; };
-		33A32AFE20DB7D5C008C3969 /* SectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SectionModel.h; sourceTree = "<group>"; };
-		33A32AFF20DB7D5C008C3969 /* SectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectionModel.m; sourceTree = "<group>"; };
 		33A32B0120DC95AF008C3969 /* DrawLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawLine.h; sourceTree = "<group>"; };
 		33A32B0220DC95AF008C3969 /* DrawLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawLine.m; sourceTree = "<group>"; };
 		33A6A8DA215CC5F3001BE659 /* POPNumberAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPNumberAnimation.h; sourceTree = "<group>"; };
@@ -894,10 +845,7 @@
 				79A1A5032269AD0800CEA92A /* SmoothBookmarker */,
 				33C971322124108D00EAAD5E /* 弹窗 */,
 				33C9711C211EB8C900EAAD5E /* AbstractBase */,
-				33888FD820F05C3600E4A119 /* ImitateWMPage */,
-				33FAE4B820E1E37300BE7175 /* BookMarkSegement */,
 				338FEBFC20E0F2390025631B /* BaseUIKitFactory */,
-				33A32ACB20D8B4D5008C3969 /* SegmentView */,
 			);
 			path = BaseModule;
 			sourceTree = "<group>";
@@ -964,31 +912,6 @@
 				79C2B662221A646200C40F3A /* RunTimeTestViewController.m */,
 			);
 			path = Rumtime;
-			sourceTree = "<group>";
-		};
-		33888FD820F05C3600E4A119 /* ImitateWMPage */ = {
-			isa = PBXGroup;
-			children = (
-				33888FE520F06A6A00E4A119 /* StestDemo */,
-				33888FD920F05DBA00E4A119 /* ImitateSegmentViewController.h */,
-				33888FDA20F05DBA00E4A119 /* ImitateSegmentViewController.m */,
-				33888FDC20F05E3500E4A119 /* SegmentContentCell.h */,
-				33888FDD20F05E3500E4A119 /* SegmentContentCell.m */,
-				33888FDF20F05E6B00E4A119 /* SegmentSliderView.h */,
-				33888FE020F05E6B00E4A119 /* SegmentSliderView.m */,
-			);
-			path = ImitateWMPage;
-			sourceTree = "<group>";
-		};
-		33888FE520F06A6A00E4A119 /* StestDemo */ = {
-			isa = PBXGroup;
-			children = (
-				33888FE620F06AC900E4A119 /* PaternalSViewController.h */,
-				33888FE720F06AC900E4A119 /* PaternalSViewController.m */,
-				33888FE920F06ADD00E4A119 /* ChildViewController.h */,
-				33888FEA20F06ADD00E4A119 /* ChildViewController.m */,
-			);
-			path = StestDemo;
 			sourceTree = "<group>";
 		};
 		33888FF520F0C25400E4A119 /* DesignMode */ = {
@@ -1147,38 +1070,6 @@
 			path = "DataTransmission ";
 			sourceTree = "<group>";
 		};
-		33A32ACA20D8B4D5008C3969 /* 详情页 */ = {
-			isa = PBXGroup;
-			children = (
-				33A32AFD20DB7D3E008C3969 /* Model */,
-				33A32AF020DA7FFC008C3969 /* SegementDemoViewController.h */,
-				33A32AF120DA7FFC008C3969 /* SegementDemoViewController.m */,
-				33A32AF720DB3909008C3969 /* SegementChildViewController.h */,
-				33A32AF820DB3909008C3969 /* SegementChildViewController.m */,
-				33A32AF320DA8044008C3969 /* SegementPersonDemoViewController.h */,
-				33A32AF420DA8044008C3969 /* SegementPersonDemoViewController.m */,
-			);
-			path = "详情页";
-			sourceTree = "<group>";
-		};
-		33A32ACB20D8B4D5008C3969 /* SegmentView */ = {
-			isa = PBXGroup;
-			children = (
-				33A32ACA20D8B4D5008C3969 /* 详情页 */,
-				33A32AE620DA7864008C3969 /* UIKitCategory */,
-				33A32AF620DA82B7008C3969 /* SegementHeader.h */,
-				33A32AFA20DB4910008C3969 /* PersonalCenterChildViewController.h */,
-				33A32AFB20DB4910008C3969 /* PersonalCenterChildViewController.m */,
-				33A32AD920D90681008C3969 /* SegmentContentView.h */,
-				33A32ADA20D90681008C3969 /* SegmentContentView.m */,
-				33A32ADC20D90717008C3969 /* SegementTitleView.h */,
-				33A32ADD20D90717008C3969 /* SegementTitleView.m */,
-				33A32AE320DA2FA3008C3969 /* SegementTitleConfigured.h */,
-				33A32AE420DA2FA3008C3969 /* SegementTitleConfigured.m */,
-			);
-			path = SegmentView;
-			sourceTree = "<group>";
-		};
 		33A32ADF20D91234008C3969 /* 折叠的TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1188,28 +1079,6 @@
 				33E6CDD8210035FF00422FC7 /* ThreeLevelTreeView.m */,
 			);
 			path = "折叠的TableView";
-			sourceTree = "<group>";
-		};
-		33A32AE620DA7864008C3969 /* UIKitCategory */ = {
-			isa = PBXGroup;
-			children = (
-				33A32AE720DA789D008C3969 /* UIScrollView+SlideGestureBack.h */,
-				33A32AE820DA789D008C3969 /* UIScrollView+SlideGestureBack.m */,
-				33A32AEA20DA78FA008C3969 /* UIView+ChainFrameView.h */,
-				33A32AEB20DA78FA008C3969 /* UIView+ChainFrameView.m */,
-				33A32AED20DA795E008C3969 /* UIButton+SegementCustomButton.h */,
-				33A32AEE20DA795E008C3969 /* UIButton+SegementCustomButton.m */,
-			);
-			path = UIKitCategory;
-			sourceTree = "<group>";
-		};
-		33A32AFD20DB7D3E008C3969 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				33A32AFE20DB7D5C008C3969 /* SectionModel.h */,
-				33A32AFF20DB7D5C008C3969 /* SectionModel.m */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		33A6A8D9215CC5F3001BE659 /* POPAnimation */ = {
@@ -1371,13 +1240,6 @@
 				79EEEAA5218FF6CC00848B59 /* Multi-CellTree-TableViewController.m */,
 			);
 			path = KnowledgePointsTree;
-			sourceTree = "<group>";
-		};
-		33FAE4B820E1E37300BE7175 /* BookMarkSegement */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BookMarkSegement;
 			sourceTree = "<group>";
 		};
 		33FAE4C120E238CE00BE7175 /* CollectionSectionSuspend */ = {
@@ -2175,7 +2037,6 @@
 				339B534720F4AB2A003444CB /* ZTKDownItem.m in Sources */,
 				33CCB0F320FDF099002C4FF4 /* HTBottomControlView.m in Sources */,
 				33CCB0F620FDF185002C4FF4 /* RChainDemoViewController.m in Sources */,
-				33A32B0020DB7D5C008C3969 /* SectionModel.m in Sources */,
 				7993C86B228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m in Sources */,
 				33FAE4F020E2452D00BE7175 /* JHHeaderReusableView.m in Sources */,
 				33888FC320EDCCCB00E4A119 /* CAGradientLayerDemo.m in Sources */,
@@ -2195,8 +2056,6 @@
 				79E96688237EBDEA00B49697 /* TestBlockModelViewController.swift in Sources */,
 				33759E71212FA08900D801C1 /* UIView+MethodSwizze.m in Sources */,
 				792A731921EF324F0098B94C /* ClassClusterBaseTableViewCell.m in Sources */,
-				33888FE820F06AC900E4A119 /* PaternalSViewController.m in Sources */,
-				33A32AE520DA2FA3008C3969 /* SegementTitleConfigured.m in Sources */,
 				79EEEA512182BD8C00848B59 /* LiveCommetChatTV.m in Sources */,
 				33C2DF3821DCC5D400F96F32 /* PointTreeTypeTwo.m in Sources */,
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
@@ -2214,15 +2073,12 @@
 				79EEEA8B218BF30E00848B59 /* ResponOfChainManager.m in Sources */,
 				33A6A8DC215CC5F3001BE659 /* POPNumberAnimation.m in Sources */,
 				338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */,
-				33A32AF920DB3909008C3969 /* SegementChildViewController.m in Sources */,
 				79A1A51B2269AD0800CEA92A /* SmoothTitleView.m in Sources */,
-				33888FDB20F05DBA00E4A119 /* ImitateSegmentViewController.m in Sources */,
 				333D106520CE74AB004D9241 /* main.m in Sources */,
 				33E6CDD5210034E300422FC7 /* CellModel.m in Sources */,
 				79C2B663221A646200C40F3A /* RunTimeTestViewController.m in Sources */,
 				339B536E20F4B486003444CB /* AbstractPlayerProtocol.h in Sources */,
 				79EEEABD2195975B00848B59 /* AbstractPlayHelper.m in Sources */,
-				33A32ADE20D90717008C3969 /* SegementTitleView.m in Sources */,
 				339B534A20F4AB2A003444CB /* ZTKLLDownHelper.m in Sources */,
 				33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */,
 				79A1A5182269AD0800CEA92A /* SmoothBookmarkView.m in Sources */,
@@ -2238,18 +2094,14 @@
 				33E6CE0521006D2000422FC7 /* CreatTreeView.m in Sources */,
 				33759E74212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.m in Sources */,
 				33888FD420F05ADB00E4A119 /* PaternalViewController.m in Sources */,
-				33A32AF520DA8044008C3969 /* SegementPersonDemoViewController.m in Sources */,
-				33A32AEF20DA795E008C3969 /* UIButton+SegementCustomButton.m in Sources */,
 				79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */,
 				79EEEA96218EEBA200848B59 /* InterfacePlayerView.m in Sources */,
 				794BE8A2231D36E900113B97 /* Produce-Consume.m in Sources */,
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
 				795FF3E522E5AE0700CCC8B9 /* FirstView.swift in Sources */,
 				79DF39392200499400977BB4 /* LRULinkedMap.m in Sources */,
-				33A32AE920DA789D008C3969 /* UIScrollView+SlideGestureBack.m in Sources */,
 				79A1A51D2269AD0800CEA92A /* SmoothBookmarkViewController.m in Sources */,
 				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
-				33A32AF220DA7FFC008C3969 /* SegementDemoViewController.m in Sources */,
 				795FF3E722E5AE1500CCC8B9 /* SecendView.swift in Sources */,
 				797EC362236C141100E21E44 /* SDTimeAlertPickerView.swift in Sources */,
 				7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */,
@@ -2261,7 +2113,6 @@
 				79E9668E237EBE1100B49697 /* CView.swift in Sources */,
 				339B534620F4AB2A003444CB /* ZTKBJDownHelper.m in Sources */,
 				79A0ECA82368263E004C10B0 /* XXH264DecodeTool.m in Sources */,
-				33888FEB20F06ADD00E4A119 /* ChildViewController.m in Sources */,
 				79EEEAA9219014BD00848B59 /* PointTreeStatisTableViewCell.m in Sources */,
 				3362E69F2130FBEF00A4B26D /* CustomKVO.m in Sources */,
 				33C971282121317D00EAAD5E /* CorrectTagModel.m in Sources */,
@@ -2296,7 +2147,6 @@
 				339B535520F4B078003444CB /* PlayerViewController.m in Sources */,
 				33FAE4E620E2445500BE7175 /* CarouselLayout.m in Sources */,
 				33C971222121313300EAAD5E /* CorrectResolver.m in Sources */,
-				33A32AEC20DA78FA008C3969 /* UIView+ChainFrameView.m in Sources */,
 				333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */,
 				33759E6E212F9FD500D801C1 /* UITableViewCell+AnimationType.m in Sources */,
 				33FAE4E720E2445500BE7175 /* WaterfallLayout.m in Sources */,
@@ -2304,11 +2154,9 @@
 				33CCB0ED20FDF030002C4FF4 /* HTMiddleControlView.m in Sources */,
 				794BE89D231D368000113B97 /* Chain_of_responsibility.swift in Sources */,
 				79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */,
-				33888FE120F05E6B00E4A119 /* SegmentSliderView.m in Sources */,
 				339B536320F4B29B003444CB /* ZSPlayer.m in Sources */,
 				33E6CDD9210035FF00422FC7 /* ThreeLevelTreeView.m in Sources */,
 				79EEEAA6218FF6CC00848B59 /* Multi-CellTree-TableViewController.m in Sources */,
-				33A32AFC20DB4910008C3969 /* PersonalCenterChildViewController.m in Sources */,
 				33C9711B211E899400EAAD5E /* AliPay.m in Sources */,
 				337828232108539800373A20 /* UIImage+BaseFilter.m in Sources */,
 				3340363D2154C69C006FCBA3 /* MemoryCache.m in Sources */,
@@ -2325,7 +2173,6 @@
 				79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */,
 				33C97111211E7C3700EAAD5E /* APPPayTool.m in Sources */,
 				335ABFAE2160C0BD00770703 /* AnimationExample.m in Sources */,
-				33888FDE20F05E3500E4A119 /* SegmentContentCell.m in Sources */,
 				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
 				79A0ECAE236838E5004C10B0 /* VTBEncDecViewController.m in Sources */,
 				333651B82180543E00286C7A /* AttributeAndPredicateWithLink.m in Sources */,
@@ -2350,7 +2197,6 @@
 				7931A51B21A7DAA5002A26C0 /* FilterCollectionViewLayout.m in Sources */,
 				33759E7D212FABBA00D801C1 /* NSObject+KVOHelper.m in Sources */,
 				79EEEAA1218FF5E600848B59 /* TreeViewModel.m in Sources */,
-				33A32ADB20D90681008C3969 /* SegmentContentView.m in Sources */,
 				794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */,
 				792A731F21EF32800098B94C /* ClassClusterTableViewCellB.m in Sources */,
 				792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */,

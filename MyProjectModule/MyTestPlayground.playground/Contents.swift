@@ -592,7 +592,7 @@ func lengthOfLongestSubstringWD(_ s: String) -> Int {
     }
     
     result = p2 - p1
-    let chars = Array(s.utf8)
+    let chars = Array(s)
     //遍历条件
     //窗口滑动
     while p2 < chars.count {
@@ -727,7 +727,7 @@ climbStairsRecursion(4)
 
 
 // 备忘录
-func climbStairsMemo(_ n :Int) -> Int{
+func climbStairsMemo(_ n: Int) -> Int{
     var dic = [Int : Int]()
     
     func rec(_ n: Int) -> Int{
@@ -754,9 +754,10 @@ func dyclimbStairs(_ n: Int) -> Int {
         return n
     }
     
-    var dp = [1,1,2,3] // 最优子结果
+    var dp = [1,1,2] // 最优子结果
     
-    for i in 4 ..< n + 1 {
+    //遍历 动态转移方程 dp[n] = dp[n-1] + dp[n-2]
+    for i in 3 ..< n + 1 {
         print(dp)
         //状态转移方程
         dp.append(dp[i-1] + dp[i-2])
@@ -810,17 +811,20 @@ func dynamicMaxProfit(_ prices :[Int]) -> Int{
         return 0
     }
     // 最小子结构
-    var min_b = prices[0], max_p = 0//不赚不赔
+    var min_b = prices[0], max_p = 0//这个是受益 最小就是0
     
-    //3 状态转移方程
+    //3 状态转移方程 min_b max_p 都是当前的最优，随着遍历一直往下走
     for idx in 1 ..< prices.count {
+        // 得出idx之前最小的
         min_b = min(min_b, prices[idx]) // 一直取买入最低的价格 // 最优子结构
+        /*
+         prices[idx] 减去 idx之前最小的
+         */
         max_p = max(max_p, prices[idx] - min_b) //第i天卖出,或者上一个状态比较,取最大值. // 最优子结构
     }
     
     return max_p
 }
-
 
 
 // 双指针遍历 < 后置指针会遍历整个数组，前置的会根据业务保存对应值 《子序列》>
@@ -1288,7 +1292,7 @@ func findKNode(_ head: LinkNode?,k: Int) -> LinkNode?{
         return nil
     }
     
-    var p1 :LinkNode? = head
+    var p1 :LinkNode? = head //fast
     var p2 :LinkNode = head!
     
     //快指针先走k步
@@ -1308,7 +1312,7 @@ func findKNode(_ head: LinkNode?,k: Int) -> LinkNode?{
     }
     
 //    19. 删除链表的倒数第N个节点
-//    p1!.next = p1!.next!.next
+//    p2!.next = p2!.next!.next
 //    return head.next
     
     return p2
@@ -1327,7 +1331,7 @@ func isSubtree(_ s: TreeNode?, _ t: TreeNode?) -> Bool {
             result = isSubtree(s?.left, t)
         }
         if !result {
-            result = isSubtree(s?.left, t)
+            result = isSubtree(s?.right, t)
         }
     }
     return result
