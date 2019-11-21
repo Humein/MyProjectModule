@@ -26,6 +26,7 @@ import UIKit
 
 
 //MARK:- list1：
+//1-100 相加
 func recursion100(_ n :Int) -> Int{
     if n == 1 {
         return 1
@@ -34,6 +35,7 @@ func recursion100(_ n :Int) -> Int{
 }
 recursion100(100)
 
+//遍历子view
 func recursionSubView(_ view :UIView){
     if view.subviews.count > 0 {
         for(_,item) in view.subviews.enumerated(){
@@ -42,9 +44,40 @@ func recursionSubView(_ view :UIView){
         }
     }
 }
-
 let view = UIView()
 recursionSubView(view)
+
+//冒泡排序 升序
+/*
+ O(n²) 时间
+ O(1)  空间
+ 最好情况：若初始序列已经排好序，则只需要进行 n-1 次比较，而不需要发生交换。
+ 最坏情况：需要执行 n-1 次冒泡，并且每次都需要进行 n-i-1 次交换。
+ 可以看到，「冒泡排序」在序列基本有序的情况下，效率会好一些。平均来看，「冒泡排序」的时间复杂度是 O(n^2) 。
+ 冒泡排序是一种稳定的排序
+ */
+func bubbleSort(unsortedArray: inout [Int]){
+    guard unsortedArray.count > 1 else{
+        return
+    }
+    for i in 0 ..< unsortedArray.count-1 {
+        var exchanged = false
+        for j in 0 ..< unsortedArray.count-1-i {
+            if unsortedArray[j] > unsortedArray[j+1] {
+                unsortedArray.swapAt(j, j+1)
+                exchanged = true
+            }
+        }
+        //若无交换则可直接返回
+        if exchanged == false {
+            break
+        }
+    }
+}
+
+var list = [2, 3, 5, 7, 4, 8, 6 ,10 ,1, 9]
+bubbleSort(unsortedArray: &list)
+print(list)
 
 //88. 合并两个有序数组
 /*
@@ -920,9 +953,10 @@ func robDP(_ nums: [Int]) -> Int {
     if nums.count == 1 {return nums[0]}
     
     var dp = [nums[0],max(nums[0],nums[1])] // <最优子结构>
-    // dp = [nums[0], max(nums[0],nums[1]), max(nums[2] + dp[2-2], dp[2-1]).......max(nums[i] + dp[i-2],dp[i-1])]
+    // dp = [nums[0], max(nums[0],nums[1]), max(nums[2] + dp[0], dp[1]).......max(nums[i] + dp[i-2],dp[i-1])]
     
     for i in 2 ..< nums.count{
+        print(i)
         //状态转移方程
         //dp[i] = max(dp[i - 2] + nums[i], dp[i - 1]) 递推公式
         dp.append(max(nums[i] + dp[i-2], dp[i-1]))
@@ -930,6 +964,7 @@ func robDP(_ nums: [Int]) -> Int {
     
     return dp.last!
 }
+
 
 //141. 环形链表
 /*
@@ -993,6 +1028,10 @@ func hasCycle(_ head: LinkNode?) -> Bool{
 
 func detectCycle(_ head: LinkNode?) -> LinkNode?{
     var fast = head, slow = head
+    // 边界
+    if fast == nil || fast?.next == nil {
+        return nil
+    }
     
     while fast != nil && fast?.next != nil {
         fast = fast?.next?.next
@@ -1000,11 +1039,6 @@ func detectCycle(_ head: LinkNode?) -> LinkNode?{
         if slow?.val == fast?.val {
             break;
         }
-    }
-    
-    // 边界
-    if fast == nil || fast?.next == nil {
-        return nil
     }
     
     fast = head //重置快指针到首位< 这时 slow - fast = k(环的位置)  >
@@ -1421,10 +1455,13 @@ private func isSymmetrys(_ node1: TreeNode?, _ node2: TreeNode?) -> Bool {
  */
 func maxDepth(_ root: TreeNode?) -> Int {
     if root == nil {
+        print("nil")
         return 0
     }else{
         let leftTreeDepth = maxDepth(root?.left)
+        print( "\(leftTreeDepth)")
         let rightTreeDepth = maxDepth(root?.right)
+        print( "\(leftTreeDepth)" + ":" + "\(rightTreeDepth)")
         return leftTreeDepth > rightTreeDepth ? leftTreeDepth + 1 : rightTreeDepth + 1
         
     }
@@ -1474,6 +1511,8 @@ maxDepth(node1)
 // 题目：输入一个英文句子，翻转句子中单词的顺序，但单词内字符的顺序不变。
 // 为简单起见，标点符号和普通字母一样处理。例如输入字符串"I am a student. "，
 // 则输出"student. a am I"。
+
+// 也可以用 栈 的特性
 func ReverseSentence(_ sentence: String) -> String {
     var chars:[Character] = Array(sentence)
     chars.reverse()

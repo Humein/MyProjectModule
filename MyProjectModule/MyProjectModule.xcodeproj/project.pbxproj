@@ -121,6 +121,7 @@
 		792A732221EF328D0098B94C /* ClassClusterTableViewCellC.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A732121EF328D0098B94C /* ClassClusterTableViewCellC.m */; };
 		7931A51B21A7DAA5002A26C0 /* FilterCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7931A51A21A7DAA5002A26C0 /* FilterCollectionViewLayout.m */; };
 		79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79402223219D59A20008A3AD /* SimulationChainFucCode.m */; };
+		794A6DB023862C54008FB8D4 /* MessageThrottle.m in Sources */ = {isa = PBXBuildFile; fileRef = 794A6DAF23862C54008FB8D4 /* MessageThrottle.m */; };
 		794B100621DEF98300B91405 /* PointsTreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */; };
 		794B100921DF02E300B91405 /* AbstractTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100821DF02E300B91405 /* AbstractTableViewController.m */; };
 		794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */; };
@@ -444,6 +445,8 @@
 		7931A51A21A7DAA5002A26C0 /* FilterCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterCollectionViewLayout.m; sourceTree = "<group>"; };
 		79402222219D59A20008A3AD /* SimulationChainFucCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulationChainFucCode.h; sourceTree = "<group>"; };
 		79402223219D59A20008A3AD /* SimulationChainFucCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulationChainFucCode.m; sourceTree = "<group>"; };
+		794A6DAE23862C54008FB8D4 /* MessageThrottle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageThrottle.h; sourceTree = "<group>"; };
+		794A6DAF23862C54008FB8D4 /* MessageThrottle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageThrottle.m; sourceTree = "<group>"; };
 		794B100421DEF98300B91405 /* PointsTreeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PointsTreeTableViewCell.h; path = MyProjectModule/NetRequstAndSocket/PointsTreeTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PointsTreeTableViewCell.m; path = MyProjectModule/NetRequstAndSocket/PointsTreeTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		794B100721DF02E300B91405 /* AbstractTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractTableViewController.h; sourceTree = "<group>"; };
@@ -842,6 +845,7 @@
 		33828F1120D3CAB800318AE5 /* BaseModule */ = {
 			isa = PBXGroup;
 			children = (
+				799F2AA523855916002F5ADE /* SegmentAndSuspension */,
 				79A1A5032269AD0800CEA92A /* SmoothBookmarker */,
 				33C971322124108D00EAAD5E /* 弹窗 */,
 				33C9711C211EB8C900EAAD5E /* AbstractBase */,
@@ -1418,6 +1422,15 @@
 			path = DownLoadManger;
 			sourceTree = "<group>";
 		};
+		794A6DAD23862C39008FB8D4 /* MessageThrottle */ = {
+			isa = PBXGroup;
+			children = (
+				794A6DAE23862C54008FB8D4 /* MessageThrottle.h */,
+				794A6DAF23862C54008FB8D4 /* MessageThrottle.m */,
+			);
+			path = MessageThrottle;
+			sourceTree = "<group>";
+		};
 		794B100321DEF97200B91405 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1469,6 +1482,7 @@
 		794BE895231D366700113B97 /* 生产者消费者 */ = {
 			isa = PBXGroup;
 			children = (
+				794A6DAD23862C39008FB8D4 /* MessageThrottle */,
 				794BE8A0231D36E900113B97 /* Produce-Consume.h */,
 				794BE8A1231D36E900113B97 /* Produce-Consume.m */,
 			);
@@ -1567,6 +1581,13 @@
 				7993C869228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m */,
 			);
 			path = DownHelper;
+			sourceTree = "<group>";
+		};
+		799F2AA523855916002F5ADE /* SegmentAndSuspension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SegmentAndSuspension;
 			sourceTree = "<group>";
 		};
 		79A0EC9D236819C5004C10B0 /* MediaCodec */ = {
@@ -2199,6 +2220,7 @@
 				79EEEAA1218FF5E600848B59 /* TreeViewModel.m in Sources */,
 				794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */,
 				792A731F21EF32800098B94C /* ClassClusterTableViewCellB.m in Sources */,
+				794A6DB023862C54008FB8D4 /* MessageThrottle.m in Sources */,
 				792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */,
 				7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */,
 				33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */,

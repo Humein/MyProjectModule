@@ -32,8 +32,6 @@
  上次刷新还没完成，下次就进来了。导致界面闪的问题
  每条消息进行一次写入数据库操作，IO操作耗时，所以导致，性能问题严重
 
-
- 
  */
 
 - (void)load{
@@ -94,6 +92,7 @@
                 dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
                 NSLog(@"消费了%lu 个",(unsigned long)self.array.count);
                 [self.array removeAllObjects];
+                // 消费时机
                 [self reload];
                 dispatch_semaphore_signal(self.semaphore);
                 
