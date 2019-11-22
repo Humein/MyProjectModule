@@ -11,6 +11,7 @@
 #import "HTBottomControlView.h"
 #import "HTMiddleControlView.h"
 #import "UIResponder+UIResponderChain.h"
+#import "UIView+Category.h"
 @interface ResponderControlView()
 /// 事件策略字典 key:事件名 value:事件的invocation对象
 @property (nonatomic, strong) NSDictionary *eventStrategy;
@@ -83,6 +84,8 @@
 
 #pragma mark --- Action
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [self.xx_viewController.navigationController popViewControllerAnimated:YES];
     
     // 1 chainResponder
     [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor lightGrayColor]}];

@@ -23,6 +23,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThreeLevelTreeView : UIViewController
+@interface ThreeLevelTreeViewController : UIViewController
 
 @end

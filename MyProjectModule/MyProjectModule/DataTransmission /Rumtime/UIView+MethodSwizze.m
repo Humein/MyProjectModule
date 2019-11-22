@@ -8,7 +8,6 @@
 
 #import "UIView+MethodSwizze.h"
 #import <objc/runtime.h>
-
 @implementation UIView (MethodSwizze)
 
 + (void)load

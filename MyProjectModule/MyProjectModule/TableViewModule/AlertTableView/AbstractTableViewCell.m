@@ -46,10 +46,7 @@
     
     [[NSTimerObserver sharedInstance] addTimerObserver:self];
 
- 
-    
-    
-}
+ }
 
 - (void)updateByItem:(CellModel *)item
 {

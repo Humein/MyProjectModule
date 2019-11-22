@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (frameAdjust)
+
+/**
+ Returns the view's view controller (may be nil). 通过view去找到对应的控制器
+ */
+@property (nullable, nonatomic, readonly) UIViewController *xx_viewController;
+
+
+/*****************************/
 - (CGPoint)origin;
 - (void)setOrigin:(CGPoint) point;
 

@@ -9,6 +9,20 @@
 #import "UIView+Category.h"
 
 @implementation UIView (frameAdjust)
+- (UIViewController *)xx_viewController{
+    id responder = self;
+    while (responder){
+        if ([responder isKindOfClass:[UIViewController class]]){
+            return responder;
+        }
+        responder = [responder nextResponder];
+    }
+    return nil;
+}
+
+
+/*********************/
+
 - (CGPoint) origin {
     return self.frame.origin;
 }

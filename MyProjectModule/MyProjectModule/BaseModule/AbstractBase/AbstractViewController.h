@@ -45,6 +45,14 @@ typedef void(^ResultStatus)(BOOL suc);
 //从左到右排列
 - (AbstractViewController * (^) (NSString * rightName,CGRect frame,BOOL isImage))rightBarItem;
 
+
+/// 模拟网络请求延迟
+/// @param status call-back
 -(void)simulateTime_consumingOperation:(ResultStatus)status;
+
+/// 返回到指定页面
+/// @param controllerName <#controllerName description#>
+/// @param animated <#animaed description#>
+-(void)backToController:(NSString *)controllerName animated:(BOOL)animated;
 
 @end

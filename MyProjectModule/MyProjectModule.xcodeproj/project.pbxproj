@@ -89,7 +89,7 @@
 		33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDCF210034E200422FC7 /* AlertTableView.m */; };
 		33E6CDD5210034E300422FC7 /* CellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDD0210034E200422FC7 /* CellModel.m */; };
 		33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDD1210034E200422FC7 /* AbstractTableViewCell.m */; };
-		33E6CDD9210035FF00422FC7 /* ThreeLevelTreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDD8210035FF00422FC7 /* ThreeLevelTreeView.m */; };
+		33E6CDD9210035FF00422FC7 /* ThreeLevelTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDD8210035FF00422FC7 /* ThreeLevelTreeViewController.m */; };
 		33E6CE0521006D2000422FC7 /* CreatTreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDFD21006D1F00422FC7 /* CreatTreeView.m */; };
 		33E6CE0721006D2000422FC7 /* UITableViewCell+AnimationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CE0021006D1F00422FC7 /* UITableViewCell+AnimationType.m */; };
 		33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4CE20E2427100BE7175 /* CollectionSectionViewController.m */; };
@@ -388,8 +388,8 @@
 		33E6CDD1210034E200422FC7 /* AbstractTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractTableViewCell.m; sourceTree = "<group>"; };
 		33E6CDD2210034E200422FC7 /* AlertTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertTableView.h; sourceTree = "<group>"; };
 		33E6CDD3210034E200422FC7 /* CellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellModel.h; sourceTree = "<group>"; };
-		33E6CDD7210035FF00422FC7 /* ThreeLevelTreeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeLevelTreeView.h; sourceTree = "<group>"; };
-		33E6CDD8210035FF00422FC7 /* ThreeLevelTreeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeLevelTreeView.m; sourceTree = "<group>"; };
+		33E6CDD7210035FF00422FC7 /* ThreeLevelTreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeLevelTreeViewController.h; sourceTree = "<group>"; };
+		33E6CDD8210035FF00422FC7 /* ThreeLevelTreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeLevelTreeViewController.m; sourceTree = "<group>"; };
 		33E6CDFC21006D1F00422FC7 /* UITableViewCell+AnimationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+AnimationType.h"; sourceTree = "<group>"; };
 		33E6CDFD21006D1F00422FC7 /* CreatTreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatTreeView.m; sourceTree = "<group>"; };
 		33E6CE0021006D1F00422FC7 /* UITableViewCell+AnimationType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+AnimationType.m"; sourceTree = "<group>"; };
@@ -1082,8 +1082,8 @@
 			children = (
 				792E0CB221DCADD500CE2F2E /* 组合模式TreeView */,
 				33E6CDF921006D1F00422FC7 /* KnowledgePointsTree */,
-				33E6CDD7210035FF00422FC7 /* ThreeLevelTreeView.h */,
-				33E6CDD8210035FF00422FC7 /* ThreeLevelTreeView.m */,
+				33E6CDD7210035FF00422FC7 /* ThreeLevelTreeViewController.h */,
+				33E6CDD8210035FF00422FC7 /* ThreeLevelTreeViewController.m */,
 			);
 			path = "折叠的TableView";
 			sourceTree = "<group>";
@@ -2206,7 +2206,7 @@
 				794BE89D231D368000113B97 /* Chain_of_responsibility.swift in Sources */,
 				79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */,
 				339B536320F4B29B003444CB /* ZSPlayer.m in Sources */,
-				33E6CDD9210035FF00422FC7 /* ThreeLevelTreeView.m in Sources */,
+				33E6CDD9210035FF00422FC7 /* ThreeLevelTreeViewController.m in Sources */,
 				79EEEAA6218FF6CC00848B59 /* Multi-CellTree-TableViewController.m in Sources */,
 				33C9711B211E899400EAAD5E /* AliPay.m in Sources */,
 				337828232108539800373A20 /* UIImage+BaseFilter.m in Sources */,

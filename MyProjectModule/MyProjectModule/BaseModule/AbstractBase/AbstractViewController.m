@@ -173,7 +173,6 @@
 }
 
 -(void)simulateTime_consumingOperation:(ResultStatus)status{
-    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         for (int i = 0; i < 30; i++) {
             NSLog(@"%@",@"");
@@ -182,5 +181,21 @@
     });
                    
 
+}
+
+-(void)backToController:(NSString *)controllerName animated:(BOOL)animated{
+    if (self.navigationController) {
+        
+        NSArray *controllers = self.navigationController.viewControllers;
+        
+        NSArray *result = [controllers filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
+            return [evaluatedObject isKindOfClass:NSClassFromString(controllerName)];
+        }]];
+        
+        if (result.count > 0) {
+            [self.navigationController popToViewController:result[0] animated:YES];
+        }
+    }
+    
 }
 @end

@@ -17,7 +17,5 @@ class AView: UIView {
             print("CBlock")
         }
         b.refreshView(model)
-
     }
-
 }

@@ -31,14 +31,15 @@ func recursion100(_ n :Int) -> Int{
     if n == 1 {
         return 1
     }
+    print(n)
     return recursion100(n - 1) + n
 }
-recursion100(100)
+recursion100(10)
 
 //遍历子view
 func recursionSubView(_ view :UIView){
     if view.subviews.count > 0 {
-        for(_,item) in view.subviews.enumerated(){
+        for item in view.subviews{
             print(item)
             recursionSubView(item)
         }
@@ -60,9 +61,9 @@ func bubbleSort(unsortedArray: inout [Int]){
     guard unsortedArray.count > 1 else{
         return
     }
-    for i in 0 ..< unsortedArray.count-1 {
+    for i in 0 ..< unsortedArray.count - 1 {
         var exchanged = false
-        for j in 0 ..< unsortedArray.count-1-i {
+        for j in 0 ..< unsortedArray.count - 1 - i {
             if unsortedArray[j] > unsortedArray[j+1] {
                 unsortedArray.swapAt(j, j+1)
                 exchanged = true
@@ -90,28 +91,28 @@ print(list)
 
 func mergeArrays(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
     
-    var len1 = m - 1, len2 = n - 1, len = m + n - 1
+    var p1 = m - 1, p2 = n - 1, p = m + n - 1
     
-    while len1 >= 0 && len2 >= 0 {
-        if nums1[len1] >= nums2[len2] {
-            nums1[len] = nums1[len1]
-            len1 -= 1
-            len -= 1
+    while p1 >= 0 && p2 >= 0 {
+        if nums1[p1] >= nums2[p2] {
+            nums1[p] = nums1[p1]
+            p1 -= 1
+            p -= 1
         }else{
-            nums1[len] = nums2[len2]
-            len -= 1
-            len2 -= 1
+            nums1[p] = nums2[p2]
+            p2 -= 1
+            p -= 1
         }
     }
     
-    while len2 >= 0 {
-        nums1[len] = nums2[len2]
-        len -= 1
-        len2 -= 1
+    while p2 >= 0 {
+        nums1[p] = nums2[p2]
+        p -= 1
+        p2 -= 1
     }
 }
-var nums1 = [1,2,3,0,0,0], mm = 3
-var nums2 = [2,5,6],       nn = 3
+var nums1 = [1,2,3,0,0,0,0,0,0,0], mm = 3
+var nums2 = [2,5,6,7,8,9,10],       nn = 7
 
 mergeArrays(&nums1,mm,nums2,nn)
 
