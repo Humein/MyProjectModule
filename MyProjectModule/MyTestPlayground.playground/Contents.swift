@@ -1545,3 +1545,48 @@ func sum(num1:Int, with num2:Int) -> Int {
     } while (num2 != 0);
     return num1
 }
+
+
+//栈实现
+/*
+  swift 中struct,enum 均可以包含类方法和实例方法,swift官方是不建议在struct,enum 的普通方法里修改属性变量,但是在func 前面添加 mutating 关键字之后就可以方法内修改.
+ */
+protocol Stack {
+  /// 持有的元素类型
+  associatedtype Element
+  
+  /// 是否为空
+  var isEmpty: Bool { get }
+  /// 栈的大小
+  var size: Int { get }
+  /// 栈顶元素
+  var peek: Element? { get }
+  
+  /// 进栈
+  mutating func push(_ newElement: Element)
+  /// 出栈
+  mutating func pop() -> Element?
+}
+struct IntegerStack: Stack {
+  typealias Element = Int
+  
+  var isEmpty: Bool { return stack.isEmpty }
+  var size: Int { return stack.count }
+  var peek: Element? { return stack.last }
+  
+  private var stack = [Element]()
+  
+    mutating func push(_ newElement: Element) {
+    stack.append(newElement)
+  }
+  
+    mutating func pop() -> Element? {
+    return stack.popLast()
+  }
+}
+var stacks = IntegerStack.init()
+stacks.push(1)
+stacks.push(2)
+stacks.push(3)
+stacks.pop()
+print(stacks)

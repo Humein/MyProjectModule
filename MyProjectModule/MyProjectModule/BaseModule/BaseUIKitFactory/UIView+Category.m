@@ -6,7 +6,7 @@
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
 
-#import "UIView+frameAdjust.h"
+#import "UIView+Category.h"
 
 @implementation UIView (frameAdjust)
 - (CGPoint) origin {
