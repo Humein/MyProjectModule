@@ -23,7 +23,29 @@ import UIKit
  把子问题的解局部最优解合成原来解问题的一个解。
  */
 
-
+//MARK:- codeInterview
+// 
+class code1 {
+    /*
+    加 __block 前 10 后 100
+     
+    __block int i = 10;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"====%d",i);
+    });
+    i = 100;
+     
+   */
+    
+    /*
+     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+         dispatch_async(queue, ^{
+              [self performSelector:@selector(test) withObject:nil afterDelay:2];
+     });
+     '会发现test方法并没有被调用，因为子线程中的runloop默认是没有启动的状态。使用run方法开启当前线程的runloop，但是一定要注意run方法和执行该延迟方法的顺序。
+     */
+    
+}
 
 //MARK:- list1：
 //1-100 相加
@@ -152,13 +174,20 @@ public class LinkNode{
     }
 }
 
+/*
+ 看了半个小时可算是把这个递归看懂了！不妨假设链表为1，2，3，4，5。按照递归，当执行reverseList（5）的时候返回了5这个节点，reverseList(4)中的p就是5这个节点，我们看看reverseList（4）接下来执行完之后，5->next = 4, 4->next = null。这时候返回了p这个节点，也就是链表5->4->null，接下来执行reverseList（3），代码解析为4->next = 3,3->next = null，这个时候p就变成了，5->4->3->null, reverseList(2), reverseList(1)依次类推，p就是:5->4->3->2->1->null
+
+ */
 func reverseLinkRec(_ head: LinkNode?) -> LinkNode?{
     
     if head == nil || head?.next == nil {
         return head
     }
     
+    //获取最后的节点
     let newHead = reverseLinkRec(head?.next) // 栈顶
+    
+//     依次反转每个节点 <3个指针中 head?.next 为current 指针作为 反转中间轴 >
     head?.next?.next = head // 栈顶 --> 栈底
     head?.next = nil // 栈顶 --> 栈底
     
@@ -189,17 +218,20 @@ func ReverseListWhile(_ head: LinkNode?) -> LinkNode? {
  本文主要运用的是双指针的思想，指针si指向s字符串的首部，指针ti指向t字符串的首部。
  */
 func isSubsequence(_ s :String, _ t :String) -> Bool{
+    var sp = 0, tp = 0
     let sArray = Array(s), tArray = Array(t)
-    var si = 0, ti = 0
-    while si < sArray.count && ti < tArray.count{
-        if sArray[si] == tArray[ti] {
-            si += 1
+    //指针边界
+    while sp < sArray.count && tp < tArray.count  {
+        if sArray[sp] == tArray[tp] {
+            sp += 1
         }
-        ti += 1
+        tp += 1
     }
     
-    return si == sArray.count
+    return sp == s.count
+    
 }
+
 print(isSubsequence("acd","abcd"))
 
 
@@ -210,24 +242,31 @@ print(isSubsequence("acd","abcd"))
 现在，为了使面积最大化，我们需要考虑更长的两条线段之间的区域。如果我们试图将指向较长线段的指针向内侧移动，矩形区域的面积将受限于较短的线段而不会获得任何增加。但是，在同样的条件下，移动指向较短线段的指针尽管造成了矩形宽度的减小，但却可能会有助于面积的增大。因为移动较短线段的指针会得到一条相对较长的线段，这可以克服由宽度减小而引起的面积减小。
 */
 func getMaxArea(_ height :[Int]) -> Int{
-    var leftP = 0, rightP = height.count - 1, maxArea = 0
     
-    while leftP < rightP {
-        var minHeight = 0 //木桶原理
-        if height[leftP] > height[rightP] {
-            minHeight = height[rightP]
-            rightP -= 1
+    if height.count == 0 {
+        return 0
+    }
+    
+    var p1 = 0, p2 = height.count - 1, maxArea = 0
+    
+    while p1 < p2 {
+        // 遍历出每次最低高度
+        var minHeight = 0
+        if height[p1] < height[p2]{
+            minHeight = height[p1]
+            p1 += 1
         }else{
-            minHeight = height[leftP]
-            leftP += 1
+            minHeight = height[p2]
+            p2 -= 1
         }
         
-        maxArea = max(maxArea,(rightP - leftP + 1) * minHeight)
+        maxArea = max(maxArea, (p2 - p1 + 1) * minHeight)
     }
     
     return maxArea
     
 }
+
 getMaxArea([1,8,6,2,5,4,8,3,7])
 
 
@@ -239,18 +278,22 @@ getMaxArea([1,8,6,2,5,4,8,3,7])
  */
 func binarySearch(_ nums: [Int], _ target :Int) -> Int{
     var p1 = 0, p2 = nums.count - 1
-    while p1 <= p2 {
-        let bsmid = (p2 - p1) / 2 + p1
-        if nums[bsmid] == target {
-            return bsmid
-        }else if nums[bsmid] < target{
-            p1 = bsmid + 1
+    
+    while p1 < p2 {
+        let mid = (p2 - p1) / 2 + p1 //记得加p1
+        if nums[mid] == target {
+            return mid
+        }else if nums[mid] > target {
+            p2 = mid - 1 // 记得 - 1
         }else{
-            p2 = bsmid - 1
+            p1 = mid + 1 // 记得 + 1
         }
     }
+    
     return -1
 }
+
+
 
 
 //MARK:- list4:
@@ -259,21 +302,25 @@ func binarySearch(_ nums: [Int], _ target :Int) -> Int{
 双指针 迭代方式
 */
 func reverseString(_ s: inout [Character]){
-    if s.count < 2 {
+    
+    //记得 边界1
+    if  s.count < 2 {
         return
     }
     
     var p1 = 0, p2 = s.count - 1
-    var temp :Character
-    while p1 <= p2 {
-        temp = s[p1]
+    // let sArr = Array(s) 输入就是数组了
+    // 指针边界2
+    while p1 < p2 {
+        // tmp 应该提出来声明 减少创建
+        let tmp = s[p1]
         s[p1] = s[p2]
-        s[p2] = temp
+        s[p2] = tmp
         p1 += 1
         p2 -= 1
     }
-    
 }
+
 
 //MARK:- list5:
 
@@ -1176,7 +1223,8 @@ func findMin(_ array: [Int]) -> Int{
         return 0
     }
     var p1 = 0, p2 = array.count - 1
-    while p1 < p2 { //使得p1、p2交叉，p1指向最小的数
+    while p1 < p2 {
+        //使得p1、p2交叉，p1指向最小的数
         let mid = (p2 - p1)/2 + p1
         if array[mid] > array[p2] {
             p1 = mid + 1
@@ -1223,10 +1271,6 @@ func maxCute_DP(length: Int) -> Int {
         return 2
     }
     
-//    if length == 4 {
-//        return 3 || 4
-//    }
-    
 //    2: 最优子结构 可以推导出DP方程式  dp[i]=dp[j]*dp[i-j]
     var dp = [0,1,2,3]
     var result = 0
@@ -1242,7 +1286,7 @@ func maxCute_DP(length: Int) -> Int {
     return dp[length]
 }
 
-maxCute_DP(length: 5)
+maxCute_DP(length:4)
 
 // 贪心算法：尽可能多地减去长度为3的绳子段，当绳子最后剩下的长度为4的时候，剪成2*2的2段
 func maxCute_Greed(length: Int) -> Int { return -1}
@@ -1460,9 +1504,9 @@ func maxDepth(_ root: TreeNode?) -> Int {
         return 0
     }else{
         let leftTreeDepth = maxDepth(root?.left)
-        print( "\(leftTreeDepth)")
+        //print( "\(leftTreeDepth)")
         let rightTreeDepth = maxDepth(root?.right)
-        print( "\(leftTreeDepth)" + ":" + "\(rightTreeDepth)")
+        //print( "\(leftTreeDepth)" + ":" + "\(rightTreeDepth)")
         return leftTreeDepth > rightTreeDepth ? leftTreeDepth + 1 : rightTreeDepth + 1
         
     }
@@ -1514,6 +1558,27 @@ maxDepth(node1)
 // 则输出"student. a am I"。
 
 // 也可以用 栈 的特性
+func reverseStr(_ s: String) -> String{
+    // 用数组 append removeLast 代替 push pop
+    var stack = [Character]()
+    let arraySubstrings: [Substring] = s.split(separator: " ")
+    let arrayStrings = arraySubstrings.reduce("") {
+        $0 + $1.reversed() + "  "
+        }
+    var reverStr = String()
+    for char in arrayStrings{
+        stack.append(char)
+    }
+    while stack.count > 0 {
+        reverStr.append(stack.last!)
+        stack.removeLast()
+    }
+    return reverStr
+}
+
+reverseStr(" I am a student. ")
+
+
 func ReverseSentence(_ sentence: String) -> String {
     var chars:[Character] = Array(sentence)
     chars.reverse()
@@ -1548,8 +1613,11 @@ func sum(num1:Int, with num2:Int) -> Int {
 }
 
 
+//MARK:-list25:
+
 //栈实现
-/*
+/*   也可以通过数组去实现 removeLast addapend
+ 
   swift 中struct,enum 均可以包含类方法和实例方法,swift官方是不建议在struct,enum 的普通方法里修改属性变量,但是在func 前面添加 mutating 关键字之后就可以方法内修改.
  */
 protocol Stack {
@@ -1591,3 +1659,42 @@ stacks.push(2)
 stacks.push(3)
 stacks.pop()
 print(stacks)
+
+//MARK:-list26:
+//236. 二叉树的最近公共祖先 / 235. 二叉搜索树的最近公共祖先 / 怎么查找两个view的公共父视图
+
+
+
+//怎么通过view去找到对应的控制器
+/*
+ 利用响应链知识 ，链表指针查找 view的 nextResponder
+ */
+
+/*
+ -(UIViewController *)findVC:(UIView *)view{
+ 
+    id responder = view;
+ 
+    while responder {
+    if responder isKindOfClass:[UIViewController class] {
+      return responder
+    }
+ 
+    responder = [responder nextResponder]
+   }
+ 
+    return nil
+ }
+ 
+ - (UIViewController *)yy_viewController {
+     for (UIView *view = self; view; view = view.superview) {
+         UIResponder *nextResponder = [view nextResponder];
+         if ([nextResponder isKindOfClass:[UIViewController class]]) {
+             return (UIViewController *)nextResponder;
+         }
+     }
+     return nil;
+ }
+ */
+
+

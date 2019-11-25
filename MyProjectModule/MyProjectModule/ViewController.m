@@ -122,9 +122,7 @@
     i = 100;
 
 //
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [self performSelector:@selector(aleartView) withObject:nil afterDelay:0.3];
-    });
+
 }
 
 
