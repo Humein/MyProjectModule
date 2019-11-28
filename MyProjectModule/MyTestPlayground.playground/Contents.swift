@@ -1,5 +1,18 @@
 import UIKit
-//MARK:- 动态规划
+//MARK:- 递归
+/*  递归详解  https://mp.weixin.qq.com/s/mJ_jZZoak7uhItNgnfmZvQ
+ 步骤
+ 1. 定义递归函数功能
+ 2. 寻找结束条件
+ 3. 寻找等价关系
+    等价条件中，一定是范围不断在缩小，对于链表来说，就是链表的节点个数不断在变小
+
+ 
+ */
+
+
+
+//MARK:- 动态规划    https://juejin.im/post/5dcb8201e51d45210f046f5a#heading-0
 /*
  动态规划在查找有很多重叠子问题的情况的最优解时有效。它将问题重新组合成子问题。为了避免多次解决这些子问题，它们的结果都逐渐被计算并被保存，从简单的问题直到整个问题都被解决。因此，动态规划保存递归时的结果，因而不会在解决同样的问题时花费时间。
 
@@ -9,6 +22,9 @@ import UIKit
  最优子结构性质。如果问题的最优解所包含的子问题的解也是最优的，我们就称该问题具有最优子结构性质（即满足最优化原理）。最优子结构性质为动态规划算法解决问题提供了重要线索。
  无后效性。即子问题的解一旦确定，就不再改变，不受在这之后、包含它的更大的问题的求解决策影响。
  子问题重叠性质。子问题重叠性质是指在用递归算法自顶向下对问题进行求解时，每次产生的子问题并不总是新问题，有些子问题会被重复计算多次。动态规划算法正是利用了这种子问题的重叠性质，对每一个子问题只计算一次，然后将其计算结果保存在一个表格中，当再次需要计算已经计算过的子问题时，只是在表格中简单地查看一下结果，从而获得较高的效率。
+ 
+ 
+ 
  */
 
 //MARK:-  贪心算法
@@ -22,6 +38,17 @@ import UIKit
  对每一子问题求解，得到子问题的局部最优解。
  把子问题的解局部最优解合成原来解问题的一个解。
  */
+
+
+class listNode {
+    var next: listNode?
+    var val: Int
+    init(value: Int, next: listNode?) {
+        self.val = value
+        self.next = next
+    }
+}
+
 
 //MARK:- codeInterview
 // 
@@ -138,6 +165,50 @@ var nums2 = [2,5,6,7,8,9,10],       nn = 7
 
 mergeArrays(&nums1,mm,nums2,nn)
 
+//栈实现
+/*   也可以通过数组去实现 removeLast addapend
+ 
+  swift 中struct,enum 均可以包含类方法和实例方法,swift官方是不建议在struct,enum 的普通方法里修改属性变量,但是在func 前面添加 mutating 关键字之后就可以方法内修改.
+ */
+protocol Stack {
+  /// 持有的元素类型
+  associatedtype Element
+  
+  /// 是否为空
+  var isEmpty: Bool { get }
+  /// 栈的大小
+  var size: Int { get }
+  /// 栈顶元素
+  var peek: Element? { get }
+  
+  /// 进栈
+  mutating func push(_ newElement: Element)
+  /// 出栈
+  mutating func pop() -> Element?
+}
+struct IntegerStack: Stack {
+  typealias Element = Int
+  
+  var isEmpty: Bool { return stack.isEmpty }
+  var size: Int { return stack.count }
+  var peek: Element? { return stack.last }
+  
+  private var stack = [Element]()
+  
+    mutating func push(_ newElement: Element) {
+    stack.append(newElement)
+  }
+  
+    mutating func pop() -> Element? {
+    return stack.popLast()
+  }
+}
+var stacks = IntegerStack.init()
+stacks.push(1)
+stacks.push(2)
+stacks.push(3)
+stacks.pop()
+print(stacks)
 
 //MARK:- list2：
 //1. 两数之和
@@ -175,8 +246,8 @@ public class LinkNode{
 }
 
 /*
- 看了半个小时可算是把这个递归看懂了！不妨假设链表为1，2，3，4，5。按照递归，当执行reverseList（5）的时候返回了5这个节点，reverseList(4)中的p就是5这个节点，我们看看reverseList（4）接下来执行完之后，5->next = 4, 4->next = null。这时候返回了p这个节点，也就是链表5->4->null，接下来执行reverseList（3），代码解析为4->next = 3,3->next = null，这个时候p就变成了，5->4->3->null, reverseList(2), reverseList(1)依次类推，p就是:5->4->3->2->1->null
-
+ 等价条件中，一定是范围不断在缩小，对于链表来说，就是链表的节点个数不断在变小
+  reverseList(head) 等价于 ** reverseList(head.next)** + 改变一下1，2两个节点的指向。好了，等价关系找出来了
  */
 func reverseLinkRec(_ head: LinkNode?) -> LinkNode?{
     
@@ -184,10 +255,10 @@ func reverseLinkRec(_ head: LinkNode?) -> LinkNode?{
         return head
     }
     
-    //获取最后的节点
+    //反转第一个节点之后的链表, 我们先把递归的结果保存起来，先不返回，因为我们还不清楚这样递归是对还是错。，
     let newHead = reverseLinkRec(head?.next) // 栈顶
     
-//     依次反转每个节点 <3个指针中 head?.next 为current 指针作为 反转中间轴 >
+//  只需要把节点 2 的 next 指向 1，然后把 1 的 next 指向 null,不就行了？
     head?.next?.next = head // 栈顶 --> 栈底
     head?.next = nil // 栈顶 --> 栈底
     
@@ -321,11 +392,83 @@ func reverseString(_ s: inout [Character]){
     }
 }
 
+//236. 二叉树的最近公共祖先 / 235. 二叉搜索树的最近公共祖先 / 怎么查找两个view的公共父视图
+
+/*
+用两个「指针」，分别指向两个路径的根节点，然后从根节点开始，找第一个不同的节点，第一个不同节点的上一个公共节点
+ 
+ + (NSArray *)superViews:(UIView *)view {
+     if (view == nil) {
+         return @[];
+     }
+     NSMutableArray *result = [NSMutableArray array];
+     while (view != nil) {
+         [result addObject:view];
+         view = view.superview;
+     }
+     return [result copy];
+ }
+ 
+ + (UIView *)commonView_3:(UIView *)viewA andView:(UIView *)viewB {
+     NSArray *arr1 = [self superViews:viewA];
+     NSArray *arr2 = [self superViews:viewB];
+     NSInteger p1 = arr1.count - 1;
+     NSInteger p2 = arr2.count - 1;
+     UIView *answer = nil;
+     while (p1 >= 0 && p2 >= 0) {
+         if (arr1[p1] == arr2[p2]) {
+             answer = arr1[p1];
+         }
+         p1--;
+         p2--;
+     }
+     return answer;
+ }
+
+*/
+
+
+//怎么通过view去找到对应的控制器
+/*
+ view 和 UIViewController 都继承 UIResponder
+ 利用响应链知识 ，链表指针查找 view的 nextResponder。
+ 一个指针的迭代
+ */
+
+/*
+ -(UIViewController *)findVC:(UIView *)view{
+ 
+    id responder = view;
+ 
+    while responder {
+    if responder isKindOfClass:[UIViewController class] {
+      return responder
+    }
+ 
+    responder = [responder nextResponder]
+   }
+ 
+    return nil
+ }
+ 
+ // YY 实现方式
+ - (UIViewController *)yy_viewController {
+     for (UIView *view = self; view; view = view.superview) {
+         UIResponder *nextResponder = [view nextResponder];
+         if ([nextResponder isKindOfClass:[UIViewController class]]) {
+             return (UIViewController *)nextResponder;
+         }
+     }
+     return nil;
+ }
+ */
+
 
 //MARK:- list5:
 
 // 658. 找到 K 个最接近的元素
 /*
+ 变种 二分查找
 给定一个排序好的数组，两个整数 k 和 x，从数组中找到最靠近 x（两数之差最小）的 k 个数。返回的结果必须要是按升序排好的。如果有两个数与 x 的差值一样，优先选择数值较小的那个数。
 */
 func findClosestElements(_ arr: [Int],_ k: Int,_ x: Int) -> [Int]{
@@ -417,7 +560,7 @@ func findDuplicates(_ nums :[Int]) -> [Int] {
  - 遍历到最后，一般会有一个链表是先遍历完毕的。接着将另外一个链表拼接起来就行了，不用继续再一个个遍历拼接。
 
  */
-func mergeTwoLists(_ l1: LinkNode?,_ l2: LinkNode?) -> LinkNode?{
+func mergeTwoLists(_ l1: listNode?,_ l2: listNode?) -> listNode?{
     // l1/l2 == nil  边界          l1?.next 递归转移方程
 
     if l1 == nil {
@@ -427,7 +570,8 @@ func mergeTwoLists(_ l1: LinkNode?,_ l2: LinkNode?) -> LinkNode?{
     if l2 == nil{
         return l1
     }
-    
+    print(l1!.val)
+
     if l1!.val < l2!.val{
         l1?.next = mergeTwoLists(l1?.next, l2)
         return l1
@@ -436,6 +580,13 @@ func mergeTwoLists(_ l1: LinkNode?,_ l2: LinkNode?) -> LinkNode?{
         return l2
     }
 }
+
+let node5 = listNode(value: 5, next: nil)
+let node4 = listNode(value: 4, next: node5)
+let node3 = listNode(value: 3, next: node4)
+let node2 = listNode(value: 2, next: node3)
+let node1 = listNode(value: 1, next: node2)
+mergeTwoLists(node1,node2)
 
 //14. 最长公共前缀
 func longestCommonPrefix(_ strs :[String]) -> String {
@@ -457,12 +608,11 @@ func longestCommonPrefix(_ strs :[String]) -> String {
 //MARK:- list7:
 //226. 翻转二叉树
 /*
- 迭代法
- 的思路是BFS或者DFS，这两种方法都可以实现，实际上也是二叉树的遍历。
+ 迭代法的思路是BFS或者DFS，这两种方法都可以实现，实际上也是二叉树的遍历。
  BFS用Queue实现， 宽度优先搜索（breadth first search
  DFS的话将代码中的Queue换成Stack。
- 
-  递归最简单
+
+ 递归最简单
  */
 
 //二叉树结构
@@ -499,6 +649,7 @@ func invertTree(_ root :TreeNode?) -> TreeNode? {
 }
 
 
+
 //二维数组中的查找
 /*
  在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序，输入一个二维数组中的数字，判断二维书中是否存在,存在返回true，不存在返回false~
@@ -510,10 +661,11 @@ func invertTree(_ root :TreeNode?) -> TreeNode? {
 
  */
 func searchMatrix(data :[[Int]],number :NSInteger) -> Bool{
-    var row :Int = 0, col :Int = data[0].count - 1
     if data.count == 0 || data.isEmpty{
         return  false
     }
+    var row :Int = 0, col :Int = data[0].count - 1
+
     while row < data.count && col >= 0 {
         let rightVal = data[row][col]
         if rightVal == number {
@@ -524,6 +676,19 @@ func searchMatrix(data :[[Int]],number :NSInteger) -> Bool{
             row += 1
         }
     }
+    return false
+}
+
+func searchMatrixes(data :[[Int]], number :NSInteger) -> Bool{
+    if data.count == 0 || data.isEmpty{
+        return  false
+    }
+    var row :Int = 0, col :Int = data[0].count - 1
+    
+    while row <= data.count && col >= 0 {
+        
+    }
+    
     return false
 }
 
@@ -598,10 +763,12 @@ func mergeKLists(_ lists: [LinkNode?]) -> LinkNode? {
  */
 func maxSubArrayMemo(_ nums: [Int]) -> Int {
     
+    // 备忘录字典
      var result = Dictionary<Int,Int>()
     
+    //下标为key
      for i in 0..<nums.count {
-     result[i] = nums[i]
+        result[i] = nums[i]
      }
 
      var maxNum = nums[0]
@@ -619,6 +786,7 @@ func maxSubArrayMemo(_ nums: [Int]) -> Int {
 
      return maxNum
  }
+maxSubArrayMemo([-2,1,-3,4,-1,2,1,-5,4,6])
 
 func maxSubArrayDP(_ nums: [Int]) -> Int {
 
@@ -646,8 +814,8 @@ func maxSubArrayDP(_ nums: [Int]) -> Int {
     }
     return curMaxSub.last!
 }
-
 maxSubArrayDP([-2,1,-3,4,-1,2,1,-5,4,6])
+
 
 
 //MARK:- list9:
@@ -671,7 +839,7 @@ func lengthOfLongestSubstringWD(_ s: String) -> Int {
     if s.count == 0 {
         return result
     }
-    
+    //窗口
     result = p2 - p1
     let chars = Array(s)
     //遍历条件
@@ -692,8 +860,8 @@ func lengthOfLongestSubstringWD(_ s: String) -> Int {
     
     return result
 }
-
 lengthOfLongestSubstringWD("bbbbacde")
+
 
 //MARK:- list10:
 
@@ -781,7 +949,7 @@ longestPalindrome("11234aba")
 
 
 //MARK:- list11:
-//70. 爬楼梯
+//70. 爬楼梯 本质就是 斐波拉切数列
 /*
  题目：你正在爬楼梯。需要 n 步你才能到达顶部。
  每次你可以爬 1 或 2 个台阶。你有多少种不同的方式可以爬到楼顶呢？
@@ -838,8 +1006,9 @@ func dyclimbStairs(_ n: Int) -> Int {
     var dp = [1,1,2] // 最优子结果
     
     //遍历 动态转移方程 dp[n] = dp[n-1] + dp[n-2]
-    for i in 3 ..< n + 1 {
-        print(dp)
+    // 3 ... n 左开右开 3 到 n
+    for i in 3 ... n {
+        print(i)
         //状态转移方程
         dp.append(dp[i-1] + dp[i-2])
     }
@@ -847,9 +1016,9 @@ func dyclimbStairs(_ n: Int) -> Int {
     return dp[n]
 }
 
-dyclimbStairs(4)
+dyclimbStairs(3)
 
-// 临时变量 DP
+// 临时变量 DP 就是递推
 func climbStairsDP(_ n :Int) -> Int{
 
     // 边界值
@@ -871,7 +1040,6 @@ func climbStairsDP(_ n :Int) -> Int{
 }
 
 
-
 //121. 买卖股票的最佳时机
 /*
  给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
@@ -883,7 +1051,7 @@ func climbStairsDP(_ n :Int) -> Int{
      1- 只要考虑当天买和之前买哪个收益更高，
      2- 当天卖和之前卖哪个收益更高。
   2 边界
-  3 状态转移方程(2个)
+  3 状态转移方程(2个)    第二个方程的参数是第一个方程的解
  */
 
 func dynamicMaxProfit(_ prices :[Int]) -> Int{
@@ -891,11 +1059,11 @@ func dynamicMaxProfit(_ prices :[Int]) -> Int{
     if prices.count <= 1 {
         return 0
     }
-    // 最小子结构
-    var min_b = prices[0], max_p = 0//这个是受益 最小就是0
+    // 两个最小子结构
+    var min_b = prices[0], max_p = 0//这个是利润 最小就是0
     
     //3 状态转移方程 min_b max_p 都是当前的最优，随着遍历一直往下走
-    for idx in 1 ..< prices.count {
+    for idx in 1 ... prices.count - 1 {
         // 得出idx之前最小的
         min_b = min(min_b, prices[idx]) // 一直取买入最低的价格 // 最优子结构
         /*
@@ -906,6 +1074,7 @@ func dynamicMaxProfit(_ prices :[Int]) -> Int{
     
     return max_p
 }
+
 
 
 // 双指针遍历 < 后置指针会遍历整个数组，前置的会根据业务保存对应值 《子序列》>
@@ -1115,14 +1284,6 @@ func detectCycle(_ head: LinkNode?) -> LinkNode?{
  // 其他解法： 比如递归调用(递归函数本质上也是一个栈结构)，或者修改链表
  */
 
-class listNode {
-    var next: listNode?
-    var val: Int
-    init(value: Int, next: listNode?) {
-        self.val = value
-        self.next = next
-    }
-}
 
 // 栈实现 <swift没有内建stack，我们用数组反转代替>
 func reversePrintList(_ node: listNode) -> [Int]{
@@ -1149,6 +1310,8 @@ func testCase1() {
     let node1 = listNode(value: 1, next: node2)
     reversePrintList(node1)
 }
+
+testCase1
 
 // offer9：用两个栈实现队列
 /*
@@ -1366,36 +1529,39 @@ func deleteDupNodel(_ head: listNode?) -> listNode?{
  */
 
 func findKNode(_ head: LinkNode?,k: Int) -> LinkNode?{
-    // 边界
-    if head == nil || k <= 0 {
+    if k <= 0 {
         return nil
     }
     
-    var p1 :LinkNode? = head //fast
-    var p2 :LinkNode = head!
+    if head == nil || head?.next == nil {
+        return head
+    }
+    // p2 fast
+    var p1 :LinkNode = head!, p2 :LinkNode? = head
     
     //快指针先走k步
-    for _ in 0..<k {
-        //如果k大于链表长度，返回空
-        if p1?.next != nil {
-            p1 = p1?.next
-        } else{
+    for _ in 0..<k{
+        if p2?.next != nil {
+            p2 = p2?.next
+        }else{
+            //如果k大于链表长度，返回空
             return nil
         }
     }
     
     //快慢指针同时往后遍历
-    while p1?.next != nil {
-        p1 = p1?.next
-        p2 = p2.next!
+    while p2?.next != nil {
+        p1 = p1.next!
+        p2 = p2?.next
     }
+    //    19. 删除链表的倒数第N个节点
+    //    p1!.next = p1!.next!.next
+    //    return head.next
     
-//    19. 删除链表的倒数第N个节点
-//    p2!.next = p2!.next!.next
-//    return head.next
-    
-    return p2
+    return p1
 }
+
+
 
 //MARK:-list20:
 
@@ -1435,6 +1601,9 @@ private func doseTree1HavaeTree2(_ root1: TreeNode?, _ root2: TreeNode?) -> Bool
 /*
  请实现一个函数，用来判断一棵二叉树是不是对称的。如果一棵二叉树和它的镜像一样，那么它是对称的。
  递归
+ 1. 定义递归函数
+ 2. 边界问题 递归结束条件
+ 3. 寻找等价关系 node1?.left, node2?.right
  */
 
 func isSymmetry(_ root: TreeNode?) -> Bool {
@@ -1512,14 +1681,14 @@ func maxDepth(_ root: TreeNode?) -> Int {
     }
 }
 
-let node7 = TreeNode(value: 7, left: nil, right: nil)
-let node6 = TreeNode(value: 6, left: nil, right: nil)
-let node5 = TreeNode(value: 5, left: node7, right: nil)
-let node4 = TreeNode(value: 4, left: nil, right: nil)
-let node3 = TreeNode(value: 3, left: nil, right: node6)
-let node2 = TreeNode(value: 2, left: node4, right: node5)
-let node1 = TreeNode(value: 1, left: node2, right: node3)
-maxDepth(node1)
+let tnode7 = TreeNode(value: 7, left: nil, right: nil)
+let tnode6 = TreeNode(value: 6, left: nil, right: nil)
+let tnode5 = TreeNode(value: 5, left: tnode7, right: nil)
+let tnode4 = TreeNode(value: 4, left: nil, right: nil)
+let tnode3 = TreeNode(value: 3, left: nil, right: tnode6)
+let tnode2 = TreeNode(value: 2, left: tnode4, right: tnode5)
+let tnode1 = TreeNode(value: 1, left: tnode2, right: tnode3)
+maxDepth(tnode1)
 
 
 // offer55（二）：平衡二叉树
@@ -1550,8 +1719,9 @@ maxDepth(node1)
        let rightTreeDepth = checkTreeDepth(node?.right)
        return leftTreeDepth > rightTreeDepth ? leftTreeDepth + 1 : rightTreeDepth + 1
    }
-//MARK:-list24:
 
+
+//MARK:-list24:
 // offer58（一）：翻转单词顺序
 // 题目：输入一个英文句子，翻转句子中单词的顺序，但单词内字符的顺序不变。
 // 为简单起见，标点符号和普通字母一样处理。例如输入字符串"I am a student. "，
@@ -1560,15 +1730,14 @@ maxDepth(node1)
 // 也可以用 栈 的特性
 func reverseStr(_ s: String) -> String{
     // 用数组 append removeLast 代替 push pop
-    var stack = [Character]()
+    var stack = [String]()
     let arraySubstrings: [Substring] = s.split(separator: " ")
-    let arrayStrings = arraySubstrings.reduce("") {
-        $0 + $1.reversed() + "  "
-        }
-    var reverStr = String()
-    for char in arrayStrings{
-        stack.append(char)
+    // 高阶函数
+    arraySubstrings.reduce("") {
+        stack.append(String($1) + "  ")
+        return ""
     }
+    var reverStr = String()
     while stack.count > 0 {
         reverStr.append(stack.last!)
         stack.removeLast()
@@ -1576,7 +1745,7 @@ func reverseStr(_ s: String) -> String{
     return reverStr
 }
 
-reverseStr(" I am a student. ")
+reverseStr("I am a student.")
 
 
 func ReverseSentence(_ sentence: String) -> String {
@@ -1612,89 +1781,5 @@ func sum(num1:Int, with num2:Int) -> Int {
     return num1
 }
 
-
-//MARK:-list25:
-
-//栈实现
-/*   也可以通过数组去实现 removeLast addapend
- 
-  swift 中struct,enum 均可以包含类方法和实例方法,swift官方是不建议在struct,enum 的普通方法里修改属性变量,但是在func 前面添加 mutating 关键字之后就可以方法内修改.
- */
-protocol Stack {
-  /// 持有的元素类型
-  associatedtype Element
-  
-  /// 是否为空
-  var isEmpty: Bool { get }
-  /// 栈的大小
-  var size: Int { get }
-  /// 栈顶元素
-  var peek: Element? { get }
-  
-  /// 进栈
-  mutating func push(_ newElement: Element)
-  /// 出栈
-  mutating func pop() -> Element?
-}
-struct IntegerStack: Stack {
-  typealias Element = Int
-  
-  var isEmpty: Bool { return stack.isEmpty }
-  var size: Int { return stack.count }
-  var peek: Element? { return stack.last }
-  
-  private var stack = [Element]()
-  
-    mutating func push(_ newElement: Element) {
-    stack.append(newElement)
-  }
-  
-    mutating func pop() -> Element? {
-    return stack.popLast()
-  }
-}
-var stacks = IntegerStack.init()
-stacks.push(1)
-stacks.push(2)
-stacks.push(3)
-stacks.pop()
-print(stacks)
-
-//MARK:-list26:
-//236. 二叉树的最近公共祖先 / 235. 二叉搜索树的最近公共祖先 / 怎么查找两个view的公共父视图
-
-
-
-//怎么通过view去找到对应的控制器
-/*
- 利用响应链知识 ，链表指针查找 view的 nextResponder
- */
-
-/*
- -(UIViewController *)findVC:(UIView *)view{
- 
-    id responder = view;
- 
-    while responder {
-    if responder isKindOfClass:[UIViewController class] {
-      return responder
-    }
- 
-    responder = [responder nextResponder]
-   }
- 
-    return nil
- }
- 
- - (UIViewController *)yy_viewController {
-     for (UIView *view = self; view; view = view.superview) {
-         UIResponder *nextResponder = [view nextResponder];
-         if ([nextResponder isKindOfClass:[UIViewController class]]) {
-             return (UIViewController *)nextResponder;
-         }
-     }
-     return nil;
- }
- */
 
 
