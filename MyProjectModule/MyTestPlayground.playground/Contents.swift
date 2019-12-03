@@ -6,8 +6,6 @@ import UIKit
  2. 寻找结束条件
  3. 寻找等价关系
     等价条件中，一定是范围不断在缩小，对于链表来说，就是链表的节点个数不断在变小
-
- 
  */
 
 
@@ -22,10 +20,8 @@ import UIKit
  最优子结构性质。如果问题的最优解所包含的子问题的解也是最优的，我们就称该问题具有最优子结构性质（即满足最优化原理）。最优子结构性质为动态规划算法解决问题提供了重要线索。
  无后效性。即子问题的解一旦确定，就不再改变，不受在这之后、包含它的更大的问题的求解决策影响。
  子问题重叠性质。子问题重叠性质是指在用递归算法自顶向下对问题进行求解时，每次产生的子问题并不总是新问题，有些子问题会被重复计算多次。动态规划算法正是利用了这种子问题的重叠性质，对每一个子问题只计算一次，然后将其计算结果保存在一个表格中，当再次需要计算已经计算过的子问题时，只是在表格中简单地查看一下结果，从而获得较高的效率。
- 
- 
- 
  */
+
 
 //MARK:-  贪心算法
 /*
@@ -38,6 +34,16 @@ import UIKit
  对每一子问题求解，得到子问题的局部最优解。
  把子问题的解局部最优解合成原来解问题的一个解。
  */
+
+
+//MARK:-  红黑树（6k字总结）
+/*
+ [每天学点数据结构 —— 红黑树（6k字总结](https://juejin.im/post/5dde545bf265da06074f13cc)
+ 
+   
+ */
+
+
 
 
 class listNode {
@@ -101,8 +107,8 @@ recursionSubView(view)
 /*
  O(n²) 时间
  O(1)  空间
- 最好情况：若初始序列已经排好序，则只需要进行 n-1 次比较，而不需要发生交换。
- 最坏情况：需要执行 n-1 次冒泡，并且每次都需要进行 n-i-1 次交换。
+ 最好情况：若初始序列已经排好序，则只需要进行 i-1 次比较，而不需要发生交换。
+ 最坏情况：需要执行 i-1 次冒泡，并且每次都需要进行 i-j-1 次交换。
  可以看到，「冒泡排序」在序列基本有序的情况下，效率会好一些。平均来看，「冒泡排序」的时间复杂度是 O(n^2) 。
  冒泡排序是一种稳定的排序
  */
@@ -1110,14 +1116,14 @@ func greedyMaxProfit(_ prices: [Int]) -> Int{
         return 0
     }
     
-    var sell = 0
+    var profit = 0
     
-    for idx in 1..<prices.count{
+    for idx in 1...prices.count - 1{
         if prices[idx] > prices[idx - 1] {
-            sell += prices[idx] - prices[idx - 1]
+            profit += prices[idx] - prices[idx - 1]
         }
     }
-    return sell
+    return profit
 }
 
 
@@ -1266,6 +1272,39 @@ func detectCycle(_ head: LinkNode?) -> LinkNode?{
     
     return fast!
 }
+/*
+ 手撕快排 https://www.jianshu.com/p/5a81ba81886d
+ */
+//需要额外空间 比较好理解
+func quickSort(data:[Int])->[Int]{
+     if data.count<=1 {
+         return data
+     }
+     
+     var left:[Int] = []
+     var right:[Int] = []
+     let pivot:Int = data[data.count-1]
+    // 注意：条件中要 排除基准值
+    for index in 0..<data.count-1 {
+         if data[index] < pivot {
+             left.append(data[index])
+         }else{
+             right.append(data[index])
+         }
+     }
+     
+     var result = quickSort(data: left)
+     result.append(pivot) //添加准基
+     let rightResult = quickSort(data: right)
+     result.append(contentsOf: rightResult)//拼接rightArray
+     return result
+ }
+let data:[Int] = [1,2,3,2,4,8,9,10,19,0]
+let result = quickSort(data: data)
+print("FlyElephant方案1:-\(result)")
+
+
+
 
 // 厉害了我的杯
 /*
@@ -1351,6 +1390,33 @@ class MyQueue<T> {
   这个和爬楼梯是一样的
  */
 
+func fibbon(_ n: Int) -> Int{
+    if n == 1 || n == 2{
+        return n
+    }
+    
+    return fibbon(n - 1) + fibbon(n - 2)
+}
+// 递归太耗时
+fibbon(25)
+
+func fibbonDP(_ n: Int) -> Int{
+    if n == 1 || n == 2{
+        return n
+    }
+    
+    var dp = [1,1,2,3]
+    
+    for i in 4...n {
+        dp.append(dp[i - 1] + dp[i - 2])
+    }
+    print(dp)
+    return dp.last!
+}
+
+fibbonDP(25)
+
+
 //MARK:-list17:
 
 //offer11：旋转数组的最小数字 / 153. 寻找旋转排序数组中的最小值
@@ -1380,6 +1446,7 @@ class MyQueue<T> {
  但情形(1)中low = mid + 1就不会错误
  */
 
+// 以p2为 动态基准，以mid 为中间准基。以p1为结果=
 func findMin(_ array: [Int]) -> Int{
     
     if array.count == 0 {
@@ -1744,8 +1811,20 @@ func reverseStr(_ s: String) -> String{
     }
     return reverStr
 }
+func invertWord(_ s: String?) -> String? {
+    guard let str = s else {
+        return nil
+    }
+    let stringArr = str.components(separatedBy: " ")
+    var newStringArr: [String] = []
+    for i in 0..<(stringArr.count) {
+        newStringArr.append(stringArr[(stringArr.count) - i - 1])
+    }
+    let string = newStringArr.joined(separator: " ")
+    return string
+}
 
-reverseStr("I am a student.")
+invertWord("I am a student.")
 
 
 func ReverseSentence(_ sentence: String) -> String {

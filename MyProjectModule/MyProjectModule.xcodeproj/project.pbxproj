@@ -135,7 +135,6 @@
 		795FF3E522E5AE0700CCC8B9 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3E422E5AE0700CCC8B9 /* FirstView.swift */; };
 		795FF3E722E5AE1500CCC8B9 /* SecendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3E622E5AE1500CCC8B9 /* SecendView.swift */; };
 		795FF3E922E5AE2300CCC8B9 /* AbstractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3E822E5AE2300CCC8B9 /* AbstractView.swift */; };
-		795FF3F622E6DBD100CCC8B9 /* SwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3F522E6DBD100CCC8B9 /* SwiftDemosViewController.swift */; };
 		7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */; };
 		797EC360236C10F900E21E44 /* SDOPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC35F236C10F900E21E44 /* SDOPickerView.swift */; };
 		797EC362236C141100E21E44 /* SDTimeAlertPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */; };
@@ -144,6 +143,8 @@
 		7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C86D228D692A001A6BFA /* DownListViewController.m */; };
 		7993C871228D6A4E001A6BFA /* DownLoadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C870228D6A4E001A6BFA /* DownLoadCell.m */; };
 		7997BE69224090A50054F4D0 /* AbstractAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997BE68224090A50054F4D0 /* AbstractAlertView.m */; };
+		799E56C0239684D1004886E9 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E56BF239684D1004886E9 /* Command.swift */; };
+		799E56C2239684F1004886E9 /* SwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E56C1239684F1004886E9 /* SwiftDemosViewController.swift */; };
 		79A0ECA123681B79004C10B0 /* VTBEncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */; };
 		79A0ECA52368262F004C10B0 /* XXH264EncodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA42368262F004C10B0 /* XXH264EncodeTool.m */; };
 		79A0ECA82368263E004C10B0 /* XXH264DecodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA72368263E004C10B0 /* XXH264DecodeTool.m */; };
@@ -470,7 +471,6 @@
 		795FF3E422E5AE0700CCC8B9 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		795FF3E622E5AE1500CCC8B9 /* SecendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecendView.swift; sourceTree = "<group>"; };
 		795FF3E822E5AE2300CCC8B9 /* AbstractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractView.swift; sourceTree = "<group>"; };
-		795FF3F522E6DBD100CCC8B9 /* SwiftDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemosViewController.swift; sourceTree = "<group>"; };
 		7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Radius.swift"; sourceTree = "<group>"; };
 		797EC35F236C10F900E21E44 /* SDOPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDOPickerView.swift; sourceTree = "<group>"; };
 		797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimeAlertPickerView.swift; sourceTree = "<group>"; };
@@ -484,6 +484,8 @@
 		7993C870228D6A4E001A6BFA /* DownLoadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownLoadCell.m; sourceTree = "<group>"; };
 		7997BE67224090A50054F4D0 /* AbstractAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractAlertView.h; sourceTree = "<group>"; };
 		7997BE68224090A50054F4D0 /* AbstractAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractAlertView.m; sourceTree = "<group>"; };
+		799E56BF239684D1004886E9 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		799E56C1239684F1004886E9 /* SwiftDemosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDemosViewController.swift; sourceTree = "<group>"; };
 		79A0EC9F23681B79004C10B0 /* VTBEncodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBEncodeViewController.h; sourceTree = "<group>"; };
 		79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTBEncodeViewController.m; sourceTree = "<group>"; };
 		79A0ECA32368262F004C10B0 /* XXH264EncodeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXH264EncodeTool.h; sourceTree = "<group>"; };
@@ -924,7 +926,6 @@
 		33888FF520F0C25400E4A119 /* DesignMode */ = {
 			isa = PBXGroup;
 			children = (
-				79794CCA22520E2200784BFF /* Swift */,
 				794BE896231D368000113B97 /* Design-Pattern-in-Swift */,
 				794BE895231D366700113B97 /* 生产者消费者 */,
 				794B100E21E849EE00B91405 /* 类族 */,
@@ -1518,6 +1519,9 @@
 		794BE896231D368000113B97 /* Design-Pattern-in-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				799E56C1239684F1004886E9 /* SwiftDemosViewController.swift */,
+				799E56BE239684D1004886E9 /* Command */,
+				795FF3E322E5AD4900CCC8B9 /* 面向协议 */,
 				79F87F9F235578C400D01484 /* Composite Pattern */,
 				794BE897231D368000113B97 /* Chain Of Responsibility */,
 				794BE899231D368000113B97 /* StrategyDesign */,
@@ -1571,15 +1575,6 @@
 			path = "面向协议";
 			sourceTree = "<group>";
 		};
-		79794CCA22520E2200784BFF /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				795FF3F522E6DBD100CCC8B9 /* SwiftDemosViewController.swift */,
-				795FF3E322E5AD4900CCC8B9 /* 面向协议 */,
-			);
-			path = Swift;
-			sourceTree = "<group>";
-		};
 		797EC357236BCCEF00E21E44 /* UIWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -1607,6 +1602,14 @@
 				7993C869228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m */,
 			);
 			path = DownHelper;
+			sourceTree = "<group>";
+		};
+		799E56BE239684D1004886E9 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				799E56BF239684D1004886E9 /* Command.swift */,
+			);
+			path = Command;
 			sourceTree = "<group>";
 		};
 		799F2AA523855916002F5ADE /* SegmentAndSuspension */ = {
@@ -2098,7 +2101,6 @@
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
 				794CF999225B65AB00A90E3F /* ProtoclForCMutilellViewController.m in Sources */,
 				79A1A5162269AD0800CEA92A /* CheckConditionItem.m in Sources */,
-				795FF3F622E6DBD100CCC8B9 /* SwiftDemosViewController.swift in Sources */,
 				33759E77212FAA7200D801C1 /* NSObject+RuntimeHelper.m in Sources */,
 				339B534920F4AB2A003444CB /* ZTKDownHelperManager.m in Sources */,
 				79E96686237EBD8E00B49697 /* BlockModel.swift in Sources */,
@@ -2118,6 +2120,7 @@
 				79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */,
 				79EEEAB321957A5A00848B59 /* ResponderPlayerView.m in Sources */,
 				794BE89E231D368000113B97 /* StrategyMethod.swift in Sources */,
+				799E56C2239684F1004886E9 /* SwiftDemosViewController.swift in Sources */,
 				33C2DF3721DCC5D400F96F32 /* PointTreeTypeOne.m in Sources */,
 				33C2DF3621DCC5D400F96F32 /* CompositePointTreeModel.m in Sources */,
 				79EEEA8B218BF30E00848B59 /* ResponOfChainManager.m in Sources */,
@@ -2201,6 +2204,7 @@
 				333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */,
 				33759E6E212F9FD500D801C1 /* UITableViewCell+AnimationType.m in Sources */,
 				33FAE4E720E2445500BE7175 /* WaterfallLayout.m in Sources */,
+				799E56C0239684D1004886E9 /* Command.swift in Sources */,
 				339B534D20F4AE74003444CB /* DownLoadViewController.m in Sources */,
 				33CCB0ED20FDF030002C4FF4 /* HTMiddleControlView.m in Sources */,
 				794BE89D231D368000113B97 /* Chain_of_responsibility.swift in Sources */,

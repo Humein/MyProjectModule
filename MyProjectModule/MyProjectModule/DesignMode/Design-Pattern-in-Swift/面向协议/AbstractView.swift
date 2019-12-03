@@ -7,15 +7,13 @@
 //
 
 import UIKit
-
+/// AbstractView Protocol
 protocol AbstractView {
-//    func eat()
+    func drink()
     var name: String { get }
-
-
 }
 
-//  添加实现
+//  添加协议实现
 extension AbstractView {
     
     func eat() {
