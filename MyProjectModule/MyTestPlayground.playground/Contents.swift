@@ -595,21 +595,35 @@ let node1 = listNode(value: 1, next: node2)
 mergeTwoLists(node1,node2)
 
 //14. 最长公共前缀
-func longestCommonPrefix(_ strs :[String]) -> String {
-    if strs.count == 0 {
+/*
+ 取出第一个字符串，使用后面的字符串判断第一个字符串是否是他们的前缀，不是则将第一个字符串长度减一，继续判断
+ */
+func longestCommonPrefix(_ strs: [String]) -> String {
+    let count = strs.count
+    
+    if count == 0 {
         return ""
     }
-    let prefix = strs[0]
-    for i in 0..<strs.count {
-        while strs[i].hasPrefix(prefix) == false {
-//            prefix = prefix.substring(to: prefix.index(before: prefix.endIndex))
-            if prefix.isEmpty {
+    if count == 1 {
+        return strs.first!
+    }
+    
+    var result = strs.first!
+    
+    for i in 1..<count {
+        while !strs[i].hasPrefix(result) {
+            result = String(result.prefix(result.count - 1))
+            print(result)
+            if result.count == 0 {
                 return ""
             }
         }
     }
-    return prefix
+    return result
 }
+longestCommonPrefix(["flower","flow","flight"])
+var results = "flower"
+results = String(results.prefix(results.count - 1))
 
 //MARK:- list7:
 //226. 翻转二叉树
@@ -868,6 +882,12 @@ func lengthOfLongestSubstringWD(_ s: String) -> Int {
 }
 lengthOfLongestSubstringWD("bbbbacde")
 
+//46. 全排列
+/*
+ 回溯算法关键在于:不合适就退回上一步
+ 然后通过约束条件, 减少时间复杂度.
+ */
+
 
 //MARK:- list10:
 
@@ -1013,13 +1033,16 @@ func dyclimbStairs(_ n: Int) -> Int {
     
     //遍历 动态转移方程 dp[n] = dp[n-1] + dp[n-2]
     // 3 ... n 左开右开 3 到 n
+    /**
+        注意 4 ... n 会报错，原因是 当 n = 3 时，条件会是  4 ... 3， 所以最小子结果，就只能是最小的，多一个都不行
+     */
     for i in 3 ... n {
         print(i)
         //状态转移方程
         dp.append(dp[i-1] + dp[i-2])
     }
     print(dp)
-    return dp[n]
+    return dp[n-1]
 }
 
 dyclimbStairs(3)
@@ -1461,7 +1484,7 @@ func findMin(_ array: [Int]) -> Int{
         }else if array[mid] < array[p2]{
             p2 = mid
         }else if array[mid] == array[p2]{
-            p2 = p2 - 1
+            p2 = p2 - 1 //等于的话 p2要不断趋于减少
         }
     }
     
@@ -1563,6 +1586,7 @@ func deleteNode(_ head: inout listNode?, _ toBeDeleted: listNode?){
 //83. 删除排序链表中的重复元素
 func deleteDupNodel(_ head: listNode?) -> listNode?{
     var curHead = head
+    //边界循环
     while curHead != nil && curHead!.next != nil {
         if curHead!.next?.val == curHead!.val {
             curHead!.next = curHead!.next!.next
@@ -1810,37 +1834,6 @@ func reverseStr(_ s: String) -> String{
         stack.removeLast()
     }
     return reverStr
-}
-func invertWord(_ s: String?) -> String? {
-    guard let str = s else {
-        return nil
-    }
-    let stringArr = str.components(separatedBy: " ")
-    var newStringArr: [String] = []
-    for i in 0..<(stringArr.count) {
-        newStringArr.append(stringArr[(stringArr.count) - i - 1])
-    }
-    let string = newStringArr.joined(separator: " ")
-    return string
-}
-
-invertWord("I am a student.")
-
-
-func ReverseSentence(_ sentence: String) -> String {
-    var chars:[Character] = Array(sentence)
-    chars.reverse()
-    let words = chars.split(separator: " ")
-    guard words.count > 0 else {
-        return String(chars)
-    }
-    var reversed = words.reduce("") {
-        $0 + $1.reversed() + " "
-    }
-    if reversed.count > 1 {
-        reversed.removeLast()
-    }
-    return reversed
 }
 
 // offer65：不用加减乘除做加法

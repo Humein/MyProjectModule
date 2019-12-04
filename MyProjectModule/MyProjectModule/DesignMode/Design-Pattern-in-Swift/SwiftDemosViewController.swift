@@ -13,15 +13,17 @@ class SwiftDemosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //MARK:  面向协议
+        //MARK:-  面向协议
         
         let f = FirstView()
         let s = SecendView()
         f.eat()
         s.eat()
         
+        //MARK-  面向协议编程
+       
         
-        //MARK:  strategy Usage
+        //MARK:-  strategy Usage
         let rachel = TestSubject(pupilDiameter: 30.2,
                                  blushResponse: 0.3,
                                  isOrganic: false)
@@ -36,16 +38,6 @@ class SwiftDemosViewController: UIViewController {
         gaff.videoPlay()
 
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

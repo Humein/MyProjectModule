@@ -8,9 +8,6 @@
       location = "group:MyProjectModule/DesignMode/Design-Pattern-in-Swift/StrategyDesign/../../../../leetCode.hpp">
    </FileRef>
    <FileRef
-      location = "group:MyTestPlayground.playground">
-   </FileRef>
-   <FileRef
       location = "group:MyProjectModule/Swift/Design-Pattern-in-Swift/StrategyDesign/../../../../MyPlayground.playground">
    </FileRef>
    <FileRef

@@ -145,6 +145,7 @@
 		7997BE69224090A50054F4D0 /* AbstractAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997BE68224090A50054F4D0 /* AbstractAlertView.m */; };
 		799E56C0239684D1004886E9 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E56BF239684D1004886E9 /* Command.swift */; };
 		799E56C2239684F1004886E9 /* SwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E56C1239684F1004886E9 /* SwiftDemosViewController.swift */; };
+		799E56C5239685E7004886E9 /* ShakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E56C4239685E7004886E9 /* ShakeView.swift */; };
 		79A0ECA123681B79004C10B0 /* VTBEncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */; };
 		79A0ECA52368262F004C10B0 /* XXH264EncodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA42368262F004C10B0 /* XXH264EncodeTool.m */; };
 		79A0ECA82368263E004C10B0 /* XXH264DecodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA72368263E004C10B0 /* XXH264DecodeTool.m */; };
@@ -486,6 +487,8 @@
 		7997BE68224090A50054F4D0 /* AbstractAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractAlertView.m; sourceTree = "<group>"; };
 		799E56BF239684D1004886E9 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		799E56C1239684F1004886E9 /* SwiftDemosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDemosViewController.swift; sourceTree = "<group>"; };
+		799E56C4239685E7004886E9 /* ShakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeView.swift; sourceTree = "<group>"; };
+		799E56C623974CF8004886E9 /* MyTestPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyTestPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		79A0EC9F23681B79004C10B0 /* VTBEncodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBEncodeViewController.h; sourceTree = "<group>"; };
 		79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTBEncodeViewController.m; sourceTree = "<group>"; };
 		79A0ECA32368262F004C10B0 /* XXH264EncodeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXH264EncodeTool.h; sourceTree = "<group>"; };
@@ -622,6 +625,7 @@
 		333D104920CE74A8004D9241 = {
 			isa = PBXGroup;
 			children = (
+				799E56C623974CF8004886E9 /* MyTestPlayground.playground */,
 				79E9678E2382A08600B49697 /* SwiftHigherOrderfunction.playground */,
 				333D105420CE74A8004D9241 /* MyProjectModule */,
 				333D106D20CE74AB004D9241 /* MyProjectModuleTests */,
@@ -1520,6 +1524,7 @@
 			isa = PBXGroup;
 			children = (
 				799E56C1239684F1004886E9 /* SwiftDemosViewController.swift */,
+				799E56C32396856D004886E9 /* 面向协议编程 */,
 				799E56BE239684D1004886E9 /* Command */,
 				795FF3E322E5AD4900CCC8B9 /* 面向协议 */,
 				79F87F9F235578C400D01484 /* Composite Pattern */,
@@ -1610,6 +1615,14 @@
 				799E56BF239684D1004886E9 /* Command.swift */,
 			);
 			path = Command;
+			sourceTree = "<group>";
+		};
+		799E56C32396856D004886E9 /* 面向协议编程 */ = {
+			isa = PBXGroup;
+			children = (
+				799E56C4239685E7004886E9 /* ShakeView.swift */,
+			);
+			path = "面向协议编程";
 			sourceTree = "<group>";
 		};
 		799F2AA523855916002F5ADE /* SegmentAndSuspension */ = {
@@ -2133,6 +2146,7 @@
 				339B536E20F4B486003444CB /* AbstractPlayerProtocol.h in Sources */,
 				79EEEABD2195975B00848B59 /* AbstractPlayHelper.m in Sources */,
 				339B534A20F4AB2A003444CB /* ZTKLLDownHelper.m in Sources */,
+				799E56C5239685E7004886E9 /* ShakeView.swift in Sources */,
 				33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */,
 				79A1A5182269AD0800CEA92A /* SmoothBookmarkView.m in Sources */,
 				7993C86A228D68E6001A6BFA /* URLSessionDownManager.m in Sources */,
