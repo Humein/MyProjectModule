@@ -10,9 +10,7 @@
 import UIKit
 
 class FoodImageView: UIImageView {
-    override func ex_shake() {
-        
-    }
+
     func shake() {
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.05
@@ -25,9 +23,7 @@ class FoodImageView: UIImageView {
 }
 
 class ActionButton: UIButton {
-    override func ex_shake() {
-        
-    }
+    
     func shake() {
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.05
@@ -49,6 +45,7 @@ class ActionButton: UIButton {
  
 个人理解：
        使用协议代替继承 可以更好的实现功能(组建)的 插拔性。 避免一个类其实只要一个功能情况下，也要继承着多个功能模块，同时基类中功能会慢慢越来越臃肿。 而且还可以将功能抽象的添加到不同类中(View和VC 继承同一种协议)
+       基类的作用是统一管理，统一风格，便于编码，有更多的额外的附加功能的话，建议使用Protocol 或 Category，这样移植性强，便于管理与扩展，不至于牵一发而动全身。
  */
 
 //MARK: - 1: 使用继承
@@ -61,5 +58,17 @@ extension UIView {
         animation.fromValue = NSValue(cgPoint: CGPoint.init(x: self.center.x - 4.0, y: self.center.y))
         animation.toValue = NSValue(cgPoint: CGPoint.init(x: self.center.x + 4.0, y: self.center.y))
         layer.add(animation, forKey: "position")
+    }
+}
+
+
+//MARK: - 2: 使用协议
+protocol ShakeDelegate { }
+
+//
+extension ShakeDelegate where Self: UIView {
+
+    func shake() {
+        // implementation code
     }
 }

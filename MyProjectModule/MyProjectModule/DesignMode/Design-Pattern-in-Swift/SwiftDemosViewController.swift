@@ -16,12 +16,17 @@ class SwiftDemosViewController: UIViewController {
         //MARK:-  面向协议
         
         let f = FirstView()
-        let s = SecendView()
-        f.eat()
-        s.eat()
+        f.eat("default")
+        f.drink()
         
         //MARK-  面向协议编程
-       
+        let AB = ActionButton(), FI = FoodImageView()
+        AB.shake()
+        AB.ex_shake()
+        FI.shake()
+        FI.ex_shake()
+        
+        
         
         //MARK:-  strategy Usage
         let rachel = TestSubject(pupilDiameter: 30.2,

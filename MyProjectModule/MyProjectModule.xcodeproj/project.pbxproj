@@ -133,11 +133,11 @@
 		794BE8A2231D36E900113B97 /* Produce-Consume.m in Sources */ = {isa = PBXBuildFile; fileRef = 794BE8A1231D36E900113B97 /* Produce-Consume.m */; };
 		794CF999225B65AB00A90E3F /* ProtoclForCMutilellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794CF997225B65AB00A90E3F /* ProtoclForCMutilellViewController.m */; };
 		795FF3E522E5AE0700CCC8B9 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3E422E5AE0700CCC8B9 /* FirstView.swift */; };
-		795FF3E722E5AE1500CCC8B9 /* SecendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3E622E5AE1500CCC8B9 /* SecendView.swift */; };
-		795FF3E922E5AE2300CCC8B9 /* AbstractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3E822E5AE2300CCC8B9 /* AbstractView.swift */; };
+		795FF3E922E5AE2300CCC8B9 /* AbstractViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF3E822E5AE2300CCC8B9 /* AbstractViewProtocol.swift */; };
 		7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */; };
 		797EC360236C10F900E21E44 /* SDOPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC35F236C10F900E21E44 /* SDOPickerView.swift */; };
 		797EC362236C141100E21E44 /* SDTimeAlertPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */; };
+		7981D99D239DE0DF00AA1A42 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7981D99C239DE0DF00AA1A42 /* SecondView.swift */; };
 		7993C86A228D68E6001A6BFA /* URLSessionDownManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C868228D68E6001A6BFA /* URLSessionDownManager.m */; };
 		7993C86B228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C869228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m */; };
 		7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C86D228D692A001A6BFA /* DownListViewController.m */; };
@@ -470,11 +470,11 @@
 		794CF998225B65AB00A90E3F /* ProtoclForCMutilellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtoclForCMutilellViewController.h; sourceTree = "<group>"; };
 		794CF99B225B661C00A90E3F /* MultiCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiCellProtocol.h; sourceTree = "<group>"; };
 		795FF3E422E5AE0700CCC8B9 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
-		795FF3E622E5AE1500CCC8B9 /* SecendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecendView.swift; sourceTree = "<group>"; };
-		795FF3E822E5AE2300CCC8B9 /* AbstractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractView.swift; sourceTree = "<group>"; };
+		795FF3E822E5AE2300CCC8B9 /* AbstractViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractViewProtocol.swift; sourceTree = "<group>"; };
 		7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Radius.swift"; sourceTree = "<group>"; };
 		797EC35F236C10F900E21E44 /* SDOPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDOPickerView.swift; sourceTree = "<group>"; };
 		797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimeAlertPickerView.swift; sourceTree = "<group>"; };
+		7981D99C239DE0DF00AA1A42 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		7993C866228D68E6001A6BFA /* AppDelegate+DownManagerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DownManagerHelper.h"; sourceTree = "<group>"; };
 		7993C867228D68E6001A6BFA /* URLSessionDownManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSessionDownManager.h; sourceTree = "<group>"; };
 		7993C868228D68E6001A6BFA /* URLSessionDownManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSessionDownManager.m; sourceTree = "<group>"; };
@@ -1574,8 +1574,8 @@
 			isa = PBXGroup;
 			children = (
 				795FF3E422E5AE0700CCC8B9 /* FirstView.swift */,
-				795FF3E622E5AE1500CCC8B9 /* SecendView.swift */,
-				795FF3E822E5AE2300CCC8B9 /* AbstractView.swift */,
+				7981D99C239DE0DF00AA1A42 /* SecondView.swift */,
+				795FF3E822E5AE2300CCC8B9 /* AbstractViewProtocol.swift */,
 			);
 			path = "面向协议";
 			sourceTree = "<group>";
@@ -2169,7 +2169,6 @@
 				79DF39392200499400977BB4 /* LRULinkedMap.m in Sources */,
 				79A1A51D2269AD0800CEA92A /* SmoothBookmarkViewController.m in Sources */,
 				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
-				795FF3E722E5AE1500CCC8B9 /* SecendView.swift in Sources */,
 				797EC362236C141100E21E44 /* SDTimeAlertPickerView.swift in Sources */,
 				7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */,
 				794BE89F231D368000113B97 /* leetCode.cpp in Sources */,
@@ -2203,13 +2202,14 @@
 				33E6CE0721006D2000422FC7 /* UITableViewCell+AnimationType.m in Sources */,
 				792A731121EF30880098B94C /* ClassClusterModel.m in Sources */,
 				33FAE4E520E2445500BE7175 /* HeaderSuspendedLayout.m in Sources */,
-				795FF3E922E5AE2300CCC8B9 /* AbstractView.swift in Sources */,
+				795FF3E922E5AE2300CCC8B9 /* AbstractViewProtocol.swift in Sources */,
 				7901F9A221A678CE005BE8A6 /* NSTimerObserver.m in Sources */,
 				338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */,
 				33782829210853B800373A20 /* UIImage+Shadow.m in Sources */,
 				339B536020F4B28B003444CB /* BJPlayer.m in Sources */,
 				794B100621DEF98300B91405 /* PointsTreeTableViewCell.m in Sources */,
 				338FEBFF20E0F25A0025631B /* UIControlFactory.m in Sources */,
+				7981D99D239DE0DF00AA1A42 /* SecondView.swift in Sources */,
 				794A6DB6238686B8008FB8D4 /* SegementContentView.m in Sources */,
 				33C9713F2124108D00EAAD5E /* PopTableView.m in Sources */,
 				339B535520F4B078003444CB /* PlayerViewController.m in Sources */,

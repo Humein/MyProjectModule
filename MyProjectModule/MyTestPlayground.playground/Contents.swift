@@ -821,10 +821,10 @@ func maxSubArrayDP(_ nums: [Int]) -> Int {
     // 迭代边界
     for num in nums {
         if sum > 0 {
-            //否则累加
+            //累计和不小于0 继续累加
             sum += num
         }else{
-            //如果小于0，则抛弃之前的子序列，从新的开始
+            //如果累计和小于0，则抛弃之前的累计和(子序列)，从新的开始
             sum = num
         }
         
@@ -888,6 +888,58 @@ lengthOfLongestSubstringWD("bbbbacde")
  然后通过约束条件, 减少时间复杂度.
  */
 
+
+//62. 不同路径
+/*
+递推方程
+  dp[i] [j] = dp[i-1] [j] + dp[i] [j-1]
+
+我们的初始值是计算出所有的(最小子)
+  dp[0] [0….n-1] 和所有的 dp[0….m-1] [0]
+这个还是非常容易计算的，相当于计算机图中的最上面一行和左边一列。因此初始值如下：
+  dp[0] [0….n-1] = 1; // 相当于最上面一行，机器人只能一直往左走
+  dp[0…m-1] [0] = 1; // 相当于最左面一列，机器人只能一直往下走
+*/
+func uniquePaths(_ m: Int, _ n: Int) -> Int {
+    ///边界
+    if m <= 0 || n <= 0 {
+        return 0
+    }
+    
+    /// 最小子 二维数组
+    var dp = [[Int]]()
+    
+    //创建 DP 二维数组  垃圾swift 二维数组操作
+    for _ in 0..<m{
+        var eachRow:[Int] = []
+        for _ in 0..<n{
+        eachRow.append(n);
+        }
+        dp.append(eachRow);
+    }
+
+    
+        
+    //一直往下走
+    for i in 0..<m {
+        dp[i][0] = 1
+    }
+    //一直往左走
+    for i in 0..<n {
+        dp[0][i] = 1
+    }
+    
+    /// 递推
+    for i in 1..<m {
+        for j in 1..<n {
+            dp[i][j] = dp[i-1][j] + dp[i][j-1]
+        }
+    }
+
+    return dp[m-1][n-1]
+    
+}
+uniquePaths(3, 2)
 
 //MARK:- list10:
 
@@ -1768,7 +1820,6 @@ func maxDepth(_ root: TreeNode?) -> Int {
         let rightTreeDepth = maxDepth(root?.right)
         //print( "\(leftTreeDepth)" + ":" + "\(rightTreeDepth)")
         return leftTreeDepth > rightTreeDepth ? leftTreeDepth + 1 : rightTreeDepth + 1
-        
     }
 }
 
