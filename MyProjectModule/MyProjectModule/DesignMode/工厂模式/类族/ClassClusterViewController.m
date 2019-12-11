@@ -72,6 +72,9 @@
     if (!cell) {
         // 类族模式
         cell = [ClassClusterBaseTableViewCell cellWithType:model.type];
+        // 协议
+//        UITableViewCell<MultiCellConfigPropotol> * cell= [tableView dequeueReusableCellWithIdentifier:cellID];
+
     }
     [cell setModel:model];
     return cell;
@@ -79,8 +82,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    // 协议模式
-    
+    // 跳转到协议模式实现
     ProtoclForCMutilellViewController *VC = [ProtoclForCMutilellViewController new];
     [self.navigationController pushViewController:VC animated:YES];
 }

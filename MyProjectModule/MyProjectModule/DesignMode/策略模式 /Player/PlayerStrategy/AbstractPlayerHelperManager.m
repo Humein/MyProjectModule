@@ -23,18 +23,18 @@
 
 // 初始化播放器
 - (void)exchangeItem:(EPlayerType)type{
-//    switch (type) {
-//        case EPlayerType_ZSPlayer:
-//        {
-//            _player = [[ZSPlaterHelper alloc] init];
-//            break;
-//        }
-//        case EPlayerType_BJPlayer:
-//        {
-//            _player = [[BJPlayerHelper alloc] init];
-//            break;
-//        }
-//    }
+    switch (type) {
+        case EPlayerType_ZSPlayer:
+        {
+            _player = [[ZSPlaterHelper alloc] init];
+            break;
+        }
+        case EPlayerType_BJPlayer:
+        {
+            _player = [[BJPlayerHelper alloc] init];
+            break;
+        }
+    }
 }
 //开启视频
 - (NSString *)abs_play{

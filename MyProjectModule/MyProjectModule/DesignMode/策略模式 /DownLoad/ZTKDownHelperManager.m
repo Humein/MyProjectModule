@@ -13,9 +13,6 @@
 #import "ZTKLLDownHelper.h"
 @interface ZTKDownHelperManager()
 @property (nonatomic,strong) id <ZTKDownHelperProtocol> downHelper;
-
-@property (nonatomic,strong) id <ZTKDownHelperProtocol> anyThing ;
-
 @end
 
 @implementation ZTKDownHelperManager
@@ -38,12 +35,9 @@
         ZTKDownItem *tmpItem= [downItem parseToDownItem];
         
         if (tmpItem.itemType == BjyDownItemType) {
-            
-            _anyThing = [[ZTKBJDownHelper alloc] initWithDownItem:tmpItem];
-            
+            _downHelper = [[ZTKBJDownHelper alloc] initWithDownItem:tmpItem];
         }else{
-            
-            _anyThing = [[ZTKLLDownHelper alloc] initWithDownItem:tmpItem];
+            _downHelper = [[ZTKLLDownHelper alloc] initWithDownItem:tmpItem];
         }
     }
     return self;

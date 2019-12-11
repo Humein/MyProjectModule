@@ -109,16 +109,18 @@
 		79040D8B2236462A0085335E /* FlutterSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79040D8A2236462A0085335E /* FlutterSubViewController.m */; };
 		79040DA12238AA2D0085335E /* AspectTrackMananer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79040DA02238AA2D0085335E /* AspectTrackMananer.m */; };
 		79040DA72238D00D0085335E /* EventList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79040DA62238D00C0085335E /* EventList.plist */; };
+		7908824E23A0C71200FA3BE5 /* ClassClusterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908823F23A0C71100FA3BE5 /* ClassClusterModel.m */; };
+		7908824F23A0C71200FA3BE5 /* ClassClusterTableViewCellB.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908824223A0C71200FA3BE5 /* ClassClusterTableViewCellB.m */; };
+		7908825023A0C71200FA3BE5 /* ClassClusterTableViewCellC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908824623A0C71200FA3BE5 /* ClassClusterTableViewCellC.m */; };
+		7908825123A0C71200FA3BE5 /* ClassClusterBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908824823A0C71200FA3BE5 /* ClassClusterBaseTableViewCell.m */; };
+		7908825223A0C71200FA3BE5 /* ClassClusterTableViewCellA.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908824B23A0C71200FA3BE5 /* ClassClusterTableViewCellA.m */; };
+		7908825323A0C71200FA3BE5 /* ClassClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908824D23A0C71200FA3BE5 /* ClassClusterViewController.m */; };
+		7908825523A0C74900FA3BE5 /* FactoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908825423A0C74900FA3BE5 /* FactoryObject.swift */; };
 		792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792591EB2285517100E7F734 /* LearnSwiftDemosViewController.swift */; };
 		7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */; };
 		792A730B21EF2FBF0098B94C /* Tree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 792A730921EF2FBE0098B94C /* Tree.plist */; };
 		792A730C21EF2FBF0098B94C /* HomeDatas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 792A730A21EF2FBE0098B94C /* HomeDatas.plist */; };
 		792A730E21EF2FD50098B94C /* class_cluster_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 792A730D21EF2FD50098B94C /* class_cluster_data.json */; };
-		792A731121EF30880098B94C /* ClassClusterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A731021EF30880098B94C /* ClassClusterModel.m */; };
-		792A731921EF324F0098B94C /* ClassClusterBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A731821EF324F0098B94C /* ClassClusterBaseTableViewCell.m */; };
-		792A731C21EF32730098B94C /* ClassClusterTableViewCellA.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A731B21EF32730098B94C /* ClassClusterTableViewCellA.m */; };
-		792A731F21EF32800098B94C /* ClassClusterTableViewCellB.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A731E21EF32800098B94C /* ClassClusterTableViewCellB.m */; };
-		792A732221EF328D0098B94C /* ClassClusterTableViewCellC.m in Sources */ = {isa = PBXBuildFile; fileRef = 792A732121EF328D0098B94C /* ClassClusterTableViewCellC.m */; };
 		7931A51B21A7DAA5002A26C0 /* FilterCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7931A51A21A7DAA5002A26C0 /* FilterCollectionViewLayout.m */; };
 		79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79402223219D59A20008A3AD /* SimulationChainFucCode.m */; };
 		794A6DB023862C54008FB8D4 /* MessageThrottle.m in Sources */ = {isa = PBXBuildFile; fileRef = 794A6DAF23862C54008FB8D4 /* MessageThrottle.m */; };
@@ -126,7 +128,6 @@
 		794B100621DEF98300B91405 /* PointsTreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */; };
 		794B100921DF02E300B91405 /* AbstractTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100821DF02E300B91405 /* AbstractTableViewController.m */; };
 		794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */; };
-		794B101121E84A2500B91405 /* ClassClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B101021E84A2500B91405 /* ClassClusterViewController.m */; };
 		794BE89D231D368000113B97 /* Chain_of_responsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BE898231D368000113B97 /* Chain_of_responsibility.swift */; };
 		794BE89E231D368000113B97 /* StrategyMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BE89A231D368000113B97 /* StrategyMethod.swift */; };
 		794BE89F231D368000113B97 /* leetCode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 794BE89B231D368000113B97 /* leetCode.cpp */; };
@@ -427,6 +428,19 @@
 		79040D9F2238AA2D0085335E /* AspectTrackMananer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AspectTrackMananer.h; sourceTree = "<group>"; };
 		79040DA02238AA2D0085335E /* AspectTrackMananer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AspectTrackMananer.m; sourceTree = "<group>"; };
 		79040DA62238D00C0085335E /* EventList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EventList.plist; sourceTree = "<group>"; };
+		7908823B23A0C71100FA3BE5 /* ClassClusterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterViewController.h; sourceTree = "<group>"; };
+		7908823E23A0C71100FA3BE5 /* ClassClusterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterModel.h; sourceTree = "<group>"; };
+		7908823F23A0C71100FA3BE5 /* ClassClusterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterModel.m; sourceTree = "<group>"; };
+		7908824223A0C71200FA3BE5 /* ClassClusterTableViewCellB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterTableViewCellB.m; sourceTree = "<group>"; };
+		7908824323A0C71200FA3BE5 /* ClassClusterTableViewCellB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterTableViewCellB.h; sourceTree = "<group>"; };
+		7908824523A0C71200FA3BE5 /* ClassClusterTableViewCellC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterTableViewCellC.h; sourceTree = "<group>"; };
+		7908824623A0C71200FA3BE5 /* ClassClusterTableViewCellC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterTableViewCellC.m; sourceTree = "<group>"; };
+		7908824823A0C71200FA3BE5 /* ClassClusterBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterBaseTableViewCell.m; sourceTree = "<group>"; };
+		7908824923A0C71200FA3BE5 /* ClassClusterBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterBaseTableViewCell.h; sourceTree = "<group>"; };
+		7908824B23A0C71200FA3BE5 /* ClassClusterTableViewCellA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterTableViewCellA.m; sourceTree = "<group>"; };
+		7908824C23A0C71200FA3BE5 /* ClassClusterTableViewCellA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterTableViewCellA.h; sourceTree = "<group>"; };
+		7908824D23A0C71200FA3BE5 /* ClassClusterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterViewController.m; sourceTree = "<group>"; };
+		7908825423A0C74900FA3BE5 /* FactoryObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryObject.swift; sourceTree = "<group>"; };
 		792591EA2285517000E7F734 /* MyProjectModule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyProjectModule-Bridging-Header.h"; sourceTree = "<group>"; };
 		792591EB2285517100E7F734 /* LearnSwiftDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSwiftDemosViewController.swift; sourceTree = "<group>"; };
 		7929B49B219FE74B004D335E /* RunLoopDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopDemoViewController.h; sourceTree = "<group>"; };
@@ -434,16 +448,6 @@
 		792A730921EF2FBE0098B94C /* Tree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tree.plist; sourceTree = "<group>"; };
 		792A730A21EF2FBE0098B94C /* HomeDatas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomeDatas.plist; sourceTree = "<group>"; };
 		792A730D21EF2FD50098B94C /* class_cluster_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = class_cluster_data.json; sourceTree = "<group>"; };
-		792A730F21EF30880098B94C /* ClassClusterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassClusterModel.h; sourceTree = "<group>"; };
-		792A731021EF30880098B94C /* ClassClusterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassClusterModel.m; sourceTree = "<group>"; };
-		792A731721EF324F0098B94C /* ClassClusterBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassClusterBaseTableViewCell.h; sourceTree = "<group>"; };
-		792A731821EF324F0098B94C /* ClassClusterBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassClusterBaseTableViewCell.m; sourceTree = "<group>"; };
-		792A731A21EF32730098B94C /* ClassClusterTableViewCellA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassClusterTableViewCellA.h; sourceTree = "<group>"; };
-		792A731B21EF32730098B94C /* ClassClusterTableViewCellA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassClusterTableViewCellA.m; sourceTree = "<group>"; };
-		792A731D21EF32800098B94C /* ClassClusterTableViewCellB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassClusterTableViewCellB.h; sourceTree = "<group>"; };
-		792A731E21EF32800098B94C /* ClassClusterTableViewCellB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassClusterTableViewCellB.m; sourceTree = "<group>"; };
-		792A732021EF328D0098B94C /* ClassClusterTableViewCellC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassClusterTableViewCellC.h; sourceTree = "<group>"; };
-		792A732121EF328D0098B94C /* ClassClusterTableViewCellC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassClusterTableViewCellC.m; sourceTree = "<group>"; };
 		7931A51921A7DAA5002A26C0 /* FilterCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterCollectionViewLayout.h; sourceTree = "<group>"; };
 		7931A51A21A7DAA5002A26C0 /* FilterCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterCollectionViewLayout.m; sourceTree = "<group>"; };
 		79402222219D59A20008A3AD /* SimulationChainFucCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulationChainFucCode.h; sourceTree = "<group>"; };
@@ -458,8 +462,6 @@
 		794B100821DF02E300B91405 /* AbstractTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractTableViewController.m; sourceTree = "<group>"; };
 		794B100A21DF2CF700B91405 /* TreeDiffModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeDiffModelViewController.h; sourceTree = "<group>"; };
 		794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreeDiffModelViewController.m; sourceTree = "<group>"; };
-		794B100F21E84A2500B91405 /* ClassClusterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassClusterViewController.h; sourceTree = "<group>"; };
-		794B101021E84A2500B91405 /* ClassClusterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassClusterViewController.m; sourceTree = "<group>"; };
 		794BE898231D368000113B97 /* Chain_of_responsibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chain_of_responsibility.swift; sourceTree = "<group>"; };
 		794BE89A231D368000113B97 /* StrategyMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrategyMethod.swift; sourceTree = "<group>"; };
 		794BE89B231D368000113B97 /* leetCode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = leetCode.cpp; path = ../../../../leetCode.cpp; sourceTree = "<group>"; };
@@ -833,13 +835,6 @@
 			path = "申论批改详情";
 			sourceTree = "<group>";
 		};
-		3378282021084DFC00373A20 /* 抽象类 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "抽象类";
-			sourceTree = "<group>";
-		};
 		3378282E2108770600373A20 /* Thread */ = {
 			isa = PBXGroup;
 			children = (
@@ -931,14 +926,12 @@
 			isa = PBXGroup;
 			children = (
 				794BE896231D368000113B97 /* Design-Pattern-in-Swift */,
+				7908823823A0C71100FA3BE5 /* 工厂模式 */,
 				794BE895231D366700113B97 /* 生产者消费者 */,
-				794B100E21E849EE00B91405 /* 类族 */,
-				3378282021084DFC00373A20 /* 抽象类 */,
 				339B533820F4AA9D003444CB /* 策略模式  */,
 				3378280521081E5D00373A20 /* 装饰者模式 */,
 				33CCB12C20FDFBAE002C4FF4 /* 组合模式 */,
 				33CCB0E420FDDFF3002C4FF4 /* 责任链模式 */,
-				339B533620F4AA9C003444CB /* 工厂模式 */,
 				339B533720F4AA9C003444CB /* 适配器模式 */,
 			);
 			path = DesignMode;
@@ -955,13 +948,6 @@
 				33888FE320F0683C00E4A119 /* UIView+Category.m */,
 			);
 			path = BaseUIKitFactory;
-			sourceTree = "<group>";
-		};
-		339B533620F4AA9C003444CB /* 工厂模式 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "工厂模式";
 			sourceTree = "<group>";
 		};
 		339B533720F4AA9C003444CB /* 适配器模式 */ = {
@@ -1344,6 +1330,98 @@
 			path = AOPTrack;
 			sourceTree = "<group>";
 		};
+		7908823823A0C71100FA3BE5 /* 工厂模式 */ = {
+			isa = PBXGroup;
+			children = (
+				7908823923A0C71100FA3BE5 /* 抽象工厂 */,
+				7908823A23A0C71100FA3BE5 /* 类族 */,
+				7908825423A0C74900FA3BE5 /* FactoryObject.swift */,
+			);
+			path = "工厂模式";
+			sourceTree = "<group>";
+		};
+		7908823923A0C71100FA3BE5 /* 抽象工厂 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "抽象工厂";
+			sourceTree = "<group>";
+		};
+		7908823A23A0C71100FA3BE5 /* 类族 */ = {
+			isa = PBXGroup;
+			children = (
+				7908823C23A0C71100FA3BE5 /* module */,
+				7908823B23A0C71100FA3BE5 /* ClassClusterViewController.h */,
+				7908824D23A0C71200FA3BE5 /* ClassClusterViewController.m */,
+			);
+			path = "类族";
+			sourceTree = "<group>";
+		};
+		7908823C23A0C71100FA3BE5 /* module */ = {
+			isa = PBXGroup;
+			children = (
+				7908823D23A0C71100FA3BE5 /* Model */,
+				7908824023A0C71200FA3BE5 /* View */,
+			);
+			path = module;
+			sourceTree = "<group>";
+		};
+		7908823D23A0C71100FA3BE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7908823E23A0C71100FA3BE5 /* ClassClusterModel.h */,
+				7908823F23A0C71100FA3BE5 /* ClassClusterModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7908824023A0C71200FA3BE5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7908824123A0C71200FA3BE5 /* 子类cellB */,
+				7908824423A0C71200FA3BE5 /* 子类cellC */,
+				7908824723A0C71200FA3BE5 /* 基类cell */,
+				7908824A23A0C71200FA3BE5 /* 子类cellA */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7908824123A0C71200FA3BE5 /* 子类cellB */ = {
+			isa = PBXGroup;
+			children = (
+				7908824223A0C71200FA3BE5 /* ClassClusterTableViewCellB.m */,
+				7908824323A0C71200FA3BE5 /* ClassClusterTableViewCellB.h */,
+			);
+			path = "子类cellB";
+			sourceTree = "<group>";
+		};
+		7908824423A0C71200FA3BE5 /* 子类cellC */ = {
+			isa = PBXGroup;
+			children = (
+				7908824523A0C71200FA3BE5 /* ClassClusterTableViewCellC.h */,
+				7908824623A0C71200FA3BE5 /* ClassClusterTableViewCellC.m */,
+			);
+			path = "子类cellC";
+			sourceTree = "<group>";
+		};
+		7908824723A0C71200FA3BE5 /* 基类cell */ = {
+			isa = PBXGroup;
+			children = (
+				7908824823A0C71200FA3BE5 /* ClassClusterBaseTableViewCell.m */,
+				7908824923A0C71200FA3BE5 /* ClassClusterBaseTableViewCell.h */,
+			);
+			path = "基类cell";
+			sourceTree = "<group>";
+		};
+		7908824A23A0C71200FA3BE5 /* 子类cellA */ = {
+			isa = PBXGroup;
+			children = (
+				7908824B23A0C71200FA3BE5 /* ClassClusterTableViewCellA.m */,
+				7908824C23A0C71200FA3BE5 /* ClassClusterTableViewCellA.h */,
+			);
+			path = "子类cellA";
+			sourceTree = "<group>";
+		};
 		7929B499219FE705004D335E /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
@@ -1370,42 +1448,6 @@
 				792A730A21EF2FBE0098B94C /* HomeDatas.plist */,
 			);
 			path = localFile;
-			sourceTree = "<group>";
-		};
-		792A731221EF31FF0098B94C /* 子类cellC */ = {
-			isa = PBXGroup;
-			children = (
-				792A732021EF328D0098B94C /* ClassClusterTableViewCellC.h */,
-				792A732121EF328D0098B94C /* ClassClusterTableViewCellC.m */,
-			);
-			path = "子类cellC";
-			sourceTree = "<group>";
-		};
-		792A731421EF31FF0098B94C /* 子类cellB */ = {
-			isa = PBXGroup;
-			children = (
-				792A731D21EF32800098B94C /* ClassClusterTableViewCellB.h */,
-				792A731E21EF32800098B94C /* ClassClusterTableViewCellB.m */,
-			);
-			path = "子类cellB";
-			sourceTree = "<group>";
-		};
-		792A731521EF31FF0098B94C /* 基类cell */ = {
-			isa = PBXGroup;
-			children = (
-				792A731721EF324F0098B94C /* ClassClusterBaseTableViewCell.h */,
-				792A731821EF324F0098B94C /* ClassClusterBaseTableViewCell.m */,
-			);
-			path = "基类cell";
-			sourceTree = "<group>";
-		};
-		792A731621EF321F0098B94C /* 子类cellA */ = {
-			isa = PBXGroup;
-			children = (
-				792A731A21EF32730098B94C /* ClassClusterTableViewCellA.h */,
-				792A731B21EF32730098B94C /* ClassClusterTableViewCellA.m */,
-			);
-			path = "子类cellA";
 			sourceTree = "<group>";
 		};
 		792E0CB221DCADD500CE2F2E /* 组合模式TreeView */ = {
@@ -1471,45 +1513,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		794B100E21E849EE00B91405 /* 类族 */ = {
-			isa = PBXGroup;
-			children = (
-				794B101221E84A6900B91405 /* module */,
-				794B100F21E84A2500B91405 /* ClassClusterViewController.h */,
-				794B101021E84A2500B91405 /* ClassClusterViewController.m */,
-			);
-			path = "类族";
-			sourceTree = "<group>";
-		};
-		794B101221E84A6900B91405 /* module */ = {
-			isa = PBXGroup;
-			children = (
-				794B101321E84A6900B91405 /* Model */,
-				794B101421E84A6900B91405 /* View */,
-			);
-			path = module;
-			sourceTree = "<group>";
-		};
-		794B101321E84A6900B91405 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				792A730F21EF30880098B94C /* ClassClusterModel.h */,
-				792A731021EF30880098B94C /* ClassClusterModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		794B101421E84A6900B91405 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				792A731521EF31FF0098B94C /* 基类cell */,
-				792A731621EF321F0098B94C /* 子类cellA */,
-				792A731421EF31FF0098B94C /* 子类cellB */,
-				792A731221EF31FF0098B94C /* 子类cellC */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		794BE895231D366700113B97 /* 生产者消费者 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1524,9 +1527,9 @@
 			isa = PBXGroup;
 			children = (
 				799E56C1239684F1004886E9 /* SwiftDemosViewController.swift */,
+				795FF3E322E5AD4900CCC8B9 /* 面向协议 */,
 				799E56C32396856D004886E9 /* 面向协议编程 */,
 				799E56BE239684D1004886E9 /* Command */,
-				795FF3E322E5AD4900CCC8B9 /* 面向协议 */,
 				79F87F9F235578C400D01484 /* Composite Pattern */,
 				794BE897231D368000113B97 /* Chain Of Responsibility */,
 				794BE899231D368000113B97 /* StrategyDesign */,
@@ -2109,6 +2112,7 @@
 				79EEEAAC2190156500848B59 /* PointTreeModel.m in Sources */,
 				33FAE4D820E243B800BE7175 /* CollectionDetaiDemo.m in Sources */,
 				79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */,
+				7908824E23A0C71200FA3BE5 /* ClassClusterModel.m in Sources */,
 				794B100921DF02E300B91405 /* AbstractTableViewController.m in Sources */,
 				79040D8B2236462A0085335E /* FlutterSubViewController.m in Sources */,
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
@@ -2120,7 +2124,6 @@
 				7993C871228D6A4E001A6BFA /* DownLoadCell.m in Sources */,
 				79E96688237EBDEA00B49697 /* TestBlockModelViewController.swift in Sources */,
 				33759E71212FA08900D801C1 /* UIView+MethodSwizze.m in Sources */,
-				792A731921EF324F0098B94C /* ClassClusterBaseTableViewCell.m in Sources */,
 				79EEEA512182BD8C00848B59 /* LiveCommetChatTV.m in Sources */,
 				33C2DF3821DCC5D400F96F32 /* PointTreeTypeTwo.m in Sources */,
 				333D109A20D0ECA0004D9241 /* CollectionModuleView.m in Sources */,
@@ -2128,11 +2131,13 @@
 				797EC360236C10F900E21E44 /* SDOPickerView.swift in Sources */,
 				79EEEA99218EEBCF00848B59 /* FullScreenViewController.m in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
+				7908824F23A0C71200FA3BE5 /* ClassClusterTableViewCellB.m in Sources */,
 				7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
 				79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */,
 				79EEEAB321957A5A00848B59 /* ResponderPlayerView.m in Sources */,
 				794BE89E231D368000113B97 /* StrategyMethod.swift in Sources */,
+				7908825323A0C71200FA3BE5 /* ClassClusterViewController.m in Sources */,
 				799E56C2239684F1004886E9 /* SwiftDemosViewController.swift in Sources */,
 				33C2DF3721DCC5D400F96F32 /* PointTreeTypeOne.m in Sources */,
 				33C2DF3621DCC5D400F96F32 /* CompositePointTreeModel.m in Sources */,
@@ -2146,6 +2151,7 @@
 				339B536E20F4B486003444CB /* AbstractPlayerProtocol.h in Sources */,
 				79EEEABD2195975B00848B59 /* AbstractPlayHelper.m in Sources */,
 				339B534A20F4AB2A003444CB /* ZTKLLDownHelper.m in Sources */,
+				7908825023A0C71200FA3BE5 /* ClassClusterTableViewCellC.m in Sources */,
 				799E56C5239685E7004886E9 /* ShakeView.swift in Sources */,
 				33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */,
 				79A1A5182269AD0800CEA92A /* SmoothBookmarkView.m in Sources */,
@@ -2173,13 +2179,13 @@
 				7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */,
 				794BE89F231D368000113B97 /* leetCode.cpp in Sources */,
 				33C2DF3E21DCC66C00F96F32 /* PointTreeOneModelViewController.m in Sources */,
-				792A732221EF328D0098B94C /* ClassClusterTableViewCellC.m in Sources */,
 				33C9711F211EB8DC00EAAD5E /* AbstractViewController.m in Sources */,
 				33888FE420F0683C00E4A119 /* UIView+Category.m in Sources */,
 				79E9668E237EBE1100B49697 /* CView.swift in Sources */,
 				339B534620F4AB2A003444CB /* ZTKBJDownHelper.m in Sources */,
 				79A0ECA82368263E004C10B0 /* XXH264DecodeTool.m in Sources */,
 				79EEEAA9219014BD00848B59 /* PointTreeStatisTableViewCell.m in Sources */,
+				7908825223A0C71200FA3BE5 /* ClassClusterTableViewCellA.m in Sources */,
 				3362E69F2130FBEF00A4B26D /* CustomKVO.m in Sources */,
 				33C971282121317D00EAAD5E /* CorrectTagModel.m in Sources */,
 				79F9A5F5215214B4003704D7 /* NSTimer+WeakTimerBlock.m in Sources */,
@@ -2191,7 +2197,6 @@
 				79E9668A237EBDF800B49697 /* AView.swift in Sources */,
 				3378282C2108544300373A20 /* UIImage+Title.m in Sources */,
 				79A1A51A2269AD0800CEA92A /* BookmarkContainerView.m in Sources */,
-				792A731C21EF32730098B94C /* ClassClusterTableViewCellA.m in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
 				33759E7A212FAB2A00D801C1 /* AbstractItem.m in Sources */,
 				33C971412124108D00EAAD5E /* DecoratorAView.m in Sources */,
@@ -2200,7 +2205,6 @@
 				3378281D21084A6E00373A20 /* Hamburger.m in Sources */,
 				79A0ECAB23682EFF004C10B0 /* XXPLEAGLLayer.m in Sources */,
 				33E6CE0721006D2000422FC7 /* UITableViewCell+AnimationType.m in Sources */,
-				792A731121EF30880098B94C /* ClassClusterModel.m in Sources */,
 				33FAE4E520E2445500BE7175 /* HeaderSuspendedLayout.m in Sources */,
 				795FF3E922E5AE2300CCC8B9 /* AbstractViewProtocol.swift in Sources */,
 				7901F9A221A678CE005BE8A6 /* NSTimerObserver.m in Sources */,
@@ -2222,6 +2226,7 @@
 				339B534D20F4AE74003444CB /* DownLoadViewController.m in Sources */,
 				33CCB0ED20FDF030002C4FF4 /* HTMiddleControlView.m in Sources */,
 				794BE89D231D368000113B97 /* Chain_of_responsibility.swift in Sources */,
+				7908825523A0C74900FA3BE5 /* FactoryObject.swift in Sources */,
 				79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */,
 				339B536320F4B29B003444CB /* ZSPlayer.m in Sources */,
 				33E6CDD9210035FF00422FC7 /* ThreeLevelTreeViewController.m in Sources */,
@@ -2252,7 +2257,6 @@
 				33C971252121315500EAAD5E /* ResovlerModel.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				79EEEA562182C09200848B59 /* liveChatModel.m in Sources */,
-				794B101121E84A2500B91405 /* ClassClusterViewController.m in Sources */,
 				33A32B0320DC95AF008C3969 /* DrawLine.m in Sources */,
 				33C2DF3921DCC5D400F96F32 /* PointTreeTypeThree.m in Sources */,
 				7997BE69224090A50054F4D0 /* AbstractAlertView.m in Sources */,
@@ -2267,9 +2271,9 @@
 				33759E7D212FABBA00D801C1 /* NSObject+KVOHelper.m in Sources */,
 				79EEEAA1218FF5E600848B59 /* TreeViewModel.m in Sources */,
 				794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */,
-				792A731F21EF32800098B94C /* ClassClusterTableViewCellB.m in Sources */,
 				794A6DB023862C54008FB8D4 /* MessageThrottle.m in Sources */,
 				792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */,
+				7908825123A0C71200FA3BE5 /* ClassClusterBaseTableViewCell.m in Sources */,
 				7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */,
 				33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */,
 				33C971402124108D00EAAD5E /* CustomAlertViewDefault.m in Sources */,

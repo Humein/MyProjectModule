@@ -26,18 +26,17 @@ class FirstView: UIView, AbstractViewProtocol//, SDTouchAddressBookManagerProtoc
         print("-------------FirstView")
     }
     
-    //MARK: - SDTouchAddressBookManagerProtocol  传值 代理模式
+    //MARK: - SDTouchAddressBookManagerProtocol  传值 代理模式 extension FirstView:
 //    func readContacts(addressBookArray: Array<[String : Any]>) {
 //        print("SDTouchAddressBookManagerProtocol")
 //    }
 
-    //MARK: - AbstractView Protocol  抽象 多继承
+    //MARK: - AbstractView Protocol  抽象组合
 
     var name: String = ""
     
     
-    //MARK: - AbstractView extension Protocol   添加协议的默认实现
-    
+    //MARK: - AbstractView extension Protocol   添加协议的默认实现 能实现面向协议编程
     func eat() {
         print("eat......overwirte")
     }

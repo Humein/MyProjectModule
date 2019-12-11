@@ -9,29 +9,24 @@
 */
 import UIKit
 
-class FoodImageView: UIImageView {
+class FoodImageView: UIImageView, ShakeDelegate, CloseDelegate{
 
     func shake() {
-        let animation = CABasicAnimation(keyPath: "position")
-        animation.duration = 0.05
-        animation.repeatCount = 5
-        animation.autoreverses = true
-        animation.fromValue = NSValue(cgPoint: CGPoint.init(x: self.center.x - 4.0, y: self.center.y))
-        animation.toValue = NSValue(cgPoint: CGPoint.init(x: self.center.x + 4.0, y: self.center.y))
-        layer.add(animation, forKey: "position")
+        print("shake")
     }
 }
 
-class ActionButton: UIButton {
+class ActionButton: UIButton, ShakeDelegate, CloseDelegate{
     
     func shake() {
-        let animation = CABasicAnimation(keyPath: "position")
-        animation.duration = 0.05
-        animation.repeatCount = 5
-        animation.autoreverses = true
-        animation.fromValue = NSValue(cgPoint: CGPoint.init(x: self.center.x - 4.0, y: self.center.y))
-        animation.toValue = NSValue(cgPoint: CGPoint.init(x: self.center.x + 4.0, y: self.center.y))
-        layer.add(animation, forKey: "position")
+        print("shake")
+    }
+}
+
+class ActionObject: NSObject, ShakeDelegate, CloseDelegate{
+    
+    func shake() {
+        print("shake")
     }
 }
 
@@ -51,24 +46,52 @@ class ActionButton: UIButton {
 //MARK: - 1: 使用继承
 extension UIView {
     func ex_shake() {
-        let animation = CABasicAnimation(keyPath: "position")
-        animation.duration = 0.05
-        animation.repeatCount = 5
-        animation.autoreverses = true
-        animation.fromValue = NSValue(cgPoint: CGPoint.init(x: self.center.x - 4.0, y: self.center.y))
-        animation.toValue = NSValue(cgPoint: CGPoint.init(x: self.center.x + 4.0, y: self.center.y))
-        layer.add(animation, forKey: "position")
+        print("ex_shake")
     }
 }
 
 
 //MARK: - 2: 使用协议
 protocol ShakeDelegate { }
-
-//
+// 默认实现 where Self: UIView 限制调用类型
 extension ShakeDelegate where Self: UIView {
+    func protocol_shake() {
+        print("protocol_shake")
+    }
+}
 
-    func shake() {
-        // implementation code
+protocol CloseDelegate { }
+// 默认实现 
+extension CloseDelegate {
+    func protocol_close() {
+        print("protocol_close")
+    }
+}
+
+
+//MARK: - 3: 使用协议 代替工厂模式 中的 switch 貌似行不通呀
+protocol InitObjectProtocol {
+    func initObject() -> Any
+}
+
+class ButtonA: UIButton, InitObjectProtocol{
+    func initObject() -> Any {
+        let button = UIButton.init()
+        return button
+    }
+}
+
+class UIViewA: UIView, InitObjectProtocol{
+    func initObject() -> Any {
+        let view = UIView.init()
+        return view
+    }
+}
+
+class ProtocolHeler: NSObject {
+    var del: InitObjectProtocol? = nil
+
+    func ee(){
+        del?.initObject()
     }
 }

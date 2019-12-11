@@ -44,8 +44,6 @@ import UIKit
  */
 
 
-
-
 class listNode {
     var next: listNode?
     var val: Int

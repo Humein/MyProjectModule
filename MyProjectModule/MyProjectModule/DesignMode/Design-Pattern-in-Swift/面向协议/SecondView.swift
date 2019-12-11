@@ -4,7 +4,7 @@
 //
 //  Created by Zhang Xin Xin on 2019/12/9.
 //  Copyright © 2019 xinxin. All rights reserved.
-/// [Swift 代理模式](https://www.jianshu.com/p/1e133e3e3b91)
+
 
 import UIKit
 

@@ -14,18 +14,21 @@ class SwiftDemosViewController: UIViewController {
         super.viewDidLoad()
 
         //MARK:-  面向协议
-        
         let f = FirstView()
         f.eat("default")
         f.drink()
         
-        //MARK-  面向协议编程
-        let AB = ActionButton(), FI = FoodImageView()
+        //MARK:-  面向协议编程
+        let AB = ActionButton(), FI = FoodImageView(), AO = ActionObject()
         AB.shake()
         AB.ex_shake()
+        AB.protocol_shake(); AB.protocol_close() // 组合
         FI.shake()
         FI.ex_shake()
-        
+        FI.protocol_shake(); FI.protocol_close() // 组合
+        // AO.protocol_shake()  -- where Self: UIView 限制只能UIView
+        AO.protocol_close()
+        var modelProtocol :[CloseDelegate] = [CloseDelegate]()
         
         
         //MARK:-  strategy Usage
