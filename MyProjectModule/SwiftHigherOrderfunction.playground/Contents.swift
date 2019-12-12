@@ -91,10 +91,7 @@ struct Student {
     let age: Int
 }
 
-enum DataError: Error {
-    case outOfStack
-    case NoData
-}
+
 
 let stu1 = Student(id: "1001", name: "stu1", age: 12)
 let stu2 = Student(id: "1002", name: "stu2", age: 14)
@@ -211,7 +208,28 @@ do {
 }
 
 //MARK:- 枚举
+/// JSBridge与原生交互 定义的字段 枚举
+enum WBActivityType: String{
+    case AdultExam_UpLoadImage = "JSBridge"
+    case AddressBook_UpLoadData, Normal_Action = "doAction"
+    
+}
 
+enum Movement:Int {
+    case left = 0
+    case right = 1
+    case top = 2
+    case bottom = 3
+}
+enum Area: String {
+    case DG = "dongguan"
+    case GZ = "guangzhou"
+    case SZ = "shenzhen"
+}
+enum DataError: Error {
+    case outOfStack
+    case NoData
+}
 ///嵌套枚举
 enum Area {
     enum DongGuan {

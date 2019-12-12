@@ -199,14 +199,15 @@ struct IntegerStack: Stack {
   
   private var stack = [Element]()
   
-    mutating func push(_ newElement: Element) {
+  mutating func push(_ newElement: Element) {
     stack.append(newElement)
   }
   
-    mutating func pop() -> Element? {
+  mutating func pop() -> Element? {
     return stack.popLast()
   }
 }
+
 var stacks = IntegerStack.init()
 stacks.push(1)
 stacks.push(2)
@@ -216,7 +217,7 @@ print(stacks)
 
 //MARK:- list2：
 //1. 两数之和
-func twoSums(_ nums :[Int],_ target :Int) ->[Int]{
+func twoSums(_ nums: [Int],_ target: Int) ->[Int]{
     var dic = [Int:Int]()
     for (idx,item) in nums.enumerated() {
         if let lastIdx = dic[target - item] {
@@ -225,7 +226,6 @@ func twoSums(_ nums :[Int],_ target :Int) ->[Int]{
             dic[item] = idx
         }
     }
-    
     return []
 }
 twoSums([2, 7, 11, 15], 17)
@@ -317,7 +317,7 @@ print(isSubsequence("acd","abcd"))
 现在，为了使面积最大化，我们需要考虑更长的两条线段之间的区域。如果我们试图将指向较长线段的指针向内侧移动，矩形区域的面积将受限于较短的线段而不会获得任何增加。但是，在同样的条件下，移动指向较短线段的指针尽管造成了矩形宽度的减小，但却可能会有助于面积的增大。因为移动较短线段的指针会得到一条相对较长的线段，这可以克服由宽度减小而引起的面积减小。
 */
 func getMaxArea(_ height :[Int]) -> Int{
-    
+    // 记得边界
     if height.count == 0 {
         return 0
     }
@@ -334,7 +334,7 @@ func getMaxArea(_ height :[Int]) -> Int{
             minHeight = height[p2]
             p2 -= 1
         }
-        
+        // 记得 + 1
         maxArea = max(maxArea, (p2 - p1 + 1) * minHeight)
     }
     
@@ -343,8 +343,6 @@ func getMaxArea(_ height :[Int]) -> Int{
 }
 
 getMaxArea([1,8,6,2,5,4,8,3,7])
-
-
 
 
 //704. 二分查找
@@ -367,9 +365,6 @@ func binarySearch(_ nums: [Int], _ target :Int) -> Int{
     
     return -1
 }
-
-
-
 
 //MARK:- list4:
 //344. 反转字符串
@@ -398,6 +393,33 @@ func reverseString(_ s: inout [Character]){
 
 //236. 二叉树的最近公共祖先 / 235. 二叉搜索树的最近公共祖先 / 怎么查找两个view的公共父视图
 
+func findSuperViews(_ view: UIView?) -> [UIView] {
+    var view = view
+    if view == nil {
+        return []
+    }
+    var resultArray = [UIView]()
+    while view != nil {
+        resultArray.append(view!)
+        view = view?.superview
+    }
+    return resultArray
+}
+func findRecentRoot(_ viewA: UIView?,_ viewB: UIView?) -> UIView? {
+    let aArray = findSuperViews(viewA)
+    let bArray = findSuperViews(viewB)
+    var p1 = aArray.count - 1, p2 = bArray.count - 1
+    var rootView :UIView?
+    while p1 >= 0 && p2 >=0 {
+        if aArray[p1] == bArray[p2] {
+            rootView = aArray[p1]
+        }
+        p1 += 1
+        p2 += 1
+    }
+    return rootView
+}
+
 /*
 用两个「指针」，分别指向两个路径的根节点，然后从根节点开始，找第一个不同的节点，第一个不同节点的上一个公共节点
  
@@ -412,7 +434,7 @@ func reverseString(_ s: inout [Character]){
      }
      return [result copy];
  }
- 
+
  + (UIView *)commonView_3:(UIView *)viewA andView:(UIView *)viewB {
      NSArray *arr1 = [self superViews:viewA];
      NSArray *arr2 = [self superViews:viewB];
@@ -428,11 +450,25 @@ func reverseString(_ s: inout [Character]){
      }
      return answer;
  }
-
 */
 
 
+
 //怎么通过view去找到对应的控制器
+func findVC(_ view: UIView?) -> UIViewController?{
+    if view == nil {
+        return nil
+    }
+    var responder :UIResponder? = view!
+    while responder != nil {
+        if responder!.isKind(of: UIViewController.classForCoder()) {
+            return (responder as! UIViewController)
+        }
+        responder = responder!.next
+    }
+    return nil
+}
+
 /*
  view 和 UIViewController 都继承 UIResponder
  利用响应链知识 ，链表指针查找 view的 nextResponder。
@@ -441,17 +477,14 @@ func reverseString(_ s: inout [Character]){
 
 /*
  -(UIViewController *)findVC:(UIView *)view{
- 
     id responder = view;
  
     while responder {
     if responder isKindOfClass:[UIViewController class] {
       return responder
     }
- 
     responder = [responder nextResponder]
    }
- 
     return nil
  }
  
@@ -697,18 +730,18 @@ func searchMatrix(data :[[Int]],number :NSInteger) -> Bool{
     return false
 }
 
-func searchMatrixes(data :[[Int]], number :NSInteger) -> Bool{
-    if data.count == 0 || data.isEmpty{
-        return  false
-    }
-    var row :Int = 0, col :Int = data[0].count - 1
-    
-    while row <= data.count && col >= 0 {
-        
-    }
-    
-    return false
-}
+//func searchMatrixes(data :[[Int]], number :NSInteger) -> Bool{
+//    if data.count == 0 || data.isEmpty{
+//        return  false
+//    }
+//    var row :Int = 0, col :Int = data[0].count - 1
+//    
+//    while row <= data.count && col >= 0 {
+//        
+//    }
+//    
+//    return false
+//}
 
 
 //MARK:- list8:

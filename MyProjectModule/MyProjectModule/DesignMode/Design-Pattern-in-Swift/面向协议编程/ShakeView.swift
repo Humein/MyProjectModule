@@ -69,7 +69,7 @@ extension CloseDelegate {
 }
 
 
-//MARK: - 3: 使用协议 代替工厂模式 中的 switch 貌似行不通呀
+//MARK: - 3: 使用协议 代替工厂模式
 protocol InitObjectProtocol {
     func initObject() -> Any
 }
@@ -89,9 +89,6 @@ class UIViewA: UIView, InitObjectProtocol{
 }
 
 class ProtocolHeler: NSObject {
-    var del: InitObjectProtocol? = nil
+    var dele: InitObjectProtocol? = nil
 
-    func ee(){
-        del?.initObject()
-    }
 }
