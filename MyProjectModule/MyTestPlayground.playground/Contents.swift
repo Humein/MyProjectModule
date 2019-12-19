@@ -410,7 +410,7 @@ func findRecentRoot(_ viewA: UIView?,_ viewB: UIView?) -> UIView? {
     let bArray = findSuperViews(viewB)
     var p1 = aArray.count - 1, p2 = bArray.count - 1
     var rootView :UIView?
-    while p1 >= 0 && p2 >=0 {
+    while p1 >= 0 && p2 >= 0 {
         if aArray[p1] == bArray[p2] {
             rootView = aArray[p1]
         }
