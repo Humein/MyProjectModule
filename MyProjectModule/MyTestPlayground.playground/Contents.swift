@@ -1382,35 +1382,40 @@ func detectCycle(_ head: LinkNode?) -> LinkNode?{
  手撕快排 https://www.jianshu.com/p/5a81ba81886d
  */
 //需要额外空间 比较好理解
-func quickSort(data:[Int])->[Int]{
-     if data.count<=1 {
-         return data
-     }
-     
-     var left:[Int] = []
-     var right:[Int] = []
-     let pivot:Int = data[data.count-1]
-    // 注意：条件中要 排除基准值
-    for index in 0..<data.count-1 {
-         if data[index] < pivot {
-             left.append(data[index])
-         }else{
-             right.append(data[index])
-         }
-     }
-     
-     var result = quickSort(data: left)
-     result.append(pivot) //添加准基
-     let rightResult = quickSort(data: right)
-     result.append(contentsOf: rightResult)//拼接rightArray
-     return result
- }
+
+func quickSort2(_ data: [Int]) -> [Int] {
+    // 边界
+    if data.count <= 1 {
+        return data
+    }
+    // 初始化 左数组 右数组 以及pivot
+    var left: [Int] = []
+    var right: [Int] = []
+    let pivot: Int = data[data.count - 1]
+    
+    // 遍历分别放到左右区域   注意：条件中排除了基准值
+    for index in 0..<data.count - 1 {
+        if data[index] < pivot {
+            left.append(data[index])
+        }else{
+            right.append(data[index])
+        }
+    }
+    // 递归处理 left 区域
+    var result = quickSort2(left)
+    // 拼接准基
+    result.append(pivot)
+    // 递归处理 right 区域
+    let rightResult = quickSort2(right)
+    // 拼接rightArray
+    result.append(contentsOf: rightResult)
+    
+    return result
+}
+
 let data:[Int] = [1,2,3,2,4,8,9,10,19,0]
-let result = quickSort(data: data)
+let result = quickSort2(data)
 print("FlyElephant方案1:-\(result)")
-
-
-
 
 // 厉害了我的杯
 /*
@@ -1441,6 +1446,7 @@ func reversePrintList(_ node: listNode) -> [Int]{
     
     return nodes.reversed()
 }
+
 
 // 递归 第二种方法也比较容易想到，通过链表的构造，如果将末尾的节点存储之后，剩余的链表处理方式还是不变，所以可以使用递归的形式进行处理。
 func recReverPrint(_ node: listNode) -> [Int]{
@@ -1511,9 +1517,9 @@ func fibbonDP(_ n: Int) -> Int{
         return n
     }
     
-    var dp = [1,1,2,3]
+    var dp = [1,1,2]
     
-    for i in 4...n {
+    for i in 3...n {
         dp.append(dp[i - 1] + dp[i - 2])
     }
     print(dp)

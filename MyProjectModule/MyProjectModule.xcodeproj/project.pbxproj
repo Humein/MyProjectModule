@@ -200,6 +200,7 @@
 		79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5EE2151F84E003704D7 /* BlockViewController.m */; };
 		79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */; };
 		79F9A5F5215214B4003704D7 /* NSTimer+WeakTimerBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5F4215214B4003704D7 /* NSTimer+WeakTimerBlock.m */; };
+		79FE526523B5A081007C54A1 /* TemplatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FE526423B5A081007C54A1 /* TemplatePattern.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -595,6 +596,7 @@
 		79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallbackAndCompletionHandlerForBlock.m; sourceTree = "<group>"; };
 		79F9A5F3215214B4003704D7 /* NSTimer+WeakTimerBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+WeakTimerBlock.h"; sourceTree = "<group>"; };
 		79F9A5F4215214B4003704D7 /* NSTimer+WeakTimerBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+WeakTimerBlock.m"; sourceTree = "<group>"; };
+		79FE526423B5A081007C54A1 /* TemplatePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatePattern.swift; sourceTree = "<group>"; };
 		A36D58F14EAF98187791F3CA /* Pods-MyProjectModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -872,6 +874,7 @@
 		33888FF520F0C25400E4A119 /* DesignMode */ = {
 			isa = PBXGroup;
 			children = (
+				79FE526323B597DC007C54A1 /* Template Pattern */,
 				7908832A23A1095B00FA3BE5 /* Adpter Pattern */,
 				7908829023A0D04400FA3BE5 /* Design-Pattern-in-Swift */,
 				7908829823A0D04400FA3BE5 /* 策略模式  */,
@@ -1879,6 +1882,14 @@
 			path = Algorithms;
 			sourceTree = "<group>";
 		};
+		79FE526323B597DC007C54A1 /* Template Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				79FE526423B5A081007C54A1 /* TemplatePattern.swift */,
+			);
+			path = "Template Pattern";
+			sourceTree = "<group>";
+		};
 		7C2E54819E680FA111814D28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2097,6 +2108,7 @@
 				79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */,
 				794B100921DF02E300B91405 /* AbstractTableViewController.m in Sources */,
 				79040D8B2236462A0085335E /* FlutterSubViewController.m in Sources */,
+				79FE526523B5A081007C54A1 /* TemplatePattern.swift in Sources */,
 				7908831023A0D04500FA3BE5 /* CorrectTagModel.m in Sources */,
 				7908831A23A0D04500FA3BE5 /* BJPlayer.m in Sources */,
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
