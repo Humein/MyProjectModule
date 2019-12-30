@@ -1686,7 +1686,6 @@ func deleteDupNodel(_ head: listNode?) -> listNode?{
     return head
 }
 
-
 //offer22：链表中倒数第k个结点
 /*
  输入一个链表，输出该链表中倒数第k个结点。为了符合大多数人的习惯，
@@ -1740,7 +1739,6 @@ func findKNode(_ head: LinkNode?,k: Int) -> LinkNode?{
     
     return p1
 }
-
 
 
 //MARK:-list20:

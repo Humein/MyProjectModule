@@ -90,15 +90,6 @@
 		790882F823A0D04500FA3BE5 /* ClassClusterTableViewCellA.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908827223A0D04400FA3BE5 /* ClassClusterTableViewCellA.m */; };
 		790882F923A0D04500FA3BE5 /* ClassClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908827423A0D04400FA3BE5 /* ClassClusterViewController.m */; };
 		790882FA23A0D04500FA3BE5 /* FactoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908827523A0D04400FA3BE5 /* FactoryObject.swift */; };
-		790882FB23A0D04500FA3BE5 /* HTMiddleControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908827723A0D04400FA3BE5 /* HTMiddleControlView.m */; };
-		790882FC23A0D04500FA3BE5 /* RChainDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908827823A0D04400FA3BE5 /* RChainDemoViewController.m */; };
-		790882FD23A0D04500FA3BE5 /* HTTopControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908827A23A0D04400FA3BE5 /* HTTopControlView.m */; };
-		790882FE23A0D04500FA3BE5 /* UIResponder+UIResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908827C23A0D04400FA3BE5 /* UIResponder+UIResponderChain.m */; };
-		790882FF23A0D04500FA3BE5 /* ResponOfChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908828223A0D04400FA3BE5 /* ResponOfChainManager.m */; };
-		7908830023A0D04500FA3BE5 /* HTBottomControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908828523A0D04400FA3BE5 /* HTBottomControlView.m */; };
-		7908830123A0D04500FA3BE5 /* InterfacePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908828923A0D04400FA3BE5 /* InterfacePlayerView.m */; };
-		7908830223A0D04500FA3BE5 /* FullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908828C23A0D04400FA3BE5 /* FullScreenViewController.m */; };
-		7908830323A0D04500FA3BE5 /* ResponderControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908828D23A0D04400FA3BE5 /* ResponderControlView.m */; };
 		7908830423A0D04500FA3BE5 /* Chain_of_responsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908828F23A0D04400FA3BE5 /* Chain_of_responsibility.swift */; };
 		7908830523A0D04500FA3BE5 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908829223A0D04400FA3BE5 /* SecondView.swift */; };
 		7908830623A0D04500FA3BE5 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908829323A0D04400FA3BE5 /* FirstView.swift */; };
@@ -174,6 +165,16 @@
 		79B44B27237CF23000B7D73D /* BaseBookmarkChildDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B44B26237CF23000B7D73D /* BaseBookmarkChildDemoController.m */; };
 		79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFDCE82142A28700C81069 /* StartWaterView.m */; };
 		79C2B663221A646200C40F3A /* RunTimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C2B662221A646200C40F3A /* RunTimeTestViewController.m */; };
+		79DC642123BA1A0A0073E22F /* ResponOfChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC640923BA1A090073E22F /* ResponOfChainManager.m */; };
+		79DC642223BA1A0A0073E22F /* UIResponder+UIResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC640C23BA1A090073E22F /* UIResponder+UIResponderChain.m */; };
+		79DC642323BA1A0A0073E22F /* Chain_of_responsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC640F23BA1A090073E22F /* Chain_of_responsibility.swift */; };
+		79DC642423BA1A0A0073E22F /* HTMiddleControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC641123BA1A090073E22F /* HTMiddleControlView.m */; };
+		79DC642523BA1A0A0073E22F /* RChainDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC641223BA1A090073E22F /* RChainDemoViewController.m */; };
+		79DC642623BA1A0A0073E22F /* HTTopControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC641423BA1A090073E22F /* HTTopControlView.m */; };
+		79DC642723BA1A0A0073E22F /* HTBottomControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC641823BA1A090073E22F /* HTBottomControlView.m */; };
+		79DC642823BA1A0A0073E22F /* InterfacePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC641C23BA1A090073E22F /* InterfacePlayerView.m */; };
+		79DC642923BA1A0A0073E22F /* FullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC641F23BA1A090073E22F /* FullScreenViewController.m */; };
+		79DC642A23BA1A0A0073E22F /* ResponderControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC642023BA1A090073E22F /* ResponderControlView.m */; };
 		79DF39392200499400977BB4 /* LRULinkedMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DF39382200499400977BB4 /* LRULinkedMap.m */; };
 		79E3D63321DE57D60038CACB /* ZTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63221DE57D60038CACB /* ZTKBaseRequest.m */; };
 		79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63521DE60E80038CACB /* RequestMediatorBaseBusniess.m */; };
@@ -385,25 +386,6 @@
 		7908827323A0D04400FA3BE5 /* ClassClusterTableViewCellA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterTableViewCellA.h; sourceTree = "<group>"; };
 		7908827423A0D04400FA3BE5 /* ClassClusterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterViewController.m; sourceTree = "<group>"; };
 		7908827523A0D04400FA3BE5 /* FactoryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryObject.swift; sourceTree = "<group>"; };
-		7908827723A0D04400FA3BE5 /* HTMiddleControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMiddleControlView.m; sourceTree = "<group>"; };
-		7908827823A0D04400FA3BE5 /* RChainDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RChainDemoViewController.m; sourceTree = "<group>"; };
-		7908827923A0D04400FA3BE5 /* HTBottomControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBottomControlView.h; sourceTree = "<group>"; };
-		7908827A23A0D04400FA3BE5 /* HTTopControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTopControlView.m; sourceTree = "<group>"; };
-		7908827C23A0D04400FA3BE5 /* UIResponder+UIResponderChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+UIResponderChain.m"; sourceTree = "<group>"; };
-		7908827D23A0D04400FA3BE5 /* UIResponder+UIResponderChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+UIResponderChain.h"; sourceTree = "<group>"; };
-		7908827E23A0D04400FA3BE5 /* RChainDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RChainDemoViewController.h; sourceTree = "<group>"; };
-		7908827F23A0D04400FA3BE5 /* HTMiddleControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMiddleControlView.h; sourceTree = "<group>"; };
-		7908828123A0D04400FA3BE5 /* ActionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionProtocol.h; sourceTree = "<group>"; };
-		7908828223A0D04400FA3BE5 /* ResponOfChainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponOfChainManager.m; sourceTree = "<group>"; };
-		7908828323A0D04400FA3BE5 /* ResponOfChainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponOfChainManager.h; sourceTree = "<group>"; };
-		7908828423A0D04400FA3BE5 /* HTTopControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTopControlView.h; sourceTree = "<group>"; };
-		7908828523A0D04400FA3BE5 /* HTBottomControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBottomControlView.m; sourceTree = "<group>"; };
-		7908828723A0D04400FA3BE5 /* ResponderControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderControlView.h; sourceTree = "<group>"; };
-		7908828923A0D04400FA3BE5 /* InterfacePlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfacePlayerView.m; sourceTree = "<group>"; };
-		7908828A23A0D04400FA3BE5 /* FullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenViewController.h; sourceTree = "<group>"; };
-		7908828B23A0D04400FA3BE5 /* InterfacePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfacePlayerView.h; sourceTree = "<group>"; };
-		7908828C23A0D04400FA3BE5 /* FullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenViewController.m; sourceTree = "<group>"; };
-		7908828D23A0D04400FA3BE5 /* ResponderControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderControlView.m; sourceTree = "<group>"; };
 		7908828F23A0D04400FA3BE5 /* Chain_of_responsibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chain_of_responsibility.swift; sourceTree = "<group>"; };
 		7908829223A0D04400FA3BE5 /* SecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		7908829323A0D04400FA3BE5 /* FirstView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
@@ -550,6 +532,26 @@
 		79BFDCE82142A28700C81069 /* StartWaterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartWaterView.m; sourceTree = "<group>"; };
 		79C2B661221A646200C40F3A /* RunTimeTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunTimeTestViewController.h; sourceTree = "<group>"; };
 		79C2B662221A646200C40F3A /* RunTimeTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTimeTestViewController.m; sourceTree = "<group>"; };
+		79DC640823BA1A090073E22F /* ActionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionProtocol.h; sourceTree = "<group>"; };
+		79DC640923BA1A090073E22F /* ResponOfChainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponOfChainManager.m; sourceTree = "<group>"; };
+		79DC640A23BA1A090073E22F /* ResponOfChainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponOfChainManager.h; sourceTree = "<group>"; };
+		79DC640C23BA1A090073E22F /* UIResponder+UIResponderChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+UIResponderChain.m"; sourceTree = "<group>"; };
+		79DC640D23BA1A090073E22F /* UIResponder+UIResponderChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+UIResponderChain.h"; sourceTree = "<group>"; };
+		79DC640F23BA1A090073E22F /* Chain_of_responsibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chain_of_responsibility.swift; sourceTree = "<group>"; };
+		79DC641123BA1A090073E22F /* HTMiddleControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMiddleControlView.m; sourceTree = "<group>"; };
+		79DC641223BA1A090073E22F /* RChainDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RChainDemoViewController.m; sourceTree = "<group>"; };
+		79DC641323BA1A090073E22F /* HTBottomControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBottomControlView.h; sourceTree = "<group>"; };
+		79DC641423BA1A090073E22F /* HTTopControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTopControlView.m; sourceTree = "<group>"; };
+		79DC641523BA1A090073E22F /* RChainDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RChainDemoViewController.h; sourceTree = "<group>"; };
+		79DC641623BA1A090073E22F /* HTMiddleControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMiddleControlView.h; sourceTree = "<group>"; };
+		79DC641723BA1A090073E22F /* HTTopControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTopControlView.h; sourceTree = "<group>"; };
+		79DC641823BA1A090073E22F /* HTBottomControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBottomControlView.m; sourceTree = "<group>"; };
+		79DC641A23BA1A090073E22F /* ResponderControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderControlView.h; sourceTree = "<group>"; };
+		79DC641C23BA1A090073E22F /* InterfacePlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfacePlayerView.m; sourceTree = "<group>"; };
+		79DC641D23BA1A090073E22F /* FullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenViewController.h; sourceTree = "<group>"; };
+		79DC641E23BA1A090073E22F /* InterfacePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfacePlayerView.h; sourceTree = "<group>"; };
+		79DC641F23BA1A090073E22F /* FullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenViewController.m; sourceTree = "<group>"; };
+		79DC642023BA1A090073E22F /* ResponderControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderControlView.m; sourceTree = "<group>"; };
 		79DF39372200499400977BB4 /* LRULinkedMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRULinkedMap.h; sourceTree = "<group>"; };
 		79DF39382200499400977BB4 /* LRULinkedMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRULinkedMap.m; sourceTree = "<group>"; };
 		79E3D63121DE57D60038CACB /* ZTKBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTKBaseRequest.h; sourceTree = "<group>"; };
@@ -874,13 +876,13 @@
 		33888FF520F0C25400E4A119 /* DesignMode */ = {
 			isa = PBXGroup;
 			children = (
+				79DC640623BA1A090073E22F /* Chain Of Responsibility Pattern */,
 				79FE526323B597DC007C54A1 /* Template Pattern */,
 				7908832A23A1095B00FA3BE5 /* Adpter Pattern */,
 				7908829023A0D04400FA3BE5 /* Design-Pattern-in-Swift */,
 				7908829823A0D04400FA3BE5 /* 策略模式  */,
 				7908825E23A0D04400FA3BE5 /* 工厂模式 */,
 				7908825823A0D04400FA3BE5 /* 生产者消费者 */,
-				7908827623A0D04400FA3BE5 /* 责任链模式 */,
 				790882DB23A0D04500FA3BE5 /* 装饰者模式 */,
 				7908828E23A0D04400FA3BE5 /* Chain Of Responsibility */,
 				790882D923A0D04400FA3BE5 /* Command */,
@@ -1245,64 +1247,6 @@
 			path = "子类cellA";
 			sourceTree = "<group>";
 		};
-		7908827623A0D04400FA3BE5 /* 责任链模式 */ = {
-			isa = PBXGroup;
-			children = (
-				7908827723A0D04400FA3BE5 /* HTMiddleControlView.m */,
-				7908827823A0D04400FA3BE5 /* RChainDemoViewController.m */,
-				7908827923A0D04400FA3BE5 /* HTBottomControlView.h */,
-				7908827A23A0D04400FA3BE5 /* HTTopControlView.m */,
-				7908827B23A0D04400FA3BE5 /* UIRespender责任链 */,
-				7908827E23A0D04400FA3BE5 /* RChainDemoViewController.h */,
-				7908827F23A0D04400FA3BE5 /* HTMiddleControlView.h */,
-				7908828023A0D04400FA3BE5 /* 链表实现责任链 */,
-				7908828423A0D04400FA3BE5 /* HTTopControlView.h */,
-				7908828523A0D04400FA3BE5 /* HTBottomControlView.m */,
-				7908828623A0D04400FA3BE5 /* 对外API */,
-			);
-			path = "责任链模式";
-			sourceTree = "<group>";
-		};
-		7908827B23A0D04400FA3BE5 /* UIRespender责任链 */ = {
-			isa = PBXGroup;
-			children = (
-				7908827C23A0D04400FA3BE5 /* UIResponder+UIResponderChain.m */,
-				7908827D23A0D04400FA3BE5 /* UIResponder+UIResponderChain.h */,
-			);
-			path = "UIRespender责任链";
-			sourceTree = "<group>";
-		};
-		7908828023A0D04400FA3BE5 /* 链表实现责任链 */ = {
-			isa = PBXGroup;
-			children = (
-				7908828123A0D04400FA3BE5 /* ActionProtocol.h */,
-				7908828223A0D04400FA3BE5 /* ResponOfChainManager.m */,
-				7908828323A0D04400FA3BE5 /* ResponOfChainManager.h */,
-			);
-			path = "链表实现责任链";
-			sourceTree = "<group>";
-		};
-		7908828623A0D04400FA3BE5 /* 对外API */ = {
-			isa = PBXGroup;
-			children = (
-				7908828723A0D04400FA3BE5 /* ResponderControlView.h */,
-				7908828823A0D04400FA3BE5 /* 旋转屏解决 */,
-				7908828D23A0D04400FA3BE5 /* ResponderControlView.m */,
-			);
-			path = "对外API";
-			sourceTree = "<group>";
-		};
-		7908828823A0D04400FA3BE5 /* 旋转屏解决 */ = {
-			isa = PBXGroup;
-			children = (
-				7908828923A0D04400FA3BE5 /* InterfacePlayerView.m */,
-				7908828A23A0D04400FA3BE5 /* FullScreenViewController.h */,
-				7908828B23A0D04400FA3BE5 /* InterfacePlayerView.h */,
-				7908828C23A0D04400FA3BE5 /* FullScreenViewController.m */,
-			);
-			path = "旋转屏解决";
-			sourceTree = "<group>";
-		};
 		7908828E23A0D04400FA3BE5 /* Chain Of Responsibility */ = {
 			isa = PBXGroup;
 			children = (
@@ -1342,16 +1286,16 @@
 		7908829823A0D04400FA3BE5 /* 策略模式  */ = {
 			isa = PBXGroup;
 			children = (
-				7908829923A0D04400FA3BE5 /* 支付方式 */,
-				790882A223A0D04400FA3BE5 /* DownLoadViewController.m */,
+				790882BF23A0D04400FA3BE5 /* NSInvocationForStrategyViewController.h */,
 				790882A323A0D04400FA3BE5 /* NSInvocationForStrategyViewController.m */,
 				790882A423A0D04400FA3BE5 /* PlayerViewController.h */,
+				790882BE23A0D04400FA3BE5 /* PlayerViewController.m */,
+				790882B823A0D04400FA3BE5 /* DownLoadViewController.h */,
+				790882A223A0D04400FA3BE5 /* DownLoadViewController.m */,
+				7908829923A0D04400FA3BE5 /* 支付方式 */,
 				790882A523A0D04400FA3BE5 /* 申论批改详情 */,
 				790882AC23A0D04400FA3BE5 /* DownLoad */,
-				790882B823A0D04400FA3BE5 /* DownLoadViewController.h */,
 				790882B923A0D04400FA3BE5 /* 协议多cell */,
-				790882BE23A0D04400FA3BE5 /* PlayerViewController.m */,
-				790882BF23A0D04400FA3BE5 /* NSInvocationForStrategyViewController.h */,
 				790882C023A0D04400FA3BE5 /* StrategyDesign */,
 				790882C223A0D04400FA3BE5 /* Player */,
 			);
@@ -1478,12 +1422,12 @@
 		790882CC23A0D04400FA3BE5 /* PlayerStrategy */ = {
 			isa = PBXGroup;
 			children = (
+				790882CF23A0D04400FA3BE5 /* AbstractPlayerSDKAPI */,
 				790882CD23A0D04400FA3BE5 /* AbstractPlayerProtocol.h */,
 				790882CE23A0D04400FA3BE5 /* AbstractPlayerHelperManager.h */,
-				790882CF23A0D04400FA3BE5 /* AbstractPlayerSDKAPI */,
-				790882D623A0D04400FA3BE5 /* ResponderPlayerView.m */,
 				790882D723A0D04400FA3BE5 /* AbstractPlayerHelperManager.m */,
 				790882D823A0D04400FA3BE5 /* ResponderPlayerView.h */,
+				790882D623A0D04400FA3BE5 /* ResponderPlayerView.m */,
 			);
 			path = PlayerStrategy;
 			sourceTree = "<group>";
@@ -1492,11 +1436,11 @@
 			isa = PBXGroup;
 			children = (
 				790882D023A0D04400FA3BE5 /* AbstractPlayHelper.h */,
-				790882D123A0D04400FA3BE5 /* BJPlayerHelper.m */,
-				790882D223A0D04400FA3BE5 /* ZSPlaterHelper.m */,
-				790882D323A0D04400FA3BE5 /* ZSPlaterHelper.h */,
-				790882D423A0D04400FA3BE5 /* BJPlayerHelper.h */,
 				790882D523A0D04400FA3BE5 /* AbstractPlayHelper.m */,
+				790882D423A0D04400FA3BE5 /* BJPlayerHelper.h */,
+				790882D123A0D04400FA3BE5 /* BJPlayerHelper.m */,
+				790882D323A0D04400FA3BE5 /* ZSPlaterHelper.h */,
+				790882D223A0D04400FA3BE5 /* ZSPlaterHelper.m */,
 			);
 			path = AbstractPlayerSDKAPI;
 			sourceTree = "<group>";
@@ -1789,6 +1733,81 @@
 				79BFDCE42142A16000C81069 /* Detail.md */,
 			);
 			path = socket;
+			sourceTree = "<group>";
+		};
+		79DC640623BA1A090073E22F /* Chain Of Responsibility Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				79DC640723BA1A090073E22F /* OC链表实现责任链 */,
+				79DC640B23BA1A090073E22F /* UIRespender责任链 */,
+				79DC640E23BA1A090073E22F /* Swift-Chain_of_responsibility */,
+				79DC641023BA1A090073E22F /* TestDemo */,
+				79DC641923BA1A090073E22F /* 视频播放最外层 */,
+			);
+			path = "Chain Of Responsibility Pattern";
+			sourceTree = "<group>";
+		};
+		79DC640723BA1A090073E22F /* OC链表实现责任链 */ = {
+			isa = PBXGroup;
+			children = (
+				79DC640823BA1A090073E22F /* ActionProtocol.h */,
+				79DC640923BA1A090073E22F /* ResponOfChainManager.m */,
+				79DC640A23BA1A090073E22F /* ResponOfChainManager.h */,
+			);
+			path = "OC链表实现责任链";
+			sourceTree = "<group>";
+		};
+		79DC640B23BA1A090073E22F /* UIRespender责任链 */ = {
+			isa = PBXGroup;
+			children = (
+				79DC640C23BA1A090073E22F /* UIResponder+UIResponderChain.m */,
+				79DC640D23BA1A090073E22F /* UIResponder+UIResponderChain.h */,
+			);
+			path = "UIRespender责任链";
+			sourceTree = "<group>";
+		};
+		79DC640E23BA1A090073E22F /* Swift-Chain_of_responsibility */ = {
+			isa = PBXGroup;
+			children = (
+				79DC640F23BA1A090073E22F /* Chain_of_responsibility.swift */,
+			);
+			path = "Swift-Chain_of_responsibility";
+			sourceTree = "<group>";
+		};
+		79DC641023BA1A090073E22F /* TestDemo */ = {
+			isa = PBXGroup;
+			children = (
+				79DC641123BA1A090073E22F /* HTMiddleControlView.m */,
+				79DC641223BA1A090073E22F /* RChainDemoViewController.m */,
+				79DC641323BA1A090073E22F /* HTBottomControlView.h */,
+				79DC641423BA1A090073E22F /* HTTopControlView.m */,
+				79DC641523BA1A090073E22F /* RChainDemoViewController.h */,
+				79DC641623BA1A090073E22F /* HTMiddleControlView.h */,
+				79DC641723BA1A090073E22F /* HTTopControlView.h */,
+				79DC641823BA1A090073E22F /* HTBottomControlView.m */,
+			);
+			path = TestDemo;
+			sourceTree = "<group>";
+		};
+		79DC641923BA1A090073E22F /* 视频播放最外层 */ = {
+			isa = PBXGroup;
+			children = (
+				79DC641A23BA1A090073E22F /* ResponderControlView.h */,
+				79DC642023BA1A090073E22F /* ResponderControlView.m */,
+				79DC641B23BA1A090073E22F /* 旋转屏解决 */,
+			);
+			path = "视频播放最外层";
+			sourceTree = "<group>";
+		};
+		79DC641B23BA1A090073E22F /* 旋转屏解决 */ = {
+			isa = PBXGroup;
+			children = (
+				79DC641E23BA1A090073E22F /* InterfacePlayerView.h */,
+				79DC641C23BA1A090073E22F /* InterfacePlayerView.m */,
+				79DC641D23BA1A090073E22F /* FullScreenViewController.h */,
+				79DC641F23BA1A090073E22F /* FullScreenViewController.m */,
+			);
+			path = "旋转屏解决";
 			sourceTree = "<group>";
 		};
 		79DF39362200498400977BB4 /* LRULinkedMap */ = {
@@ -2099,9 +2118,9 @@
 				337828312108772600373A20 /* ThreadViewController.m in Sources */,
 				7993C86B228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m in Sources */,
 				33FAE4F020E2452D00BE7175 /* JHHeaderReusableView.m in Sources */,
-				790882FB23A0D04500FA3BE5 /* HTMiddleControlView.m in Sources */,
 				33888FC320EDCCCB00E4A119 /* CAGradientLayerDemo.m in Sources */,
 				7908830623A0D04500FA3BE5 /* FirstView.swift in Sources */,
+				79DC642423BA1A0A0073E22F /* HTMiddleControlView.m in Sources */,
 				79EEEAAC2190156500848B59 /* PointTreeModel.m in Sources */,
 				33FAE4D820E243B800BE7175 /* CollectionDetaiDemo.m in Sources */,
 				7908832923A0D04500FA3BE5 /* DecoratorViewController.m in Sources */,
@@ -2119,6 +2138,7 @@
 				790882F923A0D04500FA3BE5 /* ClassClusterViewController.m in Sources */,
 				7908830723A0D04500FA3BE5 /* AbstractViewProtocol.swift in Sources */,
 				7908831523A0D04500FA3BE5 /* ZTKBJDownHelper.m in Sources */,
+				79DC642923BA1A0A0073E22F /* FullScreenViewController.m in Sources */,
 				79E96686237EBD8E00B49697 /* BlockModel.swift in Sources */,
 				7993C871228D6A4E001A6BFA /* DownLoadCell.m in Sources */,
 				79E96688237EBDEA00B49697 /* TestBlockModelViewController.swift in Sources */,
@@ -2135,9 +2155,8 @@
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
 				79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */,
 				33C2DF3721DCC5D400F96F32 /* PointTreeTypeOne.m in Sources */,
-				7908830223A0D04500FA3BE5 /* FullScreenViewController.m in Sources */,
-				790882FE23A0D04500FA3BE5 /* UIResponder+UIResponderChain.m in Sources */,
 				790882F723A0D04500FA3BE5 /* ClassClusterBaseTableViewCell.m in Sources */,
+				79DC642123BA1A0A0073E22F /* ResponOfChainManager.m in Sources */,
 				33C2DF3621DCC5D400F96F32 /* CompositePointTreeModel.m in Sources */,
 				33A6A8DC215CC5F3001BE659 /* POPNumberAnimation.m in Sources */,
 				7908832323A0D04500FA3BE5 /* Condiment.m in Sources */,
@@ -2146,6 +2165,7 @@
 				7908831223A0D04500FA3BE5 /* ZTKLLDownHelper.m in Sources */,
 				333D106520CE74AB004D9241 /* main.m in Sources */,
 				33E6CDD5210034E300422FC7 /* CellModel.m in Sources */,
+				79DC642723BA1A0A0073E22F /* HTBottomControlView.m in Sources */,
 				79C2B663221A646200C40F3A /* RunTimeTestViewController.m in Sources */,
 				33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */,
 				79A1A5182269AD0800CEA92A /* SmoothBookmarkView.m in Sources */,
@@ -2153,9 +2173,9 @@
 				338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */,
 				3362E6A22130FC1300A4B26D /* FBKVOViewController.m in Sources */,
 				7908830E23A0D04500FA3BE5 /* NSInvocationForStrategyViewController.m in Sources */,
+				79DC642623BA1A0A0073E22F /* HTTopControlView.m in Sources */,
 				33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */,
 				79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */,
-				790882FD23A0D04500FA3BE5 /* HTTopControlView.m in Sources */,
 				790882FA23A0D04500FA3BE5 /* FactoryObject.swift in Sources */,
 				33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */,
 				79A0ECA123681B79004C10B0 /* VTBEncodeViewController.m in Sources */,
@@ -2167,7 +2187,6 @@
 				33888FD420F05ADB00E4A119 /* PaternalViewController.m in Sources */,
 				79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */,
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
-				7908830323A0D04500FA3BE5 /* ResponderControlView.m in Sources */,
 				79DF39392200499400977BB4 /* LRULinkedMap.m in Sources */,
 				79A1A51D2269AD0800CEA92A /* SmoothBookmarkViewController.m in Sources */,
 				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
@@ -2179,12 +2198,12 @@
 				33888FE420F0683C00E4A119 /* UIView+Category.m in Sources */,
 				79E9668E237EBE1100B49697 /* CView.swift in Sources */,
 				79A0ECA82368263E004C10B0 /* XXH264DecodeTool.m in Sources */,
+				79DC642A23BA1A0A0073E22F /* ResponderControlView.m in Sources */,
 				79EEEAA9219014BD00848B59 /* PointTreeStatisTableViewCell.m in Sources */,
 				7908831323A0D04500FA3BE5 /* ZTKDownHelperManager.m in Sources */,
 				3362E69F2130FBEF00A4B26D /* CustomKVO.m in Sources */,
 				7908832423A0D04500FA3BE5 /* Hamburger.m in Sources */,
 				79F9A5F5215214B4003704D7 /* NSTimer+WeakTimerBlock.m in Sources */,
-				7908830023A0D04500FA3BE5 /* HTBottomControlView.m in Sources */,
 				7908832723A0D04500FA3BE5 /* UIImage+Title.m in Sources */,
 				79A1A5192269AD0800CEA92A /* CheckConditionCollectionViewCell.m in Sources */,
 				79A1A51C2269AD0800CEA92A /* BookmarkMainTableView.m in Sources */,
@@ -2193,7 +2212,6 @@
 				79E9668A237EBDF800B49697 /* AView.swift in Sources */,
 				79A1A51A2269AD0800CEA92A /* BookmarkContainerView.m in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
-				790882FF23A0D04500FA3BE5 /* ResponOfChainManager.m in Sources */,
 				7908832023A0D04500FA3BE5 /* AbstractPlayerHelperManager.m in Sources */,
 				7908830823A0D04500FA3BE5 /* ShakeView.swift in Sources */,
 				33759E7A212FAB2A00D801C1 /* AbstractItem.m in Sources */,
@@ -2204,7 +2222,9 @@
 				79A0ECAB23682EFF004C10B0 /* XXPLEAGLLayer.m in Sources */,
 				33E6CE0721006D2000422FC7 /* UITableViewCell+AnimationType.m in Sources */,
 				790882F523A0D04500FA3BE5 /* ClassClusterTableViewCellB.m in Sources */,
+				79DC642823BA1A0A0073E22F /* InterfacePlayerView.m in Sources */,
 				7908830423A0D04500FA3BE5 /* Chain_of_responsibility.swift in Sources */,
+				79DC642223BA1A0A0073E22F /* UIResponder+UIResponderChain.m in Sources */,
 				33FAE4E520E2445500BE7175 /* HeaderSuspendedLayout.m in Sources */,
 				7908831B23A0D04500FA3BE5 /* ZSPlayer.m in Sources */,
 				7901F9A221A678CE005BE8A6 /* NSTimerObserver.m in Sources */,
@@ -2220,7 +2240,6 @@
 				33FAE4E620E2445500BE7175 /* CarouselLayout.m in Sources */,
 				7908831423A0D04500FA3BE5 /* ZTKZTKBJDownItem.m in Sources */,
 				333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */,
-				790882FC23A0D04500FA3BE5 /* RChainDemoViewController.m in Sources */,
 				33759E6E212F9FD500D801C1 /* UITableViewCell+AnimationType.m in Sources */,
 				33FAE4E720E2445500BE7175 /* WaterfallLayout.m in Sources */,
 				7908830C23A0D04500FA3BE5 /* APPPayTool.m in Sources */,
@@ -2231,7 +2250,6 @@
 				7908831E23A0D04500FA3BE5 /* AbstractPlayHelper.m in Sources */,
 				3340363D2154C69C006FCBA3 /* MemoryCache.m in Sources */,
 				79E9668C237EBE0400B49697 /* BView.swift in Sources */,
-				7908830123A0D04500FA3BE5 /* InterfacePlayerView.m in Sources */,
 				7908831623A0D04500FA3BE5 /* ZTKDownItem.m in Sources */,
 				7908831D23A0D04500FA3BE5 /* ZSPlaterHelper.m in Sources */,
 				79EEEAA2218FF5E600848B59 /* TreeModel.m in Sources */,
@@ -2258,6 +2276,7 @@
 				7908831F23A0D04500FA3BE5 /* ResponderPlayerView.m in Sources */,
 				33C971432124108D00EAAD5E /* CustomAlertManagerView.m in Sources */,
 				79EEEAA3218FF5E600848B59 /* TreeViewCell.m in Sources */,
+				79DC642523BA1A0A0073E22F /* RChainDemoViewController.m in Sources */,
 				33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */,
 				7908830F23A0D04500FA3BE5 /* ResovlerModel.m in Sources */,
 				790882F423A0D04500FA3BE5 /* ClassClusterModel.m in Sources */,
@@ -2271,6 +2290,7 @@
 				7908830523A0D04500FA3BE5 /* SecondView.swift in Sources */,
 				792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */,
 				7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */,
+				79DC642323BA1A0A0073E22F /* Chain_of_responsibility.swift in Sources */,
 				7908832223A0D04500FA3BE5 /* pie.m in Sources */,
 				33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */,
 				33C971402124108D00EAAD5E /* CustomAlertViewDefault.m in Sources */,

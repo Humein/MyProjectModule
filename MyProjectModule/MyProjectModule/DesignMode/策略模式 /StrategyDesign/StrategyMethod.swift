@@ -5,6 +5,9 @@
 //  Created by Zhang Xin Xin on 2019/7/23.
 //  Copyright © 2019 xinxin. All rights reserved.
 //
+/*
+   本科来 多种试卷请求 用的
+ */
 
 /*
 struct RequestParam{
