@@ -90,7 +90,6 @@
 		790882F823A0D04500FA3BE5 /* ClassClusterTableViewCellA.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908827223A0D04400FA3BE5 /* ClassClusterTableViewCellA.m */; };
 		790882F923A0D04500FA3BE5 /* ClassClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908827423A0D04400FA3BE5 /* ClassClusterViewController.m */; };
 		790882FA23A0D04500FA3BE5 /* FactoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908827523A0D04400FA3BE5 /* FactoryObject.swift */; };
-		7908830423A0D04500FA3BE5 /* Chain_of_responsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908828F23A0D04400FA3BE5 /* Chain_of_responsibility.swift */; };
 		7908830523A0D04500FA3BE5 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908829223A0D04400FA3BE5 /* SecondView.swift */; };
 		7908830623A0D04500FA3BE5 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908829323A0D04400FA3BE5 /* FirstView.swift */; };
 		7908830723A0D04500FA3BE5 /* AbstractViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908829423A0D04400FA3BE5 /* AbstractViewProtocol.swift */; };
@@ -172,9 +171,9 @@
 		79DC642523BA1A0A0073E22F /* RChainDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC641223BA1A090073E22F /* RChainDemoViewController.m */; };
 		79DC642623BA1A0A0073E22F /* HTTopControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC641423BA1A090073E22F /* HTTopControlView.m */; };
 		79DC642723BA1A0A0073E22F /* HTBottomControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC641823BA1A090073E22F /* HTBottomControlView.m */; };
-		79DC642823BA1A0A0073E22F /* InterfacePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC641C23BA1A090073E22F /* InterfacePlayerView.m */; };
-		79DC642923BA1A0A0073E22F /* FullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC641F23BA1A090073E22F /* FullScreenViewController.m */; };
-		79DC642A23BA1A0A0073E22F /* ResponderControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC642023BA1A090073E22F /* ResponderControlView.m */; };
+		79DC643123BA1C8A0073E22F /* InterfacePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC642D23BA1C890073E22F /* InterfacePlayerView.m */; };
+		79DC643223BA1C8A0073E22F /* ResponderControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC643023BA1C890073E22F /* ResponderControlView.m */; };
+		79DC643623BA1C9F0073E22F /* FullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC643523BA1C9F0073E22F /* FullScreenViewController.m */; };
 		79DF39392200499400977BB4 /* LRULinkedMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DF39382200499400977BB4 /* LRULinkedMap.m */; };
 		79E3D63321DE57D60038CACB /* ZTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63221DE57D60038CACB /* ZTKBaseRequest.m */; };
 		79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63521DE60E80038CACB /* RequestMediatorBaseBusniess.m */; };
@@ -386,7 +385,6 @@
 		7908827323A0D04400FA3BE5 /* ClassClusterTableViewCellA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterTableViewCellA.h; sourceTree = "<group>"; };
 		7908827423A0D04400FA3BE5 /* ClassClusterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterViewController.m; sourceTree = "<group>"; };
 		7908827523A0D04400FA3BE5 /* FactoryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryObject.swift; sourceTree = "<group>"; };
-		7908828F23A0D04400FA3BE5 /* Chain_of_responsibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chain_of_responsibility.swift; sourceTree = "<group>"; };
 		7908829223A0D04400FA3BE5 /* SecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		7908829323A0D04400FA3BE5 /* FirstView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		7908829423A0D04400FA3BE5 /* AbstractViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractViewProtocol.swift; sourceTree = "<group>"; };
@@ -546,12 +544,12 @@
 		79DC641623BA1A090073E22F /* HTMiddleControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMiddleControlView.h; sourceTree = "<group>"; };
 		79DC641723BA1A090073E22F /* HTTopControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTopControlView.h; sourceTree = "<group>"; };
 		79DC641823BA1A090073E22F /* HTBottomControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBottomControlView.m; sourceTree = "<group>"; };
-		79DC641A23BA1A090073E22F /* ResponderControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderControlView.h; sourceTree = "<group>"; };
-		79DC641C23BA1A090073E22F /* InterfacePlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfacePlayerView.m; sourceTree = "<group>"; };
-		79DC641D23BA1A090073E22F /* FullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenViewController.h; sourceTree = "<group>"; };
-		79DC641E23BA1A090073E22F /* InterfacePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfacePlayerView.h; sourceTree = "<group>"; };
-		79DC641F23BA1A090073E22F /* FullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenViewController.m; sourceTree = "<group>"; };
-		79DC642023BA1A090073E22F /* ResponderControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderControlView.m; sourceTree = "<group>"; };
+		79DC642D23BA1C890073E22F /* InterfacePlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfacePlayerView.m; sourceTree = "<group>"; };
+		79DC642E23BA1C890073E22F /* ResponderControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderControlView.h; sourceTree = "<group>"; };
+		79DC642F23BA1C890073E22F /* InterfacePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfacePlayerView.h; sourceTree = "<group>"; };
+		79DC643023BA1C890073E22F /* ResponderControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderControlView.m; sourceTree = "<group>"; };
+		79DC643423BA1C9F0073E22F /* FullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenViewController.h; sourceTree = "<group>"; };
+		79DC643523BA1C9F0073E22F /* FullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenViewController.m; sourceTree = "<group>"; };
 		79DF39372200499400977BB4 /* LRULinkedMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRULinkedMap.h; sourceTree = "<group>"; };
 		79DF39382200499400977BB4 /* LRULinkedMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRULinkedMap.m; sourceTree = "<group>"; };
 		79E3D63121DE57D60038CACB /* ZTKBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTKBaseRequest.h; sourceTree = "<group>"; };
@@ -884,7 +882,6 @@
 				7908825E23A0D04400FA3BE5 /* 工厂模式 */,
 				7908825823A0D04400FA3BE5 /* 生产者消费者 */,
 				790882DB23A0D04500FA3BE5 /* 装饰者模式 */,
-				7908828E23A0D04400FA3BE5 /* Chain Of Responsibility */,
 				790882D923A0D04400FA3BE5 /* Command */,
 				790882EF23A0D04500FA3BE5 /* Composite Pattern */,
 			);
@@ -907,6 +904,7 @@
 		339D6C7420EA285700AC535E /* DataTransmission  */ = {
 			isa = PBXGroup;
 			children = (
+				79DC642B23BA1C3A0073E22F /* Protocol - Linked */,
 				79DF39362200498400977BB4 /* LRULinkedMap */,
 				7929B49A219FE72A004D335E /* RunLoop */,
 				79EEEAAD2191704700848B59 /* Category */,
@@ -1245,14 +1243,6 @@
 				7908827323A0D04400FA3BE5 /* ClassClusterTableViewCellA.h */,
 			);
 			path = "子类cellA";
-			sourceTree = "<group>";
-		};
-		7908828E23A0D04400FA3BE5 /* Chain Of Responsibility */ = {
-			isa = PBXGroup;
-			children = (
-				7908828F23A0D04400FA3BE5 /* Chain_of_responsibility.swift */,
-			);
-			path = "Chain Of Responsibility";
 			sourceTree = "<group>";
 		};
 		7908829023A0D04400FA3BE5 /* Design-Pattern-in-Swift */ = {
@@ -1594,6 +1584,7 @@
 		797EC357236BCCEF00E21E44 /* UIWidget */ = {
 			isa = PBXGroup;
 			children = (
+				79DC643323BA1C9F0073E22F /* 旋转屏解决 */,
 				797EC358236BCD0A00E21E44 /* TimePick */,
 			);
 			path = UIWidget;
@@ -1738,11 +1729,11 @@
 		79DC640623BA1A090073E22F /* Chain Of Responsibility Pattern */ = {
 			isa = PBXGroup;
 			children = (
+				79DC642C23BA1C890073E22F /* 视频播放最外层 */,
 				79DC640723BA1A090073E22F /* OC链表实现责任链 */,
 				79DC640B23BA1A090073E22F /* UIRespender责任链 */,
 				79DC640E23BA1A090073E22F /* Swift-Chain_of_responsibility */,
 				79DC641023BA1A090073E22F /* TestDemo */,
-				79DC641923BA1A090073E22F /* 视频播放最外层 */,
 			);
 			path = "Chain Of Responsibility Pattern";
 			sourceTree = "<group>";
@@ -1789,23 +1780,29 @@
 			path = TestDemo;
 			sourceTree = "<group>";
 		};
-		79DC641923BA1A090073E22F /* 视频播放最外层 */ = {
+		79DC642B23BA1C3A0073E22F /* Protocol - Linked */ = {
 			isa = PBXGroup;
 			children = (
-				79DC641A23BA1A090073E22F /* ResponderControlView.h */,
-				79DC642023BA1A090073E22F /* ResponderControlView.m */,
-				79DC641B23BA1A090073E22F /* 旋转屏解决 */,
+			);
+			path = "Protocol - Linked";
+			sourceTree = "<group>";
+		};
+		79DC642C23BA1C890073E22F /* 视频播放最外层 */ = {
+			isa = PBXGroup;
+			children = (
+				79DC642D23BA1C890073E22F /* InterfacePlayerView.m */,
+				79DC642E23BA1C890073E22F /* ResponderControlView.h */,
+				79DC642F23BA1C890073E22F /* InterfacePlayerView.h */,
+				79DC643023BA1C890073E22F /* ResponderControlView.m */,
 			);
 			path = "视频播放最外层";
 			sourceTree = "<group>";
 		};
-		79DC641B23BA1A090073E22F /* 旋转屏解决 */ = {
+		79DC643323BA1C9F0073E22F /* 旋转屏解决 */ = {
 			isa = PBXGroup;
 			children = (
-				79DC641E23BA1A090073E22F /* InterfacePlayerView.h */,
-				79DC641C23BA1A090073E22F /* InterfacePlayerView.m */,
-				79DC641D23BA1A090073E22F /* FullScreenViewController.h */,
-				79DC641F23BA1A090073E22F /* FullScreenViewController.m */,
+				79DC643423BA1C9F0073E22F /* FullScreenViewController.h */,
+				79DC643523BA1C9F0073E22F /* FullScreenViewController.m */,
 			);
 			path = "旋转屏解决";
 			sourceTree = "<group>";
@@ -2124,6 +2121,7 @@
 				79EEEAAC2190156500848B59 /* PointTreeModel.m in Sources */,
 				33FAE4D820E243B800BE7175 /* CollectionDetaiDemo.m in Sources */,
 				7908832923A0D04500FA3BE5 /* DecoratorViewController.m in Sources */,
+				79DC643223BA1C8A0073E22F /* ResponderControlView.m in Sources */,
 				79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */,
 				794B100921DF02E300B91405 /* AbstractTableViewController.m in Sources */,
 				79040D8B2236462A0085335E /* FlutterSubViewController.m in Sources */,
@@ -2137,8 +2135,8 @@
 				7908832C23A1097100FA3BE5 /* AdpterObject.swift in Sources */,
 				790882F923A0D04500FA3BE5 /* ClassClusterViewController.m in Sources */,
 				7908830723A0D04500FA3BE5 /* AbstractViewProtocol.swift in Sources */,
+				79DC643623BA1C9F0073E22F /* FullScreenViewController.m in Sources */,
 				7908831523A0D04500FA3BE5 /* ZTKBJDownHelper.m in Sources */,
-				79DC642923BA1A0A0073E22F /* FullScreenViewController.m in Sources */,
 				79E96686237EBD8E00B49697 /* BlockModel.swift in Sources */,
 				7993C871228D6A4E001A6BFA /* DownLoadCell.m in Sources */,
 				79E96688237EBDEA00B49697 /* TestBlockModelViewController.swift in Sources */,
@@ -2198,7 +2196,6 @@
 				33888FE420F0683C00E4A119 /* UIView+Category.m in Sources */,
 				79E9668E237EBE1100B49697 /* CView.swift in Sources */,
 				79A0ECA82368263E004C10B0 /* XXH264DecodeTool.m in Sources */,
-				79DC642A23BA1A0A0073E22F /* ResponderControlView.m in Sources */,
 				79EEEAA9219014BD00848B59 /* PointTreeStatisTableViewCell.m in Sources */,
 				7908831323A0D04500FA3BE5 /* ZTKDownHelperManager.m in Sources */,
 				3362E69F2130FBEF00A4B26D /* CustomKVO.m in Sources */,
@@ -2222,8 +2219,6 @@
 				79A0ECAB23682EFF004C10B0 /* XXPLEAGLLayer.m in Sources */,
 				33E6CE0721006D2000422FC7 /* UITableViewCell+AnimationType.m in Sources */,
 				790882F523A0D04500FA3BE5 /* ClassClusterTableViewCellB.m in Sources */,
-				79DC642823BA1A0A0073E22F /* InterfacePlayerView.m in Sources */,
-				7908830423A0D04500FA3BE5 /* Chain_of_responsibility.swift in Sources */,
 				79DC642223BA1A0A0073E22F /* UIResponder+UIResponderChain.m in Sources */,
 				33FAE4E520E2445500BE7175 /* HeaderSuspendedLayout.m in Sources */,
 				7908831B23A0D04500FA3BE5 /* ZSPlayer.m in Sources */,
@@ -2295,6 +2290,7 @@
 				33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */,
 				33C971402124108D00EAAD5E /* CustomAlertViewDefault.m in Sources */,
 				79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */,
+				79DC643123BA1C8A0073E22F /* InterfacePlayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
