@@ -36,12 +36,7 @@ typedef void (^HTPlayItemEventHandleBlock)(HTPlayItemEventType eventType,id play
 //解绑，就是把自己给干掉
 - (void)disattachPlayView;
 
-
-
-
 //发送事件
 - (void)requestEvent:(HTPlayItemEventType)eventType playItem:(id )playItem;
-
-
 
 @end

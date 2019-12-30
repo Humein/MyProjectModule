@@ -33,9 +33,6 @@
 		33759E7D212FABBA00D801C1 /* NSObject+KVOHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 33759E7C212FABBA00D801C1 /* NSObject+KVOHelper.m */; };
 		337828312108772600373A20 /* ThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337828302108772600373A20 /* ThreadViewController.m */; };
 		33888FC320EDCCCB00E4A119 /* CAGradientLayerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FC220EDCCCB00E4A119 /* CAGradientLayerDemo.m */; };
-		33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FCB20F05ADB00E4A119 /* ViewControllerChildOne.m */; };
-		33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FD020F05ADB00E4A119 /* ViewControllerChildTwo.m */; };
-		33888FD420F05ADB00E4A119 /* PaternalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FD120F05ADB00E4A119 /* PaternalViewController.m */; };
 		33888FE420F0683C00E4A119 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 33888FE320F0683C00E4A119 /* UIView+Category.m */; };
 		338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 338ECBA420D25D080059BE0D /* DrawUnlineAndScore.m */; };
 		338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 338FEB5E20DCFC7D0025631B /* DrawBaseAnimaltionView.m */; };
@@ -90,11 +87,6 @@
 		790882F823A0D04500FA3BE5 /* ClassClusterTableViewCellA.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908827223A0D04400FA3BE5 /* ClassClusterTableViewCellA.m */; };
 		790882F923A0D04500FA3BE5 /* ClassClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908827423A0D04400FA3BE5 /* ClassClusterViewController.m */; };
 		790882FA23A0D04500FA3BE5 /* FactoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908827523A0D04400FA3BE5 /* FactoryObject.swift */; };
-		7908830523A0D04500FA3BE5 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908829223A0D04400FA3BE5 /* SecondView.swift */; };
-		7908830623A0D04500FA3BE5 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908829323A0D04400FA3BE5 /* FirstView.swift */; };
-		7908830723A0D04500FA3BE5 /* AbstractViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908829423A0D04400FA3BE5 /* AbstractViewProtocol.swift */; };
-		7908830823A0D04500FA3BE5 /* ShakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908829623A0D04400FA3BE5 /* ShakeView.swift */; };
-		7908830923A0D04500FA3BE5 /* SwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908829723A0D04400FA3BE5 /* SwiftDemosViewController.swift */; };
 		7908830A23A0D04500FA3BE5 /* AliPay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908829D23A0D04400FA3BE5 /* AliPay.m */; };
 		7908830B23A0D04500FA3BE5 /* ApplePay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908829E23A0D04400FA3BE5 /* ApplePay.m */; };
 		7908830C23A0D04500FA3BE5 /* APPPayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 790882A023A0D04400FA3BE5 /* APPPayTool.m */; };
@@ -164,7 +156,6 @@
 		79B44B27237CF23000B7D73D /* BaseBookmarkChildDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B44B26237CF23000B7D73D /* BaseBookmarkChildDemoController.m */; };
 		79BFDCE92142A28700C81069 /* StartWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFDCE82142A28700C81069 /* StartWaterView.m */; };
 		79C2B663221A646200C40F3A /* RunTimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C2B662221A646200C40F3A /* RunTimeTestViewController.m */; };
-		79DC642123BA1A0A0073E22F /* ResponOfChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC640923BA1A090073E22F /* ResponOfChainManager.m */; };
 		79DC642223BA1A0A0073E22F /* UIResponder+UIResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC640C23BA1A090073E22F /* UIResponder+UIResponderChain.m */; };
 		79DC642323BA1A0A0073E22F /* Chain_of_responsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC640F23BA1A090073E22F /* Chain_of_responsibility.swift */; };
 		79DC642423BA1A0A0073E22F /* HTMiddleControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC641123BA1A090073E22F /* HTMiddleControlView.m */; };
@@ -174,6 +165,16 @@
 		79DC643123BA1C8A0073E22F /* InterfacePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC642D23BA1C890073E22F /* InterfacePlayerView.m */; };
 		79DC643223BA1C8A0073E22F /* ResponderControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC643023BA1C890073E22F /* ResponderControlView.m */; };
 		79DC643623BA1C9F0073E22F /* FullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC643523BA1C9F0073E22F /* FullScreenViewController.m */; };
+		79DC643B23BA1E170073E22F /* ProtocolLinked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC643A23BA1E170073E22F /* ProtocolLinked.swift */; };
+		79DC644023BA1E1D0073E22F /* ResponOfChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC643E23BA1E1D0073E22F /* ResponOfChainManager.m */; };
+		79DC645323BA1F6C0073E22F /* ViewControllerChildOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC644423BA1F6C0073E22F /* ViewControllerChildOne.m */; };
+		79DC645423BA1F6C0073E22F /* ViewControllerChildTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC644923BA1F6C0073E22F /* ViewControllerChildTwo.m */; };
+		79DC645523BA1F6C0073E22F /* PaternalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC644A23BA1F6C0073E22F /* PaternalViewController.m */; };
+		79DC645623BA1F6C0073E22F /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC644D23BA1F6C0073E22F /* SecondView.swift */; };
+		79DC645723BA1F6C0073E22F /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC644E23BA1F6C0073E22F /* FirstView.swift */; };
+		79DC645823BA1F6C0073E22F /* AbstractViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC644F23BA1F6C0073E22F /* AbstractViewProtocol.swift */; };
+		79DC645923BA1F6C0073E22F /* ShakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC645123BA1F6C0073E22F /* ShakeView.swift */; };
+		79DC645A23BA1F6C0073E22F /* SwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC645223BA1F6C0073E22F /* SwiftDemosViewController.swift */; };
 		79DF39392200499400977BB4 /* LRULinkedMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DF39382200499400977BB4 /* LRULinkedMap.m */; };
 		79E3D63321DE57D60038CACB /* ZTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63221DE57D60038CACB /* ZTKBaseRequest.m */; };
 		79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63521DE60E80038CACB /* RequestMediatorBaseBusniess.m */; };
@@ -273,13 +274,6 @@
 		337828302108772600373A20 /* ThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadViewController.m; sourceTree = "<group>"; };
 		33888FC120EDCCCB00E4A119 /* CAGradientLayerDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAGradientLayerDemo.h; sourceTree = "<group>"; };
 		33888FC220EDCCCB00E4A119 /* CAGradientLayerDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAGradientLayerDemo.m; sourceTree = "<group>"; };
-		33888FCB20F05ADB00E4A119 /* ViewControllerChildOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerChildOne.m; sourceTree = "<group>"; };
-		33888FCC20F05ADB00E4A119 /* ViewControllerChildTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerChildTwo.h; sourceTree = "<group>"; };
-		33888FCD20F05ADB00E4A119 /* PaternalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaternalViewController.h; sourceTree = "<group>"; };
-		33888FCE20F05ADB00E4A119 /* ViewControllerChildOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerChildOne.h; sourceTree = "<group>"; };
-		33888FCF20F05ADB00E4A119 /* BookVCProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookVCProtocol.h; sourceTree = "<group>"; };
-		33888FD020F05ADB00E4A119 /* ViewControllerChildTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerChildTwo.m; sourceTree = "<group>"; };
-		33888FD120F05ADB00E4A119 /* PaternalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaternalViewController.m; sourceTree = "<group>"; };
 		33888FE220F0683C00E4A119 /* UIView+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
 		33888FE320F0683C00E4A119 /* UIView+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
 		338ECBA320D25D080059BE0D /* DrawUnlineAndScore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawUnlineAndScore.h; sourceTree = "<group>"; };
@@ -385,11 +379,6 @@
 		7908827323A0D04400FA3BE5 /* ClassClusterTableViewCellA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterTableViewCellA.h; sourceTree = "<group>"; };
 		7908827423A0D04400FA3BE5 /* ClassClusterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterViewController.m; sourceTree = "<group>"; };
 		7908827523A0D04400FA3BE5 /* FactoryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryObject.swift; sourceTree = "<group>"; };
-		7908829223A0D04400FA3BE5 /* SecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
-		7908829323A0D04400FA3BE5 /* FirstView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
-		7908829423A0D04400FA3BE5 /* AbstractViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractViewProtocol.swift; sourceTree = "<group>"; };
-		7908829623A0D04400FA3BE5 /* ShakeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeView.swift; sourceTree = "<group>"; };
-		7908829723A0D04400FA3BE5 /* SwiftDemosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDemosViewController.swift; sourceTree = "<group>"; };
 		7908829B23A0D04400FA3BE5 /* AliPay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliPay.h; sourceTree = "<group>"; };
 		7908829C23A0D04400FA3BE5 /* ApplePay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplePay.h; sourceTree = "<group>"; };
 		7908829D23A0D04400FA3BE5 /* AliPay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliPay.m; sourceTree = "<group>"; };
@@ -530,9 +519,6 @@
 		79BFDCE82142A28700C81069 /* StartWaterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartWaterView.m; sourceTree = "<group>"; };
 		79C2B661221A646200C40F3A /* RunTimeTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunTimeTestViewController.h; sourceTree = "<group>"; };
 		79C2B662221A646200C40F3A /* RunTimeTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTimeTestViewController.m; sourceTree = "<group>"; };
-		79DC640823BA1A090073E22F /* ActionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionProtocol.h; sourceTree = "<group>"; };
-		79DC640923BA1A090073E22F /* ResponOfChainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponOfChainManager.m; sourceTree = "<group>"; };
-		79DC640A23BA1A090073E22F /* ResponOfChainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponOfChainManager.h; sourceTree = "<group>"; };
 		79DC640C23BA1A090073E22F /* UIResponder+UIResponderChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+UIResponderChain.m"; sourceTree = "<group>"; };
 		79DC640D23BA1A090073E22F /* UIResponder+UIResponderChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+UIResponderChain.h"; sourceTree = "<group>"; };
 		79DC640F23BA1A090073E22F /* Chain_of_responsibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chain_of_responsibility.swift; sourceTree = "<group>"; };
@@ -550,6 +536,22 @@
 		79DC643023BA1C890073E22F /* ResponderControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderControlView.m; sourceTree = "<group>"; };
 		79DC643423BA1C9F0073E22F /* FullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenViewController.h; sourceTree = "<group>"; };
 		79DC643523BA1C9F0073E22F /* FullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenViewController.m; sourceTree = "<group>"; };
+		79DC643A23BA1E170073E22F /* ProtocolLinked.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolLinked.swift; sourceTree = "<group>"; };
+		79DC643D23BA1E1D0073E22F /* ActionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionProtocol.h; sourceTree = "<group>"; };
+		79DC643E23BA1E1D0073E22F /* ResponOfChainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponOfChainManager.m; sourceTree = "<group>"; };
+		79DC643F23BA1E1D0073E22F /* ResponOfChainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponOfChainManager.h; sourceTree = "<group>"; };
+		79DC644423BA1F6C0073E22F /* ViewControllerChildOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerChildOne.m; sourceTree = "<group>"; };
+		79DC644523BA1F6C0073E22F /* ViewControllerChildTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerChildTwo.h; sourceTree = "<group>"; };
+		79DC644623BA1F6C0073E22F /* PaternalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaternalViewController.h; sourceTree = "<group>"; };
+		79DC644723BA1F6C0073E22F /* ViewControllerChildOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerChildOne.h; sourceTree = "<group>"; };
+		79DC644823BA1F6C0073E22F /* BookVCProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookVCProtocol.h; sourceTree = "<group>"; };
+		79DC644923BA1F6C0073E22F /* ViewControllerChildTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerChildTwo.m; sourceTree = "<group>"; };
+		79DC644A23BA1F6C0073E22F /* PaternalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaternalViewController.m; sourceTree = "<group>"; };
+		79DC644D23BA1F6C0073E22F /* SecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		79DC644E23BA1F6C0073E22F /* FirstView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		79DC644F23BA1F6C0073E22F /* AbstractViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractViewProtocol.swift; sourceTree = "<group>"; };
+		79DC645123BA1F6C0073E22F /* ShakeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeView.swift; sourceTree = "<group>"; };
+		79DC645223BA1F6C0073E22F /* SwiftDemosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDemosViewController.swift; sourceTree = "<group>"; };
 		79DF39372200499400977BB4 /* LRULinkedMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRULinkedMap.h; sourceTree = "<group>"; };
 		79DF39382200499400977BB4 /* LRULinkedMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRULinkedMap.m; sourceTree = "<group>"; };
 		79E3D63121DE57D60038CACB /* ZTKBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTKBaseRequest.h; sourceTree = "<group>"; };
@@ -807,20 +809,6 @@
 			path = BaseModule;
 			sourceTree = "<group>";
 		};
-		33888FCA20F05ADB00E4A119 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				33888FCE20F05ADB00E4A119 /* ViewControllerChildOne.h */,
-				33888FCB20F05ADB00E4A119 /* ViewControllerChildOne.m */,
-				33888FCC20F05ADB00E4A119 /* ViewControllerChildTwo.h */,
-				33888FD020F05ADB00E4A119 /* ViewControllerChildTwo.m */,
-				33888FCF20F05ADB00E4A119 /* BookVCProtocol.h */,
-				33888FCD20F05ADB00E4A119 /* PaternalViewController.h */,
-				33888FD120F05ADB00E4A119 /* PaternalViewController.m */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
 		33888FD520F05B0F00E4A119 /* KVO:KVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -874,10 +862,10 @@
 		33888FF520F0C25400E4A119 /* DesignMode */ = {
 			isa = PBXGroup;
 			children = (
+				79DC644123BA1F6C0073E22F /* 面向协议 */,
 				79DC640623BA1A090073E22F /* Chain Of Responsibility Pattern */,
 				79FE526323B597DC007C54A1 /* Template Pattern */,
 				7908832A23A1095B00FA3BE5 /* Adpter Pattern */,
-				7908829023A0D04400FA3BE5 /* Design-Pattern-in-Swift */,
 				7908829823A0D04400FA3BE5 /* 策略模式  */,
 				7908825E23A0D04400FA3BE5 /* 工厂模式 */,
 				7908825823A0D04400FA3BE5 /* 生产者消费者 */,
@@ -904,7 +892,8 @@
 		339D6C7420EA285700AC535E /* DataTransmission  */ = {
 			isa = PBXGroup;
 			children = (
-				79DC642B23BA1C3A0073E22F /* Protocol - Linked */,
+				79DC643C23BA1E1D0073E22F /* OC链表 - 实现责任链 */,
+				79DC643923BA1E170073E22F /* Protocol - 链表 */,
 				79DF39362200498400977BB4 /* LRULinkedMap */,
 				7929B49A219FE72A004D335E /* RunLoop */,
 				79EEEAAD2191704700848B59 /* Category */,
@@ -913,7 +902,6 @@
 				33888FD720F05B1400E4A119 /* Rumtime */,
 				33888FD620F05B0F00E4A119 /* Block */,
 				33888FD520F05B0F00E4A119 /* KVO:KVC */,
-				33888FCA20F05ADB00E4A119 /* Protocol */,
 			);
 			path = "DataTransmission ";
 			sourceTree = "<group>";
@@ -1243,34 +1231,6 @@
 				7908827323A0D04400FA3BE5 /* ClassClusterTableViewCellA.h */,
 			);
 			path = "子类cellA";
-			sourceTree = "<group>";
-		};
-		7908829023A0D04400FA3BE5 /* Design-Pattern-in-Swift */ = {
-			isa = PBXGroup;
-			children = (
-				7908829123A0D04400FA3BE5 /* 面向协议 */,
-				7908829523A0D04400FA3BE5 /* 面向协议编程 */,
-				7908829723A0D04400FA3BE5 /* SwiftDemosViewController.swift */,
-			);
-			path = "Design-Pattern-in-Swift";
-			sourceTree = "<group>";
-		};
-		7908829123A0D04400FA3BE5 /* 面向协议 */ = {
-			isa = PBXGroup;
-			children = (
-				7908829223A0D04400FA3BE5 /* SecondView.swift */,
-				7908829323A0D04400FA3BE5 /* FirstView.swift */,
-				7908829423A0D04400FA3BE5 /* AbstractViewProtocol.swift */,
-			);
-			path = "面向协议";
-			sourceTree = "<group>";
-		};
-		7908829523A0D04400FA3BE5 /* 面向协议编程 */ = {
-			isa = PBXGroup;
-			children = (
-				7908829623A0D04400FA3BE5 /* ShakeView.swift */,
-			);
-			path = "面向协议编程";
 			sourceTree = "<group>";
 		};
 		7908829823A0D04400FA3BE5 /* 策略模式  */ = {
@@ -1730,22 +1690,11 @@
 			isa = PBXGroup;
 			children = (
 				79DC642C23BA1C890073E22F /* 视频播放最外层 */,
-				79DC640723BA1A090073E22F /* OC链表实现责任链 */,
 				79DC640B23BA1A090073E22F /* UIRespender责任链 */,
 				79DC640E23BA1A090073E22F /* Swift-Chain_of_responsibility */,
 				79DC641023BA1A090073E22F /* TestDemo */,
 			);
 			path = "Chain Of Responsibility Pattern";
-			sourceTree = "<group>";
-		};
-		79DC640723BA1A090073E22F /* OC链表实现责任链 */ = {
-			isa = PBXGroup;
-			children = (
-				79DC640823BA1A090073E22F /* ActionProtocol.h */,
-				79DC640923BA1A090073E22F /* ResponOfChainManager.m */,
-				79DC640A23BA1A090073E22F /* ResponOfChainManager.h */,
-			);
-			path = "OC链表实现责任链";
 			sourceTree = "<group>";
 		};
 		79DC640B23BA1A090073E22F /* UIRespender责任链 */ = {
@@ -1780,13 +1729,6 @@
 			path = TestDemo;
 			sourceTree = "<group>";
 		};
-		79DC642B23BA1C3A0073E22F /* Protocol - Linked */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Protocol - Linked";
-			sourceTree = "<group>";
-		};
 		79DC642C23BA1C890073E22F /* 视频播放最外层 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1805,6 +1747,83 @@
 				79DC643523BA1C9F0073E22F /* FullScreenViewController.m */,
 			);
 			path = "旋转屏解决";
+			sourceTree = "<group>";
+		};
+		79DC643923BA1E170073E22F /* Protocol - 链表 */ = {
+			isa = PBXGroup;
+			children = (
+				79DC643A23BA1E170073E22F /* ProtocolLinked.swift */,
+			);
+			path = "Protocol - 链表";
+			sourceTree = "<group>";
+		};
+		79DC643C23BA1E1D0073E22F /* OC链表 - 实现责任链 */ = {
+			isa = PBXGroup;
+			children = (
+				79DC643D23BA1E1D0073E22F /* ActionProtocol.h */,
+				79DC643F23BA1E1D0073E22F /* ResponOfChainManager.h */,
+				79DC643E23BA1E1D0073E22F /* ResponOfChainManager.m */,
+			);
+			path = "OC链表 - 实现责任链";
+			sourceTree = "<group>";
+		};
+		79DC644123BA1F6C0073E22F /* 面向协议 */ = {
+			isa = PBXGroup;
+			children = (
+				79DC644223BA1F6C0073E22F /* OC */,
+				79DC644B23BA1F6C0073E22F /* Design-Pattern-in-Swift */,
+			);
+			path = "面向协议";
+			sourceTree = "<group>";
+		};
+		79DC644223BA1F6C0073E22F /* OC */ = {
+			isa = PBXGroup;
+			children = (
+				79DC644323BA1F6C0073E22F /* Protocol */,
+			);
+			path = OC;
+			sourceTree = "<group>";
+		};
+		79DC644323BA1F6C0073E22F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				79DC644423BA1F6C0073E22F /* ViewControllerChildOne.m */,
+				79DC644523BA1F6C0073E22F /* ViewControllerChildTwo.h */,
+				79DC644623BA1F6C0073E22F /* PaternalViewController.h */,
+				79DC644723BA1F6C0073E22F /* ViewControllerChildOne.h */,
+				79DC644823BA1F6C0073E22F /* BookVCProtocol.h */,
+				79DC644923BA1F6C0073E22F /* ViewControllerChildTwo.m */,
+				79DC644A23BA1F6C0073E22F /* PaternalViewController.m */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		79DC644B23BA1F6C0073E22F /* Design-Pattern-in-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				79DC644C23BA1F6C0073E22F /* 面向协议 */,
+				79DC645023BA1F6C0073E22F /* 面向协议编程 */,
+				79DC645223BA1F6C0073E22F /* SwiftDemosViewController.swift */,
+			);
+			path = "Design-Pattern-in-Swift";
+			sourceTree = "<group>";
+		};
+		79DC644C23BA1F6C0073E22F /* 面向协议 */ = {
+			isa = PBXGroup;
+			children = (
+				79DC644D23BA1F6C0073E22F /* SecondView.swift */,
+				79DC644E23BA1F6C0073E22F /* FirstView.swift */,
+				79DC644F23BA1F6C0073E22F /* AbstractViewProtocol.swift */,
+			);
+			path = "面向协议";
+			sourceTree = "<group>";
+		};
+		79DC645023BA1F6C0073E22F /* 面向协议编程 */ = {
+			isa = PBXGroup;
+			children = (
+				79DC645123BA1F6C0073E22F /* ShakeView.swift */,
+			);
+			path = "面向协议编程";
 			sourceTree = "<group>";
 		};
 		79DF39362200498400977BB4 /* LRULinkedMap */ = {
@@ -2116,7 +2135,6 @@
 				7993C86B228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m in Sources */,
 				33FAE4F020E2452D00BE7175 /* JHHeaderReusableView.m in Sources */,
 				33888FC320EDCCCB00E4A119 /* CAGradientLayerDemo.m in Sources */,
-				7908830623A0D04500FA3BE5 /* FirstView.swift in Sources */,
 				79DC642423BA1A0A0073E22F /* HTMiddleControlView.m in Sources */,
 				79EEEAAC2190156500848B59 /* PointTreeModel.m in Sources */,
 				33FAE4D820E243B800BE7175 /* CollectionDetaiDemo.m in Sources */,
@@ -2134,9 +2152,10 @@
 				33759E77212FAA7200D801C1 /* NSObject+RuntimeHelper.m in Sources */,
 				7908832C23A1097100FA3BE5 /* AdpterObject.swift in Sources */,
 				790882F923A0D04500FA3BE5 /* ClassClusterViewController.m in Sources */,
-				7908830723A0D04500FA3BE5 /* AbstractViewProtocol.swift in Sources */,
+				79DC645A23BA1F6C0073E22F /* SwiftDemosViewController.swift in Sources */,
 				79DC643623BA1C9F0073E22F /* FullScreenViewController.m in Sources */,
 				7908831523A0D04500FA3BE5 /* ZTKBJDownHelper.m in Sources */,
+				79DC645323BA1F6C0073E22F /* ViewControllerChildOne.m in Sources */,
 				79E96686237EBD8E00B49697 /* BlockModel.swift in Sources */,
 				7993C871228D6A4E001A6BFA /* DownLoadCell.m in Sources */,
 				79E96688237EBDEA00B49697 /* TestBlockModelViewController.swift in Sources */,
@@ -2154,8 +2173,8 @@
 				79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */,
 				33C2DF3721DCC5D400F96F32 /* PointTreeTypeOne.m in Sources */,
 				790882F723A0D04500FA3BE5 /* ClassClusterBaseTableViewCell.m in Sources */,
-				79DC642123BA1A0A0073E22F /* ResponOfChainManager.m in Sources */,
 				33C2DF3621DCC5D400F96F32 /* CompositePointTreeModel.m in Sources */,
+				79DC645923BA1F6C0073E22F /* ShakeView.swift in Sources */,
 				33A6A8DC215CC5F3001BE659 /* POPNumberAnimation.m in Sources */,
 				7908832323A0D04500FA3BE5 /* Condiment.m in Sources */,
 				338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */,
@@ -2165,7 +2184,6 @@
 				33E6CDD5210034E300422FC7 /* CellModel.m in Sources */,
 				79DC642723BA1A0A0073E22F /* HTBottomControlView.m in Sources */,
 				79C2B663221A646200C40F3A /* RunTimeTestViewController.m in Sources */,
-				33888FD320F05ADB00E4A119 /* ViewControllerChildTwo.m in Sources */,
 				79A1A5182269AD0800CEA92A /* SmoothBookmarkView.m in Sources */,
 				7993C86A228D68E6001A6BFA /* URLSessionDownManager.m in Sources */,
 				338ECBA520D25D080059BE0D /* DrawUnlineAndScore.m in Sources */,
@@ -2181,23 +2199,24 @@
 				33E6CE0521006D2000422FC7 /* CreatTreeView.m in Sources */,
 				790882F223A0D04500FA3BE5 /* MessageThrottle.m in Sources */,
 				33759E74212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.m in Sources */,
-				7908830923A0D04500FA3BE5 /* SwiftDemosViewController.swift in Sources */,
-				33888FD420F05ADB00E4A119 /* PaternalViewController.m in Sources */,
 				79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */,
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
 				79DF39392200499400977BB4 /* LRULinkedMap.m in Sources */,
 				79A1A51D2269AD0800CEA92A /* SmoothBookmarkViewController.m in Sources */,
-				33888FD220F05ADB00E4A119 /* ViewControllerChildOne.m in Sources */,
+				79DC645423BA1F6C0073E22F /* ViewControllerChildTwo.m in Sources */,
+				79DC644023BA1E1D0073E22F /* ResponOfChainManager.m in Sources */,
 				797EC362236C141100E21E44 /* SDTimeAlertPickerView.swift in Sources */,
 				7908831123A0D04500FA3BE5 /* CorrectResolver.m in Sources */,
 				7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */,
 				33C2DF3E21DCC66C00F96F32 /* PointTreeOneModelViewController.m in Sources */,
+				79DC645723BA1F6C0073E22F /* FirstView.swift in Sources */,
 				33C9711F211EB8DC00EAAD5E /* AbstractViewController.m in Sources */,
 				33888FE420F0683C00E4A119 /* UIView+Category.m in Sources */,
 				79E9668E237EBE1100B49697 /* CView.swift in Sources */,
 				79A0ECA82368263E004C10B0 /* XXH264DecodeTool.m in Sources */,
 				79EEEAA9219014BD00848B59 /* PointTreeStatisTableViewCell.m in Sources */,
 				7908831323A0D04500FA3BE5 /* ZTKDownHelperManager.m in Sources */,
+				79DC645623BA1F6C0073E22F /* SecondView.swift in Sources */,
 				3362E69F2130FBEF00A4B26D /* CustomKVO.m in Sources */,
 				7908832423A0D04500FA3BE5 /* Hamburger.m in Sources */,
 				79F9A5F5215214B4003704D7 /* NSTimer+WeakTimerBlock.m in Sources */,
@@ -2210,7 +2229,6 @@
 				79A1A51A2269AD0800CEA92A /* BookmarkContainerView.m in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
 				7908832023A0D04500FA3BE5 /* AbstractPlayerHelperManager.m in Sources */,
-				7908830823A0D04500FA3BE5 /* ShakeView.swift in Sources */,
 				33759E7A212FAB2A00D801C1 /* AbstractItem.m in Sources */,
 				33C971412124108D00EAAD5E /* DecoratorAView.m in Sources */,
 				33C971422124108D00EAAD5E /* TablePopDemoViewController.m in Sources */,
@@ -2225,9 +2243,11 @@
 				7901F9A221A678CE005BE8A6 /* NSTimerObserver.m in Sources */,
 				7908832823A0D04500FA3BE5 /* UIImage+Shadow.m in Sources */,
 				338FEB5F20DCFC7D0025631B /* DrawBaseAnimaltionView.m in Sources */,
+				79DC645823BA1F6C0073E22F /* AbstractViewProtocol.swift in Sources */,
 				794B100621DEF98300B91405 /* PointsTreeTableViewCell.m in Sources */,
 				7908832523A0D04500FA3BE5 /* UIImage+Transform.m in Sources */,
 				338FEBFF20E0F25A0025631B /* UIControlFactory.m in Sources */,
+				79DC643B23BA1E170073E22F /* ProtocolLinked.swift in Sources */,
 				794A6DB6238686B8008FB8D4 /* SegementContentView.m in Sources */,
 				790882F823A0D04500FA3BE5 /* ClassClusterTableViewCellA.m in Sources */,
 				33C9713F2124108D00EAAD5E /* PopTableView.m in Sources */,
@@ -2277,12 +2297,12 @@
 				790882F423A0D04500FA3BE5 /* ClassClusterModel.m in Sources */,
 				790882F323A0D04500FA3BE5 /* AbstractFactory.swift in Sources */,
 				338FEC0520E0F5B70025631B /* UIButton+Decorate.m in Sources */,
+				79DC645523BA1F6C0073E22F /* PaternalViewController.m in Sources */,
 				333D10A220D24FD5004D9241 /* DrawViewController.m in Sources */,
 				7931A51B21A7DAA5002A26C0 /* FilterCollectionViewLayout.m in Sources */,
 				33759E7D212FABBA00D801C1 /* NSObject+KVOHelper.m in Sources */,
 				79EEEAA1218FF5E600848B59 /* TreeViewModel.m in Sources */,
 				794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */,
-				7908830523A0D04500FA3BE5 /* SecondView.swift in Sources */,
 				792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */,
 				7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */,
 				79DC642323BA1A0A0073E22F /* Chain_of_responsibility.swift in Sources */,
