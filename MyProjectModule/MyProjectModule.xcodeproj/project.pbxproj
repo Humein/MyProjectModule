@@ -862,16 +862,16 @@
 		33888FF520F0C25400E4A119 /* DesignMode */ = {
 			isa = PBXGroup;
 			children = (
-				79DC644123BA1F6C0073E22F /* 面向协议 */,
-				79DC640623BA1A090073E22F /* Chain Of Responsibility Pattern */,
-				79FE526323B597DC007C54A1 /* Template Pattern */,
-				7908832A23A1095B00FA3BE5 /* Adpter Pattern */,
-				7908829823A0D04400FA3BE5 /* 策略模式  */,
-				7908825E23A0D04400FA3BE5 /* 工厂模式 */,
-				7908825823A0D04400FA3BE5 /* 生产者消费者 */,
-				790882DB23A0D04500FA3BE5 /* 装饰者模式 */,
+				79DC644123BA1F6C0073E22F /* Protocol Oriented Programming */,
+				79DC640623BA1A090073E22F /* Chain Of Responsibility */,
+				79FE526323B597DC007C54A1 /* Template */,
+				7908832A23A1095B00FA3BE5 /* Adpter */,
+				7908829823A0D04400FA3BE5 /* Strategy */,
+				7908825E23A0D04400FA3BE5 /* Factory */,
+				7908825823A0D04400FA3BE5 /* Produce Consume */,
+				790882DB23A0D04500FA3BE5 /* Decorate */,
 				790882D923A0D04400FA3BE5 /* Command */,
-				790882EF23A0D04500FA3BE5 /* Composite Pattern */,
+				790882EF23A0D04500FA3BE5 /* Composite */,
 			);
 			path = DesignMode;
 			sourceTree = "<group>";
@@ -1121,14 +1121,14 @@
 			path = AOPTrack;
 			sourceTree = "<group>";
 		};
-		7908825823A0D04400FA3BE5 /* 生产者消费者 */ = {
+		7908825823A0D04400FA3BE5 /* Produce Consume */ = {
 			isa = PBXGroup;
 			children = (
 				7908825923A0D04400FA3BE5 /* Produce-Consume.m */,
 				7908825A23A0D04400FA3BE5 /* Produce-Consume.h */,
 				7908825B23A0D04400FA3BE5 /* MessageThrottle */,
 			);
-			path = "生产者消费者";
+			path = "Produce Consume";
 			sourceTree = "<group>";
 		};
 		7908825B23A0D04400FA3BE5 /* MessageThrottle */ = {
@@ -1140,14 +1140,14 @@
 			path = MessageThrottle;
 			sourceTree = "<group>";
 		};
-		7908825E23A0D04400FA3BE5 /* 工厂模式 */ = {
+		7908825E23A0D04400FA3BE5 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
 				7908825F23A0D04400FA3BE5 /* 抽象工厂 */,
 				7908826123A0D04400FA3BE5 /* 类族 */,
 				7908827523A0D04400FA3BE5 /* FactoryObject.swift */,
 			);
-			path = "工厂模式";
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		7908825F23A0D04400FA3BE5 /* 抽象工厂 */ = {
@@ -1233,7 +1233,7 @@
 			path = "子类cellA";
 			sourceTree = "<group>";
 		};
-		7908829823A0D04400FA3BE5 /* 策略模式  */ = {
+		7908829823A0D04400FA3BE5 /* Strategy */ = {
 			isa = PBXGroup;
 			children = (
 				790882BF23A0D04400FA3BE5 /* NSInvocationForStrategyViewController.h */,
@@ -1249,7 +1249,7 @@
 				790882C023A0D04400FA3BE5 /* StrategyDesign */,
 				790882C223A0D04400FA3BE5 /* Player */,
 			);
-			path = "策略模式 ";
+			path = Strategy;
 			sourceTree = "<group>";
 		};
 		7908829923A0D04400FA3BE5 /* 支付方式 */ = {
@@ -1403,7 +1403,7 @@
 			path = Command;
 			sourceTree = "<group>";
 		};
-		790882DB23A0D04500FA3BE5 /* 装饰者模式 */ = {
+		790882DB23A0D04500FA3BE5 /* Decorate */ = {
 			isa = PBXGroup;
 			children = (
 				790882DC23A0D04500FA3BE5 /* DecoratorViewController.h */,
@@ -1411,7 +1411,7 @@
 				790882E523A0D04500FA3BE5 /* 分类实现 */,
 				790882EE23A0D04500FA3BE5 /* DecoratorViewController.m */,
 			);
-			path = "装饰者模式";
+			path = Decorate;
 			sourceTree = "<group>";
 		};
 		790882DD23A0D04500FA3BE5 /* 协议实现 */ = {
@@ -1443,20 +1443,20 @@
 			path = "分类实现";
 			sourceTree = "<group>";
 		};
-		790882EF23A0D04500FA3BE5 /* Composite Pattern */ = {
+		790882EF23A0D04500FA3BE5 /* Composite */ = {
 			isa = PBXGroup;
 			children = (
 				790882F023A0D04500FA3BE5 /* CompositePattern.playground */,
 			);
-			path = "Composite Pattern";
+			path = Composite;
 			sourceTree = "<group>";
 		};
-		7908832A23A1095B00FA3BE5 /* Adpter Pattern */ = {
+		7908832A23A1095B00FA3BE5 /* Adpter */ = {
 			isa = PBXGroup;
 			children = (
 				7908832B23A1097100FA3BE5 /* AdpterObject.swift */,
 			);
-			path = "Adpter Pattern";
+			path = Adpter;
 			sourceTree = "<group>";
 		};
 		7929B499219FE705004D335E /* RunLoop */ = {
@@ -1686,7 +1686,7 @@
 			path = socket;
 			sourceTree = "<group>";
 		};
-		79DC640623BA1A090073E22F /* Chain Of Responsibility Pattern */ = {
+		79DC640623BA1A090073E22F /* Chain Of Responsibility */ = {
 			isa = PBXGroup;
 			children = (
 				79DC642C23BA1C890073E22F /* 视频播放最外层 */,
@@ -1694,7 +1694,7 @@
 				79DC640E23BA1A090073E22F /* Swift-Chain_of_responsibility */,
 				79DC641023BA1A090073E22F /* TestDemo */,
 			);
-			path = "Chain Of Responsibility Pattern";
+			path = "Chain Of Responsibility";
 			sourceTree = "<group>";
 		};
 		79DC640B23BA1A090073E22F /* UIRespender责任链 */ = {
@@ -1767,13 +1767,13 @@
 			path = "OC链表 - 实现责任链";
 			sourceTree = "<group>";
 		};
-		79DC644123BA1F6C0073E22F /* 面向协议 */ = {
+		79DC644123BA1F6C0073E22F /* Protocol Oriented Programming */ = {
 			isa = PBXGroup;
 			children = (
 				79DC644223BA1F6C0073E22F /* OC */,
 				79DC644B23BA1F6C0073E22F /* Design-Pattern-in-Swift */,
 			);
-			path = "面向协议";
+			path = "Protocol Oriented Programming";
 			sourceTree = "<group>";
 		};
 		79DC644223BA1F6C0073E22F /* OC */ = {
@@ -1917,12 +1917,12 @@
 			path = Algorithms;
 			sourceTree = "<group>";
 		};
-		79FE526323B597DC007C54A1 /* Template Pattern */ = {
+		79FE526323B597DC007C54A1 /* Template */ = {
 			isa = PBXGroup;
 			children = (
 				79FE526423B5A081007C54A1 /* TemplatePattern.swift */,
 			);
-			path = "Template Pattern";
+			path = Template;
 			sourceTree = "<group>";
 		};
 		7C2E54819E680FA111814D28 /* Frameworks */ = {
