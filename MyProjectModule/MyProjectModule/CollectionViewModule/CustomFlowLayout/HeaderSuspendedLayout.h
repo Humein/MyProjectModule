@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+///  UICollectionView  Header 悬浮 Layout
 @interface HeaderSuspendedLayout : UICollectionViewFlowLayout
 //默认为64.0, default is 64.0
 @property (nonatomic, assign) CGFloat naviHeight;

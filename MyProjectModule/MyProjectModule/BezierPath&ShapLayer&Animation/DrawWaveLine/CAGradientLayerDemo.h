@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/// 渐变色的显示
 @interface CAGradientLayerDemo : UIView
 
 @end

@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-//   脉动 图片动画
-
+///   脉动 心跳 图片动画
 @interface DrawBaseAnimaltionView : UIView
 
 -(void)imageAnimaltion:(NSMutableArray *)imageArray;

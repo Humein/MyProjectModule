@@ -23,6 +23,7 @@
     
     NSMutableArray *VCarray = [NSMutableArray arrayWithObjects:@"ViewControllerChildOne",@"ViewControllerChildTwo", nil];
     Weak_Self;
+    /// 父子控制器 通过协议传值
     [VCarray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         Class class = NSClassFromString(VCarray[idx]);
         UIViewController *listVC = (UIViewController *)[[class alloc] init];

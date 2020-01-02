@@ -24,7 +24,7 @@
 - (void)POPNumberAnimation:(POPNumberAnimation *)numberAnimation currentValue:(CGFloat)currentValue;
 
 @end
-
+/// 数字动画
 @interface POPNumberAnimation : NSObject
 
 @property (nonatomic, weak) id <POPNumberAnimationDelegate>  delegate;

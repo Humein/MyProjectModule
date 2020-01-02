@@ -5,12 +5,10 @@
 //  Created by 鑫鑫 on 2018/6/22.
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
-
-
-// 进度动画
-
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
+/// 进度动画
 @interface DrawLine : UIView
 
 //自定义图形

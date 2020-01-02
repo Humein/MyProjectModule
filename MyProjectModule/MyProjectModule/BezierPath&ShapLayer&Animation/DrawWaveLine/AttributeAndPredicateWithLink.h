@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-// 正则 富文本 超链接
-
 NS_ASSUME_NONNULL_BEGIN
 
+/// 正则 富文本 超链接
 @interface AttributeAndPredicateWithLink : UIView
 -(void)refersheTheViewWithModel:(NSString *)HTStr;
 @end

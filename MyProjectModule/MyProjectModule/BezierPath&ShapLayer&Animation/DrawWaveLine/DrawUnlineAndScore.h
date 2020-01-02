@@ -6,12 +6,10 @@
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
 
-// 文字画波浪线
-
-
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+/// 文字画波浪线
 @interface DrawUnlineAndScore : NSObject
 /**
  parm must be correct

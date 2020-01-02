@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/// 星星水波填充动画
 @interface StartWaterView : UIView
 @property (nonatomic, strong) UIImage *maskImage;
 @property (nonatomic, strong) UIImage *borderImage;

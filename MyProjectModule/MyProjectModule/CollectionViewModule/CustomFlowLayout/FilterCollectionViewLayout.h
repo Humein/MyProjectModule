@@ -44,6 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+/// 选择标签瀑布流 Layout
 @interface FilterCollectionViewLayout : UICollectionViewLayout
 
 @property (nonatomic, weak) id<filterLayoutDeleaget> delegate;

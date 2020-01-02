@@ -41,7 +41,7 @@
     }
 }
 
-//如果点击图标外区域，停止抖动
+/// 如果点击图标外区域，停止抖动 touchesBegan 定位View XXMARK
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     CGPoint point = [touch locationInView:self.view];

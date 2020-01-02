@@ -1124,8 +1124,8 @@
 		7908825823A0D04400FA3BE5 /* Produce Consume */ = {
 			isa = PBXGroup;
 			children = (
-				7908825923A0D04400FA3BE5 /* Produce-Consume.m */,
 				7908825A23A0D04400FA3BE5 /* Produce-Consume.h */,
+				7908825923A0D04400FA3BE5 /* Produce-Consume.m */,
 				7908825B23A0D04400FA3BE5 /* MessageThrottle */,
 			);
 			path = "Produce Consume";
@@ -1407,9 +1407,9 @@
 			isa = PBXGroup;
 			children = (
 				790882DC23A0D04500FA3BE5 /* DecoratorViewController.h */,
+				790882EE23A0D04500FA3BE5 /* DecoratorViewController.m */,
 				790882DD23A0D04500FA3BE5 /* 协议实现 */,
 				790882E523A0D04500FA3BE5 /* 分类实现 */,
-				790882EE23A0D04500FA3BE5 /* DecoratorViewController.m */,
 			);
 			path = Decorate;
 			sourceTree = "<group>";
@@ -1417,12 +1417,12 @@
 		790882DD23A0D04500FA3BE5 /* 协议实现 */ = {
 			isa = PBXGroup;
 			children = (
-				790882DE23A0D04500FA3BE5 /* pie.h */,
-				790882DF23A0D04500FA3BE5 /* Condiment.h */,
-				790882E023A0D04500FA3BE5 /* Hamburger.h */,
-				790882E123A0D04500FA3BE5 /* pie.m */,
 				790882E223A0D04500FA3BE5 /* Decorator.h */,
+				790882DE23A0D04500FA3BE5 /* pie.h */,
+				790882E123A0D04500FA3BE5 /* pie.m */,
+				790882DF23A0D04500FA3BE5 /* Condiment.h */,
 				790882E323A0D04500FA3BE5 /* Condiment.m */,
+				790882E023A0D04500FA3BE5 /* Hamburger.h */,
 				790882E423A0D04500FA3BE5 /* Hamburger.m */,
 			);
 			path = "协议实现";
@@ -1432,13 +1432,13 @@
 			isa = PBXGroup;
 			children = (
 				790882E623A0D04500FA3BE5 /* UIImage+Title.h */,
+				790882EA23A0D04500FA3BE5 /* UIImage+Title.m */,
+				790882EC23A0D04500FA3BE5 /* UIImage+Transform.h */,
 				790882E723A0D04500FA3BE5 /* UIImage+Transform.m */,
 				790882E823A0D04500FA3BE5 /* UIImage+Shadow.h */,
-				790882E923A0D04500FA3BE5 /* UIImage+BaseFilter.m */,
-				790882EA23A0D04500FA3BE5 /* UIImage+Title.m */,
 				790882EB23A0D04500FA3BE5 /* UIImage+Shadow.m */,
-				790882EC23A0D04500FA3BE5 /* UIImage+Transform.h */,
 				790882ED23A0D04500FA3BE5 /* UIImage+BaseFilter.h */,
+				790882E923A0D04500FA3BE5 /* UIImage+BaseFilter.m */,
 			);
 			path = "分类实现";
 			sourceTree = "<group>";
@@ -1787,12 +1787,12 @@
 		79DC644323BA1F6C0073E22F /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				79DC644423BA1F6C0073E22F /* ViewControllerChildOne.m */,
-				79DC644523BA1F6C0073E22F /* ViewControllerChildTwo.h */,
-				79DC644623BA1F6C0073E22F /* PaternalViewController.h */,
-				79DC644723BA1F6C0073E22F /* ViewControllerChildOne.h */,
 				79DC644823BA1F6C0073E22F /* BookVCProtocol.h */,
+				79DC644523BA1F6C0073E22F /* ViewControllerChildTwo.h */,
 				79DC644923BA1F6C0073E22F /* ViewControllerChildTwo.m */,
+				79DC644723BA1F6C0073E22F /* ViewControllerChildOne.h */,
+				79DC644423BA1F6C0073E22F /* ViewControllerChildOne.m */,
+				79DC644623BA1F6C0073E22F /* PaternalViewController.h */,
 				79DC644A23BA1F6C0073E22F /* PaternalViewController.m */,
 			);
 			path = Protocol;
