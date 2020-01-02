@@ -73,9 +73,13 @@ extension CloseDelegate {
 //MARK: - 3: 使用协议 代替工厂模式
 protocol InitObjectProtocol {
     func initObject() -> Any
+    var abutton : UIButton? { get set }
+
 }
 
 class ButtonA: UIButton, InitObjectProtocol{
+    var abutton: UIButton?
+        
     func initObject() -> Any {
         let button = UIButton.init()
         return button
@@ -83,6 +87,8 @@ class ButtonA: UIButton, InitObjectProtocol{
 }
 
 class UIViewA: UIView, InitObjectProtocol{
+    var abutton: UIButton?
+    
     func initObject() -> Any {
         let view = UIView.init()
         return view
