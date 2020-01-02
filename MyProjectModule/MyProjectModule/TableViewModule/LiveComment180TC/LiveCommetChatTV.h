@@ -17,7 +17,7 @@
 
 @end
 
-
+/// 直播聊天 TableView
 @interface LiveCommetChatTV : UITableView
 
 /**
