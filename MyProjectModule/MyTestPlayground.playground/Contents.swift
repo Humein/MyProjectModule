@@ -666,7 +666,7 @@ results = String(results.prefix(results.count - 1))
  递归最简单
  */
 
-//二叉树结构
+/// 二叉树结构
 public class TreeNode: Equatable {
      public var parent: TreeNode?
      public var val: Int
@@ -1927,7 +1927,7 @@ func reverseStr(_ s: String) -> String{
 /* 四则运算符号。
   解法：num1^num2 = num1+num2（不考虑进位），进位计算： (num1 & num2) << 1
  */
-func sum(num1:Int, with num2:Int) -> Int {
+func sum(num1 :Int, with num2 :Int) -> Int {
     var num1 = num1
     var num2 = num2
     repeat {
@@ -1940,4 +1940,16 @@ func sum(num1:Int, with num2:Int) -> Int {
 }
 
 
+/**
+ - 二叉递归先序遍历
+   先输出节点的值，再递归遍历左右子树。中序和后序的递归类似，改变根节点输出位置即可。
+ */
+func recursionPreTraversal(_ tree: TreeNode?){
+    if tree != nil {
+        print("\(tree!.val)" + " ")
+        recursionPreTraversal(tree!.left)
+        recursionPreTraversal(tree!.right)
+    }
+}
+recursionPreTraversal(tnode1)
 

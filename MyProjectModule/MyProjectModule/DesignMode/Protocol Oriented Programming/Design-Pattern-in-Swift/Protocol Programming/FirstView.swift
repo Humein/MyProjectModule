@@ -44,8 +44,9 @@ class FirstView: UIView, AbstractViewProtocol//, SDTouchAddressBookManagerProtoc
     func eat(_ param: String) {
         print("eat......\(param)")
     }
-
 }
+
+
 
 //值得一提的是Swift 的扩展 extension可以用来继承协议,实现代码隔离，便于维护。
 extension FirstView: SDTouchAddressBookManagerProtocol{

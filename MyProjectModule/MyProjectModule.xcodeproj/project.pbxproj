@@ -1811,8 +1811,8 @@
 		79DC644C23BA1F6C0073E22F /* Protocol Programming */ = {
 			isa = PBXGroup;
 			children = (
-				79DC644D23BA1F6C0073E22F /* SecondView.swift */,
 				79DC644E23BA1F6C0073E22F /* FirstView.swift */,
+				79DC644D23BA1F6C0073E22F /* SecondView.swift */,
 				79DC644F23BA1F6C0073E22F /* AbstractViewProtocol.swift */,
 			);
 			path = "Protocol Programming";
