@@ -1700,8 +1700,8 @@
 		79DC640B23BA1A090073E22F /* UIRespender责任链 */ = {
 			isa = PBXGroup;
 			children = (
-				79DC640C23BA1A090073E22F /* UIResponder+UIResponderChain.m */,
 				79DC640D23BA1A090073E22F /* UIResponder+UIResponderChain.h */,
+				79DC640C23BA1A090073E22F /* UIResponder+UIResponderChain.m */,
 			);
 			path = "UIRespender责任链";
 			sourceTree = "<group>";

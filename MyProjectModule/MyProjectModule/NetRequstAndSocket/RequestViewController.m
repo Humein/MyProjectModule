@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    // Config:^  Block
     NSDictionary *dicPram = [NSDictionary dictionary];
     [RequestMediatorBaseBusniess requestConfig:^(RequestMediatorBaseBusniess *configObject) {
         configObject.requestUrl = @"http://123.103.86.52/p/v1/practices/91504021211538936";
