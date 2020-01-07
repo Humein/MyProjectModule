@@ -80,15 +80,9 @@
 }
 
 
+// 2
 
-
-
-
-// TEST
-
-
-
-//in custom button .m  overide this method
+//in custom button .m  overide this method  子类重写
 //扩大UIButton
 
 - (BOOL)CP0_pointInside:(CGPoint)point withEvent:(nullable UIEvent *)event {

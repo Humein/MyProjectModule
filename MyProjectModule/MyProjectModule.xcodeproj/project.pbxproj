@@ -658,6 +658,7 @@
 		333D105420CE74A8004D9241 /* MyProjectModule */ = {
 			isa = PBXGroup;
 			children = (
+				79104FDB23C47EEB00ACE8F4 /* Python */,
 				797EC357236BCCEF00E21E44 /* UIWidget */,
 				79A0EC9D236819C5004C10B0 /* MediaCodec */,
 				79040D9E2238AA0A0085335E /* AOPTrack */,
@@ -1462,6 +1463,13 @@
 				7908832B23A1097100FA3BE5 /* AdpterObject.swift */,
 			);
 			path = Adpter;
+			sourceTree = "<group>";
+		};
+		79104FDB23C47EEB00ACE8F4 /* Python */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Python;
 			sourceTree = "<group>";
 		};
 		7929B499219FE705004D335E /* RunLoop */ = {
