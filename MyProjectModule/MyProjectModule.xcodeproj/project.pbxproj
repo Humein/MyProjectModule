@@ -120,6 +120,7 @@
 		7908832823A0D04500FA3BE5 /* UIImage+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 790882EB23A0D04500FA3BE5 /* UIImage+Shadow.m */; };
 		7908832923A0D04500FA3BE5 /* DecoratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 790882EE23A0D04500FA3BE5 /* DecoratorViewController.m */; };
 		7908832C23A1097100FA3BE5 /* AdpterObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908832B23A1097100FA3BE5 /* AdpterObject.swift */; };
+		79104F8623C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 79104F8523C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m */; };
 		792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792591EB2285517100E7F734 /* LearnSwiftDemosViewController.swift */; };
 		7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */; };
 		792A730B21EF2FBF0098B94C /* Tree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 792A730921EF2FBE0098B94C /* Tree.plist */; };
@@ -450,6 +451,8 @@
 		790882EE23A0D04500FA3BE5 /* DecoratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecoratorViewController.m; sourceTree = "<group>"; };
 		790882F023A0D04500FA3BE5 /* CompositePattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CompositePattern.playground; sourceTree = "<group>"; };
 		7908832B23A1097100FA3BE5 /* AdpterObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdpterObject.swift; sourceTree = "<group>"; };
+		79104F8423C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureRecognizerWithMenuCopy.h; sourceTree = "<group>"; };
+		79104F8523C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureRecognizerWithMenuCopy.m; sourceTree = "<group>"; };
 		792591EA2285517000E7F734 /* MyProjectModule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyProjectModule-Bridging-Header.h"; sourceTree = "<group>"; };
 		792591EB2285517100E7F734 /* LearnSwiftDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSwiftDemosViewController.swift; sourceTree = "<group>"; };
 		7929B49B219FE74B004D335E /* RunLoopDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopDemoViewController.h; sourceTree = "<group>"; };
@@ -847,6 +850,8 @@
 				33759E70212FA08900D801C1 /* UIView+MethodSwizze.m */,
 				33759E73212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.h */,
 				33759E72212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.m */,
+				79104F8423C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.h */,
+				79104F8523C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m */,
 				33759E75212FAA7200D801C1 /* NSObject+RuntimeHelper.h */,
 				33759E76212FAA7200D801C1 /* NSObject+RuntimeHelper.m */,
 				33759E7B212FABBA00D801C1 /* NSObject+KVOHelper.h */,
@@ -2209,6 +2214,7 @@
 				7908831123A0D04500FA3BE5 /* CorrectResolver.m in Sources */,
 				7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */,
 				33C2DF3E21DCC66C00F96F32 /* PointTreeOneModelViewController.m in Sources */,
+				79104F8623C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m in Sources */,
 				79DC645723BA1F6C0073E22F /* FirstView.swift in Sources */,
 				33C9711F211EB8DC00EAAD5E /* AbstractViewController.m in Sources */,
 				33888FE420F0683C00E4A119 /* UIView+Category.m in Sources */,
