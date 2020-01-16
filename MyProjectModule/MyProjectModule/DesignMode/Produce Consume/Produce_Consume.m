@@ -6,7 +6,7 @@
 //  Copyright © 2019 xinxin. All rights reserved.
 //
 
-#import "Produce-Consume.h"
+#import "Produce_Consume.h"
 #import <UIKit/UIKit.h>
 @interface Produce_Consume()
 @property (nonatomic,strong) NSCondition *condition;
@@ -34,7 +34,7 @@
 
  */
 
-- (void)load{
+- (void)load {
     //开启计时器
     NSTimer *curTimer =[NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(producerFuncWithNumber:) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:curTimer forMode:NSDefaultRunLoopMode];
@@ -92,7 +92,7 @@
                 dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
                 NSLog(@"消费了%lu 个",(unsigned long)self.array.count);
                 [self.array removeAllObjects];
-                // 消费时机
+                // 消费时机 处理完成就可以消费了 不用特指？
                 [self reload];
                 dispatch_semaphore_signal(self.semaphore);
                 
@@ -100,30 +100,6 @@
         }
     });
 }
-
-
-/* log
- iOS-生产者消费者[5508:75404] 生产了1 个
- iOS-生产者消费者[5508:75407] 生产了2 个
- iOS-生产者消费者[5508:75406] 生产了3 个
- iOS-生产者消费者[5508:75411] 生产了4 个
- iOS-生产者消费者[5508:75440] 生产了5 个
- ....
- iOS-生产者消费者[5508:75405] 消费了20 个
- iOS-生产者消费者[5508:75405] 休眠2秒
- iOS-生产者消费者[5508:75545] 生产了1 个
- iOS-生产者消费者[5508:75531] 生产了2 个
- iOS-生产者消费者[5508:75528] 生产了3 个
- iOS-生产者消费者[5508:75526] 生产了4 个
- iOS-生产者消费者[5508:75521] 生产了5 个
-  .....
- iOS-生产者消费者[5508:75405] 消费了20 个
- iOS-生产者消费者[5508:75405] 休眠2秒
- iOS-生产者消费者[5508:75411] 生产了1 个
- ......
- */
-
-
 
 //MARK: - NSCondition 实现
 
