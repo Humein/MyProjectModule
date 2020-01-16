@@ -6,6 +6,8 @@
 //  Copyright © 2019 xinxin. All rights reserved.
 //
 
+typedef void(^Success)(id data);
+
 #import "Produce_Consume.h"
 #import <UIKit/UIKit.h>
 @interface Produce_Consume()
@@ -26,17 +28,11 @@
 /*
  我对于生产者和消费者的理解是：需要有一个缓存池，生产者和消费者需要在不同的线程中去分别操作缓存池，
  这时候就特别容易产生并发问题。
- 
- 我们公司自己项目中，有个场景，就是IM消息，当我们收到消息时候，进行一些业务逻辑的处理，还有数据库的操作，然后刷新列表。存在的问题是，如果消息接收的特别快，例如离线消息，可能登陆的是，有几百条消息拉取下来，如果每一条每一条的处理，将会导致两个问题：
-
- 上次刷新还没完成，下次就进来了。导致界面闪的问题
- 每条消息进行一次写入数据库操作，IO操作耗时，所以导致，性能问题严重
-
  */
 
 - (void)load {
     //开启计时器
-    NSTimer *curTimer =[NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(producerFuncWithNumber:) userInfo:nil repeats:YES];
+    NSTimer *curTimer =[NSTimer timerWithTimeInterval:0.05 target:self selector:@selector(producerFuncWithNumber:) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:curTimer forMode:NSDefaultRunLoopMode];
     [curTimer fire];
     
@@ -44,11 +40,6 @@
 }
 
 
--(void)reload{
-    NSLog(@"休眠2秒");
-    // 处理耗时操作
-    sleep(2);
-}
 - (NSMutableArray *)array{
     if (!_array) {
         _array = [NSMutableArray array];
@@ -65,15 +56,13 @@
 
 //生产者
 - (void)producerFuncWithNumber:(NSInteger )number{
-    
-    number = random()%10;
     //生产者生成数据
-    dispatch_queue_t t = dispatch_queue_create("222222", DISPATCH_QUEUE_CONCURRENT);
-    
+    dispatch_queue_t t = dispatch_queue_create("producerFuncWithNumber", DISPATCH_QUEUE_CONCURRENT);
+    number = random()%10;
     dispatch_async(t, ^{
         dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
-        
-        [self.array addObject:[NSString stringWithFormat:@"%ld",(long)number]];
+        NSString  *string = [NSString stringWithFormat:@"信息--------%ld",(long)number];
+        [self.array addObject:string];
         NSLog(@"生产了%lu 个",(unsigned long)self.array.count);
         dispatch_semaphore_signal(self.semaphore);
         
@@ -82,22 +71,29 @@
 
 //消费者
 - (void)consumerFunc{
-    
-    dispatch_queue_t t1 = dispatch_queue_create("11111", DISPATCH_QUEUE_CONCURRENT);
-    
+    dispatch_queue_t t1 = dispatch_queue_create("consumerFunc", DISPATCH_QUEUE_CONCURRENT);
     dispatch_async(t1, ^{
-        
         while (YES) {
             if (self.array.count > 0) {
                 dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
-                NSLog(@"消费了%lu 个",(unsigned long)self.array.count);
-                [self.array removeAllObjects];
-                // 消费时机 处理完成就可以消费了 不用特指？
-                [self reload];
-                dispatch_semaphore_signal(self.semaphore);
-                
+                NSArray *cosumerArray = self.array.mutableCopy;
+                [self processingWithArray:cosumerArray Success:^(id data) {
+                    NSLog(@"消费了%lu 个",(unsigned long)cosumerArray.count);
+                    [self.array removeAllObjects];
+                    dispatch_semaphore_signal(self.semaphore);
+                }];
             }
         }
+    });
+}
+
+-(void)processingWithArray:(NSArray *)array Success:(Success)success{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // 耗时操作
+        sleep(3);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            success(array);
+        });
     });
 }
 
@@ -119,8 +115,6 @@
 }
 
 // 消费者队列
-
-
 - (void)scheduleConsumerQueue {
     NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
         [self.condition lock];
@@ -128,9 +122,9 @@
             [self.condition wait];
         }
         UIImage *image = self.products.firstObject;
+        // do image 耗时操作
+
         [self.products removeObjectAtIndex:0];
-        //do something with image
-        
         [self.condition unlock];
     }];
     [self.consumerQueue addOperation:operation];
