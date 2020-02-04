@@ -14,6 +14,10 @@
 
 @implementation LiveCommentDemoViewController
 
+-(void)dealloc{
+    NSLog(@"%@ 销毁啦！", NSStringFromClass([self class]));
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     LiveCommetChatTV *view = [[LiveCommetChatTV alloc]initWithFrame:CGRectMake(0, 300, self.view.frame.size.width-100, 300)];
