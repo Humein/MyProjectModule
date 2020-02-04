@@ -19,7 +19,14 @@ void studyEngilsh(id self, SEL _cmd) {
     
     NSLog(@"动态添加了一个学习英语的方法");
 }
-
+/**
+ resolveinstancemethod 用法
+ 
+ // Class;给哪个类添加方法
+ // SEL:添加方法
+ // IMP:方法实现,函数名
+ // types:方法类型(不要去死记,官方文档中有)
+ */
 + (BOOL)resolveInstanceMethod:(SEL)sel {
     
     if (sel == NSSelectorFromString(@"studyEngilsh")) {

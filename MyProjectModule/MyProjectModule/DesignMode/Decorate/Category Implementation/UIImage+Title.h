@@ -10,5 +10,6 @@
 
 @interface UIImage (Title)
 @property(nonatomic, copy) NSString *title;
+@property(nonatomic, copy) NSString *titles;
 
 @end

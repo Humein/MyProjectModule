@@ -11,6 +11,8 @@
 @interface CustomAlertManagerView()<CAAnimationDelegate>{
     
 }
+#warning - Test CAAnimationDelegate 循环引用
+@property(nonatomic,strong) CABasicAnimation *strongAnimation;
 
 @property(nonatomic,strong) AbstractAlertView *alertView;
 @end
@@ -96,12 +98,17 @@
         
         [customView setFrame:CGRectMake((view.frame.size.width-customView.frame.size.width) / 2, (view.frame.size.height-customView.frame.size.height) / 2, customView.frame.size.width, customView.frame.size.height)];
         
-        CABasicAnimation *Animation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
-        Animation.duration= 0.4;
-        Animation.fromValue= [NSNumber numberWithFloat:0.0];
-        Animation.toValue  = [NSNumber numberWithFloat:1.0];
-        Animation.delegate = self;
-        [customView.layer addAnimation:Animation forKey:@"scale-layer"];
+        CABasicAnimation *animation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        animation.duration= 0.4;
+        animation.fromValue= [NSNumber numberWithFloat:0.0];
+        animation.toValue  = [NSNumber numberWithFloat:1.0];
+        animation.delegate = self;
+        [customView.layer addAnimation:animation forKey:@"scale-layer"];
+        
+//        _strongAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+//        _strongAnimation.delegate = self;
+//        [customView.layer addAnimation:_strongAnimation forKey:@"scale-layer"];
+
         
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2];
         
@@ -127,7 +134,8 @@
 -(void)showCustomViews:(AbstractAlertView *)customView InView:(UIView*)view completionBlock:(void (^)(NSInteger index))block{
     
     customView.handleBlock = block;
-    [self showCustomView:customView InView:customView];
+    
+    [self showCustomView:customView InView:view];
 }
 
 

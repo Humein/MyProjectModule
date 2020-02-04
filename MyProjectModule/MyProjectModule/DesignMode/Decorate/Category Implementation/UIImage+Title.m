@@ -11,6 +11,12 @@
 static char titleKey;
 
 @implementation UIImage (Title)
+
+- (void)test{
+//    self.titles = @"";
+//    _titles
+}
+
 - (NSString *)title
 {
     return objc_getAssociatedObject(self, &titleKey);
