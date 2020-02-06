@@ -18,10 +18,6 @@
 
 @implementation ThreadViewController
 
-
-
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     //请求依赖
@@ -52,6 +48,7 @@
 
 
 #pragma mark - 多线程测试
+
 -(void)threadTestOne{
     //1--   DISPATCH_QUEUE_SERIAL 串行  DISPATCH_QUEUE_CONCURRENT 并发
     _coderQueue =  dispatch_queue_create("com.hackemist.SDWebImageDownloaderOperationCoderQueue", DISPATCH_QUEUE_CONCURRENT);
@@ -153,7 +150,48 @@
 }
 
 
-#pragma mark - GCDGroup   1： dispatch_group_create dispatch_group_enter dispatch_group_leave
+// 死锁测试
+-(void)lockTest{
+    dispatch_queue_t myCustomQueue;
+    myCustomQueue = dispatch_queue_create("com.example.MyCustomQueue", NULL);
+
+    // 异步添加
+    dispatch_async(myCustomQueue, ^{
+        printf("做一些工作\n");
+    });
+     
+    printf("第一个 block 可能还没有执行\n");
+
+    // 同步添加
+    dispatch_sync(myCustomQueue, ^{
+        printf("做另外一些工作\n");
+    });
+    
+    printf("两个 block 都已经执行完毕\n");
+
+    dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
+    NSLog(@"1"); // 主队列 - 任务1
+    dispatch_async(queue, ^{
+        NSLog(@"2"); // queue-任务2
+        while (1) {
+            // 死循环
+        }
+        dispatch_sync(queue, ^{
+            NSLog(@"死锁"); // queue -任务3 要加到 queue中
+        });
+        NSLog(@"4"); // queue-任务4
+    });
+    NSLog(@"5"); // 主队列 - 任务5
+    
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        NSLog(@"死锁"); // 任务2
+    });
+
+}
+
+
+#pragma mark - GCDGroup
+//1： dispatch_group_create dispatch_group_enter dispatch_group_leave
 
 -(void)GCDGroup{
     
@@ -293,6 +331,7 @@
     
 }
 
+#pragma mark - NSOperation 和 NSOperationQueue
 
 
 @end
