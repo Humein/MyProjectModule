@@ -10,13 +10,28 @@
 
 @interface NSObject (RuntimeHelper)
 
-// RunTime增加方法
+/**
+ 消息机制
+ */
+-(void)sendMessage;
+
+/**
+ RunTime增加方法 利用到resolveInstanceMethod
+ */
 -(void)runTimeAddInstanceMethod;
 
 /**
  交换方法
  */
 + (void)pxy_swizzleMethodWithOriginalSelector:(SEL)originalSelector swizzledSelector:(SEL)swizzledSelector;
+
+/**
+ 消息转发
+ */
+
+/**
+ 动态关联属性
+ */
 
 /**
  获取类中的所有属性
@@ -37,4 +52,12 @@
  获取协议列表
  */
 - (void)pxy_printProtocolList;
+
+/**
+动态创建类和对象
+*/
+
+/**
+ 私有属性的访问与修改
+ */
 @end

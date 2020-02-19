@@ -77,7 +77,7 @@
 		79040D8B2236462A0085335E /* FlutterSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79040D8A2236462A0085335E /* FlutterSubViewController.m */; };
 		79040DA12238AA2D0085335E /* AspectTrackMananer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79040DA02238AA2D0085335E /* AspectTrackMananer.m */; };
 		79040DA72238D00D0085335E /* EventList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79040DA62238D00C0085335E /* EventList.plist */; };
-		790882F123A0D04500FA3BE5 /* Produce-Consume.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908825923A0D04400FA3BE5 /* Produce-Consume.m */; };
+		790882F123A0D04500FA3BE5 /* Produce_Consume.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908825923A0D04400FA3BE5 /* Produce_Consume.m */; };
 		790882F223A0D04500FA3BE5 /* MessageThrottle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908825D23A0D04400FA3BE5 /* MessageThrottle.m */; };
 		790882F323A0D04500FA3BE5 /* AbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908826023A0D04400FA3BE5 /* AbstractFactory.swift */; };
 		790882F423A0D04500FA3BE5 /* ClassClusterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908826623A0D04400FA3BE5 /* ClassClusterModel.m */; };
@@ -120,6 +120,7 @@
 		7908832823A0D04500FA3BE5 /* UIImage+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 790882EB23A0D04500FA3BE5 /* UIImage+Shadow.m */; };
 		7908832923A0D04500FA3BE5 /* DecoratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 790882EE23A0D04500FA3BE5 /* DecoratorViewController.m */; };
 		7908832C23A1097100FA3BE5 /* AdpterObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908832B23A1097100FA3BE5 /* AdpterObject.swift */; };
+		79104F8623C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 79104F8523C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m */; };
 		792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792591EB2285517100E7F734 /* LearnSwiftDemosViewController.swift */; };
 		7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */; };
 		792A730B21EF2FBF0098B94C /* Tree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 792A730921EF2FBE0098B94C /* Tree.plist */; };
@@ -139,6 +140,7 @@
 		7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C86D228D692A001A6BFA /* DownListViewController.m */; };
 		7993C871228D6A4E001A6BFA /* DownLoadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C870228D6A4E001A6BFA /* DownLoadCell.m */; };
 		7997BE69224090A50054F4D0 /* AbstractAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997BE68224090A50054F4D0 /* AbstractAlertView.m */; };
+		7998C6CF23CEA4E500DA3BEF /* DesignModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7998C6CE23CEA4E500DA3BEF /* DesignModeViewController.m */; };
 		79A0ECA123681B79004C10B0 /* VTBEncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */; };
 		79A0ECA52368262F004C10B0 /* XXH264EncodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA42368262F004C10B0 /* XXH264EncodeTool.m */; };
 		79A0ECA82368263E004C10B0 /* XXH264DecodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA72368263E004C10B0 /* XXH264DecodeTool.m */; };
@@ -361,8 +363,8 @@
 		79040D9F2238AA2D0085335E /* AspectTrackMananer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AspectTrackMananer.h; sourceTree = "<group>"; };
 		79040DA02238AA2D0085335E /* AspectTrackMananer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AspectTrackMananer.m; sourceTree = "<group>"; };
 		79040DA62238D00C0085335E /* EventList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EventList.plist; sourceTree = "<group>"; };
-		7908825923A0D04400FA3BE5 /* Produce-Consume.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Produce-Consume.m"; sourceTree = "<group>"; };
-		7908825A23A0D04400FA3BE5 /* Produce-Consume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Produce-Consume.h"; sourceTree = "<group>"; };
+		7908825923A0D04400FA3BE5 /* Produce_Consume.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Produce_Consume.m; sourceTree = "<group>"; };
+		7908825A23A0D04400FA3BE5 /* Produce_Consume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Produce_Consume.h; sourceTree = "<group>"; };
 		7908825C23A0D04400FA3BE5 /* MessageThrottle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageThrottle.h; sourceTree = "<group>"; };
 		7908825D23A0D04400FA3BE5 /* MessageThrottle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageThrottle.m; sourceTree = "<group>"; };
 		7908826023A0D04400FA3BE5 /* AbstractFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractFactory.swift; sourceTree = "<group>"; };
@@ -450,6 +452,8 @@
 		790882EE23A0D04500FA3BE5 /* DecoratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecoratorViewController.m; sourceTree = "<group>"; };
 		790882F023A0D04500FA3BE5 /* CompositePattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CompositePattern.playground; sourceTree = "<group>"; };
 		7908832B23A1097100FA3BE5 /* AdpterObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdpterObject.swift; sourceTree = "<group>"; };
+		79104F8423C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureRecognizerWithMenuCopy.h; sourceTree = "<group>"; };
+		79104F8523C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureRecognizerWithMenuCopy.m; sourceTree = "<group>"; };
 		792591EA2285517000E7F734 /* MyProjectModule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyProjectModule-Bridging-Header.h"; sourceTree = "<group>"; };
 		792591EB2285517100E7F734 /* LearnSwiftDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSwiftDemosViewController.swift; sourceTree = "<group>"; };
 		7929B49B219FE74B004D335E /* RunLoopDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopDemoViewController.h; sourceTree = "<group>"; };
@@ -482,6 +486,8 @@
 		7993C870228D6A4E001A6BFA /* DownLoadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownLoadCell.m; sourceTree = "<group>"; };
 		7997BE67224090A50054F4D0 /* AbstractAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractAlertView.h; sourceTree = "<group>"; };
 		7997BE68224090A50054F4D0 /* AbstractAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractAlertView.m; sourceTree = "<group>"; };
+		7998C6CD23CEA4E500DA3BEF /* DesignModeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignModeViewController.h; sourceTree = "<group>"; };
+		7998C6CE23CEA4E500DA3BEF /* DesignModeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignModeViewController.m; sourceTree = "<group>"; };
 		799E56C623974CF8004886E9 /* MyTestPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyTestPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		79A0EC9F23681B79004C10B0 /* VTBEncodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBEncodeViewController.h; sourceTree = "<group>"; };
 		79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTBEncodeViewController.m; sourceTree = "<group>"; };
@@ -655,6 +661,7 @@
 		333D105420CE74A8004D9241 /* MyProjectModule */ = {
 			isa = PBXGroup;
 			children = (
+				79104FDB23C47EEB00ACE8F4 /* Python */,
 				797EC357236BCCEF00E21E44 /* UIWidget */,
 				79A0EC9D236819C5004C10B0 /* MediaCodec */,
 				79040D9E2238AA0A0085335E /* AOPTrack */,
@@ -847,6 +854,8 @@
 				33759E70212FA08900D801C1 /* UIView+MethodSwizze.m */,
 				33759E73212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.h */,
 				33759E72212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.m */,
+				79104F8423C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.h */,
+				79104F8523C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m */,
 				33759E75212FAA7200D801C1 /* NSObject+RuntimeHelper.h */,
 				33759E76212FAA7200D801C1 /* NSObject+RuntimeHelper.m */,
 				33759E7B212FABBA00D801C1 /* NSObject+KVOHelper.h */,
@@ -872,6 +881,8 @@
 				790882DB23A0D04500FA3BE5 /* Decorate */,
 				790882D923A0D04400FA3BE5 /* Command */,
 				790882EF23A0D04500FA3BE5 /* Composite */,
+				7998C6CD23CEA4E500DA3BEF /* DesignModeViewController.h */,
+				7998C6CE23CEA4E500DA3BEF /* DesignModeViewController.m */,
 			);
 			path = DesignMode;
 			sourceTree = "<group>";
@@ -1124,8 +1135,8 @@
 		7908825823A0D04400FA3BE5 /* Produce Consume */ = {
 			isa = PBXGroup;
 			children = (
-				7908825A23A0D04400FA3BE5 /* Produce-Consume.h */,
-				7908825923A0D04400FA3BE5 /* Produce-Consume.m */,
+				7908825A23A0D04400FA3BE5 /* Produce_Consume.h */,
+				7908825923A0D04400FA3BE5 /* Produce_Consume.m */,
 				7908825B23A0D04400FA3BE5 /* MessageThrottle */,
 			);
 			path = "Produce Consume";
@@ -1459,6 +1470,13 @@
 			path = Adpter;
 			sourceTree = "<group>";
 		};
+		79104FDB23C47EEB00ACE8F4 /* Python */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Python;
+			sourceTree = "<group>";
+		};
 		7929B499219FE705004D335E /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
@@ -1700,8 +1718,8 @@
 		79DC640B23BA1A090073E22F /* UIRespender责任链 */ = {
 			isa = PBXGroup;
 			children = (
-				79DC640C23BA1A090073E22F /* UIResponder+UIResponderChain.m */,
 				79DC640D23BA1A090073E22F /* UIResponder+UIResponderChain.h */,
+				79DC640C23BA1A090073E22F /* UIResponder+UIResponderChain.m */,
 			);
 			path = "UIRespender责任链";
 			sourceTree = "<group>";
@@ -2159,7 +2177,7 @@
 				79E96686237EBD8E00B49697 /* BlockModel.swift in Sources */,
 				7993C871228D6A4E001A6BFA /* DownLoadCell.m in Sources */,
 				79E96688237EBDEA00B49697 /* TestBlockModelViewController.swift in Sources */,
-				790882F123A0D04500FA3BE5 /* Produce-Consume.m in Sources */,
+				790882F123A0D04500FA3BE5 /* Produce_Consume.m in Sources */,
 				33759E71212FA08900D801C1 /* UIView+MethodSwizze.m in Sources */,
 				79EEEA512182BD8C00848B59 /* LiveCommetChatTV.m in Sources */,
 				33C2DF3821DCC5D400F96F32 /* PointTreeTypeTwo.m in Sources */,
@@ -2209,6 +2227,7 @@
 				7908831123A0D04500FA3BE5 /* CorrectResolver.m in Sources */,
 				7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */,
 				33C2DF3E21DCC66C00F96F32 /* PointTreeOneModelViewController.m in Sources */,
+				79104F8623C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m in Sources */,
 				79DC645723BA1F6C0073E22F /* FirstView.swift in Sources */,
 				33C9711F211EB8DC00EAAD5E /* AbstractViewController.m in Sources */,
 				33888FE420F0683C00E4A119 /* UIView+Category.m in Sources */,
@@ -2249,6 +2268,7 @@
 				338FEBFF20E0F25A0025631B /* UIControlFactory.m in Sources */,
 				79DC643B23BA1E170073E22F /* ProtocolLinked.swift in Sources */,
 				794A6DB6238686B8008FB8D4 /* SegementContentView.m in Sources */,
+				7998C6CF23CEA4E500DA3BEF /* DesignModeViewController.m in Sources */,
 				790882F823A0D04500FA3BE5 /* ClassClusterTableViewCellA.m in Sources */,
 				33C9713F2124108D00EAAD5E /* PopTableView.m in Sources */,
 				7908830D23A0D04500FA3BE5 /* DownLoadViewController.m in Sources */,

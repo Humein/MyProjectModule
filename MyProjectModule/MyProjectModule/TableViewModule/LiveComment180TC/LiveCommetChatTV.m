@@ -8,7 +8,7 @@
 
 #import "LiveCommetChatTV.h"
 #import "liveChatModel.h"
-
+#import "YYWeakProxy.h"
 
 @interface LiveCommetChatTV()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSTimer     *timer;
@@ -21,6 +21,9 @@
 
 @implementation LiveCommetChatTV
 
+-(void)dealloc{
+    NSLog(@"%@ 销毁啦！", NSStringFromClass([self class]));
+}
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
     self = [super initWithFrame:frame style:style];
@@ -28,7 +31,15 @@
         
         [self setupUI];
         self.scrollIndex = 0;
-        _timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(action) userInfo:nil repeats:YES];
+//        _timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(action) userInfo:nil repeats:YES];
+        // YYWeakProxy
+        _timer = [NSTimer timerWithTimeInterval:2
+                                                  target:[YYWeakProxy proxyWithTarget:self]
+                                                selector:@selector(action)
+                                                userInfo:nil
+                                                 repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
+
     }
     return self;
 }
@@ -74,9 +85,16 @@
 
 - (void)setSpeed:(NSInteger)speed{
     _speed = speed;
-    [_timer setFireDate:[NSDate distantFuture]];
-    _timer = nil;
-    _timer = [NSTimer scheduledTimerWithTimeInterval:speed target:self selector:@selector(action) userInfo:nil repeats:YES];
+//    [_timer setFireDate:[NSDate distantFuture]];
+//    _timer = nil;
+//    _timer = [NSTimer scheduledTimerWithTimeInterval:speed target:self selector:@selector(action) userInfo:nil repeats:YES];
+    _timer = [NSTimer timerWithTimeInterval:speed
+                                              target:[YYWeakProxy proxyWithTarget:self]
+                                            selector:@selector(action)
+                                            userInfo:nil
+                                             repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
+
 }
 
 //MARK: - UITableViewControllerDataSoure

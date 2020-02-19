@@ -121,7 +121,6 @@
 //    如果不会执行动画、
     springAnimation.removedOnCompletion = NO;
     
-    
     [view.layer addAnimation:springAnimation forKey:@"springAnimation"];
 }
 

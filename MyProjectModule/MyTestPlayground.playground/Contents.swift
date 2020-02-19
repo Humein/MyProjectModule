@@ -568,8 +568,6 @@ func findClosestElements(_ arr: [Int],_ k: Int,_ x: Int) -> [Int]{
     return Array(arr[p1..<(p1+k)])
 }
 
-
-
 let chapter = findClosestElements([1,3,5,7,9], 1, 8)
 
 //278. 第一个错误的版本
@@ -875,7 +873,7 @@ func maxSubArrayDP(_ nums: [Int]) -> Int {
     if nums.count == 0 {
         return -1
     }
-    //最优子结构
+    //最优子结构 一般·用数组去存储
     var curMaxSub = [nums[0]]
     var sum = 0
     

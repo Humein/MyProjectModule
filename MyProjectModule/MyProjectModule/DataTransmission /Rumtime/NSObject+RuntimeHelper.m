@@ -9,14 +9,37 @@
 #import "NSObject+RuntimeHelper.h"
 #import <UIKit/UIKit.h>
 #import <objc/message.h>
+#import "AbstractItem.h"
 
 @implementation NSObject (RuntimeHelper)
 
 
-
 #pragma mark - Plubic Methods
 
+/**
+ 消息机制
+ */
+-(void)sendMessage{
+        
+    // 1.创建对象
+    AbstractItem *msg = ((AbstractItem * (*)(id, SEL))objc_msgSend)((id)[AbstractItem class], @selector(alloc));
+
+    // 2.初始化对象
+    msg = ((AbstractItem * (*)(id, SEL))objc_msgSend)((id)msg, @selector(init));
+    
+    // 3.调用带一个参数但无返回值的方法
+    ((void (*)(id, SEL, NSString *))objc_msgSend)((id)msg, @selector(hasArguments:), @"带一个参数，但无返回值");
+}
+
+- (void)hasArguments:(NSString *)arg {
+  NSLog(@"%s was called, and argument is %@", __FUNCTION__, arg);
+}
+
+/**
+ RunTime增加方法
+ */
 -(void)runTimeAddInstanceMethod{
+    // UIButton+ButtonBlockCategory
     UIButton *newBtn = [UIButton  new];
     [newBtn performSelector:@selector(studyEngilsh)];
 }
@@ -43,6 +66,16 @@
         method_exchangeImplementations(originMethod, swizzledMethod);
     }
 }
+
+/**
+ 消息转发 https://www.jianshu.com/p/1c8f708653c0
+ */
+
+
+/**
+ 动态关联属性
+ */
+
 
 /**
  获取类中的所有属性
@@ -119,5 +152,90 @@
     NSLog(@"");
 }
 
+/**
+ 动态创建类和对象
+ */
+- (void)creatClass {
+    //定义一个 Person 类, 继承自 NSObject
+    Class Person = objc_allocateClassPair([NSObject class], "Person", 0);
+    //添加属性
+    objc_property_attribute_t type = { "T", "@\"NSString\"" };
+    objc_property_attribute_t ownership = { "C", "" }; // C = copy
+    objc_property_attribute_t backingivar  = { "V", "_privateName" };
+    objc_property_attribute_t attrs[] = { type, ownership, backingivar };
+    class_addProperty(Person, "name", attrs, 3);
+    //添加方法
+    class_addMethod(Person, @selector(name), (IMP)nameGetter, "@@:");
+    class_addMethod(Person, @selector(setName:), (IMP)nameSetter, "v@:@");
+    //注册该类
+    objc_registerClassPair(Person);
+    
+    //获取实例
+    id instance = [[Person alloc] init];
+    NSLog(@"%@", instance);
+    [instance setName:@"hxn"];
+    
+    NSLog(@"%@", [instance name]);
+    
+    
+}
+//get方法
+NSString *nameGetter(id self, SEL _cmd) {
+    Ivar ivar = class_getInstanceVariable([self class], "_privateName");
+    return object_getIvar(self, ivar);
+}
+//set方法
+void nameSetter(id self, SEL _cmd, NSString *newName) {
+    Ivar ivar = class_getInstanceVariable([self class], "_privateName");
+    id oldName = object_getIvar(self, ivar);
+    if (oldName != newName) object_setIvar(self, ivar, [newName copy]);
+}
 
+/**
+私有属性的访问与修改
+*/
+
+//  KVC 方式访问和修改私有变量
+- (void)printSonNameWithKVC
+{
+    AbstractItem *son = [[AbstractItem alloc] init];
+    
+    // 修改前
+    NSString *name = [son valueForKey:@"name"];
+    NSLog(@"-name:%@", name);
+    
+    // 修改后
+    [son setValue:@"Jabit" forKey:@"name"];
+    NSString *nameReset = [son valueForKey:@"name"];
+    NSLog(@"-nameReset:%@", nameReset);
+}
+
+//Runtime 方式访问和修改私有变量
+- (void)printSonNameWithRuntime
+{
+    AbstractItem *son = [[AbstractItem alloc] init];
+    
+    unsigned int count = 0;
+    Ivar *members = class_copyIvarList([AbstractItem class], &count);
+    for (int i = 0; i < count; i++) {
+        Ivar ivar = members[i];
+        const char *memberName = ivar_getName(ivar);
+        const char *memberType = ivar_getTypeEncoding(ivar);
+        //依次打印属性名称和属性类型
+        NSLog(@"%s : %s", memberName, memberType);
+        
+        if (strcmp(memberName, "_name") == 0) {
+            // 修改前
+            NSString *name = (NSString *)object_getIvar(son, members[i]);
+            NSLog(@"-name:%@", name);
+            
+            // 修改后
+            object_setIvar(son, members[i], @"Jabit");
+            NSString *nameReset = (NSString *)object_getIvar(son, members[i]);
+            NSLog(@"-nameReset:%@", nameReset);
+            
+            break;
+        }
+    }
+}
 @end
