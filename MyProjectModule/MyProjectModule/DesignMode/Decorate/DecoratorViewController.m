@@ -12,6 +12,7 @@
 #import "pie.h"
 #import "UIImage+Shadow.h"
 #import "UIImage+Transform.h"
+#import "UIImage+Title.h"
 @interface DecoratorViewController ()
 
 @end
@@ -49,13 +50,6 @@
     
     
     UIImage* finalImage = [[image imageWithTransform:finalTransform] imageWithDropShadow];
-    
-    
-    
-
-    
-    
-
 }
 
 - (void)didReceiveMemoryWarning {

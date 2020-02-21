@@ -69,7 +69,6 @@
 {
     if (_fileHandle == nil) {
         NSURL *url = [NSURL fileURLWithPath:self.location];
-        
         NSLog(@"-----------%@", self.location);
         _fileHandle = url ? [NSFileHandle fileHandleForWritingToURL:url error:nil] : nil;
     }

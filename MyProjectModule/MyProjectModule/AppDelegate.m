@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "AspectTrackMananer.h"
+#import "AppDelegate+DownManagerHelper.h"
 @interface AppDelegate ()
 
 @end
@@ -50,6 +51,10 @@
     self.window.tintColor = [UIColor redColor];
     [self.window makeKeyAndVisible];
 //    self.window.frame = [[UIScreen mainScreen] bounds];
+
+    self.appName = @"";
+//    _name = @"";    测试 分类 的 成员变量
+//    self.bppName = @"";
 
     [AspectTrackMananer trackAspectHooks];
     return YES;

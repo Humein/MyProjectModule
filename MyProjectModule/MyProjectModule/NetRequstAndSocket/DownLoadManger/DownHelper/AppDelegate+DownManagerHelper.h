@@ -14,6 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (copy, nonatomic, readonly) void (^completionHandler)();
 
+/// add  objc_setAssociatedObject
+@property (copy, nonatomic) NSString *appName;
+
+/// no objc_setAssociatedObject
+@property (copy, nonatomic) NSString *bppName;
+
 
 @end
 

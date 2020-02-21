@@ -23,5 +23,14 @@
     objc_setAssociatedObject(self, CompletionHandlerName, completionHandler, OBJC_ASSOCIATION_COPY);
 }
 
+- (void)setAppName:(NSString *)appName
+{
+    objc_setAssociatedObject(self, @selector(appName), appName, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (NSString *)appName
+{
+    return objc_getAssociatedObject(self, _cmd);
+}
 
 @end
