@@ -212,6 +212,8 @@
     dispatch_group_enter(group);
     
     
+    
+    
     dispatch_group_async(group, dispatch_queue_create("com.dispatch.test", DISPATCH_QUEUE_CONCURRENT), ^{
         
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://www.baidu.com"]];
@@ -245,6 +247,7 @@
     });
     
 }
+
 
 
 #pragma mark - 信号量

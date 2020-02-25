@@ -132,6 +132,8 @@
 		794B100621DEF98300B91405 /* PointsTreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */; };
 		794B100921DF02E300B91405 /* AbstractTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100821DF02E300B91405 /* AbstractTableViewController.m */; };
 		794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */; };
+		794E82592403EED6008DFFB9 /* LOTAnimationLRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 794E82582403EED6008DFFB9 /* LOTAnimationLRUCache.m */; };
+		794E825E2404BBA8008DFFB9 /* LRUCacheSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E825D2404BBA7008DFFB9 /* LRUCacheSimple.swift */; };
 		7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */; };
 		797EC360236C10F900E21E44 /* SDOPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC35F236C10F900E21E44 /* SDOPickerView.swift */; };
 		797EC362236C141100E21E44 /* SDTimeAlertPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */; };
@@ -473,6 +475,9 @@
 		794B100821DF02E300B91405 /* AbstractTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractTableViewController.m; sourceTree = "<group>"; };
 		794B100A21DF2CF700B91405 /* TreeDiffModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeDiffModelViewController.h; sourceTree = "<group>"; };
 		794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreeDiffModelViewController.m; sourceTree = "<group>"; };
+		794E82572403EED6008DFFB9 /* LOTAnimationLRUCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOTAnimationLRUCache.h; sourceTree = "<group>"; };
+		794E82582403EED6008DFFB9 /* LOTAnimationLRUCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOTAnimationLRUCache.m; sourceTree = "<group>"; };
+		794E825D2404BBA7008DFFB9 /* LRUCacheSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRUCacheSimple.swift; sourceTree = "<group>"; };
 		7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Radius.swift"; sourceTree = "<group>"; };
 		797EC35F236C10F900E21E44 /* SDOPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDOPickerView.swift; sourceTree = "<group>"; };
 		797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimeAlertPickerView.swift; sourceTree = "<group>"; };
@@ -1849,6 +1854,9 @@
 			children = (
 				79DF39372200499400977BB4 /* LRULinkedMap.h */,
 				79DF39382200499400977BB4 /* LRULinkedMap.m */,
+				794E82572403EED6008DFFB9 /* LOTAnimationLRUCache.h */,
+				794E82582403EED6008DFFB9 /* LOTAnimationLRUCache.m */,
+				794E825D2404BBA7008DFFB9 /* LRUCacheSimple.swift */,
 			);
 			path = LRULinkedMap;
 			sourceTree = "<group>";
@@ -2221,6 +2229,7 @@
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
 				79DF39392200499400977BB4 /* LRULinkedMap.m in Sources */,
 				79A1A51D2269AD0800CEA92A /* SmoothBookmarkViewController.m in Sources */,
+				794E825E2404BBA8008DFFB9 /* LRUCacheSimple.swift in Sources */,
 				79DC645423BA1F6C0073E22F /* ViewControllerChildTwo.m in Sources */,
 				79DC644023BA1E1D0073E22F /* ResponOfChainManager.m in Sources */,
 				797EC362236C141100E21E44 /* SDTimeAlertPickerView.swift in Sources */,
@@ -2232,6 +2241,7 @@
 				33C9711F211EB8DC00EAAD5E /* AbstractViewController.m in Sources */,
 				33888FE420F0683C00E4A119 /* UIView+Category.m in Sources */,
 				79E9668E237EBE1100B49697 /* CView.swift in Sources */,
+				794E82592403EED6008DFFB9 /* LOTAnimationLRUCache.m in Sources */,
 				79A0ECA82368263E004C10B0 /* XXH264DecodeTool.m in Sources */,
 				79EEEAA9219014BD00848B59 /* PointTreeStatisTableViewCell.m in Sources */,
 				7908831323A0D04500FA3BE5 /* ZTKDownHelperManager.m in Sources */,

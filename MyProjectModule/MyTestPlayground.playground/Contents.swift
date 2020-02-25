@@ -72,9 +72,9 @@ class listNode {
 }
 
 public class LinkNode{
-    public var val :Int
-    public var next :LinkNode?
-    public init(_ val :Int) {
+    public var val: Int
+    public var next: LinkNode?
+    public init(_ val: Int) {
         self.val = val
         self.next = nil
     }
@@ -104,6 +104,8 @@ class code1 {
     
 }
 
+
+
 //MARK:- list1：
 //1-100 相加
 func recursion100(_ n :Int) -> Int{
@@ -114,6 +116,8 @@ func recursion100(_ n :Int) -> Int{
     return recursion100(n - 1) + n
 }
 recursion100(10)
+
+
 
 //遍历子view
 func recursionSubView(_ view :UIView){
