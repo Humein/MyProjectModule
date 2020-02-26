@@ -215,6 +215,48 @@
     
 }
 
-
+//{
+//    // Collection容器
+//    private lazy var collectionView: UICollectionView = {
+//        let layout = UICollectionViewFlowLayout()
+//        let itemWidth = (UIScreen.main.bounds.width - 95 - 40 - 20)/2
+//        layout.itemSize = CGSize(width: itemWidth, height: 42)
+//        layout.minimumLineSpacing = 20
+//        layout.scrollDirection =  .vertical
+//        layout.sectionInset = UIEdgeInsets(top: 0, left:20, bottom: 20, right:20)
+//        
+//        let view = UICollectionView(frame: CGRect.init(x:0, y:0, width:UIScreen.main.bounds.width - 95, height:UIScreen.main.bounds.height - 130), collectionViewLayout: layout)
+//        view.backgroundColor = .white
+//        view.showsVerticalScrollIndicator = true
+//        view.register(SDMajorCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "SDMajorCollectionViewCell")
+//        view.delegate = self
+//        view.dataSource = self
+//        return view
+//    }()
+//    
+//    var dataArray = [Any]()
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        setupUI()
+//    }
+//    
+//    func setupUI() {
+//        self.view.addSubview(collectionView)
+//        collectionView.reloadData()
+//    }
+//    
+//    
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 39
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SDMajorCollectionViewCell", for: indexPath) as! SDMajorCollectionViewCell
+//        return cell
+//    }
+//    
+//
+//}
 
 @end

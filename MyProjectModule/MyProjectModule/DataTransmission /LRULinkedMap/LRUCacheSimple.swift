@@ -9,8 +9,21 @@
  - 双向链表+字典
   - 字典 存取
   - 链表 控制cache 容量
+  疑问：既然字典就可以0(1) 存取值，为何还需要链表？
+  答：链表的作用主要用来控制容量。单独使用字典没有别的辅助，是无法控制哪些需要删除的。所以要用另一个容器去记录哪些需要删除。
+     - 先尝试下数组(顺序存储结构)，数组读/取效率比较高，但插入/删除不好。
+     - 栈的话(栈是一个有序线性表，只能在栈顶执行插入和删除), 不合适
+     - 队列的特性(先进先出) 也不合适
+     - 剩下的就是链表了(一种动态数据结构,链表的空间利用率比较高。插入和删除时比较容易，读取数据时比较麻烦<只能从head开始找>)
+ 
+   - 总结： 链表既然查询很慢，但为什么还要双向链表实现。
+       - 利用 HashMap 查询   O(1)
+       - 利用 双向链表 操作数据 O(1)
+
+ 
  
  - 链表因为查询，只能从head开始。所以一般用head代表一个链表
+ 
  - self.head?.next = next 中的.next 一般解读为指向下一个节点
    - 单向链表
       1->2->nil
@@ -18,11 +31,13 @@
       1<->2<->3<->nil
    - 循环链表
     1<->2<->1 ?????
+ 
  */
 
 import UIKit
 
 class ListNode {
+    // 添加key 为了绑定字典 方便删除字典中数据
     var key: Int
     var value: Int
     var next: ListNode?
@@ -35,6 +50,7 @@ class ListNode {
 }
 
 class LRUCacheSimple {
+    // 绑定一个 字典类型( key<Int> ) cache 用于存储
     private var cache = [Int: ListNode]()
     // 最大size
     private var max_size = 0
@@ -49,26 +65,38 @@ class LRUCacheSimple {
         max_size = capacity
     }
     
+    // 取值 类型(value)
     public func get(_ key: Int) -> Int {
+        // 判断key是否已经存在
         if let node = cache[key] {
+            // 如果存在，将命中的值移动到头部
             moveToHead(node: node)
+            // 返回值
             return node.value
         }
         return -1
     }
     
+    // 存值 类型(key:value)
     public func put(_ key: Int, _ value: Int) {
+        // 判断key是否已经存在
         if let node = cache[key] {
+            // 更新节点的值
             node.value = value
+            // 如果存在，将命中的值移动到头部
             moveToHead(node: node)
         } else {
+            // 创建新节点
             let node = ListNode(key: key, value: value)
-            
+            // 添加节点到链表
             addNode(node: node)
+            // 添加节点到字典
             cache[key] = node
-            
+    
             cur_size += 1
+            // 如果超过设置的容量
             if cur_size > max_size {
+                // 移除链表的尾部节点  移除字典中相应的值
                 removeTail()
                 cur_size -= 1
             }
@@ -79,6 +107,7 @@ class LRUCacheSimple {
     private func addNode(node: ListNode) {
         // 如果现在链表为空，直接赋值
         if self.head == nil {
+            // 绑定 链表的地方
             self.head = node
             self.tail = node
         } else {
@@ -147,15 +176,67 @@ class LRUCacheSimple {
         if let tail = self.tail {
             // 从字典中移除
             cache.removeValue(forKey: tail.key)
-            // 尾部上一个节点替换当前尾部 
-            self.tail = tail.prev
-            //
-            self.tail?.next = nil
+            // 从链表中移除
+            do {
+                // 尾部上一个节点替换当前尾部
+                self.tail = tail.prev
+                // 尾部下一个节点指向 nil
+                self.tail?.next = nil
+            }
             return tail
         }
         return nil
     }
 }
 
+//class ListNode {
+//    var key: Int
+//    var value: Int
+//    var next: ListNode?
+//    var prev: ListNode?
+//
+//    init(key: Int, value: Int) {
+//        self.key = key
+//        self.value = value
+//    }
+//}
 
+class ListNodeB {
+    var val: Int?
+    var key: Int?
+    var next: ListNodeB?
+    var prev: ListNodeB?
+    
+    init(key: Int?, val: Int?){
+        self.val = val
+        self.key = key
+    }
+}
 
+class LRUCache {
+    var head: ListNodeB?
+    var tail: ListNodeB?
+    var max_size: Int = 0
+    var cur_size: Int = 0
+    var cache = [Int: ListNodeB]()
+    
+    init(size: Int) {
+        self.max_size = size
+    }
+    
+//    // 取值 类型(value)
+//    public func get(_ key: Int) -> Int {
+//        // 判断key是否已经存在
+//        if let node = cache[key] {
+//            // 如果存在，将命中的值移动到头部
+//            moveToHead(node: node)
+//            // 返回值
+//            return node.value
+//        }
+//        return -1
+//    }
+    func get(key: Int?) -> Int {
+        
+    }
+    
+}
