@@ -83,13 +83,13 @@ class LRUCacheSimple {
         if let node = cache[key] {
             // 更新节点的值
             node.value = value
-            // 如果存在，将命中的值移动到头部
+            // 然后将命中的值移动到头部
             moveToHead(node: node)
         } else {
-            // 创建新节点
+            // 转成节点
             let node = ListNode(key: key, value: value)
-            // 添加节点到链表
-            addNode(node: node)
+            // 添加节点到链表头部
+            addToHeadNode(node: node)
             // 添加节点到字典
             cache[key] = node
     
@@ -104,7 +104,7 @@ class LRUCacheSimple {
     }
     
     /// 添加节点到头部
-    private func addNode(node: ListNode) {
+    private func addToHeadNode(node: ListNode) {
         // 如果现在链表为空，直接赋值
         if self.head == nil {
             // 绑定 链表的地方
@@ -135,6 +135,8 @@ class LRUCacheSimple {
             /*
              node = node.next 这个直接修改 node因为是不可变 行不通
              只能转化为 可变 的对象
+             node.prev?.next = node.next
+             node.next?.prev = node.prev
              */
             
             // 取出 上一节点
@@ -189,18 +191,6 @@ class LRUCacheSimple {
     }
 }
 
-//class ListNode {
-//    var key: Int
-//    var value: Int
-//    var next: ListNode?
-//    var prev: ListNode?
-//
-//    init(key: Int, value: Int) {
-//        self.key = key
-//        self.value = value
-//    }
-//}
-
 class ListNodeB {
     var val: Int
     var key: Int
@@ -233,6 +223,59 @@ class LRUCache {
     }
     
     func moveToHeader(node: ListNodeB){
+        if self.head === node {
+            return
+        }
+
+        node.prev?.next = node.next
+        if node.next == nil {
+            node.next?.prev = node.prev
+        }else{
+            self.tail = node.prev
+        }
+        
+        let temp = self.head
+        self.head = node
+        self.head?.next = temp
+        temp?.prev = self.head
     }
     
+    
+    func put(key: Int, val: Int){
+        if let node = cache[key]{
+            node.val = val
+            moveToHeader(node: node)
+        }else{
+            let node = ListNodeB.init(key: key, val: val)
+            addToHead(node: node)
+            cache[key] = node
+
+            cur_size += 1
+            if cur_size > max_size{
+                removeTail()
+                cur_size -= 1
+            }
+        }
+    }
+    
+    func addToHead(node: ListNodeB){
+        if self.head == nil {
+            self.head = node
+            self.tail = node
+        } else {
+            let temp = self.head
+            self.head = node
+            self.head?.next = temp
+            temp?.prev = self.head
+        }
+    }
+    
+    func removeTail(){
+        if let tail = self.tail {
+            cache.removeValue(forKey: tail.key)
+            self.tail = tail.prev
+            self.tail?.next = nil
+        }
+    }
+
 }
