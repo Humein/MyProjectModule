@@ -1,0 +1,46 @@
+//
+//  UISampleExample.swift
+//  MyProjectModule
+//
+//  Created by Zhang Xin Xin on 2020/2/26.
+//  Copyright © 2020 xinxin. All rights reserved.
+//
+
+import UIKit
+
+class UISampleExample: UIView {
+
+
+    
+    
+   
+    
+    
+    
+    /// 部分圆角 + 阴影效果
+    func shadowAndMask() {
+        let view1 = UIView()
+        let view2 = UIView()
+        view1.frame = CGRect(x: 100, y: 200, width: 100, height: 100);
+        view2.frame = CGRect(x: 0, y: 0, width: 100, height: 100);
+        view2.backgroundColor = .yellow
+        let maskPath = UIBezierPath(roundedRect: view1.bounds,
+                                    byRoundingCorners: [.topRight, .bottomLeft, .bottomRight],
+                                    cornerRadii: CGSize(width: 10, height: 10))
+        let layer = CALayer()
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 1
+        layer.shadowPath = maskPath.cgPath
+        layer.shadowOffset = .zero
+        layer.shadowRadius = 3
+        view1.layer.addSublayer(layer)
+        let maskLayer2 = CAShapeLayer()
+        maskLayer2.path = maskPath.cgPath
+        view2.layer.mask = maskLayer2
+        self.addSubview(view1)
+        view1.addSubview(view2)
+    }
+
+}
+
+

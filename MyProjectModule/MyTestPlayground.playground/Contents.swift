@@ -1670,13 +1670,41 @@ func maxCute_Greed(length: Int) -> Int { return -1}
 
 // offer18（一）：在O(1)时间删除链表结点/ 237. 删除链表中的节点
 
-// 简单删除
+// 单链表简单删除: 指针指向的对象不变，节点的值覆盖，需要被删除node不是尾节点
 func deleteNode(_ node: listNode?) {
-    node!.val = node!.next!.val;
-    node!.next = node!.next!.next;
+    if node == nil{
+        return
+    }
+    if node!.next == nil {
+        return
+    }
+    // node -> node.next -> node.next.next
+    node!.val = node!.next!.val
+    // 当前节点的下一个节点 指向 下下一个节点
+    node!.next = node!.next!.next
 }
 
-//有多种边界 删除
+//单链表 删除  node可能是尾节点  这个还是有点问题 下面那个运行没报错
+func deleteNodes(_ head: inout listNode?, _ toBeDeleted: listNode?){
+    if head == nil || toBeDeleted == nil {
+        return
+    }
+    
+    if head!.val == toBeDeleted!.val {
+        head = nil
+        return
+    }
+    
+    while head != nil {
+        if head?.next?.val == toBeDeleted?.val {
+            head?.next = head?.next?.next
+        }
+        print(head?.val)
+        head = head?.next
+    }
+}
+
+// 一个函数改变函数外面变量的值(将一个值类型参数以引用方式传递)，这时，Swift提供的inout关键字就可以实现
 func deleteNode(_ head: inout listNode?, _ toBeDeleted: listNode?){
     if head == nil || toBeDeleted == nil {
         return
@@ -1702,6 +1730,32 @@ func deleteNode(_ head: inout listNode?, _ toBeDeleted: listNode?){
         node = nil
     }
 }
+
+func testDelete() {
+    let node5 = listNode(value: 5, next: nil)
+    let node4 = listNode(value: 4, next: node5)
+    let node3 = listNode(value: 3, next: node4)
+    let node2 = listNode(value: 2, next: node3)
+    var node1: listNode? = listNode(value: 1, next: node2)
+    
+    printList(node1!)
+//    deleteNodes(&node1, node5)
+    deleteNode(node4)
+    printList(node1!)
+}
+/// 打印链表
+func printList(_ node: listNode) -> [Int]{
+    var nodes = [Int]()
+    var curNode :listNode? = node
+    while curNode != nil {
+        nodes.append(curNode!.val)
+        curNode = curNode!.next
+    }
+    return nodes
+}
+
+testDelete()
+
 
 //MARK:-list19:
 //83. 删除排序链表中的重复元素
