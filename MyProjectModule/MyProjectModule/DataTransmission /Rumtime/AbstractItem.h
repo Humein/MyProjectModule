@@ -53,4 +53,6 @@ return self;\
 
 @property (nonatomic,assign)float itemWidth;
 
+@property (nonatomic,copy)NSString *name;
+
 @end

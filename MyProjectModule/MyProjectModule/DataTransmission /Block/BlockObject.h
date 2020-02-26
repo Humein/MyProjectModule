@@ -12,11 +12,10 @@
 #import <UIKit/UIKit.h>
 @interface BlockObject : UIViewController
 
-// 1 无返回值 有参数 非匿名 block
-typedef void(^ClickButtonBlock)(NSUInteger buttonType, UIButton * clickButton);
-
 #pragma mark ---  1 无返回值 有参数 非匿名(属性) block
+typedef void(^ClickButtonBlock)(NSUInteger buttonType, UIButton * clickButton);
 typedef void (^PopBlock)(void);
+
 @property (nonatomic,copy)  void (^rightBarItemClickBlock)(UIButton *button, NSInteger index);
 @property (nonatomic,copy) PopBlock popBlock;
 
@@ -25,14 +24,13 @@ typedef void (^PopBlock)(void);
 
 typedef void(^Success)(id data);
 typedef void(^Failure)(NSString *errorMessage);
-//异步回调
+/// 异步回调
 
 - (void)requestNoticeDataWithParameter:(NSDictionary *)dic isWaiting:(BOOL)isWaiting success:(Success)success failure:(Failure)failure;
-
 -(void)activeEventBlock:(void(^)(BOOL state))block;
 
 
-// 我 先抛出 后 更新
+/// 我先抛出后更新
 typedef void (^EventBlock)(id titleTyple);
 typedef void(^SessionHeaderEvent)(id eventType,UIButton *sender, EventBlock event);
 @property (nonatomic, copy) SessionHeaderEvent buttonCallback;
@@ -41,16 +39,14 @@ typedef void(^SessionHeaderEvent)(id eventType,UIButton *sender, EventBlock even
 
 typedef void (^MiniProgramResultBlock)(int miniProgramResult);
 typedef void (^IDBlock)(id configModel);
-//无需实例对象 配置对象的参数
-- (void)jumpConfig:(IDBlock )configBlock completeBlock:(MiniProgramResultBlock)completeBlock;
-
+/// block对象做为入参数 - 可以对象话/规范化入参
+- (void)jumpConfig:(IDBlock)configBlock completeBlock:(MiniProgramResultBlock)completeBlock;
+//这个也是  +(void)requestConfig:(RequestMediatorBaseBusniessBlock)configBlock withSuccess:(Succsess)succsess andFailure:(Failure)failure
 
 
 #pragma mark --- 3 有返回值 有参数 匿名 block
 //创建NavigationBarItem    block作为返回值,链式编程
 - (BlockObject * (^) (NSString * rightName,CGRect frame,BOOL isImage))rightBarItem;
-
-
 
 
 

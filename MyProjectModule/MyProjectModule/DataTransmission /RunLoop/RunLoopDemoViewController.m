@@ -35,8 +35,6 @@ typedef void(^RunloopBlock)(void);
     
     NSLog(@"current:%@",[NSRunLoop currentRunLoop].currentMode);
 
-    
-    
     [self addtask:^{
         
         NSLog(@"1111111111");

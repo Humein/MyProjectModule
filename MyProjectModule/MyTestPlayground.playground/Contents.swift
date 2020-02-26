@@ -2,6 +2,7 @@ import UIKit
 //MARK:- 递归
 /*  递归详解  https://mp.weixin.qq.com/s/mJ_jZZoak7uhItNgnfmZvQ
  步骤
+ 0. 是否有边界
  1. 定义递归函数功能
  2. 寻找结束条件
  3. 寻找等价关系
@@ -43,6 +44,23 @@ import UIKit
    
  */
 
+/// 二叉树结构
+public class TreeNode: Equatable {
+     public var parent: TreeNode?
+     public var val: Int
+     public var left: TreeNode?
+     public var right: TreeNode?
+    
+     public init(value: Int, left: TreeNode?, right: TreeNode?) {
+         self.val = value
+         self.left = left
+         self.right = right
+     }
+    
+    public static func == (lhs: TreeNode, rhs: TreeNode) -> Bool {
+        return lhs.val == rhs.val
+    }
+ }
 
 class listNode {
     var next: listNode?
@@ -53,6 +71,14 @@ class listNode {
     }
 }
 
+public class LinkNode{
+    public var val: Int
+    public var next: LinkNode?
+    public init(_ val: Int) {
+        self.val = val
+        self.next = nil
+    }
+}
 
 //MARK:- codeInterview
 // 
@@ -78,6 +104,8 @@ class code1 {
     
 }
 
+
+
 //MARK:- list1：
 //1-100 相加
 func recursion100(_ n :Int) -> Int{
@@ -88,6 +116,8 @@ func recursion100(_ n :Int) -> Int{
     return recursion100(n - 1) + n
 }
 recursion100(10)
+
+
 
 //遍历子view
 func recursionSubView(_ view :UIView){
@@ -110,10 +140,20 @@ recursionSubView(view)
  可以看到，「冒泡排序」在序列基本有序的情况下，效率会好一些。平均来看，「冒泡排序」的时间复杂度是 O(n^2) 。
  冒泡排序是一种稳定的排序
  */
+
 func bubbleSort(unsortedArray: inout [Int]){
     guard unsortedArray.count > 1 else{
         return
     }
+    
+    for i in 0..<2 {
+        print(i)
+    }
+    
+    for i in 0...2 {
+        print(i)
+    }
+    
     for i in 0 ..< unsortedArray.count - 1 {
         var exchanged = false
         for j in 0 ..< unsortedArray.count - 1 - i {
@@ -170,9 +210,11 @@ var nums2 = [2,5,6,7,8,9,10],       nn = 7
 mergeArrays(&nums1,mm,nums2,nn)
 
 //栈实现
-/*   也可以通过数组去实现 removeLast addapend
+/*   也可以通过数组去实现 popLast append
  
-  swift 中struct,enum 均可以包含类方法和实例方法,swift官方是不建议在struct,enum 的普通方法里修改属性变量,但是在func 前面添加 mutating 关键字之后就可以方法内修改.
+  swift 中struct,enum 均可以包含类方法和实例方法,swift官方是不建议在struct,enum 的普通方法里修改属性变量,但是在func 前面添加
+ 
+ ing 关键字之后就可以方法内修改.
  */
 protocol Stack {
   /// 持有的元素类型
@@ -190,6 +232,7 @@ protocol Stack {
   /// 出栈
   mutating func pop() -> Element?
 }
+
 struct IntegerStack: Stack {
   typealias Element = Int
   
@@ -240,34 +283,35 @@ func singleNum(_ nums :[Int]) -> Int{
 }
 
 //206. 反转链表  递归还是在借助函数调用栈的思想，其实本质上也是一个栈。
-public class LinkNode{
-    public var val :Int
-    public var next :LinkNode?
-    public init(_ val :Int) {
-        self.val = val
-        self.next = nil
-    }
-}
 
 /*
  等价条件中，一定是范围不断在缩小，对于链表来说，就是链表的节点个数不断在变小
   reverseList(head) 等价于 ** reverseList(head.next)** + 改变一下1，2两个节点的指向。好了，等价关系找出来了
  */
-func reverseLinkRec(_ head: LinkNode?) -> LinkNode?{
+func reverseLinkRec(_ head: listNode?) -> listNode?{
     
     if head == nil || head?.next == nil {
         return head
     }
     
     //反转第一个节点之后的链表, 我们先把递归的结果保存起来，先不返回，因为我们还不清楚这样递归是对还是错。，
+    print("=========")
     let newHead = reverseLinkRec(head?.next) // 栈顶
-    
+    print("---------")
+
 //  只需要把节点 2 的 next 指向 1，然后把 1 的 next 指向 null,不就行了？
-    head?.next?.next = head // 栈顶 --> 栈底
-    head?.next = nil // 栈顶 --> 栈底
-    
+    head?.next?.next = head
+    head?.next = nil 
     return newHead
 }
+
+var head0 = listNode.init(value: 0, next: nil)
+var head1 = listNode.init(value: 1, next: head0)
+var head2 = listNode.init(value: 2, next: head1)
+var head3 = listNode.init(value: 3, next: head2)
+var head = listNode.init(value: 4, next: head3)
+reverseLinkRec(head)
+
 
 func ReverseListWhile(_ head: LinkNode?) -> LinkNode? {
     var reversedHead: LinkNode? = nil
@@ -316,7 +360,7 @@ print(isSubsequence("acd","abcd"))
  双指针
 现在，为了使面积最大化，我们需要考虑更长的两条线段之间的区域。如果我们试图将指向较长线段的指针向内侧移动，矩形区域的面积将受限于较短的线段而不会获得任何增加。但是，在同样的条件下，移动指向较短线段的指针尽管造成了矩形宽度的减小，但却可能会有助于面积的增大。因为移动较短线段的指针会得到一条相对较长的线段，这可以克服由宽度减小而引起的面积减小。
 */
-func getMaxArea(_ height :[Int]) -> Int{
+func getMaxArea(_ height: [Int]) -> Int{
     // 记得边界
     if height.count == 0 {
         return 0
@@ -391,7 +435,10 @@ func reverseString(_ s: inout [Character]){
     }
 }
 
-//236. 二叉树的最近公共祖先 / 235. 二叉搜索树的最近公共祖先 / 怎么查找两个view的公共父视图
+/// 235. 二叉搜索树的最近公共祖先 / 怎么查找两个view的公共父视图
+/**
+ 用两个「指针」，分别指向两个路径的根节点，然后从根节点开始，找第一个不同的节点，第一个不同节点的上一个公共节点
+ */
 
 func findSuperViews(_ view: UIView?) -> [UIView] {
     var view = view
@@ -401,10 +448,17 @@ func findSuperViews(_ view: UIView?) -> [UIView] {
     var resultArray = [UIView]()
     while view != nil {
         resultArray.append(view!)
+         // next
         view = view?.superview
     }
     return resultArray
 }
+
+let viewA = UIView()
+let viewB = UIView()
+viewA.addSubview(viewB)
+findSuperViews(viewB)
+
 func findRecentRoot(_ viewA: UIView?,_ viewB: UIView?) -> UIView? {
     let aArray = findSuperViews(viewA)
     let bArray = findSuperViews(viewB)
@@ -420,37 +474,33 @@ func findRecentRoot(_ viewA: UIView?,_ viewB: UIView?) -> UIView? {
     return rootView
 }
 
-/*
-用两个「指针」，分别指向两个路径的根节点，然后从根节点开始，找第一个不同的节点，第一个不同节点的上一个公共节点
- 
- + (NSArray *)superViews:(UIView *)view {
-     if (view == nil) {
-         return @[];
-     }
-     NSMutableArray *result = [NSMutableArray array];
-     while (view != nil) {
-         [result addObject:view];
-         view = view.superview;
-     }
-     return [result copy];
- }
+/// 236. 二叉树的最近公共祖先
+/**
+ - https://blog.csdn.net/qq_28114615/article/details/85715017
+   根据临界条件，实际上可以发现这道题已经被简化为查找以root为根结点的树上是否有p结点或者q结点，如果有就返回p结点或q结点，否则返回null。
+   这样一来其实就很简单了，从左右子树分别进行递归，即查找左右子树上是否有p结点或者q结点，就一共有4种情况：
+ */
 
- + (UIView *)commonView_3:(UIView *)viewA andView:(UIView *)viewB {
-     NSArray *arr1 = [self superViews:viewA];
-     NSArray *arr2 = [self superViews:viewB];
-     NSInteger p1 = arr1.count - 1;
-     NSInteger p2 = arr2.count - 1;
-     UIView *answer = nil;
-     while (p1 >= 0 && p2 >= 0) {
-         if (arr1[p1] == arr2[p2]) {
-             answer = arr1[p1];
-         }
-         p1--;
-         p2--;
-     }
-     return answer;
- }
-*/
+func findCloseRoot(_ root: TreeNode?, _ p: TreeNode?, _ q: TreeNode?) -> TreeNode?{
+    // 边界 以及 递归结束条件
+    if root == p || root == q || root == nil {
+        return root
+    }
+    
+    let left = findCloseRoot(root?.left, p, q)
+    let right = findCloseRoot(root?.right, p, q)
+    
+    if left == nil && right == nil {
+        return nil
+    }else if left == nil && right != nil{
+        return right
+    }else if right == nil && left != nil{
+        return left
+    }
+    
+    return root
+}
+
 
 
 
@@ -521,8 +571,6 @@ func findClosestElements(_ arr: [Int],_ k: Int,_ x: Int) -> [Int]{
     
     return Array(arr[p1..<(p1+k)])
 }
-
-
 
 let chapter = findClosestElements([1,3,5,7,9], 1, 8)
 
@@ -666,23 +714,7 @@ results = String(results.prefix(results.count - 1))
  递归最简单
  */
 
-//二叉树结构
-public class TreeNode: Equatable {
-     public var parent: TreeNode?
-     public var val: Int
-     public var left: TreeNode?
-     public var right: TreeNode?
-    
-     public init(value: Int, left: TreeNode?, right: TreeNode?) {
-         self.val = value
-         self.left = left
-         self.right = right
-     }
-    
-    public static func == (lhs: TreeNode, rhs: TreeNode) -> Bool {
-        return lhs.val == rhs.val
-    }
- }
+
 
 // 递归
 func invertTree(_ root :TreeNode?) -> TreeNode? {
@@ -845,7 +877,7 @@ func maxSubArrayDP(_ nums: [Int]) -> Int {
     if nums.count == 0 {
         return -1
     }
-    //最优子结构
+    //最优子结构 一般·用数组去存储
     var curMaxSub = [nums[0]]
     var sum = 0
     
@@ -1638,13 +1670,41 @@ func maxCute_Greed(length: Int) -> Int { return -1}
 
 // offer18（一）：在O(1)时间删除链表结点/ 237. 删除链表中的节点
 
-// 简单删除
+// 单链表简单删除: 指针指向的对象不变，节点的值覆盖，需要被删除node不是尾节点
 func deleteNode(_ node: listNode?) {
-    node!.val = node!.next!.val;
-    node!.next = node!.next!.next;
+    if node == nil{
+        return
+    }
+    if node!.next == nil {
+        return
+    }
+    // node -> node.next -> node.next.next
+    node!.val = node!.next!.val
+    // 当前节点的下一个节点 指向 下下一个节点
+    node!.next = node!.next!.next
 }
 
-//有多种边界 删除
+//单链表 删除  node可能是尾节点  这个还是有点问题 下面那个运行没报错
+func deleteNodes(_ head: inout listNode?, _ toBeDeleted: listNode?){
+    if head == nil || toBeDeleted == nil {
+        return
+    }
+    
+    if head!.val == toBeDeleted!.val {
+        head = nil
+        return
+    }
+    
+    while head != nil {
+        if head?.next?.val == toBeDeleted?.val {
+            head?.next = head?.next?.next
+        }
+        print(head?.val)
+        head = head?.next
+    }
+}
+
+// 一个函数改变函数外面变量的值(将一个值类型参数以引用方式传递)，这时，Swift提供的inout关键字就可以实现
 func deleteNode(_ head: inout listNode?, _ toBeDeleted: listNode?){
     if head == nil || toBeDeleted == nil {
         return
@@ -1670,6 +1730,32 @@ func deleteNode(_ head: inout listNode?, _ toBeDeleted: listNode?){
         node = nil
     }
 }
+
+func testDelete() {
+    let node5 = listNode(value: 5, next: nil)
+    let node4 = listNode(value: 4, next: node5)
+    let node3 = listNode(value: 3, next: node4)
+    let node2 = listNode(value: 2, next: node3)
+    var node1: listNode? = listNode(value: 1, next: node2)
+    
+    printList(node1!)
+//    deleteNodes(&node1, node5)
+    deleteNode(node4)
+    printList(node1!)
+}
+/// 打印链表
+func printList(_ node: listNode) -> [Int]{
+    var nodes = [Int]()
+    var curNode :listNode? = node
+    while curNode != nil {
+        nodes.append(curNode!.val)
+        curNode = curNode!.next
+    }
+    return nodes
+}
+
+testDelete()
+
 
 //MARK:-list19:
 //83. 删除排序链表中的重复元素
@@ -1927,7 +2013,7 @@ func reverseStr(_ s: String) -> String{
 /* 四则运算符号。
   解法：num1^num2 = num1+num2（不考虑进位），进位计算： (num1 & num2) << 1
  */
-func sum(num1:Int, with num2:Int) -> Int {
+func sum(num1 :Int, with num2 :Int) -> Int {
     var num1 = num1
     var num2 = num2
     repeat {
@@ -1937,6 +2023,43 @@ func sum(num1:Int, with num2:Int) -> Int {
         num2 = carry
     } while (num2 != 0);
     return num1
+}
+
+
+/**
+ - 二叉递归先序遍历
+    - 考察到一个节点后，即刻输出该节点的值，并继续遍历其左右子树。(根左右)
+   先输出节点的值，再递归遍历左右子树。中序和后序的递归类似，改变根节点输出位置即可。
+ */
+func recursionPreTraversal(_ tree: TreeNode?){
+    if tree != nil {
+        print("\(tree!.val)" + " ")
+        recursionPreTraversal(tree!.left)
+        recursionPreTraversal(tree!.right)
+    }
+}
+recursionPreTraversal(tnode1)
+
+/**
+- 二叉递归中序遍历
+  - 考察到一个节点后，将其暂存，遍历完左子树后，再输出该节点的值，然后遍历右子树。(左根右)
+过程和递归先序遍历类似
+*/
+func recursionMidTraversal(_ root: TreeNode?) {
+    if root != nil {
+        recursionMidTraversal(root?.left)
+        print("\(root!.val)" + " " )
+        recursionMidTraversal(root?.right)
+    }
+}
+recursionMidTraversal(tnode1)
+
+/**
+- 二叉递归后序遍历
+*/
+
+func recursionTrailTraversal(_ root: TreeNode?) {
+    
 }
 
 

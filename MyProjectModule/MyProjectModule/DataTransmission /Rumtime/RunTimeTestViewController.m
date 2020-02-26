@@ -8,6 +8,7 @@
 
 #import "RunTimeTestViewController.h"
 #import "NSObject+RuntimeHelper.h"
+#import <objc/message.h>
 @interface RunTimeTestViewController ()
 @property (nonatomic , assign) NSObject *weakObject;
 @property (nonatomic , strong) NSObject *strongObject;
@@ -63,6 +64,21 @@
     
     NSLog(@"%@=====nil",[self description]);
     
+}
+
+/// weak associated object
+- (void)weakAssociatedObject:(NSObject *)object{
+   {
+    id __weak weakObject = object;
+    id (^block)() = ^{ return weakObject; };
+    objc_setAssociatedObject(self, @selector(context), block, OBJC_ASSOCIATION_COPY);
+    }
+
+//     {
+//    id (^block)() = objc_getAssociatedObject(self, @selector(context));
+//    id curContext = (block ? block() : nil);
+//    return curContext;
+//    }
 }
 
 

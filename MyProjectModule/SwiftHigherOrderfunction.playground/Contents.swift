@@ -231,7 +231,7 @@ enum DataError: Error {
     case NoData
 }
 ///嵌套枚举
-enum Area {
+enum AreaNest {
     enum DongGuan {
         case NanCheng
         case DongCheng
@@ -242,7 +242,7 @@ enum Area {
         case CheBei
     }
 }
-print(Area.DongGuan.DongCheng)
+print(AreaNest.DongGuan.DongCheng)
 
 ///关联值 就是枚举的case可以传值
 enum Trade {
@@ -282,10 +282,11 @@ enum Device {
 
 print(Device.iPhone.introduced())
 
-///协议
+/// 协议
 protocol CustomStringConvertible {
   var description: String { get }
 }
+
 enum Trades :CustomStringConvertible{
     case Buy(stock:String,amount:Int)
     case Sell(stock:String,amount:Int)

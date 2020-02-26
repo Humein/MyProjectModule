@@ -44,8 +44,19 @@ class SwiftDemosViewController: UIViewController {
         let gaff = BladeRunner(test: GeneticTest())
         _ = gaff.testIfAndroid(rachel)
         gaff.videoPlay()
+        
+        //MARK:- LRU
+        let cache = LRUCacheSimple(2)
+        cache.put(1, 1)
+        cache.put(2, 2)
+        cache.put(3, 3)
+        cache.put(4, 4)
+        print(cache.get(4))
+        print(cache.get(3))
+        print(cache.get(2))
+        print(cache.get(1))
+        
 
     }
-
 
 }

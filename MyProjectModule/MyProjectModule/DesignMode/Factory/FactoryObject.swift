@@ -7,7 +7,8 @@
 //
 
 /*
- 使用工厂模式取代类构造函数,抽象对象生成过程,对象实例化的类型可以在运行时决定。
+ - 使用工厂模式取代类构造函数,抽象对象生成过程,对象实例化的类型可以在运行时决定。
+   - 协议实现
  */
 import UIKit
 
@@ -51,6 +52,7 @@ enum Country {
     case uk
     case greece
 }
+
 enum CurrencyFactory {
     static func currency(for country: Country) -> CurrencyDescribing? {
         switch country {
