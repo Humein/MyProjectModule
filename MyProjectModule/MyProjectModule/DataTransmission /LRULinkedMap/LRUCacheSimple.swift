@@ -202,12 +202,12 @@ class LRUCacheSimple {
 //}
 
 class ListNodeB {
-    var val: Int?
-    var key: Int?
+    var val: Int
+    var key: Int
     var next: ListNodeB?
     var prev: ListNodeB?
     
-    init(key: Int?, val: Int?){
+    init(key: Int, val: Int){
         self.val = val
         self.key = key
     }
@@ -224,19 +224,15 @@ class LRUCache {
         self.max_size = size
     }
     
-//    // 取值 类型(value)
-//    public func get(_ key: Int) -> Int {
-//        // 判断key是否已经存在
-//        if let node = cache[key] {
-//            // 如果存在，将命中的值移动到头部
-//            moveToHead(node: node)
-//            // 返回值
-//            return node.value
-//        }
-//        return -1
-//    }
-    func get(key: Int?) -> Int {
-        
+    func get(key: Int) -> Int {
+        if let node = cache[key] {
+            moveToHeader(node: node)
+            return node.val
+        }
+        return -1
+    }
+    
+    func moveToHeader(node: ListNodeB){
     }
     
 }
