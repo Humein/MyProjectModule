@@ -207,71 +207,6 @@ class ListNodeB {
     }
 }
 
-class LRUCacheB {
-    var cache = [Int: ListNodeB]()
-
-    var max_size = 0
-    var cur_size = 0
-    var head: ListNodeB?
-    var tail: ListNodeB?
-    
-    init(maxSize: Int){
-        self.max_size = maxSize
-    }
-    
-    func get(key: Int) -> Int{
-        if let node = cache[key] {
-            moveToHead(node)
-            return node.val
-        }
-        return -1
-    }
-    
-    func moveToHead(_ node: ListNodeB){
-        if node === self.head {
-            return
-        }
-
-        let prev = node.prev
-        let next = node.next
-        prev?.next = next
-        if next != nil {
-            next?.prev = prev
-        }else{
-            self.tail = prev
-        }
-        
-    }
-    
-    func put(key: Int, val: Int){
-        if let node = cache[key] {
-            node.val = val
-            moveToHead(node)
-        } else {
-            let node = ListNodeB.init(key: key, val: val)
-            addToHead(node)
-            cache[key] = node
-            cur_size += 1
-            if cur_size > max_size {
-                removeTail()
-                cur_size -= 1
-            }
-        }
-    }
-    
-    func addToHead(_ node: ListNodeB){
-        
-    }
-    
-    func removeTail(){
-        if let node = self.tail {
-            cache.removeValue(forKey: node.key)
-            self.tail = self.tail?.prev
-            self.tail?.next = nil
-        }
-    }
-}
-
 
 class LRUCache {
     var head: ListNodeB?
@@ -349,3 +284,83 @@ class LRUCache {
     }
 
 }
+
+
+
+
+//class LRUCacheB {
+//    var cache = [Int: ListNodeB]()
+//
+//    var max_size = 0
+//    var cur_size = 0
+//    var head: ListNodeB?
+//    var tail: ListNodeB?
+//    
+//    init(maxSize: Int){
+//        self.max_size = maxSize
+//    }
+//    
+//    func get(key: Int) -> Int{
+//        if let node = cache[key] {
+//            moveToHead(node)
+//            return node.val
+//        }
+//        return -1
+//    }
+//    
+//    func moveToHead(_ node: ListNodeB){
+//        if node === self.head {
+//            return
+//        }
+//
+//        let prev = node.prev
+//        let next = node.next
+//        prev?.next = next
+//        if next != nil {
+//            next?.prev = prev
+//        }else{
+//            self.tail = prev
+//        }
+//        
+//        let temp = self.head
+//        self.head = node
+//        self.head?.next = temp
+//        temp?.prev = self.head
+//    }
+//    
+//    func put(key: Int, val: Int){
+//        if let node = cache[key] {
+//            node.val = val
+//            moveToHead(node)
+//        } else {
+//            let node = ListNodeB.init(key: key, val: val)
+//            addToHead(node)
+//            cache[key] = node
+//            cur_size += 1
+//            if cur_size > max_size {
+//                removeTail()
+//                cur_size -= 1
+//            }
+//        }
+//    }
+//    
+//    func addToHead(_ node: ListNodeB){
+//        if self.head == nil {
+//            self.head = node
+//            self.tail = node
+//        }else{
+//            let temp = self.head
+//            self.head = node
+//            self.head?.next = temp
+//            temp?.prev = self.head
+//        }
+//    }
+//    
+//    func removeTail(){
+//        if let node = self.tail {
+//            cache.removeValue(forKey: node.key)
+//            self.tail = self.tail?.prev
+//            self.tail?.next = nil
+//        }
+//    }
+//}
