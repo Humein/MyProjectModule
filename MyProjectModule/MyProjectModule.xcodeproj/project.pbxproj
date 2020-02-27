@@ -1751,14 +1751,14 @@
 		79DC641023BA1A090073E22F /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
-				79DC641123BA1A090073E22F /* HTMiddleControlView.m */,
-				79DC641223BA1A090073E22F /* RChainDemoViewController.m */,
-				79DC641323BA1A090073E22F /* HTBottomControlView.h */,
-				79DC641423BA1A090073E22F /* HTTopControlView.m */,
 				79DC641523BA1A090073E22F /* RChainDemoViewController.h */,
+				79DC641223BA1A090073E22F /* RChainDemoViewController.m */,
 				79DC641623BA1A090073E22F /* HTMiddleControlView.h */,
-				79DC641723BA1A090073E22F /* HTTopControlView.h */,
+				79DC641123BA1A090073E22F /* HTMiddleControlView.m */,
+				79DC641323BA1A090073E22F /* HTBottomControlView.h */,
 				79DC641823BA1A090073E22F /* HTBottomControlView.m */,
+				79DC641723BA1A090073E22F /* HTTopControlView.h */,
+				79DC641423BA1A090073E22F /* HTTopControlView.m */,
 			);
 			path = TestDemo;
 			sourceTree = "<group>";

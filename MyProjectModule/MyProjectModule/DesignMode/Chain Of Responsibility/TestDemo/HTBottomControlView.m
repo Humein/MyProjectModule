@@ -23,9 +23,7 @@
 - (void)attachPlayItem:(id )playItem
 {
     [super attachPlayItem:playItem];
-    
-    
-    
+
 }
 
 

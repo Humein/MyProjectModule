@@ -1670,51 +1670,47 @@ func maxCute_Greed(length: Int) -> Int { return -1}
 
 // offer18（一）：在O(1)时间删除链表结点/ 237. 删除链表中的节点
 
-// 单链表简单删除: 指针指向的对象不变，节点的值覆盖，需要被删除node不是尾节点
-func deleteNode(_ node: listNode?) {
+// 1: 单链表删除 - 指针指向的对象不变，节点的值覆盖, 前提被删除node不是尾节点
+func deleteNode1(_ node: listNode?) {
     if node == nil{
         return
     }
     if node!.next == nil {
         return
     }
+    /// 本质是将要删除的节点 覆盖掉<value 和 指向>
     // node -> node.next -> node.next.next
     node!.val = node!.next!.val
     // 当前节点的下一个节点 指向 下下一个节点
     node!.next = node!.next!.next
 }
 
-//单链表 删除  node可能是尾节点  这个还是有点问题 下面那个运行没报错
-func deleteNodes(_ head: inout listNode?, _ toBeDeleted: listNode?){
+// 2:单链表删除 - 测试
+
+func deleteNode2(_ head: inout listNode?, _ toBeDeleted: listNode?){
     if head == nil || toBeDeleted == nil {
         return
     }
-    
-    if head!.val == toBeDeleted!.val {
-        head = nil
-        return
-    }
-    
-    while head != nil {
-        if head?.next?.val == toBeDeleted?.val {
-            head?.next = head?.next?.next
+
+    while head?.next != nil {
+        if head?.next === toBeDeleted {
+            toBeDeleted?.next = toBeDeleted?.next?.next
+            return
         }
-        print(head?.val)
         head = head?.next
     }
+    
 }
 
 // 一个函数改变函数外面变量的值(将一个值类型参数以引用方式传递)，这时，Swift提供的inout关键字就可以实现
-func deleteNode(_ head: inout listNode?, _ toBeDeleted: listNode?){
+// 3:单链表删除 - 前提toBeDeleted是从输入链表内部取出的，如果是新建的一个就要另一种方式了。 而且双向链表删除方式也是不一样
+// 还有个技巧 = 前面的.next 代表指向。 = 后面的.next 代表节点
+func deleteNode3(_ head: inout listNode?, _ toBeDeleted: listNode?){
     if head == nil || toBeDeleted == nil {
         return
     }
-    //链表只有1个节点,也就是删除head本身
-    if head! === toBeDeleted! {
-        head = nil
-        return
-    }
-    //需要删除的节点位于尾部，需要从head开始便利到node前面的节点
+
+    //如果需要删除的节点位于尾部，需要从head开始便利到node前面的节点
     if toBeDeleted!.next === nil {
         var node = head!
         while node.next! !== toBeDeleted! {
@@ -1722,16 +1718,18 @@ func deleteNode(_ head: inout listNode?, _ toBeDeleted: listNode?){
         }
         node.next = nil //删除
     }else {
-        //不位于尾部，只需要toBeDeleted之后的节点ANode内容复制到toBeDeleted
-        //然后删除ANode即可
+        //不位于尾部
+        // 取出要删除节点的下一个节点
         var node = toBeDeleted!.next
+        // del -> del.next -> del.next.next
+        // 删除节点下一个指向 要删除节点的next.next
         toBeDeleted!.next = node!.next
         toBeDeleted!.val = node!.val
         node = nil
     }
 }
 
-func testDelete() {
+func executeDelete() {
     let node5 = listNode(value: 5, next: nil)
     let node4 = listNode(value: 4, next: node5)
     let node3 = listNode(value: 3, next: node4)
@@ -1739,10 +1737,11 @@ func testDelete() {
     var node1: listNode? = listNode(value: 1, next: node2)
     
     printList(node1!)
-//    deleteNodes(&node1, node5)
-    deleteNode(node4)
-    printList(node1!)
+//    deleteNode1(node4)
+    deleteNode2(&node1, node4)
+    printList(node1 ?? listNode(value: -1, next: nil))
 }
+
 /// 打印链表
 func printList(_ node: listNode) -> [Int]{
     var nodes = [Int]()
@@ -1754,7 +1753,7 @@ func printList(_ node: listNode) -> [Int]{
     return nodes
 }
 
-testDelete()
+executeDelete()
 
 
 //MARK:-list19:
