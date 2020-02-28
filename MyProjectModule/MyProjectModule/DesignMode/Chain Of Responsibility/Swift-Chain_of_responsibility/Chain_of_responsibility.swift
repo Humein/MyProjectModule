@@ -123,17 +123,19 @@ final class ATM: Withdrawing {
  ### Usage
  */
 
-//创建如下钱堆，并将它们整理（连接）在一起。
+func executeMethod(){
+    //创建如下钱堆，并将它们整理（连接）在一起。
 
-let ten = MoneyPile(value: 10, quantity: 6, next: nil)
-let twenty = MoneyPile(value: 20, quantity: 2, next: ten)
-let fifty = MoneyPile(value: 50, quantity: 2, next: twenty)
-let hundred = MoneyPile(value: 100, quantity: 1, next: fifty)
+    let ten = MoneyPile(value: 10, quantity: 6, next: nil)
+    let twenty = MoneyPile(value: 20, quantity: 2, next: ten)
+    let fifty = MoneyPile(value: 50, quantity: 2, next: twenty)
+    let hundred = MoneyPile(value: 100, quantity: 1, next: fifty)
 
-//创建银行
-var atm = ATM(hundred: hundred, fifty: fifty, twenty: twenty, ten: ten)
+    //创建银行
+    let atm = ATM(hundred: hundred, fifty: fifty, twenty: twenty, ten: ten)
+    atm.withdraw(amount: 300) //输出: Can withdraw: true ，因为银行里金币总价值300
+    //atm.canWithdraw(amount: 130) //输出: Can withdraw: true，因为可以取1个100面额的金币+1个20面额的金币+1个10面额的金币组成。
+    //atm.canWithdraw(amount: 105) //输出：Can withdraw: false, 因为没有一个钱堆有面额为5的金币。
+}
 
 
-//atm.canWithdraw(amount: 300) //输出: Can withdraw: true ，因为银行里金币总价值300
-//atm.canWithdraw(amount: 130) //输出: Can withdraw: true，因为可以取1个100面额的金币+1个20面额的金币+1个10面额的金币组成。
-//atm.canWithdraw(amount: 105) //输出：Can withdraw: false, 因为没有一个钱堆有面额为5的金币。

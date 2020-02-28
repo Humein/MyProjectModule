@@ -11,12 +11,6 @@ import UIKit
 class UISampleExample: UIView {
 
 
-    
-    
-   
-    
-    
-    
     /// 部分圆角 + 阴影效果
     func shadowAndMask() {
         let view1 = UIView()
@@ -39,6 +33,14 @@ class UISampleExample: UIView {
         view2.layer.mask = maskLayer2
         self.addSubview(view1)
         view1.addSubview(view2)
+    }
+    
+    /// button 图片和文字位置以及图片大小调整
+    func adjustButtonImageSize() {
+        let button = UIButton()
+        button.imageEdgeInsets = UIEdgeInsets.init(top: 5, left: 0, bottom: 10, right: 0)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: -48, bottom: -39-6/2, right: 0)
+        button.imageView?.contentMode = .scaleAspectFit
     }
 
 }
