@@ -33,10 +33,9 @@
 }
 
 - (void)responseEvent:(NSInteger)eventType playItem:(id)playItem{
-    
-//   linked
+    // 这段递归代码 少了话从此节点以后的节点都不会相应了
     self.nextNodeView ? [self.nextNodeView responseEvent:eventType playItem:playItem] : nil;
-    NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
+    NSLog(@"%@>>>>>>>相应的事件%ld>>>>>传递的数据%@",[self class],(long)eventType,playItem);
 
 //    if (eventType == 0) {
 //        NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);

@@ -34,8 +34,8 @@
 - (void)responseEvent:(NSInteger)eventType playItem:(id)playItem{
     
     self.nextNodeView ? [self.nextNodeView responseEvent:eventType playItem:playItem] : nil;
-    NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
-    
+    NSLog(@"%@>>>>>>>相应的事件%ld>>>>>传递的数据%@",[self class],(long)eventType,playItem);
+
 //    if (eventType == 1) {
 //        NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
 //    }else if (eventType == 100){
