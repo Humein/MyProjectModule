@@ -1668,7 +1668,11 @@ func maxCute_Greed(length: Int) -> Int { return -1}
 
 //MARK:-list18:
 
-// offer18（一）：在O(1)时间删除链表结点/ 237. 删除链表中的节点
+/* offer18（一）：在O(1)时间删除链表结点/ 237. 删除链表中的节点
+- 链表操作
+  - 修改节点 可以用 覆盖和 指向 两个思路。
+  - 单链表用覆盖 双链表用指向。
+*/
 
 // 1: 单链表删除 - 指针指向的对象不变，节点的值覆盖, 前提被删除node不是尾节点
 func deleteNode1(_ node: listNode?) {
@@ -1679,32 +1683,51 @@ func deleteNode1(_ node: listNode?) {
         return
     }
     /// 本质是将要删除的节点 覆盖掉<value 和 指向>
-    // node -> node.next -> node.next.next
     node!.val = node!.next!.val
-    // 当前节点的下一个节点 指向 下下一个节点
     node!.next = node!.next!.next
 }
 
-// 2:单链表删除 - 测试
-
+// 2:单链表删除 - 这个好
+/**
+ - 前提toBeDeleted是从输入链表内部取出的，
+ - 如果是新建的一个就要另一种方式了。
+ - 而且双向链表删除方式也是不一样
+ */
 func deleteNode2(_ head: inout listNode?, _ toBeDeleted: listNode?){
     if head == nil || toBeDeleted == nil {
         return
     }
-
-    while head?.next != nil {
-        if head?.next === toBeDeleted {
-            toBeDeleted?.next = toBeDeleted?.next?.next
-            return
+    if toBeDeleted?.next !== nil {
+        toBeDeleted?.val = (toBeDeleted?.next!.val)!
+        toBeDeleted?.next = toBeDeleted?.next?.next
+    } else {
+        /**
+         - 问题1: 为什么要用一个 while 循环
+           答: 因为最后一个节点，下一个是nil. 直接覆盖nil, 代码是通不过的。 只能寻找上个节点，然后将上个节点的next = nil
+         - 问题2: 为什么引入一个新变量
+           答: head = head.next 会修改链表的
+        */
+        var node = head!
+        while node.next !== nil {
+            if node.next === toBeDeleted {
+                node.next = nil
+                return
+            }
+            node = node.next!
         }
-        head = head?.next
+        /** or
+         var node = head!
+         while node.next !== toBeDeleted {
+             node = node.next!
+         }
+         node.next = nil
+         */
     }
     
 }
 
 // 一个函数改变函数外面变量的值(将一个值类型参数以引用方式传递)，这时，Swift提供的inout关键字就可以实现
-// 3:单链表删除 - 前提toBeDeleted是从输入链表内部取出的，如果是新建的一个就要另一种方式了。 而且双向链表删除方式也是不一样
-// 还有个技巧 = 前面的.next 代表指向。 = 后面的.next 代表节点
+// 3:单链表删除
 func deleteNode3(_ head: inout listNode?, _ toBeDeleted: listNode?){
     if head == nil || toBeDeleted == nil {
         return
@@ -1738,7 +1761,8 @@ func executeDelete() {
     
     printList(node1!)
 //    deleteNode1(node4)
-    deleteNode2(&node1, node4)
+    deleteNode2(&node1, node5)
+//    deleteNode3(&node1, node1)
     printList(node1 ?? listNode(value: -1, next: nil))
 }
 
