@@ -56,26 +56,18 @@
 //绑定数据
 - (void)attachPlayItem:(id )playItem{
 //    初始化下一节点 需要的对象 (UIResponder ???)
-//    self.superior ? [self.superior attachPlayItem:playItem] : nil;
       self.nextNodeView ? [self.nextNodeView attachPlayItem:playItem] : nil;
 }
 
 //响应事件
 
 - (void)responseEvent:(NSInteger)eventType playItem:(id)playItem{
-    
-    
     NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
-    
-//    self.superior ? [self.superior responseEvent:eventType playItem:playItem] : nil;
     self.nextNodeView ? [self.nextNodeView responseEvent:eventType playItem:playItem] : nil;
     
-    
     if ([self isEventTransferForEventType:eventType]==NO) {
-        
         return;
     }
-    
 }
 
 
@@ -90,12 +82,8 @@
 //发送事件
 - (void)requestEvent:(HTPlayItemEventType)eventType playItem:(id )playItem
 {
-
-    ResponOfChainManager *nodeView= self;
-    
-    {
-        
-//   链表全部遍历
+    ResponOfChainManager *nodeView = self;
+    //  链表全部遍历
     while (nodeView) {
 
         if (nodeView.proNodeView == nil) {
@@ -104,8 +92,6 @@
         nodeView= nodeView.proNodeView;
     }
         
-    }
-
     [nodeView responseEvent:eventType playItem:playItem];
 }
 
@@ -136,8 +122,6 @@
 //函数式编程和链式编程
 //- (BlockObject * (^)(double distance))run5;
 //- (BlockObject * (^)(NSString *kindOfFood))eat5;
-
-
 
 - (ResponOfChainManager * (^)(ResponOfChainManager* nextView))nextView{
     

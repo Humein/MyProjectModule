@@ -1766,9 +1766,9 @@
 		79DC642C23BA1C890073E22F /* 视频播放最外层 */ = {
 			isa = PBXGroup;
 			children = (
+				79DC642F23BA1C890073E22F /* InterfacePlayerView.h */,
 				79DC642D23BA1C890073E22F /* InterfacePlayerView.m */,
 				79DC642E23BA1C890073E22F /* ResponderControlView.h */,
-				79DC642F23BA1C890073E22F /* InterfacePlayerView.h */,
 				79DC643023BA1C890073E22F /* ResponderControlView.m */,
 			);
 			path = "视频播放最外层";

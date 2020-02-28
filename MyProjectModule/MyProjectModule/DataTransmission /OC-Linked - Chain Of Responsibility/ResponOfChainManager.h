@@ -18,6 +18,7 @@ typedef void (^HTPlayItemEventHandleBlock)(HTPlayItemEventType eventType,id play
 
 @interface ResponOfChainManager : UIView <ActionProtocol>
 
+// TODO superior 是干啥的？
 @property (nonatomic, strong) id<ActionProtocol> superior;
 
 @property (nonatomic,weak)ResponOfChainManager *nextNodeView;

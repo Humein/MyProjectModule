@@ -16,68 +16,48 @@
 
 @implementation HTBottomControlView
 
-
-#pragma mark --- linkedChain
-
-
-- (void)attachPlayItem:(id )playItem
-{
-    [super attachPlayItem:playItem];
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    //UIResponder
+//    [self routerEventWithName:kEventOneName userInfo:@{@"key": @"bottom"}];return
+    
+    //LinkResponder
+    [self attachPlayItem:@"3"];
+    [self requestEvent:HTVideoPlayerBackEvent playItem:@"bottom"];
 }
 
+#pragma mark - LinkResponder
+- (void)attachPlayItem:(id )playItem
+{
+//    [super attachPlayItem:playItem];
+}
 
 - (void)responseEvent:(NSInteger)eventType playItem:(id)playItem{
     
-    //   linked
-    self.superior ? [self.superior responseEvent:eventType playItem:playItem] : nil;
     self.nextNodeView ? [self.nextNodeView responseEvent:eventType playItem:playItem] : nil;
     NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
-//    return;
     
-    if (eventType == 2) {
-
-    }else if (eventType == 100){
-        self.superior ? [self.superior responseEvent:eventType playItem:nil] : nil;
-    }
-    else{
-        self.superior ? [self.superior responseEvent:eventType playItem:nil] : nil;
-    }
+    
+//    if (eventType == 2) {
+//
+//    }else if (eventType == 100){
+//        self.superior ? [self.superior responseEvent:eventType playItem:nil] : nil;
+//    }
+//    else{
+//        self.superior ? [self.superior responseEvent:eventType playItem:nil] : nil;
+//    }
 }
 
 
-#pragma mark --- Action
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
-    // chainResponder
-    [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor lightGrayColor]}];
-    
-    return;
-    // linked
-    [self attachPlayItem:@"3"];
-    
-    [self requestEvent:HTVideoPlayerBackEvent playItem:@""];
-    
-}
-
-
-#pragma mark -Chain Event Handle
-
+#pragma mark - UIResponderChain
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo{
     
-    NSLog(@"eventName ===== %@,userInfo =====%@",eventName,userInfo);
     [self handleEventWithName:eventName parameter:userInfo];
-
     // 把响应链继续传递下去
-    [super routerEventWithName:eventName userInfo:userInfo];
-    
-    
+    [super routerEventWithName:eventName userInfo:userInfo];    
 }
 
-
-
 // 用 invocation 封装方法 策略 集中处理当前点击视图响应链上的所有事件
-
 - (void)handleEventWithName:(NSString *)eventName parameter:(NSDictionary *)parameter {
     // 获取invocation对象
     NSInvocation *invocation = self.strategyDictionary[eventName];
@@ -99,8 +79,8 @@
 
 - (void)cellOneEventWithParamter:(NSDictionary *)paramter {
     
-    self.backgroundColor = [UIColor lightGrayColor];
-    
+//    NSLog(@"---------参数：%@",paramter);
+
 }
 
 - (void)cellTwoEventWithParamter:(NSDictionary *)paramter {

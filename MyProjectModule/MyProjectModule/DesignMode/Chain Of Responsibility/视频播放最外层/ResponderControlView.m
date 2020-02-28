@@ -13,28 +13,35 @@
 #import "UIResponder+UIResponderChain.h"
 #import "UIView+Category.h"
 @interface ResponderControlView()
-/// 事件策略字典 key:事件名 value:事件的invocation对象
 @property (nonatomic, strong) NSDictionary *eventStrategy;
 @end
 @implementation ResponderControlView
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+        
+    // 1 chainResponder
+//    [self routerEventWithName:kEventOneName userInfo:@{@"key": @"ResponderControlView"}];return;
+
+    // 2 linked
+    ///    [self attachPlayItem:@""]; 作用？
+    [self requestEvent:HTVideoPauseEvent playItem:@""];
+    
+}
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self= [super initWithFrame:frame]) {
-        //  方式1 通 链表的方式 将各个控制层 绑定起来
 
-//      [self setupContentView];
-        
-    /* 方式 2  通 UIResponder的方式 将各个控制层 绑定起来(有限性 无法全部相应)
-       只能从底到上的 父子关系（不能建立平级关系 ）
-
+    /**
+     - 方式1 通 链表的方式 将各个控制层绑定起来.  链表上各个节点都会响应
+     - 方式2 通 UIResponder的方式 将各个节点绑定起来(有限性 无法全部相应)
+       只能从底到上的 父子关系（不能建立平级关系
      */
-
-        [self setupLinkedChainView];
+    [self setupResponderChainView];
+    [self setupLinkedChainView];
     }
     return self;
 }
 
--(void)setupContentView{
+-(void)setupResponderChainView{
     HTTopControlView *top = [[HTTopControlView alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
     HTMiddleControlView *mid = [[HTMiddleControlView alloc] initWithFrame:CGRectMake(0, 104, 88, 88)];
     HTBottomControlView *bot = [[HTBottomControlView alloc] initWithFrame:CGRectMake(0, 148, 88, 88)];
@@ -47,15 +54,10 @@
     [mid addSubview:top];
     [self addSubview:bot];
     [bot addSubview:top];
-
-    
-
-    
 }
 
-#pragma mark --- linkedChain
+
 -(void)setupLinkedChainView{
-    
     
     HTTopControlView *top = [[HTTopControlView alloc] initWithFrame:CGRectMake(120, 0, 44, 44)];
     HTMiddleControlView *mid = [[HTMiddleControlView alloc] initWithFrame:CGRectMake(120, 104, 88, 88)];
@@ -69,48 +71,39 @@
     [self addSubview:mid];
     [self addSubview:bot];
     
-
 //    mid.superior = top;
 //    bot.superior = mid;
 //    top.superior = bot;
 
 //    控制层 绑定视图
-    
     self.nextView(top).nextView(mid).nextView(bot);
-    
     [self logAllNextNode];
 
 }
 
-#pragma mark --- Action
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
-    [self.xx_viewController.navigationController popViewControllerAnimated:YES];
-    
-    // 1 chainResponder
-    [self routerEventWithName:kEventOneName userInfo:@{@"key": [UIColor lightGrayColor]}];
 
+#pragma mark - LinkResponder
+- (void)attachPlayItem:(id )playItem
+{
+//    [super attachPlayItem:playItem];
+}
+
+- (void)responseEvent:(NSInteger)eventType playItem:(id)playItem{
     
-    // 2 linked 
-    //    [self attachPlayItem:@""];
-    [self requestEvent:HTVideoPauseEvent playItem:@""];
-    
+    self.superior ? [self.superior responseEvent:eventType playItem:playItem] : nil;
+    self.nextNodeView ? [self.nextNodeView responseEvent:eventType playItem:playItem] : nil;
+    NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
+
 
 }
 
-
-
-#pragma mark -Chain Event Handle
-
+#pragma mark - UIResponderChain
 
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo{
-    
-    NSLog(@"eventName ===== %@,userInfo =====%@",eventName,userInfo);
-    
+        
     [self handleEventWithName:eventName parameter:userInfo];
     // 把响应链继续传递下去
     [super routerEventWithName:eventName userInfo:userInfo];
-    
     
 }
 
@@ -137,8 +130,7 @@
 }
 
 - (void)cellOneEventWithParamter:(NSDictionary *)paramter {
-    
-    self.backgroundColor = (UIColor *)paramter[@"key"];
+//    NSLog(@"---------参数：%@",paramter);
 }
 
 - (void)cellTwoEventWithParamter:(NSDictionary *)paramter {
