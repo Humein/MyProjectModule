@@ -41,12 +41,12 @@
 
 import UIKit
 
-class ListNode {
+class LRUListNode {
     // 添加key 为了绑定字典 方便删除字典中数据
     var key: Int
     var value: Int
-    var next: ListNode?
-    var prev: ListNode?
+    var next: LRUListNode?
+    var prev: LRUListNode?
     
     init(key: Int, value: Int) {
         self.key = key
@@ -56,15 +56,15 @@ class ListNode {
 
 class LRUCacheSimple {
     // 绑定一个 字典类型( key<Int> ) cache 用于存储
-    private var cache = [Int: ListNode]()
+    private var cache = [Int: LRUListNode]()
     // 最大size
     private var max_size = 0
     // 当前size
     private var cur_size = 0
     // 头
-    private var head: ListNode?
+    private var head: LRUListNode?
     // 尾
-    private var tail: ListNode?
+    private var tail: LRUListNode?
     
     init(_ capacity: Int) {
         max_size = capacity
@@ -92,7 +92,7 @@ class LRUCacheSimple {
             moveToHead(node: node)
         } else {
             // 转成节点
-            let node = ListNode(key: key, value: value)
+            let node = LRUListNode(key: key, value: value)
             // 添加节点到链表头部
             addToHeadNode(node: node)
             // 添加节点到字典
@@ -109,7 +109,7 @@ class LRUCacheSimple {
     }
     
     /// 添加节点到头部
-    private func addToHeadNode(node: ListNode) {
+    private func addToHeadNode(node: LRUListNode) {
         // 如果现在链表为空，直接赋值
         if self.head == nil {
             // 绑定 链表的地方
@@ -129,7 +129,7 @@ class LRUCacheSimple {
 
     
     /// 移动到头部
-    private func moveToHead(node: ListNode) {
+    private func moveToHead(node: LRUListNode) {
         // 如果当前命中的就是head 不动 return
         if node === self.head {
             return
@@ -179,7 +179,7 @@ class LRUCacheSimple {
     /// 删除尾部
     // 当有返回值的方法未得到接收和使用时通常会出现⚠️，这个可以消除
     @discardableResult
-    private func removeTail() -> ListNode? {
+    private func removeTail() -> LRUListNode? {
         // 先判断tail 是否存在
         if let tail = self.tail {
             // 从字典中移除
@@ -290,82 +290,3 @@ class LRUCache {
 
 }
 
-
-
-
-//class LRUCacheB {
-//    var cache = [Int: ListNodeB]()
-//
-//    var max_size = 0
-//    var cur_size = 0
-//    var head: ListNodeB?
-//    var tail: ListNodeB?
-//    
-//    init(maxSize: Int){
-//        self.max_size = maxSize
-//    }
-//    
-//    func get(key: Int) -> Int{
-//        if let node = cache[key] {
-//            moveToHead(node)
-//            return node.val
-//        }
-//        return -1
-//    }
-//    
-//    func moveToHead(_ node: ListNodeB){
-//        if node === self.head {
-//            return
-//        }
-//
-//        let prev = node.prev
-//        let next = node.next
-//        prev?.next = next
-//        if next != nil {
-//            next?.prev = prev
-//        }else{
-//            self.tail = prev
-//        }
-//        
-//        let temp = self.head
-//        self.head = node
-//        self.head?.next = temp
-//        temp?.prev = self.head
-//    }
-//    
-//    func put(key: Int, val: Int){
-//        if let node = cache[key] {
-//            node.val = val
-//            moveToHead(node)
-//        } else {
-//            let node = ListNodeB.init(key: key, val: val)
-//            addToHead(node)
-//            cache[key] = node
-//            cur_size += 1
-//            if cur_size > max_size {
-//                removeTail()
-//                cur_size -= 1
-//            }
-//        }
-//    }
-//    
-//    func addToHead(_ node: ListNodeB){
-//        if self.head == nil {
-//            self.head = node
-//            self.tail = node
-//        }else{
-//            let temp = self.head
-//            self.head = node
-//            self.head?.next = temp
-//            temp?.prev = self.head
-//        }
-//    }
-//    
-//    func removeTail(){
-//        if let node = self.tail {
-//            cache.removeValue(forKey: node.key)
-//            self.tail = self.tail?.prev
-//            self.tail?.next = nil
-//        }
-//    }
-//}

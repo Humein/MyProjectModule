@@ -136,6 +136,7 @@
 		794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */; };
 		794E82592403EED6008DFFB9 /* LOTAnimationLRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 794E82582403EED6008DFFB9 /* LOTAnimationLRUCache.m */; };
 		794E825E2404BBA8008DFFB9 /* LRUCacheSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E825D2404BBA7008DFFB9 /* LRUCacheSimple.swift */; };
+		795114AA2408FEB9004F6418 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795114A92408FEB9004F6418 /* DoublyLinkedList.swift */; };
 		7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */; };
 		797EC360236C10F900E21E44 /* SDOPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC35F236C10F900E21E44 /* SDOPickerView.swift */; };
 		797EC362236C141100E21E44 /* SDTimeAlertPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */; };
@@ -482,6 +483,7 @@
 		794E82572403EED6008DFFB9 /* LOTAnimationLRUCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOTAnimationLRUCache.h; sourceTree = "<group>"; };
 		794E82582403EED6008DFFB9 /* LOTAnimationLRUCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOTAnimationLRUCache.m; sourceTree = "<group>"; };
 		794E825D2404BBA7008DFFB9 /* LRUCacheSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRUCacheSimple.swift; sourceTree = "<group>"; };
+		795114A92408FEB9004F6418 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
 		7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Radius.swift"; sourceTree = "<group>"; };
 		797EC35F236C10F900E21E44 /* SDOPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDOPickerView.swift; sourceTree = "<group>"; };
 		797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimeAlertPickerView.swift; sourceTree = "<group>"; };
@@ -1770,6 +1772,7 @@
 				79DC642D23BA1C890073E22F /* InterfacePlayerView.m */,
 				79DC642E23BA1C890073E22F /* ResponderControlView.h */,
 				79DC643023BA1C890073E22F /* ResponderControlView.m */,
+				795114A92408FEB9004F6418 /* DoublyLinkedList.swift */,
 			);
 			path = "视频播放最外层";
 			sourceTree = "<group>";
@@ -2277,6 +2280,7 @@
 				33C971412124108D00EAAD5E /* DecoratorAView.m in Sources */,
 				33C971422124108D00EAAD5E /* TablePopDemoViewController.m in Sources */,
 				7908831C23A0D04500FA3BE5 /* BJPlayerHelper.m in Sources */,
+				795114AA2408FEB9004F6418 /* DoublyLinkedList.swift in Sources */,
 				79E3D63921DE67E00038CACB /* RequestViewController.m in Sources */,
 				79A0ECAB23682EFF004C10B0 /* XXPLEAGLLayer.m in Sources */,
 				33E6CE0721006D2000422FC7 /* UITableViewCell+AnimationType.m in Sources */,
