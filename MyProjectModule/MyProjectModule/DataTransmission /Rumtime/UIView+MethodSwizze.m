@@ -144,7 +144,7 @@ CGRect HitTestingBounds(CGRect bounds, CGFloat minimumHitTestWidth, CGFloat mini
             }
         }
         //这里就是该视图没有子视图了 点在该视图中，所以直接返回本身，上面的hitTestView就是这个。
-        NSLog(@"命中的view:%@",self.class);
+//        NSLog(@"命中的view:%@",self.class);
         return self;
     }
     //不在这个视图直接返回nil

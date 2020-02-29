@@ -10,7 +10,7 @@
 
 @implementation ResponOfChainManager
 
-//打印所有节点
+#pragma mark - 打印所有节点
 - (void)logAllNextNode
 {
     NSLog(@"本身-->:%@",NSStringFromClass(self.class));
@@ -44,7 +44,6 @@
 }
 
 
-
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -53,65 +52,45 @@
 }
 
 
-//绑定数据
+#pragma mark - 绑定数据
 - (void)attachPlayItem:(id )playItem{
 //    初始化下一节点 需要的对象 (UIResponder ???)
-//    self.superior ? [self.superior attachPlayItem:playItem] : nil;
       self.nextNodeView ? [self.nextNodeView attachPlayItem:playItem] : nil;
 }
 
-//响应事件
-
-- (void)responseEvent:(NSInteger)eventType playItem:(id)playItem{
-    
-    
-    NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
-    
-//    self.superior ? [self.superior responseEvent:eventType playItem:playItem] : nil;
-    self.nextNodeView ? [self.nextNodeView responseEvent:eventType playItem:playItem] : nil;
-    
-    
-    if ([self isEventTransferForEventType:eventType]==NO) {
-        
-        return;
+#pragma mark - 发送事件
+- (void)requestEvent:(HTPlayItemEventType)eventType playItem:(id )playItem
+{
+    ResponOfChainManager *nodeView = self;
+    //  找到头节点
+    while (nodeView) {
+        if (nodeView.proNodeView == nil) {
+            // 找到后跳出循环
+            break;
+        }
+        nodeView= nodeView.proNodeView;
     }
-    
+    // 从头节点开始 相应事件
+    [nodeView responseEvent:eventType playItem:playItem];
 }
 
+#pragma mark - 响应事件
+- (void)responseEvent:(NSInteger)eventType playItem:(id)playItem{
+    NSLog(@"%@>>>>>>>%ld",[self class],(long)eventType);
+    self.nextNodeView ? [self.nextNodeView responseEvent:eventType playItem:playItem] : nil;
+    
+    if ([self isEventTransferForEventType:eventType]==NO) {
+        return;
+    }
+}
 
-//对哪些事件不做响应，可以不实现
-
+// 对哪些事件不做响应，可以不实现
 - (BOOL)isEventTransferForEventType:(NSInteger)eventType
 {
     return YES;
 }
 
-
-//发送事件
-- (void)requestEvent:(HTPlayItemEventType)eventType playItem:(id )playItem
-{
-
-    ResponOfChainManager *nodeView= self;
-    
-    {
-        
-//   链表全部遍历
-    while (nodeView) {
-
-        if (nodeView.proNodeView == nil) {
-            break;
-        }
-        nodeView= nodeView.proNodeView;
-    }
-        
-    }
-
-    [nodeView responseEvent:eventType playItem:playItem];
-}
-
-
-
-#pragma mark ---- 链表
+#pragma mark - 链表
 //解绑，就是把自己给干掉
 - (void)disattachPlayView
 {
@@ -136,8 +115,6 @@
 //函数式编程和链式编程
 //- (BlockObject * (^)(double distance))run5;
 //- (BlockObject * (^)(NSString *kindOfFood))eat5;
-
-
 
 - (ResponOfChainManager * (^)(ResponOfChainManager* nextView))nextView{
     
