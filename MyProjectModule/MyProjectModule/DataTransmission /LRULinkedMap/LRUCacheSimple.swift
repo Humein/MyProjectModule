@@ -199,6 +199,85 @@ class LRUCacheSimple {
     }
 }
 
+class ListNodeC {
+    var next: ListNodeC?
+    var prev: ListNodeC?
+    var val: Int
+    var key: String
+    
+    init(key: String, val: Int) {
+        self.key = key
+        self.val = val
+    }
+}
+
+class LRUCacheC {
+    var cache = [String: ListNodeC]()
+    var max_size = 0
+    var cur_size = 0
+    var head: ListNodeC?
+    var tail: ListNodeC?
+    
+    init(_ maxSize: Int) {
+        self.max_size = maxSize
+    }
+    
+    func getVal(key: String) -> Int{
+        if let node = cache[key]{
+            moveToHead(node)
+            return node.val
+        }
+        return -1
+    }
+    
+    func moveToHead(_ node: ListNodeC){
+        if self.head === node {
+            return
+        }
+        
+        node.prev?.next = node.next
+        node.next?.prev = node.prev
+        
+    }
+    
+    func putValue(key: String, val: Int){
+        if let node = cache[key] {
+            node.val = val
+            moveToHead(node)
+        }else{
+            let newNode = ListNodeC.init(key: key, val: val)
+            if self.head == nil{
+                self.head = newNode
+                self.tail = newNode
+            }else{
+                let temp = self.head
+                self.head = newNode
+                self.head?.next = temp
+                temp?.prev = self.head
+            }
+            
+            cache[key] = newNode
+            
+            cur_size += 1
+            if cur_size > max_size {
+                removeTail()
+                cache.removeValue(forKey: key)
+                cur_size -= 1
+            }
+        }
+    }
+    
+    func removeTail(){
+        if let tail = self.tail {
+            self.tail = tail.prev
+            self.tail?.next = nil
+        }
+    }
+    
+}
+
+
+
 
 class ListNodeB {
     var prev: ListNodeB?

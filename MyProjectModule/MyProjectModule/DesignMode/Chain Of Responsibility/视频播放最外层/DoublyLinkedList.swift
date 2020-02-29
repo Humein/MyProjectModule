@@ -194,7 +194,39 @@ class DoublyLinkedList: NSObject {
         node.append(node3)
         node.append(node4)
 
+
+        /// swift 链式编程
+        let person = Person.init { (person) in
+            _ = person.name("Tom").age(12).sex("man")
+        }
+        print(person.name!,person.sex!,person.age!)  //输出 Tom man 12
+        
         
     }
 
+}
+
+class Person {
+    var name: String?
+    var sex: String?
+    var age: Int?
+    
+    init(closure: (Person) -> Void) {
+        closure(self)
+    }
+    
+    func name(_ name: String) -> Person {
+        self.name = name
+        return self
+    }
+    
+    func sex(_ sex: String) -> Person {
+        self.sex = sex
+        return self
+    }
+    
+    func age(_ age: Int) -> Person {
+        self.age = age
+        return self
+    }
 }
