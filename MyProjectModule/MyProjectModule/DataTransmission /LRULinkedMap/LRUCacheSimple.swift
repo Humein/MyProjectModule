@@ -199,7 +199,7 @@ class LRUCacheSimple {
     }
 }
 
-/// 范型
+
 class ListNodeB<T> {
     var prev: ListNodeB?
     var next: ListNodeB?
@@ -290,3 +290,49 @@ class LRUCache<T> {
 
 }
 
+
+
+/// 范型
+/**
+  从表面上看，这好像和泛型极其相似。Any 类型和泛型两者都能用于定义接受两个不同类型参数的函数。然而，理解两者之间的区别至关重要：泛型可以用于定义灵活的函数，类型检查仍然由编译器负责；而 Any 类型则可以避开 Swift 的类型系统 (所以应该尽可能避免使用)
+ */
+
+/// 类中泛型 - 实现一个栈
+class YJKStack<T>: NSObject {
+    //栈空间
+    private var list:[T] = []
+    
+    //进栈
+    public func push(item:T){
+        list.append(item)
+    }
+    
+    //出栈
+    public func pop() -> T{
+        return list.removeLast()
+    }
+}
+
+/// 泛型类型约束
+/**
+ class YJKProtocolStack<T: A&B>  须实现多个协议的话，用 & 符号链接就好啦。
+ */
+
+class YJKProtocolStack<T: A>: NSObject {
+    //栈空间
+    private var list:[T] = []
+    
+    //进栈
+    public func push(item:T){
+        list.append(item)
+    }
+    
+    //出栈
+    public func pop() -> T{
+        return list.removeLast()
+    }
+}
+
+protocol A {}
+
+protocol B {}
