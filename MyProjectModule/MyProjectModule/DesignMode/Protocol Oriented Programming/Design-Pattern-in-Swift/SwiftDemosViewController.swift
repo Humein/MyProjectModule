@@ -56,6 +56,16 @@ class SwiftDemosViewController: UIViewController {
         print(cache.get(2))
         print(cache.get(1))
         
+        let cache1 = LRUCache<Any>.init(size: 2)
+        cache1.put(key: 1, val: 1)
+        cache1.put(key: 2, val: "2")
+        cache1.put(key: 3, val: cache)
+        cache1.put(key: 4, val: 4)
+        print(cache1.get(key: 4))
+        print(cache1.get(key: 3))
+        print(cache1.get(key: 2))
+        print(cache1.get(key: 1))
+        
 
     }
 
