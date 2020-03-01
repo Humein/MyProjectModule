@@ -189,6 +189,7 @@ class DoublyLinkedList: NSObject {
         let node3 = ListNode.init(value: 3)
         let node4 = ListNode.init(value: 4)
 
+        
         node.append(node1)
         node.append(node2)
         node.append(node3)
@@ -201,11 +202,95 @@ class DoublyLinkedList: NSObject {
         }
         print(person.name!,person.sex!,person.age!)  //输出 Tom man 12
         
+        ///
+        let aC = AChain.init("A")
+        let bC = BChain.init("B")
+        let cC = CChain.init("C")
+        let chain = LinkChain.init()
+        chain.initWith { (link) in
+            _ = link.next(aC).next(bC).next(cC)
+        }
         
+        print(chain.getChainList())
+        print(chain.headerNode as Any)
+        print(chain.lastNode as Any)
+
+
     }
 
 }
 
+
+/// 自定义双链表
+class LinkChain: Any{
+    var headerNode: LinkChain?
+    var lastNode: LinkChain? {
+        guard var node = headerNode else { return nil }
+        while let next = node.nextChain {
+            node = next
+        }
+        return node
+    }
+    var prevChain: LinkChain?
+    var nextChain: LinkChain?
+    
+    func initWith(closure: (LinkChain) -> Void) {
+        closure(self)
+    }
+    
+    
+    func next(_ node: LinkChain) -> LinkChain {
+        self.nextChain = node
+        if let last = lastNode {
+            last.nextChain = node
+            node.prevChain = last
+        } else {
+            //空链表
+            headerNode = node
+        }
+        return self
+    }
+    
+    func getChainList() -> [LinkChain]{
+        var nodes = [LinkChain]()
+        var temp = self.headerNode
+        while temp != nil {
+            nodes.append(temp!)
+            temp = temp!.nextChain
+        }
+        return nodes
+    }
+    
+}
+
+
+class AChain: LinkChain {
+    var name: String?
+    
+    init(_ name: String) {
+        self.name = name
+    }
+}
+
+class BChain: LinkChain {
+    var name: String?
+    
+    init(_ name: String) {
+        self.name = name
+    }
+}
+
+class CChain: LinkChain {
+    var name: String?
+    
+    init(_ name: String) {
+        self.name = name
+    }
+}
+
+
+
+//MARK: -swift 链式编程
 class Person {
     var name: String?
     var sex: String?

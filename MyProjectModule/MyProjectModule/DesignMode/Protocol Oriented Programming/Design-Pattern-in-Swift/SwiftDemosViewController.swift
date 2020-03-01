@@ -67,6 +67,10 @@ class SwiftDemosViewController: UIViewController {
         print(cache1.get(key: 1))
         
 
+        //MARK: 链式编程
+        let linkC = DoublyLinkedList.init()
+        
+        
     }
 
 }
