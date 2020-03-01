@@ -18,7 +18,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     //chainResponder
-//    [self routerEventWithName:kEventOneName userInfo:@{@"key": @"top"}];return;
+    [self routerEventWithName:kEventOneName userInfo:@{@"key": @"top"}];return;
  
     //lined
     [self attachPlayItem:@"1"];

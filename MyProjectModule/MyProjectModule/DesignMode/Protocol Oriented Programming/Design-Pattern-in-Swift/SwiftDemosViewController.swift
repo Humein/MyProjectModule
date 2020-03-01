@@ -67,8 +67,23 @@ class SwiftDemosViewController: UIViewController {
         print(cache1.get(key: 1))
         
 
-        //MARK: 链式编程
-        let linkC = DoublyLinkedList.init()
+        //MARK:- 链式编程 以及 双向链表
+//        let linkC = DoublyLinkedList.init()
+        
+        
+        //MARK:- chain
+        let aC = AChain.init("A")
+        let bC = BChain.init("B")
+        let cC = CChain.init("C")
+        let chain = BindResponderOfChain.init()
+        chain.initWith { (link) in
+            _ = link.next(aC).next(bC).next(cC)
+        }
+        cC.sendEvent(eventType: -1, with: 0)
+        
+        print(chain.getChainList())
+        print(chain.headerNode as Any)
+        print(chain.lastNode as Any)
         
         
     }

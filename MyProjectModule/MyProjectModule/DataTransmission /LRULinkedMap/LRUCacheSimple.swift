@@ -199,6 +199,7 @@ class LRUCacheSimple {
     }
 }
 
+//MARK:- LRU范型
 
 class ListNodeB<T> {
     var prev: ListNodeB?
@@ -292,7 +293,7 @@ class LRUCache<T> {
 
 
 
-/// 范型
+//MARK:- 范型
 /**
   从表面上看，这好像和泛型极其相似。Any 类型和泛型两者都能用于定义接受两个不同类型参数的函数。然而，理解两者之间的区别至关重要：泛型可以用于定义灵活的函数，类型检查仍然由编译器负责；而 Any 类型则可以避开 Swift 的类型系统 (所以应该尽可能避免使用)
  */
