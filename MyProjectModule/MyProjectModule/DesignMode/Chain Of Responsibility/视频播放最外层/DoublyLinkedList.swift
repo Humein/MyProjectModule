@@ -189,6 +189,7 @@ class DoublyLinkedList: NSObject {
         let node3 = ListNode.init(value: 3)
         let node4 = ListNode.init(value: 4)
 
+        
         node.append(node1)
         node.append(node2)
         node.append(node3)
@@ -200,12 +201,13 @@ class DoublyLinkedList: NSObject {
             _ = person.name("Tom").age(12).sex("man")
         }
         print(person.name!,person.sex!,person.age!)  //输出 Tom man 12
-        
-        
     }
 
 }
 
+
+
+//MARK: -swift 链式编程
 class Person {
     var name: String?
     var sex: String?

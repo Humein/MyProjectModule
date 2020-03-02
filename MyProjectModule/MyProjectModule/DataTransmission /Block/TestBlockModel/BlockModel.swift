@@ -9,7 +9,8 @@
 import UIKit
 
 class BlockModel: NSObject {
-    typealias StateCallBack = () -> ()
+    typealias StateCallBack = (Any) -> ()
     var stateBlock :StateCallBack?
+    var title: String?
     
 }

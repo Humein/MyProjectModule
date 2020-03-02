@@ -19,7 +19,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     //UIResponder
-//    [self routerEventWithName:kEventOneName userInfo:@{@"key": @"bottom"}];return
+    [self routerEventWithName:kEventOneName userInfo:@{@"key": @"bottom"}];return
     
     //LinkResponder
     [self attachPlayItem:@"3"];

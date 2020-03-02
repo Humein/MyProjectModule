@@ -1769,6 +1769,7 @@ func executeDelete() {
 /// 打印链表
 func printList(_ node: listNode) -> [Int]{
     var nodes = [Int]()
+    // 引入临时 防止原数据修改
     var curNode :listNode? = node
     while curNode != nil {
         nodes.append(curNode!.val)

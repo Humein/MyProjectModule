@@ -19,7 +19,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
         
     // 1 chainResponder
-//    [self routerEventWithName:kEventOneName userInfo:@{@"key": @"ResponderControlView"}];return;
+    [self routerEventWithName:kEventOneName userInfo:@{@"key": @"ResponderControlView"}];return;
 
     // 2 linked
     ///    [self attachPlayItem:@""]; 作用？
@@ -45,8 +45,8 @@
     mid.backgroundColor = [UIColor yellowColor];
     bot.backgroundColor = [UIColor greenColor];
     /**
-     通 UIResponder的方式 将各个节点绑定起来(有限性 无法全部相应)
-     只能通过父子关系绑定（不能建立平级关系）
+     通过 UIResponder的方式 将各个节点绑定起来
+     只能通过父子关系绑定（不能建立平级关系). 而且父的事件不能引发子的相应。
      */
     [self addSubview:mid];
     [mid addSubview:top];
@@ -76,7 +76,7 @@
       然后从头节点开始相应事件 (self->top->mid->bot)
      - 事件响应顺序
        先说结果 (bot->mid->top->self). 大家会疑惑这怎么和链表的顺序相反呢，因为 这是递归呀。。。。
-     调用栈。 方法顺序压栈。执行时候最后一个出来。
+     调用栈。 方法顺序压栈。执行时候最后一个出来。 这个和 swift的 有出入
      
      总结 其实可以把这个看作 我们手动实现了UIResponder。 然后它的事件传递和事件响应 一样的
      */

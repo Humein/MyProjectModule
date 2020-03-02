@@ -13,8 +13,8 @@ class AView: UIView {
     func refreshView(_ model: BlockModel) {
         let b = BView()
         print("A")
-        model.stateBlock = { () -> () in
-            print("CBlock")
+        model.stateBlock = { (any) -> () in
+            print(any)
         }
         b.refreshView(model)
     }

@@ -18,7 +18,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     //UIResponder
-//    [self routerEventWithName:kEventOneName userInfo:@{@"key": @"middle"}];return;
+    [self routerEventWithName:kEventOneName userInfo:@{@"key": @"middle"}];return;
 
     //LinkResponder
     [self attachPlayItem:@"2"];

@@ -199,119 +199,41 @@ class LRUCacheSimple {
     }
 }
 
-class ListNodeC {
-    var next: ListNodeC?
-    var prev: ListNodeC?
-    var val: Int
-    var key: String
-    
-    init(key: String, val: Int) {
-        self.key = key
-        self.val = val
-    }
-}
+//MARK:- LRU范型
 
-class LRUCacheC {
-    var cache = [String: ListNodeC]()
-    var max_size = 0
-    var cur_size = 0
-    var head: ListNodeC?
-    var tail: ListNodeC?
-    
-    init(_ maxSize: Int) {
-        self.max_size = maxSize
-    }
-    
-    func getVal(key: String) -> Int{
-        if let node = cache[key]{
-            moveToHead(node)
-            return node.val
-        }
-        return -1
-    }
-    
-    func moveToHead(_ node: ListNodeC){
-        if self.head === node {
-            return
-        }
-        
-        node.prev?.next = node.next
-        node.next?.prev = node.prev
-        
-    }
-    
-    func putValue(key: String, val: Int){
-        if let node = cache[key] {
-            node.val = val
-            moveToHead(node)
-        }else{
-            let newNode = ListNodeC.init(key: key, val: val)
-            if self.head == nil{
-                self.head = newNode
-                self.tail = newNode
-            }else{
-                let temp = self.head
-                self.head = newNode
-                self.head?.next = temp
-                temp?.prev = self.head
-            }
-            
-            cache[key] = newNode
-            
-            cur_size += 1
-            if cur_size > max_size {
-                removeTail()
-                cache.removeValue(forKey: key)
-                cur_size -= 1
-            }
-        }
-    }
-    
-    func removeTail(){
-        if let tail = self.tail {
-            self.tail = tail.prev
-            self.tail?.next = nil
-        }
-    }
-    
-}
-
-
-
-
-class ListNodeB {
+class ListNodeB<T> {
     var prev: ListNodeB?
     var next: ListNodeB?
-    var val: Int
+    var val: T
     var key: Int
     
-    init(key: Int, val: Int){
+    init(key: Int, val: T){
         self.key = key
         self.val = val
     }
 }
 
 
-class LRUCache {
-    var head: ListNodeB?
-    var tail: ListNodeB?
+class LRUCache<T> {
+    var head: ListNodeB<Any>?
+    var tail: ListNodeB<Any>?
     var max_size: Int = 0
     var cur_size: Int = 0
-    var cache = [Int: ListNodeB]()
+    var cache = [Int: ListNodeB<Any>]()
     
     init(size: Int) {
         self.max_size = size
     }
     
-    func get(key: Int) -> Int {
+    func get(key: Int) -> T {
         if let node = cache[key] {
             moveToHeader(node: node)
-            return node.val
+            return node.val as! T
         }
-        return -1
+        return -1 as! T
     }
     
-    func moveToHeader(node: ListNodeB){
+    func moveToHeader(node: ListNodeB<Any>){
         if self.head === node {
             return
         }
@@ -330,14 +252,14 @@ class LRUCache {
     }
     
     
-    func put(key: Int, val: Int){
+    func put(key: Int, val: T){
         if let node = cache[key]{
             node.val = val
             moveToHeader(node: node)
         }else{
             let node = ListNodeB.init(key: key, val: val)
-            addToHead(node: node)
-            cache[key] = node
+            addToHead(node: node as! ListNodeB<Any>)
+            cache[key] = (node as! ListNodeB<Any>)
 
             cur_size += 1
             if cur_size > max_size{
@@ -347,7 +269,7 @@ class LRUCache {
         }
     }
     
-    func addToHead(node: ListNodeB){
+    func addToHead(node: ListNodeB<Any>){
         if self.head == nil {
             self.head = node
             self.tail = node
@@ -369,3 +291,49 @@ class LRUCache {
 
 }
 
+
+
+//MARK:- 范型
+/**
+  从表面上看，这好像和泛型极其相似。Any 类型和泛型两者都能用于定义接受两个不同类型参数的函数。然而，理解两者之间的区别至关重要：泛型可以用于定义灵活的函数，类型检查仍然由编译器负责；而 Any 类型则可以避开 Swift 的类型系统 (所以应该尽可能避免使用)
+ */
+
+/// 类中泛型 - 实现一个栈
+class YJKStack<T>: NSObject {
+    //栈空间
+    private var list:[T] = []
+    
+    //进栈
+    public func push(item:T){
+        list.append(item)
+    }
+    
+    //出栈
+    public func pop() -> T{
+        return list.removeLast()
+    }
+}
+
+/// 泛型类型约束
+/**
+ class YJKProtocolStack<T: A&B>  须实现多个协议的话，用 & 符号链接就好啦。
+ */
+
+class YJKProtocolStack<T: A>: NSObject {
+    //栈空间
+    private var list:[T] = []
+    
+    //进栈
+    public func push(item:T){
+        list.append(item)
+    }
+    
+    //出栈
+    public func pop() -> T{
+        return list.removeLast()
+    }
+}
+
+protocol A {}
+
+protocol B {}
