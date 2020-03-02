@@ -49,27 +49,27 @@ class BindResponderOfChain: ResponderDelegate{
         return false
     }
     
-    func sendEvent(eventType: NSInteger, with item: Any) {
+    func sendEvent(eventType: NSInteger, with item: BlockModel) {
         var temp = self
         while (temp.prevChain != nil) {
             if (temp.prevChain == nil) {
-                break;
+                break
             }
             temp = temp.prevChain!
         }
         temp.responseEvent(eventType: eventType, with: item )
     }
 
-    func responseEvent(eventType: NSInteger, with Item: Any) {
-        print("deinit: \(type(of: self))" + "\(eventType)" + "\(Item)")
+    func responseEvent(eventType: NSInteger, with item: BlockModel) {
+        print("log: \(type(of: self))" + "\(eventType)" + "\(item)")
     }
 }
 
 protocol ResponderDelegate {}
 //extension ResponderDelegate where Self: BindResponderOfChain {
-//    func responseEvent(eventType: NSInteger, with Item: Any){
-//        self.nextChain?.responseEvent(eventType: eventType, with: Item)
-//        print("deinit: \(type(of: self))" + "\(eventType)" + "\(Item)")
+//    func responseEvent(eventType: NSInteger, with item: Any){
+//        self.nextChain?.responseEvent(eventType: eventType, with: item)
+//        print("deinit: \(type(of: self))" + "\(eventType)" + "\(item)")
 //    }
 //}
 
@@ -80,11 +80,16 @@ class AChain: BindResponderOfChain {
         self.name = name
     }
     
-    override func responseEvent(eventType: NSInteger, with Item: Any) {
-        super.responseEvent(eventType: eventType, with: Item)
-        self.nextChain?.responseEvent(eventType: eventType, with: Item)
-    }
+    override func responseEvent(eventType: NSInteger, with item: BlockModel) {
+        super.responseEvent(eventType: eventType, with: item)
+        item.stateBlock = { (item) -> () in
+            if let mode = item as? BlockModel {
+                print(mode.title as Any)
+            }
+        }
+        self.nextChain?.responseEvent(eventType: eventType, with: item)
 
+    }
 }
 
 class BChain: BindResponderOfChain{
@@ -94,13 +99,18 @@ class BChain: BindResponderOfChain{
         self.name = name
     }
     
-    override func responseEvent(eventType: NSInteger, with Item: Any) {
-        super.responseEvent(eventType: eventType, with: Item)
-        self.nextChain?.responseEvent(eventType: eventType, with: Item)
+    override func responseEvent(eventType: NSInteger, with item: BlockModel) {
+        super.responseEvent(eventType: eventType, with: item)
+        item.stateBlock = { (item) -> () in
+            if let mode = item as? BlockModel {
+                print(mode.title as Any)
+            }
+        }
+        self.nextChain?.responseEvent(eventType: eventType, with: item)
     }
     
-    func actionChian(eventType: NSInteger, with Item: Any) {
-        self.sendEvent(eventType: eventType, with: Item)
+    func actionChian(eventType: NSInteger, with item: BlockModel) {
+        self.sendEvent(eventType: eventType, with: item)
     }
 }
 
@@ -111,9 +121,12 @@ class CChain: BindResponderOfChain{
         self.name = name
     }
 
-    override func responseEvent(eventType: NSInteger, with Item: Any) {
-        super.responseEvent(eventType: eventType, with: Item)
-        self.nextChain?.responseEvent(eventType: eventType, with: Item)
+    override func responseEvent(eventType: NSInteger, with item: BlockModel) {
+        super.responseEvent(eventType: eventType, with: item)
+        item.title = "CChain"
+        item.stateBlock?(item)
+        self.nextChain?.responseEvent(eventType: eventType, with: item)
+
     }
 }
 

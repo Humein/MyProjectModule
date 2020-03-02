@@ -79,7 +79,8 @@ class SwiftDemosViewController: UIViewController {
         chain.initWith { (link) in
             _ = link.next(aC).next(bC).next(cC)
         }
-        cC.sendEvent(eventType: -1, with: 0)
+        let model = BlockModel()
+        aC.sendEvent(eventType: -1, with: model)
         
         print(chain.getChainList())
         print(chain.headerNode as Any)
