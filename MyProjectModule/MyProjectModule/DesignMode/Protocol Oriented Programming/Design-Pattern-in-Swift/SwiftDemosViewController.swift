@@ -56,7 +56,37 @@ class SwiftDemosViewController: UIViewController {
         print(cache.get(2))
         print(cache.get(1))
         
+        let cache1 = LRUCache<Any>.init(size: 2)
+        cache1.put(key: 1, val: 1)
+        cache1.put(key: 2, val: "2")
+        cache1.put(key: 3, val: cache)
+        cache1.put(key: 4, val: 4)
+        print(cache1.get(key: 4))
+        print(cache1.get(key: 3))
+        print(cache1.get(key: 2))
+        print(cache1.get(key: 1))
+        
 
+        //MARK:- 链式编程 以及 双向链表
+//        let linkC = DoublyLinkedList.init()
+        
+        
+        //MARK:- chain
+        let aC = AChain.init("A")
+        let bC = BChain.init("B")
+        let cC = CChain.init("C")
+        let chain = BindResponderOfChain.init()
+        chain.initWith { (link) in
+            _ = link.next(aC).next(bC).next(cC)
+        }
+        let model = BlockModel()
+        aC.sendEvent(eventType: -1, with: model)
+        
+        print(chain.getChainList())
+        print(chain.headerNode as Any)
+        print(chain.lastNode as Any)
+        
+        
     }
 
 }

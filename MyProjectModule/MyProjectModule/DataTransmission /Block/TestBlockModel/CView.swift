@@ -13,7 +13,7 @@ class CView: UIView {
     func refreshView(_ model: BlockModel) {
         print("C")
         // ?解包 代替判断nil
-        model.stateBlock?()
+        model.stateBlock?("C")
 //        if model.stateBlock != nil {
 //            print("ActionCBlock")
 //            model.stateBlock!()
