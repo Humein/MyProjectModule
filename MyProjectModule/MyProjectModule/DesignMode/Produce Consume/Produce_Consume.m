@@ -26,12 +26,13 @@ typedef void(^Success)(id data);
 
 //MARK: - 信号量 实现 https://www.jianshu.com/p/ea1985006e1a
 /*
- 我对于生产者和消费者的理解是：需要有一个缓存池，生产者和消费者需要在不同的线程中去分别操作缓存池，
+ 对于生产者和消费者的理解是：需要有一个缓存池，生产者和消费者需要在不同的线程中去分别操作缓存池，
  这时候就特别容易产生并发问题。
  */
 
 - (void)load {
     //开启计时器
+    // 消费多少数据是  由生产的频率决定的。比如 0.05 生产了40个 就会消费40个。下一个0.05生产的数据会等待上次消费完成
     NSTimer *curTimer =[NSTimer timerWithTimeInterval:0.05 target:self selector:@selector(producerFuncWithNumber:) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:curTimer forMode:NSDefaultRunLoopMode];
     [curTimer fire];
@@ -87,10 +88,10 @@ typedef void(^Success)(id data);
     });
 }
 
+// 耗时操作
 -(void)processingWithArray:(NSArray *)array Success:(Success)success{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        // 耗时操作
-        sleep(3);
+        sleep(2);
         dispatch_async(dispatch_get_main_queue(), ^{
             success(array);
         });

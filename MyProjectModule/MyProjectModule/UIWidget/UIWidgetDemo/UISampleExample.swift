@@ -43,6 +43,17 @@ class UISampleExample: UIView {
         button.imageView?.contentMode = .scaleAspectFit
     }
 
+    /// 查找view所在的VC
+    func findTheVC(_ view: UIView) -> UIViewController? {
+        var temp = view.next
+        if temp != nil {
+            if temp!.isKind(of: UIViewController.self) {
+                return (temp as! UIViewController)
+            }
+            temp = temp?.next
+        }
+        return nil
+    }
 }
 
 
