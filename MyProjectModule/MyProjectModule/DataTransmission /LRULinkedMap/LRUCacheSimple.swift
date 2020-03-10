@@ -149,7 +149,6 @@ class LRUCacheSimple {
             // 上一个节点的next 指向 下一节点
 //            prev?.next = next
             node.prev?.next = node.next
-
             // 下个节点不为nil时
             if next != nil {
                 // 下一个节点的prev 指向 上一节点
@@ -198,6 +197,87 @@ class LRUCacheSimple {
         return nil
     }
 }
+
+class ListNodeC {
+    var next: ListNodeC?
+    var prev: ListNodeC?
+    var val: Int = 0
+    var key: String = ""
+    
+    init(key: String, val: Int) {
+        self.key = key
+        self.val = val
+    }
+}
+
+class LRUCacheSimple1 {
+    var dicCache = [String: ListNodeC]()
+    var head: ListNodeC?
+    var trail: ListNodeC?
+    var cur_size = 0
+    var mix_size = 0
+    
+    init(_ size: Int){
+        mix_size = size
+    }
+    
+    func get(forKey key: String) -> Int {
+        if let node = dicCache[key] {
+            moveToHead(node)
+            return node.val
+        }
+        return -1
+    }
+    
+    func moveToHead(_ node: ListNodeC) {
+        if node === self.head {
+            return
+        }
+        node.prev?.next = node.next
+        if node.next == nil {
+            self.trail = node.prev
+        }else{
+            node.next?.prev = node.prev
+        }
+        
+        let temp = self.head
+        self.head = node
+        self.head?.next = temp
+        temp?.prev = self.head
+        
+    }
+    
+    
+    func put(node: ListNodeC) {
+        
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //MARK:- LRU范型
 
