@@ -83,24 +83,7 @@ public class LinkNode{
 //MARK:- codeInterview
 // 
 class code1 {
-    /*
-    加 __block 前 10 后 100
-     
-    __block int i = 10;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"====%d",i);
-    });
-    i = 100;
-     
-   */
-    
-    /*
-     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-         dispatch_async(queue, ^{
-              [self performSelector:@selector(test) withObject:nil afterDelay:2];
-     });
-     '会发现test方法并没有被调用，因为子线程中的runloop默认是没有启动的状态。使用run方法开启当前线程的runloop，但是一定要注意run方法和执行该延迟方法的顺序。
-     */
+
     
 }
 
@@ -145,7 +128,7 @@ func bubbleSort(unsortedArray: inout [Int]){
     guard unsortedArray.count > 1 else{
         return
     }
-    
+
     for i in 0..<2 {
         print(i)
     }
@@ -409,6 +392,49 @@ func binarySearch(_ nums: [Int], _ target :Int) -> Int{
     
     return -1
 }
+
+/// 33. 搜索旋转排序数组
+/**
+ 假设按照升序排序的数组在预先未知的某个点上进行了旋转。
+ 搜索一个给定的目标值，如果数组中存在这个目标值，则返回它的索引，否则返回 -1 。
+ 你可以假设数组中不存在重复的元素
+ 解题
+ 1、先创建两个指针left和right，然后取mid=(right+left)/2,将数组一分为二。其中肯定有一个有序，一个可能有序或者部分有序，
+ 2、然后在有序的范围内判断target是否在有序范围内，然后移动left或right，继续步骤一，直到找到nums[mid] == target,返回mid，否则返回-1。
+ 时间复杂度：O(log(n))。空间复杂度：O(1)
+ */
+
+func search(_ nums: [Int], _ target: Int) -> Int {
+    var left = 0
+    var right = nums.count - 1
+    while left <= right {
+        // 当前居中的位置
+        let mid = (right + left) / 2
+        if nums[mid] == target {// 循环执行,知道找到nums[mid] == target,然后返回mid
+            return mid
+        }
+        // 如果nums[mid] < nums[right]说明,mid->right是有序的
+        if nums[mid] < nums[right] {
+            // 如果target在nums[mid]与nums[right]之间,left向右移动至mid+1
+            if nums[mid] < target && target <= nums[right] {
+                left = mid + 1
+            }else {// 否则right向左移动至mid-1
+                right = mid - 1
+            }
+        }else{// 否则说明left->mid是有序的
+            // 如果target在nums[left]与nums[right]之间,right向左移动至mid-1
+            if nums[left] <= target && target < nums[mid] {
+                right = mid - 1
+            }else{// 否则left向左移动至mid+1
+                left = mid + 1
+            }
+        }
+    }
+    return -1
+}
+
+
+
 
 //MARK:- list4:
 //344. 反转字符串
