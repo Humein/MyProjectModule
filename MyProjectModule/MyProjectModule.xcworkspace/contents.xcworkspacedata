@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:MyProjectModule/DesignMode/Design-Pattern-in-Swift/StrategyDesign/../../../../leetCode.cpp">
-   </FileRef>
-   <FileRef
-      location = "group:MyProjectModule/DesignMode/Design-Pattern-in-Swift/StrategyDesign/../../../../leetCode.hpp">
-   </FileRef>
-   <FileRef
       location = "group:MyProjectModule/Swift/Design-Pattern-in-Swift/StrategyDesign/../../../../MyPlayground.playground">
    </FileRef>
    <FileRef
