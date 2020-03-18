@@ -7,6 +7,13 @@ import UIKit
  2. 寻找结束条件
  3. 寻找等价关系
     等价条件中，一定是范围不断在缩小，对于链表来说，就是链表的节点个数不断在变小
+ 
+ 处理好递归的3个主要的点:
+ a) 出口条件，即递归“什么时候结束”，这个通常在递归函数的开始就写好;
+ b) 如何由"情况 n" 变化到"情况 n+1/n-1", 也就是非出口情况，也就是一般情况——"正在"递归中的情况；
+ c) 初始条件，也就是这个递归调用以什么样的初始条件开始
+
+ 递归由于是函数调用自身， 而函数调用是有时间和空间的消耗的：每一次函数调用，都需要在内存栈中分配空间以保存参数、返回地址及临时变量，而且往栈里压入数据和弹出数据都需要时间。另外，递归中有可能很多计算都是重复的，从而对性能带来很大的负面影响。除了效率之外，还有可能使调用栈溢出，前面分析中提到需要为每一次函数调用在内存栈中分配空间，而每个进程的栈的容量是有限的。当递归调用的层级太多时，就会超出栈的容量，从而导致调用栈溢出。
  */
 
 
@@ -769,7 +776,7 @@ func invertTree(_ root :TreeNode?) -> TreeNode? {
  2:首先选取数组右上角的数字，如果该数字等于要查找的数字，则查找结束；如果该数字大于要查找的数字，剔除这个数字所在的列，如果该数字小于要查找的数字，剔除这个数字所在的行。这样每一步都可以剔除一行或一列，查找的速度比较快。
 
  */
-func searchMatrix(data :[[Int]],number :NSInteger) -> Bool{
+func searchMatrix(data: [[Int]],number: NSInteger) -> Bool{
     if data.count == 0 || data.isEmpty{
         return  false
     }
@@ -788,18 +795,10 @@ func searchMatrix(data :[[Int]],number :NSInteger) -> Bool{
     return false
 }
 
-//func searchMatrixes(data :[[Int]], number :NSInteger) -> Bool{
-//    if data.count == 0 || data.isEmpty{
-//        return  false
-//    }
-//    var row :Int = 0, col :Int = data[0].count - 1
-//    
-//    while row <= data.count && col >= 0 {
-//        
-//    }
-//    
-//    return false
-//}
+func searchMatrix(data: [[Int]],number: NSInteger) -> Bool {
+    
+}
+
 
 
 //MARK:- list8:
