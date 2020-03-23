@@ -68,4 +68,17 @@
     return self;
 }
 
+- (instancetype)initWithBlock:(DeallocBlock)block
+{
+    self = [super init];
+    if (self) {
+        self.block = block;
+    }
+    return self;
+}
+/// 销毁  一般用一个单独类
+- (void)dealloc {
+    self.block ? self.block() : nil;
+}
+
 @end

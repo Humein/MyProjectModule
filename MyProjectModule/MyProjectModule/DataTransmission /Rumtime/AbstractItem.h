@@ -47,6 +47,10 @@ return self;\
  利用 Runtime 实现自动归档 & 解档
 
  */
+
+
+typedef void (^DeallocBlock)(void);
+
 @interface AbstractItem : NSObject<NSCopying,NSMutableCopying,NSCoding>
 
 @property (nonatomic,assign)float itemHeight;
@@ -55,4 +59,7 @@ return self;\
 
 @property (nonatomic,copy)NSString *name;
 
+/// 定义一个对象，使用block来回调析构函数。
+@property (nonatomic, copy) DeallocBlock block;
+- (instancetype)initWithBlock:(DeallocBlock)block;
 @end
