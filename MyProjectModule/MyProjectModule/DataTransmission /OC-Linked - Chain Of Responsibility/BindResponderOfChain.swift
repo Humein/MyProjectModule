@@ -5,10 +5,14 @@
 //  Created by Zhang Xin Xin on 2020/3/1.
 //  Copyright © 2020 xinxin. All rights reserved.
 //
-
+/**
+ 为什么不用 数组？？？？
+  - self.nextChain是关键，用数组的话怎么查找数组中的下一个。你需要向下传递的时候。需要拿到数组的下一个(下标)。数组还有越界的风险
+    而链表用self.nextChain就可以了.
+ */
 import UIKit
 
-class BindResponderOfChain: ResponderDelegate{
+class BindResponderOfChain: UIView, ResponderDelegate{
     var headerNode: BindResponderOfChain?
     var lastNode: BindResponderOfChain? {
         guard var node = headerNode else { return nil }
@@ -50,18 +54,35 @@ class BindResponderOfChain: ResponderDelegate{
     }
     
     func sendEvent(eventType: NSInteger, with item: BlockModel) {
-        var temp = self
-        while (temp.prevChain != nil) {
-            if (temp.prevChain == nil) {
+        var tempPrev = self
+//        var tempNext = self
+        
+        while tempPrev.prevChain != nil {
+            if tempPrev.prevChain == nil {
                 break
             }
-            temp = temp.prevChain!
+            tempPrev = tempPrev.prevChain!
         }
-        temp.responseEvent(eventType: eventType, with: item )
+        /// header 发送消息就行了。后续的通过在每个node的responder中node.next 调用
+        tempPrev.responseEvent(eventType: eventType, with: item )
+        
+        /**
+         前后 这样 self.nextChain?.responseEvent 不用在每个类中写了 但就不能装饰了
+        self.responseEvent(eventType: eventType, with: item)
+        while tempPrev.prevChain != nil {
+            tempPrev.prevChain?.responseEvent(eventType: eventType, with: item)
+            tempPrev = tempPrev.prevChain!
+        }
+        while tempNext.nextChain != nil {
+            tempNext.nextChain?.responseEvent(eventType: eventType, with: item)
+            tempNext = tempNext.nextChain!
+        }
+      */
+        
     }
 
     func responseEvent(eventType: NSInteger, with item: BlockModel) {
-        print("log: \(type(of: self))" + "\(eventType)" + "\(item)")
+        print("log: \(type(of: self))" + "\(eventType)" + "\(String(describing: item.title))")
     }
 }
 
@@ -75,35 +96,44 @@ protocol ResponderDelegate {}
 
 class AChain: BindResponderOfChain {
     var name: String?
-    
-    init(_ name: String) {
+    /// 构造器
+    init(_ name: String,_ frame: CGRect) {
         self.name = name
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func responseEvent(eventType: NSInteger, with item: BlockModel) {
         super.responseEvent(eventType: eventType, with: item)
         item.stateBlock = { (item) -> () in
             if let mode = item as? BlockModel {
-                print(mode.title as Any)
+//                print(mode.title as Any)
             }
         }
         self.nextChain?.responseEvent(eventType: eventType, with: item)
-
     }
 }
 
 class BChain: BindResponderOfChain{
     var name: String?
     
-    init(_ name: String) {
+    init(_ name: String,_ frame: CGRect) {
         self.name = name
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func responseEvent(eventType: NSInteger, with item: BlockModel) {
         super.responseEvent(eventType: eventType, with: item)
         item.stateBlock = { (item) -> () in
             if let mode = item as? BlockModel {
-                print(mode.title as Any)
+//                print(mode.title as Any)
             }
         }
         self.nextChain?.responseEvent(eventType: eventType, with: item)
@@ -117,16 +147,20 @@ class BChain: BindResponderOfChain{
 class CChain: BindResponderOfChain{
     var name: String?
     
-    init(_ name: String) {
+    init(_ name: String,_ frame: CGRect) {
         self.name = name
+        super.init(frame: frame)
     }
-
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func responseEvent(eventType: NSInteger, with item: BlockModel) {
         super.responseEvent(eventType: eventType, with: item)
         item.title = "CChain"
         item.stateBlock?(item)
         self.nextChain?.responseEvent(eventType: eventType, with: item)
-
     }
 }
 
