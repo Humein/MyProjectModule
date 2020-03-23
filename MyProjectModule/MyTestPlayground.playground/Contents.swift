@@ -136,14 +136,6 @@ func bubbleSort(unsortedArray: inout [Int]){
         return
     }
 
-    for i in 0..<2 {
-        print(i)
-    }
-    
-    for i in 0...2 {
-        print(i)
-    }
-    
     for i in 0 ..< unsortedArray.count - 1 {
         var exchanged = false
         for j in 0 ..< unsortedArray.count - 1 - i {
@@ -158,6 +150,7 @@ func bubbleSort(unsortedArray: inout [Int]){
         }
     }
 }
+
 
 var list = [2, 3, 5, 7, 4, 8, 6 ,10 ,1, 9]
 bubbleSort(unsortedArray: &list)
@@ -284,7 +277,8 @@ func reverseLinkRec(_ head: listNode?) -> listNode?{
         return head
     }
     
-    //反转第一个节点之后的链表, 我们先把递归的结果保存起来，先不返回，因为我们还不清楚这样递归是对还是错。，
+    //反转第一个节点之后的链表, 我们先把递归的结果保存起来，先不返回，因为我们还不清楚这样递归是对还是错。
+    // 不放在 逻辑处理后面 是因为逻辑处理 会改变head?.next
     print("=========")
     let newHead = reverseLinkRec(head?.next) // 栈顶
     print("---------")
@@ -302,7 +296,7 @@ var head3 = listNode.init(value: 3, next: head2)
 var head = listNode.init(value: 4, next: head3)
 reverseLinkRec(head)
 
-
+// 迭代实现
 func ReverseListWhile(_ head: LinkNode?) -> LinkNode? {
     var reversedHead: LinkNode? = nil
     var node: LinkNode? = head
@@ -449,12 +443,10 @@ func search(_ nums: [Int], _ target: Int) -> Int {
 双指针 迭代方式
 */
 func reverseString(_ s: inout [Character]){
-    
     //记得 边界1
     if  s.count < 2 {
         return
     }
-    
     var p1 = 0, p2 = s.count - 1
     // let sArr = Array(s) 输入就是数组了
     // 指针边界2
@@ -467,6 +459,38 @@ func reverseString(_ s: inout [Character]){
         p2 -= 1
     }
 }
+// 字符串反转
+fileprivate func reverse<T>(_ chars: inout [T], _ start: Int, _ end: Int) {
+  var start = start, end = end
+  while start < end {
+    swap(&chars, start, end)
+    start += 1
+    end -= 1
+  }
+}
+fileprivate func swap<T>(_ chars: inout [T], _ p: Int, _ q: Int) {
+  (chars[p], chars[q]) = (chars[q], chars[p])
+}
+
+// 单词反转  s 是 "the sky is blue", 那么反转就是 "blue is sky the"。
+func reverseWords(s: String?) -> String? {
+  guard let s = s else {
+    return nil
+  }
+
+  var chars = Array(s), start = 0
+  reverse(&chars, 0, chars.count - 1)
+
+  for i in 0 ..< chars.count {
+    if i == chars.count - 1 || chars[i + 1] == " " {
+      reverse(&chars, start, i)
+      start = i + 2
+    }
+  }
+
+  return String(chars)
+}
+
 
 /// 235. 二叉搜索树的最近公共祖先 / 怎么查找两个view的公共父视图
 /**
@@ -1393,8 +1417,11 @@ func hasCycle(_ head: LinkNode?) -> Bool{
 
 //MARK:- list14:
 
-//142 环形链表 II
+//142 环形链表 II 
 /*
+ 给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
+
+
 
  链表相关思路----
  
@@ -1435,6 +1462,7 @@ func detectCycle(_ head: LinkNode?) -> LinkNode?{
     
     return fast!
 }
+
 /*
  手撕快排 https://www.jianshu.com/p/5a81ba81886d
  */
