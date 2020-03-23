@@ -72,15 +72,18 @@ class SwiftDemosViewController: UIViewController {
         
         
         //MARK:- chain
-        let aC = AChain.init("A")
-        let bC = BChain.init("B")
-        let cC = CChain.init("C")
+        let aC = AChain.init("A", CGRect.init(x: 50, y: 50, width: 50, height: 50))
+        aC.backgroundColor = .red
+        let bC = BChain.init("B", CGRect.init(x: 50, y: 50, width: 50, height: 50))
+        bC.backgroundColor = .yellow
+        let cC = CChain.init("C", CGRect.init(x: 50, y: 50, width: 50, height: 50))
+        cC.backgroundColor = .blue
         let chain = BindResponderOfChain.init()
         chain.initWith { (link) in
             _ = link.next(aC).next(bC).next(cC)
         }
         let model = BlockModel()
-        aC.sendEvent(eventType: -1, with: model)
+        aC.sendEvent(eventType: -11111, with: model)
         
         print(chain.getChainList())
         print(chain.headerNode as Any)
