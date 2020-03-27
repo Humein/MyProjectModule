@@ -75,22 +75,16 @@
 /**
  动态关联属性
  */
-- (id)objc_weak_id {
-    return objc_getAssociatedObject(self, _cmd);
+- (void)setObject:(id)object {
+    id __weak weakObject = object;
+    id (^block)(void) = ^{ return weakObject; };
+    objc_setAssociatedObject(self, @selector(object), block, OBJC_ASSOCIATION_COPY);
 }
 
-- (void)setObjc_weak_id:(id)objc_weak_id {
-    AbstractItem *ob = [[AbstractItem alloc] initWithBlock:^{
-        objc_setAssociatedObject(self, @selector(objc_weak_id), nil, OBJC_ASSOCIATION_ASSIGN);
-    }];
-    // 这里关联的key必须唯一，如果使用_cmd，对一个对象多次关联的时候，前面的对象关联会失效。
-    //  objc_weak_id 要关联一个 retain 的对象. 防止{}执行之后便释放掉
-    objc_setAssociatedObject(objc_weak_id, (__bridge const void *)(ob.block), ob, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    // 给需要被 assign 修饰的对象添加一个 strong 对象.
-    objc_setAssociatedObject(self, @selector(objc_weak_id), objc_weak_id, OBJC_ASSOCIATION_ASSIGN);
+- (id)object {
+    id (^block)(void) = objc_getAssociatedObject(self, @selector(object));
+    return (block ? block() : nil);
 }
-
-
 
 
 /**

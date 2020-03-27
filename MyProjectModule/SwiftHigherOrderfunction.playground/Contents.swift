@@ -37,15 +37,15 @@ import UIKit
    - 引用类型：
    最常用的就是类和闭包
  
-值类型，存放在栈区；引用类型，存放在堆区。但是有些值类型，如字符串或数组，会间接地将项保存在堆中。所以它们是由引用类型支持的值类型
+  值类型，存放在栈区；引用类型，存放在堆区。但是有些值类型，如字符串或数组，会间接地将项保存在堆中。所以它们是由引用类型支持的值类型
  
- 类和结构体的选择：
+      类和结构体的选择：
 
- 该数据结构的主要目的是用来封装少量相关简单数据值；
- 有理由预计该数据结构的实例在被赋值或传递时，封装的数据将会被拷贝而不是被引用；
- 该数据结构中储存的值类型属性，也应该被拷贝，而不是被引用；
- 该数据结构不需要去继承另一个既有类型的属性或者行为。
-  当有上面的一种情况或多种情况请选择结构体，结构体比类更简单，也就是更轻便
+      该数据结构的主要目的是用来封装少量相关简单数据值；
+      有理由预计该数据结构的实例在被赋值或传递时，封装的数据将会被拷贝而不是被引用；
+      该数据结构中储存的值类型属性，也应该被拷贝，而不是被引用；
+      该数据结构不需要去继承另一个既有类型的属性或者行为。
+      当有上面的一种情况或多种情况请选择结构体，结构体比类更简单，也就是更轻便
 
  
  - filter
@@ -67,6 +67,7 @@ import UIKit
  - 组合使用
    我们可以链式调用高阶函数。 不要链接太多，不然执行效率会慢
  
+ - 元组
  
 总结：
  当你需要映射一个数组，并且不需要改变返回数组的层级结构的时候，使用 map ，反之则使用 flatMap
@@ -680,3 +681,36 @@ let totalAge = stus.filter { (stu) -> Bool in
 }
 
 print(totalAge)
+
+
+//MARK:- 元组 Tuples
+//元组 把多个值合并成单一的复合型的值。元组内的值可以是任何类型，而且可以不必是同一类型。
+    let http404Error = (404, "Not Found")
+    
+    let (statusCode, statusMessage) = http404Error
+    print("The status message is \(statusMessage)")
+    print("The status code is \(statusCode)")
+
+    //当你分解元组的时候，如果只需要使用其中的一部分数据，不需要的数据可以用下滑线（ _ ）代替：
+    
+    let (justTheStatusCode, _) = http404Error
+    print("The status code is \(justTheStatusCode)")
+    print("The status code is \(http404Error.1)")
+
+//使用元组来创建复合值——比如，为了从函数中返回多个值。元组中的元素可以通过名字或者数字调用。
+func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
+    var min = scores[0]
+    var max = scores[0]
+    var sum = 0
+    
+    for score in scores {
+        if score > max {
+            max = score
+        } else if score < min {
+            min = score
+        }
+        sum += score
+    }
+    
+    return (min, max, sum)
+}

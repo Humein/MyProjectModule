@@ -51,6 +51,8 @@ import UIKit
    
  */
 
+
+
 /// 二叉树结构
 public class TreeNode: Equatable {
      public var parent: TreeNode?
@@ -819,9 +821,6 @@ func searchMatrix(data: [[Int]],number: NSInteger) -> Bool{
     return false
 }
 
-func searchMatrix(data: [[Int]],number: NSInteger) -> Bool {
-    
-}
 
 
 

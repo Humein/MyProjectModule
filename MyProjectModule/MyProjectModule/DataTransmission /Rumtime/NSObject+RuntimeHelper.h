@@ -29,8 +29,7 @@
 
 ///  动态关联属性
 /** 1: 给 Category 添加 weak 属性
-   - 思路是这样的，让需要被 weak 修饰的对象去持有一个 strong 的对象，然后当被修饰的对象被释放的时候，持有的对象也会被释放，那么我们就可以捕捉到释放的事件，进而使用OBJC_ASSOCIATION_ASSIGN 来实现弱引用，在释放事件里面再将其释放掉，进而实现weak功能。
-   [添加weak属性](https://www.jianshu.com/p/18d8cd4ff6c6)
+   - __weak 本身就会把指针指向nil，那直接利用就是了。使用OBJC_ASSOCIATION_COPY关联策略将block copy到堆上，利用block把持有的weak对象返回，如果对象不存在了，返回的便是空值
    - 大题思路就是 引入中间对象
 */
 @property (nonatomic, weak) id objc_weak_id;

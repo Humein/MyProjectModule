@@ -49,8 +49,6 @@ return self;\
  */
 
 
-typedef void (^DeallocBlock)(void);
-
 @interface AbstractItem : NSObject<NSCopying,NSMutableCopying,NSCoding>
 
 @property (nonatomic,assign)float itemHeight;
@@ -59,7 +57,4 @@ typedef void (^DeallocBlock)(void);
 
 @property (nonatomic,copy)NSString *name;
 
-/// 定义一个对象，使用block来回调析构函数。
-@property (nonatomic, copy) DeallocBlock block;
-- (instancetype)initWithBlock:(DeallocBlock)block;
 @end
