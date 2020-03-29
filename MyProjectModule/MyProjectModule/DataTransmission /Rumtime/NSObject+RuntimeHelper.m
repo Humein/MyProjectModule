@@ -75,14 +75,15 @@
 /**
  动态关联属性
  */
-- (void)setObject:(id)object {
-    id __weak weakObject = object;
+
+- (void)setObjc_weak_id:(id)objc_weak_id {
+    id __weak weakObject = objc_weak_id;
     id (^block)(void) = ^{ return weakObject; };
-    objc_setAssociatedObject(self, @selector(object), block, OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(self, @selector(objc_weak_id), block, OBJC_ASSOCIATION_COPY);
 }
 
-- (id)object {
-    id (^block)(void) = objc_getAssociatedObject(self, @selector(object));
+- (id)objc_weak_id {
+    id (^block)(void) = objc_getAssociatedObject(self, @selector(objc_weak_id));
     return (block ? block() : nil);
 }
 

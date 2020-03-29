@@ -7,6 +7,7 @@
 //
 
 #import "AbstractItem.h"
+#import "NSObject+RuntimeHelper.h"
 #import <objc/runtime.h>
 
 @implementation AbstractItem

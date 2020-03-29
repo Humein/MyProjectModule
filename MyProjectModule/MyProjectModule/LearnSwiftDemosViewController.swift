@@ -464,7 +464,7 @@ class LearnSwiftDemosViewController: UIViewController {
         // 返回元组类型 场景： 多参数 合并为 元组，便于闭包的抽离和外面使用
         let results: Any?  = ""
         let error: Int?  = 0
-        self.buttonClick?((results,error))
+        self.buttonClick?((results,error)) // nil 不支持
         self.buttonClick = {(args: (Any, Int)) -> () in
             _ = args.0
             _ = args.1
