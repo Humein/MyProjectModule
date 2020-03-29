@@ -76,6 +76,17 @@
  动态关联属性
  */
 
+- (void)setObjc_weak_id:(id)objc_weak_id {
+    id __weak weakObject = objc_weak_id;
+    id (^block)(void) = ^{ return weakObject; };
+    objc_setAssociatedObject(self, @selector(objc_weak_id), block, OBJC_ASSOCIATION_COPY);
+}
+
+- (id)objc_weak_id {
+    id (^block)(void) = objc_getAssociatedObject(self, @selector(objc_weak_id));
+    return (block ? block() : nil);
+}
+
 
 /**
  获取类中的所有属性

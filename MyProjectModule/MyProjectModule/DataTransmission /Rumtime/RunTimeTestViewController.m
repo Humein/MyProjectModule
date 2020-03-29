@@ -20,6 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSLog(@"%@", self.objc_weak_id);
+    self.objc_weak_id = @"0";
+    NSLog(@"%@", self.objc_weak_id);
+    
+    
     NSObject *newObje = [NSObject new];
     
     self.weakObject = newObje;
@@ -61,7 +66,7 @@
 }
 
 -(void)dealloc{
-    
+    NSLog(@"%@", self.objc_weak_id);
     NSLog(@"%@=====nil",[self description]);
     
 }

@@ -101,7 +101,7 @@
 
 
 // Masonry中正是使用了 函数式编程与链式编程 的方式
-
+/// 返回值 是个有返回值的匿名有参block 
 - (BlockObject * (^) (NSString * rightName,CGRect frame,BOOL isImage))rightBarItem
 {
     BlockObject * (^rightItemBlock) (NSString * rightName,CGRect frame,BOOL isImage)= ^(NSString * rightName,CGRect frame,BOOL isImage){
@@ -157,14 +157,13 @@
 }
 
 #pragma mark -- 函数式编程 1
+/// 返回值  是个无返回值的匿名block
 - (void (^)(void))run3{
-    
+    // 创建一个block
     void(^MyBlock)(void) = ^{
         NSLog(@"跑步3");
     };
-    
     return MyBlock;
-
 }
 
 - (void (^)(void))eat3{
@@ -176,18 +175,18 @@
 }
 
 #pragma mark -- 函数式编程 2
+/// 返回值 是个有返回值的匿名block
 - (BlockObject * (^)(void))run4{
-    
+    // 创建 返回值是self的block
     BlockObject * (^MyBlock)(void) = ^{
-        
         NSLog(@"跑步4");
         return self;
     };
     
     return MyBlock;
 }
+
 - (BlockObject * (^)(void))eat4{
-    
     return ^{
         NSLog(@"吃饭4");
         return self;
@@ -195,6 +194,7 @@
 }
 
 #pragma mark -- 函数式编程 3
+///  返回值 是个有返回值的匿名有参block
 - (BlockObject *(^)(double))run5{
     return ^(double distance){
         NSLog(@"跑了%.2f米",distance);

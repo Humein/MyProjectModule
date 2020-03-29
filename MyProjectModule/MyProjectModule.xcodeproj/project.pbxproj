@@ -489,6 +489,8 @@
 		794E82582403EED6008DFFB9 /* LOTAnimationLRUCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOTAnimationLRUCache.m; sourceTree = "<group>"; };
 		794E825D2404BBA7008DFFB9 /* LRUCacheSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRUCacheSimple.swift; sourceTree = "<group>"; };
 		795114A92408FEB9004F6418 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
+		796E8F63242DF081001EB53F /* MyTestPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyTestPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		796E8F64242DF0A0001EB53F /* SwiftHigherOrderfunction.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftHigherOrderfunction.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Radius.swift"; sourceTree = "<group>"; };
 		797EC35F236C10F900E21E44 /* SDOPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDOPickerView.swift; sourceTree = "<group>"; };
 		797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimeAlertPickerView.swift; sourceTree = "<group>"; };
@@ -504,7 +506,6 @@
 		7997BE68224090A50054F4D0 /* AbstractAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractAlertView.m; sourceTree = "<group>"; };
 		7998C6CD23CEA4E500DA3BEF /* DesignModeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignModeViewController.h; sourceTree = "<group>"; };
 		7998C6CE23CEA4E500DA3BEF /* DesignModeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignModeViewController.m; sourceTree = "<group>"; };
-		799E56C623974CF8004886E9 /* MyTestPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyTestPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		79A0EC9F23681B79004C10B0 /* VTBEncodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBEncodeViewController.h; sourceTree = "<group>"; };
 		79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTBEncodeViewController.m; sourceTree = "<group>"; };
 		79A0ECA32368262F004C10B0 /* XXH264EncodeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXH264EncodeTool.h; sourceTree = "<group>"; };
@@ -587,7 +588,6 @@
 		79E96689237EBDF800B49697 /* AView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AView.swift; sourceTree = "<group>"; };
 		79E9668B237EBE0400B49697 /* BView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BView.swift; sourceTree = "<group>"; };
 		79E9668D237EBE1100B49697 /* CView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CView.swift; sourceTree = "<group>"; };
-		79E9678E2382A08600B49697 /* SwiftHigherOrderfunction.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftHigherOrderfunction.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		79E9678F2382C54700B49697 /* MineLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = MineLocation.gpx; path = /Users/zhangxinxin/Code/MyProjectModule/MyProjectModule/MyProjectModule/localFile/MineLocation.gpx; sourceTree = "<absolute>"; };
 		79EEEA492182BD4700848B59 /* UITableView滚动到底部时崩溃的解决方法 - 简书.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "UITableView滚动到底部时崩溃的解决方法 - 简书.html"; sourceTree = "<group>"; };
 		79EEEA4A2182BD4700848B59 /* scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客 - CSDN博客.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "scrollToRowAtIndexPath 问题分析（crash 和 不执行问题） - base的博客 - CSDN博客.html"; sourceTree = "<group>"; };
@@ -653,8 +653,6 @@
 		333D104920CE74A8004D9241 = {
 			isa = PBXGroup;
 			children = (
-				799E56C623974CF8004886E9 /* MyTestPlayground.playground */,
-				79E9678E2382A08600B49697 /* SwiftHigherOrderfunction.playground */,
 				333D105420CE74A8004D9241 /* MyProjectModule */,
 				333D106D20CE74AB004D9241 /* MyProjectModuleTests */,
 				333D107820CE74AB004D9241 /* MyProjectModuleUITests */,
@@ -1472,6 +1470,8 @@
 		792A730821EF2FBE0098B94C /* localFile */ = {
 			isa = PBXGroup;
 			children = (
+				796E8F64242DF0A0001EB53F /* SwiftHigherOrderfunction.playground */,
+				796E8F63242DF081001EB53F /* MyTestPlayground.playground */,
 				79E9678F2382C54700B49697 /* MineLocation.gpx */,
 				792A730D21EF2FD50098B94C /* class_cluster_data.json */,
 				792A730921EF2FBE0098B94C /* Tree.plist */,

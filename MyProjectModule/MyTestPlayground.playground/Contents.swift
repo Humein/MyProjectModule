@@ -1,5 +1,16 @@
 import UIKit
 //MARK:- 递归
+//MARK:- 排序
+//MARK:- 动态规划
+//MARK:- 贪心算法
+//MARK:- 链表
+//MARK:- 字符串
+//MARK:- 数组
+//MARK:- 二叉树
+
+
+
+//MARK:- 递归
 /*  递归详解  https://mp.weixin.qq.com/s/mJ_jZZoak7uhItNgnfmZvQ
  步骤
  0. 是否有边界
@@ -15,6 +26,59 @@ import UIKit
 
  递归由于是函数调用自身， 而函数调用是有时间和空间的消耗的：每一次函数调用，都需要在内存栈中分配空间以保存参数、返回地址及临时变量，而且往栈里压入数据和弹出数据都需要时间。另外，递归中有可能很多计算都是重复的，从而对性能带来很大的负面影响。除了效率之外，还有可能使调用栈溢出，前面分析中提到需要为每一次函数调用在内存栈中分配空间，而每个进程的栈的容量是有限的。当递归调用的层级太多时，就会超出栈的容量，从而导致调用栈溢出。
  */
+
+/// 1-100 相加
+func recursion100(_ n :Int) -> Int{
+    if n == 1 {
+        return 1
+    }
+    print(n)
+    return recursion100(n - 1) + n
+}
+recursion100(10)
+
+/// 遍历子view
+func recursionSubView(_ view :UIView){
+    if view.subviews.count > 0 {
+        for item in view.subviews{
+            print(item)
+            recursionSubView(item)
+        }
+    }
+}
+let view = UIView()
+recursionSubView(view)
+
+//MARK:- 排序
+//冒泡排序 升序
+/*
+ O(n²) 时间
+ O(1)  空间
+ 冒泡排序是一种稳定的排序
+ */
+
+func bubbleSort(unsortedArray: inout [Int]){
+    guard unsortedArray.count > 1 else{
+        return
+    }
+
+    for i in 0 ..< unsortedArray.count - 1 {
+        var exchanged = false
+        for j in 0 ..< unsortedArray.count - 1 - i {
+            if unsortedArray[j] > unsortedArray[j+1] {
+                unsortedArray.swapAt(j, j+1)
+                exchanged = true
+            }
+        }
+        //若无交换则可直接返回
+        if exchanged == false {
+            break
+        }
+    }
+}
+var list = [2, 3, 5, 7, 4, 8, 6 ,10 ,1, 9]
+bubbleSort(unsortedArray: &list)
+print(list)
 
 
 
@@ -44,31 +108,10 @@ import UIKit
  */
 
 
-//MARK:-  红黑树（6k字总结）
-/*
- [每天学点数据结构 —— 红黑树（6k字总结](https://juejin.im/post/5dde545bf265da06074f13cc)
- 
-   
- */
 
-/// 二叉树结构
-public class TreeNode: Equatable {
-     public var parent: TreeNode?
-     public var val: Int
-     public var left: TreeNode?
-     public var right: TreeNode?
-    
-     public init(value: Int, left: TreeNode?, right: TreeNode?) {
-         self.val = value
-         self.left = left
-         self.right = right
-     }
-    
-    public static func == (lhs: TreeNode, rhs: TreeNode) -> Bool {
-        return lhs.val == rhs.val
-    }
- }
 
+//MARK:- 链表
+/// 链表结构
 class listNode {
     var next: listNode?
     var val: Int
@@ -77,7 +120,6 @@ class listNode {
         self.next = next
     }
 }
-
 public class LinkNode{
     public var val: Int
     public var next: LinkNode?
@@ -87,186 +129,49 @@ public class LinkNode{
     }
 }
 
-//MARK:- codeInterview
-// 
-class code1 {
-
-    
-}
-
-
-
-//MARK:- list1：
-//1-100 相加
-func recursion100(_ n :Int) -> Int{
-    if n == 1 {
-        return 1
-    }
-    print(n)
-    return recursion100(n - 1) + n
-}
-recursion100(10)
-
-
-
-//遍历子view
-func recursionSubView(_ view :UIView){
-    if view.subviews.count > 0 {
-        for item in view.subviews{
-            print(item)
-            recursionSubView(item)
-        }
-    }
-}
-let view = UIView()
-recursionSubView(view)
-
-//冒泡排序 升序
+//21 合并两个有序链表
+// 迭代 可类比88题
+// 递归
 /*
- O(n²) 时间
- O(1)  空间
- 最好情况：若初始序列已经排好序，则只需要进行 i-1 次比较，而不需要发生交换。
- 最坏情况：需要执行 i-1 次冒泡，并且每次都需要进行 i-j-1 次交换。
- 可以看到，「冒泡排序」在序列基本有序的情况下，效率会好一些。平均来看，「冒泡排序」的时间复杂度是 O(n^2) 。
- 冒泡排序是一种稳定的排序
- */
+ 时间复杂度：O(n + m)。 因为每次调用递归都会去掉 l1 或者 l2 的头元素（直到至少有一个链表为空），函数 mergeTwoList 中只会遍历每个元素一次。所以，时间复杂度与合并后的链表长度为线性关系。
 
-func bubbleSort(unsortedArray: inout [Int]){
-    guard unsortedArray.count > 1 else{
-        return
-    }
-
-    for i in 0 ..< unsortedArray.count - 1 {
-        var exchanged = false
-        for j in 0 ..< unsortedArray.count - 1 - i {
-            if unsortedArray[j] > unsortedArray[j+1] {
-                unsortedArray.swapAt(j, j+1)
-                exchanged = true
-            }
-        }
-        //若无交换则可直接返回
-        if exchanged == false {
-            break
-        }
-    }
-}
-
-
-var list = [2, 3, 5, 7, 4, 8, 6 ,10 ,1, 9]
-bubbleSort(unsortedArray: &list)
-print(list)
-
-//88. 合并两个有序数组
-/*
- 给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。
- 初始化 nums1 和 nums2 的元素数量分别为 m 和 n。
- 你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。
-
- 3个指针迭代 可以类比 21题
- */
-
-func mergeArrays(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
-    
-    var p1 = m - 1, p2 = n - 1, p = m + n - 1
-    
-    while p1 >= 0 && p2 >= 0 {
-        if nums1[p1] >= nums2[p2] {
-            nums1[p] = nums1[p1]
-            p1 -= 1
-            p -= 1
-        }else{
-            nums1[p] = nums2[p2]
-            p2 -= 1
-            p -= 1
-        }
-    }
-    
-    while p2 >= 0 {
-        nums1[p] = nums2[p2]
-        p -= 1
-        p2 -= 1
-    }
-}
-var nums1 = [1,2,3,0,0,0,0,0,0,0], mm = 3
-var nums2 = [2,5,6,7,8,9,10],       nn = 7
-
-mergeArrays(&nums1,mm,nums2,nn)
-
-//栈实现
-/*   也可以通过数组去实现 popLast append
+ 空间复杂度：O(n + m)。调用 mergeTwoLists 退出时 l1 和 l2 中每个元素都一定已经被遍历过了，所以 n + mn+m 个栈帧会消耗 O(n + m) 的空间。
  
-  swift 中struct,enum 均可以包含类方法和实例方法,swift官方是不建议在struct,enum 的普通方法里修改属性变量,但是在func 前面添加
- 
- ing 关键字之后就可以方法内修改.
+ 首先同时遍历两个链表，比较两个链表当前的值，小的值就作为新链表的元素，然后小的值的链表就走到下一个元素，大的值的链表还是当前元素。接着继续遍历，重复上述步骤，直到链表遍历完毕。这样就可以得到新的有序链表了。 需要注意几个地方：
+
+ - 这个题目，最好是创建一个头结点来作为辅助，这样就不用判断新链表的头结点是l1的头结点还是l2的头结点了。
+ - 遍历到最后，一般会有一个链表是先遍历完毕的。接着将另外一个链表拼接起来就行了，不用继续再一个个遍历拼接。
+
  */
-protocol Stack {
-  /// 持有的元素类型
-  associatedtype Element
-  
-  /// 是否为空
-  var isEmpty: Bool { get }
-  /// 栈的大小
-  var size: Int { get }
-  /// 栈顶元素
-  var peek: Element? { get }
-  
-  /// 进栈
-  mutating func push(_ newElement: Element)
-  /// 出栈
-  mutating func pop() -> Element?
-}
+func mergeTwoLists(_ l1: listNode?,_ l2: listNode?) -> listNode?{
+    // l1/l2 == nil  边界          l1?.next 递归转移方程
 
-struct IntegerStack: Stack {
-  typealias Element = Int
-  
-  var isEmpty: Bool { return stack.isEmpty }
-  var size: Int { return stack.count }
-  var peek: Element? { return stack.last }
-  
-  private var stack = [Element]()
-  
-  mutating func push(_ newElement: Element) {
-    stack.append(newElement)
-  }
-  
-  mutating func pop() -> Element? {
-    return stack.popLast()
-  }
-}
-
-var stacks = IntegerStack.init()
-stacks.push(1)
-stacks.push(2)
-stacks.push(3)
-stacks.pop()
-print(stacks)
-
-//MARK:- list2：
-//1. 两数之和
-func twoSums(_ nums: [Int],_ target: Int) ->[Int]{
-    var dic = [Int:Int]()
-    for (idx,item) in nums.enumerated() {
-        if let lastIdx = dic[target - item] {
-            return [idx,lastIdx]
-        }else{
-            dic[item] = idx
-        }
+    if l1 == nil {
+        return l2
     }
-    return []
-}
-twoSums([2, 7, 11, 15], 17)
-
-//136. 只出现一次的数字  遍历异或
-func singleNum(_ nums :[Int]) -> Int{
-    var result = 0
-    for num in nums {
-        result = result ^ num
+    
+    if l2 == nil{
+        return l1
     }
-    return result
+    print(l1!.val)
+
+    if l1!.val < l2!.val{
+        l1?.next = mergeTwoLists(l1?.next, l2)
+        return l1
+    }else{
+        l2?.next = mergeTwoLists(l1, l2?.next)
+        return l2
+    }
 }
 
-//206. 反转链表  递归还是在借助函数调用栈的思想，其实本质上也是一个栈。
+let node5 = listNode(value: 5, next: nil)
+let node4 = listNode(value: 4, next: node5)
+let node3 = listNode(value: 3, next: node4)
+let node2 = listNode(value: 2, next: node3)
+let node1 = listNode(value: 1, next: node2)
+mergeTwoLists(node1,node2)
 
+/// 206. 反转链表  递归还是在借助函数调用栈的思想，其实本质上也是一个栈。
 /*
  等价条件中，一定是范围不断在缩小，对于链表来说，就是链表的节点个数不断在变小
   reverseList(head) 等价于 ** reverseList(head.next)** + 改变一下1，2两个节点的指向。好了，等价关系找出来了
@@ -285,7 +190,7 @@ func reverseLinkRec(_ head: listNode?) -> listNode?{
 
 //  只需要把节点 2 的 next 指向 1，然后把 1 的 next 指向 null,不就行了？
     head?.next?.next = head
-    head?.next = nil 
+    head?.next = nil
     return newHead
 }
 
@@ -313,131 +218,7 @@ func ReverseListWhile(_ head: LinkNode?) -> LinkNode? {
     return reversedHead
 }
 
-//MARK:- list3:
-//392.判断子序列
-/*
- 判断 s 是否为 t 的子序列。
-
- 本文主要运用的是双指针的思想，指针si指向s字符串的首部，指针ti指向t字符串的首部。
- */
-func isSubsequence(_ s :String, _ t :String) -> Bool{
-    var sp = 0, tp = 0
-    let sArray = Array(s), tArray = Array(t)
-    //指针边界
-    while sp < sArray.count && tp < tArray.count  {
-        if sArray[sp] == tArray[tp] {
-            sp += 1
-        }
-        tp += 1
-    }
-    
-    return sp == s.count
-    
-}
-
-print(isSubsequence("acd","abcd"))
-
-
-
-//11. 盛最多水的容器
-/*
- 双指针
-现在，为了使面积最大化，我们需要考虑更长的两条线段之间的区域。如果我们试图将指向较长线段的指针向内侧移动，矩形区域的面积将受限于较短的线段而不会获得任何增加。但是，在同样的条件下，移动指向较短线段的指针尽管造成了矩形宽度的减小，但却可能会有助于面积的增大。因为移动较短线段的指针会得到一条相对较长的线段，这可以克服由宽度减小而引起的面积减小。
-*/
-func getMaxArea(_ height: [Int]) -> Int{
-    // 记得边界
-    if height.count == 0 {
-        return 0
-    }
-    
-    var p1 = 0, p2 = height.count - 1, maxArea = 0
-    
-    while p1 < p2 {
-        // 遍历出每次最低高度
-        var minHeight = 0
-        if height[p1] < height[p2]{
-            minHeight = height[p1]
-            p1 += 1
-        }else{
-            minHeight = height[p2]
-            p2 -= 1
-        }
-        // 记得 + 1
-        maxArea = max(maxArea, (p2 - p1 + 1) * minHeight)
-    }
-    
-    return maxArea
-    
-}
-
-getMaxArea([1,8,6,2,5,4,8,3,7])
-
-
-//704. 二分查找
-/*
- 双指针 迭代方式
- */
-func binarySearch(_ nums: [Int], _ target :Int) -> Int{
-    var p1 = 0, p2 = nums.count - 1
-    
-    while p1 < p2 {
-        let mid = (p2 - p1) / 2 + p1 //记得加p1
-        if nums[mid] == target {
-            return mid
-        }else if nums[mid] > target {
-            p2 = mid - 1 // 记得 - 1
-        }else{
-            p1 = mid + 1 // 记得 + 1
-        }
-    }
-    
-    return -1
-}
-
-/// 33. 搜索旋转排序数组
-/**
- 假设按照升序排序的数组在预先未知的某个点上进行了旋转。
- 搜索一个给定的目标值，如果数组中存在这个目标值，则返回它的索引，否则返回 -1 。
- 你可以假设数组中不存在重复的元素
- 解题
- 1、先创建两个指针left和right，然后取mid=(right+left)/2,将数组一分为二。其中肯定有一个有序，一个可能有序或者部分有序，
- 2、然后在有序的范围内判断target是否在有序范围内，然后移动left或right，继续步骤一，直到找到nums[mid] == target,返回mid，否则返回-1。
- 时间复杂度：O(log(n))。空间复杂度：O(1)
- */
-
-func search(_ nums: [Int], _ target: Int) -> Int {
-    var left = 0
-    var right = nums.count - 1
-    while left <= right {
-        // 当前居中的位置
-        let mid = (right + left) / 2
-        if nums[mid] == target {// 循环执行,知道找到nums[mid] == target,然后返回mid
-            return mid
-        }
-        // 如果nums[mid] < nums[right]说明,mid->right是有序的
-        if nums[mid] < nums[right] {
-            // 如果target在nums[mid]与nums[right]之间,left向右移动至mid+1
-            if nums[mid] < target && target <= nums[right] {
-                left = mid + 1
-            }else {// 否则right向左移动至mid-1
-                right = mid - 1
-            }
-        }else{// 否则说明left->mid是有序的
-            // 如果target在nums[left]与nums[right]之间,right向左移动至mid-1
-            if nums[left] <= target && target < nums[mid] {
-                right = mid - 1
-            }else{// 否则left向左移动至mid+1
-                left = mid + 1
-            }
-        }
-    }
-    return -1
-}
-
-
-
-
-//MARK:- list4:
+//MARK:- 字符串
 //344. 反转字符串
 /*
 双指针 迭代方式
@@ -491,6 +272,325 @@ func reverseWords(s: String?) -> String? {
   return String(chars)
 }
 
+
+/// 392.判断子序列
+/*
+ 判断 s 是否为 t 的子序列。
+ 本文主要运用的是双指针的思想，指针si指向s字符串的首部，指针ti指向t字符串的首部。
+ */
+func isSubsequence(_ s :String, _ t :String) -> Bool{
+    var sp = 0, tp = 0
+    let sArray = Array(s), tArray = Array(t)
+    //指针边界
+    while sp < sArray.count && tp < tArray.count  {
+        if sArray[sp] == tArray[tp] {
+            sp += 1
+        }
+        tp += 1
+    }
+    
+    return sp == s.count
+}
+print(isSubsequence("acd","abcd"))
+
+//MARK:- 数组
+// 658. 找到 K 个最接近的元素
+/*
+ 变种 二分查找
+给定一个排序好的数组，两个整数 k 和 x，从数组中找到最靠近 x（两数之差最小）的 k 个数。返回的结果必须要是按升序排好的。如果有两个数与 x 的差值一样，优先选择数值较小的那个数。
+*/
+func findClosestElements(_ arr: [Int],_ k: Int,_ x: Int) -> [Int]{
+    var p1 = 0,p2 = arr.count - k
+    while p1 < p2 {
+        let mid = (p2 - p1) / 2 + p1
+        if x - arr[mid] > arr[mid + k] - x {
+            p1 = mid + 1
+        }else{
+            p2 = mid
+        }
+    }
+    
+    return Array(arr[p1..<(p1+k)])
+}
+
+let chapter = findClosestElements([1,3,5,7,9], 1, 8)
+
+//278. 第一个错误的版本
+/*
+  假设你有 n 个版本 [1, 2, ..., n]，你想找出导致之后所有版本出错的第一个错误的版本。
+  你可以通过调用 bool isBadVersion(version) 接口来判断版本号 version 是否在单元测试中出错。实现一个函数来查找第一个错误的版本。你应该尽量减少对调用 API 的次数。
+  给定 n = 5，并且 version = 4 是第一个错误的版本。
+ 
+ 二分查找 双指针 迭代方式
+*/
+func isBadVersions(_ target: Int) -> Bool{
+    print("isBadVersion")
+    if target >= 4 {
+        return true
+    }else{
+        return false
+    }
+}
+func findFirstError(_ nums :[Int],_ target :Int) -> Int {
+    var p1 = 1, p2 = nums.count
+    while p1 < p2 {
+        let mid = (p2 - p1) / 2 + p1
+        if isBadVersions(mid) {
+            p2 = mid
+        }else{
+            p1 = mid + 1
+        }
+        
+        return p1
+    }
+    
+    return p1
+}
+
+
+findFirstError([1,2,3,4,5], 4)
+
+//MARK:- list6:
+// 442. 数组中重复的数据
+func findDuplicates(_ nums :[Int]) -> [Int] {
+    guard nums.count > 1 else {
+        return []
+    }
+    var set = Set<Int>()
+    var arr = [Int]()
+    
+    for i in nums {
+        if set.contains(i) {
+            arr.append(i)
+        }else{
+            set.insert(i)
+        }
+    }
+    
+    return arr
+}
+
+
+/// 33. 搜索旋转排序数组
+/**
+ 假设按照升序排序的数组在预先未知的某个点上进行了旋转。
+ 搜索一个给定的目标值，如果数组中存在这个目标值，则返回它的索引，否则返回 -1 。
+ 你可以假设数组中不存在重复的元素
+ 解题
+ 1、先创建两个指针left和right，然后取mid=(right+left)/2,将数组一分为二。其中肯定有一个有序，一个可能有序或者部分有序，
+ 2、然后在有序的范围内判断target是否在有序范围内，然后移动left或right，继续步骤一，直到找到nums[mid] == target,返回mid，否则返回-1。
+ 时间复杂度：O(log(n))。空间复杂度：O(1)
+ */
+func search(_ nums: [Int], _ target: Int) -> Int {
+    var left = 0
+    var right = nums.count - 1
+    while left <= right {
+        // 当前居中的位置
+        let mid = (right + left) / 2
+        if nums[mid] == target {// 循环执行,知道找到nums[mid] == target,然后返回mid
+            return mid
+        }
+        // 如果nums[mid] < nums[right]说明,mid->right是有序的
+        if nums[mid] < nums[right] {
+            // 如果target在nums[mid]与nums[right]之间,left向右移动至mid+1
+            if nums[mid] < target && target <= nums[right] {
+                left = mid + 1
+            }else {// 否则right向左移动至mid-1
+                right = mid - 1
+            }
+        }else{// 否则说明left->mid是有序的
+            // 如果target在nums[left]与nums[right]之间,right向左移动至mid-1
+            if nums[left] <= target && target < nums[mid] {
+                right = mid - 1
+            }else{// 否则left向左移动至mid+1
+                left = mid + 1
+            }
+        }
+    }
+    return -1
+}
+
+
+/* 二分查找 双指针
+ */
+func binarySearch(_ nums: [Int], _ target :Int) -> Int{
+    var p1 = 0, p2 = nums.count - 1
+    
+    while p1 < p2 {
+        let mid = (p2 - p1) / 2 + p1 //记得加p1
+        if nums[mid] == target {
+            return mid
+        }else if nums[mid] > target {
+            p2 = mid - 1 // 记得 - 1
+        }else{
+            p1 = mid + 1 // 记得 + 1
+        }
+    }
+    
+    return -1
+}
+
+//11. 盛最多水的容器
+/*
+ 双指针
+现在，为了使面积最大化，我们需要考虑更长的两条线段之间的区域。如果我们试图将指向较长线段的指针向内侧移动，矩形区域的面积将受限于较短的线段而不会获得任何增加。但是，在同样的条件下，移动指向较短线段的指针尽管造成了矩形宽度的减小，但却可能会有助于面积的增大。因为移动较短线段的指针会得到一条相对较长的线段，这可以克服由宽度减小而引起的面积减小。
+*/
+func getMaxArea(_ height: [Int]) -> Int{
+    // 记得边界
+    if height.count == 0 {
+        return 0
+    }
+    
+    var p1 = 0, p2 = height.count - 1, maxArea = 0
+    
+    while p1 < p2 {
+        // 遍历出每次最低高度
+        var minHeight = 0
+        if height[p1] < height[p2]{
+            minHeight = height[p1]
+            p1 += 1
+        }else{
+            minHeight = height[p2]
+            p2 -= 1
+        }
+        // 记得 + 1
+        maxArea = max(maxArea, (p2 - p1 + 1) * minHeight)
+    }
+    
+    return maxArea
+    
+}
+getMaxArea([1,8,6,2,5,4,8,3,7])
+
+
+///136. 只出现一次的数字  遍历异或
+func singleNum(_ nums :[Int]) -> Int{
+    var result = 0
+    for num in nums {
+        result = result ^ num
+    }
+    return result
+}
+
+/// 88. 合并两个有序数组 ---  3个指针迭代
+/*
+ 给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。
+ 初始化 nums1 和 nums2 的元素数量分别为 m 和 n。
+ 你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。
+
+ 3个指针迭代 可以类比 21题
+ */
+
+func mergeArrays(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+    
+    var p1 = m - 1, p2 = n - 1, p = m + n - 1
+    
+    while p1 >= 0 && p2 >= 0 {
+        if nums1[p1] >= nums2[p2] {
+            nums1[p] = nums1[p1]
+            p1 -= 1
+            p -= 1
+        }else{
+            nums1[p] = nums2[p2]
+            p2 -= 1
+            p -= 1
+        }
+    }
+    
+    while p2 >= 0 {
+        nums1[p] = nums2[p2]
+        p -= 1
+        p2 -= 1
+    }
+}
+var nums1 = [1,2,3,0,0,0,0,0,0,0], mm = 3
+var nums2 = [2,5,6,7,8,9,10],       nn = 7
+mergeArrays(&nums1,mm,nums2,nn)
+
+
+/// 1. 两数之和
+func twoSums(_ nums: [Int],_ target: Int) ->[Int]{
+    var dic = [Int:Int]()
+    for (idx,item) in nums.enumerated() {
+        if let lastIdx = dic[target - item] {
+            return [idx,lastIdx]
+        }else{
+            dic[item] = idx
+        }
+    }
+    return []
+}
+twoSums([2, 7, 11, 15], 17)
+
+
+/// 栈实现
+/*
+ 也可以通过数组去实现 popLast append
+  swift 中struct,enum 均可以包含类方法和实例方法,swift官方是不建议在struct,enum 的普通方法里修改属性变量,但是在func 前面添加ing 关键字之后就可以方法内修改.
+ */
+protocol Stack {
+  /// 持有的元素类型
+  associatedtype Element
+  
+  /// 是否为空
+  var isEmpty: Bool { get }
+  /// 栈的大小
+  var size: Int { get }
+  /// 栈顶元素
+  var peek: Element? { get }
+  
+  /// 进栈
+  mutating func push(_ newElement: Element)
+  /// 出栈
+  mutating func pop() -> Element?
+}
+
+struct IntegerStack: Stack {
+  typealias Element = Int
+  
+  var isEmpty: Bool { return stack.isEmpty }
+  var size: Int { return stack.count }
+  var peek: Element? { return stack.last }
+  
+  private var stack = [Element]()
+  
+  mutating func push(_ newElement: Element) {
+    stack.append(newElement)
+  }
+  
+  mutating func pop() -> Element? {
+    return stack.popLast()
+  }
+}
+
+var stacks = IntegerStack.init()
+stacks.push(1)
+stacks.push(2)
+stacks.push(3)
+stacks.pop()
+print(stacks)
+
+
+//MARK:- 二叉树
+/*
+ [每天学点数据结构 —— 红黑树（6k字总结](https://juejin.im/post/5dde545bf265da06074f13cc)
+ */
+
+/// 二叉树结构
+public class TreeNode: Equatable {
+     public var parent: TreeNode?
+     public var val: Int
+     public var left: TreeNode?
+     public var right: TreeNode?
+     public init(value: Int, left: TreeNode?, right: TreeNode?) {
+         self.val = value
+         self.left = left
+         self.right = right
+     }
+    public static func == (lhs: TreeNode, rhs: TreeNode) -> Bool {
+        return lhs.val == rhs.val
+    }
+ }
 
 /// 235. 二叉搜索树的最近公共祖先 / 怎么查找两个view的公共父视图
 /**
@@ -608,127 +708,15 @@ func findVC(_ view: UIView?) -> UIViewController?{
  */
 
 
+
+//MARK:- list1：
+//MARK:- list2：
+//MARK:- list3:
+//MARK:- list4:
 //MARK:- list5:
 
-// 658. 找到 K 个最接近的元素
-/*
- 变种 二分查找
-给定一个排序好的数组，两个整数 k 和 x，从数组中找到最靠近 x（两数之差最小）的 k 个数。返回的结果必须要是按升序排好的。如果有两个数与 x 的差值一样，优先选择数值较小的那个数。
-*/
-func findClosestElements(_ arr: [Int],_ k: Int,_ x: Int) -> [Int]{
-    var p1 = 0,p2 = arr.count - k
-    while p1 < p2 {
-        let mid = (p2 - p1) / 2 + p1
-        if x - arr[mid] > arr[mid + k] - x {
-            p1 = mid + 1
-        }else{
-            p2 = mid
-        }
-    }
-    
-    return Array(arr[p1..<(p1+k)])
-}
-
-let chapter = findClosestElements([1,3,5,7,9], 1, 8)
-
-//278. 第一个错误的版本
-/*
-  假设你有 n 个版本 [1, 2, ..., n]，你想找出导致之后所有版本出错的第一个错误的版本。
-  你可以通过调用 bool isBadVersion(version) 接口来判断版本号 version 是否在单元测试中出错。实现一个函数来查找第一个错误的版本。你应该尽量减少对调用 API 的次数。
-  给定 n = 5，并且 version = 4 是第一个错误的版本。
- 
- 二分查找 双指针 迭代方式
-*/
-func isBadVersions(_ target: Int) -> Bool{
-    print("isBadVersion")
-    if target >= 4 {
-        return true
-    }else{
-        return false
-    }
-}
-func findFirstError(_ nums :[Int],_ target :Int) -> Int {
-    var p1 = 1, p2 = nums.count
-    while p1 < p2 {
-        let mid = (p2 - p1) / 2 + p1
-        if isBadVersions(mid) {
-            p2 = mid
-        }else{
-            p1 = mid + 1
-        }
-        
-        return p1
-    }
-    
-    return p1
-}
 
 
-findFirstError([1,2,3,4,5], 4)
-
-//MARK:- list6:
-// 442. 数组中重复的数据
-func findDuplicates(_ nums :[Int]) -> [Int] {
-    guard nums.count > 1 else {
-        return []
-    }
-    var set = Set<Int>()
-    var arr = [Int]()
-    
-    for i in nums {
-        if set.contains(i) {
-            arr.append(i)
-        }else{
-            set.insert(i)
-        }
-    }
-    
-    return arr
-}
-
-//21 合并两个有序链表
-
-// 迭代 可类比88题
-
-// 递归
-/*
- 时间复杂度：O(n + m)。 因为每次调用递归都会去掉 l1 或者 l2 的头元素（直到至少有一个链表为空），函数 mergeTwoList 中只会遍历每个元素一次。所以，时间复杂度与合并后的链表长度为线性关系。
-
- 空间复杂度：O(n + m)。调用 mergeTwoLists 退出时 l1 和 l2 中每个元素都一定已经被遍历过了，所以 n + mn+m 个栈帧会消耗 O(n + m) 的空间。
- 
- 首先同时遍历两个链表，比较两个链表当前的值，小的值就作为新链表的元素，然后小的值的链表就走到下一个元素，大的值的链表还是当前元素。接着继续遍历，重复上述步骤，直到链表遍历完毕。这样就可以得到新的有序链表了。 需要注意几个地方：
-
- - 这个题目，最好是创建一个头结点来作为辅助，这样就不用判断新链表的头结点是l1的头结点还是l2的头结点了。
- - 遍历到最后，一般会有一个链表是先遍历完毕的。接着将另外一个链表拼接起来就行了，不用继续再一个个遍历拼接。
-
- */
-func mergeTwoLists(_ l1: listNode?,_ l2: listNode?) -> listNode?{
-    // l1/l2 == nil  边界          l1?.next 递归转移方程
-
-    if l1 == nil {
-        return l2
-    }
-    
-    if l2 == nil{
-        return l1
-    }
-    print(l1!.val)
-
-    if l1!.val < l2!.val{
-        l1?.next = mergeTwoLists(l1?.next, l2)
-        return l1
-    }else{
-        l2?.next = mergeTwoLists(l1, l2?.next)
-        return l2
-    }
-}
-
-let node5 = listNode(value: 5, next: nil)
-let node4 = listNode(value: 4, next: node5)
-let node3 = listNode(value: 3, next: node4)
-let node2 = listNode(value: 2, next: node3)
-let node1 = listNode(value: 1, next: node2)
-mergeTwoLists(node1,node2)
 
 //14. 最长公共前缀
 /*
@@ -770,7 +758,6 @@ results = String(results.prefix(results.count - 1))
 
  递归最简单
  */
-
 
 
 // 递归
@@ -819,9 +806,6 @@ func searchMatrix(data: [[Int]],number: NSInteger) -> Bool{
     return false
 }
 
-func searchMatrix(data: [[Int]],number: NSInteger) -> Bool {
-    
-}
 
 
 
@@ -1722,7 +1706,7 @@ func maxCute_Greed(length: Int) -> Int { return -1}
 //MARK:-list18:
 
 /* offer18（一）：在O(1)时间删除链表结点/ 237. 删除链表中的节点
-- 链表操作
+ 链表操作
   - 修改节点 可以用 覆盖和 指向 两个思路。
   - 单链表用覆盖 双链表用指向。
 */
