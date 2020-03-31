@@ -139,6 +139,7 @@
 		794E82592403EED6008DFFB9 /* LOTAnimationLRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 794E82582403EED6008DFFB9 /* LOTAnimationLRUCache.m */; };
 		794E825E2404BBA8008DFFB9 /* LRUCacheSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E825D2404BBA7008DFFB9 /* LRUCacheSimple.swift */; };
 		795114AA2408FEB9004F6418 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795114A92408FEB9004F6418 /* DoublyLinkedList.swift */; };
+		796E8F672430D91F001EB53F /* ThreadSafeContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 796E8F662430D91F001EB53F /* ThreadSafeContainer.m */; };
 		7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */; };
 		797EC360236C10F900E21E44 /* SDOPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC35F236C10F900E21E44 /* SDOPickerView.swift */; };
 		797EC362236C141100E21E44 /* SDTimeAlertPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */; };
@@ -490,6 +491,8 @@
 		795114A92408FEB9004F6418 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
 		796E8F63242DF081001EB53F /* MyTestPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyTestPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		796E8F64242DF0A0001EB53F /* SwiftHigherOrderfunction.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftHigherOrderfunction.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		796E8F652430D91F001EB53F /* ThreadSafeContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadSafeContainer.h; sourceTree = "<group>"; };
+		796E8F662430D91F001EB53F /* ThreadSafeContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadSafeContainer.m; sourceTree = "<group>"; };
 		7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Radius.swift"; sourceTree = "<group>"; };
 		797EC35F236C10F900E21E44 /* SDOPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDOPickerView.swift; sourceTree = "<group>"; };
 		797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimeAlertPickerView.swift; sourceTree = "<group>"; };
@@ -780,6 +783,8 @@
 				337828302108772600373A20 /* ThreadViewController.m */,
 				7901F9A021A678CE005BE8A6 /* NSTimerObserver.h */,
 				7901F9A121A678CE005BE8A6 /* NSTimerObserver.m */,
+				796E8F652430D91F001EB53F /* ThreadSafeContainer.h */,
+				796E8F662430D91F001EB53F /* ThreadSafeContainer.m */,
 			);
 			path = Thread;
 			sourceTree = "<group>";
@@ -2306,6 +2311,7 @@
 				794A6DB6238686B8008FB8D4 /* SegementContentView.m in Sources */,
 				7998C6CF23CEA4E500DA3BEF /* DesignModeViewController.m in Sources */,
 				790882F823A0D04500FA3BE5 /* ClassClusterTableViewCellA.m in Sources */,
+				796E8F672430D91F001EB53F /* ThreadSafeContainer.m in Sources */,
 				33C9713F2124108D00EAAD5E /* PopTableView.m in Sources */,
 				7908830D23A0D04500FA3BE5 /* DownLoadViewController.m in Sources */,
 				33FAE4E620E2445500BE7175 /* CarouselLayout.m in Sources */,
