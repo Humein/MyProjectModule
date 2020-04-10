@@ -24,6 +24,7 @@
     //请求依赖
     [self GCDGroup];
     [self semaphore];
+    [self barrier];
     
     [self threadTestOne];
     
@@ -319,9 +320,32 @@
     
 }
 
+#pragma mark - 线程同步 --阻塞任务（dispatch_barrier）：
+-(void)barrier {
+    /* 创建并发队列 */
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("test.concurrent.queue", DISPATCH_QUEUE_CONCURRENT);
+    /* 添加两个并发操作A和B，即A和B会并发执行 */
+    dispatch_async(concurrentQueue, ^(){
+        NSLog(@"OperationA");
+    });
+    dispatch_async(concurrentQueue, ^(){
+        NSLog(@"OperationB");
+    });
+    /* 添加barrier障碍操作，会等待前面的并发操作结束，并暂时阻塞后面的并发操作直到其完成 */
+    dispatch_barrier_async(concurrentQueue, ^(){
+        NSLog(@"OperationBarrier!");
+    });
+    /* 继续添加并发操作C和D，要等待barrier障碍操作结束才能开始 */
+    dispatch_async(concurrentQueue, ^(){
+        NSLog(@"OperationC");
+    });
+    dispatch_async(concurrentQueue, ^(){
+        NSLog(@"OperationD");
+    });
+}
 
 
-#pragma mark - 信号量
+#pragma mark - 线程同步 -- 信号量机制（dispatch_semaphore）
 
 //    dispatch_semaphore_create：创建一个信号量（semaphore）
 //    dispatch_semaphore_signal：信号通知，即让信号量+1
@@ -390,7 +414,6 @@
 -(void)request_C{
     
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-    
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://www.baidu.com"]];
     NSURLSessionDownloadTask *task = [[NSURLSession sharedSession] downloadTaskWithRequest:request completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {

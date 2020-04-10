@@ -5,7 +5,12 @@
 //  Created by 鑫鑫 on 2018/6/19.
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
-
+/**
+ 分三个步骤：
+ 1.覆写prepareLayout方法，并在里面事先就计算好必要的布局信息并存储起来。
+ 2.基于prepareLayout方法中的布局信息，使用collectionViewContentSize方法返回UICollectionView的内容尺寸。
+ 3.使用layoutAttributesForElementsInRect:方法返回指定区域cell、Supplementary View和Decoration View的布局属性。
+ */
 #import "CarouselLayout.h"
 
 @interface CarouselLayout ()
