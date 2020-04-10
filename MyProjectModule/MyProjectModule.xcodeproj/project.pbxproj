@@ -121,6 +121,8 @@
 		792A730C21EF2FBF0098B94C /* HomeDatas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 792A730A21EF2FBE0098B94C /* HomeDatas.plist */; };
 		792A730E21EF2FD50098B94C /* class_cluster_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 792A730D21EF2FD50098B94C /* class_cluster_data.json */; };
 		7931A51B21A7DAA5002A26C0 /* FilterCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7931A51A21A7DAA5002A26C0 /* FilterCollectionViewLayout.m */; };
+		79387EAE244042E100CC7A49 /* SDTimerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79387EAD244042E100CC7A49 /* SDTimerObserver.swift */; };
+		79387EB12440644900CC7A49 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79387EB02440644900CC7A49 /* YYFPSLabel.m */; };
 		793C6376240606A4000BE949 /* AnimationExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C6364240606A4000BE949 /* AnimationExample.m */; };
 		793C6377240606A4000BE949 /* POPNumberAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C6365240606A4000BE949 /* POPNumberAnimation.m */; };
 		793C6378240606A4000BE949 /* AttributeAndPredicateWithLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C6369240606A4000BE949 /* AttributeAndPredicateWithLink.m */; };
@@ -456,6 +458,9 @@
 		792A730D21EF2FD50098B94C /* class_cluster_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = class_cluster_data.json; sourceTree = "<group>"; };
 		7931A51921A7DAA5002A26C0 /* FilterCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterCollectionViewLayout.h; sourceTree = "<group>"; };
 		7931A51A21A7DAA5002A26C0 /* FilterCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterCollectionViewLayout.m; sourceTree = "<group>"; };
+		79387EAD244042E100CC7A49 /* SDTimerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimerObserver.swift; sourceTree = "<group>"; };
+		79387EAF2440644900CC7A49 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		79387EB02440644900CC7A49 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		793C6363240606A4000BE949 /* POPNumberAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPNumberAnimation.h; sourceTree = "<group>"; };
 		793C6364240606A4000BE949 /* AnimationExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationExample.m; sourceTree = "<group>"; };
 		793C6365240606A4000BE949 /* POPNumberAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPNumberAnimation.m; sourceTree = "<group>"; };
@@ -783,6 +788,7 @@
 				337828302108772600373A20 /* ThreadViewController.m */,
 				7901F9A021A678CE005BE8A6 /* NSTimerObserver.h */,
 				7901F9A121A678CE005BE8A6 /* NSTimerObserver.m */,
+				79387EAD244042E100CC7A49 /* SDTimerObserver.swift */,
 				796E8F652430D91F001EB53F /* ThreadSafeContainer.h */,
 				796E8F662430D91F001EB53F /* ThreadSafeContainer.m */,
 			);
@@ -1506,6 +1512,8 @@
 		793C636024060699000BE949 /* UIWidgetDemo */ = {
 			isa = PBXGroup;
 			children = (
+				79387EAF2440644900CC7A49 /* YYFPSLabel.h */,
+				79387EB02440644900CC7A49 /* YYFPSLabel.m */,
 				793C637F24060736000BE949 /* UISampleExample.swift */,
 			);
 			path = UIWidgetDemo;
@@ -2286,6 +2294,7 @@
 				79A0ECA52368262F004C10B0 /* XXH264EncodeTool.m in Sources */,
 				79E9668A237EBDF800B49697 /* AView.swift in Sources */,
 				79A1A51A2269AD0800CEA92A /* BookmarkContainerView.m in Sources */,
+				79387EAE244042E100CC7A49 /* SDTimerObserver.swift in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
 				7908832023A0D04500FA3BE5 /* AbstractPlayerHelperManager.m in Sources */,
 				793C637B240606A4000BE949 /* DrawViewController.m in Sources */,
@@ -2342,6 +2351,7 @@
 				790882F623A0D04500FA3BE5 /* ClassClusterTableViewCellC.m in Sources */,
 				79B44B24237CF0A900B7D73D /* SmoothBookmarkDemoViewController.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
+				79387EB12440644900CC7A49 /* YYFPSLabel.m in Sources */,
 				79EEEA562182C09200848B59 /* liveChatModel.m in Sources */,
 				7908830B23A0D04500FA3BE5 /* ApplePay.m in Sources */,
 				7908832123A0D04500FA3BE5 /* Command.swift in Sources */,

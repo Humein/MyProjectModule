@@ -34,13 +34,14 @@
 
 //#import <Flutter/Flutter.h>
 #import "FlutterSubViewController.h"
-
+#import "YYFPSLabel.h"
 #import "MyProjectModule-Swift.h"
 @interface ViewController ()<AlertTableViewDelegate>
 @property (nonatomic,strong)AlertTableView *tableView;
 @property (nonatomic,strong)NSMutableArray *itemList;
 @property (nonatomic,weak)AlertTableView *weakTableView;
 @property (nonatomic,weak)NSArray *weakArray;
+@property (nonatomic,strong) YYFPSLabel *fpsLabel;
 
 @end
 
@@ -64,6 +65,9 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     WEAKSELF
+    _fpsLabel = [[YYFPSLabel alloc]initWithFrame:CGRectMake(40, 40, 55, 20)];
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    [keyWindow addSubview:_fpsLabel];
     self.rightBarItem(@"FlutterDemo", CGRectMake(-0, 0, 100, 40), NO);
     self.rightBarItemClickBlock = ^(UIButton *button, NSInteger index) {
 //        [weakSelf pushFlutterViewController_MethodChannel];
@@ -98,10 +102,7 @@
     AlertTableView *weakView = [AlertTableView new];
     self.weakTableView = weakView;
     self.weakArray = [NSArray array];
-    
-    
-    
-    
+
 }
 
 

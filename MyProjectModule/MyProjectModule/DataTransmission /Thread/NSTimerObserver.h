@@ -29,7 +29,7 @@
 
 @interface NSTimerObserver : NSObject
 
-@property (nonatomic, weak) id <TimerObserver> delegate;
+//@property (nonatomic, weak) id <TimerObserver> delegate;
 
 + (instancetype)sharedInstance;
 

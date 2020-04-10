@@ -9,7 +9,9 @@
 #import "ThreadViewController.h"
 #import "NSTimerObserver.h"
 #import "ThreadSafeContainer.h"
-@interface ThreadViewController ()<TimerObserver>
+#import "MyProjectModule-Swift.h"
+
+@interface ThreadViewController ()<TimerObserverDelegate>
 {
     int _i;
 }
@@ -28,7 +30,7 @@
     
     [self threadTestOne];
     
-    [[NSTimerObserver sharedInstance] addTimerObserver:self];
+    [[SDTimerObserver sharedInstance] addTimerObserver:self];
     
 }
 
@@ -36,7 +38,7 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 
-    [[NSTimerObserver sharedInstance] removeTimerObserver:self];
+    [[SDTimerObserver sharedInstance] removeTimerObserver:self];
     
     [self testSemaphone_process_delay];
     
@@ -47,8 +49,8 @@
 
 
 #pragma mark 回调
-- (void)timerCallBack:(NSTimerObserver *)timer{
-    _i++;
+- (void)timerCallBackWithTimer:(SDTimerObserver * _Nonnull)timer {
+        _i++;
     NSLog(@"%@====%d",[self class],_i);
 }
 
