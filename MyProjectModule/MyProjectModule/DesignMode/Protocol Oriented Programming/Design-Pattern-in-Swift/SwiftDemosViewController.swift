@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class SwiftDemosViewController: UIViewController {
 
@@ -90,6 +91,49 @@ class SwiftDemosViewController: UIViewController {
         print(chain.lastNode as Any)
         
         
+        //MARK:- SilderShow
+        let cycleView = SDCycleView(frame: CGRect.init(x: 0, y: 200, width: self.view.frame.width, height: 200))
+        cycleView.scrollDirection = .horizontal
+        cycleView.isInfinite = true
+        cycleView.isAutomatic = true
+        cycleView.placeholderImage = UIImage(named: "弹窗")
+        cycleView.setImagesGroup([UIImage(named: "exercise_ZTYL_point"),UIImage(named: "mine_train_tree_two_open")])
+//        cycleView.setUrlsGroup(["http://chatm-icon.oss-cn-beijing.aliyuncs.com/pic/pic_20171101181927887.jpg",
+//        "http://chatm-icon.oss-cn-beijing.aliyuncs.com/pic/pic_20171114171645011.jpg",
+//        "http://chatm-icon.oss-cn-beijing.aliyuncs.com/pic/pic_20171114172009707.png"])
+        cycleView.delegate = self
+        view.addSubview(cycleView)
+        
     }
+}
 
+
+extension SwiftDemosViewController: SDCycleViewProtocol {
+    /// 显示本地图片，需要实现下面的代理方法
+    func cycleViewConfigureDefaultCellImage(_ cycleView: SDCycleView, imageView: UIImageView, image: UIImage?, index: Int) {
+            imageView.image = image
+            imageView.layer.borderColor = UIColor.gray.cgColor
+            imageView.layer.borderWidth = 1
+    }
+    
+    /// 要显示网络图片，需要实现下面的代理方法
+    func cycleViewConfigureDefaultCellImageUrl(_ cycleView: SDCycleView, imageView: UIImageView, imageUrl: String?, index: Int) {
+        imageView.sd_setImage(with: URL(string: imageUrl!), placeholderImage: cycleView.placeholderImage)
+    }
+    
+    /// 修改label的样式，你可以使用下面的代理方法
+    func cycleViewConfigureDefaultCellText(_ cycleView: SDCycleView, titleLabel: UILabel, index: Int) {
+    }
+    
+    /// 修改pageControl的样式，你可以使用下面的代理方法
+    func cycleViewConfigurePageControl(_ cycleView: SDCycleView, pageControl: SDPageControl) {
+        pageControl.alignment = .center
+        pageControl.spacing = 10
+        pageControl.currentPageIndicatorTintColor = .red
+        pageControl.dotSize = CGSize(width: 20, height: 10)
+    }
+    
+    func cycleViewDidSelectedIndex(_ cycleView: SDCycleView, index: Int) {
+        print(index)
+    }
 }

@@ -121,8 +121,13 @@
 		792A730C21EF2FBF0098B94C /* HomeDatas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 792A730A21EF2FBE0098B94C /* HomeDatas.plist */; };
 		792A730E21EF2FD50098B94C /* class_cluster_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 792A730D21EF2FD50098B94C /* class_cluster_data.json */; };
 		7931A51B21A7DAA5002A26C0 /* FilterCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7931A51A21A7DAA5002A26C0 /* FilterCollectionViewLayout.m */; };
+		7936BB4024459E750043AF5A /* SDCycleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB3C24459E750043AF5A /* SDCycleViewCell.swift */; };
+		7936BB4124459E750043AF5A /* SDCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB3D24459E750043AF5A /* SDCycleView.swift */; };
+		7936BB4224459E750043AF5A /* SDPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB3E24459E750043AF5A /* SDPageControl.swift */; };
+		7936BB4324459E750043AF5A /* SDCycleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB3F24459E750043AF5A /* SDCycleLayout.swift */; };
 		79387EAE244042E100CC7A49 /* SDTimerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79387EAD244042E100CC7A49 /* SDTimerObserver.swift */; };
 		79387EB12440644900CC7A49 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79387EB02440644900CC7A49 /* YYFPSLabel.m */; };
+		79387EB324407B6900CC7A49 /* SDCacheManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79387EB224407B6900CC7A49 /* SDCacheManagers.swift */; };
 		793C6376240606A4000BE949 /* AnimationExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C6364240606A4000BE949 /* AnimationExample.m */; };
 		793C6377240606A4000BE949 /* POPNumberAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C6365240606A4000BE949 /* POPNumberAnimation.m */; };
 		793C6378240606A4000BE949 /* AttributeAndPredicateWithLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C6369240606A4000BE949 /* AttributeAndPredicateWithLink.m */; };
@@ -458,9 +463,14 @@
 		792A730D21EF2FD50098B94C /* class_cluster_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = class_cluster_data.json; sourceTree = "<group>"; };
 		7931A51921A7DAA5002A26C0 /* FilterCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterCollectionViewLayout.h; sourceTree = "<group>"; };
 		7931A51A21A7DAA5002A26C0 /* FilterCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterCollectionViewLayout.m; sourceTree = "<group>"; };
+		7936BB3C24459E750043AF5A /* SDCycleViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDCycleViewCell.swift; sourceTree = "<group>"; };
+		7936BB3D24459E750043AF5A /* SDCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDCycleView.swift; sourceTree = "<group>"; };
+		7936BB3E24459E750043AF5A /* SDPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPageControl.swift; sourceTree = "<group>"; };
+		7936BB3F24459E750043AF5A /* SDCycleLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDCycleLayout.swift; sourceTree = "<group>"; };
 		79387EAD244042E100CC7A49 /* SDTimerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimerObserver.swift; sourceTree = "<group>"; };
 		79387EAF2440644900CC7A49 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
 		79387EB02440644900CC7A49 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		79387EB224407B6900CC7A49 /* SDCacheManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDCacheManagers.swift; sourceTree = "<group>"; };
 		793C6363240606A4000BE949 /* POPNumberAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPNumberAnimation.h; sourceTree = "<group>"; };
 		793C6364240606A4000BE949 /* AnimationExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationExample.m; sourceTree = "<group>"; };
 		793C6365240606A4000BE949 /* POPNumberAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPNumberAnimation.m; sourceTree = "<group>"; };
@@ -754,9 +764,9 @@
 		3340363A2154C67E006FCBA3 /* MemoryAndDiskCache */ = {
 			isa = PBXGroup;
 			children = (
-				7929B499219FE705004D335E /* RunLoop */,
 				3340363B2154C69C006FCBA3 /* MemoryCache.h */,
 				3340363C2154C69C006FCBA3 /* MemoryCache.m */,
+				79387EB224407B6900CC7A49 /* SDCacheManagers.swift */,
 			);
 			path = MemoryAndDiskCache;
 			sourceTree = "<group>";
@@ -1457,14 +1467,6 @@
 			path = Python;
 			sourceTree = "<group>";
 		};
-		7929B499219FE705004D335E /* RunLoop */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = RunLoop;
-			path = "MyProjectModule/DataTransmission /RunLoop";
-			sourceTree = SOURCE_ROOT;
-		};
 		7929B49A219FE72A004D335E /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
@@ -1507,6 +1509,40 @@
 				7993C870228D6A4E001A6BFA /* DownLoadCell.m */,
 			);
 			path = DownLoadManger;
+			sourceTree = "<group>";
+		};
+		7936BAC02445942E0043AF5A /* QMUI */ = {
+			isa = PBXGroup;
+			children = (
+				7936BAC5244594FB0043AF5A /* QMUIHelper */,
+				7936BAC2244594750043AF5A /* ModalPresentationView */,
+			);
+			path = QMUI;
+			sourceTree = "<group>";
+		};
+		7936BAC2244594750043AF5A /* ModalPresentationView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModalPresentationView;
+			sourceTree = "<group>";
+		};
+		7936BAC5244594FB0043AF5A /* QMUIHelper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QMUIHelper;
+			sourceTree = "<group>";
+		};
+		7936BB3B24459D720043AF5A /* SlideShow */ = {
+			isa = PBXGroup;
+			children = (
+				7936BB3F24459E750043AF5A /* SDCycleLayout.swift */,
+				7936BB3D24459E750043AF5A /* SDCycleView.swift */,
+				7936BB3C24459E750043AF5A /* SDCycleViewCell.swift */,
+				7936BB3E24459E750043AF5A /* SDPageControl.swift */,
+			);
+			path = SlideShow;
 			sourceTree = "<group>";
 		};
 		793C636024060699000BE949 /* UIWidgetDemo */ = {
@@ -1595,6 +1631,8 @@
 		797EC357236BCCEF00E21E44 /* UIWidget */ = {
 			isa = PBXGroup;
 			children = (
+				7936BB3B24459D720043AF5A /* SlideShow */,
+				7936BAC02445942E0043AF5A /* QMUI */,
 				793C6361240606A4000BE949 /* BezierPath&ShapLayer&Animation */,
 				793C636024060699000BE949 /* UIWidgetDemo */,
 				79DC643323BA1C9F0073E22F /* Rotational Screen  */,
@@ -2232,6 +2270,7 @@
 				7908831823A0D04500FA3BE5 /* PlayerViewController.m in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
 				7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */,
+				7936BB4124459E750043AF5A /* SDCycleView.swift in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
 				79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */,
 				33C2DF3721DCC5D400F96F32 /* PointTreeTypeOne.m in Sources */,
@@ -2249,6 +2288,7 @@
 				79A1A5182269AD0800CEA92A /* SmoothBookmarkView.m in Sources */,
 				7993C86A228D68E6001A6BFA /* URLSessionDownManager.m in Sources */,
 				793C637D240606A4000BE949 /* StartWaterView.m in Sources */,
+				7936BB4224459E750043AF5A /* SDPageControl.swift in Sources */,
 				793C6377240606A4000BE949 /* POPNumberAnimation.m in Sources */,
 				3362E6A22130FC1300A4B26D /* FBKVOViewController.m in Sources */,
 				7908830E23A0D04500FA3BE5 /* NSInvocationForStrategyViewController.m in Sources */,
@@ -2262,6 +2302,7 @@
 				33E6CE0521006D2000422FC7 /* CreatTreeView.m in Sources */,
 				790882F223A0D04500FA3BE5 /* MessageThrottle.m in Sources */,
 				33759E74212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.m in Sources */,
+				7936BB4024459E750043AF5A /* SDCycleViewCell.swift in Sources */,
 				79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */,
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
 				79DF39392200499400977BB4 /* LRULinkedMap.m in Sources */,
@@ -2275,6 +2316,7 @@
 				33C2DF3E21DCC66C00F96F32 /* PointTreeOneModelViewController.m in Sources */,
 				79104F8623C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m in Sources */,
 				79DC645723BA1F6C0073E22F /* FirstView.swift in Sources */,
+				79387EB324407B6900CC7A49 /* SDCacheManagers.swift in Sources */,
 				33C9711F211EB8DC00EAAD5E /* AbstractViewController.m in Sources */,
 				33888FE420F0683C00E4A119 /* UIView+Category.m in Sources */,
 				79E9668E237EBE1100B49697 /* CView.swift in Sources */,
@@ -2313,6 +2355,7 @@
 				7901F9A221A678CE005BE8A6 /* NSTimerObserver.m in Sources */,
 				7908832823A0D04500FA3BE5 /* UIImage+Shadow.m in Sources */,
 				79DC645823BA1F6C0073E22F /* AbstractViewProtocol.swift in Sources */,
+				7936BB4324459E750043AF5A /* SDCycleLayout.swift in Sources */,
 				794B100621DEF98300B91405 /* PointsTreeTableViewCell.m in Sources */,
 				7908832523A0D04500FA3BE5 /* UIImage+Transform.m in Sources */,
 				338FEBFF20E0F25A0025631B /* UIControlFactory.m in Sources */,

@@ -68,6 +68,7 @@
     _fpsLabel = [[YYFPSLabel alloc]initWithFrame:CGRectMake(40, 40, 55, 20)];
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
     [keyWindow addSubview:_fpsLabel];
+    NSClassFromString(@"TtC19ClassWrittenInSwift11AppDelegate");
     self.rightBarItem(@"FlutterDemo", CGRectMake(-0, 0, 100, 40), NO);
     self.rightBarItemClickBlock = ^(UIButton *button, NSInteger index) {
 //        [weakSelf pushFlutterViewController_MethodChannel];

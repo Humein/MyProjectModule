@@ -51,6 +51,8 @@ class SDTimerObserver: NSObject {
         }
     }
     
+    /// 添加定时器监听
+    /// - Parameter listener: TimerObserverDelegate
     @objc public func addTimerObserver(_ listener: TimerObserverDelegate){
         operationsLock?.wait() // -1
         guard timerMap != nil else {
@@ -65,6 +67,8 @@ class SDTimerObserver: NSObject {
         operationsLock?.signal() // +1
     }
     
+    /// 移除监听 就算忘记了,只是Timer没被销毁, 也不影响使用者销毁；
+    /// - Parameter listener: TimerObserverDelegate
     @objc public func removeTimerObserver(_ listener: TimerObserverDelegate){
         operationsLock?.wait() // -1
         guard timerMap != nil else {
@@ -79,4 +83,20 @@ class SDTimerObserver: NSObject {
         operationsLock?.signal() // +1
     }
     
+}
+
+
+
+/// 秒-格式化-时分秒
+/// - Parameter sec: Int
+/// - Return HH,MM,SS
+func secCalculate(with sec: Int) -> (NSString, NSString, NSString){
+    let hour = sec / (60 * 60)
+    let minute = (sec - hour * 60 * 60) / 60
+    let second = (sec - hour * 60 * 60) % 60
+    let hh: NSString = NSString(format: "%02d", hour)
+    let mm: NSString = NSString(format: "%02d", minute)
+    let ss: NSString = NSString(format: "%02d", second)
+    let time = (hh, mm, ss)    
+    return time
 }
