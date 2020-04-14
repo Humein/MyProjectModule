@@ -7,8 +7,10 @@
 //
 
 #import "AlertTableView.h"
+
 @interface AlertTableView ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)NSMutableArray *dataArray;
+
 @end
 
 @implementation AlertTableView
@@ -16,9 +18,7 @@
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    
     [self addSubview:self.tableView];
-    
     return self;
 }
 
@@ -86,7 +86,6 @@
     self.dataArray =[self.delegate alertTableVieItemList];
     [self.tableView reloadData];
     self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
-    
     if (self.showType==AlertFadeType) {
         [UIView animateWithDuration:0.3 animations:^{
             self.tableView.alpha=1.0;

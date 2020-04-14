@@ -129,6 +129,26 @@ public class LinkNode{
     }
 }
 
+///  相交链表 编写一个程序，找到两个单链表相交的起始节点。
+
+/*
+ 双指针法O(n)
+ */
+func getIntersectionNode(_ headA : listNode?, _ headB : listNode?)  ->  listNode?{
+    if headA == nil || headB == nil {
+        return nil
+    }
+    var pA = headA
+    var pB = headB
+    
+    while pA !== pB {
+        pA = (pA == nil) ? headB : pA?.next
+        pB = (pB == nil) ? headA : pB?.next
+    }
+    return pA
+}
+
+
 //21 合并两个有序链表
 // 迭代 可类比88题
 // 递归
@@ -1446,6 +1466,11 @@ func detectCycle(_ head: LinkNode?) -> LinkNode?{
     
     return fast!
 }
+
+
+
+
+
 
 /*
  手撕快排 https://www.jianshu.com/p/5a81ba81886d

@@ -5,6 +5,28 @@
 //  Created by Zhang Xin Xin on 2018/11/22.
 //  Copyright © 2018 xinxin. All rights reserved.
 //
+/**
+ - NSHashTable
+   - NSHashTable效仿了NSSet(NSMutableSet)，但提供了比NSSet更多的操作选项，尤其是在对弱引用关系的支持上，NSHashTable在对象/内存处理时更加的灵活。相较于NSSet，NSHashTable
+ 具有以下特性
+         1.NSHashTable是可变的，它没有不可变版本。
+         2.它可以持有元素的弱引用，而且在对象被销毁后能正确地将其移除。而这一点在NSSet是做不到的。
+         3.它的成员可以在添加时被拷贝。
+         4.它的成员可以使用指针来标识是否相等及做hash检测。
+         5.它可以包含任意指针，其成员没有限制为对象。我们可以配置一个NSHashTable实例来操作任意的指针，而不仅仅是对象。
+         
+ - NSMapTable
+   - NSMapTable是更广泛意义上的NSDictionary。和NSDictionary/NSMutableDictionary相比具有如下特性：
+         1.NSDictionary/NSMutableDictionary会复制keys并且通过强引用values来实现存储；
+         2.NSMapTable是可变的；
+         3.NSMapTable可以通过弱引用来持有keys和values，所以当key或者value被deallocated的时候，所存储的实体也会被移除；
+         4.NSMapTable可以在添加value的时候对value进行复制；
+     和NSHashTable类似，NSMapTable可以随意的存储指针，并且利用指针的唯一性来进行对比和重复检查。
+     假设用NSMapTable来存储不用被复制的keys和被若引用的value，这里的value就是某个delegate或者一种弱类型
+         @property (nonatomic, strong, nonnull) NSMapTable<KeyType, ObjectType> *weakCache; // strong-weak cache
+     
+
+ */
 
 #import "NSTimerObserver.h"
 
@@ -57,14 +79,10 @@
 }
 
 -(void)startTimer{
-    
     if (_timer == nil) {
-        
         _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(trigger:) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
     }
-
-    
 }
 
 -(void)stopTimer{

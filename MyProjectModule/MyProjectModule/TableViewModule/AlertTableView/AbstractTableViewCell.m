@@ -9,9 +9,9 @@
 #import "AbstractTableViewCell.h"
 #import "CellModel.h"
 #import "NSTimerObserver.h"
+#import "MyProjectModule-Swift.h"
 
-
-@interface AbstractTableViewCell()<TimerObserver>
+@interface AbstractTableViewCell()<TimerObserverDelegate>
 @property (nonatomic,strong)  UILabel *timeLabel;
 @property (nonatomic,strong) CellModel *model;
 
@@ -43,50 +43,20 @@
     
     [self.contentView addSubview:self.timeLabel];
     
-    
-    [[NSTimerObserver sharedInstance] addTimerObserver:self];
-
+    [[SDTimerObserver sharedInstance] addTimerObserver:self];
  }
 
-- (void)updateByItem:(CellModel *)item
-{
-    // 过滤 数据源 影响
-//    _model = _model.timeCount ? _model : item;
-    
-    if (_model.timeCount || _model.timeCount == -1) {
-        
-        if (_model.timeCount == -1) {
-            
-            self.timeLabel.text =[NSString stringWithFormat:@"%d",0];
-        }
-        
-    }else{
-        
-        _model = item;
-        self.timeLabel.text =[NSString stringWithFormat:@"%ld",(long)_model.timeCount];
-
-    }
-    
-    
-    self.textLabel.text = [NSString stringWithFormat:@"%@-----%ld",item.title,(long)item.timeCount];
-    
+- (void)updateByItem:(CellModel *)item{
+    _model = item;
+    self.timeLabel.text = [NSString stringWithFormat:@"%ld",(long)(_model.timeCount > 0 ? _model.timeCount : 0)];
+    self.textLabel.text = [NSString stringWithFormat:@"%@",item.title];
 }
 
+
 // 代理
-- (void)timerCallBack:(NSTimerObserver *)timer {
-    
-
-    if (_model.timeCount>0) {
-        _model.timeCount -- ;
-        self.timeLabel.text = [NSString stringWithFormat:@"%ld",(long)_model.timeCount];
-
-    }else{
-        _model.timeCount = -1;
-        [[NSTimerObserver sharedInstance] removeTimerObserver:self];
-        
-    }
-    
-    
+- (void)timerCallBackWithTimer:(SDTimerObserver *)timer{
+    _model.timeCount -- ;
+    self.timeLabel.text = [NSString stringWithFormat:@"%ld",(long)(_model.timeCount > 0 ? _model.timeCount : 0)];
 }
 
 @end

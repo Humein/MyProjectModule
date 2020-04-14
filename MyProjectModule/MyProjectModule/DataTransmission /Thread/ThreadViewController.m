@@ -8,7 +8,10 @@
 
 #import "ThreadViewController.h"
 #import "NSTimerObserver.h"
-@interface ThreadViewController ()<TimerObserver>
+#import "ThreadSafeContainer.h"
+#import "MyProjectModule-Swift.h"
+
+@interface ThreadViewController ()<TimerObserverDelegate>
 {
     int _i;
 }
@@ -23,28 +26,99 @@
     //请求依赖
     [self GCDGroup];
     [self semaphore];
+    [self barrier];
     
     [self threadTestOne];
     
-    [[NSTimerObserver sharedInstance] addTimerObserver:self];
+    [[SDTimerObserver sharedInstance] addTimerObserver:self];
+    
 }
 
 
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 
-    [[NSTimerObserver sharedInstance] removeTimerObserver:self];
+    [[SDTimerObserver sharedInstance] removeTimerObserver:self];
     
     [self testSemaphone_process_delay];
     
+    [self async0];
+    [self async1];
+    
 }
 
 
-#pragma mark - 回调
-- (void)timerCallBack:(NSTimerObserver *)timer{
-    _i++;
+#pragma mark 回调
+- (void)timerCallBackWithTimer:(SDTimerObserver * _Nonnull)timer {
+        _i++;
     NSLog(@"%@====%d",[self class],_i);
 }
+
+
+#pragma mark - 多线程线程学习
+/** https://juejin.im/post/5e7db4046fb9a03c714b3776
+ - GCD是同步还是异步情况会开启多线程?
+   - 同步是不会开启新的线程的，异步才会开启新的线程。
+     通过代码验证 同步 在 串行队列 和 并发队列 情况下会不会创建新的线程
+*/
+-(void)async0{
+    dispatch_queue_t serialQueue = dispatch_queue_create("serialQueue", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t conQueue = dispatch_queue_create("conQueue", DISPATCH_QUEUE_CONCURRENT);
+
+    NSLog(@"(1).=====%@",[NSThread currentThread]);
+    // 串行同步
+    dispatch_sync(serialQueue, ^{
+      NSLog(@"(2).=====%@",[NSThread currentThread]);
+    });
+    // 并发同步
+    dispatch_sync(conQueue, ^{
+      NSLog(@"(3).=====%@",[NSThread currentThread]);
+    });
+    
+//    (1).=====<NSThread: 0x2837f6f00>{number = 1, name = main}
+//    (2).=====<NSThread: 0x2837f6f00>{number = 1, name = main}
+//    (3).=====<NSThread: 0x2837f6f00>{number = 1, name = main}
+
+}
+
+/**
+ 二问：异步一定会开启新的线程吗。
+ 答：不会，异步在主队列里不会创建新的线程，在其他串行和并发队列都会创建新的子线程
+ */
+-(void)async1{
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    dispatch_queue_t serialQueue = dispatch_queue_create("serialQueueasync1", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t conQueue = dispatch_queue_create("conQueueasync1", DISPATCH_QUEUE_CONCURRENT);
+
+    NSLog(@"(1).=====%@",[NSThread currentThread]);
+    dispatch_async(serialQueue, ^{
+      NSLog(@"(2).=====%@",[NSThread currentThread]);
+    });
+    dispatch_async(conQueue, ^{
+      NSLog(@"(3).=====%@",[NSThread currentThread]);
+    });
+    dispatch_async(mainQueue, ^{
+      NSLog(@"(4).=====%@",[NSThread currentThread]);
+    });
+
+//    (1).=====<NSThread: 0x2800a6f00>{number = 1, name = main}
+//    (2).=====<NSThread: 0x2800ca5c0>{number = 3, name = (null)}
+//    (3).=====<NSThread: 0x2800ca5c0>{number = 3, name = (null)}
+//    (4).=====<NSThread: 0x2800a6f00>{number = 1, name = main}
+    
+    /**
+     但是仔细看线程号 发现（2）和（3） 对应的 number 都是3 。 也就是这两个异步动作只创建了一个新的线程。按照常识来说不是应该创建两个不同线程吗？
+     这儿就要从时间和空间谈到GCD对线程调度优化问题了。
+     所以GCD会自动权衡根据任务分配合适的线程数，从而达到空间和时间的最优。
+     这个问题的总结：
+
+     同步：不具备开启线程的能力，一定串行执行任务
+     异步：具有开启线程的能力，但是在主队列里不会开启新的线程。 如果在串行队列和并发队列里开启n个子线程，gcd优化之后未必会真的有n个子线程。
+     */
+
+}
+
+
 
 
 #pragma mark - 多线程测试
@@ -248,9 +322,32 @@
     
 }
 
+#pragma mark - 线程同步 --阻塞任务（dispatch_barrier）：
+-(void)barrier {
+    /* 创建并发队列 */
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("test.concurrent.queue", DISPATCH_QUEUE_CONCURRENT);
+    /* 添加两个并发操作A和B，即A和B会并发执行 */
+    dispatch_async(concurrentQueue, ^(){
+        NSLog(@"OperationA");
+    });
+    dispatch_async(concurrentQueue, ^(){
+        NSLog(@"OperationB");
+    });
+    /* 添加barrier障碍操作，会等待前面的并发操作结束，并暂时阻塞后面的并发操作直到其完成 */
+    dispatch_barrier_async(concurrentQueue, ^(){
+        NSLog(@"OperationBarrier!");
+    });
+    /* 继续添加并发操作C和D，要等待barrier障碍操作结束才能开始 */
+    dispatch_async(concurrentQueue, ^(){
+        NSLog(@"OperationC");
+    });
+    dispatch_async(concurrentQueue, ^(){
+        NSLog(@"OperationD");
+    });
+}
 
 
-#pragma mark - 信号量
+#pragma mark - 线程同步 -- 信号量机制（dispatch_semaphore）
 
 //    dispatch_semaphore_create：创建一个信号量（semaphore）
 //    dispatch_semaphore_signal：信号通知，即让信号量+1
@@ -319,7 +416,6 @@
 -(void)request_C{
     
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-    
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://www.baidu.com"]];
     NSURLSessionDownloadTask *task = [[NSURLSession sharedSession] downloadTaskWithRequest:request completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {

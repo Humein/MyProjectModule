@@ -10,6 +10,7 @@
 #import "CollectionModuleView.h"
 #import "CellModel.h"
 #import "AbstractCollectionViewCell.h"
+
 @interface colloctionViewController ()<CollectionViewDataSource,CollectionViewDelegate>
 @property (nonatomic,strong) CollectionModuleView *autoView;
 @property (nonatomic,strong)NSMutableArray *itemList;
@@ -34,6 +35,8 @@
     [self.view addSubview:self.autoView];
    
 }
+
+
 
 #pragma mark ----Delegate
 

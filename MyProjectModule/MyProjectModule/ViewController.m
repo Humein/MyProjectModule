@@ -34,13 +34,14 @@
 
 //#import <Flutter/Flutter.h>
 #import "FlutterSubViewController.h"
-
+#import "YYFPSLabel.h"
 #import "MyProjectModule-Swift.h"
 @interface ViewController ()<AlertTableViewDelegate>
 @property (nonatomic,strong)AlertTableView *tableView;
 @property (nonatomic,strong)NSMutableArray *itemList;
 @property (nonatomic,weak)AlertTableView *weakTableView;
 @property (nonatomic,weak)NSArray *weakArray;
+@property (nonatomic,strong) YYFPSLabel *fpsLabel;
 
 @end
 
@@ -64,6 +65,10 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     WEAKSELF
+    _fpsLabel = [[YYFPSLabel alloc]initWithFrame:CGRectMake(40, 40, 55, 20)];
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    [keyWindow addSubview:_fpsLabel];
+    NSClassFromString(@"TtC19ClassWrittenInSwift11AppDelegate");
     self.rightBarItem(@"FlutterDemo", CGRectMake(-0, 0, 100, 40), NO);
     self.rightBarItemClickBlock = ^(UIButton *button, NSInteger index) {
 //        [weakSelf pushFlutterViewController_MethodChannel];
@@ -72,7 +77,7 @@
 
     
     self.itemList = [NSMutableArray array];
-    NSArray *list = [NSArray arrayWithObjects:@"TestBlockModelViewController",@"SmoothBookmarkDemoViewController",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",@"UIViewController",nil];
+    NSArray *list = [NSArray arrayWithObjects:@"ThreadSafeContainer",@"TestBlockModelViewController",@"SmoothBookmarkDemoViewController",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
 
     [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { 
         CellModel *model =  [CellModel new];
@@ -98,10 +103,7 @@
     AlertTableView *weakView = [AlertTableView new];
     self.weakTableView = weakView;
     self.weakArray = [NSArray array];
-    
-    
-    
-    
+
 }
 
 
