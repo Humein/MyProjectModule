@@ -15,6 +15,9 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - KVOController (1.2.0)
   - Masonry (1.1.0)
   - MJExtension (3.1.0)
@@ -33,6 +36,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - Aspects
+  - FMDB
   - KVOController
   - Masonry
   - MJExtension
@@ -56,11 +60,13 @@ SPEC REPOS:
     - YTKNetwork
     - YYKit
   trunk:
+    - FMDB
     - SnapKit
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
@@ -71,6 +77,6 @@ SPEC CHECKSUMS:
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 98e7bea36b93b1c0585c550084610fef853c2e6f
+PODFILE CHECKSUM: 46ae7590df25c9c142dc66c9dc07e7c92771725e
 
 COCOAPODS: 1.8.4

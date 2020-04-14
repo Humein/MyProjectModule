@@ -12,6 +12,7 @@ target 'MyProjectModule' do
   pod 'YTKNetwork'
   pod 'Aspects'
   pod 'SnapKit', '~> 4.0.0'
+  pod 'FMDB'
 
   # Flutter 引入 现有 Native 工程
   flutter_application_path = "/Users/zhangxinxin/Code/FlutterDoc/my_flutter"

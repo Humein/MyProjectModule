@@ -125,6 +125,12 @@
 		7936BB4124459E750043AF5A /* SDCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB3D24459E750043AF5A /* SDCycleView.swift */; };
 		7936BB4224459E750043AF5A /* SDPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB3E24459E750043AF5A /* SDPageControl.swift */; };
 		7936BB4324459E750043AF5A /* SDCycleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB3F24459E750043AF5A /* SDCycleLayout.swift */; };
+		7936BB602445A7400043AF5A /* DBAbstractItem+JoinSql.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB542445A73F0043AF5A /* DBAbstractItem+JoinSql.m */; };
+		7936BB612445A7400043AF5A /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB562445A73F0043AF5A /* DataBaseManager.m */; };
+		7936BB622445A7400043AF5A /* SqliteDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB592445A73F0043AF5A /* SqliteDataBase.m */; };
+		7936BB632445A7400043AF5A /* DBAbstractItem+Sql.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB5C2445A73F0043AF5A /* DBAbstractItem+Sql.m */; };
+		7936BB642445A7400043AF5A /* DBAbstractItem+DataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB5E2445A73F0043AF5A /* DBAbstractItem+DataBase.m */; };
+		7936BB652445A7400043AF5A /* DBAbstractItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB5F2445A73F0043AF5A /* DBAbstractItem.m */; };
 		79387EAE244042E100CC7A49 /* SDTimerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79387EAD244042E100CC7A49 /* SDTimerObserver.swift */; };
 		79387EB12440644900CC7A49 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79387EB02440644900CC7A49 /* YYFPSLabel.m */; };
 		79387EB324407B6900CC7A49 /* SDCacheManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79387EB224407B6900CC7A49 /* SDCacheManagers.swift */; };
@@ -468,6 +474,20 @@
 		7936BB3D24459E750043AF5A /* SDCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDCycleView.swift; sourceTree = "<group>"; };
 		7936BB3E24459E750043AF5A /* SDPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPageControl.swift; sourceTree = "<group>"; };
 		7936BB3F24459E750043AF5A /* SDCycleLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDCycleLayout.swift; sourceTree = "<group>"; };
+		7936BB522445A73F0043AF5A /* DataBaseConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseConfig.h; sourceTree = "<group>"; };
+		7936BB532445A73F0043AF5A /* SqliteDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteDataBase.h; sourceTree = "<group>"; };
+		7936BB542445A73F0043AF5A /* DBAbstractItem+JoinSql.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBAbstractItem+JoinSql.m"; sourceTree = "<group>"; };
+		7936BB552445A73F0043AF5A /* DBAbstractItem+DataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBAbstractItem+DataBase.h"; sourceTree = "<group>"; };
+		7936BB562445A73F0043AF5A /* DataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseManager.m; sourceTree = "<group>"; };
+		7936BB572445A73F0043AF5A /* DBAbstractItem+Sql.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBAbstractItem+Sql.h"; sourceTree = "<group>"; };
+		7936BB582445A73F0043AF5A /* DBAbstractItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAbstractItem.h; sourceTree = "<group>"; };
+		7936BB592445A73F0043AF5A /* SqliteDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteDataBase.m; sourceTree = "<group>"; };
+		7936BB5A2445A73F0043AF5A /* DataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBase.h; sourceTree = "<group>"; };
+		7936BB5B2445A73F0043AF5A /* DBAbstractItem+JoinSql.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBAbstractItem+JoinSql.h"; sourceTree = "<group>"; };
+		7936BB5C2445A73F0043AF5A /* DBAbstractItem+Sql.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBAbstractItem+Sql.m"; sourceTree = "<group>"; };
+		7936BB5D2445A73F0043AF5A /* DataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseManager.h; sourceTree = "<group>"; };
+		7936BB5E2445A73F0043AF5A /* DBAbstractItem+DataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBAbstractItem+DataBase.m"; sourceTree = "<group>"; };
+		7936BB5F2445A73F0043AF5A /* DBAbstractItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAbstractItem.m; sourceTree = "<group>"; };
 		79387EAD244042E100CC7A49 /* SDTimerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimerObserver.swift; sourceTree = "<group>"; };
 		79387EAF2440644900CC7A49 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
 		79387EB02440644900CC7A49 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
@@ -767,6 +787,7 @@
 		3340363A2154C67E006FCBA3 /* MemoryAndDiskCache */ = {
 			isa = PBXGroup;
 			children = (
+				7936BB512445A73F0043AF5A /* DataBase */,
 				3340363B2154C69C006FCBA3 /* MemoryCache.h */,
 				3340363C2154C69C006FCBA3 /* MemoryCache.m */,
 				79387EB224407B6900CC7A49 /* SDCacheManagers.swift */,
@@ -1549,6 +1570,27 @@
 			path = SlideShow;
 			sourceTree = "<group>";
 		};
+		7936BB512445A73F0043AF5A /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				7936BB522445A73F0043AF5A /* DataBaseConfig.h */,
+				7936BB532445A73F0043AF5A /* SqliteDataBase.h */,
+				7936BB542445A73F0043AF5A /* DBAbstractItem+JoinSql.m */,
+				7936BB552445A73F0043AF5A /* DBAbstractItem+DataBase.h */,
+				7936BB562445A73F0043AF5A /* DataBaseManager.m */,
+				7936BB572445A73F0043AF5A /* DBAbstractItem+Sql.h */,
+				7936BB582445A73F0043AF5A /* DBAbstractItem.h */,
+				7936BB592445A73F0043AF5A /* SqliteDataBase.m */,
+				7936BB5A2445A73F0043AF5A /* DataBase.h */,
+				7936BB5B2445A73F0043AF5A /* DBAbstractItem+JoinSql.h */,
+				7936BB5C2445A73F0043AF5A /* DBAbstractItem+Sql.m */,
+				7936BB5D2445A73F0043AF5A /* DataBaseManager.h */,
+				7936BB5E2445A73F0043AF5A /* DBAbstractItem+DataBase.m */,
+				7936BB5F2445A73F0043AF5A /* DBAbstractItem.m */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
 		793C636024060699000BE949 /* UIWidgetDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -2281,6 +2323,7 @@
 				793C6379240606A4000BE949 /* DrawUnlineAndScore.m in Sources */,
 				797EC360236C10F900E21E44 /* SDOPickerView.swift in Sources */,
 				7908831823A0D04500FA3BE5 /* PlayerViewController.m in Sources */,
+				7936BB612445A7400043AF5A /* DataBaseManager.m in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
 				7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */,
 				7936BB4124459E750043AF5A /* SDCycleView.swift in Sources */,
@@ -2307,6 +2350,7 @@
 				7908830E23A0D04500FA3BE5 /* NSInvocationForStrategyViewController.m in Sources */,
 				79DC642623BA1A0A0073E22F /* HTTopControlView.m in Sources */,
 				33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */,
+				7936BB642445A7400043AF5A /* DBAbstractItem+DataBase.m in Sources */,
 				79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */,
 				790882FA23A0D04500FA3BE5 /* FactoryObject.swift in Sources */,
 				79D353B0241324510064FB03 /* UITableView+PlaceHolder.m in Sources */,
@@ -2344,6 +2388,7 @@
 				7908832423A0D04500FA3BE5 /* Hamburger.m in Sources */,
 				79F9A5F5215214B4003704D7 /* NSTimer+WeakTimerBlock.m in Sources */,
 				7908832723A0D04500FA3BE5 /* UIImage+Title.m in Sources */,
+				7936BB652445A7400043AF5A /* DBAbstractItem.m in Sources */,
 				79A1A5192269AD0800CEA92A /* CheckConditionCollectionViewCell.m in Sources */,
 				79A1A51C2269AD0800CEA92A /* BookmarkMainTableView.m in Sources */,
 				7908831923A0D04500FA3BE5 /* StrategyMethod.swift in Sources */,
@@ -2392,6 +2437,7 @@
 				7908830A23A0D04500FA3BE5 /* AliPay.m in Sources */,
 				7908831E23A0D04500FA3BE5 /* AbstractPlayHelper.m in Sources */,
 				3340363D2154C69C006FCBA3 /* MemoryCache.m in Sources */,
+				7936BB602445A7400043AF5A /* DBAbstractItem+JoinSql.m in Sources */,
 				79E9668C237EBE0400B49697 /* BView.swift in Sources */,
 				7908831623A0D04500FA3BE5 /* ZTKDownItem.m in Sources */,
 				7908831D23A0D04500FA3BE5 /* ZSPlaterHelper.m in Sources */,
@@ -2401,6 +2447,7 @@
 				79040DA12238AA2D0085335E /* AspectTrackMananer.m in Sources */,
 				79EEEA592182C13A00848B59 /* LiveCommentDemoViewController.m in Sources */,
 				79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */,
+				7936BB622445A7400043AF5A /* SqliteDataBase.m in Sources */,
 				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
 				79A0ECAE236838E5004C10B0 /* VTBEncDecViewController.m in Sources */,
 				79E3D63321DE57D60038CACB /* ZTKBaseRequest.m in Sources */,
@@ -2431,6 +2478,7 @@
 				33759E7D212FABBA00D801C1 /* NSObject+KVOHelper.m in Sources */,
 				79EEEAA1218FF5E600848B59 /* TreeViewModel.m in Sources */,
 				794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */,
+				7936BB632445A7400043AF5A /* DBAbstractItem+Sql.m in Sources */,
 				792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */,
 				7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */,
 				79DC642323BA1A0A0073E22F /* Chain_of_responsibility.swift in Sources */,
