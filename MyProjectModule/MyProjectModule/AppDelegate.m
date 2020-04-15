@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "AspectTrackMananer.h"
 #import "AppDelegate+DownManagerHelper.h"
+#import "MainTabBarViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -40,17 +41,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    window.backgroundColor = [UIColor whiteColor];
+    window.rootViewController = [[MainTabBarViewController alloc] init];
+    [window makeKeyAndVisible];
     self.window = window;
-    ViewController *animationsListViewController = [ViewController new];
-    UINavigationController *navigationController = [[UINavigationController alloc]
-                                                    initWithRootViewController:animationsListViewController];
     
-    [self.window setRootViewController:navigationController];
-    self.window.backgroundColor = [UIColor whiteColor];
-    self.window.tintColor = [UIColor redColor];
-    [self.window makeKeyAndVisible];
-//    self.window.frame = [[UIScreen mainScreen] bounds];
+    
 
     self.appName = @"";
 //    _name = @"";    测试 分类 的 成员变量
@@ -60,6 +58,10 @@
     return YES;
 }
 
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    return UIInterfaceOrientationMaskAllButUpsideDown;
+
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

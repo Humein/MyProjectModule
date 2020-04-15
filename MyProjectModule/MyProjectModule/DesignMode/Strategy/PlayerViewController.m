@@ -10,9 +10,10 @@
 #import "UIButton+ButtonBlockCategory.h"
 #import "AbstractPlayerHelperManager.h"
 #import "APPPayTool.h"
-#import "FullScreenViewController.h"
 #import "Masonry.h"
 #import "InterfacePlayerView.h"
+#import "BKDeviceOrientation.h"
+#define ScreenSize [UIScreen mainScreen].bounds.size
 @interface PlayerViewController (){
     AbstractPlayerHelperManager *_player;
 
@@ -48,13 +49,11 @@
     }];
     [self.view addSubview:start];
     
-    
     UIButton *pause = [UIButton createButtonWithFrame:CGRectMake(64, 100, 44, 44) title:@"暂停" titleColor:[UIColor redColor] bgImageName:@"" actionBlock:^(UIButton *button) {
         
         [weakSelf pause];
     }];
     [self.view addSubview:pause];
-    
     
     UIButton *stop = [UIButton createButtonWithFrame:CGRectMake(104, 100, 44, 44) title:@"停止" titleColor:[UIColor brownColor] bgImageName:@"" actionBlock:^(UIButton *button) {
         
@@ -69,37 +68,38 @@
 
 
 
+#pragma mark - 旋转屏
+// 是否支持旋转
+- (BOOL)shouldAutorotate
+{
+    BOOL isFull = YES;
+    return isFull;
+}
+// 支持方向
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeRight;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return UIInterfaceOrientationPortrait;
+}
+
+
 
 -(void)play{
-//    NSLog(@"%@",_player ? [_player abs_play] : @"空"  );
-    
-
-//    TODO 旋转屏
-    UIViewController* ctrl = [UIApplication sharedApplication].keyWindow.rootViewController;
-    while (ctrl.presentedViewController && !ctrl.presentedViewController.isBeingDismissed) {
-        ctrl = ctrl.presentedViewController;
-    }
-    
-    
-    self.videoPlayer = [InterfacePlayerView new];
-    
-    self.videoPlayer.backgroundColor = [UIColor redColor];
-    
-    [self.videoPlayer exchangePlayItem:nil];
-    
-    FullScreenViewController *vc = [[FullScreenViewController alloc] init];
-    [vc.view addSubview:self.videoPlayer];
-    [self.videoPlayer mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(0.f);
+    // 方式1 控制整个控制器; 前题是 项目支持横竖屏
+    CGFloat duration = [UIApplication sharedApplication].statusBarOrientationAnimationDuration;
+    [UIView animateWithDuration:duration animations:^{
+        [[BKDeviceOrientation shareInstance] screenExChangeforOrientation:UIInterfaceOrientationLandscapeRight];
     }];
-    
-    [ctrl presentViewController:vc animated:NO completion:nil];
-    
 }
 
 -(void)pause{
-//    NSLog(@"%@",_player ? [_player abs_pause] : @"空"  );
-
+    CGFloat duration = [UIApplication sharedApplication].statusBarOrientationAnimationDuration;
+    [UIView animateWithDuration:duration animations:^{
+        [[BKDeviceOrientation shareInstance] screenExChangeforOrientation:UIInterfaceOrientationPortrait];
+    }];
 }
 
 -(void)stop{

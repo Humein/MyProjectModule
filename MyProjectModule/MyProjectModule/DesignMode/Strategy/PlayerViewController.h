@@ -6,8 +6,8 @@
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "AbstractViewController.h"
 
-@interface PlayerViewController : UIViewController
+@interface PlayerViewController : AbstractViewController
 
 @end

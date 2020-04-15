@@ -196,6 +196,23 @@
             [self.navigationController popToViewController:result[0] animated:YES];
         }
     }
-    
 }
+
+#pragma mark - 横竖屏控制 子类重写控制是否支持横竖屏
+- (BOOL)shouldAutorotate
+{
+    return NO;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return UIInterfaceOrientationPortrait;
+}
+
+
 @end

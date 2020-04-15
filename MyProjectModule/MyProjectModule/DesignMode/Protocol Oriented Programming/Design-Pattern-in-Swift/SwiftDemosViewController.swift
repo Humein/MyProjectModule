@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class SwiftDemosViewController: UIViewController {
+class SwiftDemosViewController: AbstractViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -131,6 +131,9 @@
 		7936BB632445A7400043AF5A /* DBAbstractItem+Sql.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB5C2445A73F0043AF5A /* DBAbstractItem+Sql.m */; };
 		7936BB642445A7400043AF5A /* DBAbstractItem+DataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB5E2445A73F0043AF5A /* DBAbstractItem+DataBase.m */; };
 		7936BB652445A7400043AF5A /* DBAbstractItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB5F2445A73F0043AF5A /* DBAbstractItem.m */; };
+		7936BB712446DD460043AF5A /* BKDeviceOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB6F2446DD460043AF5A /* BKDeviceOrientation.m */; };
+		7936BB742446EA2C0043AF5A /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB732446EA2C0043AF5A /* MainTabBarViewController.m */; };
+		7936BB772446EA860043AF5A /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB762446EA860043AF5A /* BaseNavViewController.m */; };
 		79387EAE244042E100CC7A49 /* SDTimerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79387EAD244042E100CC7A49 /* SDTimerObserver.swift */; };
 		79387EB12440644900CC7A49 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79387EB02440644900CC7A49 /* YYFPSLabel.m */; };
 		79387EB324407B6900CC7A49 /* SDCacheManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79387EB224407B6900CC7A49 /* SDCacheManagers.swift */; };
@@ -187,7 +190,6 @@
 		79DC642723BA1A0A0073E22F /* HTBottomControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC641823BA1A090073E22F /* HTBottomControlView.m */; };
 		79DC643123BA1C8A0073E22F /* InterfacePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC642D23BA1C890073E22F /* InterfacePlayerView.m */; };
 		79DC643223BA1C8A0073E22F /* ResponderControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC643023BA1C890073E22F /* ResponderControlView.m */; };
-		79DC643623BA1C9F0073E22F /* FullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC643523BA1C9F0073E22F /* FullScreenViewController.m */; };
 		79DC643B23BA1E170073E22F /* ProtocolLinked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC643A23BA1E170073E22F /* ProtocolLinked.swift */; };
 		79DC644023BA1E1D0073E22F /* ResponOfChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC643E23BA1E1D0073E22F /* ResponOfChainManager.m */; };
 		79DC645323BA1F6C0073E22F /* ViewControllerChildOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC644423BA1F6C0073E22F /* ViewControllerChildOne.m */; };
@@ -488,6 +490,12 @@
 		7936BB5D2445A73F0043AF5A /* DataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseManager.h; sourceTree = "<group>"; };
 		7936BB5E2445A73F0043AF5A /* DBAbstractItem+DataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBAbstractItem+DataBase.m"; sourceTree = "<group>"; };
 		7936BB5F2445A73F0043AF5A /* DBAbstractItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAbstractItem.m; sourceTree = "<group>"; };
+		7936BB6F2446DD460043AF5A /* BKDeviceOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKDeviceOrientation.m; sourceTree = "<group>"; };
+		7936BB702446DD460043AF5A /* BKDeviceOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKDeviceOrientation.h; sourceTree = "<group>"; };
+		7936BB722446EA2C0043AF5A /* MainTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
+		7936BB732446EA2C0043AF5A /* MainTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
+		7936BB752446EA860043AF5A /* BaseNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
+		7936BB762446EA860043AF5A /* BaseNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
 		79387EAD244042E100CC7A49 /* SDTimerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimerObserver.swift; sourceTree = "<group>"; };
 		79387EAF2440644900CC7A49 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
 		79387EB02440644900CC7A49 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
@@ -595,8 +603,6 @@
 		79DC642E23BA1C890073E22F /* ResponderControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderControlView.h; sourceTree = "<group>"; };
 		79DC642F23BA1C890073E22F /* InterfacePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfacePlayerView.h; sourceTree = "<group>"; };
 		79DC643023BA1C890073E22F /* ResponderControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderControlView.m; sourceTree = "<group>"; };
-		79DC643423BA1C9F0073E22F /* FullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenViewController.h; sourceTree = "<group>"; };
-		79DC643523BA1C9F0073E22F /* FullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenViewController.m; sourceTree = "<group>"; };
 		79DC643A23BA1E170073E22F /* ProtocolLinked.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolLinked.swift; sourceTree = "<group>"; };
 		79DC643D23BA1E1D0073E22F /* ActionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionProtocol.h; sourceTree = "<group>"; };
 		79DC643E23BA1E1D0073E22F /* ResponOfChainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponOfChainManager.m; sourceTree = "<group>"; };
@@ -998,6 +1004,10 @@
 				33C9711E211EB8DC00EAAD5E /* AbstractViewController.m */,
 				794B100721DF02E300B91405 /* AbstractTableViewController.h */,
 				794B100821DF02E300B91405 /* AbstractTableViewController.m */,
+				7936BB722446EA2C0043AF5A /* MainTabBarViewController.h */,
+				7936BB732446EA2C0043AF5A /* MainTabBarViewController.m */,
+				7936BB752446EA860043AF5A /* BaseNavViewController.h */,
+				7936BB762446EA860043AF5A /* BaseNavViewController.m */,
 			);
 			path = AbstractBase;
 			sourceTree = "<group>";
@@ -1334,9 +1344,9 @@
 		790882B923A0D04400FA3BE5 /* Protocol Multi cell */ = {
 			isa = PBXGroup;
 			children = (
-				790882BA23A0D04400FA3BE5 /* ProtoclHelper */,
-				790882BC23A0D04400FA3BE5 /* ProtoclForCMutilellViewController.m */,
 				790882BD23A0D04400FA3BE5 /* ProtoclForCMutilellViewController.h */,
+				790882BC23A0D04400FA3BE5 /* ProtoclForCMutilellViewController.m */,
+				790882BA23A0D04400FA3BE5 /* ProtoclHelper */,
 			);
 			path = "Protocol Multi cell";
 			sourceTree = "<group>";
@@ -1891,8 +1901,8 @@
 		79DC643323BA1C9F0073E22F /* Rotational Screen  */ = {
 			isa = PBXGroup;
 			children = (
-				79DC643423BA1C9F0073E22F /* FullScreenViewController.h */,
-				79DC643523BA1C9F0073E22F /* FullScreenViewController.m */,
+				7936BB702446DD460043AF5A /* BKDeviceOrientation.h */,
+				7936BB6F2446DD460043AF5A /* BKDeviceOrientation.m */,
 			);
 			path = "Rotational Screen ";
 			sourceTree = "<group>";
@@ -2306,7 +2316,6 @@
 				790882F923A0D04500FA3BE5 /* ClassClusterViewController.m in Sources */,
 				79DC645A23BA1F6C0073E22F /* SwiftDemosViewController.swift in Sources */,
 				793C637C240606A4000BE949 /* DrawLine.m in Sources */,
-				79DC643623BA1C9F0073E22F /* FullScreenViewController.m in Sources */,
 				7908831523A0D04500FA3BE5 /* ZTKBJDownHelper.m in Sources */,
 				79DC645323BA1F6C0073E22F /* ViewControllerChildOne.m in Sources */,
 				79E96686237EBD8E00B49697 /* BlockModel.swift in Sources */,
@@ -2391,6 +2400,7 @@
 				7936BB652445A7400043AF5A /* DBAbstractItem.m in Sources */,
 				79A1A5192269AD0800CEA92A /* CheckConditionCollectionViewCell.m in Sources */,
 				79A1A51C2269AD0800CEA92A /* BookmarkMainTableView.m in Sources */,
+				7936BB772446EA860043AF5A /* BaseNavViewController.m in Sources */,
 				7908831923A0D04500FA3BE5 /* StrategyMethod.swift in Sources */,
 				79A0ECA52368262F004C10B0 /* XXH264EncodeTool.m in Sources */,
 				79E9668A237EBDF800B49697 /* AView.swift in Sources */,
@@ -2461,6 +2471,7 @@
 				7908832123A0D04500FA3BE5 /* Command.swift in Sources */,
 				33C2DF3921DCC5D400F96F32 /* PointTreeTypeThree.m in Sources */,
 				793C6376240606A4000BE949 /* AnimationExample.m in Sources */,
+				7936BB742446EA2C0043AF5A /* MainTabBarViewController.m in Sources */,
 				7997BE69224090A50054F4D0 /* AbstractAlertView.m in Sources */,
 				7908831F23A0D04500FA3BE5 /* ResponderPlayerView.m in Sources */,
 				33C971432124108D00EAAD5E /* CustomAlertManagerView.m in Sources */,
@@ -2468,6 +2479,7 @@
 				79DC642523BA1A0A0073E22F /* RChainDemoViewController.m in Sources */,
 				33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */,
 				7908830F23A0D04500FA3BE5 /* ResovlerModel.m in Sources */,
+				7936BB712446DD460043AF5A /* BKDeviceOrientation.m in Sources */,
 				793C6378240606A4000BE949 /* AttributeAndPredicateWithLink.m in Sources */,
 				793C638024060736000BE949 /* UISampleExample.swift in Sources */,
 				790882F423A0D04500FA3BE5 /* ClassClusterModel.m in Sources */,
