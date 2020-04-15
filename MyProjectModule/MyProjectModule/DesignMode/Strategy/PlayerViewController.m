@@ -13,6 +13,8 @@
 #import "Masonry.h"
 #import "InterfacePlayerView.h"
 #import "BKDeviceOrientation.h"
+#import "MyProjectModule-Swift.h"
+
 #define ScreenSize [UIScreen mainScreen].bounds.size
 @interface PlayerViewController (){
     AbstractPlayerHelperManager *_player;
@@ -61,6 +63,11 @@
     }];
     [self.view addSubview:stop];
     
+    
+    _videoPlayer =  [[InterfacePlayerView alloc] initWithFrame:CGRectMake(0, 300, self.view.frame.size.width , 400)];
+    _videoPlayer.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+    [self.view addSubview:_videoPlayer];
+    
 }
 
 // 初始化播放器
@@ -88,11 +95,20 @@
 
 
 -(void)play{
-    // 方式1 控制整个控制器; 前题是 项目支持横竖屏
-    CGFloat duration = [UIApplication sharedApplication].statusBarOrientationAnimationDuration;
-    [UIView animateWithDuration:duration animations:^{
-        [[BKDeviceOrientation shareInstance] screenExChangeforOrientation:UIInterfaceOrientationLandscapeRight];
-    }];
+    // 方式1 控制整个控制器;
+//    CGFloat duration = [UIApplication sharedApplication].statusBarOrientationAnimationDuration;
+//    [UIView animateWithDuration:duration animations:^{
+//        [[BKDeviceOrientation shareInstance] screenExChangeforOrientation:UIInterfaceOrientationLandscapeRight];
+//    }];
+    
+    // 方式2 present 可横竖屏的控制器; 优点可以控制转场动画
+    
+    // 方式3 将播放器所在的view放置到window上，用transform的方式做一个旋转动画，最终让view完全覆盖window
+    [[BKPlayerWindow share] enterFullScreenWith:_videoPlayer];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[BKPlayerWindow share] exitFullScreenWithSubView:self.view];
+    });
+
 }
 
 -(void)pause{

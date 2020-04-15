@@ -180,6 +180,7 @@
 		79A1A51D2269AD0800CEA92A /* SmoothBookmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5152269AD0800CEA92A /* SmoothBookmarkViewController.m */; };
 		79B44B24237CF0A900B7D73D /* SmoothBookmarkDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B44B23237CF0A900B7D73D /* SmoothBookmarkDemoViewController.m */; };
 		79B44B27237CF23000B7D73D /* BaseBookmarkChildDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B44B26237CF23000B7D73D /* BaseBookmarkChildDemoController.m */; };
+		79B4850B2446F9CB0025FC0B /* PlayerFullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4850A2446F9CB0025FC0B /* PlayerFullScreenViewController.swift */; };
 		79C2B663221A646200C40F3A /* RunTimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C2B662221A646200C40F3A /* RunTimeTestViewController.m */; };
 		79D353B0241324510064FB03 /* UITableView+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D353AF241324510064FB03 /* UITableView+PlaceHolder.m */; };
 		79DC642223BA1A0A0073E22F /* UIResponder+UIResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC640C23BA1A090073E22F /* UIResponder+UIResponderChain.m */; };
@@ -582,6 +583,7 @@
 		79B44B23237CF0A900B7D73D /* SmoothBookmarkDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmoothBookmarkDemoViewController.m; sourceTree = "<group>"; };
 		79B44B25237CF23000B7D73D /* BaseBookmarkChildDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseBookmarkChildDemoController.h; sourceTree = "<group>"; };
 		79B44B26237CF23000B7D73D /* BaseBookmarkChildDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseBookmarkChildDemoController.m; sourceTree = "<group>"; };
+		79B4850A2446F9CB0025FC0B /* PlayerFullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerFullScreenViewController.swift; sourceTree = "<group>"; };
 		79BFDCE22142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE42142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79C2B661221A646200C40F3A /* RunTimeTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunTimeTestViewController.h; sourceTree = "<group>"; };
@@ -1903,6 +1905,7 @@
 			children = (
 				7936BB702446DD460043AF5A /* BKDeviceOrientation.h */,
 				7936BB6F2446DD460043AF5A /* BKDeviceOrientation.m */,
+				79B4850A2446F9CB0025FC0B /* PlayerFullScreenViewController.swift */,
 			);
 			path = "Rotational Screen ";
 			sourceTree = "<group>";
@@ -2391,6 +2394,7 @@
 				793C637A240606A4000BE949 /* CAGradientLayerDemo.m in Sources */,
 				79A0ECA82368263E004C10B0 /* XXH264DecodeTool.m in Sources */,
 				79EEEAA9219014BD00848B59 /* PointTreeStatisTableViewCell.m in Sources */,
+				79B4850B2446F9CB0025FC0B /* PlayerFullScreenViewController.swift in Sources */,
 				7908831323A0D04500FA3BE5 /* ZTKDownHelperManager.m in Sources */,
 				79DC645623BA1F6C0073E22F /* SecondView.swift in Sources */,
 				3362E69F2130FBEF00A4B26D /* CustomKVO.m in Sources */,
