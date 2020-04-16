@@ -10,10 +10,21 @@ import UIKit
 import SDWebImage
 
 class SwiftDemosViewController: AbstractViewController {
-
+    
+    lazy var cycleView: SDCycleView =  {
+        let cycle = SDCycleView(frame: CGRect.init(x: 0, y: 200, width: self.view.frame.width, height: 200))
+        cycle.scrollDirection = .horizontal
+        cycle.isInfinite = true
+        cycle.isAutomatic = true
+        cycle.placeholderImage = UIImage(named: "弹窗")
+        cycle.setImagesGroup([UIImage(named: "exercise_ZTYL_point"),UIImage(named: "mine_train_tree_two_open")])
+        cycle.delegate = self
+        return cycle
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        BKDeviceOrientation.shareInstance().allowRotation(self)
         //MARK:-  面向协议
         let f = FirstView()
         f.eat("default")
@@ -92,20 +103,23 @@ class SwiftDemosViewController: AbstractViewController {
         
         
         //MARK:- SilderShow
-        let cycleView = SDCycleView(frame: CGRect.init(x: 0, y: 200, width: self.view.frame.width, height: 200))
-        cycleView.scrollDirection = .horizontal
-        cycleView.isInfinite = true
-        cycleView.isAutomatic = true
-        cycleView.placeholderImage = UIImage(named: "弹窗")
-        cycleView.setImagesGroup([UIImage(named: "exercise_ZTYL_point"),UIImage(named: "mine_train_tree_two_open")])
-//        cycleView.setUrlsGroup(["http://chatm-icon.oss-cn-beijing.aliyuncs.com/pic/pic_20171101181927887.jpg",
-//        "http://chatm-icon.oss-cn-beijing.aliyuncs.com/pic/pic_20171114171645011.jpg",
-//        "http://chatm-icon.oss-cn-beijing.aliyuncs.com/pic/pic_20171114172009707.png"])
-        cycleView.delegate = self
-        view.addSubview(cycleView)
+        view.addSubview(self.cycleView)
         
     }
+    
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+//        CustomPopCover.coverFrom(contentView: self.cycleView, style: 0, showStyle: 0, showAnimStyle: 0, hideAnimStyle: 0)
+        
+        UIView.animate(withDuration: UIApplication.shared.statusBarOrientationAnimationDuration) {
+            BKDeviceOrientation.shareInstance().screenExChangeforOrientation(.landscapeRight)
+        }
+    }
+    
 }
+
 
 
 extension SwiftDemosViewController: SDCycleViewProtocol {

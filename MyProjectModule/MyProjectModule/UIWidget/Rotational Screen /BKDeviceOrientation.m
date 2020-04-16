@@ -7,11 +7,10 @@
 //
 
 #import "BKDeviceOrientation.h"
+#import "UIViewController+Category.h"
 
 @interface BKDeviceOrientation()
-
 @property (nonatomic, strong) id objc;
-
 @end
 
 @implementation BKDeviceOrientation
@@ -44,7 +43,6 @@
     UIInterfaceOrientation inter = [self interfaceOrientationForDeviceOrientation:[UIDevice currentDevice].orientation];
     return UIInterfaceOrientationIsLandscape(inter);
 }
-
 
 - (UIInterfaceOrientation)interfaceOrientationForDeviceOrientation:(UIDeviceOrientation)orientation
 {
@@ -109,20 +107,18 @@
 
 - (void)screenExChangeforOrientation:(UIInterfaceOrientation)orientation{
     UIInterfaceOrientation val = orientation;
-    //这行代码是关键 不用好像也可以哦
     [UIViewController attemptRotationToDeviceOrientation];
-    
-    SEL selector=NSSelectorFromString(@"setOrientation:");
-    
+    SEL selector = NSSelectorFromString(@"setOrientation:");
     NSInvocation *invocation =[NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
-    
     [invocation setSelector:selector];
-    
     [invocation setTarget:[UIDevice currentDevice]];
-    
     [invocation setArgument:&val atIndex:2];
-    
     [invocation invoke];
-    
 }
+
+- (void)allowRotation:(UIViewController *)vc{
+    Class class = [vc class];
+    [UIViewController configOrientation:class];
+}
+
 @end

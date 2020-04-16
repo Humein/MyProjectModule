@@ -5,6 +5,13 @@
 //  Created by XinXin on 2020/4/15.
 //  Copyright © 2020 xinxin. All rights reserved.
 //
+/**
+ // 方式3 将播放器所在的view放置到window上，用transform的方式做一个旋转动画，最终让view完全覆盖window
+ [[BKPlayerWindow share] enterFullScreenWith:_videoPlayer];
+ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+     [[BKPlayerWindow share] exitFullScreenWithSubView:self.view];
+ });
+ */
 
 import UIKit
 

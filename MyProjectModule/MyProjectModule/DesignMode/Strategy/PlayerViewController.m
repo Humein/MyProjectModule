@@ -29,6 +29,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[BKDeviceOrientation shareInstance] allowRotation:self];
+
     __weak typeof (self) weakSelf = self;
 //    [self initPlayerWithType:EPlayerType_ZSPlayer];
 
@@ -76,30 +78,13 @@
 
 
 #pragma mark - 旋转屏
-// 是否支持旋转
-- (BOOL)shouldAutorotate
-{
-    BOOL isFull = YES;
-    return isFull;
-}
-// 支持方向
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeRight;
-}
-
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
-{
-    return UIInterfaceOrientationPortrait;
-}
-
-
 
 -(void)play{
     // 方式1 控制整个控制器;
-//    CGFloat duration = [UIApplication sharedApplication].statusBarOrientationAnimationDuration;
-//    [UIView animateWithDuration:duration animations:^{
-//        [[BKDeviceOrientation shareInstance] screenExChangeforOrientation:UIInterfaceOrientationLandscapeRight];
-//    }];
+    CGFloat duration = [UIApplication sharedApplication].statusBarOrientationAnimationDuration;
+    [UIView animateWithDuration:duration animations:^{
+        [[BKDeviceOrientation shareInstance] screenExChangeforOrientation:UIInterfaceOrientationLandscapeRight];
+    }];
     
     // 方式2 present 可横竖屏的控制器; 优点可以控制转场动画
     
