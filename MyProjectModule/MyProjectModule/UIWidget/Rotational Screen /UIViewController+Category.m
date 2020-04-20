@@ -20,7 +20,8 @@
     SEL swizzledSeletor2 = @selector(sw_preferredInterfaceOrientationForPresentation);
     Method originMethod = class_getInstanceMethod(class, originalSeletor);
     Method originMethod1 = class_getInstanceMethod(class, originalSeletor1);
-    Method originMethod2 = class_getInstanceMethod(class, originalSeletor2);    Method swizzledMethod = class_getInstanceMethod(class, swizzledSeletor);
+    Method originMethod2 = class_getInstanceMethod(class, originalSeletor2);
+    Method swizzledMethod = class_getInstanceMethod(class, swizzledSeletor);
     Method swizzledMethod1 = class_getInstanceMethod(class, swizzledSeletor1);
     Method swizzledMethod2 = class_getInstanceMethod(class, swizzledSeletor2);
     BOOL didAddMethod = class_addMethod(class, originalSeletor, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));

@@ -27,7 +27,7 @@ import UIKit
    - 引入对象 <装饰者/适配器>
    - AOP
      - 改动最小，神不知鬼不觉。 方法甚至可以不出现在 Controller 里面，缺点: 这也导致代码管理上比较松散
-        - CoreText 粘贴复制 - UIGestureRecognizer 添加 UITouch 对象
+        - CoreText 复制粘贴 - UIGestureRecognizer 添加 UITouch 对象
    - 继承
    - 分类 + RunTime
      - 代码侵入少，同时方法调用逻辑也会出现在合适的地方。缺点：不能复用新加功能，比如下列例子中的非Object对象

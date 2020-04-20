@@ -111,14 +111,19 @@ class SwiftDemosViewController: AbstractViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-//        CustomPopCover.coverFrom(contentView: self.cycleView, style: 0, showStyle: 0, showAnimStyle: 0, hideAnimStyle: 0)
+        CustomPopCover.coverFrom(contentView: self.cycleView) 
         
         UIView.animate(withDuration: UIApplication.shared.statusBarOrientationAnimationDuration) {
             BKDeviceOrientation.shareInstance().screenExChangeforOrientation(.landscapeRight)
         }
     }
     
+    deinit {
+        print("deinit")
+    }
+    
 }
+
 
 
 
@@ -149,5 +154,23 @@ extension SwiftDemosViewController: SDCycleViewProtocol {
     
     func cycleViewDidSelectedIndex(_ cycleView: SDCycleView, index: Int) {
         print(index)
+    }
+}
+
+//MARK: - String 转 VC
+extension String{
+    func stringChangeToVC() -> UIViewController?{
+        //Swift中命名空间的概念
+        var vc = UIViewController()
+        if let nameSpage = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String {
+            if let childVcClass = NSClassFromString(nameSpage + "." + self) {
+                if let childVcType = childVcClass as? UIViewController.Type {
+                    //根据类型创建对应的对象
+                    vc = childVcType.init() as UIViewController
+                    return vc
+                }
+            }
+        }
+        return nil
     }
 }

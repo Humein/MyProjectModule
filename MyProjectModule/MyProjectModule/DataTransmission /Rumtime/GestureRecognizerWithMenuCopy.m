@@ -91,6 +91,7 @@
     return  YES;
 }
 
+#pragma mark - 复制粘贴
 /// 手指触摸屏幕后回调的方法，返回NO则不再进行手势识别，方法触发等
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
     // 1: RunTime 为UILongPressGestureRecognizer 添加 UITouch 对象

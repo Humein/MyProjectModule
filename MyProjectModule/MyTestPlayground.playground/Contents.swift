@@ -543,6 +543,23 @@ func twoSums(_ nums: [Int],_ target: Int) ->[Int]{
 }
 twoSums([2, 7, 11, 15], 17)
 
+// 如何在有序数组中找出和等于给定值的两个元素？LeetCode第167题
+func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {
+    var i = 0, j = numbers.count - 1
+    while i < j {
+        let sum = numbers[i] + numbers[j]
+        if sum == target {
+            return [i + 1, j + 1]
+        }else if sum > target {
+            j -= 1
+        }else {
+            i += 1
+        }
+    }
+    return []
+}
+
+
 
 /// 栈实现
 /*

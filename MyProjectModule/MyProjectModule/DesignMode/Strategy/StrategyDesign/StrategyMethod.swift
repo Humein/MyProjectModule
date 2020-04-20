@@ -121,7 +121,7 @@ final class chaperExamGetData :ExamRequestStrategy{
 
 
 
-final class StrategyManager {
+final class unowned {
     private let strategy: ExamRequestStrategy
     init(param: ExamRequestStrategy) {
         self.strategy = param

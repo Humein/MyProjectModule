@@ -60,15 +60,30 @@
     BOOL didAddMethod = class_addMethod(class, originalSeletor, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
     if (didAddMethod) {
         //添加并替换成功：说明源SEL没有实现IMP，将源SEL的IMP替换到交换SEL的IMP.
-        #warning - 分解
-        /**
-            1. class_addMethod(class, originalSeletor, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod))
-         */
         class_replaceMethod(class, swizzledSeletor, method_getImplementation(originMethod), method_getTypeEncoding(originMethod));
     } else {
         //添加失败：说明源SEL已经有IMP，直接将两个SEL的IMP交换即可
         method_exchangeImplementations(originMethod, swizzledMethod);
     }
+#warning - 分解
+    /**
+     - class_addMethod
+       - 添加方法
+     - class_replaceMethod
+       - 替换方法
+     - method_exchangeImplementations
+       - 交换方法
+     
+     - 替换系统方法流程
+       - class_addMethod 确认是否已经实现
+         - 是 class_replaceMethod 替换之前方法
+         - 否 method_exchangeImplementations 直接交换
+     
+     - 添加新方法流程
+       - class_addMethod 添加方法，并返回结果
+         - 是 不做操作
+         - 否 method_exchangeImplementations 直接交换
+     */
 }
 
 /**

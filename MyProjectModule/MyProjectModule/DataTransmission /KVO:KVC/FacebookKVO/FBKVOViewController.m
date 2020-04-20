@@ -7,7 +7,7 @@
 //
 
 #import "FBKVOViewController.h"
-#import "FBKVOController.h"
+#import "KVOController.h"
 #import "PersonInfo.h"
 @interface FBKVOViewController ()
 @property (nonatomic, strong) PersonInfo *person;
@@ -19,9 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _person = [PersonInfo new];
-    
-//    [self.KVOController observe:_person keyPath:@"name" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld action:@selector(changeColor)];
+    [self.KVOController observe:_person keyPath:@"name" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld action:@selector(changeColor)];
 
+    [self.KVOController observe:_person keyPath:@"backgroundColor" options:NSKeyValueObservingOptionNew block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSKeyValueChangeKey,id> * _Nonnull change) {
+        NSLog(@"%@", change[NSKeyValueChangeNewKey]);
+    }];
 }
 
 

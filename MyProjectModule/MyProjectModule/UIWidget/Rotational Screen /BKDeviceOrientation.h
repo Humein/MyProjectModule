@@ -9,7 +9,7 @@
  控制横竖屏管理类
  - 前提是项目必须支持横竖屏
  - 在想要支持横竖屏VC
-   BKDeviceOrientation.shareInstance().allowRotation(self)
+   SDDeviceOrientation.shareInstance().allowRotation(self)
    
  */
 #import <UIKit/UIKit.h>
