@@ -24,8 +24,12 @@
 @interface InterfacePlayerView : ResponOfChainManager
 
 
-#pragma mark ---- 具体业务
+#pragma mark ---- 具体业务   BKPlayerView
+// 记录小屏时的parentView
+@property (nonatomic, weak) UIView *videoViewParentView;
 
+// 记录小屏时的frame
+@property (nonatomic, assign) CGRect videoViewFrame;
 //界面出现
 - (void)viewWillAppear;
 

@@ -86,13 +86,13 @@
         [[BKDeviceOrientation shareInstance] screenExChangeforOrientation:UIInterfaceOrientationLandscapeRight];
     }];
     
-    // 方式2 present 可横竖屏的控制器; 优点可以控制转场动画
+    // 方式2 present 可横竖屏的控制器; 优点可以控制转场动画; 缺点 会引起 present 控制器生命周期问题
     
     // 方式3 将播放器所在的view放置到window上，用transform的方式做一个旋转动画，最终让view完全覆盖window
-    [[BKPlayerWindow share] enterFullScreenWith:_videoPlayer];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [[BKPlayerWindow share] exitFullScreenWithSubView:self.view];
-    });
+//    [[BKPlayerWindow share] enterFullScreenWith:_videoPlayer];
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [[BKPlayerWindow share] exitFullScreenWithSubView:self.view];
+//    });
 
 }
 

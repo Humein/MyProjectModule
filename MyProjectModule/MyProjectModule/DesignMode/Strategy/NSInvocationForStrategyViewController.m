@@ -151,7 +151,7 @@ static NSString *const threeEvent = @"three";
     
     
     
-//    setOrientation:   被苹果隐藏  这里是调用私有方法
+//    setOrientation:   被苹果隐藏  这里是调用私有方法 
     
     if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {
         SEL selector = NSSelectorFromString(@"setOrientation:");

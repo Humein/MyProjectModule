@@ -8,6 +8,7 @@
 
 #import "BKDeviceOrientation.h"
 #import "UIViewController+Category.h"
+#import <objc/message.h>
 
 @interface BKDeviceOrientation()
 @property (nonatomic, strong) id objc;
@@ -106,14 +107,42 @@
 }
 
 - (void)screenExChangeforOrientation:(UIInterfaceOrientation)orientation{
-    UIInterfaceOrientation val = orientation;
-    [UIViewController attemptRotationToDeviceOrientation];
-    SEL selector = NSSelectorFromString(@"setOrientation:");
-    NSInvocation *invocation =[NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
-    [invocation setSelector:selector];
-    [invocation setTarget:[UIDevice currentDevice]];
-    [invocation setArgument:&val atIndex:2];
-    [invocation invoke];
+    //  锁定屏幕旋转的情况下, 进行强制旋转屏幕,
+    
+    /**  NSInvocation 强制横屏成功
+     */
+    if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {
+        UIInterfaceOrientation val = orientation;
+        // 及时刷新当前控制器
+        [UIViewController attemptRotationToDeviceOrientation];
+        SEL selector = NSSelectorFromString(@"setOrientation:");
+        NSInvocation *invocation =[NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
+        [invocation setSelector:selector];
+        [invocation setTarget:[UIDevice currentDevice]];
+        [invocation setArgument:&val atIndex:2];
+        [invocation invoke];
+    }
+
+    /**   KVC 强制横屏成功
+    [[UIDevice currentDevice] setValue:@(orientation)
+    forKey:@"orientation"];
+    */
+
+    /**  objc_msgSend  强制横屏失败
+     objc_msgSend()报错Too many arguments to function call expected 0,have3
+     Build Setting ->   Enable Strict Checking of objc_msgSend Calls  改为 NO
+     
+     objc_msgSend([UIDevice currentDevice], @selector(setOrientation:), orientation);
+     */
+
+
+    /**  performSelector 强制横屏失败
+     if([[UIDevice currentDevice]respondsToSelector:@selector(setOrientation:)]) {
+         [[UIDevice currentDevice]performSelector:@selector(setOrientation:)
+                                       withObject:@(orientation).stringValue];
+     }
+     */
+
 }
 
 - (void)allowRotation:(UIViewController *)vc{
