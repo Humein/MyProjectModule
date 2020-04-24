@@ -24,7 +24,8 @@ class SwiftDemosViewController: AbstractViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        BKDeviceOrientation.shareInstance().allowRotation(self)
+//        BKDeviceOrientation.shareInstance().allowRotation(self)
+        SDDeviceOrientation.sharedInstance.allowRotation(self)
         //MARK:-  面向协议
         let f = FirstView()
         f.eat("default")
@@ -111,10 +112,11 @@ class SwiftDemosViewController: AbstractViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        CustomPopCover.coverFrom(contentView: self.cycleView) 
+//        CustomPopCover.coverFrom(contentView: self.cycleView)
         
         UIView.animate(withDuration: UIApplication.shared.statusBarOrientationAnimationDuration) {
-            BKDeviceOrientation.shareInstance().screenExChangeforOrientation(.landscapeRight)
+//            BKDeviceOrientation.shareInstance().screenExChangeforOrientation(.landscapeRight)
+            SDDeviceOrientation.sharedInstance.screenExChangeforOrientation(.landscapeRight)
         }
     }
     

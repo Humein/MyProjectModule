@@ -186,6 +186,8 @@
 		79BA3B71244D56E5008805F6 /* BKEnterFullscreenTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BA3B6D244D56E5008805F6 /* BKEnterFullscreenTransition.m */; };
 		79BA3B72244D56E5008805F6 /* BKFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BA3B6F244D56E5008805F6 /* BKFullScreenViewController.m */; };
 		79BA3B73244D56E5008805F6 /* BKExitFullscreenTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BA3B70244D56E5008805F6 /* BKExitFullscreenTransition.m */; };
+		79BA3B75244D79E6008805F6 /* EXUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BA3B74244D79E6008805F6 /* EXUIViewController.swift */; };
+		79BA3B77244D8609008805F6 /* SDDeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BA3B76244D8609008805F6 /* SDDeviceOrientation.swift */; };
 		79C2B663221A646200C40F3A /* RunTimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C2B662221A646200C40F3A /* RunTimeTestViewController.m */; };
 		79D353B0241324510064FB03 /* UITableView+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D353AF241324510064FB03 /* UITableView+PlaceHolder.m */; };
 		79DC642223BA1A0A0073E22F /* UIResponder+UIResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC640C23BA1A090073E22F /* UIResponder+UIResponderChain.m */; };
@@ -598,6 +600,8 @@
 		79BA3B6E244D56E5008805F6 /* BKFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFullScreenViewController.h; sourceTree = "<group>"; };
 		79BA3B6F244D56E5008805F6 /* BKFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFullScreenViewController.m; sourceTree = "<group>"; };
 		79BA3B70244D56E5008805F6 /* BKExitFullscreenTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKExitFullscreenTransition.m; sourceTree = "<group>"; };
+		79BA3B74244D79E6008805F6 /* EXUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXUIViewController.swift; sourceTree = "<group>"; };
+		79BA3B76244D8609008805F6 /* SDDeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDDeviceOrientation.swift; sourceTree = "<group>"; };
 		79BFDCE22142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE42142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79C2B661221A646200C40F3A /* RunTimeTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunTimeTestViewController.h; sourceTree = "<group>"; };
@@ -1846,8 +1850,10 @@
 			isa = PBXGroup;
 			children = (
 				79BA3B64244D5619008805F6 /* UIViewController+Category.h */,
-				79BA3B65244D5619008805F6 /* BKDeviceOrientation.h */,
 				79BA3B66244D5619008805F6 /* UIViewController+Category.m */,
+				79BA3B74244D79E6008805F6 /* EXUIViewController.swift */,
+				79BA3B76244D8609008805F6 /* SDDeviceOrientation.swift */,
+				79BA3B65244D5619008805F6 /* BKDeviceOrientation.h */,
 				79BA3B67244D5619008805F6 /* BKDeviceOrientation.m */,
 			);
 			path = "方式1";
@@ -2384,6 +2390,7 @@
 				797EC360236C10F900E21E44 /* SDOPickerView.swift in Sources */,
 				7908831823A0D04500FA3BE5 /* PlayerViewController.m in Sources */,
 				7936BB612445A7400043AF5A /* DataBaseManager.m in Sources */,
+				79BA3B75244D79E6008805F6 /* EXUIViewController.swift in Sources */,
 				79B4850D24470B7D0025FC0B /* CustomPopCover.swift in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
 				7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */,
@@ -2460,6 +2467,7 @@
 				79BA3B69244D5619008805F6 /* UIViewController+Category.m in Sources */,
 				79E9668A237EBDF800B49697 /* AView.swift in Sources */,
 				79A1A51A2269AD0800CEA92A /* BookmarkContainerView.m in Sources */,
+				79BA3B77244D8609008805F6 /* SDDeviceOrientation.swift in Sources */,
 				79387EAE244042E100CC7A49 /* SDTimerObserver.swift in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
 				7908832023A0D04500FA3BE5 /* AbstractPlayerHelperManager.m in Sources */,

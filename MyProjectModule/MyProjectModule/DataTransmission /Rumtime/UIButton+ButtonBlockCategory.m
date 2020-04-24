@@ -21,7 +21,6 @@ void studyEngilsh(id self, SEL _cmd) {
 }
 /**
  resolveinstancemethod 用法
- 
  // Class;给哪个类添加方法
  // SEL:添加方法
  // IMP:方法实现,函数名

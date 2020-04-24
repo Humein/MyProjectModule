@@ -116,11 +116,17 @@
         // 及时刷新当前控制器
         [UIViewController attemptRotationToDeviceOrientation];
         SEL selector = NSSelectorFromString(@"setOrientation:");
-        NSInvocation *invocation =[NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
-        [invocation setSelector:selector];
-        [invocation setTarget:[UIDevice currentDevice]];
-        [invocation setArgument:&val atIndex:2];
-        [invocation invoke];
+        NSMethodSignature *methodSignature = [UIDevice instanceMethodSignatureForSelector:selector];
+        // 方法签名找不到，异常情况自己处理
+        if(methodSignature == nil) {
+            NSLog(@"找不到这个方法");
+        }else{
+            NSInvocation *invocation =[NSInvocation invocationWithMethodSignature:methodSignature];
+            [invocation setSelector:selector];
+            [invocation setTarget:[UIDevice currentDevice]];
+            [invocation setArgument:&val atIndex:2];
+            [invocation invoke];
+        }
     }
 
     /**   KVC 强制横屏成功

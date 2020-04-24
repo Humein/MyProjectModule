@@ -29,8 +29,8 @@
 
 ///  动态关联属性
 /** 1: 给 Category 添加 weak 属性
-   - __weak 本身就会把指针指向nil，那直接利用就是了。使用OBJC_ASSOCIATION_COPY关联策略将block copy到堆上，利用block把持有的weak对象返回，如果对象不存在了，返回的便是空值
-   - 大题思路就是 引入中间对象
+   1 - __weak 本身就会把指针指向nil，那直接利用就是了。使用OBJC_ASSOCIATION_COPY关联策略将block copy到堆上，利用block把持有的weak对象返回，如果对象不存在了，返回的便是空值
+   2 - 大题思路就是 引入中间对象block
 */
 @property (nonatomic, weak) id objc_weak_id;
 

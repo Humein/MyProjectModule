@@ -94,7 +94,10 @@
 /**
  动态关联属性
  */
-
+// 1 __weak 实现 weak 修饰
+/**
+ 添加了一个中间角色 block，再辅以 weak 关键字就实现了具备 weak 属性的 associated object
+ */
 - (void)setObjc_weak_id:(id)objc_weak_id {
     id __weak weakObject = objc_weak_id;
     id (^block)(void) = ^{ return weakObject; };
