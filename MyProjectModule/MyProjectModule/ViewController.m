@@ -77,7 +77,7 @@
 
     
     self.itemList = [NSMutableArray array];
-    NSArray *list = [NSArray arrayWithObjects:@"SDPresentAViewController",@"ThreadSafeContainer",@"TestBlockModelViewController",@"SmoothBookmarkDemoViewController",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
+    NSArray *list = [NSArray arrayWithObjects:@"TransitionsAnimationDemos",@"ThreadSafeContainer",@"TestBlockModelViewController",@"SmoothBookmarkDemoViewController",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
 
     [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { 
         CellModel *model =  [CellModel new];
@@ -187,8 +187,8 @@
         [self.navigationController pushViewController:userSetSwift animated:YES];
         return;
     }
-    if ([item.title isEqualToString:@"SDPresentAViewController"]) {
-        SDPresentAViewController *userSetSwift = [[SDPresentAViewController alloc] init];
+    if ([item.title isEqualToString:@"TransitionsAnimationDemos"]) {
+        TransitionsAnimationDemos *userSetSwift = [[TransitionsAnimationDemos alloc] init];
         userSetSwift.hidesBottomBarWhenPushed= YES;
         [self.navigationController pushViewController:userSetSwift animated:YES];
         return;

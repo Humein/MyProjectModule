@@ -113,10 +113,15 @@
 		7908832923A0D04500FA3BE5 /* DecoratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 790882EE23A0D04500FA3BE5 /* DecoratorViewController.m */; };
 		7908832C23A1097100FA3BE5 /* AdpterObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908832B23A1097100FA3BE5 /* AdpterObject.swift */; };
 		79104F8623C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 79104F8523C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m */; };
-		7913EF5424584C75000C77A3 /* SDPresentAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF5324584C75000C77A3 /* SDPresentAViewController.swift */; };
-		7913EF5624584C81000C77A3 /* SDPresentBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF5524584C81000C77A3 /* SDPresentBViewController.swift */; };
-		7913EF5824584CB4000C77A3 /* SDBATransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF5724584CB4000C77A3 /* SDBATransitionAnimator.swift */; };
-		7913EF5A24585038000C77A3 /* SDABTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF5924585038000C77A3 /* SDABTransitionAnimator.swift */; };
+		7913EF62245915DA000C77A3 /* SDABTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF5C245915DA000C77A3 /* SDABTransitionAnimator.swift */; };
+		7913EF63245915DA000C77A3 /* SDPresentAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF5D245915DA000C77A3 /* SDPresentAViewController.swift */; };
+		7913EF64245915DA000C77A3 /* SDBATransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF5E245915DA000C77A3 /* SDBATransitionAnimator.swift */; };
+		7913EF65245915DA000C77A3 /* SDPresentBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF5F245915DA000C77A3 /* SDPresentBViewController.swift */; };
+		7913EF672459172E000C77A3 /* SDPushTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF662459172E000C77A3 /* SDPushTransitionAnimator.swift */; };
+		7913EF6924591796000C77A3 /* TransitionsAnimationDemos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF6824591796000C77A3 /* TransitionsAnimationDemos.swift */; };
+		7913EF6B24591E19000C77A3 /* SDPushBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF6A24591E19000C77A3 /* SDPushBViewController.swift */; };
+		7913EF6D24591EC3000C77A3 /* SDPushAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF6C24591EC3000C77A3 /* SDPushAViewController.swift */; };
+		7913EF6F24592B0F000C77A3 /* SDPopTransitioAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF6E24592B0F000C77A3 /* SDPopTransitioAnimator.swift */; };
 		7924BB70240B6361007BA1B3 /* BindResponderOfChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924BB6F240B6361007BA1B3 /* BindResponderOfChain.swift */; };
 		7924BB72240B98F8007BA1B3 /* UIRespnderChainExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924BB71240B98F8007BA1B3 /* UIRespnderChainExtension.swift */; };
 		792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792591EB2285517100E7F734 /* LearnSwiftDemosViewController.swift */; };
@@ -473,10 +478,15 @@
 		7908832B23A1097100FA3BE5 /* AdpterObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdpterObject.swift; sourceTree = "<group>"; };
 		79104F8423C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureRecognizerWithMenuCopy.h; sourceTree = "<group>"; };
 		79104F8523C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureRecognizerWithMenuCopy.m; sourceTree = "<group>"; };
-		7913EF5324584C75000C77A3 /* SDPresentAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPresentAViewController.swift; sourceTree = "<group>"; };
-		7913EF5524584C81000C77A3 /* SDPresentBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPresentBViewController.swift; sourceTree = "<group>"; };
-		7913EF5724584CB4000C77A3 /* SDBATransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDBATransitionAnimator.swift; sourceTree = "<group>"; };
-		7913EF5924585038000C77A3 /* SDABTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDABTransitionAnimator.swift; sourceTree = "<group>"; };
+		7913EF5C245915DA000C77A3 /* SDABTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDABTransitionAnimator.swift; sourceTree = "<group>"; };
+		7913EF5D245915DA000C77A3 /* SDPresentAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPresentAViewController.swift; sourceTree = "<group>"; };
+		7913EF5E245915DA000C77A3 /* SDBATransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBATransitionAnimator.swift; sourceTree = "<group>"; };
+		7913EF5F245915DA000C77A3 /* SDPresentBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPresentBViewController.swift; sourceTree = "<group>"; };
+		7913EF662459172E000C77A3 /* SDPushTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPushTransitionAnimator.swift; sourceTree = "<group>"; };
+		7913EF6824591796000C77A3 /* TransitionsAnimationDemos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionsAnimationDemos.swift; sourceTree = "<group>"; };
+		7913EF6A24591E19000C77A3 /* SDPushBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPushBViewController.swift; sourceTree = "<group>"; };
+		7913EF6C24591EC3000C77A3 /* SDPushAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPushAViewController.swift; sourceTree = "<group>"; };
+		7913EF6E24592B0F000C77A3 /* SDPopTransitioAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPopTransitioAnimator.swift; sourceTree = "<group>"; };
 		7924BB6F240B6361007BA1B3 /* BindResponderOfChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindResponderOfChain.swift; sourceTree = "<group>"; };
 		7924BB71240B98F8007BA1B3 /* UIRespnderChainExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRespnderChainExtension.swift; sourceTree = "<group>"; };
 		792591EA2285517000E7F734 /* MyProjectModule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyProjectModule-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -1531,15 +1541,44 @@
 			path = Python;
 			sourceTree = "<group>";
 		};
-		7913EF50245807C9000C77A3 /* Tansitions Animation */ = {
+		7913EF50245807C9000C77A3 /* Transitions Animation */ = {
 			isa = PBXGroup;
 			children = (
-				7913EF5324584C75000C77A3 /* SDPresentAViewController.swift */,
-				7913EF5524584C81000C77A3 /* SDPresentBViewController.swift */,
-				7913EF5924585038000C77A3 /* SDABTransitionAnimator.swift */,
-				7913EF5724584CB4000C77A3 /* SDBATransitionAnimator.swift */,
+				7913EF6824591796000C77A3 /* TransitionsAnimationDemos.swift */,
+				7913EF5B245915DA000C77A3 /* Present Transition */,
+				7913EF61245915DA000C77A3 /* Push Transition */,
+				7913EF60245915DA000C77A3 /* Tab Transition */,
 			);
-			path = "Tansitions Animation";
+			path = "Transitions Animation";
+			sourceTree = "<group>";
+		};
+		7913EF5B245915DA000C77A3 /* Present Transition */ = {
+			isa = PBXGroup;
+			children = (
+				7913EF5C245915DA000C77A3 /* SDABTransitionAnimator.swift */,
+				7913EF5E245915DA000C77A3 /* SDBATransitionAnimator.swift */,
+				7913EF5D245915DA000C77A3 /* SDPresentAViewController.swift */,
+				7913EF5F245915DA000C77A3 /* SDPresentBViewController.swift */,
+			);
+			path = "Present Transition";
+			sourceTree = "<group>";
+		};
+		7913EF60245915DA000C77A3 /* Tab Transition */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Tab Transition";
+			sourceTree = "<group>";
+		};
+		7913EF61245915DA000C77A3 /* Push Transition */ = {
+			isa = PBXGroup;
+			children = (
+				7913EF662459172E000C77A3 /* SDPushTransitionAnimator.swift */,
+				7913EF6E24592B0F000C77A3 /* SDPopTransitioAnimator.swift */,
+				7913EF6C24591EC3000C77A3 /* SDPushAViewController.swift */,
+				7913EF6A24591E19000C77A3 /* SDPushBViewController.swift */,
+			);
+			path = "Push Transition";
 			sourceTree = "<group>";
 		};
 		7929B49A219FE72A004D335E /* RunLoop */ = {
@@ -1654,7 +1693,7 @@
 		793C6361240606A4000BE949 /* BezierPath&ShapLayer&Animation */ = {
 			isa = PBXGroup;
 			children = (
-				7913EF50245807C9000C77A3 /* Tansitions Animation */,
+				7913EF50245807C9000C77A3 /* Transitions Animation */,
 				793C6362240606A4000BE949 /* POPAnimation */,
 				793C6367240606A4000BE949 /* DrawWaveLine */,
 			);
@@ -2372,6 +2411,7 @@
 				337828312108772600373A20 /* ThreadViewController.m in Sources */,
 				7993C86B228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m in Sources */,
 				33FAE4F020E2452D00BE7175 /* JHHeaderReusableView.m in Sources */,
+				7913EF62245915DA000C77A3 /* SDABTransitionAnimator.swift in Sources */,
 				79DC642423BA1A0A0073E22F /* HTMiddleControlView.m in Sources */,
 				79BA3B73244D56E5008805F6 /* BKExitFullscreenTransition.m in Sources */,
 				79EEEAAC2190156500848B59 /* PointTreeModel.m in Sources */,
@@ -2379,7 +2419,6 @@
 				7908832923A0D04500FA3BE5 /* DecoratorViewController.m in Sources */,
 				79DC643223BA1C8A0073E22F /* ResponderControlView.m in Sources */,
 				79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */,
-				7913EF5624584C81000C77A3 /* SDPresentBViewController.swift in Sources */,
 				794B100921DF02E300B91405 /* AbstractTableViewController.m in Sources */,
 				79040D8B2236462A0085335E /* FlutterSubViewController.m in Sources */,
 				793C637E240606A4000BE949 /* DrawBaseAnimaltionView.m in Sources */,
@@ -2414,15 +2453,16 @@
 				79BA3B75244D79E6008805F6 /* EXUIViewController.swift in Sources */,
 				79B4850D24470B7D0025FC0B /* CustomPopCover.swift in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
-				7913EF5A24585038000C77A3 /* SDABTransitionAnimator.swift in Sources */,
 				7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */,
 				7936BB4124459E750043AF5A /* SDCycleView.swift in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
 				79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */,
 				33C2DF3721DCC5D400F96F32 /* PointTreeTypeOne.m in Sources */,
+				7913EF6D24591EC3000C77A3 /* SDPushAViewController.swift in Sources */,
 				790882F723A0D04500FA3BE5 /* ClassClusterBaseTableViewCell.m in Sources */,
 				33C2DF3621DCC5D400F96F32 /* CompositePointTreeModel.m in Sources */,
 				79DC645923BA1F6C0073E22F /* ShakeView.swift in Sources */,
+				7913EF65245915DA000C77A3 /* SDPresentBViewController.swift in Sources */,
 				7908832323A0D04500FA3BE5 /* Condiment.m in Sources */,
 				338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */,
 				79A1A51B2269AD0800CEA92A /* SmoothTitleView.m in Sources */,
@@ -2439,6 +2479,7 @@
 				3362E6A22130FC1300A4B26D /* FBKVOViewController.m in Sources */,
 				7908830E23A0D04500FA3BE5 /* NSInvocationForStrategyViewController.m in Sources */,
 				79DC642623BA1A0A0073E22F /* HTTopControlView.m in Sources */,
+				7913EF6924591796000C77A3 /* TransitionsAnimationDemos.swift in Sources */,
 				33FAE4CF20E2427100BE7175 /* CollectionSectionViewController.m in Sources */,
 				7936BB642445A7400043AF5A /* DBAbstractItem+DataBase.m in Sources */,
 				79BA3B72244D56E5008805F6 /* BKFullScreenViewController.m in Sources */,
@@ -2450,6 +2491,7 @@
 				33C2DF3521DCC5D400F96F32 /* PointTreeOnlyOneModel.m in Sources */,
 				33E6CE0521006D2000422FC7 /* CreatTreeView.m in Sources */,
 				790882F223A0D04500FA3BE5 /* MessageThrottle.m in Sources */,
+				7913EF6B24591E19000C77A3 /* SDPushBViewController.swift in Sources */,
 				33759E74212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.m in Sources */,
 				7936BB4024459E750043AF5A /* SDCycleViewCell.swift in Sources */,
 				79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */,
@@ -2481,11 +2523,13 @@
 				79F9A5F5215214B4003704D7 /* NSTimer+WeakTimerBlock.m in Sources */,
 				7908832723A0D04500FA3BE5 /* UIImage+Title.m in Sources */,
 				7936BB652445A7400043AF5A /* DBAbstractItem.m in Sources */,
+				7913EF63245915DA000C77A3 /* SDPresentAViewController.swift in Sources */,
 				79A1A5192269AD0800CEA92A /* CheckConditionCollectionViewCell.m in Sources */,
 				79A1A51C2269AD0800CEA92A /* BookmarkMainTableView.m in Sources */,
 				7936BB772446EA860043AF5A /* BaseNavViewController.m in Sources */,
 				7908831923A0D04500FA3BE5 /* StrategyMethod.swift in Sources */,
 				79A0ECA52368262F004C10B0 /* XXH264EncodeTool.m in Sources */,
+				7913EF64245915DA000C77A3 /* SDBATransitionAnimator.swift in Sources */,
 				79BA3B69244D5619008805F6 /* UIViewController+Category.m in Sources */,
 				79E9668A237EBDF800B49697 /* AView.swift in Sources */,
 				79A1A51A2269AD0800CEA92A /* BookmarkContainerView.m in Sources */,
@@ -2521,6 +2565,7 @@
 				33C9713F2124108D00EAAD5E /* PopTableView.m in Sources */,
 				7908830D23A0D04500FA3BE5 /* DownLoadViewController.m in Sources */,
 				33FAE4E620E2445500BE7175 /* CarouselLayout.m in Sources */,
+				7913EF6F24592B0F000C77A3 /* SDPopTransitioAnimator.swift in Sources */,
 				7908831423A0D04500FA3BE5 /* ZTKZTKBJDownItem.m in Sources */,
 				333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */,
 				33759E6E212F9FD500D801C1 /* UITableViewCell+AnimationType.m in Sources */,
@@ -2533,6 +2578,7 @@
 				7908830A23A0D04500FA3BE5 /* AliPay.m in Sources */,
 				7908831E23A0D04500FA3BE5 /* AbstractPlayHelper.m in Sources */,
 				3340363D2154C69C006FCBA3 /* MemoryCache.m in Sources */,
+				7913EF672459172E000C77A3 /* SDPushTransitionAnimator.swift in Sources */,
 				7936BB602445A7400043AF5A /* DBAbstractItem+JoinSql.m in Sources */,
 				79E9668C237EBE0400B49697 /* BView.swift in Sources */,
 				7908831623A0D04500FA3BE5 /* ZTKDownItem.m in Sources */,
@@ -2545,7 +2591,6 @@
 				79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */,
 				7936BB622445A7400043AF5A /* SqliteDataBase.m in Sources */,
 				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
-				7913EF5824584CB4000C77A3 /* SDBATransitionAnimator.swift in Sources */,
 				79A0ECAE236838E5004C10B0 /* VTBEncDecViewController.m in Sources */,
 				79E3D63321DE57D60038CACB /* ZTKBaseRequest.m in Sources */,
 				339B535020F4AF35003444CB /* UIButton+ButtonBlockCategory.m in Sources */,
@@ -2553,7 +2598,6 @@
 				79B44B24237CF0A900B7D73D /* SmoothBookmarkDemoViewController.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				79387EB12440644900CC7A49 /* YYFPSLabel.m in Sources */,
-				7913EF5424584C75000C77A3 /* SDPresentAViewController.swift in Sources */,
 				79EEEA562182C09200848B59 /* liveChatModel.m in Sources */,
 				7908830B23A0D04500FA3BE5 /* ApplePay.m in Sources */,
 				7908832123A0D04500FA3BE5 /* Command.swift in Sources */,
