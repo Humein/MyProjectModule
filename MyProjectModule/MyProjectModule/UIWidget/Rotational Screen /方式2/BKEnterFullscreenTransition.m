@@ -32,6 +32,29 @@
     return 0.1;
 }
 
+/**
+{
+// 获取容器视图，转场发生的地方
+UIView *containerView = [transitionContext containerView];
+
+// 获取参与转场的视图控制器
+UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+
+// 获取参与参与转场的视图View
+UIView *fromView;
+UIView *toView;
+ if ([transitionContext respondsToSelector:@selector(viewForKey:)]) {
+      //iOS8新增的方法
+      fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
+      toView = [transitionContext viewForKey:UITransitionContextToViewKey];
+  }else{
+      //iOS8之前的方法
+      fromView = fromVC.view;
+      toView = toVC.view;
+  }
+}
+*/
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
 {
     UIViewController *presentedViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];

@@ -212,4 +212,17 @@
     
 }
 
+- (void)testMethod {
+    if (self.popBlock) {
+        self.popBlock();
+    }
+//    NSLog(@"%@", self); // 会 crash
+ 
+}
+
+- (void)dealloc {
+    NSLog(@"%@", self);
+    
+}
+
 @end

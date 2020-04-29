@@ -79,6 +79,6 @@ typedef void (^IDBlock)(id configModel);
 
 
 
-
+- (void)testMethod;
 
 @end

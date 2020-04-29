@@ -31,7 +31,7 @@
 #import "CellModel.h"
 #import "AbstractTableViewCell.h"
 #import "HitEventStrikeView.h"
-
+#import "BlockObject.h"
 //#import <Flutter/Flutter.h>
 #import "FlutterSubViewController.h"
 #import "YYFPSLabel.h"
@@ -77,7 +77,7 @@
 
     
     self.itemList = [NSMutableArray array];
-    NSArray *list = [NSArray arrayWithObjects:@"ThreadSafeContainer",@"TestBlockModelViewController",@"SmoothBookmarkDemoViewController",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
+    NSArray *list = [NSArray arrayWithObjects:@"SDPresentAViewController",@"ThreadSafeContainer",@"TestBlockModelViewController",@"SmoothBookmarkDemoViewController",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
 
     [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { 
         CellModel *model =  [CellModel new];
@@ -123,13 +123,18 @@
     });
     i = 100;
 
-//
-
+//  应该是crash
+    __block BlockObject *testObj = [BlockObject new];
+    testObj.popBlock = ^{
+        testObj = nil; // 会触发delloc
+    };
+    [testObj testMethod];
+    NSLog(@"%@", testObj.nibName); // 添加这个后有时会崩溃有时不会,
+    
 }
 
 
 #pragma mark - 测试代码
-
 
 
 #pragma mark --- PrivateMetho
@@ -182,6 +187,13 @@
         [self.navigationController pushViewController:userSetSwift animated:YES];
         return;
     }
+    if ([item.title isEqualToString:@"SDPresentAViewController"]) {
+        SDPresentAViewController *userSetSwift = [[SDPresentAViewController alloc] init];
+        userSetSwift.hidesBottomBarWhenPushed= YES;
+        [self.navigationController pushViewController:userSetSwift animated:YES];
+        return;
+    }
+    
     if (VC == nil) {
         SwiftDemosViewController *userSetSwift = [[SwiftDemosViewController alloc] init];
         userSetSwift.hidesBottomBarWhenPushed= YES;

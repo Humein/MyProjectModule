@@ -38,9 +38,14 @@
     self.rightBarItem(@"搜索", CGRectMake(0, 0, 30, 30), YES).rightBarItem(@"回收站",CGRectMake(0, 0, 30, 30),YES).rightBarItem(@"日历", CGRectMake(0, 0, 30, 30), NO);
     
     //    导航事件
+    int a = 0;
     self.rightBarItemClickBlock = ^(UIButton *button, NSInteger index) {
-        
+//        int a = 1;
+        NSLog(@"%@", @(a));
     };
+    
+    int b = 1;
+//    int b = 0;
     
 }
 

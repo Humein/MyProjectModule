@@ -208,8 +208,7 @@ func reverseLinkRec(_ head: listNode?) -> listNode?{
         return head
     }
     
-    //反转第一个节点之后的链表, 我们先把递归的结果保存起来，先不返回，因为我们还不清楚这样递归是对还是错。
-    // 不放在 逻辑处理后面 是因为逻辑处理 会改变head?.next
+    // 不放在入站时候进行逻辑处理  因为会改变head?.next
     print("=========")
     let newHead = reverseLinkRec(head?.next) // 栈顶
     print("---------")
@@ -267,6 +266,35 @@ func reverseString(_ s: inout [Character]){
     }
 }
 
+
+//226. 翻转二叉树
+/*
+ 迭代法的思路是BFS或者DFS，这两种方法都可以实现，实际上也是二叉树的遍历。
+ BFS用Queue实现， 宽度优先搜索（breadth first search
+ DFS的话将代码中的Queue换成Stack。
+
+ 递归最简单
+ */
+
+
+// 递归
+func invertTree(_ root :TreeNode?) -> TreeNode? {
+    // 边界
+    if root == nil {
+        return nil
+    }
+    
+    //递归转移
+    let right = invertTree(root?.right) // stack push
+    let left = invertTree(root?.left) // stack push
+    root?.left = right // pop
+    root?.right = left // pop
+    return root
+}
+
+
+
+
 // 字符串反转
 fileprivate func reverse<T>(_ chars: inout [T], _ start: Int, _ end: Int) {
   var start = start, end = end
@@ -280,7 +308,7 @@ fileprivate func swap<T>(_ chars: inout [T], _ p: Int, _ q: Int) {
   (chars[p], chars[q]) = (chars[q], chars[p])
 }
 
-// 单词反转  s 是 "the sky is blue", 那么反转就是 "blue is sky the"。
+/// 单词反转  s 是 "the sky is blue", 那么反转就是 "blue is sky the"。
 func reverseWords(s: String?) -> String? {
   guard let s = s else {
     return nil
@@ -794,32 +822,6 @@ var results = "flower"
 results = String(results.prefix(results.count - 1))
 
 //MARK:- list7:
-//226. 翻转二叉树
-/*
- 迭代法的思路是BFS或者DFS，这两种方法都可以实现，实际上也是二叉树的遍历。
- BFS用Queue实现， 宽度优先搜索（breadth first search
- DFS的话将代码中的Queue换成Stack。
-
- 递归最简单
- */
-
-
-// 递归
-func invertTree(_ root :TreeNode?) -> TreeNode? {
-    // 边界
-    if root == nil {
-        return nil
-    }
-    
-    //递归转移
-    let right = invertTree(root?.right) // stack push
-    let left = invertTree(root?.left) // stack push
-    root?.left = right // pop
-    root?.right = left // pop
-    return root
-}
-
-
 
 //二维数组中的查找
 /*

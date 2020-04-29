@@ -57,12 +57,24 @@
 
 #pragma mark - 多线程线程学习
 /** https://juejin.im/post/5e7db4046fb9a03c714b3776
+ 
+ - GCD中dispatch_queue大致可以分为三类
+ 全局的并行的queue - dispatch_get_global_queue
+ 主线程的串行的queue - dispatch_get_main_queue
+ 自定义的queue - dispatch_queue_create
+ 
  - GCD是同步还是异步情况会开启多线程?
    - 同步是不会开启新的线程的，异步才会开启新的线程。
      通过代码验证 同步 在 串行队列 和 并发队列 情况下会不会创建新的线程
+ - dispatch_get_global_queue
+ dispatch_get_global_queue是全局队列是并发队列，并由整个进程共享。进程中存在三个全局队列：高、中（默认）、低三个优先级队列。可以调用dispatch_get_global_queue函数传入优先级来访问队列。
+ dispatch_queue_create使用户队列，由用户通过dispatch_queue_create来自行创建的串行队列，可以用于完成同步机制
+
 */
 -(void)async0{
+    // 创建串行队列
     dispatch_queue_t serialQueue = dispatch_queue_create("serialQueue", DISPATCH_QUEUE_SERIAL);
+    // 创建并发队列
     dispatch_queue_t conQueue = dispatch_queue_create("conQueue", DISPATCH_QUEUE_CONCURRENT);
 
     NSLog(@"(1).=====%@",[NSThread currentThread]);
@@ -227,6 +239,7 @@
 // 死锁测试
 -(void)lockTest{
     dispatch_queue_t myCustomQueue;
+    // NULL 默认串行队列
     myCustomQueue = dispatch_queue_create("com.example.MyCustomQueue", NULL);
 
     // 异步添加
@@ -325,6 +338,7 @@
 #pragma mark - 线程同步 --阻塞任务（dispatch_barrier）：
 -(void)barrier {
     /* 创建并发队列 */
+//    注意：使用 dispatch_barrier_async ，该函数只能搭配自定义并行队列 dispatch_queue_t 使用。不能使用： dispatch_get_global_queue ，否则 dispatch_barrier_async 的作用会和 dispatch_async 的作用一模一样。 ）
     dispatch_queue_t concurrentQueue = dispatch_queue_create("test.concurrent.queue", DISPATCH_QUEUE_CONCURRENT);
     /* 添加两个并发操作A和B，即A和B会并发执行 */
     dispatch_async(concurrentQueue, ^(){

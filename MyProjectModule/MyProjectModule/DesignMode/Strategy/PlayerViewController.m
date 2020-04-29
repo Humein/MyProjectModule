@@ -32,6 +32,7 @@
     [[BKDeviceOrientation shareInstance] allowRotation:self];
 
     __weak typeof (self) weakSelf = self;
+    
 //    [self initPlayerWithType:EPlayerType_ZSPlayer];
 
     UIButton *P1 = [UIButton createButtonWithFrame:CGRectMake(20, 150, 44, 44) title:@"ZS" titleColor:[UIColor blueColor] bgImageName:@"" actionBlock:^(UIButton *button) {
