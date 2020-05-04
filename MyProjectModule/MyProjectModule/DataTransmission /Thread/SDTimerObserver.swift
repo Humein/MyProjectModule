@@ -23,7 +23,7 @@ class SDTimerObserver: NSObject {
     }()
 
     private var operationsLock: DispatchSemaphore? = nil
-    private var timerMap: NSHashTable<AnyObject>?
+    private var timerMap: NSHashTable<AnyObject>? //它可以持有元素的弱引用，而且在对象被销毁后能正确地将其移除
     private var timer: Timer? = nil
 
     private func loadDefaultConfig(){

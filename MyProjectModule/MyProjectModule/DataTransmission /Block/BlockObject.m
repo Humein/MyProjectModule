@@ -216,8 +216,7 @@
     if (self.popBlock) {
         self.popBlock();
     }
-//    NSLog(@"%@", self); // 会 crash
- 
+    NSLog(@"%@", self); // 会 crash
 }
 
 - (void)dealloc {

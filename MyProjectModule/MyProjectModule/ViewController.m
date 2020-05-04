@@ -125,12 +125,23 @@
 
 //  应该是crash
     __block BlockObject *testObj = [BlockObject new];
+    __weak BlockObject *weakTestObj = testObj; //弱引用不会导致Block捕获对象的引用计数增加
+
     testObj.popBlock = ^{
-        testObj = nil; // 会触发delloc
+//        NSLog(@"%@", weakTestObj.className); // 加了这个就不会了
+//        testObj = nil; // 会触发delloc
+            
+        { // 这样也不会，放在子线程置nil; 这样delloc会在popBlock作用域之后指向；这时 self 都是 纯在的
+        dispatch_queue_t quene = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_async(quene, ^{
+            testObj = nil; // 会触发delloc
+        });
+        }
+
+//        NSLog(@"%@", testObj.className); // 会循环引用
     };
-    [testObj testMethod];
-    NSLog(@"%@", testObj.nibName); // 添加这个后有时会崩溃有时不会,
-    
+//    testObj.popBlock(); // block 方式 解决循环
+    [testObj testMethod];    
 }
 
 

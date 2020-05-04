@@ -122,6 +122,8 @@
 		7913EF6B24591E19000C77A3 /* SDPushBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF6A24591E19000C77A3 /* SDPushBViewController.swift */; };
 		7913EF6D24591EC3000C77A3 /* SDPushAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF6C24591EC3000C77A3 /* SDPushAViewController.swift */; };
 		7913EF6F24592B0F000C77A3 /* SDPopTransitioAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF6E24592B0F000C77A3 /* SDPopTransitioAnimator.swift */; };
+		7913EF8B245AB5E6000C77A3 /* RenderImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF8A245AB5E6000C77A3 /* RenderImageViewController.m */; };
+		7913EF8F245AB664000C77A3 /* OpenGLES.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7913EF8E245AB664000C77A3 /* OpenGLES.xcassets */; };
 		7924BB70240B6361007BA1B3 /* BindResponderOfChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924BB6F240B6361007BA1B3 /* BindResponderOfChain.swift */; };
 		7924BB72240B98F8007BA1B3 /* UIRespnderChainExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924BB71240B98F8007BA1B3 /* UIRespnderChainExtension.swift */; };
 		792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792591EB2285517100E7F734 /* LearnSwiftDemosViewController.swift */; };
@@ -487,6 +489,9 @@
 		7913EF6A24591E19000C77A3 /* SDPushBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPushBViewController.swift; sourceTree = "<group>"; };
 		7913EF6C24591EC3000C77A3 /* SDPushAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPushAViewController.swift; sourceTree = "<group>"; };
 		7913EF6E24592B0F000C77A3 /* SDPopTransitioAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPopTransitioAnimator.swift; sourceTree = "<group>"; };
+		7913EF89245AB5E6000C77A3 /* RenderImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderImageViewController.h; sourceTree = "<group>"; };
+		7913EF8A245AB5E6000C77A3 /* RenderImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RenderImageViewController.m; sourceTree = "<group>"; };
+		7913EF8E245AB664000C77A3 /* OpenGLES.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OpenGLES.xcassets; sourceTree = "<group>"; };
 		7924BB6F240B6361007BA1B3 /* BindResponderOfChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindResponderOfChain.swift; sourceTree = "<group>"; };
 		7924BB71240B98F8007BA1B3 /* UIRespnderChainExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRespnderChainExtension.swift; sourceTree = "<group>"; };
 		792591EA2285517000E7F734 /* MyProjectModule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyProjectModule-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -1581,6 +1586,16 @@
 			path = "Push Transition";
 			sourceTree = "<group>";
 		};
+		7913EF88245AB5B3000C77A3 /* OpenGLES */ = {
+			isa = PBXGroup;
+			children = (
+				7913EF8E245AB664000C77A3 /* OpenGLES.xcassets */,
+				7913EF89245AB5E6000C77A3 /* RenderImageViewController.h */,
+				7913EF8A245AB5E6000C77A3 /* RenderImageViewController.m */,
+			);
+			path = OpenGLES;
+			sourceTree = "<group>";
+		};
 		7929B49A219FE72A004D335E /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
@@ -1767,6 +1782,7 @@
 		797EC357236BCCEF00E21E44 /* UIWidget */ = {
 			isa = PBXGroup;
 			children = (
+				7913EF88245AB5B3000C77A3 /* OpenGLES */,
 				7936BB3B24459D720043AF5A /* SlideShow */,
 				7936BAC02445942E0043AF5A /* QMUI */,
 				793C6361240606A4000BE949 /* BezierPath&ShapLayer&Animation */,
@@ -2318,6 +2334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				333D106220CE74AB004D9241 /* LaunchScreen.storyboard in Resources */,
+				7913EF8F245AB664000C77A3 /* OpenGLES.xcassets in Resources */,
 				333D105F20CE74AB004D9241 /* Assets.xcassets in Resources */,
 				79EEEA4C2182BD4700848B59 /* UITableView滚动到底部时崩溃的解决方法 - 简书.html in Resources */,
 				79040DA72238D00D0085335E /* EventList.plist in Resources */,
@@ -2474,6 +2491,7 @@
 				79A1A5182269AD0800CEA92A /* SmoothBookmarkView.m in Sources */,
 				7993C86A228D68E6001A6BFA /* URLSessionDownManager.m in Sources */,
 				793C637D240606A4000BE949 /* StartWaterView.m in Sources */,
+				7913EF8B245AB5E6000C77A3 /* RenderImageViewController.m in Sources */,
 				7936BB4224459E750043AF5A /* SDPageControl.swift in Sources */,
 				793C6377240606A4000BE949 /* POPNumberAnimation.m in Sources */,
 				3362E6A22130FC1300A4B26D /* FBKVOViewController.m in Sources */,

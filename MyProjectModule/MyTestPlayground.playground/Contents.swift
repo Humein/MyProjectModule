@@ -267,33 +267,6 @@ func reverseString(_ s: inout [Character]){
 }
 
 
-//226. 翻转二叉树
-/*
- 迭代法的思路是BFS或者DFS，这两种方法都可以实现，实际上也是二叉树的遍历。
- BFS用Queue实现， 宽度优先搜索（breadth first search
- DFS的话将代码中的Queue换成Stack。
-
- 递归最简单
- */
-
-
-// 递归
-func invertTree(_ root :TreeNode?) -> TreeNode? {
-    // 边界
-    if root == nil {
-        return nil
-    }
-    
-    //递归转移
-    let right = invertTree(root?.right) // stack push
-    let left = invertTree(root?.left) // stack push
-    root?.left = right // pop
-    root?.right = left // pop
-    return root
-}
-
-
-
 
 // 字符串反转
 fileprivate func reverse<T>(_ chars: inout [T], _ start: Int, _ end: Int) {
@@ -344,7 +317,7 @@ func isSubsequence(_ s :String, _ t :String) -> Bool{
         tp += 1
     }
     
-    return sp == s.count
+    return sp == sArray.count
 }
 print(isSubsequence("acd","abcd"))
 
@@ -2045,13 +2018,10 @@ private func isSymmetrys(_ node1: TreeNode?, _ node2: TreeNode?) -> Bool {
  */
 func maxDepth(_ root: TreeNode?) -> Int {
     if root == nil {
-        print("nil")
         return 0
     }else{
         let leftTreeDepth = maxDepth(root?.left)
-        //print( "\(leftTreeDepth)")
         let rightTreeDepth = maxDepth(root?.right)
-        //print( "\(leftTreeDepth)" + ":" + "\(rightTreeDepth)")
         return leftTreeDepth > rightTreeDepth ? leftTreeDepth + 1 : rightTreeDepth + 1
     }
 }
@@ -2102,14 +2072,14 @@ maxDepth(tnode1)
 // 为简单起见，标点符号和普通字母一样处理。例如输入字符串"I am a student. "，
 // 则输出"student. a am I"。
 
-// 也可以用 栈 的特性
+// 也可以用 栈 的特性  最后有个空格
 func reverseStr(_ s: String) -> String{
     // 用数组 append removeLast 代替 push pop
     var stack = [String]()
     let arraySubstrings: [Substring] = s.split(separator: " ")
     // 高阶函数
     arraySubstrings.reduce("") {
-        stack.append(String($1) + "  ")
+        stack.append(String($1) + " ")
         return ""
     }
     var reverStr = String()
@@ -2119,6 +2089,14 @@ func reverseStr(_ s: String) -> String{
     }
     return reverStr
 }
+// 内置函数
+func reverseWords(_ s: String) -> String {
+    return s.split(separator: " ")
+//    .filter{ !$0.isEmpty }
+    .reversed()
+    .joined(separator: " ")
+}
+
 
 // offer65：不用加减乘除做加法
 // 题目：写一个函数，求两个整数之和，要求在函数体内不得使用＋、－、×、÷
@@ -2176,3 +2154,17 @@ func recursionTrailTraversal(_ root: TreeNode?) {
 
 
 
+
+/**
+ 一个数组，有个滑动窗口，求每次窗口中的中位数。
+
+ 问数组里每个数都出现3次，只有一个数出现1次
+
+ 字符串反转
+
+ 两个view的共同父view 求公共祖先问题
+
+ LRU实现
+
+ 
+ */

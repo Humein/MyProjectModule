@@ -39,11 +39,13 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 
     [[SDTimerObserver sharedInstance] removeTimerObserver:self];
+//
+//    [self testSemaphone_process_delay];
+//
+//    [self async0];
+//    [self async1];
     
-    [self testSemaphone_process_delay];
-    
-    [self async0];
-    [self async1];
+    [self dispatch_apply2];
     
 }
 
@@ -236,7 +238,7 @@
 }
 
 
-// 死锁测试
+#pragma mark - 死锁测试
 -(void)lockTest{
     dispatch_queue_t myCustomQueue;
     // NULL 默认串行队列
@@ -277,7 +279,7 @@
 }
 
 
-#pragma mark - GCDGroup
+#pragma mark - GCD  Group
 //1： dispatch_group_create dispatch_group_enter dispatch_group_leave
 
 -(void)GCDGroup{
@@ -446,5 +448,53 @@
 
 #pragma mark - NSOperation 和 NSOperationQueue
 
+
+#pragma mark - dispatch_apply
+
+-(void)dispatch_apply1{
+    dispatch_queue_t queue = dispatch_queue_create("myqueue", DISPATCH_QUEUE_CONCURRENT);
+    //并发的运行一个block任务5次
+    dispatch_apply(5, queue, ^(size_t i) {
+        NSLog(@"%@我开始执行 %zu times",[NSThread currentThread],i+1);
+        NSLog(@"do a job %zu times",i+1); // 还是有序的。。。
+    });
+    NSLog(@"go on");
+}
+
+-(void)dispatch_apply2{
+    dispatch_queue_t q = dispatch_queue_create("queue", DISPATCH_QUEUE_CONCURRENT);
+    //危险，可能导致线程爆炸以及死锁
+    for (int i = 0; i < 99; i++){
+       dispatch_async(q, ^{
+           NSLog(@"do a job %d times",i+1);
+       });
+    }
+    dispatch_barrier_sync(q, ^{});
+    NSLog(@"dispatch_async go on");
+
+
+    // 较优选择， GCD 会管理并发
+    dispatch_apply(99, q, ^(size_t i){
+        NSLog(@"dispatch_apply do a job %lu times",i+1);
+    });
+    NSLog(@"dispatch_apply go on");
+    
+    // or
+    NSArray *dictArray = nil;//存放从服务器返回的字典数组
+    /*!
+    2  *  @brief  推荐在dispatch_async函数中异步执行dispatch_apply函数
+    3     效果     dispatch_apply函数与dispatch_sync函数形同,会等待处理执行结束
+    4  */
+    dispatch_queue_t queue = dispatch_queue_create("queue", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(queue, ^{
+        dispatch_apply(dictArray.count, queue,  ^(size_t index){
+            //字典转模型
+        });
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"主线程更新");
+        });
+    });
+
+}
 
 @end
