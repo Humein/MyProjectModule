@@ -637,10 +637,10 @@ public class TreeNode: Equatable {
     }
  }
 
-/// 235. 二叉搜索树的最近公共祖先 / 怎么查找两个view的公共父视图
+///  怎么查找两个view的公共父视图 --- 其实就是两个链表相交
 /**
- 用两个「指针」，分别指向两个路径的根节点，然后从根节点开始，找第一个不同的节点，第一个不同节点的上一个公共节点
- */
+ 用两个「指针」，分别指向两个路径的根节点，
+ 然后从根节点(最后的)开始，找最近的相同的节点，就可以 */
 
 func findSuperViews(_ view: UIView?) -> [UIView] {
     var view = view
@@ -670,8 +670,8 @@ func findRecentRoot(_ viewA: UIView?,_ viewB: UIView?) -> UIView? {
         if aArray[p1] == bArray[p2] {
             rootView = aArray[p1]
         }
-        p1 += 1
-        p2 += 1
+        p1 -= 1
+        p2 -= 1
     }
     return rootView
 }

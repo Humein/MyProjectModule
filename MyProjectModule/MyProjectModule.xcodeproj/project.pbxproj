@@ -123,7 +123,8 @@
 		7913EF6D24591EC3000C77A3 /* SDPushAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF6C24591EC3000C77A3 /* SDPushAViewController.swift */; };
 		7913EF6F24592B0F000C77A3 /* SDPopTransitioAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF6E24592B0F000C77A3 /* SDPopTransitioAnimator.swift */; };
 		7913EF8B245AB5E6000C77A3 /* RenderImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF8A245AB5E6000C77A3 /* RenderImageViewController.m */; };
-		7913EF8F245AB664000C77A3 /* OpenGLES.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7913EF8E245AB664000C77A3 /* OpenGLES.xcassets */; };
+		7913EF922463FDE7000C77A3 /* RotationImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF912463FDE7000C77A3 /* RotationImageViewController.m */; };
+		7913EF9424640090000C77A3 /* miao.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7913EF9324640090000C77A3 /* miao.jpeg */; };
 		7924BB70240B6361007BA1B3 /* BindResponderOfChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924BB6F240B6361007BA1B3 /* BindResponderOfChain.swift */; };
 		7924BB72240B98F8007BA1B3 /* UIRespnderChainExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924BB71240B98F8007BA1B3 /* UIRespnderChainExtension.swift */; };
 		792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792591EB2285517100E7F734 /* LearnSwiftDemosViewController.swift */; };
@@ -491,7 +492,9 @@
 		7913EF6E24592B0F000C77A3 /* SDPopTransitioAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPopTransitioAnimator.swift; sourceTree = "<group>"; };
 		7913EF89245AB5E6000C77A3 /* RenderImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderImageViewController.h; sourceTree = "<group>"; };
 		7913EF8A245AB5E6000C77A3 /* RenderImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RenderImageViewController.m; sourceTree = "<group>"; };
-		7913EF8E245AB664000C77A3 /* OpenGLES.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OpenGLES.xcassets; sourceTree = "<group>"; };
+		7913EF902463FDE7000C77A3 /* RotationImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotationImageViewController.h; sourceTree = "<group>"; };
+		7913EF912463FDE7000C77A3 /* RotationImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RotationImageViewController.m; sourceTree = "<group>"; };
+		7913EF9324640090000C77A3 /* miao.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = miao.jpeg; sourceTree = "<group>"; };
 		7924BB6F240B6361007BA1B3 /* BindResponderOfChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindResponderOfChain.swift; sourceTree = "<group>"; };
 		7924BB71240B98F8007BA1B3 /* UIRespnderChainExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRespnderChainExtension.swift; sourceTree = "<group>"; };
 		792591EA2285517000E7F734 /* MyProjectModule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyProjectModule-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -1589,9 +1592,11 @@
 		7913EF88245AB5B3000C77A3 /* OpenGLES */ = {
 			isa = PBXGroup;
 			children = (
-				7913EF8E245AB664000C77A3 /* OpenGLES.xcassets */,
+				7913EF9324640090000C77A3 /* miao.jpeg */,
 				7913EF89245AB5E6000C77A3 /* RenderImageViewController.h */,
 				7913EF8A245AB5E6000C77A3 /* RenderImageViewController.m */,
+				7913EF902463FDE7000C77A3 /* RotationImageViewController.h */,
+				7913EF912463FDE7000C77A3 /* RotationImageViewController.m */,
 			);
 			path = OpenGLES;
 			sourceTree = "<group>";
@@ -2334,12 +2339,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				333D106220CE74AB004D9241 /* LaunchScreen.storyboard in Resources */,
-				7913EF8F245AB664000C77A3 /* OpenGLES.xcassets in Resources */,
 				333D105F20CE74AB004D9241 /* Assets.xcassets in Resources */,
 				79EEEA4C2182BD4700848B59 /* UITableView滚动到底部时崩溃的解决方法 - 简书.html in Resources */,
 				79040DA72238D00D0085335E /* EventList.plist in Resources */,
 				33FAE4F120E2452D00BE7175 /* JHHeaderReusableView.xib in Resources */,
 				792A730E21EF2FD50098B94C /* class_cluster_data.json in Resources */,
+				7913EF9424640090000C77A3 /* miao.jpeg in Resources */,
 				792A730B21EF2FBF0098B94C /* Tree.plist in Resources */,
 				79EEEA4E2182BD4700848B59 /* iOS开发、教你一步步实现直播间评论效果功能 - 简书.html in Resources */,
 				792A730C21EF2FBF0098B94C /* HomeDatas.plist in Resources */,
@@ -2435,6 +2440,7 @@
 				33FAE4D820E243B800BE7175 /* CollectionDetaiDemo.m in Sources */,
 				7908832923A0D04500FA3BE5 /* DecoratorViewController.m in Sources */,
 				79DC643223BA1C8A0073E22F /* ResponderControlView.m in Sources */,
+				7913EF922463FDE7000C77A3 /* RotationImageViewController.m in Sources */,
 				79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */,
 				794B100921DF02E300B91405 /* AbstractTableViewController.m in Sources */,
 				79040D8B2236462A0085335E /* FlutterSubViewController.m in Sources */,
@@ -2818,6 +2824,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2DD9667W8X;
 				ENABLE_BITCODE = NO;
@@ -2830,6 +2837,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyProjectModule/MyProjectModule-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -2843,6 +2851,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2DD9667W8X;
 				ENABLE_BITCODE = NO;
@@ -2855,6 +2864,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyProjectModule/MyProjectModule-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

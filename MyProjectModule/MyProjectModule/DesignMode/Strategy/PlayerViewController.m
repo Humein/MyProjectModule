@@ -97,6 +97,21 @@
 
 }
 
+
+ //设置样式
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleDefault;
+}
+//设置是否隐藏 
+- (BOOL)prefersStatusBarHidden {
+    return NO;
+}
+//设置隐藏动画
+- (UIStatusBarAnimation)preferredStatusBarUpdateAnimation {
+    return UIStatusBarAnimationNone;
+}
+
+
 -(void)pause{
     CGFloat duration = [UIApplication sharedApplication].statusBarOrientationAnimationDuration;
     [UIView animateWithDuration:duration animations:^{

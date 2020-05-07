@@ -75,9 +75,9 @@
        - 交换方法
      
      - 替换系统方法流程
-       - class_addMethod 确认是否已经实现
-         - 是 class_replaceMethod 替换之前方法
-         - 否 method_exchangeImplementations 直接交换
+       - class_addMethod 确认是否已经实现；先尝试給源SEL添加IMP，这里是为了避免源SEL没有实现IMP的情况
+         - 是 class_replaceMethod 添加并替换成功：说明源SEL没有实现IMP，将源SEL的IMP替换到交换SEL的IMP.
+         - 否 method_exchangeImplementations 添加失败：说明源SEL已经有IMP，直接将两个SEL的IMP交换即可
      
      - 添加新方法流程
        - class_addMethod 添加方法，并返回结果

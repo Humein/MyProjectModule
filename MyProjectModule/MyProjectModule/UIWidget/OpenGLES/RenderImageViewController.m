@@ -6,136 +6,110 @@
 //  Copyright © 2020 xinxin. All rights reserved.
 //
 
-#import "RenderImageViewController.h"
-#import <OpenGLES/ES3/gl.h>
-#import <OpenGLES/ES3/glext.h>
 #import <GLKit/GLKit.h>
+#import "RenderImageViewController.h"
 
-@interface RenderImageViewController ()<GLKViewDelegate>{
-    EAGLContext *_context;
-    /**
-     GLKBaseEffect 一种简单的光照/着色系统，用于基于着色器OpenGL渲染.
-     
-     */
-    GLKBaseEffect *_cEffect;
-}
+/**
+ 定义顶点类型
+ */
+typedef struct {
+    GLKVector3 positionCoord; // (X, Y, Z)
+    GLKVector2 textureCoord; // (U, V)
+} SenceVertex;
+
+@interface RenderImageViewController () <GLKViewDelegate>
+
+@property (nonatomic, strong) GLKView *glkView;
+@property (nonatomic, strong) GLKBaseEffect *baseEffect;
+
+@property (nonatomic, assign) SenceVertex *vertices; // 顶点数组
 
 @end
 
 @implementation RenderImageViewController
 
+- (void)dealloc {
+    if ([EAGLContext currentContext] == self.glkView.context) {
+        [EAGLContext setCurrentContext:nil];
+    }
+    // C语言风格的数组，需要手动释放
+    if (_vertices) {
+        free(_vertices);
+        _vertices = nil;
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //1.OpenGL ES 相关初始化
-    [self setUpConfig];
     
-    [self setUpVertexData];
-    
-    [self setUpTexture];
-    
-}
--(void)setUpConfig{
-   
-    //初始化上下文,调用es3.0的API
-    _context = [[EAGLContext alloc]initWithAPI:(kEAGLRenderingAPIOpenGLES3)];
-    if (!_context) {
-        NSLog(@"初始化OpenGLes失败");
-    }
-    [EAGLContext setCurrentContext:_context];
-    
-    //2.获取GLKView(等下图片是加载在这上面) & 设置context
-    GLKView *view =(GLKView *) self.view;
-    view.context = _context;
-    //- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect;在代理方法里实现图像绘制
-    view.delegate = self;
-    
-    //4.设置背景颜色,默认是黑色
-    glClearColor(1, 1, 1, 1.0);
-    
-}
--(void)setUpVertexData{
-    //1.设置顶点数组(顶点坐标,纹理坐标),顶点的坐标原点在屏幕中心
-    /*
-     纹理坐标系取值范围[0,1];原点是左下角(0,0);
-     故而(0,0)是纹理图像的左下角, 点(1,1)是右上角.
-     */
-    GLfloat vertexData[] = {
-        //顶点坐标            纹理坐标
-        0.5, -0.25, 0.0f,    1.0f, 0.0f, //右下
-        0.5, 0.25, -0.0f,    1.0f, 1.0f, //右上
-        -0.5, 0.25, 0.0f,    0.0f, 1.0f, //左上
-        
-        0.5, -0.25, 0.0f,    1.0f, 0.0f, //右下
-        -0.5, 0.25, 0.0f,    0.0f, 1.0f, //左上
-        -0.5, -0.25, 0.0f,   0.0f, 0.0f, //左下
-    };
-    //翻转图片
-//    GLfloat vertexData[] = {
-//        //顶点坐标            纹理坐标
-//        0.5, -0.25, 0.0f,    0.0f, 1.0f, //右下
-//        0.5, 0.25, -0.0f,    0.0f, 0.0f, //右上
-//        -0.5, 0.25, 0.0f,    1.0f, 0.0f, //左上
-//
-//        0.5, -0.25, 0.0f,    0.0f, 1.0f, //右下
-//        -0.5, 0.25, 0.0f,    1.0f, 0.0f, //左上
-//        -0.5, -0.25, 0.0f,   1.0f, 1.0f, //左下
-//    };
-    //2.开辟顶点缓存区
-    //(1).创建顶点缓存区标识符ID
-    GLuint bufferID;
-    glGenBuffers(1, &bufferID);
-    //(2).绑定顶点缓存区.(明确作用)
-    glBindBuffer(GL_ARRAY_BUFFER, bufferID);
-    //(3).将顶点数组的数据copy到顶点缓存区中(GPU显存中) GL_STATIC_DRAW:不经常变化的图片使用这个
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData), vertexData, GL_STATIC_DRAW);
-    
-    //打开属性通道,默认是关闭的
-    glEnableVertexAttribArray(GLKVertexAttribPosition);
-    //上传顶点数据到显存
-    /*
-     参数列表:
-     index,指定要修改的顶点属性的索引值
-     size, 每次读取数量。（如position是由3个（x,y,z）组成，而颜色是4个（r,g,b,a）,纹理则是2个.）
-     type,指定数组中每个组件的数据类型。可用的符号常量有GL_BYTE, GL_UNSIGNED_BYTE, GL_SHORT,GL_UNSIGNED_SHORT, GL_FIXED, 和 GL_FLOAT，初始值为GL_FLOAT。
-     normalized,指定当被访问时，固定点数据值是否应该被归一化（GL_TRUE）或者直接转换为固定点值（GL_FALSE）
-     stride,指定连续顶点属性之间的偏移量。如果为0，那么顶点属性会被理解为：它们是紧密排列在一起的。初始值为0
-     ptr指定一个指针，指向数组中第一个顶点属性的第一个组件。初始值为0
-     */
-    glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 5, (GLfloat *)NULL + 0);
-    //纹理坐标数据
-    glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
-    glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 5, (GLfloat *)NULL + 3);
-    
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self commonInit];
+    // display 会触发 glkView:drawInRect: 方法，并在触发这个方法后，内部还会调用 presentRenderbuffer 来将绑定的渲染缓存呈现到屏幕上
+    [self.glkView display];
 }
 
--(void)setUpTexture{
-    //1.获取纹理图片路径
-    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"miao" ofType:@"jpg"];
+- (void)commonInit {
+    // 创建上下文，使用 2.0 版本
+    EAGLContext *context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     
-    //2.设置纹理参数
-    //纹理坐标原点是左下角,但是图片显示原点应该是左上角.
-    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:@(1),GLKTextureLoaderOriginBottomLeft, nil];
+    // 创建顶点数组
+    self.vertices = malloc(sizeof(SenceVertex) * 4); // 4 个顶点
     
-    GLKTextureInfo *textureInfo = [GLKTextureLoader textureWithContentsOfFile:filePath options:options error:nil];
+    self.vertices[0] = (SenceVertex){{-1, 1, 0}, {0, 1}}; // 左上角
+    self.vertices[1] = (SenceVertex){{-1, -1, 0}, {0, 0}}; // 左下角
+    self.vertices[2] = (SenceVertex){{1, 1, 0}, {1, 1}}; // 右上角
+    self.vertices[3] = (SenceVertex){{1, -1, 0}, {1, 0}}; // 右下角
     
-    //3.使用苹果GLKit 提供GLKBaseEffect 完成着色器工作(顶点/片元)
-    _cEffect = [[GLKBaseEffect alloc]init];
-    _cEffect.texture2d0.enabled = GL_TRUE;
-    _cEffect.texture2d0.name = textureInfo.name;
+    // 初始化 GLKView
+    CGRect frame = CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.width); // 为了 OpenGL 坐标系不被拉伸，这里设置为正方形
+    self.glkView = [[GLKView alloc] initWithFrame:frame context:context];
+    self.glkView.backgroundColor = [UIColor clearColor];
+    self.glkView.delegate = self;
+    
+    [self.view addSubview:self.glkView];
+    
+    // 设置 glkView 的上下文为当前上下文
+    [EAGLContext setCurrentContext:self.glkView.context];
+    
+    // 通过 GLKTextureLoader 来加载纹理，并存放在 GLKBaseEffect 中
+    NSString *imagePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"miao.jpeg"];
+    UIImage *image = [UIImage imageWithContentsOfFile:imagePath]; // 这里如果用 imageNamed 来读取图片，在反复加载纹理的时候，会出现倒置的错误
+
+    NSDictionary *options = @{GLKTextureLoaderOriginBottomLeft : @(YES)}; // 消除 UIKit 和 GLKit 的坐标差异，否则会上下颠倒
+    GLKTextureInfo *textureInfo = [GLKTextureLoader textureWithCGImage:[image CGImage]
+                                                               options:options
+                                                                 error:NULL];
+    self.baseEffect = [[GLKBaseEffect alloc] init];
+    self.baseEffect.texture2d0.name = textureInfo.name;
+    self.baseEffect.texture2d0.target = textureInfo.target;
 }
+
 #pragma mark - GLKViewDelegate
-//在这里绘制视图的内容
-- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect{
-    glClear(GL_COLOR_BUFFER_BIT);
-    [_cEffect prepareToDraw];
-    /**
-     *第一个参数:绘制方式,es2.0之后有以下方式
-                GL_POINTS、GL_LINES、GL_LINE_LOOP、GL_LINE_STRIP、GL_TRIANGLES、GL_TRIANGLE_STRIP、GL_TRIANGLE_FAN
-     *第二个参数:从哪个顶点开始绘制
-     *第三个参数:顶点数
-     */
-    glDrawArrays(GL_TRIANGLES, 0, 6);
-}
 
+- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
+    [self.baseEffect prepareToDraw];
+    
+    // 创建顶点缓存
+    GLuint vertexBuffer;
+    glGenBuffers(1, &vertexBuffer);  // 步骤一：生成
+    glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);  // 步骤二：绑定
+    GLsizeiptr bufferSizeBytes = sizeof(SenceVertex) * 4;
+    glBufferData(GL_ARRAY_BUFFER, bufferSizeBytes, self.vertices, GL_STATIC_DRAW);  // 步骤三：缓存数据
+    
+    // 设置顶点数据
+    glEnableVertexAttribArray(GLKVertexAttribPosition);  // 步骤四：启用或禁用
+    glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(SenceVertex), NULL + offsetof(SenceVertex, positionCoord));  // 步骤五：设置指针
+    
+    // 设置纹理数据
+    glEnableVertexAttribArray(GLKVertexAttribTexCoord0);  // 步骤四：启用或禁用
+    glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, sizeof(SenceVertex), NULL + offsetof(SenceVertex, textureCoord));  // 步骤五：设置指针
+    
+    // 开始绘制
+    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);  // 步骤六：绘图
+    
+    // 删除顶点缓存
+    glDeleteBuffers(1, &vertexBuffer);  // 步骤七：删除
+    vertexBuffer = 0;
+}
 
 @end
