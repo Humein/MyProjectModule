@@ -125,6 +125,7 @@
 		7913EF8B245AB5E6000C77A3 /* RenderImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF8A245AB5E6000C77A3 /* RenderImageViewController.m */; };
 		7913EF922463FDE7000C77A3 /* RotationImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF912463FDE7000C77A3 /* RotationImageViewController.m */; };
 		7913EF9424640090000C77A3 /* miao.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7913EF9324640090000C77A3 /* miao.jpeg */; };
+		7913EF962464265E000C77A3 /* SDCustomStatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF952464265E000C77A3 /* SDCustomStatusBarView.swift */; };
 		7924BB70240B6361007BA1B3 /* BindResponderOfChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924BB6F240B6361007BA1B3 /* BindResponderOfChain.swift */; };
 		7924BB72240B98F8007BA1B3 /* UIRespnderChainExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924BB71240B98F8007BA1B3 /* UIRespnderChainExtension.swift */; };
 		792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792591EB2285517100E7F734 /* LearnSwiftDemosViewController.swift */; };
@@ -495,6 +496,7 @@
 		7913EF902463FDE7000C77A3 /* RotationImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotationImageViewController.h; sourceTree = "<group>"; };
 		7913EF912463FDE7000C77A3 /* RotationImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RotationImageViewController.m; sourceTree = "<group>"; };
 		7913EF9324640090000C77A3 /* miao.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = miao.jpeg; sourceTree = "<group>"; };
+		7913EF952464265E000C77A3 /* SDCustomStatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDCustomStatusBarView.swift; sourceTree = "<group>"; };
 		7924BB6F240B6361007BA1B3 /* BindResponderOfChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindResponderOfChain.swift; sourceTree = "<group>"; };
 		7924BB71240B98F8007BA1B3 /* UIRespnderChainExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRespnderChainExtension.swift; sourceTree = "<group>"; };
 		792591EA2285517000E7F734 /* MyProjectModule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyProjectModule-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -1706,6 +1708,7 @@
 				79387EAF2440644900CC7A49 /* YYFPSLabel.h */,
 				79387EB02440644900CC7A49 /* YYFPSLabel.m */,
 				793C637F24060736000BE949 /* UISampleExample.swift */,
+				7913EF952464265E000C77A3 /* SDCustomStatusBarView.swift */,
 			);
 			path = UIWidgetDemo;
 			sourceTree = "<group>";
@@ -2641,6 +2644,7 @@
 				790882F423A0D04500FA3BE5 /* ClassClusterModel.m in Sources */,
 				790882F323A0D04500FA3BE5 /* AbstractFactory.swift in Sources */,
 				338FEC0520E0F5B70025631B /* UIButton+Decorate.m in Sources */,
+				7913EF962464265E000C77A3 /* SDCustomStatusBarView.swift in Sources */,
 				79DC645523BA1F6C0073E22F /* PaternalViewController.m in Sources */,
 				7931A51B21A7DAA5002A26C0 /* FilterCollectionViewLayout.m in Sources */,
 				33759E7D212FABBA00D801C1 /* NSObject+KVOHelper.m in Sources */,

@@ -169,6 +169,10 @@
     //    [self.tableView scrollToRowAtIndexPath:IndexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
     
 //    [self.tableView.tableView scrollRectToVisible:CGRectMake(0, 0, 10000, 10000) animated:YES];
+    
+    // scrollToRowAtIndexPath cell 过多会造成卡顿
+    [self.tableView.tableView setContentOffset:CGPointMake(0, CGFLOAT_MAX)];
+
 }
 
 #pragma mark ----Delegate
