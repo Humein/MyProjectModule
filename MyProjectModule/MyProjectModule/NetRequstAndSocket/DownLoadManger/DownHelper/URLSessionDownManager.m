@@ -504,10 +504,6 @@ static URLSessionDownManager *_shareInstance;
 }
 
 #pragma mark - NSURLSessionDataDelegate代理方法
-- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location {
-    
-    
-}
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
 {
@@ -538,6 +534,24 @@ static URLSessionDownManager *_shareInstance;
             if (source.task == dataTask) {
                 [source.fileHandle seekToEndOfFile];
                 [source.fileHandle writeData:data];
+                
+                
+//                {
+//                    /**
+//                     从服务器下载一个大文件数据,往往会造成内存暴涨,此时用NSOutputStream对文件进行操作就能解决此问题.(也可以用NSFileHandle)
+//                     是否避免No space
+//                     */
+//                //1. 创建一个输入流,数据追加到文件的屁股上
+//                //把数据写入到指定的文件地址，如果当前文件不存在，则会自动创建
+//                NSOutputStream *stream = [[NSOutputStream alloc]initWithURL:[NSURL fileURLWithPath:source.location] append:YES];
+//                //2. 打开流
+//                [stream open];
+//                //3. 写入流数据
+//                [stream write:data.bytes maxLength:data.length];
+//                //4.当不需要的时候应该关闭流
+//                [stream close];
+//                }
+                
                 source.totalBytesWritten += data.length;
                 if ([source.delegate respondsToSelector:@selector(downloadSource:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:)]) {
                     [source.delegate downloadSource:source didWriteData:data totalBytesWritten:source.totalBytesWritten totalBytesExpectedToWrite:source.totalBytesExpectedToWrite];
@@ -580,7 +594,6 @@ static URLSessionDownManager *_shareInstance;
         
         if (currentSource) {
             currentSource.filedownState = XXDownloadStateFinished;
-//            [(NSMutableArray *)self.downloadSources removeObject:currentSource];
             [self saveDownloadSource];
             for (XXDownloadToolDelegateObject *delegateObj in self.delegateArr) {
                 if ([delegateObj.delegate respondsToSelector:@selector(downloadToolDidFinish:downloadItem:)]) {
