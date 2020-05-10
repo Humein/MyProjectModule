@@ -107,7 +107,7 @@ class SwiftDemosViewController: AbstractViewController {
 //        view.addSubview(self.cycleView)
         
         //MARK:- customBar
-        let bar = SDCustomStatusBarView.init(frame: CGRect.init(x: 80, y: 80, width: 200, height: 100))
+        let bar = SDCustomStatusBarView.init(frame: CGRect.init(x: 0, y: 180, width: self.view.frame.width, height: 20))
         bar.backgroundColor = .gray
         view.addSubview(bar)
 

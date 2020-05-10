@@ -78,6 +78,7 @@ typedef void(^Success)(id data);
             if (self.array.count > 0) {
                 dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
                 NSArray *cosumerArray = self.array.mutableCopy;
+                // 处理耗时操作
                 [self processingWithArray:cosumerArray Success:^(id data) {
                     NSLog(@"消费了%lu 个",(unsigned long)cosumerArray.count);
                     [self.array removeAllObjects];

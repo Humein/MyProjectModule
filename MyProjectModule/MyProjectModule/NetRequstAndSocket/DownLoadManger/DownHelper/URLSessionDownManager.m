@@ -6,12 +6,27 @@
 //  Copyright © 2019 xinxin. All rights reserved.
 //
 
+/**
+ Documents 文件夹
+ 作用: 保存应用运行时生成的需要持久化的数据,iTunes同步设备时会备份该目录.所以一般这里面的文件一般不要太大
+
+ tmp文件夹
+ 作用: 保存应用运行时所需的临时数据,使用完毕后再将相应的文件从该目录删除.应用没有运行时,系统也可能会清除该目录下的文件,所以需要持久化的数据一般不放到这个文件夹下.iTunes同步设备时不会备份该目录
+
+ Library/Caches文件夹
+ 作用: 保存应用运行时生成的需要持久化的数据,iTunes同步设备时不会备份该目录.一般存储体积大,不需要备份的非重要数据
+
+ Library/Preference文件夹
+ 作用: 保存应用的所有偏好设置,NSUserDefaults用户设置生成的plist文件也会保存到这个目录下,iTunes同步设备时会备份该目录
+
+ */
+
 // 缓存主目录
 #define XXDownloadTool_Document_Path                   [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
 
 // 下载文件夹路径
 #define XXDownloadTool_DownloadDataDocument_Path       [XXDownloadTool_Document_Path stringByAppendingPathComponent:@"XXDownloadTool_DownloadDataDocument_Path"]
-
+// 保存下载文件状态的文件路径
 #define XXDownloadTool_DownloadSources_Path            [XXDownloadTool_Document_Path stringByAppendingPathComponent:@"XXDownloadTool_downloadSources.data"]
 
 
@@ -489,6 +504,11 @@ static URLSessionDownManager *_shareInstance;
 }
 
 #pragma mark - NSURLSessionDataDelegate代理方法
+- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location {
+    
+    
+}
+
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
 {
     NSLog(@"%s", __FUNCTION__);
@@ -505,6 +525,14 @@ static URLSessionDownManager *_shareInstance;
 }
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
 {
+    // XXTODO
+    /**
+      NSFileHandle写文件 手机没有存储空间了，或者需要写的文件太大，会触发"No space left on device"异常
+     优化
+     开启一个异步线程；去判断下载。当然了，注意加锁。
+     额这个代理回调本身在自线程
+
+     */
     dispatch_async(dispatch_get_main_queue(), ^{
         for (XXDownItem *source in self.downloadSources) {
             if (source.task == dataTask) {

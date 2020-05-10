@@ -53,8 +53,8 @@
 
 - (void)addDownLoadData:(UIButton *)sender
 {
-    [self.dataArr addObject:[[URLSessionDownManager shareInstance] addDownloadTast:@"https://dldir1.qq.com/qqfile/QQforMac/QQ_V5.4.0.dmg" andOffLine:YES]];
-    
+    [self.dataArr addObject:[[URLSessionDownManager shareInstance] addDownloadTast:@"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" andOffLine:YES]];
+    // XXTODO insertRows 不需要刷新
     [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.dataArr.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationTop];
 }
 
