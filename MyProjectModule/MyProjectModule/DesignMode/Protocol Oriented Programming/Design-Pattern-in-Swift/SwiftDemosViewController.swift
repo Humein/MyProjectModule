@@ -10,7 +10,13 @@ import UIKit
 import SDWebImage
 
 class SwiftDemosViewController: AbstractViewController {
+    lazy var danmuView: SLDanmuView = {
+        var danmuView = SLDanmuView(frame: CGRect(x: 0, y: 50, width: self.view.width, height: 150))
+        return danmuView
+    }()
     
+    var list = [SDBarrageInfo]()
+
     lazy var cycleView: SDCycleView =  {
         let cycle = SDCycleView(frame: CGRect.init(x: 0, y: 200, width: self.view.frame.width, height: 200))
         cycle.scrollDirection = .horizontal
@@ -107,12 +113,31 @@ class SwiftDemosViewController: AbstractViewController {
 //        view.addSubview(self.cycleView)
         
         //MARK:- customBar
-        let bar = SDCustomStatusBarView.init(frame: CGRect.init(x: 0, y: 180, width: self.view.frame.width, height: 20))
-        bar.backgroundColor = .gray
-        view.addSubview(bar)
+//        let bar = SDCustomStatusBarView.init(frame: CGRect.init(x: 0, y: 180, width: self.view.frame.width, height: 20))
+//        bar.backgroundColor = .gray
+//        view.addSubview(bar)
+        
+
+        
+         let timer = Timer(timeInterval: 2.0, target: self, selector: #selector(calculateRate), userInfo: nil, repeats: true)
+         RunLoop.current.add(timer, forMode: RunLoop.Mode.default)
+
+          self.view.addSubview(danmuView)
+          danmuView.resume()
 
     }
     
+    @objc func calculateRate() {
+        for i in 0...10 {
+            let info = SDBarrageInfo(text: "考四六级" + String(i), textColor: UIColor.red, itemViewClass: SDBarrageItemView.self)
+            list.append(info)
+        }
+        if danmuView.pendingList.count > 100 {
+            return
+        }
+        
+        danmuView.pendingList.append(contentsOf: list)
+    }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

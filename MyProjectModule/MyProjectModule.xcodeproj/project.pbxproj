@@ -225,6 +225,11 @@
 		79E3D63321DE57D60038CACB /* ZTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63221DE57D60038CACB /* ZTKBaseRequest.m */; };
 		79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63521DE60E80038CACB /* RequestMediatorBaseBusniess.m */; };
 		79E3D63921DE67E00038CACB /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63821DE67E00038CACB /* RequestViewController.m */; };
+		79E53C602469794100CFFE9A /* SDBarrageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5A2469794000CFFE9A /* SDBarrageView.swift */; };
+		79E53C612469794100CFFE9A /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5C2469794000CFFE9A /* UIView+Frame.swift */; };
+		79E53C622469794100CFFE9A /* SDBarrageItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5D2469794000CFFE9A /* SDBarrageItemView.swift */; };
+		79E53C632469794100CFFE9A /* SDBarrageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5E2469794000CFFE9A /* SDBarrageInfo.swift */; };
+		79E53C642469794100CFFE9A /* SDBarrageBgItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5F2469794000CFFE9A /* SDBarrageBgItemView.swift */; };
 		79E96686237EBD8E00B49697 /* BlockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E96685237EBD8E00B49697 /* BlockModel.swift */; };
 		79E96688237EBDEA00B49697 /* TestBlockModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E96687237EBDEA00B49697 /* TestBlockModelViewController.swift */; };
 		79E9668A237EBDF800B49697 /* AView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E96689237EBDF800B49697 /* AView.swift */; };
@@ -675,6 +680,11 @@
 		79E3D63521DE60E80038CACB /* RequestMediatorBaseBusniess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestMediatorBaseBusniess.m; sourceTree = "<group>"; };
 		79E3D63721DE67E00038CACB /* RequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
 		79E3D63821DE67E00038CACB /* RequestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestViewController.m; sourceTree = "<group>"; };
+		79E53C5A2469794000CFFE9A /* SDBarrageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageView.swift; sourceTree = "<group>"; };
+		79E53C5C2469794000CFFE9A /* UIView+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
+		79E53C5D2469794000CFFE9A /* SDBarrageItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageItemView.swift; sourceTree = "<group>"; };
+		79E53C5E2469794000CFFE9A /* SDBarrageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageInfo.swift; sourceTree = "<group>"; };
+		79E53C5F2469794000CFFE9A /* SDBarrageBgItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageBgItemView.swift; sourceTree = "<group>"; };
 		79E96685237EBD8E00B49697 /* BlockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockModel.swift; sourceTree = "<group>"; };
 		79E96687237EBDEA00B49697 /* TestBlockModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBlockModelViewController.swift; sourceTree = "<group>"; };
 		79E96689237EBDF800B49697 /* AView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AView.swift; sourceTree = "<group>"; };
@@ -1705,6 +1715,7 @@
 		793C636024060699000BE949 /* UIWidgetDemo */ = {
 			isa = PBXGroup;
 			children = (
+				79E53C592469794000CFFE9A /* DanmuView */,
 				79387EAF2440644900CC7A49 /* YYFPSLabel.h */,
 				79387EB02440644900CC7A49 /* YYFPSLabel.m */,
 				793C637F24060736000BE949 /* UISampleExample.swift */,
@@ -2147,6 +2158,26 @@
 			path = YTKNetRequest;
 			sourceTree = "<group>";
 		};
+		79E53C592469794000CFFE9A /* DanmuView */ = {
+			isa = PBXGroup;
+			children = (
+				79E53C5A2469794000CFFE9A /* SDBarrageView.swift */,
+				79E53C5B2469794000CFFE9A /* Utils */,
+				79E53C5D2469794000CFFE9A /* SDBarrageItemView.swift */,
+				79E53C5E2469794000CFFE9A /* SDBarrageInfo.swift */,
+				79E53C5F2469794000CFFE9A /* SDBarrageBgItemView.swift */,
+			);
+			path = DanmuView;
+			sourceTree = "<group>";
+		};
+		79E53C5B2469794000CFFE9A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				79E53C5C2469794000CFFE9A /* UIView+Frame.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		79E96684237EBD7300B49697 /* TestBlockModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -2479,6 +2510,7 @@
 				79BA3B75244D79E6008805F6 /* EXUIViewController.swift in Sources */,
 				79B4850D24470B7D0025FC0B /* CustomPopCover.swift in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
+				79E53C622469794100CFFE9A /* SDBarrageItemView.swift in Sources */,
 				7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */,
 				7936BB4124459E750043AF5A /* SDCycleView.swift in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
@@ -2486,6 +2518,7 @@
 				33C2DF3721DCC5D400F96F32 /* PointTreeTypeOne.m in Sources */,
 				7913EF6D24591EC3000C77A3 /* SDPushAViewController.swift in Sources */,
 				790882F723A0D04500FA3BE5 /* ClassClusterBaseTableViewCell.m in Sources */,
+				79E53C602469794100CFFE9A /* SDBarrageView.swift in Sources */,
 				33C2DF3621DCC5D400F96F32 /* CompositePointTreeModel.m in Sources */,
 				79DC645923BA1F6C0073E22F /* ShakeView.swift in Sources */,
 				7913EF65245915DA000C77A3 /* SDPresentBViewController.swift in Sources */,
@@ -2532,6 +2565,7 @@
 				7908831123A0D04500FA3BE5 /* CorrectResolver.m in Sources */,
 				7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */,
 				33C2DF3E21DCC66C00F96F32 /* PointTreeOneModelViewController.m in Sources */,
+				79E53C612469794100CFFE9A /* UIView+Frame.swift in Sources */,
 				79104F8623C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m in Sources */,
 				79DC645723BA1F6C0073E22F /* FirstView.swift in Sources */,
 				79387EB324407B6900CC7A49 /* SDCacheManagers.swift in Sources */,
@@ -2585,6 +2619,7 @@
 				7908832523A0D04500FA3BE5 /* UIImage+Transform.m in Sources */,
 				338FEBFF20E0F25A0025631B /* UIControlFactory.m in Sources */,
 				79DC643B23BA1E170073E22F /* ProtocolLinked.swift in Sources */,
+				79E53C642469794100CFFE9A /* SDBarrageBgItemView.swift in Sources */,
 				794A6DB6238686B8008FB8D4 /* SegementContentView.m in Sources */,
 				7998C6CF23CEA4E500DA3BEF /* DesignModeViewController.m in Sources */,
 				790882F823A0D04500FA3BE5 /* ClassClusterTableViewCellA.m in Sources */,
@@ -2626,6 +2661,7 @@
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				79387EB12440644900CC7A49 /* YYFPSLabel.m in Sources */,
 				79EEEA562182C09200848B59 /* liveChatModel.m in Sources */,
+				79E53C632469794100CFFE9A /* SDBarrageInfo.swift in Sources */,
 				7908830B23A0D04500FA3BE5 /* ApplePay.m in Sources */,
 				7908832123A0D04500FA3BE5 /* Command.swift in Sources */,
 				33C2DF3921DCC5D400F96F32 /* PointTreeTypeThree.m in Sources */,
