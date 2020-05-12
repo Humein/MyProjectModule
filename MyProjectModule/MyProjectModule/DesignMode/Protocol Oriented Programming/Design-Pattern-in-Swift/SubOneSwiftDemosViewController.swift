@@ -82,6 +82,7 @@ class SubOneSwiftDemosViewController: SwiftDemosViewController {
 }
 
 
+// 弹出弹幕按钮
 enum SDBarrageTapTypes {
     case isSelectedType
     case unselectedType
@@ -141,7 +142,7 @@ class SDBarrageSwitchView: UIView {
             self?.tapBlock?((self?.switchButton.isSelected)! ? .isSelectedType : .unselectedType)
         }).disposed(by: disposeBag)
         
-        //添加一个点击手势
+        //rx添加一个点击手势
         let tap = UITapGestureRecognizer()
         inputBarrage.addGestureRecognizer(tap)
         tap.rx.event.subscribe(onNext: { [weak self] _ in

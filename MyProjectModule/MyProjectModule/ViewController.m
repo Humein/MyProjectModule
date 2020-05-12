@@ -77,7 +77,7 @@
 
     
     self.itemList = [NSMutableArray array];
-    NSArray *list = [NSArray arrayWithObjects:@"SubOneSwiftDemosViewController",@"RenderImageViewController",@"RotationImageViewController",@"TransitionsAnimationDemos",@"ThreadSafeContainer",@"TestBlockModelViewController",@"SmoothBookmarkDemoViewController",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
+    NSArray *list = [NSArray arrayWithObjects:@"SubTwoSwiftDemosViewController",@"SubOneSwiftDemosViewController",@"RenderImageViewController",@"RotationImageViewController",@"TransitionsAnimationDemos",@"ThreadSafeContainer",@"TestBlockModelViewController",@"SmoothBookmarkDemoViewController",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
 
     [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { 
         CellModel *model =  [CellModel new];
@@ -215,6 +215,14 @@
         [self.navigationController pushViewController:userSetSwift animated:YES];
         return;
     }
+    
+    if ([item.title isEqualToString:@"SubTwoSwiftDemosViewController"]) {
+        SubTwoSwiftDemosViewController *userSetSwift = [[SubTwoSwiftDemosViewController alloc] init];
+        userSetSwift.hidesBottomBarWhenPushed= YES;
+        [self.navigationController pushViewController:userSetSwift animated:YES];
+        return;
+    }
+    
     
     if (VC == nil) {
         SwiftDemosViewController *userSetSwift = [[SwiftDemosViewController alloc] init];

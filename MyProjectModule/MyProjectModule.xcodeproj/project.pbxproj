@@ -231,6 +231,7 @@
 		79E53C642469794100CFFE9A /* SDBarrageBgItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5F2469794000CFFE9A /* SDBarrageBgItemView.swift */; };
 		79E53C66246A4BF800CFFE9A /* CustomPopCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C65246A4BF800CFFE9A /* CustomPopCover.swift */; };
 		79E53C68246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C67246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift */; };
+		79E53C6A246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C69246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift */; };
 		79E96686237EBD8E00B49697 /* BlockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E96685237EBD8E00B49697 /* BlockModel.swift */; };
 		79E96688237EBDEA00B49697 /* TestBlockModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E96687237EBDEA00B49697 /* TestBlockModelViewController.swift */; };
 		79E9668A237EBDF800B49697 /* AView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E96689237EBDF800B49697 /* AView.swift */; };
@@ -687,6 +688,7 @@
 		79E53C5F2469794000CFFE9A /* SDBarrageBgItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageBgItemView.swift; sourceTree = "<group>"; };
 		79E53C65246A4BF800CFFE9A /* CustomPopCover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPopCover.swift; path = MyProjectModule/UIWidget/CustomPopCover.swift; sourceTree = SOURCE_ROOT; };
 		79E53C67246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubOneSwiftDemosViewController.swift; sourceTree = "<group>"; };
+		79E53C69246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTwoSwiftDemosViewController.swift; sourceTree = "<group>"; };
 		79E96685237EBD8E00B49697 /* BlockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockModel.swift; sourceTree = "<group>"; };
 		79E96687237EBDEA00B49697 /* TestBlockModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBlockModelViewController.swift; sourceTree = "<group>"; };
 		79E96689237EBDF800B49697 /* AView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AView.swift; sourceTree = "<group>"; };
@@ -2116,6 +2118,7 @@
 				79DC645023BA1F6C0073E22F /* Protocol Oriented Programming */,
 				79DC645223BA1F6C0073E22F /* SwiftDemosViewController.swift */,
 				79E53C67246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift */,
+				79E53C69246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift */,
 			);
 			path = "Design-Pattern-in-Swift";
 			sourceTree = "<group>";
@@ -2522,6 +2525,7 @@
 				790882F723A0D04500FA3BE5 /* ClassClusterBaseTableViewCell.m in Sources */,
 				79E53C602469794100CFFE9A /* SDBarrageView.swift in Sources */,
 				33C2DF3621DCC5D400F96F32 /* CompositePointTreeModel.m in Sources */,
+				79E53C6A246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift in Sources */,
 				79DC645923BA1F6C0073E22F /* ShakeView.swift in Sources */,
 				7913EF65245915DA000C77A3 /* SDPresentBViewController.swift in Sources */,
 				79E53C66246A4BF800CFFE9A /* CustomPopCover.swift in Sources */,
