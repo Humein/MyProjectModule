@@ -1,9 +1,9 @@
 //
-//  SLDanmuView.swift
-//  SwiftDanmuView
+//  SDBarrageView.swift
+//  SDBarrageView
 //
-//  Created by liusilan on 2017/4/12.
-//  Copyright © 2017年 silan. All rights reserved.
+//  Created by XinXin on 2020/5/7.
+//  Copyright © 2020 xinxin. All rights reserved.
 //
 
 import Foundation
@@ -11,8 +11,7 @@ import UIKit
 
 class SLDanmuView: UIView {
     // 轨道间距
-    let lineSpace: CGFloat = 25.0
-    
+    let lineSpace: CGFloat = 22.0
     // 轨道数
     var numberOfRows: Int = 3
     
@@ -58,7 +57,6 @@ class SLDanmuView: UIView {
     
     init() {
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-        
         commonInit()
     }
     
@@ -172,7 +170,11 @@ class SLDanmuView: UIView {
         itemView.y = y
         
         if let itemView = itemView as? SDBarrageItemView {
-            itemView.updateDanmuInfo(info: info)
+            if info.attributedText != nil {
+                itemView.updateAttributedText(text: info.attributedText!)
+            }else{
+                itemView.updateDanmuInfo(info: info)
+            }
         }
         
         itemView.sizeToFit()

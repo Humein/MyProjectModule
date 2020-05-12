@@ -192,7 +192,6 @@
 		79A1A51D2269AD0800CEA92A /* SmoothBookmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5152269AD0800CEA92A /* SmoothBookmarkViewController.m */; };
 		79B44B24237CF0A900B7D73D /* SmoothBookmarkDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B44B23237CF0A900B7D73D /* SmoothBookmarkDemoViewController.m */; };
 		79B44B27237CF23000B7D73D /* BaseBookmarkChildDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B44B26237CF23000B7D73D /* BaseBookmarkChildDemoController.m */; };
-		79B4850D24470B7D0025FC0B /* CustomPopCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4850C24470B7D0025FC0B /* CustomPopCover.swift */; };
 		79BA3B68244D5619008805F6 /* PlayerFullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BA3B62244D5618008805F6 /* PlayerFullScreenViewController.swift */; };
 		79BA3B69244D5619008805F6 /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BA3B66244D5619008805F6 /* UIViewController+Category.m */; };
 		79BA3B6A244D5619008805F6 /* BKDeviceOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BA3B67244D5619008805F6 /* BKDeviceOrientation.m */; };
@@ -230,6 +229,7 @@
 		79E53C622469794100CFFE9A /* SDBarrageItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5D2469794000CFFE9A /* SDBarrageItemView.swift */; };
 		79E53C632469794100CFFE9A /* SDBarrageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5E2469794000CFFE9A /* SDBarrageInfo.swift */; };
 		79E53C642469794100CFFE9A /* SDBarrageBgItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5F2469794000CFFE9A /* SDBarrageBgItemView.swift */; };
+		79E53C66246A4BF800CFFE9A /* CustomPopCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C65246A4BF800CFFE9A /* CustomPopCover.swift */; };
 		79E96686237EBD8E00B49697 /* BlockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E96685237EBD8E00B49697 /* BlockModel.swift */; };
 		79E96688237EBDEA00B49697 /* TestBlockModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E96687237EBDEA00B49697 /* TestBlockModelViewController.swift */; };
 		79E9668A237EBDF800B49697 /* AView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E96689237EBDF800B49697 /* AView.swift */; };
@@ -621,7 +621,6 @@
 		79B44B23237CF0A900B7D73D /* SmoothBookmarkDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmoothBookmarkDemoViewController.m; sourceTree = "<group>"; };
 		79B44B25237CF23000B7D73D /* BaseBookmarkChildDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseBookmarkChildDemoController.h; sourceTree = "<group>"; };
 		79B44B26237CF23000B7D73D /* BaseBookmarkChildDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseBookmarkChildDemoController.m; sourceTree = "<group>"; };
-		79B4850C24470B7D0025FC0B /* CustomPopCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopCover.swift; sourceTree = "<group>"; };
 		79BA3B62244D5618008805F6 /* PlayerFullScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerFullScreenViewController.swift; sourceTree = "<group>"; };
 		79BA3B64244D5619008805F6 /* UIViewController+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Category.h"; sourceTree = "<group>"; };
 		79BA3B65244D5619008805F6 /* BKDeviceOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKDeviceOrientation.h; sourceTree = "<group>"; };
@@ -685,6 +684,7 @@
 		79E53C5D2469794000CFFE9A /* SDBarrageItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageItemView.swift; sourceTree = "<group>"; };
 		79E53C5E2469794000CFFE9A /* SDBarrageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageInfo.swift; sourceTree = "<group>"; };
 		79E53C5F2469794000CFFE9A /* SDBarrageBgItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageBgItemView.swift; sourceTree = "<group>"; };
+		79E53C65246A4BF800CFFE9A /* CustomPopCover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPopCover.swift; path = MyProjectModule/UIWidget/CustomPopCover.swift; sourceTree = SOURCE_ROOT; };
 		79E96685237EBD8E00B49697 /* BlockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockModel.swift; sourceTree = "<group>"; };
 		79E96687237EBDEA00B49697 /* TestBlockModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBlockModelViewController.swift; sourceTree = "<group>"; };
 		79E96689237EBDF800B49697 /* AView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AView.swift; sourceTree = "<group>"; };
@@ -1080,7 +1080,6 @@
 				33C971342124108D00EAAD5E /* CustomAlertViewDefault.m */,
 				33C9713E2124108D00EAAD5E /* CustomAlertManagerView.h */,
 				33C9713B2124108D00EAAD5E /* CustomAlertManagerView.m */,
-				79B4850C24470B7D0025FC0B /* CustomPopCover.swift */,
 				7997BE67224090A50054F4D0 /* AbstractAlertView.h */,
 				7997BE68224090A50054F4D0 /* AbstractAlertView.m */,
 			);
@@ -1715,6 +1714,7 @@
 		793C636024060699000BE949 /* UIWidgetDemo */ = {
 			isa = PBXGroup;
 			children = (
+				79E53C65246A4BF800CFFE9A /* CustomPopCover.swift */,
 				79E53C592469794000CFFE9A /* DanmuView */,
 				79387EAF2440644900CC7A49 /* YYFPSLabel.h */,
 				79387EB02440644900CC7A49 /* YYFPSLabel.m */,
@@ -2508,7 +2508,6 @@
 				7908831823A0D04500FA3BE5 /* PlayerViewController.m in Sources */,
 				7936BB612445A7400043AF5A /* DataBaseManager.m in Sources */,
 				79BA3B75244D79E6008805F6 /* EXUIViewController.swift in Sources */,
-				79B4850D24470B7D0025FC0B /* CustomPopCover.swift in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
 				79E53C622469794100CFFE9A /* SDBarrageItemView.swift in Sources */,
 				7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */,
@@ -2522,6 +2521,7 @@
 				33C2DF3621DCC5D400F96F32 /* CompositePointTreeModel.m in Sources */,
 				79DC645923BA1F6C0073E22F /* ShakeView.swift in Sources */,
 				7913EF65245915DA000C77A3 /* SDPresentBViewController.swift in Sources */,
+				79E53C66246A4BF800CFFE9A /* CustomPopCover.swift in Sources */,
 				7908832323A0D04500FA3BE5 /* Condiment.m in Sources */,
 				338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */,
 				79A1A51B2269AD0800CEA92A /* SmoothTitleView.m in Sources */,

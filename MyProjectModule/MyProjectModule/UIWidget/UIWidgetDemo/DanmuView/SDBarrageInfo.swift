@@ -1,9 +1,9 @@
 //
 //  SDBarrageInfo.swift
-//  SwiftDanmuView
+//  SDBarrageInfo
 //
-//  Created by liusilan on 2017/4/17.
-//  Copyright © 2017年 silan. All rights reserved.
+//  Created by XinXin on 2020/5/7.
+//  Copyright © 2020 xinxin. All rights reserved.
 //
 
 import Foundation
@@ -11,30 +11,17 @@ import UIKit
 
 class SDBarrageInfo {
     var text: String
-    var textColor: UIColor = UIColor.black
+    var attributedText: NSAttributedString?
     var itemViewClass: AnyClass = SDBarrageItemView.self
     
     init(text aText: String) {
         text = aText
     }
-    
-    init(text aText: String, textColor aTextColor: UIColor) {
-        text = aText
-        textColor = aTextColor
-    }
-    
-    init(text aText: String, textColor aTextColor: UIColor, itemViewClass aItemViewClass: AnyClass) {
-        text = aText
-        textColor = aTextColor
+    // 预留扩展view
+    init(attrText attText: NSAttributedString, aItemViewClass: AnyClass = SDBarrageItemView.self) {
+        text = attText.string
+        attributedText = attText
         itemViewClass = aItemViewClass
     }
-}
 
-class SLBgDanmuInfo: SDBarrageInfo {
-    var bgColor: UIColor
-    
-    init(text aText: String, textColor aTextColor: UIColor, itemViewClass aItemViewClass: AnyClass, bgColor aBgColor: UIColor) {
-        bgColor = aBgColor
-        super.init(text: aText, textColor: aTextColor, itemViewClass: aItemViewClass)
-    }
 }

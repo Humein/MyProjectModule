@@ -1,18 +1,16 @@
 //
-//  SLDanmuBgItemView.swift
-//  SwiftDanmuView
+//  SDBarrageBgItemView.swift
+//  SDBarrageBgItemView
 //
-//  Created by liusilan on 2017/4/19.
-//  Copyright © 2017年 silan. All rights reserved.
+//  Created by XinXin on 2020/5/7.
+//  Copyright © 2020 xinxin. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
 class SDBarrageBgItemView: SDBarrageItemView {
-    
-    typealias T = SLBgDanmuInfo
-    
+
     lazy var bgView: UIView = {
         var bgView = UIView()
         
@@ -33,12 +31,4 @@ class SDBarrageBgItemView: SDBarrageItemView {
         bgView.frame = self.bounds
     }
     
-   
-    override func updateDanmuInfo(info: SDBarrageInfo) {
-        super.updateDanmuInfo(info: info)
-    
-        if let info = info as? SLBgDanmuInfo {
-            bgView.backgroundColor = info.bgColor
-        }
-    }
 }

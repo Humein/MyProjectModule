@@ -2,8 +2,8 @@
 //  SDBarrageItemView.swift
 //  
 //
-//  Created by liusilan on 2017/4/12.
-//  Copyright © 2017年 silan. All rights reserved.
+//  Created by XinXin on 2020/5/7.
+//  Copyright © 2020 xinxin. All rights reserved.
 //
 
 import Foundation
@@ -49,9 +49,7 @@ class SDBarrageItemView: UIView {
     }
     
     func updateDanmuInfo(info: SDBarrageInfo) {
-        label.text = info.text
-        label.textColor = info.textColor
-        
+        label.text = info.text        
         setNeedsLayout()
     }
     

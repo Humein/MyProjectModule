@@ -128,9 +128,14 @@ class SwiftDemosViewController: AbstractViewController {
     }
     
     @objc func calculateRate() {
-        for i in 0...10 {
-            let info = SDBarrageInfo(text: "考四六级" + String(i), textColor: UIColor.red, itemViewClass: SDBarrageItemView.self)
-            list.append(info)
+        for _ in 0...10 {
+            let str1 = "姓名:"
+            let str2 = "你说啥呢"
+            let mutableStr = NSMutableAttributedString.init(string: "\(str1) \(str2)")
+            mutableStr.setColor(.red, range: NSRange.init(location: 0, length: str1.count))
+            mutableStr.setColor(.black, range:NSRange.init(location: str1.count, length: str2.count))
+            let ainfo = SDBarrageInfo.init(attrText: mutableStr)
+            list.append(ainfo)
         }
         if danmuView.pendingList.count > 100 {
             return

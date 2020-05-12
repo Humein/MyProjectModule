@@ -1,9 +1,9 @@
 //
 //  UIView+Frame.swift
-//  SwiftDanmuView
+//  UIView+Frame
 //
-//  Created by liusilan on 2017/4/17.
-//  Copyright © 2017年 silan. All rights reserved.
+//  Created by XinXin on 2020/5/7.
+//  Copyright © 2020 xinxin. All rights reserved.
 //
 
 import Foundation
