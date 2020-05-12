@@ -10,10 +10,6 @@ import UIKit
 import SDWebImage
 
 class SwiftDemosViewController: AbstractViewController {
-    lazy var danmuView: SLDanmuView = {
-        var danmuView = SLDanmuView(frame: CGRect(x: 0, y: 50, width: self.view.width, height: 150))
-        return danmuView
-    }()
     
     var list = [SDBarrageInfo]()
 
@@ -30,8 +26,6 @@ class SwiftDemosViewController: AbstractViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        BKDeviceOrientation.shareInstance().allowRotation(self)
-        SDDeviceOrientation.sharedInstance.allowRotation(self)
         //MARK:-  面向协议
         let f = FirstView()
         f.eat("default")
@@ -113,46 +107,16 @@ class SwiftDemosViewController: AbstractViewController {
 //        view.addSubview(self.cycleView)
         
         //MARK:- customBar
-//        let bar = SDCustomStatusBarView.init(frame: CGRect.init(x: 0, y: 180, width: self.view.frame.width, height: 20))
-//        bar.backgroundColor = .gray
-//        view.addSubview(bar)
-        
-
-        
-         let timer = Timer(timeInterval: 2.0, target: self, selector: #selector(calculateRate), userInfo: nil, repeats: true)
-         RunLoop.current.add(timer, forMode: RunLoop.Mode.default)
-
-          self.view.addSubview(danmuView)
-          danmuView.resume()
+        let bar = SDCustomStatusBarView.init(frame: CGRect.init(x: 0, y: 180, width: self.view.frame.width, height: 20))
+        bar.backgroundColor = .gray
+        view.addSubview(bar)
 
     }
-    
-    @objc func calculateRate() {
-        for _ in 0...10 {
-            let str1 = "姓名:"
-            let str2 = "你说啥呢"
-            let mutableStr = NSMutableAttributedString.init(string: "\(str1) \(str2)")
-            mutableStr.setColor(.red, range: NSRange.init(location: 0, length: str1.count))
-            mutableStr.setColor(.black, range:NSRange.init(location: str1.count, length: str2.count))
-            let ainfo = SDBarrageInfo.init(attrText: mutableStr, aItemViewClass: SDBarrageBgItemView.self)
-            list.append(ainfo)
-        }
-        if danmuView.pendingList.count > 100 {
-            return
-        }
-        
-        danmuView.pendingList.append(contentsOf: list)
-    }
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
 //        CustomPopCover.coverFrom(contentView: self.cycleView)
-        
-        UIView.animate(withDuration: UIApplication.shared.statusBarOrientationAnimationDuration) {
-//            BKDeviceOrientation.shareInstance().screenExChangeforOrientation(.landscapeRight)
-            SDDeviceOrientation.sharedInstance.screenExChangeforOrientation(.landscapeRight)
-        }
+    
     }
     
     deinit {

@@ -13,6 +13,8 @@ target 'MyProjectModule' do
   pod 'Aspects'
   pod 'SnapKit', '~> 4.0.0'
   pod 'FMDB'
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
 
   # Flutter 引入 现有 Native 工程
   flutter_application_path = "/Users/zhangxinxin/Code/FlutterDoc/my_flutter"

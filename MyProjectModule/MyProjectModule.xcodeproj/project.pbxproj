@@ -230,6 +230,7 @@
 		79E53C632469794100CFFE9A /* SDBarrageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5E2469794000CFFE9A /* SDBarrageInfo.swift */; };
 		79E53C642469794100CFFE9A /* SDBarrageBgItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5F2469794000CFFE9A /* SDBarrageBgItemView.swift */; };
 		79E53C66246A4BF800CFFE9A /* CustomPopCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C65246A4BF800CFFE9A /* CustomPopCover.swift */; };
+		79E53C68246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C67246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift */; };
 		79E96686237EBD8E00B49697 /* BlockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E96685237EBD8E00B49697 /* BlockModel.swift */; };
 		79E96688237EBDEA00B49697 /* TestBlockModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E96687237EBDEA00B49697 /* TestBlockModelViewController.swift */; };
 		79E9668A237EBDF800B49697 /* AView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E96689237EBDF800B49697 /* AView.swift */; };
@@ -685,6 +686,7 @@
 		79E53C5E2469794000CFFE9A /* SDBarrageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageInfo.swift; sourceTree = "<group>"; };
 		79E53C5F2469794000CFFE9A /* SDBarrageBgItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageBgItemView.swift; sourceTree = "<group>"; };
 		79E53C65246A4BF800CFFE9A /* CustomPopCover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPopCover.swift; path = MyProjectModule/UIWidget/CustomPopCover.swift; sourceTree = SOURCE_ROOT; };
+		79E53C67246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubOneSwiftDemosViewController.swift; sourceTree = "<group>"; };
 		79E96685237EBD8E00B49697 /* BlockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockModel.swift; sourceTree = "<group>"; };
 		79E96687237EBDEA00B49697 /* TestBlockModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBlockModelViewController.swift; sourceTree = "<group>"; };
 		79E96689237EBDF800B49697 /* AView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AView.swift; sourceTree = "<group>"; };
@@ -2113,6 +2115,7 @@
 				79DC644C23BA1F6C0073E22F /* Protocol Programming */,
 				79DC645023BA1F6C0073E22F /* Protocol Oriented Programming */,
 				79DC645223BA1F6C0073E22F /* SwiftDemosViewController.swift */,
+				79E53C67246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift */,
 			);
 			path = "Design-Pattern-in-Swift";
 			sourceTree = "<group>";
@@ -2620,6 +2623,7 @@
 				338FEBFF20E0F25A0025631B /* UIControlFactory.m in Sources */,
 				79DC643B23BA1E170073E22F /* ProtocolLinked.swift in Sources */,
 				79E53C642469794100CFFE9A /* SDBarrageBgItemView.swift in Sources */,
+				79E53C68246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift in Sources */,
 				794A6DB6238686B8008FB8D4 /* SegementContentView.m in Sources */,
 				7998C6CF23CEA4E500DA3BEF /* DesignModeViewController.m in Sources */,
 				790882F823A0D04500FA3BE5 /* ClassClusterTableViewCellA.m in Sources */,

@@ -77,7 +77,7 @@
 
     
     self.itemList = [NSMutableArray array];
-    NSArray *list = [NSArray arrayWithObjects:@"RenderImageViewController",@"RotationImageViewController",@"TransitionsAnimationDemos",@"ThreadSafeContainer",@"TestBlockModelViewController",@"SmoothBookmarkDemoViewController",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
+    NSArray *list = [NSArray arrayWithObjects:@"SubOneSwiftDemosViewController",@"RenderImageViewController",@"RotationImageViewController",@"TransitionsAnimationDemos",@"ThreadSafeContainer",@"TestBlockModelViewController",@"SmoothBookmarkDemoViewController",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
 
     [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { 
         CellModel *model =  [CellModel new];
@@ -171,7 +171,7 @@
 //    [self.tableView.tableView scrollRectToVisible:CGRectMake(0, 0, 10000, 10000) animated:YES];
     
     // scrollToRowAtIndexPath cell 过多会造成卡顿
-    [self.tableView.tableView setContentOffset:CGPointMake(0, CGFLOAT_MAX)];
+//    [self.tableView.tableView setContentOffset:CGPointMake(0, CGFLOAT_MAX)];
 
 }
 
@@ -204,6 +204,13 @@
     }
     if ([item.title isEqualToString:@"TransitionsAnimationDemos"]) {
         TransitionsAnimationDemos *userSetSwift = [[TransitionsAnimationDemos alloc] init];
+        userSetSwift.hidesBottomBarWhenPushed= YES;
+        [self.navigationController pushViewController:userSetSwift animated:YES];
+        return;
+    }
+    
+    if ([item.title isEqualToString:@"SubOneSwiftDemosViewController"]) {
+        SubOneSwiftDemosViewController *userSetSwift = [[SubOneSwiftDemosViewController alloc] init];
         userSetSwift.hidesBottomBarWhenPushed= YES;
         [self.navigationController pushViewController:userSetSwift animated:YES];
         return;

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SLDanmuView: UIView {
+class SDBarrageView: UIView {
     // 轨道间距
     let lineSpace: CGFloat = 22.0
     // 轨道数
@@ -71,7 +71,7 @@ class SLDanmuView: UIView {
             timer.invalidate()
         }
         
-        timer = Timer(timeInterval: 0.1, target: self, selector: #selector(SLDanmuView.handleTimer), userInfo: nil, repeats: true)
+        timer = Timer(timeInterval: 0.1, target: self, selector: #selector(SDBarrageView.handleTimer), userInfo: nil, repeats: true)
         
         RunLoop.current.add(timer!, forMode: RunLoop.Mode.common)
     }
