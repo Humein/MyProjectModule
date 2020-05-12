@@ -13,15 +13,17 @@ class SDBarrageInfo {
     var text: String
     var attributedText: NSAttributedString?
     var itemViewClass: AnyClass = SDBarrageItemView.self
-    
+    var bgColor: UIColor?
+
     init(text aText: String) {
         text = aText
     }
-    // 预留扩展view
-    init(attrText attText: NSAttributedString, aItemViewClass: AnyClass = SDBarrageItemView.self) {
+
+    init(attrText attText: NSAttributedString, aItemViewClass: AnyClass = SDBarrageItemView.self, aBgColor: UIColor = .black) {
         text = attText.string
         attributedText = attText
         itemViewClass = aItemViewClass
+        bgColor = aBgColor
     }
 
 }

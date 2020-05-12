@@ -13,9 +13,8 @@ class SDBarrageBgItemView: SDBarrageItemView {
 
     lazy var bgView: UIView = {
         var bgView = UIView()
-        
-        bgView.backgroundColor = UIColor.lightGray
-        bgView.layer.cornerRadius = 4
+        bgView.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.3)
+        bgView.layer.cornerRadius = 12
         bgView.clipsToBounds = true
         
         return bgView

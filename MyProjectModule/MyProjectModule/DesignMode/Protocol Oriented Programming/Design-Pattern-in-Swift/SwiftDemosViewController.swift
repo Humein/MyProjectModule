@@ -134,7 +134,7 @@ class SwiftDemosViewController: AbstractViewController {
             let mutableStr = NSMutableAttributedString.init(string: "\(str1) \(str2)")
             mutableStr.setColor(.red, range: NSRange.init(location: 0, length: str1.count))
             mutableStr.setColor(.black, range:NSRange.init(location: str1.count, length: str2.count))
-            let ainfo = SDBarrageInfo.init(attrText: mutableStr)
+            let ainfo = SDBarrageInfo.init(attrText: mutableStr, aItemViewClass: SDBarrageBgItemView.self)
             list.append(ainfo)
         }
         if danmuView.pendingList.count > 100 {
