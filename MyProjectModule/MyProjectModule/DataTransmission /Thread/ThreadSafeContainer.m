@@ -147,6 +147,13 @@
 
 
 #pragma mark - 设计一个读写安全的容器
+/**
+ - 怎么使用GCD实现线程安全的属性，他们的getter和setter应该怎么写 (读写隔离，线程安全的容器)
+    创建一个串行队列，然后setter和getter都使用dispatch.sync的方法，利用串行队列的特性，限制读写行为有次序的进行
+   
+ - 如果我想能并发的读，要做什么修改
+    改成并发队列，setter改成使用dispatch_barrier_async，实现多读单写
 
+ */
 
 @end

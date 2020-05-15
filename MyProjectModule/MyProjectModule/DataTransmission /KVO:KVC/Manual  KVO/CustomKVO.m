@@ -8,10 +8,12 @@
 
 #import "CustomKVO.h"
 #import "PersonInfo.h"
+#import "AppDelegate+DownManagerHelper.h"
 
 @interface CustomKVO()
 {
     PersonInfo *_myKVO;
+    AppDelegate *_myName;
 }
 @end;
 @implementation CustomKVO
@@ -19,14 +21,16 @@
 
 -(void)viewDidLoad{
     _myKVO = [PersonInfo new];
+    _myName = [AppDelegate new];
     [self addObserver];
 }
 
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
-    [_myKVO setValue:@"nihao" forKey:@"name"];
-    
+//    [_myKVO setValue:@"nihao" forKey:@"name"];
+    [_myName setValue:@"nihao" forKey:@"appName"];
+
 
 }
 
@@ -45,8 +49,10 @@
     
     //注册观察者
     
-    [_myKVO addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
+//    [_myKVO addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
+    [_myName addObserver:self forKeyPath:@"appName" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
 }
+
 
 //keyPath:属性名称
 

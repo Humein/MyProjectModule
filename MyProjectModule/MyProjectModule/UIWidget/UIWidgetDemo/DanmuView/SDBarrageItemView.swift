@@ -13,7 +13,7 @@ class SDBarrageItemView: UIView {
 
     typealias T = SDBarrageInfo
     
-    let leftMargin: CGFloat = 10
+    let leftMargin: CGFloat = 5
     let topMargin: CGFloat = 5
     
     lazy var defaultHeight: CGFloat = {
@@ -27,10 +27,8 @@ class SDBarrageItemView: UIView {
     
     lazy var label: UILabel = {
         var label = UILabel()
-        
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = UIColor.black
-        
         return label
     }()
     

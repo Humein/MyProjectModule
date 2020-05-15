@@ -77,7 +77,7 @@
 
     
     self.itemList = [NSMutableArray array];
-    NSArray *list = [NSArray arrayWithObjects:@"SubTwoSwiftDemosViewController",@"SubOneSwiftDemosViewController",@"RenderImageViewController",@"RotationImageViewController",@"TransitionsAnimationDemos",@"ThreadSafeContainer",@"TestBlockModelViewController",@"SmoothBookmarkDemoViewController",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
+    NSArray *list = [NSArray arrayWithObjects:@"TestOnewCollecionViewController",@"SubTwoSwiftDemosViewController",@"SubOneSwiftDemosViewController",@"RenderImageViewController",@"RotationImageViewController",@"TransitionsAnimationDemos",@"ThreadSafeContainer",@"TestBlockModelViewController",@"SmoothBookmarkDemoViewController",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
 
     [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { 
         CellModel *model =  [CellModel new];
@@ -196,6 +196,12 @@
 
     Class class = NSClassFromString(item.title);
     UIViewController *VC = [[class alloc] init];
+    if ([item.title isEqualToString:@"TestOnewCollecionViewController"]) {
+        TestOnewCollecionViewController *userSetSwift = [[TestOnewCollecionViewController alloc] init];
+        userSetSwift.hidesBottomBarWhenPushed= YES;
+        [self.navigationController pushViewController:userSetSwift animated:YES];
+        return;
+    }
     if ([item.title isEqualToString:@"TestBlockModelViewController"]) {
         TestBlockModelViewController *userSetSwift = [[TestBlockModelViewController alloc] init];
         userSetSwift.hidesBottomBarWhenPushed= YES;

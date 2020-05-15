@@ -23,12 +23,13 @@ class SubOneSwiftDemosViewController: SwiftDemosViewController {
     }()
     
     override func viewDidLoad() {
-        SDDeviceOrientation.sharedInstance.allowRotation(self)
-        SDDeviceOrientation.sharedInstance
-        .screenExChangeforOrientation(.landscapeRight)
-        
-        
         self.view.addSubview(switchView)
+        
+        
+        
+        
+        
+        
         switchView.snp.makeConstraints { (make) in
             make.centerY.equalTo(self.view).offset(88)
             make.left.equalTo(self.view).offset(40)
@@ -56,17 +57,19 @@ class SubOneSwiftDemosViewController: SwiftDemosViewController {
     }
     
     func danmuReset(){
-        danmuView.reset()
+        danmuView.removeAll()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
+        SDDeviceOrientation.sharedInstance.allowRotation(self)
+         SDDeviceOrientation.sharedInstance
+         .screenExChangeforOrientation(.landscapeRight)
     }
     
     @objc func calculateRate() {
         for _ in 0...10 {
             let str1 = "姓名:"
-            let str2 = "你说啥呢"
+            let str2 = "你说啥呢你说啥呢你说啥呢你说啥呢你说啥呢"
             let mutableStr = NSMutableAttributedString.init(string: "\(str1) \(str2)")
             mutableStr.setColor(.red, range: NSRange.init(location: 0, length: str1.count))
             mutableStr.setColor(.black, range:NSRange.init(location: str1.count, length: str2.count))

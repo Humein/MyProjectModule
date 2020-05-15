@@ -28,6 +28,19 @@ class SubTwoSwiftDemosViewController: SwiftDemosViewController {
     }
 }
 
+//MARK:- 知识点选择
+///*******   知识点选择  *******////
+// http://code.cocoachina.com/list/33/1
+// https://blog.csdn.net/u013282507/article/details/54136812
+
+// XLCardSwitch-master
+
+
+
+
+
+//MARK:- 播放进度条
+///*******    播放进度条  *******////
 // 播放进度
 protocol SDPlaySliderDelegate {
     func sliderValueChanging(_ slider: SDGradientSlider)

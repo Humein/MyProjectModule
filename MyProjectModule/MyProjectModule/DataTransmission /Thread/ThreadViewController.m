@@ -23,6 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self testThread1];
     //请求依赖
     [self GCDGroup];
     [self semaphore];
@@ -496,5 +498,41 @@
     });
 
 }
+
+- (void)testThread1 {
+    
+    dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
+    NSLog(@"1"); // 主队列 - 任务1
+    dispatch_async(queue, ^{
+        NSLog(@"2"); // queue-任务2
+//        dispatch_sync(queue, ^{
+//            NSLog(@"3"); // queue -任务3 要加到 queue中
+//        });
+//        NSLog(@"4"); // queue-任务4
+    });
+    NSLog(@"5"); // 主队列 - 任务5
+    
+    // log 1 5 2 然后崩溃
+    
+    dispatch_queue_t serialQueue = dispatch_queue_create("serialQueue111", DISPATCH_QUEUE_SERIAL);
+    dispatch_async(serialQueue, ^{
+//        sleep(5);
+      NSLog(@"a.=====%@",[NSThread currentThread]);
+    });
+    // 主要原因  这个地方同步 导致 先执行a
+    dispatch_sync(serialQueue, ^{
+//        sleep(5);
+      NSLog(@"b.=====%@",[NSThread currentThread]);
+    });
+//    sleep(5);
+    NSLog(@"c.=====%@",[NSThread currentThread]);
+    
+    // a.b.c
+    /**
+     时间15
+     */
+}
+
+
 
 @end

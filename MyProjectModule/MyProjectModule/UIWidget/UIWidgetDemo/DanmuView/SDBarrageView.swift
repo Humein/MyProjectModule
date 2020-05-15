@@ -6,16 +6,18 @@
 //  Copyright © 2020 xinxin. All rights reserved.
 //
 
+// XXTODO 间距问题 富文本图片问题
+
 import Foundation
 import UIKit
 
 class SDBarrageView: UIView {
     // 轨道间距
-    let lineSpace: CGFloat = 22.0
+    let lineSpace: CGFloat = 20.0
     // 轨道数
     var numberOfRows: Int = 3
-    
-    var speed: CGFloat = 75.0
+    // 速度
+    var speed: CGFloat = 100.0
     
     var timer: Timer?
     
@@ -71,8 +73,7 @@ class SDBarrageView: UIView {
             timer.invalidate()
         }
         
-        timer = Timer(timeInterval: 0.1, target: self, selector: #selector(SDBarrageView.handleTimer), userInfo: nil, repeats: true)
-        
+        timer = Timer(timeInterval: 1.0, target: self, selector: #selector(SDBarrageView.handleTimer), userInfo: nil, repeats: true)
         RunLoop.current.add(timer!, forMode: RunLoop.Mode.common)
     }
     
@@ -88,7 +89,9 @@ class SDBarrageView: UIView {
         }
         
         if let info = pendingList.first {
+            // get栈顶元素
             playDanmu(info: info)
+            // 移除栈顶
             pendingList.remove(at: 0)
         }
     }
@@ -189,12 +192,13 @@ class SDBarrageView: UIView {
         let duration = (self.width + itemView.width) / speed
         
         UIView.animate(withDuration: TimeInterval(duration), delay: 0, options: .curveLinear, animations: {
-            itemView.x = -itemView.width
+            itemView.x = itemView.x - itemView.width
         }) { (finished) in
             if (finished) {
-                // add to reusePool
+                // add to reusePool viewClassName 为key
                 self.reuseItemViewPool[NSStringFromClass(itemViewClass)] = itemView
 //                print("reusePool:\(self.reuseItemViewPool)")
+                // view 离开屏幕后移除，那这个缓存池是其实是没有的呀？？
                 itemView.removeFromSuperview()
             }
         }
@@ -244,5 +248,13 @@ class SDBarrageView: UIView {
         reuseItemViewSet.removeAll()
         pendingList.removeAll()
         timeDict.removeAll()
+    }
+    
+    func removeAll() {
+        stopTimer()
+        reuseItemViewSet.removeAll()
+        pendingList.removeAll()
+        timeDict.removeAll()
+        self.removeAllSubviews()
     }
 }
