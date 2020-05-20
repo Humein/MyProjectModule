@@ -511,12 +511,21 @@
 //        NSLog(@"4"); // queue-任务4
     });
     NSLog(@"5"); // 主队列 - 任务5
-    
     // log 1 5 2 然后崩溃
     
+    
+    
+    /**
+     a b c都需要5分钟, 问打印结果 以及 abc当前线程和一共执行时间
+     串行队列
+     async（a）
+     sync（b）
+     c
+     
+     */
     dispatch_queue_t serialQueue = dispatch_queue_create("serialQueue111", DISPATCH_QUEUE_SERIAL);
     dispatch_async(serialQueue, ^{
-//        sleep(5);
+      sleep(5);
       NSLog(@"a.=====%@",[NSThread currentThread]);
     });
     // 主要原因  这个地方同步 导致 先执行a
@@ -527,9 +536,11 @@
 //    sleep(5);
     NSLog(@"c.=====%@",[NSThread currentThread]);
     
-    // a.b.c
     /**
+     串行队列的话 打印 a.b.c
      时间15
+     
+     并行队列的话 打印 b a c 如果 a 中有耗时 打印 b c  a
      */
 }
 

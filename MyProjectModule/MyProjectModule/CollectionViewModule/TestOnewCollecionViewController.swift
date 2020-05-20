@@ -10,31 +10,44 @@ import UIKit
 
 class TestOnewCollecionViewController: UIViewController,SDCardSwitchDelegate,SDCardSwitchDataSource {
     func cardSwitchNumberOfCard() -> (Int) {
-        <#code#>
+        return self.cellInfoArr().count
     }
     
     func cardSwitchCellForItemAtIndex(index: Int) -> (UICollectionViewCell) {
-        <#code#>
+        let cell = self.cardSwitch.dequeueReusableCell(withReuseIdentifier:"CustomCellID", for: index) as! AbstractCollectionViewCell
+        return cell
     }
     
+    func cellInfoArr() -> Array<(String, String)> {
+        return [("1","fword"),("1","fword"),("1","fword"),("1","fword"),("1","fword"),("1","fword"),("1","fword"),("1","fword"),("1","fword"),("1","fword")]
+    }
 
     //滚动卡片
     lazy var cardSwitch: SDPointsTransformView = {
         let temp = SDPointsTransformView.init()
-        temp.frame = CGRect.init(x: 0, y: 400, width: self.view.frame.size.width, height: 100)
+        temp.frame = CGRect.init(x: 0, y: 120, width: self.view.frame.size.width, height: 180)
         temp.dataSource = self
         temp.delegate = self
+        temp.pagingEnabled = true
         //注册cell
-        temp.register(cellClass: CustomCollectionViewCell.self, forCellWithReuseIdentifier:"CustomCellID")
+        temp.register(cellClass: AbstractCollectionViewCell.self, forCellWithReuseIdentifier:"CustomCellID")
         return temp
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SDDeviceOrientation.sharedInstance.allowRotation(self)
+         SDDeviceOrientation.sharedInstance
+         .screenExChangeforOrientation(.landscapeRight)
 
         // Do any additional setup after loading the view.
     }
+
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.view.addSubview(self.cardSwitch)
+
+    }
 
 
 }

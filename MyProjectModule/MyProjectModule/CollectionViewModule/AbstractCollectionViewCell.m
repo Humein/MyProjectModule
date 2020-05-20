@@ -25,6 +25,9 @@
 }
 
 -(void)configSubView{
+    self.titleLabel.text = @"23212131231232";
+    self.contentView.clipsToBounds = YES;
+    self.contentView.layer.cornerRadius = 10;
     self.titleLabel = [UILabel new];
     [self.contentView addSubview:self.titleLabel];
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {

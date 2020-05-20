@@ -45,7 +45,7 @@ class SDTimeAlertPickerView: UIView, UIPickerViewDelegate, UIPickerViewDataSourc
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-//    touchesBegan点击事件拦截
+//    touchesBegan点击事件拦截 手势
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = ((touches as NSSet).anyObject() as AnyObject)
         let point = touch.location(in:self)
