@@ -22,10 +22,9 @@
     [super viewDidLoad];
 
     [self setupChildVc];
+    
+    [self setupPagingView];
 
-    /*
-     SmoothBookmarkViewController 可以实现自定义 悬浮 和 非悬浮， 但是他的子控制器都是一次性都加载完成的不好
-     */
 
 }
 

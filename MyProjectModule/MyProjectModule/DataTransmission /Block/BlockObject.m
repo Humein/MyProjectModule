@@ -13,6 +13,7 @@
 #import "UIButton+Decorate.h"
 @interface BlockObject()
 @property (nonatomic, copy) MiniProgramResultBlock completeBlock;
+
 @end
 
 @implementation BlockObject
@@ -25,6 +26,7 @@
     }
     if (block3) {
         block3(dic);
+        self.block4(dic, @"3333");
         NSLog(@"%@", block3(dic));
     }
 }
@@ -45,6 +47,7 @@
     //调用
     BlockObject *testStr = myBlock(@"b");
     NSLog(@"%@",testStr);
+    
     return myBlock;
     
 }

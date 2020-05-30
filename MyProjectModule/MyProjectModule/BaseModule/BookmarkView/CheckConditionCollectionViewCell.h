@@ -6,11 +6,9 @@
 //  Copyright © 2019 sunlands. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "AbstractCollectionViewCell.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface CheckConditionCollectionViewCell : UICollectionViewCell
+@interface CheckConditionCollectionViewCell : AbstractCollectionViewCell
 
 @property (nonatomic, strong) UILabel *subLineLabel;
 
@@ -19,5 +17,3 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) BOOL select;
 
 @end
-
-NS_ASSUME_NONNULL_END

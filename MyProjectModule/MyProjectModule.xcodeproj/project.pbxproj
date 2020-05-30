@@ -160,7 +160,6 @@
 		793C637E240606A4000BE949 /* DrawBaseAnimaltionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C6374240606A4000BE949 /* DrawBaseAnimaltionView.m */; };
 		793C638024060736000BE949 /* UISampleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C637F24060736000BE949 /* UISampleExample.swift */; };
 		79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79402223219D59A20008A3AD /* SimulationChainFucCode.m */; };
-		794A6DB6238686B8008FB8D4 /* SegementContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 794A6DB5238686B8008FB8D4 /* SegementContentView.m */; };
 		794B100621DEF98300B91405 /* PointsTreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */; };
 		794B100921DF02E300B91405 /* AbstractTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100821DF02E300B91405 /* AbstractTableViewController.m */; };
 		794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */; };
@@ -182,10 +181,8 @@
 		79A0ECA82368263E004C10B0 /* XXH264DecodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA72368263E004C10B0 /* XXH264DecodeTool.m */; };
 		79A0ECAB23682EFF004C10B0 /* XXPLEAGLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECAA23682EFF004C10B0 /* XXPLEAGLLayer.m */; };
 		79A0ECAE236838E5004C10B0 /* VTBEncDecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECAD236838E5004C10B0 /* VTBEncDecViewController.m */; };
-		79A1A5162269AD0800CEA92A /* CheckConditionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5042269AD0800CEA92A /* CheckConditionItem.m */; };
 		79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5082269AD0800CEA92A /* BaseBookmarkChildController.m */; };
 		79A1A5182269AD0800CEA92A /* SmoothBookmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A50B2269AD0800CEA92A /* SmoothBookmarkView.m */; };
-		79A1A5192269AD0800CEA92A /* CheckConditionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A50E2269AD0800CEA92A /* CheckConditionCollectionViewCell.m */; };
 		79A1A51A2269AD0800CEA92A /* BookmarkContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A50F2269AD0800CEA92A /* BookmarkContainerView.m */; };
 		79A1A51B2269AD0800CEA92A /* SmoothTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5112269AD0800CEA92A /* SmoothTitleView.m */; };
 		79A1A51C2269AD0800CEA92A /* BookmarkMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5122269AD0800CEA92A /* BookmarkMainTableView.m */; };
@@ -225,6 +222,11 @@
 		79E2EA0D246EB6DC003B5A39 /* SDPointsTransformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E2EA0C246EB6DB003B5A39 /* SDPointsTransformView.swift */; };
 		79E2EA0F246EB840003B5A39 /* TestOnewCollecionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E2EA0E246EB840003B5A39 /* TestOnewCollecionViewController.swift */; };
 		79E2EA57247A2755003B5A39 /* AVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E2EA56247A2755003B5A39 /* AVViewController.m */; };
+		79E2EA5A2481F91F003B5A39 /* BookMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E2EA592481F91E003B5A39 /* BookMarkView.m */; };
+		79E2EA5D2481FA64003B5A39 /* AbstractBookmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E2EA5B2481FA64003B5A39 /* AbstractBookmarkViewController.m */; };
+		79E2EA622481FA6B003B5A39 /* CheckConditionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E2EA5E2481FA6B003B5A39 /* CheckConditionCollectionViewCell.m */; };
+		79E2EA632481FA6B003B5A39 /* CheckConditionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E2EA602481FA6B003B5A39 /* CheckConditionItem.m */; };
+		79E2EA662481FC99003B5A39 /* BookmarkViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E2EA652481FC99003B5A39 /* BookmarkViewDemo.m */; };
 		79E3D63321DE57D60038CACB /* ZTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63221DE57D60038CACB /* ZTKBaseRequest.m */; };
 		79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63521DE60E80038CACB /* RequestMediatorBaseBusniess.m */; };
 		79E3D63921DE67E00038CACB /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63821DE67E00038CACB /* RequestViewController.m */; };
@@ -566,8 +568,6 @@
 		793C637F24060736000BE949 /* UISampleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISampleExample.swift; sourceTree = "<group>"; };
 		79402222219D59A20008A3AD /* SimulationChainFucCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulationChainFucCode.h; sourceTree = "<group>"; };
 		79402223219D59A20008A3AD /* SimulationChainFucCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulationChainFucCode.m; sourceTree = "<group>"; };
-		794A6DB4238686B8008FB8D4 /* SegementContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegementContentView.h; sourceTree = "<group>"; };
-		794A6DB5238686B8008FB8D4 /* SegementContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegementContentView.m; sourceTree = "<group>"; };
 		794B100421DEF98300B91405 /* PointsTreeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PointsTreeTableViewCell.h; path = MyProjectModule/NetRequstAndSocket/PointsTreeTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PointsTreeTableViewCell.m; path = MyProjectModule/NetRequstAndSocket/PointsTreeTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		794B100721DF02E300B91405 /* AbstractTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractTableViewController.h; sourceTree = "<group>"; };
@@ -607,17 +607,13 @@
 		79A0ECAA23682EFF004C10B0 /* XXPLEAGLLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXPLEAGLLayer.m; sourceTree = "<group>"; };
 		79A0ECAC236838E5004C10B0 /* VTBEncDecViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBEncDecViewController.h; sourceTree = "<group>"; };
 		79A0ECAD236838E5004C10B0 /* VTBEncDecViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTBEncDecViewController.m; sourceTree = "<group>"; };
-		79A1A5042269AD0800CEA92A /* CheckConditionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckConditionItem.m; sourceTree = "<group>"; };
 		79A1A5052269AD0800CEA92A /* SmoothBookmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothBookmarkViewController.h; sourceTree = "<group>"; };
-		79A1A5062269AD0800CEA92A /* CheckConditionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckConditionItem.h; sourceTree = "<group>"; };
 		79A1A5082269AD0800CEA92A /* BaseBookmarkChildController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseBookmarkChildController.m; sourceTree = "<group>"; };
 		79A1A5092269AD0800CEA92A /* BaseBookmarkChildController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseBookmarkChildController.h; sourceTree = "<group>"; };
 		79A1A50B2269AD0800CEA92A /* SmoothBookmarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothBookmarkView.m; sourceTree = "<group>"; };
 		79A1A50C2269AD0800CEA92A /* SmoothTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothTitleView.h; sourceTree = "<group>"; };
 		79A1A50D2269AD0800CEA92A /* BookmarkMainTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkMainTableView.h; sourceTree = "<group>"; };
-		79A1A50E2269AD0800CEA92A /* CheckConditionCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckConditionCollectionViewCell.m; sourceTree = "<group>"; };
 		79A1A50F2269AD0800CEA92A /* BookmarkContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkContainerView.m; sourceTree = "<group>"; };
-		79A1A5102269AD0800CEA92A /* CheckConditionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckConditionCollectionViewCell.h; sourceTree = "<group>"; };
 		79A1A5112269AD0800CEA92A /* SmoothTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothTitleView.m; sourceTree = "<group>"; };
 		79A1A5122269AD0800CEA92A /* BookmarkMainTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkMainTableView.m; sourceTree = "<group>"; };
 		79A1A5132269AD0800CEA92A /* SmoothBookmarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothBookmarkView.h; sourceTree = "<group>"; };
@@ -686,6 +682,16 @@
 		79E2EA5324793C97003B5A39 /* AVSECommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AVSECommand.h; path = "AVSimpleEditoriOS 命令模式/AVSimpleEditor/AVSECommand.h"; sourceTree = "<group>"; };
 		79E2EA55247A2755003B5A39 /* AVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVViewController.h; sourceTree = "<group>"; };
 		79E2EA56247A2755003B5A39 /* AVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVViewController.m; sourceTree = "<group>"; };
+		79E2EA582481F91E003B5A39 /* BookMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookMarkView.h; sourceTree = "<group>"; };
+		79E2EA592481F91E003B5A39 /* BookMarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookMarkView.m; sourceTree = "<group>"; };
+		79E2EA5B2481FA64003B5A39 /* AbstractBookmarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractBookmarkViewController.m; sourceTree = "<group>"; };
+		79E2EA5C2481FA64003B5A39 /* AbstractBookmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractBookmarkViewController.h; sourceTree = "<group>"; };
+		79E2EA5E2481FA6B003B5A39 /* CheckConditionCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckConditionCollectionViewCell.m; sourceTree = "<group>"; };
+		79E2EA5F2481FA6B003B5A39 /* CheckConditionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckConditionCollectionViewCell.h; sourceTree = "<group>"; };
+		79E2EA602481FA6B003B5A39 /* CheckConditionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckConditionItem.m; sourceTree = "<group>"; };
+		79E2EA612481FA6B003B5A39 /* CheckConditionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckConditionItem.h; sourceTree = "<group>"; };
+		79E2EA642481FC99003B5A39 /* BookmarkViewDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookmarkViewDemo.h; sourceTree = "<group>"; };
+		79E2EA652481FC99003B5A39 /* BookmarkViewDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookmarkViewDemo.m; sourceTree = "<group>"; };
 		79E3D63121DE57D60038CACB /* ZTKBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTKBaseRequest.h; sourceTree = "<group>"; };
 		79E3D63221DE57D60038CACB /* ZTKBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTKBaseRequest.m; sourceTree = "<group>"; };
 		79E3D63421DE60E80038CACB /* RequestMediatorBaseBusniess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestMediatorBaseBusniess.h; sourceTree = "<group>"; };
@@ -913,8 +919,8 @@
 		33828F1120D3CAB800318AE5 /* BaseModule */ = {
 			isa = PBXGroup;
 			children = (
-				799F2AA523855916002F5ADE /* SegmentAndSuspension */,
-				79A1A5032269AD0800CEA92A /* SmoothBookmarker */,
+				799F2AA523855916002F5ADE /* BookmarkView */,
+				79A1A5032269AD0800CEA92A /* SuspensionBookmarker */,
 				33C971322124108D00EAAD5E /* Alert Window */,
 				338FEBFC20E0F2390025631B /* BaseUIKitFactory */,
 			);
@@ -1785,29 +1791,6 @@
 			path = DrawWaveLine;
 			sourceTree = "<group>";
 		};
-		794A6DB123868660008FB8D4 /* V */ = {
-			isa = PBXGroup;
-			children = (
-				794A6DB4238686B8008FB8D4 /* SegementContentView.h */,
-				794A6DB5238686B8008FB8D4 /* SegementContentView.m */,
-			);
-			path = V;
-			sourceTree = "<group>";
-		};
-		794A6DB223868660008FB8D4 /* M */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = M;
-			sourceTree = "<group>";
-		};
-		794A6DB323868660008FB8D4 /* C */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = C;
-			sourceTree = "<group>";
-		};
 		794B100321DEF97200B91405 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1854,14 +1837,21 @@
 			path = DownHelper;
 			sourceTree = "<group>";
 		};
-		799F2AA523855916002F5ADE /* SegmentAndSuspension */ = {
+		799F2AA523855916002F5ADE /* BookmarkView */ = {
 			isa = PBXGroup;
 			children = (
-				794A6DB323868660008FB8D4 /* C */,
-				794A6DB223868660008FB8D4 /* M */,
-				794A6DB123868660008FB8D4 /* V */,
+				79E2EA5F2481FA6B003B5A39 /* CheckConditionCollectionViewCell.h */,
+				79E2EA5E2481FA6B003B5A39 /* CheckConditionCollectionViewCell.m */,
+				79E2EA612481FA6B003B5A39 /* CheckConditionItem.h */,
+				79E2EA602481FA6B003B5A39 /* CheckConditionItem.m */,
+				79E2EA5C2481FA64003B5A39 /* AbstractBookmarkViewController.h */,
+				79E2EA5B2481FA64003B5A39 /* AbstractBookmarkViewController.m */,
+				79E2EA582481F91E003B5A39 /* BookMarkView.h */,
+				79E2EA592481F91E003B5A39 /* BookMarkView.m */,
+				79E2EA642481FC99003B5A39 /* BookmarkViewDemo.h */,
+				79E2EA652481FC99003B5A39 /* BookmarkViewDemo.m */,
 			);
-			path = SegmentAndSuspension;
+			path = BookmarkView;
 			sourceTree = "<group>";
 		};
 		79A0EC9D236819C5004C10B0 /* MediaCodec */ = {
@@ -1897,11 +1887,9 @@
 			path = "Encode:Decode";
 			sourceTree = "<group>";
 		};
-		79A1A5032269AD0800CEA92A /* SmoothBookmarker */ = {
+		79A1A5032269AD0800CEA92A /* SuspensionBookmarker */ = {
 			isa = PBXGroup;
 			children = (
-				79A1A5062269AD0800CEA92A /* CheckConditionItem.h */,
-				79A1A5042269AD0800CEA92A /* CheckConditionItem.m */,
 				79A1A5052269AD0800CEA92A /* SmoothBookmarkViewController.h */,
 				79A1A5152269AD0800CEA92A /* SmoothBookmarkViewController.m */,
 				79B44B22237CF0A900B7D73D /* SmoothBookmarkDemoViewController.h */,
@@ -1911,7 +1899,7 @@
 				79A1A5072269AD0800CEA92A /* BaseChild */,
 				79A1A50A2269AD0800CEA92A /* Views */,
 			);
-			path = SmoothBookmarker;
+			path = SuspensionBookmarker;
 			sourceTree = "<group>";
 		};
 		79A1A5072269AD0800CEA92A /* BaseChild */ = {
@@ -1934,8 +1922,6 @@
 				79A1A50F2269AD0800CEA92A /* BookmarkContainerView.m */,
 				79A1A50D2269AD0800CEA92A /* BookmarkMainTableView.h */,
 				79A1A5122269AD0800CEA92A /* BookmarkMainTableView.m */,
-				79A1A5102269AD0800CEA92A /* CheckConditionCollectionViewCell.h */,
-				79A1A50E2269AD0800CEA92A /* CheckConditionCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2533,6 +2519,7 @@
 				7993C86B228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m in Sources */,
 				7913EF62245915DA000C77A3 /* SDABTransitionAnimator.swift in Sources */,
 				79DC642423BA1A0A0073E22F /* HTMiddleControlView.m in Sources */,
+				79E2EA662481FC99003B5A39 /* BookmarkViewDemo.m in Sources */,
 				79BA3B73244D56E5008805F6 /* BKExitFullscreenTransition.m in Sources */,
 				79EEEAAC2190156500848B59 /* PointTreeModel.m in Sources */,
 				33FAE4D820E243B800BE7175 /* CollectionDetaiDemo.m in Sources */,
@@ -2547,7 +2534,6 @@
 				7908831023A0D04500FA3BE5 /* CorrectTagModel.m in Sources */,
 				7908831A23A0D04500FA3BE5 /* BJPlayer.m in Sources */,
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
-				79A1A5162269AD0800CEA92A /* CheckConditionItem.m in Sources */,
 				7908831723A0D04500FA3BE5 /* ProtoclForCMutilellViewController.m in Sources */,
 				33759E77212FAA7200D801C1 /* NSObject+RuntimeHelper.m in Sources */,
 				7908832C23A1097100FA3BE5 /* AdpterObject.swift in Sources */,
@@ -2578,6 +2564,7 @@
 				7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */,
 				7936BB4124459E750043AF5A /* SDCycleView.swift in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
+				79E2EA5A2481F91F003B5A39 /* BookMarkView.m in Sources */,
 				79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */,
 				33C2DF3721DCC5D400F96F32 /* PointTreeTypeOne.m in Sources */,
 				7913EF6D24591EC3000C77A3 /* SDPushAViewController.swift in Sources */,
@@ -2651,7 +2638,6 @@
 				7908832723A0D04500FA3BE5 /* UIImage+Title.m in Sources */,
 				7936BB652445A7400043AF5A /* DBAbstractItem.m in Sources */,
 				7913EF63245915DA000C77A3 /* SDPresentAViewController.swift in Sources */,
-				79A1A5192269AD0800CEA92A /* CheckConditionCollectionViewCell.m in Sources */,
 				79A1A51C2269AD0800CEA92A /* BookmarkMainTableView.m in Sources */,
 				7936BB772446EA860043AF5A /* BaseNavViewController.m in Sources */,
 				7908831923A0D04500FA3BE5 /* StrategyMethod.swift in Sources */,
@@ -2687,7 +2673,6 @@
 				79DC643B23BA1E170073E22F /* ProtocolLinked.swift in Sources */,
 				79E53C642469794100CFFE9A /* SDBarrageBgItemView.swift in Sources */,
 				79E53C68246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift in Sources */,
-				794A6DB6238686B8008FB8D4 /* SegementContentView.m in Sources */,
 				7998C6CF23CEA4E500DA3BEF /* DesignModeViewController.m in Sources */,
 				790882F823A0D04500FA3BE5 /* ClassClusterTableViewCellA.m in Sources */,
 				796E8F672430D91F001EB53F /* ThreadSafeContainer.m in Sources */,
@@ -2699,6 +2684,7 @@
 				333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */,
 				33759E6E212F9FD500D801C1 /* UITableViewCell+AnimationType.m in Sources */,
 				33FAE4E720E2445500BE7175 /* WaterfallLayout.m in Sources */,
+				79E2EA632481FA6B003B5A39 /* CheckConditionItem.m in Sources */,
 				7908830C23A0D04500FA3BE5 /* APPPayTool.m in Sources */,
 				79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */,
 				79BA3B71244D56E5008805F6 /* BKEnterFullscreenTransition.m in Sources */,
@@ -2717,6 +2703,7 @@
 				7908832623A0D04500FA3BE5 /* UIImage+BaseFilter.m in Sources */,
 				79E2EA57247A2755003B5A39 /* AVViewController.m in Sources */,
 				79B44B27237CF23000B7D73D /* BaseBookmarkChildDemoController.m in Sources */,
+				79E2EA622481FA6B003B5A39 /* CheckConditionCollectionViewCell.m in Sources */,
 				79040DA12238AA2D0085335E /* AspectTrackMananer.m in Sources */,
 				79EEEA592182C13A00848B59 /* LiveCommentDemoViewController.m in Sources */,
 				79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */,
@@ -2760,6 +2747,7 @@
 				7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */,
 				79DC642323BA1A0A0073E22F /* Chain_of_responsibility.swift in Sources */,
 				79E2EA0D246EB6DC003B5A39 /* SDPointsTransformView.swift in Sources */,
+				79E2EA5D2481FA64003B5A39 /* AbstractBookmarkViewController.m in Sources */,
 				7908832223A0D04500FA3BE5 /* pie.m in Sources */,
 				33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */,
 				33C971402124108D00EAAD5E /* CustomAlertViewDefault.m in Sources */,

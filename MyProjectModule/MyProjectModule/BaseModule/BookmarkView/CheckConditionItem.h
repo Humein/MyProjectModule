@@ -6,21 +6,19 @@
 //  Copyright © 2019 sunlands. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import "AbstractItem.h"
 
 @interface CheckConditionItem : NSObject
 
 @property (nonatomic,copy)NSString *name;
 
-//@property (nonatomic,strong)UIColor *tintColor;//tagCell的颜色
-
-
 @property (nonatomic,assign)float itemHeight;
 
 @property (nonatomic,assign)float itemWidth;
 
-@end
 
-NS_ASSUME_NONNULL_END
+- (float)titleWidth;
+
+- (float)titleHeight;
+
+@end

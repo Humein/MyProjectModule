@@ -7,37 +7,36 @@
 //
 
 #import "CheckConditionCollectionViewCell.h"
-#import <Masonry/Masonry.h>
-#define Font(a) [UIFont systemFontOfSize:(a)]
-#define HexColor(value,a)   [UIColor colorWithRed:((value & 0xFF0000) >> 16)/255.0 green:((value & 0x00FF00) >> 8)/255.0 blue:(value & 0x0000FF)/255.0 alpha:(a)]
+#import "Masonry.h"
 
 @implementation CheckConditionCollectionViewCell
+
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        
         [self configSubView];
         [self layout];
     }
     return self;
 }
-
-
-- (void)configSubView
-{
+- (void)configSubView{
+    
     self.nameLable = [UILabel new];
-    self.nameLable.font= Font(14);
+    self.nameLable.font= [UIFont systemFontOfSize:14];
     self.nameLable.textAlignment= NSTextAlignmentCenter;
     self.nameLable.backgroundColor = [UIColor clearColor];
     
     self.subLineLabel = [UILabel new];
-    self.subLineLabel.backgroundColor = HexColor(0xFF6D73, 1);
-    self.subLineLabel.layer.shadowColor = HexColor(0xFF6D73, 1).CGColor;
+    self.subLineLabel.backgroundColor = [UIColor redColor];
+    self.subLineLabel.layer.shadowColor = [UIColor redColor].CGColor;
     self.subLineLabel.layer.shadowOpacity = 0.3;
     self.subLineLabel.layer.shadowOffset = CGSizeMake(0, 2);
     self.subLineLabel.layer.shadowRadius = 4;
     self.subLineLabel.layer.masksToBounds = NO;
     self.subLineLabel.hidden = YES;
+    
+    [self.contentView addSubview:self.nameLable];
+    [self.contentView addSubview:self.subLineLabel];    
 }
 
 - (void)layout

@@ -30,6 +30,11 @@
     } withFailure:^NSString *(NSDictionary *dic) {
         return @"222222";
     }];
+    
+    self.block4 = ^BlockObject *(NSDictionary *dic, NSString *str) {
+        BlockObject *testStr = [BlockObject new];
+        return testStr;
+    };
 
 }
 
