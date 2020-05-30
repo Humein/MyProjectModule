@@ -9,11 +9,30 @@
 #import "BlockViewController.h"
 #import "CallbackAndCompletionHandlerForBlock.h"
 #import "SimulationChainFucCode.h"
-@interface BlockViewController ()
+@interface BlockViewController (){
+    NSString *_strBlock;
+}
 
 @end
 
 @implementation BlockViewController
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self findDocSuccess:^(NSDictionary *dic) {
+        
+    } withFailure:^NSString *(NSDictionary *dic) {
+        return @"111111";
+    }];
+
+    
+    [self findDoc1Success:^(NSDictionary *dic) {
+        
+    } withFailure:^NSString *(NSDictionary *dic) {
+        return @"222222";
+    }];
+
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,7 +40,6 @@
     [self navigationBar];
     
     [self CallbackAndCompletionHandlerForBlock];
-    
     
     
     [self fucntionCode];
@@ -39,10 +57,21 @@
     
     //    导航事件
     int a = 0;
+    __weak typeof(self) weakSelf=self;
+    // block 中处理 成员变量循环引用
     self.rightBarItemClickBlock = ^(UIButton *button, NSInteger index) {
+        BlockViewController *strongSelf = weakSelf;
+        strongSelf->_strBlock = @"";
 //        int a = 1;
         NSLog(@"%@", @(a));
     };
+    /**
+     @weakify(self)
+     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+         @strongify(self)
+         self->pageNum = @"1";
+     }];
+     */
     
     int b = 1;
 //    int b = 0;
@@ -126,6 +155,7 @@
     // 第二步  实现多个方法调用
     BlockObject *bj1 = [[BlockObject alloc] init];
     bj1.eat4().eat4().run4().eat4();
+    self.eat4().run4();
     
     
     // 第三步 传递参数

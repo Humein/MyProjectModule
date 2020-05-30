@@ -15,7 +15,9 @@ target 'MyProjectModule' do
   pod 'FMDB'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
-  pod "Texture"
+#  pod "Texture"
+  pod 'GPUImage'
+
 
   # Flutter 引入 现有 Native 工程
   flutter_application_path = "/Users/zhangxinxin/Code/FlutterDoc/my_flutter"

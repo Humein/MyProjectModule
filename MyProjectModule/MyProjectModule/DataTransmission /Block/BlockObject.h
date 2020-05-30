@@ -20,6 +20,13 @@ typedef void (^PopBlock)(void);
 @property (nonatomic,copy) PopBlock popBlock;
 
 
+typedef void (^Block1)(void);
+typedef void (^Block2)(NSDictionary *dic);
+typedef NSString *(^Block3)(NSDictionary *dic);
+typedef BlockObject *(^Block4)(NSDictionary *dic, NSString *str);
+-(void)findDocSuccess:(Block2)block2 withFailure:(Block3)block3;
+-(BlockObject * (^)(NSString *kindOfFood))findDoc1Success:(Block2)block2 withFailure:(Block3)block3;
+
 #pragma mark --- 2 无返回值 有参数 匿名(参数)  block （1-异步回调  2- 无需实例对象 配置对象的参数）
 
 typedef void(^Success)(id data);
@@ -72,7 +79,8 @@ typedef void (^IDBlock)(id configModel);
 - (BlockObject * (^)(void))eat4;
 
 // -- 函数式编程步骤3 --> 传递参数
-//函数式编程和链式编程
+//函数式编程和链式编程    使用链式调用的方式，明显更能使代码更简洁，更连贯。
+//而实现这一方式的本质是返回一个返回值为自身的Block对象。
 - (BlockObject * (^)(double distance))run5;
 - (BlockObject * (^)(NSString *kindOfFood))eat5;
 

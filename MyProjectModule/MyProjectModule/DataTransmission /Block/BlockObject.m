@@ -11,14 +11,45 @@
 #import "BlockObject.h"
 #import "UIControlFactory.h"
 #import "UIButton+Decorate.h"
-
 @interface BlockObject()
-
 @property (nonatomic, copy) MiniProgramResultBlock completeBlock;
-
 @end
 
 @implementation BlockObject
+
+
+-(void)findDocSuccess:(Block2)block2 withFailure:(Block3)block3{
+    NSDictionary *dic = [NSDictionary dictionary];
+    if (block2) {
+        block2(dic);
+    }
+    if (block3) {
+        block3(dic);
+        NSLog(@"%@", block3(dic));
+    }
+}
+
+-(BlockObject * (^)(NSString *kindOfFood))findDoc1Success:(Block2)block2 withFailure:(Block3)block3{
+    NSDictionary *dic = [NSDictionary dictionary];
+    if (block2) {
+        block2(dic);
+    }
+    if (block3) {
+        block3(dic);
+        NSLog(@"%@", block3(dic));
+    }
+    //    有参数有返回值的block
+    BlockObject *(^myBlock)(NSString *) = ^(NSString *kindOfFood) {
+        return self;
+    };
+    //调用
+    BlockObject *testStr = myBlock(@"b");
+    NSLog(@"%@",testStr);
+    return myBlock;
+    
+}
+
+
 
 
 

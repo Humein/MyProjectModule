@@ -18,6 +18,7 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - GPUImage (0.1.7)
   - KVOController (1.2.0)
   - Masonry (1.1.0)
   - MJExtension (3.1.0)
@@ -43,6 +44,7 @@ DEPENDENCIES:
   - AFNetworking
   - Aspects
   - FMDB
+  - GPUImage
   - KVOController
   - Masonry
   - MJExtension
@@ -69,6 +71,7 @@ SPEC REPOS:
     - YYKit
   trunk:
     - FMDB
+    - GPUImage
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -78,6 +81,7 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
@@ -91,6 +95,6 @@ SPEC CHECKSUMS:
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: cc00493339466fe8b69efaa02e7e065a83b709cc
+PODFILE CHECKSUM: b6c2e650b76d3888b3cba5d00e6a0e3a8f9a6d0c
 
 COCOAPODS: 1.8.4
