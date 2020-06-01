@@ -29,7 +29,7 @@ static NSString *BookmarkViewContentCellIndentify = @"BookmarkViewContentCellInd
 @end
 
 @implementation BookmarkContentViewCell
-
+// 将子VC的view添加到下面的cell上
 - (void)loadContentView:(UIView *)controllerView
 {
     
@@ -131,14 +131,15 @@ static NSString *BookmarkViewContentCellIndentify = @"BookmarkViewContentCellInd
     [self.tagListView registerClass:cellClass forCellWithReuseIdentifier:NSStringFromClass(itemClass)];
 }
 
-#pragma mark- collectionView的代理，这个代理走的是全部的
+#pragma mark- collectionView的代理，这个代理走的是上下全部的
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    // XXTODO 不是一次性加载的核心逻辑 区别上下collectionView代理回调
     if (collectionView == self.tagListView)
     {
         if (self.keyboardIsVisible)
-        {
+        { // 防止键盘弹出导致的bug
             [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
             sleep(0.45);
             return;
@@ -200,7 +201,8 @@ static NSString *BookmarkViewContentCellIndentify = @"BookmarkViewContentCellInd
 
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (collectionView== self.tagListView) {
+    // XXTODO 不是一次性加载的核心逻辑
+    if (collectionView == self.tagListView) {
         
         id item = [self.tagListArray objectAtIndex:indexPath.row];
         
@@ -519,7 +521,7 @@ static NSString *BookmarkViewContentCellIndentify = @"BookmarkViewContentCellInd
 }
 
 
-- (UICollectionView*)tagListView
+- (UICollectionView *)tagListView
 {
     if (_tagListView==nil) {
         

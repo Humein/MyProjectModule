@@ -13,7 +13,7 @@
 @class BookMarkView;
 
 @interface BookmarkContentViewCell :AbstractCollectionViewCell
-
+// 添加VC.view 到 cell
 - (void)loadContentView:(UIView*)controllerView;
 
 @end

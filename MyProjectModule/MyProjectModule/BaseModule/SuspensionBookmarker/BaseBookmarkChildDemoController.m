@@ -14,6 +14,12 @@
 
 @implementation BaseBookmarkChildDemoController
 
+- (void)loadView {
+    [super loadView];
+    
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];

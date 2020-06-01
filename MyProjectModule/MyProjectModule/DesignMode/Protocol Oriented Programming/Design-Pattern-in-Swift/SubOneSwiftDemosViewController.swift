@@ -158,6 +158,10 @@ class SDBarrageSwitchView: UIView {
         self.inputBarrage.snp.updateConstraints { (make) in
             make.size.equalTo(CGSize.init(width: newWidth, height: 25))
         }
+        /**
+         layout 动画更新 约束变化后视图更新
+         可以使用layoutIfNeeded()立即更新视图布局，使用setNeedsLayout()在下个绘图周期中触发布局更新。这两个方法都会触发layoutSubviews()方法。
+         */
         UIView.animate(withDuration: 0.5) {
             self.layoutIfNeeded()
         }

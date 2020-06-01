@@ -27,6 +27,8 @@ typedef BlockObject *(^Block4)(NSDictionary *dic, NSString *str);
 -(void)findDocSuccess:(Block2)block2 withFailure:(Block3)block3;
 -(BlockObject * (^)(NSString *kindOfFood))findDoc1Success:(Block2)block2 withFailure:(Block3)block3;
 @property (nonatomic,copy) Block4 block4;
+//typedef void (^DocBlock) (NSArray *fileArray);
+//-(void)searchDocWithParams:(NSString *)param compleBlock:(DocBlock)block;
 
 #pragma mark --- 2 无返回值 有参数 匿名(参数)  block （1-异步回调  2- 无需实例对象 配置对象的参数）
 

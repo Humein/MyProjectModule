@@ -98,7 +98,7 @@
 }
 
 #pragma mark - UIResponderChain
-
+// 重写UIResponderChain 方法 并 把响应链继续传递下去
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo{
         
     [self handleEventWithName:eventName parameter:userInfo];

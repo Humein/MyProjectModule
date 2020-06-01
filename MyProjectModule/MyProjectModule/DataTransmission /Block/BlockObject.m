@@ -17,9 +17,12 @@
 @end
 
 @implementation BlockObject
-
+//-(void)searchDocWithParams:(NSString *)param compleBlock:(DocBlock)block{
+//    
+//}
 
 -(void)findDocSuccess:(Block2)block2 withFailure:(Block3)block3{
+    
     NSDictionary *dic = [NSDictionary dictionary];
     if (block2) {
         block2(dic);

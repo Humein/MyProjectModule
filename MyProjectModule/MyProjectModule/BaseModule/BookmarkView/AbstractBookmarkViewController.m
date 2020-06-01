@@ -116,12 +116,11 @@
 
 - (void)bookmarkViewContentListCellForItemIndexPath:(NSIndexPath *)indexPath bookmarkView:(BookMarkView *)bookmarkView cell:(BookmarkContentViewCell *)cell
 {
+    // 取出子VC
     AbstractViewController *vc = [self.childViewControllers objectAtIndex:indexPath.row];
-    
-    NSLog(@"0--->:%zi",indexPath.row);
-    
-    NSLog(@"1--->:%@",vc);
-    
+        
+    // cell滚动每次都会调用 但是 因为LoadView调用时机是    当访问UIViewController中的.view时，如果view为nil才会去调用此方法。否则不会再加载。而viewDidload 是由loadView触发的，
+    // 所以viewDidload只会加载一次
     [cell loadContentView:vc.view];
 }
 
