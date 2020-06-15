@@ -28,6 +28,7 @@ class BindResponderOfChain: UIView, ResponderDelegate{
         closure(self)
     }
     
+    // 添加节点 链式编程
     func next(_ node: BindResponderOfChain) -> BindResponderOfChain {
         self.nextChain = node
         if let last = lastNode {

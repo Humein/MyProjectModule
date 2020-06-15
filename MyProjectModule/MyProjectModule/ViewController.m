@@ -36,12 +36,15 @@
 #import "FlutterSubViewController.h"
 #import "YYFPSLabel.h"
 #import "MyProjectModule-Swift.h"
-@interface ViewController ()<AlertTableViewDelegate>
+@interface ViewController ()<AlertTableViewDelegate> {
+    NSString *_name;
+}
 @property (nonatomic,strong)AlertTableView *tableView;
 @property (nonatomic,strong)NSMutableArray *itemList;
 @property (nonatomic,weak)AlertTableView *weakTableView;
 @property (nonatomic,weak)NSArray *weakArray;
 @property (nonatomic,strong) YYFPSLabel *fpsLabel;
+
 
 @end
 
@@ -77,7 +80,7 @@
 
     
     self.itemList = [NSMutableArray array];
-    NSArray *list = [NSArray arrayWithObjects:@"AVViewController",@"TestOnewCollecionViewController",@"SubTwoSwiftDemosViewController",@"SubOneSwiftDemosViewController",@"RenderImageViewController",@"RotationImageViewController",@"TransitionsAnimationDemos",@"ThreadSafeContainer",@"TestBlockModelViewController",@"BookmarkViewDemo",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
+    NSArray *list = [NSArray arrayWithObjects:@"UISampleExampleVC",@"AVViewController",@"TestOnewCollecionViewController",@"SubTwoSwiftDemosViewController",@"SubOneSwiftDemosViewController",@"RenderImageViewController",@"RotationImageViewController",@"TransitionsAnimationDemos",@"ThreadSafeContainer",@"TestBlockModelViewController",@"BookmarkViewDemo",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
 
     [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { 
         CellModel *model =  [CellModel new];
@@ -116,15 +119,26 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self aleartView];
 
-//  加 __block 前 10 后 100
     __block int i = 10;
     dispatch_async(dispatch_get_main_queue(), ^{
         // 注意 i 被block持有 同一个对象
         i = 100;
     });
-    NSLog(@"====%@",  @(i));
-
+    NSLog(@"====%@",  @(i)); // 10
     
+    
+
+    int b = 1;
+    dispatch_async(dispatch_get_main_queue(), ^{
+     NSLog(@"====%i",b); // 正常为 1  加 __block 后 100
+    });
+    b = 100;
+
+    void(^Block)(void) = ^{
+
+        self->_name =@"the name";
+
+    };
 
 //  应该是crash
     __block BlockObject *testObj = [BlockObject new];
@@ -231,6 +245,14 @@
         [self.navigationController pushViewController:userSetSwift animated:YES];
         return;
     }
+    
+    if ([item.title isEqualToString:@"UISampleExampleVC"]) {
+        UISampleExampleVC *userSetSwift = [[UISampleExampleVC alloc] init];
+        userSetSwift.hidesBottomBarWhenPushed= YES;
+        [self.navigationController pushViewController:userSetSwift animated:YES];
+        return;
+    }
+    
     
     
     if (VC == nil) {

@@ -32,7 +32,7 @@
         [self setupUI];
         self.scrollIndex = 0;
 //        _timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(action) userInfo:nil repeats:YES];
-        // YYWeakProxy
+        // YYWeakProxy  p target 就是  YYWeakProxy
         _timer = [NSTimer timerWithTimeInterval:2
                                                   target:[YYWeakProxy proxyWithTarget:self]
                                                 selector:@selector(action)
@@ -93,6 +93,11 @@
                                             selector:@selector(action)
                                             userInfo:nil
                                              repeats:YES];
+//    NSTimer timerWithTimeInterval:<#(NSTimeInterval)#> invocation:<#(nonnull NSInvocation *)#> repeats:<#(BOOL)#>
+//    NSTimer timerWithTimeInterval:<#(NSTimeInterval)#> repeats:<#(BOOL)#> block:<#^(NSTimer * _Nonnull timer)block#>
+    
+    
+    
     [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
 
 }

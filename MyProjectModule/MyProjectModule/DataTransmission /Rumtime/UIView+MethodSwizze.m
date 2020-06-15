@@ -85,7 +85,7 @@
 //in custom button .m  overide this method  子类重写
 //扩大UIButton
 
-- (BOOL)CP0_pointInside:(CGPoint)point withEvent:(nullable UIEvent *)event {
+- (BOOL)pointInside:(CGPoint)point withEvent:(nullable UIEvent *)event {
 
     CGFloat minimumHitTestWidth = 100;
     CGFloat minimumHitTestHeight = 100;

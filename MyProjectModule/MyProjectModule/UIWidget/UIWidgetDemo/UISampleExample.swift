@@ -8,9 +8,89 @@
 
 import UIKit
 
+class UISampleExampleVC: UIViewController {
+    let circleView = UISampleExample.init(frame: CGRect.init(x: 30, y: 140, width: 44, height: 44))
+    
+    override func viewDidLoad() {
+        self.view.addSubview(circleView)
+        circleView.transform = CGAffineTransform(scaleX: 0, y: 0)
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+//            self.circleView.transform = .identity
+            self.circleView.transform = CGAffineTransform(scaleX: 2, y: 2)
+
+        }, completion: nil)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //CAShapeLayer和UIBezierPath 动画
+        /**
+         请画出一条开始和结束比较慢，中间比较快的贝塞尔曲线(即
+         UIViewAnimationOptionCurveEaselnOut)。另外能否画出- -条有弹性效果的曲线?
+         */
+
+          //  创建CAShapeLayer
+          let layer = CAShapeLayer.init()
+          layer.fillColor = UIColor.clear.cgColor
+          layer.lineWidth =  20.0
+          layer.lineCap = .round
+          layer.lineJoin = .round
+          layer.strokeColor = UIColor.red.cgColor
+          self.view.layer.addSublayer(layer)
+          // 创建贝塞尔路径
+          let path = UIBezierPath.init()
+          path.move(to: CGPoint.init(x: 20, y: 90))
+          path.addLine(to: CGPoint.init(x: 20, y: 590))
+          path.lineWidth = 20.0
+          path.lineCapStyle = .round  //线条拐角
+          path.lineJoinStyle = .round //终点处理
+          
+          // 关联layer和贝塞尔路径
+          layer.path = path.cgPath
+          
+          
+          // 创建Animation
+          let animation = CABasicAnimation.init(keyPath: "strokeEnd")
+          animation.fromValue = (0.0)
+          animation.toValue = (1.0)
+          animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeInEaseOut)
+          animation.duration = 3
+//          animation.autoreverses = true
+//          animation.repeatCount = 5
+//          animation.beginTime = CACurrentMediaTime() + 2;
+
+          // 设置layer的animation
+          layer.add(animation, forKey: "nil")
+    }
+}
+
+
 class UISampleExample: UIView {
-
-
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = .gray
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // 仅仅使用UIBezierPath来绘图的话，需要在view的drawRect方法里实现
+    override func draw(_ rect: CGRect) {
+        let color =  UIColor.red
+        color.set() //设置线条颜色
+         
+        let path = UIBezierPath.init()
+        path.move(to: CGPoint.init(x: 10, y: 10))
+        path.addLine(to: CGPoint.init(x: 200, y: 80))
+        path.lineWidth = 2.0
+        path.lineCapStyle = .round  //线条拐角
+        path.lineJoinStyle = .round //终点处理
+        
+        path.stroke()
+    }
+    
+    
     /// 部分圆角 + 阴影效果
     func shadowAndMask() {
         let view1 = UIView()
