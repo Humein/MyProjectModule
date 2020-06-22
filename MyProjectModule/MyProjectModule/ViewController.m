@@ -367,8 +367,7 @@
 #pragma mark - PublicMethod
 
 #pragma mark - LazyLoad
-- (AlertTableView *)tableView
-{
+- (AlertTableView *)tableView{
     if (_tableView == nil) {
         _tableView = [[AlertTableView alloc] initWithFrame:CGRectZero];
         _tableView.tableView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.8f];

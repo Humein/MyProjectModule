@@ -34,7 +34,6 @@ typedef void(^RunloopBlock)(void);
 //    可以看出，为imageView设置image,是在UITrackingRunLoopMode中进行的，如果图片很大，图片解压缩和渲染肯定会很耗时，那么卡顿就是必然的。
     
     NSLog(@"current:%@",[NSRunLoop currentRunLoop].currentMode);
-
     [self addtask:^{
         
         NSLog(@"1111111111");
