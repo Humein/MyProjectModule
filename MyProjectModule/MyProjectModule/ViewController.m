@@ -36,6 +36,14 @@
 #import "FlutterSubViewController.h"
 #import "YYFPSLabel.h"
 #import "MyProjectModule-Swift.h"
+#include <execinfo.h>
+
+void UncaughtExceptionHandler(NSException *exception) {
+    NSArray *exceptionArray = [exception callStackSymbols]; //得到当前调用栈信息
+    NSString *exceptionReason = [exception reason];       //非常重要，就是崩溃的原因
+    NSString *exceptionName = [exception name];           //异常类型
+}
+
 @interface ViewController ()<AlertTableViewDelegate> {
     NSString *_name;
 }
@@ -382,8 +390,5 @@
     }
     return _itemList;
 }
-
-
-
 
 @end
