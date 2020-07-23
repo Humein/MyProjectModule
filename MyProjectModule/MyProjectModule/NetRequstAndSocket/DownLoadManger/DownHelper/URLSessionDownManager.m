@@ -18,7 +18,36 @@
 
  Library/Preference文件夹
  作用: 保存应用的所有偏好设置,NSUserDefaults用户设置生成的plist文件也会保存到这个目录下,iTunes同步设备时会备份该目录
+ 
+-  NSURLSessionTask
+ 
+  - NSURLSessionDownloadTask
+     使用NSURLSessionDownloadTask下载文件,系统默认存放在tmp中,所以必须要自己剪切到其他位置
+  - NSURLSessionDataTask
+     需要自己去写数据
+ 
+ 一个NSURLSession
+ 多个Task下载
 
+ 对于创建的task，如果其响应处理的方式为通过上述delegate代理借口的方式处理：
+
+ 若delegateQueue = nil，则不管session执行的线程为主线程还是子线程，block中的代码执行线程均为任意选择的子线程；
+
+      若delegateQueue = [NSOperationQueue mainQueue],则不管session执行的线程为主线程还是子线程，则block中的代码执行线程为主线程中执行；
+
+      若delegateQueue = [[NSOperationQueue alloc] init]，则不管session执行的线程为主线程还是子线程，block中的代码执行线程均为任意选择的子线程
+      
+ 多启动几个Task，看如下打印结果。
+ 发现NSURLSession的并发由系统控制了，至于并发数是多少呢？或者说线程池怎样控制呢？，我们不知道，只知道系统会控制好的。不用自己操心当然是好事啦，但是并不是每次都是好事，有时候我们需要调优，怎么办呢？例如在做图片下载的时候，我们是需要控制并发的，不然内存占用会比较高，甚至崩溃了。
+
+ 下面看看AFN的是怎样做的。部分代码如下： 可以开启多线程 最大并发1
+ self.operationQueue = [[NSOperationQueue alloc] init];
+ self.operationQueue.maxConcurrentOperationCount = 1;
+ self.session = [NSURLSession sessionWithConfiguration:self.sessionConfiguration delegate:self delegateQueue:self.operationQueue];
+
+ AFN统一为代理配置了一个单线程队列，然后通过GCD并发处理响应完成的数据。当然你也可以设置主线程队列为代理队列，这样就可以在代理里面操作UI了。但是AFN为什么要统一配置一个单线程代理队列呢？我猜是方便任务管理。
+
+ 
  */
 
 // 缓存主目录
@@ -84,7 +113,7 @@
 {
     if (_fileHandle == nil) {
         NSURL *url = [NSURL fileURLWithPath:self.location];
-        NSLog(@"-----------%@", self.location);
+//        NSLog(@"-----------%@", self.location);
         _fileHandle = url ? [NSFileHandle fileHandleForWritingToURL:url error:nil] : nil;
     }
     
@@ -257,6 +286,9 @@ static URLSessionDownManager *_shareInstance;
         
         //可以上传下载HTTP和HTTPS的后台任务(程序在后台运行)。 在后台时，将网络传输交给系统的单独的一个进程,即使app挂起、推出甚至崩溃照样在后台执行。
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"XXDownload"];
+        // 创建NSURLSession代码，有三个参数，1、指定配置，2、设置代理 3、队列代理
+        NSOperationQueue *operationQueue = [[NSOperationQueue alloc] init];
+//        operationQueue.maxConcurrentOperationCount = 1;
         _session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
     }
     
@@ -507,7 +539,6 @@ static URLSessionDownManager *_shareInstance;
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
 {
-    NSLog(@"%s", __FUNCTION__);
     dispatch_async(dispatch_get_main_queue(), ^{
         for (XXDownItem *source in self.downloadSources) {
             if (source.task == dataTask) {
@@ -529,6 +560,9 @@ static URLSessionDownManager *_shareInstance;
      额这个代理回调本身在自线程
 
      */
+    
+    NSLog(@"当前线程 ==== %@", [NSThread currentThread]);
+
     dispatch_async(dispatch_get_main_queue(), ^{
         for (XXDownItem *source in self.downloadSources) {
             if (source.task == dataTask) {

@@ -24,40 +24,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "905D3E0A-5E18-4611-BC41-9CF208A1EF0A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyProjectModule/NetRequstAndSocket/DownLoadManger/DownHelper/URLSessionDownManager.m"
-            timestampString = "579700298.1222661"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
-            landmarkName = "-downloadSources"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7CCFD22F-7073-4B1D-92C8-FD06E39D4DD5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyProjectModule/NetRequstAndSocket/DownLoadManger/DownHelper/URLSessionDownManager.m"
-            timestampString = "579700298.122871"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
-            landmarkName = "-downloadSources"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3188C5F8-A4CB-4677-B990-B3DA4A18B3FC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -303,56 +269,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "198"
             endingLineNumber = "198"
-            landmarkName = "-downloadSources"
+            landmarkName = "+shareInstance"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AFD11B61-151F-484A-BCFB-C4BDE482D63D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyProjectModule/NetRequstAndSocket/DownLoadManger/DownHelper/URLSessionDownManager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "373"
-            endingLineNumber = "373"
-            landmarkName = "-suspendAllTask"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "AFD11B61-151F-484A-BCFB-C4BDE482D63D - 78875e16526836a0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[URLSessionDownManager suspendAllTask]"
-                  moduleName = "MyProjectModule"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangxinxin/Code/MyProjectModule/MyProjectModule/MyProjectModule/NetRequstAndSocket/DownLoadManger/DownHelper/URLSessionDownManager.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "373"
-                  endingLineNumber = "373"
-                  offsetFromSymbolStart = "41">
-               </Location>
-               <Location
-                  uuid = "AFD11B61-151F-484A-BCFB-C4BDE482D63D - 78875e16526836a0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[URLSessionDownManager suspendAllTask]"
-                  moduleName = "MyProjectModule"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangxinxin/Code/MyProjectModule/MyProjectModule/MyProjectModule/NetRequstAndSocket/DownLoadManger/DownHelper/URLSessionDownManager.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "373"
-                  endingLineNumber = "373"
-                  offsetFromSymbolStart = "63">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
