@@ -68,6 +68,10 @@ class SwiftDemosViewController: AbstractViewController {
         print(cache.get(3))
         print(cache.get(2))
         print(cache.get(1))
+        print(cache.removeHead() as Any)
+
+
+        
         
         let cache1 = LRUCache<Any>.init(size: 2)
         cache1.put(key: 1, val: 1)

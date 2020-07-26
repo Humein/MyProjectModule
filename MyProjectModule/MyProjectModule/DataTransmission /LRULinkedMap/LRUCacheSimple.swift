@@ -196,6 +196,26 @@ class LRUCacheSimple {
         }
         return nil
     }
+
+
+    // 删除头节点
+    public func removeHead() -> LRUListNode? {
+            // 先判断tail 是否存在
+            if let head = self.head {
+                // 从字典中移除
+                cache.removeValue(forKey: head.key)
+                // 从链表中移除
+                if self.head?.next !== nil {
+                    self.head = self.head?.next
+                    self.head?.prev = nil
+                }else{
+                    return nil
+                }
+                return head
+            }
+            return nil
+        }
+    
 }
 
 
