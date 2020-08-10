@@ -36,7 +36,7 @@
 
 
 @interface SDWebImageDownloader () <NSURLSessionTaskDelegate, NSURLSessionDataDelegate>
-
+//XXMARK SD
 @property (strong, nonatomic, nonnull) NSOperationQueue *downloadQueue;
 @property (weak, nonatomic, nullable) NSOperation *lastAddedOperation;
 @property (assign, nonatomic, nullable) Class operationClass;

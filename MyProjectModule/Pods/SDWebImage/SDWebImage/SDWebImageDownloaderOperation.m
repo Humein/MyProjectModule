@@ -178,7 +178,7 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
              *  Create the session for this task
              *  We send nil as delegate queue so that the session creates a serial operation queue for performing all delegate
              *  method calls and completion handler calls.
-             
+              
              delegateQueue为nil，所以回调方法默认在一个子线程的串行队列中执行
              */
             session = [NSURLSession sessionWithConfiguration:sessionConfig

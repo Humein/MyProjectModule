@@ -1015,6 +1015,7 @@
 		339D6C7420EA285700AC535E /* DataTransmission  */ = {
 			isa = PBXGroup;
 			children = (
+				796BAD9624DBECB400F68597 /* AvoidCrash */,
 				79DC643C23BA1E1D0073E22F /* OC-Linked - Chain Of Responsibility */,
 				79DC643923BA1E170073E22F /* Protocol - Linked */,
 				79DF39362200498400977BB4 /* LRULinkedMap */,
@@ -1798,6 +1799,13 @@
 				794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		796BAD9624DBECB400F68597 /* AvoidCrash */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AvoidCrash;
 			sourceTree = "<group>";
 		};
 		797EC357236BCCEF00E21E44 /* UIWidget */ = {

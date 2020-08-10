@@ -37,8 +37,10 @@ struct OldDeathStarSuperlaserTarget {
 /*:
 **Adapter**
 */
+// 方式 1
 class NewDeathStarSuperlaserClass: NSObject {
 
+    // 对象适配器
     private let target: OldDeathStarSuperlaserTarget
 
     init(_ target: OldDeathStarSuperlaserTarget) {
@@ -51,13 +53,15 @@ class NewDeathStarSuperlaserClass: NSObject {
     }
 
     func newMethod() {
-        print("NewDeathStarSuperlaserTarget" + target.oldMethod())
+        print("NewDeathStarSuperlaserClass" + target.oldMethod())
     }
 }
 
-// 协议好处是 可以统一接口，同时创建多个适配器
+// 协议好处是 可以统一接口，同时方便创建多个适配器
+// 方式 2
 struct NewDeathStarSuperlaserTarget: NewDeathStarSuperLaserAiming {
 
+    // 对象适配器
     private let target: OldDeathStarSuperlaserTarget
 
     var angleV: Double {

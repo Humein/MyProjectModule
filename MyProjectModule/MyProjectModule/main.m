@@ -27,6 +27,7 @@ typedef void(^MyBlock)(void);
 int main(int argc, char * argv[]) {
 
     @autoreleasepool {
+        // Block 崩溃问题
         MyObject *myObject = [[MyObject alloc] init];
         __weak typeof(myObject) weakObject = myObject;
         __block MyObject *tempObject = myObject;
@@ -39,7 +40,8 @@ int main(int argc, char * argv[]) {
     }
     
     NSLog(@"myObject的作用域结束了");
-    
     return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
 
 }
+
+

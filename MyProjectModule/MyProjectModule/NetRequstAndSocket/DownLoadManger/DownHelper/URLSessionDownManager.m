@@ -170,7 +170,11 @@
 
 @property (strong, nonatomic) NSMutableArray *delegateArr;
 
-@property (strong, nonatomic) NSURLSession *session;
+/// 数据任务将在其中运行的会话
+@property (strong, nonatomic) NSURLSession *downLoadsession;
+
+/// 下载最大并发
+@property (strong, nonatomic, nonnull) NSOperationQueue *downloadQueue;
 
 @end
 
@@ -184,6 +188,43 @@ static URLSessionDownManager *_shareInstance;
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    // 销毁session 和 downloadQueue
+    [self.downLoadsession invalidateAndCancel];
+    self.downLoadsession = nil;
+    [self.downloadQueue cancelAllOperations];
+}
+
+#pragma mark - 初始化 downLoadsession 和 downloadQueue
+- (NSURLSession *)downLoadsession
+{
+    if (_downLoadsession== nil) {
+        // 创建下载并发队列
+        _downloadQueue = [[NSOperationQueue alloc] init];
+        _downloadQueue.maxConcurrentOperationCount = 6;
+        _downloadQueue.name = @"com.hackemist.DownHelper";
+    
+        /**
+         *  Create the session for this task
+         *  We send nil as delegate queue so that the session creates a serial operation queue for performing all delegate
+         *  method calls and completion handler calls.
+         */
+        //可以上传下载HTTP和HTTPS的后台任务(程序在后台运行)。 在后台时，将网络传输交给系统的单独的一个进程,即使app挂起、推出甚至崩溃照样在后台执行。
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"XXDownload"];
+        // 超时时间
+        configuration.timeoutIntervalForRequest = 15;
+        /**
+         由于支持后台下载的URLSession的特性，系统会限制并发任务的数量，以减少资源的开销。同时对于不同的 host，就算httpMaximumConnectionsPerHost设置为 1，也会有多个任务并发下载，所以不能使用httpMaximumConnectionsPerHost来控制下载任务的并发数
+         */
+        configuration.HTTPMaximumConnectionsPerHost = 3;
+        
+        
+        
+        // 创建NSURLSession代码，有三个参数，1、指定配置，2、设置代理 3、队列代理<回掉的>
+        _downLoadsession= [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
+    }
+    
+    return _downLoadsession;
 }
 
 
@@ -230,7 +271,7 @@ static URLSessionDownManager *_shareInstance;
             
             XXDownItem *source = [NSKeyedUnarchiver unarchiveObjectWithData:data];
             NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[source.netPath stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]]];
-            [source setTask:[self.session dataTaskWithRequest:request]];
+            [source setTask:[self.downLoadsession dataTaskWithRequest:request]];
             [_downloadSources addObject:source];
             
             //恢复下载
@@ -280,20 +321,6 @@ static URLSessionDownManager *_shareInstance;
 
 
 
-- (NSURLSession *)session
-{
-    if (_session == nil) {
-        
-        //可以上传下载HTTP和HTTPS的后台任务(程序在后台运行)。 在后台时，将网络传输交给系统的单独的一个进程,即使app挂起、推出甚至崩溃照样在后台执行。
-        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"XXDownload"];
-        // 创建NSURLSession代码，有三个参数，1、指定配置，2、设置代理 3、队列代理
-        NSOperationQueue *operationQueue = [[NSOperationQueue alloc] init];
-//        operationQueue.maxConcurrentOperationCount = 1;
-        _session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
-    }
-    
-    return _session;
-}
 
 - (NSMutableArray *)delegateArr
 {
@@ -336,15 +363,15 @@ static URLSessionDownManager *_shareInstance;
 
 /**
  添加下载任务
- 
  @param netPath 下载地址
  @return 下载任务数据模型
  */
+#pragma mark - 下载操作
 - (XXDownItem *)addDownloadTast:(NSString *)netPath andOffLine:(BOOL)offLine;
 {
     XXDownItem *source = [[XXDownItem alloc] init];
     [source setNetPath:netPath];
-    [source setTask:[self.session dataTaskWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[netPath stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]]]]];
+    [source setTask:[self.downLoadsession dataTaskWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[netPath stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]]]]];
     
     [source setFileName:[self getFileName:[[netPath componentsSeparatedByString:@"/"] lastObject]]];
     [source setLocation:[XXDownloadTool_DownloadDataDocument_Path stringByAppendingPathComponent:source.fileName]];
@@ -421,7 +448,7 @@ static URLSessionDownManager *_shareInstance;
         // 断点位置
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[source.netPath stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]]];
         [request setValue:[NSString stringWithFormat:@"bytes=%lld-", source.totalBytesWritten] forHTTPHeaderField:@"Range"];
-        source.task = [self.session dataTaskWithRequest:request];
+        source.task = [self.downLoadsession dataTaskWithRequest:request];
         [source.task resume];
     }
     else

@@ -21,6 +21,10 @@
 
 @implementation ThreadViewController
 
+- (void)dealloc{
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -144,7 +148,7 @@
     _coderQueue =  dispatch_queue_create("com.hackemist.SDWebImageDownloaderOperationCoderQueue", DISPATCH_QUEUE_CONCURRENT);
     // 开启一个子线程
     dispatch_async(self.coderQueue, ^{
-        
+        _i = 10;
         sleep(1);
         [[NSThread currentThread] setName:@"1"];
         NSLog(@"1------%@", [NSThread currentThread]); // 打印当前线程

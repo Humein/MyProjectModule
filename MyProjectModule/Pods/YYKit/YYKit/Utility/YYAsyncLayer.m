@@ -23,6 +23,13 @@ static dispatch_queue_t YYAsyncLayerGetDisplayQueue() {
 #ifdef YYDispatchQueuePool_h
     return YYDispatchQueueGetForQOS(NSQualityOfServiceUserInitiated);
 #else
+
+    /**
+     1. 看三方库改从哪几个方面入手；
+     2. 为什么这样写。有点是什么？
+     3. 怎么注释做标记，以便理解和后续复习   XXMARK
+     */
+// XXMARK 最大并发数
 #define MAX_QUEUE_COUNT 16
     static int queueCount;
     static dispatch_queue_t queues[MAX_QUEUE_COUNT];
