@@ -67,7 +67,6 @@
 
 
 - (UIButton * (^)(NSString *imageName))buttonBGimage{
-    
     UIButton* (^buttonBlock)(NSString *imageName) = ^(NSString *imageName) {
         
         [self setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
@@ -79,8 +78,19 @@
 }
 
 
-- (UIButton * (^)(NSString *normalImageName))normalImageName
-{
+- (UIButton * (^)(NSString *normalImageName))normalImageName{
+    /** UIButton中调整image大小，使其缩放
+    1. SetImaged方式
+        設定imageEdgeInsets可以縮小Image 但不能扩大
+              [button setImage:[UIImage imageNamed:@"buttonImage"] forState:UIControlStateNormal];
+              button.imageEdgeInsets = UIEdgeInsetsMake(10,20,10,20);
+                         
+        2.  setBackgroundImage 妈的 能用换图片解决就别用代码了。。。 获取正确的图片。然后获取图片的size，最后设置给Button就可以了。
+                    
+             imageEdgeInsets 和 titleEdgeInsets 分别控制图片和文本的位置
+                       
+          
+     */
     UIButton* (^buttonBlock)(NSString *normalImageName) = ^(NSString *normalImageName) {
         
         [self setImage:[UIImage imageNamed:normalImageName] forState:UIControlStateNormal];

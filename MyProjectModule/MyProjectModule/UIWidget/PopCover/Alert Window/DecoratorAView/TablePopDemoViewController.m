@@ -10,7 +10,7 @@
 #import "DecoratorAView.h"
 #import "CustomAlertManagerView.h"
 #import "CustomAlertViewDefault.h"
-
+#import "SimplePopUpHelper.h"
 @interface TablePopDemoViewController (){
     BOOL _b;
 }
@@ -25,9 +25,18 @@
 //    DecoratorAView *alertVC = [[DecoratorAView alloc]initWithChickenBurger:popVC];
 //    
 //    [alertVC cellClicks:nil];
-    
-    
+    [self showPopUp];
 }
+
+
+-(void)showPopUp{
+    SimplePopUpHelper *helper = [SimplePopUpHelper new];
+    UIView *showView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+    showView.backgroundColor = [UIColor redColor];
+    helper.FromPoint = CGPointMake(10, 88);
+    [helper showCustomView:showView InView:self.view];
+}
+
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     

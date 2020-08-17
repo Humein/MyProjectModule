@@ -13,12 +13,16 @@ typedef enum : NSUInteger {
     TopTransferDown,
     DownTransferTop,
     ZoomTransfer
-} POPAnimation;
+} XXPOPAnimation;
+
+typedef void(^CustomBackView)(void);
 
 @interface CustomAlertManagerView : UIView
 
+@property (nonatomic,assign)CGPoint FromPoint; //从哪里开始展示
+
 //显示方式
-@property (nonatomic,assign) POPAnimation transferType;
+@property (nonatomic,assign) XXPOPAnimation transferType;
 
 //显示在window上的
 - (void)show;
@@ -34,6 +38,9 @@ typedef enum : NSUInteger {
 
 // 自定义
 - (void)showCustomView:(UIView *)customView InView:(UIView*)view;
+
+@property (nonatomic,copy) CustomBackView customCallBack;
+
 
 //
 

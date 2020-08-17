@@ -41,11 +41,6 @@
 		33C2DF3921DCC5D400F96F32 /* PointTreeTypeThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C2DF3221DCC5D400F96F32 /* PointTreeTypeThree.m */; };
 		33C2DF3E21DCC66C00F96F32 /* PointTreeOneModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C2DF3D21DCC66C00F96F32 /* PointTreeOneModelViewController.m */; };
 		33C9711F211EB8DC00EAAD5E /* AbstractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C9711E211EB8DC00EAAD5E /* AbstractViewController.m */; };
-		33C9713F2124108D00EAAD5E /* PopTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971332124108D00EAAD5E /* PopTableView.m */; };
-		33C971402124108D00EAAD5E /* CustomAlertViewDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971342124108D00EAAD5E /* CustomAlertViewDefault.m */; };
-		33C971412124108D00EAAD5E /* DecoratorAView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971382124108D00EAAD5E /* DecoratorAView.m */; };
-		33C971422124108D00EAAD5E /* TablePopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C971392124108D00EAAD5E /* TablePopDemoViewController.m */; };
-		33C971432124108D00EAAD5E /* CustomAlertManagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C9713B2124108D00EAAD5E /* CustomAlertManagerView.m */; };
 		33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDCF210034E200422FC7 /* AlertTableView.m */; };
 		33E6CDD5210034E300422FC7 /* CellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDD0210034E200422FC7 /* CellModel.m */; };
 		33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6CDD1210034E200422FC7 /* AbstractTableViewCell.m */; };
@@ -166,6 +161,14 @@
 		794E82592403EED6008DFFB9 /* LOTAnimationLRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 794E82582403EED6008DFFB9 /* LOTAnimationLRUCache.m */; };
 		794E825E2404BBA8008DFFB9 /* LRUCacheSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E825D2404BBA7008DFFB9 /* LRUCacheSimple.swift */; };
 		795114AA2408FEB9004F6418 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795114A92408FEB9004F6418 /* DoublyLinkedList.swift */; };
+		796BAD9F24E11F4000F68597 /* CustomPopCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796BAD9E24E11F4000F68597 /* CustomPopCover.swift */; };
+		796BADAF24E1201700F68597 /* CustomAlertManagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BADA124E1201700F68597 /* CustomAlertManagerView.m */; };
+		796BADB024E1201700F68597 /* PopTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BADA224E1201700F68597 /* PopTableView.m */; };
+		796BADB124E1201700F68597 /* CustomAlertViewDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BADA324E1201700F68597 /* CustomAlertViewDefault.m */; };
+		796BADB224E1201700F68597 /* DecoratorAView.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BADA724E1201700F68597 /* DecoratorAView.m */; };
+		796BADB324E1201700F68597 /* TablePopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BADA824E1201700F68597 /* TablePopDemoViewController.m */; };
+		796BADB424E1201700F68597 /* AbstractAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BADAE24E1201700F68597 /* AbstractAlertView.m */; };
+		796BADB724E122C900F68597 /* SimplePopUpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BADB624E122C900F68597 /* SimplePopUpHelper.m */; };
 		796E8F672430D91F001EB53F /* ThreadSafeContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 796E8F662430D91F001EB53F /* ThreadSafeContainer.m */; };
 		7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */; };
 		797EC360236C10F900E21E44 /* SDOPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC35F236C10F900E21E44 /* SDOPickerView.swift */; };
@@ -174,7 +177,6 @@
 		7993C86B228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C869228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m */; };
 		7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C86D228D692A001A6BFA /* DownListViewController.m */; };
 		7993C871228D6A4E001A6BFA /* DownLoadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993C870228D6A4E001A6BFA /* DownLoadCell.m */; };
-		7997BE69224090A50054F4D0 /* AbstractAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997BE68224090A50054F4D0 /* AbstractAlertView.m */; };
 		7998C6CF23CEA4E500DA3BEF /* DesignModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7998C6CE23CEA4E500DA3BEF /* DesignModeViewController.m */; };
 		79A0ECA123681B79004C10B0 /* VTBEncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */; };
 		79A0ECA52368262F004C10B0 /* XXH264EncodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA42368262F004C10B0 /* XXH264EncodeTool.m */; };
@@ -235,7 +237,6 @@
 		79E53C622469794100CFFE9A /* SDBarrageItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5D2469794000CFFE9A /* SDBarrageItemView.swift */; };
 		79E53C632469794100CFFE9A /* SDBarrageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5E2469794000CFFE9A /* SDBarrageInfo.swift */; };
 		79E53C642469794100CFFE9A /* SDBarrageBgItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5F2469794000CFFE9A /* SDBarrageBgItemView.swift */; };
-		79E53C66246A4BF800CFFE9A /* CustomPopCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C65246A4BF800CFFE9A /* CustomPopCover.swift */; };
 		79E53C68246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C67246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift */; };
 		79E53C6A246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C69246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift */; };
 		79E96686237EBD8E00B49697 /* BlockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E96685237EBD8E00B49697 /* BlockModel.swift */; };
@@ -350,17 +351,6 @@
 		33C2DF3D21DCC66C00F96F32 /* PointTreeOneModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PointTreeOneModelViewController.m; sourceTree = "<group>"; };
 		33C9711D211EB8DC00EAAD5E /* AbstractViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractViewController.h; sourceTree = "<group>"; };
 		33C9711E211EB8DC00EAAD5E /* AbstractViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractViewController.m; sourceTree = "<group>"; };
-		33C971332124108D00EAAD5E /* PopTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTableView.m; sourceTree = "<group>"; };
-		33C971342124108D00EAAD5E /* CustomAlertViewDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlertViewDefault.m; sourceTree = "<group>"; };
-		33C971362124108D00EAAD5E /* TablePopDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TablePopDemoViewController.h; sourceTree = "<group>"; };
-		33C971372124108D00EAAD5E /* DecoratorAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecoratorAView.h; sourceTree = "<group>"; };
-		33C971382124108D00EAAD5E /* DecoratorAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecoratorAView.m; sourceTree = "<group>"; };
-		33C971392124108D00EAAD5E /* TablePopDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TablePopDemoViewController.m; sourceTree = "<group>"; };
-		33C9713A2124108D00EAAD5E /* DecoratorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecoratorProtocol.h; sourceTree = "<group>"; };
-		33C9713B2124108D00EAAD5E /* CustomAlertManagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlertManagerView.m; sourceTree = "<group>"; };
-		33C9713C2124108D00EAAD5E /* CustomAlertViewDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertViewDefault.h; sourceTree = "<group>"; };
-		33C9713D2124108D00EAAD5E /* PopTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopTableView.h; sourceTree = "<group>"; };
-		33C9713E2124108D00EAAD5E /* CustomAlertManagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertManagerView.h; sourceTree = "<group>"; };
 		33E6CDCE210034E200422FC7 /* AbstractTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractTableViewCell.h; sourceTree = "<group>"; };
 		33E6CDCF210034E200422FC7 /* AlertTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertTableView.m; sourceTree = "<group>"; };
 		33E6CDD0210034E200422FC7 /* CellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellModel.m; sourceTree = "<group>"; };
@@ -578,6 +568,22 @@
 		794E82582403EED6008DFFB9 /* LOTAnimationLRUCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOTAnimationLRUCache.m; sourceTree = "<group>"; };
 		794E825D2404BBA7008DFFB9 /* LRUCacheSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRUCacheSimple.swift; sourceTree = "<group>"; };
 		795114A92408FEB9004F6418 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
+		796BAD9E24E11F4000F68597 /* CustomPopCover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPopCover.swift; sourceTree = "<group>"; };
+		796BADA124E1201700F68597 /* CustomAlertManagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlertManagerView.m; sourceTree = "<group>"; };
+		796BADA224E1201700F68597 /* PopTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTableView.m; sourceTree = "<group>"; };
+		796BADA324E1201700F68597 /* CustomAlertViewDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlertViewDefault.m; sourceTree = "<group>"; };
+		796BADA524E1201700F68597 /* TablePopDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TablePopDemoViewController.h; sourceTree = "<group>"; };
+		796BADA624E1201700F68597 /* DecoratorAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecoratorAView.h; sourceTree = "<group>"; };
+		796BADA724E1201700F68597 /* DecoratorAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecoratorAView.m; sourceTree = "<group>"; };
+		796BADA824E1201700F68597 /* TablePopDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TablePopDemoViewController.m; sourceTree = "<group>"; };
+		796BADA924E1201700F68597 /* DecoratorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecoratorProtocol.h; sourceTree = "<group>"; };
+		796BADAA24E1201700F68597 /* AbstractAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractAlertView.h; sourceTree = "<group>"; };
+		796BADAB24E1201700F68597 /* CustomAlertViewDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertViewDefault.h; sourceTree = "<group>"; };
+		796BADAC24E1201700F68597 /* PopTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopTableView.h; sourceTree = "<group>"; };
+		796BADAD24E1201700F68597 /* CustomAlertManagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertManagerView.h; sourceTree = "<group>"; };
+		796BADAE24E1201700F68597 /* AbstractAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractAlertView.m; sourceTree = "<group>"; };
+		796BADB524E122C800F68597 /* SimplePopUpHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimplePopUpHelper.h; sourceTree = "<group>"; };
+		796BADB624E122C900F68597 /* SimplePopUpHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplePopUpHelper.m; sourceTree = "<group>"; };
 		796E8F63242DF081001EB53F /* MyTestPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyTestPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		796E8F64242DF0A0001EB53F /* SwiftHigherOrderfunction.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftHigherOrderfunction.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		796E8F652430D91F001EB53F /* ThreadSafeContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadSafeContainer.h; sourceTree = "<group>"; };
@@ -593,8 +599,6 @@
 		7993C86D228D692A001A6BFA /* DownListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownListViewController.m; sourceTree = "<group>"; };
 		7993C86F228D6A4E001A6BFA /* DownLoadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownLoadCell.h; sourceTree = "<group>"; };
 		7993C870228D6A4E001A6BFA /* DownLoadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownLoadCell.m; sourceTree = "<group>"; };
-		7997BE67224090A50054F4D0 /* AbstractAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractAlertView.h; sourceTree = "<group>"; };
-		7997BE68224090A50054F4D0 /* AbstractAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractAlertView.m; sourceTree = "<group>"; };
 		7998C6CD23CEA4E500DA3BEF /* DesignModeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignModeViewController.h; sourceTree = "<group>"; };
 		7998C6CE23CEA4E500DA3BEF /* DesignModeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignModeViewController.m; sourceTree = "<group>"; };
 		79A0EC9F23681B79004C10B0 /* VTBEncodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBEncodeViewController.h; sourceTree = "<group>"; };
@@ -703,7 +707,6 @@
 		79E53C5D2469794000CFFE9A /* SDBarrageItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageItemView.swift; sourceTree = "<group>"; };
 		79E53C5E2469794000CFFE9A /* SDBarrageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageInfo.swift; sourceTree = "<group>"; };
 		79E53C5F2469794000CFFE9A /* SDBarrageBgItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageBgItemView.swift; sourceTree = "<group>"; };
-		79E53C65246A4BF800CFFE9A /* CustomPopCover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPopCover.swift; path = MyProjectModule/UIWidget/CustomPopCover.swift; sourceTree = SOURCE_ROOT; };
 		79E53C67246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubOneSwiftDemosViewController.swift; sourceTree = "<group>"; };
 		79E53C69246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTwoSwiftDemosViewController.swift; sourceTree = "<group>"; };
 		79E96685237EBD8E00B49697 /* BlockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockModel.swift; sourceTree = "<group>"; };
@@ -921,7 +924,6 @@
 			children = (
 				799F2AA523855916002F5ADE /* BookmarkView */,
 				79A1A5032269AD0800CEA92A /* SuspensionBookmarker */,
-				33C971322124108D00EAAD5E /* Alert Window */,
 				338FEBFC20E0F2390025631B /* BaseUIKitFactory */,
 			);
 			path = BaseModule;
@@ -1091,34 +1093,6 @@
 				7936BB762446EA860043AF5A /* BaseNavViewController.m */,
 			);
 			path = AbstractBase;
-			sourceTree = "<group>";
-		};
-		33C971322124108D00EAAD5E /* Alert Window */ = {
-			isa = PBXGroup;
-			children = (
-				33C971352124108D00EAAD5E /* DecoratorAView */,
-				33C9713D2124108D00EAAD5E /* PopTableView.h */,
-				33C971332124108D00EAAD5E /* PopTableView.m */,
-				33C9713C2124108D00EAAD5E /* CustomAlertViewDefault.h */,
-				33C971342124108D00EAAD5E /* CustomAlertViewDefault.m */,
-				33C9713E2124108D00EAAD5E /* CustomAlertManagerView.h */,
-				33C9713B2124108D00EAAD5E /* CustomAlertManagerView.m */,
-				7997BE67224090A50054F4D0 /* AbstractAlertView.h */,
-				7997BE68224090A50054F4D0 /* AbstractAlertView.m */,
-			);
-			path = "Alert Window";
-			sourceTree = "<group>";
-		};
-		33C971352124108D00EAAD5E /* DecoratorAView */ = {
-			isa = PBXGroup;
-			children = (
-				33C9713A2124108D00EAAD5E /* DecoratorProtocol.h */,
-				33C971372124108D00EAAD5E /* DecoratorAView.h */,
-				33C971382124108D00EAAD5E /* DecoratorAView.m */,
-				33C971362124108D00EAAD5E /* TablePopDemoViewController.h */,
-				33C971392124108D00EAAD5E /* TablePopDemoViewController.m */,
-			);
-			path = DecoratorAView;
 			sourceTree = "<group>";
 		};
 		33E6CDCD210034E200422FC7 /* AlertTableView */ = {
@@ -1740,7 +1714,7 @@
 		793C636024060699000BE949 /* UIWidgetDemo */ = {
 			isa = PBXGroup;
 			children = (
-				79E53C65246A4BF800CFFE9A /* CustomPopCover.swift */,
+				796BAD9D24E11F4000F68597 /* PopCover */,
 				79E53C592469794000CFFE9A /* DanmuView */,
 				79387EAF2440644900CC7A49 /* YYFPSLabel.h */,
 				79387EB02440644900CC7A49 /* YYFPSLabel.m */,
@@ -1775,19 +1749,19 @@
 			isa = PBXGroup;
 			children = (
 				793C6368240606A4000BE949 /* StartWaterView.h */,
+				793C6371240606A4000BE949 /* StartWaterView.m */,
+				793C6370240606A4000BE949 /* AttributeAndPredicateWithLink.h */,
 				793C6369240606A4000BE949 /* AttributeAndPredicateWithLink.m */,
 				793C636A240606A4000BE949 /* DrawLine.h */,
-				793C636B240606A4000BE949 /* DrawUnlineAndScore.m */,
-				793C636C240606A4000BE949 /* CAGradientLayerDemo.m */,
-				793C636D240606A4000BE949 /* DrawViewController.m */,
-				793C636E240606A4000BE949 /* DrawBaseAnimaltionView.h */,
 				793C636F240606A4000BE949 /* DrawLine.m */,
-				793C6370240606A4000BE949 /* AttributeAndPredicateWithLink.h */,
-				793C6371240606A4000BE949 /* StartWaterView.m */,
-				793C6372240606A4000BE949 /* DrawUnlineAndScore.h */,
-				793C6373240606A4000BE949 /* CAGradientLayerDemo.h */,
-				793C6374240606A4000BE949 /* DrawBaseAnimaltionView.m */,
 				793C6375240606A4000BE949 /* DrawViewController.h */,
+				793C636D240606A4000BE949 /* DrawViewController.m */,
+				793C6372240606A4000BE949 /* DrawUnlineAndScore.h */,
+				793C636B240606A4000BE949 /* DrawUnlineAndScore.m */,
+				793C6373240606A4000BE949 /* CAGradientLayerDemo.h */,
+				793C636C240606A4000BE949 /* CAGradientLayerDemo.m */,
+				793C636E240606A4000BE949 /* DrawBaseAnimaltionView.h */,
+				793C6374240606A4000BE949 /* DrawBaseAnimaltionView.m */,
 			);
 			path = DrawWaveLine;
 			sourceTree = "<group>";
@@ -1806,6 +1780,46 @@
 			children = (
 			);
 			path = AvoidCrash;
+			sourceTree = "<group>";
+		};
+		796BAD9D24E11F4000F68597 /* PopCover */ = {
+			isa = PBXGroup;
+			children = (
+				796BADA024E1201700F68597 /* Alert Window */,
+				796BAD9E24E11F4000F68597 /* CustomPopCover.swift */,
+				796BADB524E122C800F68597 /* SimplePopUpHelper.h */,
+				796BADB624E122C900F68597 /* SimplePopUpHelper.m */,
+			);
+			name = PopCover;
+			path = MyProjectModule/UIWidget/PopCover;
+			sourceTree = SOURCE_ROOT;
+		};
+		796BADA024E1201700F68597 /* Alert Window */ = {
+			isa = PBXGroup;
+			children = (
+				796BADAD24E1201700F68597 /* CustomAlertManagerView.h */,
+				796BADA124E1201700F68597 /* CustomAlertManagerView.m */,
+				796BADAC24E1201700F68597 /* PopTableView.h */,
+				796BADA224E1201700F68597 /* PopTableView.m */,
+				796BADAB24E1201700F68597 /* CustomAlertViewDefault.h */,
+				796BADA324E1201700F68597 /* CustomAlertViewDefault.m */,
+				796BADAA24E1201700F68597 /* AbstractAlertView.h */,
+				796BADAE24E1201700F68597 /* AbstractAlertView.m */,
+				796BADA424E1201700F68597 /* DecoratorAView */,
+			);
+			path = "Alert Window";
+			sourceTree = "<group>";
+		};
+		796BADA424E1201700F68597 /* DecoratorAView */ = {
+			isa = PBXGroup;
+			children = (
+				796BADA524E1201700F68597 /* TablePopDemoViewController.h */,
+				796BADA824E1201700F68597 /* TablePopDemoViewController.m */,
+				796BADA624E1201700F68597 /* DecoratorAView.h */,
+				796BADA724E1201700F68597 /* DecoratorAView.m */,
+				796BADA924E1201700F68597 /* DecoratorProtocol.h */,
+			);
+			path = DecoratorAView;
 			sourceTree = "<group>";
 		};
 		797EC357236BCCEF00E21E44 /* UIWidget */ = {
@@ -2539,7 +2553,9 @@
 				79040D8B2236462A0085335E /* FlutterSubViewController.m in Sources */,
 				793C637E240606A4000BE949 /* DrawBaseAnimaltionView.m in Sources */,
 				79FE526523B5A081007C54A1 /* TemplatePattern.swift in Sources */,
+				796BADB124E1201700F68597 /* CustomAlertViewDefault.m in Sources */,
 				7908831023A0D04500FA3BE5 /* CorrectTagModel.m in Sources */,
+				796BADAF24E1201700F68597 /* CustomAlertManagerView.m in Sources */,
 				7908831A23A0D04500FA3BE5 /* BJPlayer.m in Sources */,
 				333D105A20CE74A9004D9241 /* ViewController.m in Sources */,
 				7908831723A0D04500FA3BE5 /* ProtoclForCMutilellViewController.m in Sources */,
@@ -2572,6 +2588,7 @@
 				7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */,
 				7936BB4124459E750043AF5A /* SDCycleView.swift in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
+				796BADB724E122C900F68597 /* SimplePopUpHelper.m in Sources */,
 				79E2EA5A2481F91F003B5A39 /* BookMarkView.m in Sources */,
 				79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */,
 				33C2DF3721DCC5D400F96F32 /* PointTreeTypeOne.m in Sources */,
@@ -2580,9 +2597,10 @@
 				79E53C602469794100CFFE9A /* SDBarrageView.swift in Sources */,
 				33C2DF3621DCC5D400F96F32 /* CompositePointTreeModel.m in Sources */,
 				79E53C6A246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift in Sources */,
+				796BADB024E1201700F68597 /* PopTableView.m in Sources */,
 				79DC645923BA1F6C0073E22F /* ShakeView.swift in Sources */,
+				796BAD9F24E11F4000F68597 /* CustomPopCover.swift in Sources */,
 				7913EF65245915DA000C77A3 /* SDPresentBViewController.swift in Sources */,
-				79E53C66246A4BF800CFFE9A /* CustomPopCover.swift in Sources */,
 				7908832323A0D04500FA3BE5 /* Condiment.m in Sources */,
 				338FEBFB20E0E3FC0025631B /* BlockObject.m in Sources */,
 				79A1A51B2269AD0800CEA92A /* SmoothTitleView.m in Sources */,
@@ -2653,6 +2671,7 @@
 				7913EF64245915DA000C77A3 /* SDBATransitionAnimator.swift in Sources */,
 				79BA3B69244D5619008805F6 /* UIViewController+Category.m in Sources */,
 				79E9668A237EBDF800B49697 /* AView.swift in Sources */,
+				796BADB324E1201700F68597 /* TablePopDemoViewController.m in Sources */,
 				79A1A51A2269AD0800CEA92A /* BookmarkContainerView.m in Sources */,
 				79BA3B77244D8609008805F6 /* SDDeviceOrientation.swift in Sources */,
 				79387EAE244042E100CC7A49 /* SDTimerObserver.swift in Sources */,
@@ -2660,8 +2679,6 @@
 				7908832023A0D04500FA3BE5 /* AbstractPlayerHelperManager.m in Sources */,
 				793C637B240606A4000BE949 /* DrawViewController.m in Sources */,
 				33759E7A212FAB2A00D801C1 /* AbstractItem.m in Sources */,
-				33C971412124108D00EAAD5E /* DecoratorAView.m in Sources */,
-				33C971422124108D00EAAD5E /* TablePopDemoViewController.m in Sources */,
 				7908831C23A0D04500FA3BE5 /* BJPlayerHelper.m in Sources */,
 				795114AA2408FEB9004F6418 /* DoublyLinkedList.swift in Sources */,
 				79E3D63921DE67E00038CACB /* RequestViewController.m in Sources */,
@@ -2684,7 +2701,6 @@
 				7998C6CF23CEA4E500DA3BEF /* DesignModeViewController.m in Sources */,
 				790882F823A0D04500FA3BE5 /* ClassClusterTableViewCellA.m in Sources */,
 				796E8F672430D91F001EB53F /* ThreadSafeContainer.m in Sources */,
-				33C9713F2124108D00EAAD5E /* PopTableView.m in Sources */,
 				7908830D23A0D04500FA3BE5 /* DownLoadViewController.m in Sources */,
 				33FAE4E620E2445500BE7175 /* CarouselLayout.m in Sources */,
 				7913EF6F24592B0F000C77A3 /* SDPopTransitioAnimator.swift in Sources */,
@@ -2703,6 +2719,7 @@
 				7908831E23A0D04500FA3BE5 /* AbstractPlayHelper.m in Sources */,
 				3340363D2154C69C006FCBA3 /* MemoryCache.m in Sources */,
 				7913EF672459172E000C77A3 /* SDPushTransitionAnimator.swift in Sources */,
+				796BADB424E1201700F68597 /* AbstractAlertView.m in Sources */,
 				7936BB602445A7400043AF5A /* DBAbstractItem+JoinSql.m in Sources */,
 				79E9668C237EBE0400B49697 /* BView.swift in Sources */,
 				7908831623A0D04500FA3BE5 /* ZTKDownItem.m in Sources */,
@@ -2731,9 +2748,7 @@
 				33C2DF3921DCC5D400F96F32 /* PointTreeTypeThree.m in Sources */,
 				793C6376240606A4000BE949 /* AnimationExample.m in Sources */,
 				7936BB742446EA2C0043AF5A /* MainTabBarViewController.m in Sources */,
-				7997BE69224090A50054F4D0 /* AbstractAlertView.m in Sources */,
 				7908831F23A0D04500FA3BE5 /* ResponderPlayerView.m in Sources */,
-				33C971432124108D00EAAD5E /* CustomAlertManagerView.m in Sources */,
 				79BA3B6A244D5619008805F6 /* BKDeviceOrientation.m in Sources */,
 				79EEEAA3218FF5E600848B59 /* TreeViewCell.m in Sources */,
 				79DC642523BA1A0A0073E22F /* RChainDemoViewController.m in Sources */,
@@ -2745,6 +2760,7 @@
 				790882F323A0D04500FA3BE5 /* AbstractFactory.swift in Sources */,
 				338FEC0520E0F5B70025631B /* UIButton+Decorate.m in Sources */,
 				7913EF962464265E000C77A3 /* SDCustomStatusBarView.swift in Sources */,
+				796BADB224E1201700F68597 /* DecoratorAView.m in Sources */,
 				79DC645523BA1F6C0073E22F /* PaternalViewController.m in Sources */,
 				7931A51B21A7DAA5002A26C0 /* FilterCollectionViewLayout.m in Sources */,
 				33759E7D212FABBA00D801C1 /* NSObject+KVOHelper.m in Sources */,
@@ -2758,7 +2774,6 @@
 				79E2EA5D2481FA64003B5A39 /* AbstractBookmarkViewController.m in Sources */,
 				7908832223A0D04500FA3BE5 /* pie.m in Sources */,
 				33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */,
-				33C971402124108D00EAAD5E /* CustomAlertViewDefault.m in Sources */,
 				79DC643123BA1C8A0073E22F /* InterfacePlayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
