@@ -6,19 +6,6 @@
 //  Copyright © 2018年 xinxin. All rights reserved.
 //
 
-#pragma mark --- lifeCycle
-
-#pragma mark ---NetWorkRequest
-
-#pragma mark ----Delegate
-
-#pragma mark --- PrivateMethod
-
-#pragma mark --- PublicMethod
-
-#pragma mark --- LazyLoad
-
-
 
 #define WEAKSELF typeof(self) __weak weakSelf = self;
 

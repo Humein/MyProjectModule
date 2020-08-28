@@ -161,6 +161,8 @@
 		794E82592403EED6008DFFB9 /* LOTAnimationLRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 794E82582403EED6008DFFB9 /* LOTAnimationLRUCache.m */; };
 		794E825E2404BBA8008DFFB9 /* LRUCacheSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E825D2404BBA7008DFFB9 /* LRUCacheSimple.swift */; };
 		795114AA2408FEB9004F6418 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795114A92408FEB9004F6418 /* DoublyLinkedList.swift */; };
+		7957843324F4F32400287486 /* XXBaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7957843224F4F32400287486 /* XXBaseUIViewController.m */; };
+		7957843624F4F50D00287486 /* XXBaseUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7957843524F4F50D00287486 /* XXBaseUIView.m */; };
 		796BAD9F24E11F4000F68597 /* CustomPopCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796BAD9E24E11F4000F68597 /* CustomPopCover.swift */; };
 		796BADAF24E1201700F68597 /* CustomAlertManagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BADA124E1201700F68597 /* CustomAlertManagerView.m */; };
 		796BADB024E1201700F68597 /* PopTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BADA224E1201700F68597 /* PopTableView.m */; };
@@ -568,6 +570,10 @@
 		794E82582403EED6008DFFB9 /* LOTAnimationLRUCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOTAnimationLRUCache.m; sourceTree = "<group>"; };
 		794E825D2404BBA7008DFFB9 /* LRUCacheSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRUCacheSimple.swift; sourceTree = "<group>"; };
 		795114A92408FEB9004F6418 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
+		7957843124F4F32400287486 /* XXBaseUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBaseUIViewController.h; sourceTree = "<group>"; };
+		7957843224F4F32400287486 /* XXBaseUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBaseUIViewController.m; sourceTree = "<group>"; };
+		7957843424F4F50D00287486 /* XXBaseUIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBaseUIView.h; sourceTree = "<group>"; };
+		7957843524F4F50D00287486 /* XXBaseUIView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBaseUIView.m; sourceTree = "<group>"; };
 		796BAD9E24E11F4000F68597 /* CustomPopCover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPopCover.swift; sourceTree = "<group>"; };
 		796BADA124E1201700F68597 /* CustomAlertManagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlertManagerView.m; sourceTree = "<group>"; };
 		796BADA224E1201700F68597 /* PopTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTableView.m; sourceTree = "<group>"; };
@@ -922,6 +928,7 @@
 		33828F1120D3CAB800318AE5 /* BaseModule */ = {
 			isa = PBXGroup;
 			children = (
+				7957843024F4F30F00287486 /* XXBaseUIKit */,
 				799F2AA523855916002F5ADE /* BookmarkView */,
 				79A1A5032269AD0800CEA92A /* SuspensionBookmarker */,
 				338FEBFC20E0F2390025631B /* BaseUIKitFactory */,
@@ -1775,6 +1782,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7957843024F4F30F00287486 /* XXBaseUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				7957843124F4F32400287486 /* XXBaseUIViewController.h */,
+				7957843224F4F32400287486 /* XXBaseUIViewController.m */,
+				7957843424F4F50D00287486 /* XXBaseUIView.h */,
+				7957843524F4F50D00287486 /* XXBaseUIView.m */,
+			);
+			path = XXBaseUIKit;
+			sourceTree = "<group>";
+		};
 		796BAD9624DBECB400F68597 /* AvoidCrash */ = {
 			isa = PBXGroup;
 			children = (
@@ -2542,6 +2560,7 @@
 				7913EF62245915DA000C77A3 /* SDABTransitionAnimator.swift in Sources */,
 				79DC642423BA1A0A0073E22F /* HTMiddleControlView.m in Sources */,
 				79E2EA662481FC99003B5A39 /* BookmarkViewDemo.m in Sources */,
+				7957843624F4F50D00287486 /* XXBaseUIView.m in Sources */,
 				79BA3B73244D56E5008805F6 /* BKExitFullscreenTransition.m in Sources */,
 				79EEEAAC2190156500848B59 /* PointTreeModel.m in Sources */,
 				33FAE4D820E243B800BE7175 /* CollectionDetaiDemo.m in Sources */,
@@ -2723,6 +2742,7 @@
 				7936BB602445A7400043AF5A /* DBAbstractItem+JoinSql.m in Sources */,
 				79E9668C237EBE0400B49697 /* BView.swift in Sources */,
 				7908831623A0D04500FA3BE5 /* ZTKDownItem.m in Sources */,
+				7957843324F4F32400287486 /* XXBaseUIViewController.m in Sources */,
 				7908831D23A0D04500FA3BE5 /* ZSPlaterHelper.m in Sources */,
 				79EEEAA2218FF5E600848B59 /* TreeModel.m in Sources */,
 				7908832623A0D04500FA3BE5 /* UIImage+BaseFilter.m in Sources */,
