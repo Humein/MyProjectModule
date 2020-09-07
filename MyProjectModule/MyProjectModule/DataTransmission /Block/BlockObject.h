@@ -51,6 +51,7 @@ typedef void (^MiniProgramResultBlock)(int miniProgramResult);
 typedef void (^IDBlock)(id configModel);
 /// block对象做为入参数 - 可以对象话/规范化入参
 - (void)jumpConfig:(IDBlock)configBlock completeBlock:(MiniProgramResultBlock)completeBlock;
+//- (void)configDrawbackInfoWithModel:(XesAppScholarshipRefundProgressModel *)model completeBlock:(void(^)(CGFloat height)) completeBlock
 //这个也是  +(void)requestConfig:(RequestMediatorBaseBusniessBlock)configBlock withSuccess:(Succsess)succsess andFailure:(Failure)failure
 
 

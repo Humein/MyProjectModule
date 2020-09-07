@@ -155,6 +155,8 @@
 		793C637E240606A4000BE949 /* DrawBaseAnimaltionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C6374240606A4000BE949 /* DrawBaseAnimaltionView.m */; };
 		793C638024060736000BE949 /* UISampleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C637F24060736000BE949 /* UISampleExample.swift */; };
 		79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79402223219D59A20008A3AD /* SimulationChainFucCode.m */; };
+		7943054124FFCFA20036D0DF /* MultiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7943054024FFCFA20036D0DF /* MultiDelegate.m */; };
+		7943054424FFD0060036D0DF /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7943054324FFD0060036D0DF /* Manager.m */; };
 		794B100621DEF98300B91405 /* PointsTreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */; };
 		794B100921DF02E300B91405 /* AbstractTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100821DF02E300B91405 /* AbstractTableViewController.m */; };
 		794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */; };
@@ -483,7 +485,7 @@
 		790882EC23A0D04500FA3BE5 /* UIImage+Transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Transform.h"; sourceTree = "<group>"; };
 		790882ED23A0D04500FA3BE5 /* UIImage+BaseFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BaseFilter.h"; sourceTree = "<group>"; };
 		790882EE23A0D04500FA3BE5 /* DecoratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecoratorViewController.m; sourceTree = "<group>"; };
-		790882F023A0D04500FA3BE5 /* CompositePattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CompositePattern.playground; sourceTree = "<group>"; };
+		790882F023A0D04500FA3BE5 /* CompositePattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CompositePattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7908832B23A1097100FA3BE5 /* AdpterObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdpterObject.swift; sourceTree = "<group>"; };
 		79104F8423C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureRecognizerWithMenuCopy.h; sourceTree = "<group>"; };
 		79104F8523C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureRecognizerWithMenuCopy.m; sourceTree = "<group>"; };
@@ -560,6 +562,10 @@
 		793C637F24060736000BE949 /* UISampleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISampleExample.swift; sourceTree = "<group>"; };
 		79402222219D59A20008A3AD /* SimulationChainFucCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulationChainFucCode.h; sourceTree = "<group>"; };
 		79402223219D59A20008A3AD /* SimulationChainFucCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulationChainFucCode.m; sourceTree = "<group>"; };
+		7943053F24FFCFA20036D0DF /* MultiDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiDelegate.h; sourceTree = "<group>"; };
+		7943054024FFCFA20036D0DF /* MultiDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiDelegate.m; sourceTree = "<group>"; };
+		7943054224FFD0060036D0DF /* Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
+		7943054324FFD0060036D0DF /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
 		794B100421DEF98300B91405 /* PointsTreeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PointsTreeTableViewCell.h; path = MyProjectModule/NetRequstAndSocket/PointsTreeTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PointsTreeTableViewCell.m; path = MyProjectModule/NetRequstAndSocket/PointsTreeTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		794B100721DF02E300B91405 /* AbstractTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractTableViewController.h; sourceTree = "<group>"; };
@@ -1024,6 +1030,7 @@
 		339D6C7420EA285700AC535E /* DataTransmission  */ = {
 			isa = PBXGroup;
 			children = (
+				7943053D24FFCF460036D0DF /* MultiDelegate */,
 				796BAD9624DBECB400F68597 /* AvoidCrash */,
 				79DC643C23BA1E1D0073E22F /* OC-Linked - Chain Of Responsibility */,
 				79DC643923BA1E170073E22F /* Protocol - Linked */,
@@ -1771,6 +1778,25 @@
 				793C6374240606A4000BE949 /* DrawBaseAnimaltionView.m */,
 			);
 			path = DrawWaveLine;
+			sourceTree = "<group>";
+		};
+		7943053D24FFCF460036D0DF /* MultiDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7943053E24FFCF810036D0DF /* MultiDelegateManager */,
+			);
+			path = MultiDelegate;
+			sourceTree = "<group>";
+		};
+		7943053E24FFCF810036D0DF /* MultiDelegateManager */ = {
+			isa = PBXGroup;
+			children = (
+				7943053F24FFCFA20036D0DF /* MultiDelegate.h */,
+				7943054024FFCFA20036D0DF /* MultiDelegate.m */,
+				7943054224FFD0060036D0DF /* Manager.h */,
+				7943054324FFD0060036D0DF /* Manager.m */,
+			);
+			path = MultiDelegateManager;
 			sourceTree = "<group>";
 		};
 		794B100321DEF97200B91405 /* View */ = {
@@ -2556,6 +2582,7 @@
 			files = (
 				337828312108772600373A20 /* ThreadViewController.m in Sources */,
 				33FAE4F020E2452D00BE7175 /* JHHeaderReusableView.m in Sources */,
+				7943054124FFCFA20036D0DF /* MultiDelegate.m in Sources */,
 				7993C86B228D68E6001A6BFA /* AppDelegate+DownManagerHelper.m in Sources */,
 				7913EF62245915DA000C77A3 /* SDABTransitionAnimator.swift in Sources */,
 				79DC642423BA1A0A0073E22F /* HTMiddleControlView.m in Sources */,
@@ -2569,6 +2596,7 @@
 				7913EF922463FDE7000C77A3 /* RotationImageViewController.m in Sources */,
 				79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */,
 				794B100921DF02E300B91405 /* AbstractTableViewController.m in Sources */,
+				7943054424FFD0060036D0DF /* Manager.m in Sources */,
 				79040D8B2236462A0085335E /* FlutterSubViewController.m in Sources */,
 				793C637E240606A4000BE949 /* DrawBaseAnimaltionView.m in Sources */,
 				79FE526523B5A081007C54A1 /* TemplatePattern.swift in Sources */,

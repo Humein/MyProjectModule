@@ -4,7 +4,7 @@
 //
 //  Created by Zhang Xin Xin on 2020/2/25.
 //  Copyright © 2020 xinxin. All rights reserved.
-// https://www.jianshu.com/p/1ff35be8a74f
+//
 /**
  - 双向链表+字典
   - 字典 存取
