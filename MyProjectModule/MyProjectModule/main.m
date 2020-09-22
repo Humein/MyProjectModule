@@ -10,13 +10,21 @@
 #import "AppDelegate.h"
 typedef void(^MyBlock)(void);
 
-@interface MyObject : NSObject
+@interface MyObject : NSObject{
+    NSString *_str;
+}
+@property(nonatomic,copy) NSString *pStr;
 @property(nonatomic,copy) MyBlock block;
 @end
 
 @implementation MyObject
 - (instancetype)init {
     self = [super init];
+//    self = NULL; // 空指针
+//    self.pStr = @""; // 不崩溃
+//    // 本质也是调用 self->_str
+//    _str = @""; // 崩溃
+//    self->_str = @""; // 崩溃
     return self;
 }
 

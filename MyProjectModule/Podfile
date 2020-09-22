@@ -17,6 +17,8 @@ target 'MyProjectModule' do
   pod 'RxCocoa', '~> 5'
 #  pod "Texture"
   pod 'GPUImage'
+  pod 'MLeaksFinder'
+
 
 
   # Flutter 引入 现有 Native 工程
