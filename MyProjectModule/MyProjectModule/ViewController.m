@@ -73,7 +73,6 @@ void UncaughtExceptionHandler(NSException *exception) {
     };
     
 
-    
     self.itemList = [NSMutableArray array];
     NSArray *list = [NSArray arrayWithObjects:@"UISampleExampleVC",@"AVViewController",@"TestOnewCollecionViewController",@"SubTwoSwiftDemosViewController",@"SubOneSwiftDemosViewController",@"RenderImageViewController",@"RotationImageViewController",@"TransitionsAnimationDemos",@"ThreadSafeContainer",@"TestBlockModelViewController",@"BookmarkViewDemo",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
 
@@ -167,7 +166,7 @@ void UncaughtExceptionHandler(NSException *exception) {
     self.view.backgroundColor = [UIColor redColor];
     self.tableView.FromPoint = CGPointMake(0, 80);
     self.tableView.isSelectIndexToHidden= YES;
-    self.tableView.tableViewFrame= CGRectMake(0, 0 , self.view.frame.size.width, 30 * self.itemList.count - 80-50);
+    self.tableView.tableViewFrame= CGRectMake(0, 0 , self.view.frame.size.width, 20 * self.itemList.count - 80-50);
     self.tableView.tableView.layer.cornerRadius= 4;
     self.tableView.tableView.contentInset=UIEdgeInsetsMake(0, 0, 0, 0);
     

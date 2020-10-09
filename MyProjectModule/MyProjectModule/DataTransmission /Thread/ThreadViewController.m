@@ -14,6 +14,7 @@
 @interface ThreadViewController ()<TimerObserverDelegate>
 {
     int _i;
+    pthread_mutex_t _lock; //互斥锁
 }
 @property (strong, nonatomic, nonnull) dispatch_queue_t coderQueue; // the queue to do image decoding
 
@@ -27,41 +28,100 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self lockTest0]; return;
+//    [self lockTest1]; return;
     [self testThread1];
     //请求依赖
     [self GCDGroup];
     [self semaphore];
     [self barrier];
-    
+
     [self threadTestOne];
-    
+
     [[SDTimerObserver sharedInstance] addTimerObserver:self];
     
 }
 
-
-
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-
-    [[SDTimerObserver sharedInstance] removeTimerObserver:self];
-//
-//    [self testSemaphone_process_delay];
-//
-//    [self async0];
-//    [self async1];
+#pragma mark - 测试 block 加锁同步
+/// 测试 block 加锁同步
+-(void)lockTest0{
+    _coderQueue =  dispatch_queue_create("com.hackemist.SDWebImageDownloaderOperationCoderQueue", DISPATCH_QUEUE_CONCURRENT);
     
-    [self dispatch_apply2];
+//    dispatch_semaphore_t dsema = dispatch_semaphore_create(0); //
+//    NSRecursiveLock *slock = [[NSRecursiveLock alloc]init]; // 重复加锁没问题
+//    NSLock *slock = [NSLock new]; // 重复加锁会死锁
+//    pthread_mutex_t pMutex = PTHREAD_MUTEX_INITIALIZER; __block pthread_cond_t pCond = PTHREAD_COND_INITIALIZER; pthread_mutex_lock(&pMutex);// 重复加锁会死锁
+//    NSCondition *condition = [[NSCondition alloc] init];[condition lock]; //
+//    __block OSSpinLock oslock = OS_SPINLOCK_INIT; OSSpinLockLock(&oslock);
+   
     
+    
+    /* 情况：1 一般自定义block
+     OSSpinLock dispatch_semaphore_t pthread_mutex_t 等都会加锁成功
+     */
+    [self sendMessage:@"" callback:^(NSString *tag) {
+        sleep(1);
+        NSLog(@"11111111");
+//        OSSpinLockUnlock(&oslock);
+//        dispatch_semaphore_signal(dsema);
+    }];
+    NSLog(@"22222222");
+//    OSSpinLockLock(&oslock);
+//    dispatch_semaphore_wait(dsema, DISPATCH_TIME_FOREVER);
+    NSLog(@"33333333");
+
+    
+    /* 情况：2 系统的block 危险：因为不知道内部block实现方式有可能会死锁
+     比如 iOS14 [PHPhotoLibrary requestAuthorization:] [PHPhotoLibrary requestAuthorizationForAccessLevel:]
+     第一次请求相册权限时候会死锁
+     后续调用这方法就不会了，可能和隐私弹窗有关？
+     */
+    
+    
+    /* 情况：3
+     dispatch_get_main_queue() 主队列
+         - dispatch_semaphore_t NSCondition pthread_mutex_t OSSpinLock 会死锁
+         - NSLock NSRecursiveLock pthread_mutex_t 加锁会失败 那是因为加锁方式不对 block加锁同步 和 正常加锁保护 有区别的
+     _coderQueue 并发队列
+         - 所有加锁方式都会成功
+     */
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        sleep(1);
+        NSLog(@"11111111");
+//        OSSpinLockUnlock(&oslock);
+//        [condition signal];
+//        pthread_cond_signal(&pCond);
+//        dispatch_semaphore_signal(dsema);
+    });
+    NSLog(@"22222222");
+//    OSSpinLockLock(&oslock);
+//    [condition wait]; [condition unlock];
+//    pthread_cond_wait(&pCond, &pMutex); pthread_mutex_destroy(&pMutex);
+//    dispatch_semaphore_wait(dsema, DISPATCH_TIME_FOREVER);
+    NSLog(@"33333333");
 }
 
-
-#pragma mark 回调
-- (void)timerCallBackWithTimer:(SDTimerObserver * _Nonnull)timer {
-        _i++;
-    NSLog(@"%@====%d",[self class],_i);
+// 这种加锁同步block是不对的
+-(void)lockTest1{
+    NSLock *slock = [NSLock new];
+    [self sendMessage:@"" callback:^(NSString *tag) {
+        NSLog(@"11111111");
+        [slock unlock];
+    }];
+    NSLog(@"22222222");
+    [slock lock];
+    NSLog(@"33333333");
 }
 
+// 自定义Block
+- (void)sendMessage:(NSString *)message callback:(void(^)(NSString *tag))callback {
+    float random = 1 + (arc4random()%100)/30.0;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(random * NSEC_PER_SEC)), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSString *tag = [NSString stringWithFormat:@"%@ - random:%f", message, random];
+        callback(tag);
+    });
+}
 
 #pragma mark - 多线程线程学习
 /** https://juejin.im/post/5e7db4046fb9a03c714b3776
@@ -547,6 +607,27 @@
      */
 }
 
+
+#pragma mark - 一些事件
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+
+    [[SDTimerObserver sharedInstance] removeTimerObserver:self];
+//
+//    [self testSemaphone_process_delay];
+//
+//    [self async0];
+//    [self async1];
+    
+    [self dispatch_apply2];
+    
+}
+
+
+/// 回调
+- (void)timerCallBackWithTimer:(SDTimerObserver * _Nonnull)timer {
+        _i++;
+    NSLog(@"%@====%d",[self class],_i);
+}
 
 
 @end

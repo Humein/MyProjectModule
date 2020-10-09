@@ -41,6 +41,19 @@
     [self addSubview:self.showLabel];
     
 }
+// YYLabel 富文本
+-(void)refreshHintLabelWithDetail:(NSString *)detail{
+    NSMutableAttributedString *text = [NSMutableAttributedString new];
+    NSMutableAttributedString *hintTitle = [[NSMutableAttributedString alloc] initWithString:@"温馨提示："];
+    [hintTitle setColor:[UIColor redColor] range:hintTitle.rangeOfAll];
+    NSMutableAttributedString *detailTitle = [[NSMutableAttributedString alloc] initWithString:detail];
+    [detailTitle setColor:[UIColor blueColor] range:detailTitle.rangeOfAll];
+    [text appendAttributedString:hintTitle];
+    [text appendAttributedString:detailTitle];
+    [text setFont:[UIFont systemFontOfSize:12] range:text.rangeOfAll];
+    [text setLineSpacing:5];
+//    self.hintLabel.attributedText = text;
+}
 
 -(void)refersheTheViewWithModel:(NSString *)HTStr{
     
