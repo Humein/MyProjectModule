@@ -12,8 +12,10 @@
 #import "DrawBaseAnimaltionView.h"
 #import "StartWaterView.h"
 #import "AttributeAndPredicateWithLink.h"
+#import "YYKit.h"
 @interface DrawViewController ()
 @property (nonatomic, strong) UITextView *textView;
+@property (nonatomic, strong) YYLabel      *hintLabel;
 @end
 
 @implementation DrawViewController
@@ -124,21 +126,40 @@
     
 }
 
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - YYText使用
+-(void)addHintLabel{
+//    [self.tableView addSubview:self.hintLabel];
+//    [self.hintLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(_footerView.mas_bottom).offset(13);
+//        make.left.equalTo(self.tableView).offset(16);
+//    }];
+//    [self.hintLabel layoutIfNeeded];
+//    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, self.hintLabel.height + 16, 0);
+//    [self.tableView layoutIfNeeded];
 }
+// YYLabel 富文本
+-(void)refreshHintLabelWithDetail:(NSString *)detail{
+    NSMutableAttributedString *text = [NSMutableAttributedString new];
+    NSMutableAttributedString *hintTitle = [[NSMutableAttributedString alloc] initWithString:@"温馨提示："];
+    [hintTitle setColor:[UIColor redColor] range:hintTitle.rangeOfAll];
+    NSMutableAttributedString *detailTitle = [[NSMutableAttributedString alloc] initWithString:detail];
+    [detailTitle setColor:[UIColor blueColor] range:detailTitle.rangeOfAll];
+    [text appendAttributedString:hintTitle];
+    [text appendAttributedString:detailTitle];
+    [text setFont:[UIFont systemFontOfSize:12] range:text.rangeOfAll];
+    [text setLineSpacing:5];
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//    self.hintLabel.attributedText = text;
 }
-*/
-
+- (YYLabel *)hintLabel {
+    if (!_hintLabel) {
+        _hintLabel = [[YYLabel alloc] initWithFrame:CGRectZero];
+        _hintLabel.textAlignment = NSTextAlignmentLeft;
+        _hintLabel.numberOfLines = 0;
+        // 如果使用自动布局处理YYLabel 需要设置最大宽度
+        _hintLabel.preferredMaxLayoutWidth = self.view.width - 24;
+    }
+    return _hintLabel;
+}
 @end
+

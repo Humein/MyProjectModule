@@ -20,7 +20,8 @@ typedef void(^MyBlock)(void);
 @implementation MyObject
 - (instancetype)init {
     self = [super init];
-//    self = NULL; // 空指针
+//    __unsafe_unretained __typeof(self) weakSelf = self;
+////    self = NULL; // 空指针
 //    self.pStr = @""; // 不崩溃
 //    // 本质也是调用 self->_str
 //    _str = @""; // 崩溃

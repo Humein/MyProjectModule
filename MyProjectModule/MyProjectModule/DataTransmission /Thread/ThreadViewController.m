@@ -10,6 +10,7 @@
 #import "NSTimerObserver.h"
 #import "ThreadSafeContainer.h"
 #import "MyProjectModule-Swift.h"
+#import <sqlite3.h>
 
 @interface ThreadViewController ()<TimerObserverDelegate>
 {
@@ -28,8 +29,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self sqlMultipleInsert]; return;
+    [self runLoop]; return;
     [self lockTest0]; return;
-//    [self lockTest1]; return;
+    [self lockTest1]; return;
     [self testThread1];
     //请求依赖
     [self GCDGroup];
@@ -40,6 +43,53 @@
 
     [[SDTimerObserver sharedInstance] addTimerObserver:self];
     
+}
+
+#pragma mark - 测试
+-(void)sqlMultipleInsert{
+    dispatch_queue_t serialQueue = dispatch_queue_create("serialQueue", DISPATCH_QUEUE_SERIAL);
+    dispatch_sync(serialQueue, ^{
+        dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
+        for (int i = 0; i < 20; i++) {
+            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+            [self sendMessage:@"" callback:^(NSString *tag) {
+                [self insertData:@"1"];
+                dispatch_semaphore_signal(semaphore);
+            }];
+        }
+    });
+}
+
+- (BOOL)insertData:(NSString *)jsonStr {
+    __block BOOL isSuc;
+    dispatch_queue_t serialQueue = dispatch_queue_create("serialQueues", DISPATCH_QUEUE_SERIAL);
+    dispatch_sync(serialQueue, ^{
+        isSuc = YES;
+        int rc;
+        sqlite3_stmt *pStmt      = 0x00;
+        rc = sqlite3_step(pStmt);
+        NSLog(@"000000000000");
+    });
+    return isSuc;
+}
+
+#pragma mark - RunLoop 使用runMode:beforeDate同步
+-(void)runLoop{
+    __block int done = 0;
+    __block NSString *object;
+    [self sendMessage:@"" callback:^(NSString *tag) {
+        object = tag;
+        done = 1;
+    }];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        sleep(1);
+        done = 1;
+        NSLog(@"哈哈同步成功了。。。");;
+    });
+    while (done == 0) {
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+    }
+    NSLog(@"=======%@", object);
 }
 
 #pragma mark - 测试 block 加锁同步
@@ -73,15 +123,14 @@
     
     /* 情况：2 系统的block 危险：因为不知道内部block实现方式有可能会死锁
      比如 iOS14 [PHPhotoLibrary requestAuthorization:] [PHPhotoLibrary requestAuthorizationForAccessLevel:]
-     第一次请求相册权限时候会死锁
-     后续调用这方法就不会了，可能和隐私弹窗有关？
+     使用dispatch_semaphore_t 请求相册权限时候会死锁。使用别的加锁方式虽然不会卡死，但加锁不成功
      */
     
     
     /* 情况：3
      dispatch_get_main_queue() 主队列
          - dispatch_semaphore_t NSCondition pthread_mutex_t OSSpinLock 会死锁
-         - NSLock NSRecursiveLock pthread_mutex_t 加锁会失败 那是因为加锁方式不对 block加锁同步 和 正常加锁保护 有区别的
+         - NSLock NSRecursiveLock pthread_mutex_t 加锁会失败 那是因为加锁方式不对 block加锁同步和正常加锁保护 有区别的
      _coderQueue 并发队列
          - 所有加锁方式都会成功
      */
@@ -119,6 +168,7 @@
     float random = 1 + (arc4random()%100)/30.0;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(random * NSEC_PER_SEC)), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSString *tag = [NSString stringWithFormat:@"%@ - random:%f", message, random];
+        sleep(1);
         callback(tag);
     });
 }
