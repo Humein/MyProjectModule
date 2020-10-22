@@ -10,7 +10,7 @@ target 'MyProjectModule' do
   pod 'KVOController'
   pod 'SDWebImage', '~> 4.3.3'
   pod 'YTKNetwork'
-  pod 'Aspects'
+  pod 'Aspects' # AOP
   pod 'SnapKit', '~> 4.0.0'
   pod 'FMDB'
   pod 'RxSwift', '~> 5'
@@ -18,7 +18,8 @@ target 'MyProjectModule' do
 #  pod "Texture"
   pod 'GPUImage'
   pod 'MLeaksFinder'
-
+  pod 'matrix-wechat' #微信的APM工具
+  
 
 
   # Flutter 引入 现有 Native 工程

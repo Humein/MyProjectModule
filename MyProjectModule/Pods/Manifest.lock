@@ -22,6 +22,15 @@ PODS:
   - GPUImage (0.1.7)
   - KVOController (1.2.0)
   - Masonry (1.1.0)
+  - matrix-wechat (0.6.5):
+    - matrix-wechat/matrixARC (= 0.6.5)
+    - matrix-wechat/matrixNonARC1 (= 0.6.5)
+    - matrix-wechat/matrixNonARC2 (= 0.6.5)
+  - matrix-wechat/matrixARC (0.6.5):
+    - matrix-wechat/matrixNonARC1
+  - matrix-wechat/matrixNonARC1 (0.6.5)
+  - matrix-wechat/matrixNonARC2 (0.6.5):
+    - matrix-wechat/matrixARC
   - MJExtension (3.1.0)
   - MJRefresh (3.2.0)
   - MLeaksFinder (1.0.0):
@@ -50,6 +59,7 @@ DEPENDENCIES:
   - GPUImage
   - KVOController
   - Masonry
+  - matrix-wechat
   - MJExtension
   - MJRefresh
   - MLeaksFinder
@@ -70,6 +80,7 @@ SPEC REPOS:
     - GPUImage
     - KVOController
     - Masonry
+    - matrix-wechat
     - MJExtension
     - MJRefresh
     - MLeaksFinder
@@ -90,6 +101,7 @@ SPEC CHECKSUMS:
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  matrix-wechat: 4e8a4047dde97c4634ef782edcd69ce276c5b4ab
   MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
@@ -102,6 +114,6 @@ SPEC CHECKSUMS:
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 4464c06e1e589066b370cd800bd4de8876497551
+PODFILE CHECKSUM: 97107d10b7fd8b9d8b0a45a4e617c009ab74f889
 
 COCOAPODS: 1.7.3

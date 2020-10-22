@@ -1661,6 +1661,7 @@
 		7931A288228C2CC300C231FE /* DownLoadManger */ = {
 			isa = PBXGroup;
 			children = (
+				796B066825406D27001C531B /* DownHelperByOperation */,
 				7993C865228D68E6001A6BFA /* DownHelper */,
 				7993C86C228D692A001A6BFA /* DownListViewController.h */,
 				7993C86D228D692A001A6BFA /* DownListViewController.m */,
@@ -1817,6 +1818,13 @@
 				7957843524F4F50D00287486 /* XXBaseUIView.m */,
 			);
 			path = XXBaseUIKit;
+			sourceTree = "<group>";
+		};
+		796B066825406D27001C531B /* DownHelperByOperation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DownHelperByOperation;
 			sourceTree = "<group>";
 		};
 		796BAD9624DBECB400F68597 /* AvoidCrash */ = {
