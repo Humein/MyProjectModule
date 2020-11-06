@@ -9,7 +9,7 @@
 #import "XXBaseUIView.h"
 
 @implementation XXBaseUIView
-#pragma mark - initView
+// MARK: - initView
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -20,20 +20,21 @@
     return self;
 }
 
-- (void)configSubview
-{
+-(void)configSubview{
     
 }
 
-#pragma mark - layoutView
-- (void)layout
-{
+// MARK: - layoutView
+-(void)layout{
     
 }
 
-#pragma mark - RefreshData
+// MARK: - Refresh Data
 
 
-#pragma mark - PrivateMethod
+// MARK: - Private Method
+
+
+// MARK: - Get/Set
 
 @end

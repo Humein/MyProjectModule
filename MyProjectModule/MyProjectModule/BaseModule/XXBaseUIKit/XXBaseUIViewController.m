@@ -17,22 +17,34 @@
 // FIXME: 标示处代码需要修正，使用方法：
 // !!!: 标示处代码需要注意，使用方法：
 // ???: 标示处代码有疑问，使用方法：
-// MARK: 标记，和#pragma mark效果相同，使用方法：
-#pragma mark - PublicMethod
-#pragma mark - LifeCycle
-- (void)viewDidLoad {}
-#pragma mark - InitVC
--(void)initVC {}
--(void)configSubview {}
-#pragma mark - MakeData
 
-#pragma mark - PrivateMethod
+// MARK: - LifeCycle
+-(void)dealloc {
+    NSLog(@"%@销毁啦。。。。。。",NSStringFromClass(self.class));
+}
 
-#pragma mark - Target Methods
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    [self configVC];
+    [self configSubview];
+}
 
-#pragma mark - Delegate
+// MARK: - View config
+-(void)configVC {
+    
+}
 
-#pragma mark - LazyLoad
+-(void)configSubview {
+    
+}
+// MARK: - Make Data
 
+// MARK: - Private Method
+
+// MARK: - Target Methods
+
+// MARK: - Delegate
+
+// MARK: - Getter / Setter
 
 @end
