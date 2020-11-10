@@ -120,7 +120,6 @@
 		7913EF8B245AB5E6000C77A3 /* RenderImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF8A245AB5E6000C77A3 /* RenderImageViewController.m */; };
 		7913EF922463FDE7000C77A3 /* RotationImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF912463FDE7000C77A3 /* RotationImageViewController.m */; };
 		7913EF9424640090000C77A3 /* miao.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7913EF9324640090000C77A3 /* miao.jpeg */; };
-		7913EF962464265E000C77A3 /* SDCustomStatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF952464265E000C77A3 /* SDCustomStatusBarView.swift */; };
 		7924BB70240B6361007BA1B3 /* BindResponderOfChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924BB6F240B6361007BA1B3 /* BindResponderOfChain.swift */; };
 		7924BB72240B98F8007BA1B3 /* UIRespnderChainExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924BB71240B98F8007BA1B3 /* UIRespnderChainExtension.swift */; };
 		792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792591EB2285517100E7F734 /* LearnSwiftDemosViewController.swift */; };
@@ -144,7 +143,6 @@
 		7936BB742446EA2C0043AF5A /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB732446EA2C0043AF5A /* MainTabBarViewController.m */; };
 		7936BB772446EA860043AF5A /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB762446EA860043AF5A /* BaseNavViewController.m */; };
 		79387EAE244042E100CC7A49 /* SDTimerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79387EAD244042E100CC7A49 /* SDTimerObserver.swift */; };
-		79387EB12440644900CC7A49 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79387EB02440644900CC7A49 /* YYFPSLabel.m */; };
 		79387EB324407B6900CC7A49 /* SDCacheManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79387EB224407B6900CC7A49 /* SDCacheManagers.swift */; };
 		793C6376240606A4000BE949 /* AnimationExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C6364240606A4000BE949 /* AnimationExample.m */; };
 		793C6377240606A4000BE949 /* POPNumberAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C6365240606A4000BE949 /* POPNumberAnimation.m */; };
@@ -155,7 +153,6 @@
 		793C637C240606A4000BE949 /* DrawLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C636F240606A4000BE949 /* DrawLine.m */; };
 		793C637D240606A4000BE949 /* StartWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C6371240606A4000BE949 /* StartWaterView.m */; };
 		793C637E240606A4000BE949 /* DrawBaseAnimaltionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C6374240606A4000BE949 /* DrawBaseAnimaltionView.m */; };
-		793C638024060736000BE949 /* UISampleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C637F24060736000BE949 /* UISampleExample.swift */; };
 		79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79402223219D59A20008A3AD /* SimulationChainFucCode.m */; };
 		7943054124FFCFA20036D0DF /* MultiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7943054024FFCFA20036D0DF /* MultiDelegate.m */; };
 		7943054424FFD0060036D0DF /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7943054324FFD0060036D0DF /* Manager.m */; };
@@ -164,6 +161,15 @@
 		794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */; };
 		794E82592403EED6008DFFB9 /* LOTAnimationLRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 794E82582403EED6008DFFB9 /* LOTAnimationLRUCache.m */; };
 		794E825E2404BBA8008DFFB9 /* LRUCacheSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E825D2404BBA7008DFFB9 /* LRUCacheSimple.swift */; };
+		79501BEB255A43F6005865A7 /* SDCustomStatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79501BE9255A43F6005865A7 /* SDCustomStatusBarView.swift */; };
+		79501BEC255A43F6005865A7 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79501BEA255A43F6005865A7 /* YYFPSLabel.m */; };
+		79501BF4255A4414005865A7 /* SDBarrageBgItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79501BEE255A4414005865A7 /* SDBarrageBgItemView.swift */; };
+		79501BF5255A4414005865A7 /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79501BF0255A4414005865A7 /* UIView+Frame.swift */; };
+		79501BF6255A4414005865A7 /* SDBarrageItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79501BF1255A4414005865A7 /* SDBarrageItemView.swift */; };
+		79501BF7255A4414005865A7 /* SDBarrageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79501BF2255A4414005865A7 /* SDBarrageView.swift */; };
+		79501BF8255A4414005865A7 /* SDBarrageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79501BF3255A4414005865A7 /* SDBarrageInfo.swift */; };
+		79501BFA255A441E005865A7 /* UISampleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79501BF9255A441E005865A7 /* UISampleExample.swift */; };
+		79501C06255A69A7005865A7 /* WebViewPrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79501C05255A69A7005865A7 /* WebViewPrintPageRenderer.m */; };
 		795114AA2408FEB9004F6418 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795114A92408FEB9004F6418 /* DoublyLinkedList.swift */; };
 		7957843324F4F32400287486 /* XXBaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7957843224F4F32400287486 /* XXBaseUIViewController.m */; };
 		7957843624F4F50D00287486 /* XXBaseUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7957843524F4F50D00287486 /* XXBaseUIView.m */; };
@@ -238,11 +244,6 @@
 		79E3D63321DE57D60038CACB /* ZTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63221DE57D60038CACB /* ZTKBaseRequest.m */; };
 		79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63521DE60E80038CACB /* RequestMediatorBaseBusniess.m */; };
 		79E3D63921DE67E00038CACB /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3D63821DE67E00038CACB /* RequestViewController.m */; };
-		79E53C602469794100CFFE9A /* SDBarrageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5A2469794000CFFE9A /* SDBarrageView.swift */; };
-		79E53C612469794100CFFE9A /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5C2469794000CFFE9A /* UIView+Frame.swift */; };
-		79E53C622469794100CFFE9A /* SDBarrageItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5D2469794000CFFE9A /* SDBarrageItemView.swift */; };
-		79E53C632469794100CFFE9A /* SDBarrageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5E2469794000CFFE9A /* SDBarrageInfo.swift */; };
-		79E53C642469794100CFFE9A /* SDBarrageBgItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C5F2469794000CFFE9A /* SDBarrageBgItemView.swift */; };
 		79E53C68246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C67246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift */; };
 		79E53C6A246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E53C69246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift */; };
 		79E96686237EBD8E00B49697 /* BlockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E96685237EBD8E00B49697 /* BlockModel.swift */; };
@@ -505,7 +506,6 @@
 		7913EF902463FDE7000C77A3 /* RotationImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotationImageViewController.h; sourceTree = "<group>"; };
 		7913EF912463FDE7000C77A3 /* RotationImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RotationImageViewController.m; sourceTree = "<group>"; };
 		7913EF9324640090000C77A3 /* miao.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = miao.jpeg; sourceTree = "<group>"; };
-		7913EF952464265E000C77A3 /* SDCustomStatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDCustomStatusBarView.swift; sourceTree = "<group>"; };
 		7924BB6F240B6361007BA1B3 /* BindResponderOfChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindResponderOfChain.swift; sourceTree = "<group>"; };
 		7924BB71240B98F8007BA1B3 /* UIRespnderChainExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRespnderChainExtension.swift; sourceTree = "<group>"; };
 		792591EA2285517000E7F734 /* MyProjectModule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyProjectModule-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -544,8 +544,6 @@
 		7936BB752446EA860043AF5A /* BaseNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
 		7936BB762446EA860043AF5A /* BaseNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
 		79387EAD244042E100CC7A49 /* SDTimerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimerObserver.swift; sourceTree = "<group>"; };
-		79387EAF2440644900CC7A49 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
-		79387EB02440644900CC7A49 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		79387EB224407B6900CC7A49 /* SDCacheManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDCacheManagers.swift; sourceTree = "<group>"; };
 		793C6363240606A4000BE949 /* POPNumberAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPNumberAnimation.h; sourceTree = "<group>"; };
 		793C6364240606A4000BE949 /* AnimationExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationExample.m; sourceTree = "<group>"; };
@@ -565,7 +563,6 @@
 		793C6373240606A4000BE949 /* CAGradientLayerDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAGradientLayerDemo.h; sourceTree = "<group>"; };
 		793C6374240606A4000BE949 /* DrawBaseAnimaltionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawBaseAnimaltionView.m; sourceTree = "<group>"; };
 		793C6375240606A4000BE949 /* DrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
-		793C637F24060736000BE949 /* UISampleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISampleExample.swift; sourceTree = "<group>"; };
 		79402222219D59A20008A3AD /* SimulationChainFucCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulationChainFucCode.h; sourceTree = "<group>"; };
 		79402223219D59A20008A3AD /* SimulationChainFucCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulationChainFucCode.m; sourceTree = "<group>"; };
 		7943053F24FFCFA20036D0DF /* MultiDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiDelegate.h; sourceTree = "<group>"; };
@@ -581,6 +578,17 @@
 		794E82572403EED6008DFFB9 /* LOTAnimationLRUCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOTAnimationLRUCache.h; sourceTree = "<group>"; };
 		794E82582403EED6008DFFB9 /* LOTAnimationLRUCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOTAnimationLRUCache.m; sourceTree = "<group>"; };
 		794E825D2404BBA7008DFFB9 /* LRUCacheSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRUCacheSimple.swift; sourceTree = "<group>"; };
+		79501BE8255A43F6005865A7 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		79501BE9255A43F6005865A7 /* SDCustomStatusBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDCustomStatusBarView.swift; sourceTree = "<group>"; };
+		79501BEA255A43F6005865A7 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		79501BEE255A4414005865A7 /* SDBarrageBgItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageBgItemView.swift; sourceTree = "<group>"; };
+		79501BF0255A4414005865A7 /* UIView+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
+		79501BF1255A4414005865A7 /* SDBarrageItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageItemView.swift; sourceTree = "<group>"; };
+		79501BF2255A4414005865A7 /* SDBarrageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageView.swift; sourceTree = "<group>"; };
+		79501BF3255A4414005865A7 /* SDBarrageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageInfo.swift; sourceTree = "<group>"; };
+		79501BF9255A441E005865A7 /* UISampleExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISampleExample.swift; sourceTree = "<group>"; };
+		79501C04255A69A7005865A7 /* WebViewPrintPageRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewPrintPageRenderer.h; sourceTree = "<group>"; };
+		79501C05255A69A7005865A7 /* WebViewPrintPageRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewPrintPageRenderer.m; sourceTree = "<group>"; };
 		795114A92408FEB9004F6418 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
 		7957843124F4F32400287486 /* XXBaseUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBaseUIViewController.h; sourceTree = "<group>"; };
 		7957843224F4F32400287486 /* XXBaseUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBaseUIViewController.m; sourceTree = "<group>"; };
@@ -720,11 +728,6 @@
 		79E3D63521DE60E80038CACB /* RequestMediatorBaseBusniess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestMediatorBaseBusniess.m; sourceTree = "<group>"; };
 		79E3D63721DE67E00038CACB /* RequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
 		79E3D63821DE67E00038CACB /* RequestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestViewController.m; sourceTree = "<group>"; };
-		79E53C5A2469794000CFFE9A /* SDBarrageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageView.swift; sourceTree = "<group>"; };
-		79E53C5C2469794000CFFE9A /* UIView+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
-		79E53C5D2469794000CFFE9A /* SDBarrageItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageItemView.swift; sourceTree = "<group>"; };
-		79E53C5E2469794000CFFE9A /* SDBarrageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageInfo.swift; sourceTree = "<group>"; };
-		79E53C5F2469794000CFFE9A /* SDBarrageBgItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBarrageBgItemView.swift; sourceTree = "<group>"; };
 		79E53C67246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubOneSwiftDemosViewController.swift; sourceTree = "<group>"; };
 		79E53C69246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTwoSwiftDemosViewController.swift; sourceTree = "<group>"; };
 		79E96685237EBD8E00B49697 /* BlockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockModel.swift; sourceTree = "<group>"; };
@@ -1689,29 +1692,6 @@
 			path = DownLoadManger;
 			sourceTree = "<group>";
 		};
-		7936BAC02445942E0043AF5A /* QMUI */ = {
-			isa = PBXGroup;
-			children = (
-				7936BAC5244594FB0043AF5A /* QMUIHelper */,
-				7936BAC2244594750043AF5A /* ModalPresentationView */,
-			);
-			path = QMUI;
-			sourceTree = "<group>";
-		};
-		7936BAC2244594750043AF5A /* ModalPresentationView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ModalPresentationView;
-			sourceTree = "<group>";
-		};
-		7936BAC5244594FB0043AF5A /* QMUIHelper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = QMUIHelper;
-			sourceTree = "<group>";
-		};
 		7936BB3B24459D720043AF5A /* SlideShow */ = {
 			isa = PBXGroup;
 			children = (
@@ -1742,19 +1722,6 @@
 				7936BB5F2445A73F0043AF5A /* DBAbstractItem.m */,
 			);
 			path = DataBase;
-			sourceTree = "<group>";
-		};
-		793C636024060699000BE949 /* UIWidgetDemo */ = {
-			isa = PBXGroup;
-			children = (
-				796BAD9D24E11F4000F68597 /* PopCover */,
-				79E53C592469794000CFFE9A /* DanmuView */,
-				79387EAF2440644900CC7A49 /* YYFPSLabel.h */,
-				79387EB02440644900CC7A49 /* YYFPSLabel.m */,
-				793C637F24060736000BE949 /* UISampleExample.swift */,
-				7913EF952464265E000C77A3 /* SDCustomStatusBarView.swift */,
-			);
-			path = UIWidgetDemo;
 			sourceTree = "<group>";
 		};
 		793C6361240606A4000BE949 /* BezierPath&ShapLayer&Animation */ = {
@@ -1827,6 +1794,39 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		79501BE7255A43F6005865A7 /* SampleTools */ = {
+			isa = PBXGroup;
+			children = (
+				79501BE8255A43F6005865A7 /* YYFPSLabel.h */,
+				79501BEA255A43F6005865A7 /* YYFPSLabel.m */,
+				79501C04255A69A7005865A7 /* WebViewPrintPageRenderer.h */,
+				79501C05255A69A7005865A7 /* WebViewPrintPageRenderer.m */,
+				79501BE9255A43F6005865A7 /* SDCustomStatusBarView.swift */,
+			);
+			name = SampleTools;
+			path = MyProjectModule/UIWidget/SampleTools;
+			sourceTree = SOURCE_ROOT;
+		};
+		79501BED255A4414005865A7 /* DanmuView */ = {
+			isa = PBXGroup;
+			children = (
+				79501BEE255A4414005865A7 /* SDBarrageBgItemView.swift */,
+				79501BEF255A4414005865A7 /* Utils */,
+				79501BF1255A4414005865A7 /* SDBarrageItemView.swift */,
+				79501BF2255A4414005865A7 /* SDBarrageView.swift */,
+				79501BF3255A4414005865A7 /* SDBarrageInfo.swift */,
+			);
+			path = DanmuView;
+			sourceTree = "<group>";
+		};
+		79501BEF255A4414005865A7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				79501BF0255A4414005865A7 /* UIView+Frame.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		7957843024F4F30F00287486 /* XXBaseUIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1895,13 +1895,15 @@
 		797EC357236BCCEF00E21E44 /* UIWidget */ = {
 			isa = PBXGroup;
 			children = (
+				79501BF9255A441E005865A7 /* UISampleExample.swift */,
+				79501BE7255A43F6005865A7 /* SampleTools */,
+				79501BED255A4414005865A7 /* DanmuView */,
+				796BAD9D24E11F4000F68597 /* PopCover */,
 				79E2EA54247A2738003B5A39 /* AVPlayer */,
 				79E2EA19247917EF003B5A39 /* GPUImage */,
 				7913EF88245AB5B3000C77A3 /* OpenGLES */,
 				7936BB3B24459D720043AF5A /* SlideShow */,
-				7936BAC02445942E0043AF5A /* QMUI */,
 				793C6361240606A4000BE949 /* BezierPath&ShapLayer&Animation */,
-				793C636024060699000BE949 /* UIWidgetDemo */,
 				79DC643323BA1C9F0073E22F /* Rotational Screen  */,
 				797EC358236BCD0A00E21E44 /* TimePick */,
 			);
@@ -2300,26 +2302,6 @@
 			path = YTKNetRequest;
 			sourceTree = "<group>";
 		};
-		79E53C592469794000CFFE9A /* DanmuView */ = {
-			isa = PBXGroup;
-			children = (
-				79E53C5A2469794000CFFE9A /* SDBarrageView.swift */,
-				79E53C5B2469794000CFFE9A /* Utils */,
-				79E53C5D2469794000CFFE9A /* SDBarrageItemView.swift */,
-				79E53C5E2469794000CFFE9A /* SDBarrageInfo.swift */,
-				79E53C5F2469794000CFFE9A /* SDBarrageBgItemView.swift */,
-			);
-			path = DanmuView;
-			sourceTree = "<group>";
-		};
-		79E53C5B2469794000CFFE9A /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				79E53C5C2469794000CFFE9A /* UIView+Frame.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		79E96684237EBD7300B49697 /* TestBlockModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -2623,6 +2605,7 @@
 				79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */,
 				794B100921DF02E300B91405 /* AbstractTableViewController.m in Sources */,
 				7943054424FFD0060036D0DF /* Manager.m in Sources */,
+				79501BF7255A4414005865A7 /* SDBarrageView.swift in Sources */,
 				79040D8B2236462A0085335E /* FlutterSubViewController.m in Sources */,
 				793C637E240606A4000BE949 /* DrawBaseAnimaltionView.m in Sources */,
 				79FE526523B5A081007C54A1 /* TemplatePattern.swift in Sources */,
@@ -2657,7 +2640,6 @@
 				7936BB612445A7400043AF5A /* DataBaseManager.m in Sources */,
 				79BA3B75244D79E6008805F6 /* EXUIViewController.swift in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
-				79E53C622469794100CFFE9A /* SDBarrageItemView.swift in Sources */,
 				7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */,
 				7936BB4124459E750043AF5A /* SDCycleView.swift in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
@@ -2667,7 +2649,6 @@
 				33C2DF3721DCC5D400F96F32 /* PointTreeTypeOne.m in Sources */,
 				7913EF6D24591EC3000C77A3 /* SDPushAViewController.swift in Sources */,
 				790882F723A0D04500FA3BE5 /* ClassClusterBaseTableViewCell.m in Sources */,
-				79E53C602469794100CFFE9A /* SDBarrageView.swift in Sources */,
 				33C2DF3621DCC5D400F96F32 /* CompositePointTreeModel.m in Sources */,
 				79E53C6A246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift in Sources */,
 				796BADB024E1201700F68597 /* PopTableView.m in Sources */,
@@ -2680,6 +2661,7 @@
 				7908831223A0D04500FA3BE5 /* ZTKLLDownHelper.m in Sources */,
 				333D106520CE74AB004D9241 /* main.m in Sources */,
 				33E6CDD5210034E300422FC7 /* CellModel.m in Sources */,
+				79501BEC255A43F6005865A7 /* YYFPSLabel.m in Sources */,
 				79DC642723BA1A0A0073E22F /* HTBottomControlView.m in Sources */,
 				79C2B663221A646200C40F3A /* RunTimeTestViewController.m in Sources */,
 				79A1A5182269AD0800CEA92A /* SmoothBookmarkView.m in Sources */,
@@ -2687,6 +2669,7 @@
 				793C637D240606A4000BE949 /* StartWaterView.m in Sources */,
 				7913EF8B245AB5E6000C77A3 /* RenderImageViewController.m in Sources */,
 				7936BB4224459E750043AF5A /* SDPageControl.swift in Sources */,
+				79501BEB255A43F6005865A7 /* SDCustomStatusBarView.swift in Sources */,
 				793C6377240606A4000BE949 /* POPNumberAnimation.m in Sources */,
 				3362E6A22130FC1300A4B26D /* FBKVOViewController.m in Sources */,
 				7908830E23A0D04500FA3BE5 /* NSInvocationForStrategyViewController.m in Sources */,
@@ -2719,7 +2702,6 @@
 				7908831123A0D04500FA3BE5 /* CorrectResolver.m in Sources */,
 				7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */,
 				33C2DF3E21DCC66C00F96F32 /* PointTreeOneModelViewController.m in Sources */,
-				79E53C612469794100CFFE9A /* UIView+Frame.swift in Sources */,
 				79104F8623C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m in Sources */,
 				79DC645723BA1F6C0073E22F /* FirstView.swift in Sources */,
 				79387EB324407B6900CC7A49 /* SDCacheManagers.swift in Sources */,
@@ -2753,6 +2735,8 @@
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
 				7908832023A0D04500FA3BE5 /* AbstractPlayerHelperManager.m in Sources */,
 				793C637B240606A4000BE949 /* DrawViewController.m in Sources */,
+				79501BF4255A4414005865A7 /* SDBarrageBgItemView.swift in Sources */,
+				79501BF6255A4414005865A7 /* SDBarrageItemView.swift in Sources */,
 				33759E7A212FAB2A00D801C1 /* AbstractItem.m in Sources */,
 				7908831C23A0D04500FA3BE5 /* BJPlayerHelper.m in Sources */,
 				795114AA2408FEB9004F6418 /* DoublyLinkedList.swift in Sources */,
@@ -2765,13 +2749,13 @@
 				7908831B23A0D04500FA3BE5 /* ZSPlayer.m in Sources */,
 				7901F9A221A678CE005BE8A6 /* NSTimerObserver.m in Sources */,
 				7908832823A0D04500FA3BE5 /* UIImage+Shadow.m in Sources */,
+				79501BF8255A4414005865A7 /* SDBarrageInfo.swift in Sources */,
 				79DC645823BA1F6C0073E22F /* AbstractViewProtocol.swift in Sources */,
 				7936BB4324459E750043AF5A /* SDCycleLayout.swift in Sources */,
 				794B100621DEF98300B91405 /* PointsTreeTableViewCell.m in Sources */,
 				7908832523A0D04500FA3BE5 /* UIImage+Transform.m in Sources */,
 				338FEBFF20E0F25A0025631B /* UIControlFactory.m in Sources */,
 				79DC643B23BA1E170073E22F /* ProtocolLinked.swift in Sources */,
-				79E53C642469794100CFFE9A /* SDBarrageBgItemView.swift in Sources */,
 				79E53C68246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift in Sources */,
 				7998C6CF23CEA4E500DA3BEF /* DesignModeViewController.m in Sources */,
 				790882F823A0D04500FA3BE5 /* ClassClusterTableViewCellA.m in Sources */,
@@ -2783,6 +2767,7 @@
 				333D109D20D14489004D9241 /* AbstractCollectionViewCell.m in Sources */,
 				33759E6E212F9FD500D801C1 /* UITableViewCell+AnimationType.m in Sources */,
 				33FAE4E720E2445500BE7175 /* WaterfallLayout.m in Sources */,
+				79501BFA255A441E005865A7 /* UISampleExample.swift in Sources */,
 				79E2EA632481FA6B003B5A39 /* CheckConditionItem.m in Sources */,
 				7908830C23A0D04500FA3BE5 /* APPPayTool.m in Sources */,
 				79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */,
@@ -2816,9 +2801,7 @@
 				790882F623A0D04500FA3BE5 /* ClassClusterTableViewCellC.m in Sources */,
 				79B44B24237CF0A900B7D73D /* SmoothBookmarkDemoViewController.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
-				79387EB12440644900CC7A49 /* YYFPSLabel.m in Sources */,
 				79EEEA562182C09200848B59 /* liveChatModel.m in Sources */,
-				79E53C632469794100CFFE9A /* SDBarrageInfo.swift in Sources */,
 				7908830B23A0D04500FA3BE5 /* ApplePay.m in Sources */,
 				7908832123A0D04500FA3BE5 /* Command.swift in Sources */,
 				33C2DF3921DCC5D400F96F32 /* PointTreeTypeThree.m in Sources */,
@@ -2831,11 +2814,9 @@
 				33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */,
 				7908830F23A0D04500FA3BE5 /* ResovlerModel.m in Sources */,
 				793C6378240606A4000BE949 /* AttributeAndPredicateWithLink.m in Sources */,
-				793C638024060736000BE949 /* UISampleExample.swift in Sources */,
 				790882F423A0D04500FA3BE5 /* ClassClusterModel.m in Sources */,
 				790882F323A0D04500FA3BE5 /* AbstractFactory.swift in Sources */,
 				338FEC0520E0F5B70025631B /* UIButton+Decorate.m in Sources */,
-				7913EF962464265E000C77A3 /* SDCustomStatusBarView.swift in Sources */,
 				796BADB224E1201700F68597 /* DecoratorAView.m in Sources */,
 				79DC645523BA1F6C0073E22F /* PaternalViewController.m in Sources */,
 				7931A51B21A7DAA5002A26C0 /* FilterCollectionViewLayout.m in Sources */,
@@ -2844,8 +2825,10 @@
 				794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */,
 				7936BB632445A7400043AF5A /* DBAbstractItem+Sql.m in Sources */,
 				792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */,
+				79501C06255A69A7005865A7 /* WebViewPrintPageRenderer.m in Sources */,
 				7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */,
 				79DC642323BA1A0A0073E22F /* Chain_of_responsibility.swift in Sources */,
+				79501BF5255A4414005865A7 /* UIView+Frame.swift in Sources */,
 				79E2EA0D246EB6DC003B5A39 /* SDPointsTransformView.swift in Sources */,
 				79E2EA5D2481FA64003B5A39 /* AbstractBookmarkViewController.m in Sources */,
 				7908832223A0D04500FA3BE5 /* pie.m in Sources */,

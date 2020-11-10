@@ -244,6 +244,16 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
 }
 
 //Runtime 方式访问和修改私有变量
+
+-(void)getSingleIvar{
+    // 获取单个私有变量 避免KVC方式获取时key改变 造成的崩溃
+    AbstractItem *son = [[AbstractItem alloc] init];
+    Ivar ivar = class_getInstanceVariable([son class], "_str1");
+    NSString * str1 = object_getIvar(son, ivar);
+    NSAssert(str1 == nil ? NO : YES, @"XesAppWebView webView 属性改动");
+
+}
+
 - (void)printSonNameWithRuntime
 {
     AbstractItem *son = [[AbstractItem alloc] init];
