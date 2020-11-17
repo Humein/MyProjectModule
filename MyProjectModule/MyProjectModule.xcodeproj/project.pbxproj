@@ -171,6 +171,9 @@
 		79501BFA255A441E005865A7 /* UISampleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79501BF9255A441E005865A7 /* UISampleExample.swift */; };
 		79501C06255A69A7005865A7 /* WebViewPrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79501C05255A69A7005865A7 /* WebViewPrintPageRenderer.m */; };
 		795114AA2408FEB9004F6418 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795114A92408FEB9004F6418 /* DoublyLinkedList.swift */; };
+		79522A392563CD410007BD64 /* RACObjectDemos.m in Sources */ = {isa = PBXBuildFile; fileRef = 79522A382563CD410007BD64 /* RACObjectDemos.m */; };
+		79522A432563E5D70007BD64 /* RAC_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 79522A422563E5D70007BD64 /* RAC_View.m */; };
+		79522A462563E5E50007BD64 /* RAC_ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79522A452563E5E50007BD64 /* RAC_ViewModel.m */; };
 		7957843324F4F32400287486 /* XXBaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7957843224F4F32400287486 /* XXBaseUIViewController.m */; };
 		7957843624F4F50D00287486 /* XXBaseUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7957843524F4F50D00287486 /* XXBaseUIView.m */; };
 		796BAD9F24E11F4000F68597 /* CustomPopCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796BAD9E24E11F4000F68597 /* CustomPopCover.swift */; };
@@ -590,6 +593,12 @@
 		79501C04255A69A7005865A7 /* WebViewPrintPageRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewPrintPageRenderer.h; sourceTree = "<group>"; };
 		79501C05255A69A7005865A7 /* WebViewPrintPageRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewPrintPageRenderer.m; sourceTree = "<group>"; };
 		795114A92408FEB9004F6418 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
+		79522A372563CD410007BD64 /* RACObjectDemos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACObjectDemos.h; sourceTree = "<group>"; };
+		79522A382563CD410007BD64 /* RACObjectDemos.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACObjectDemos.m; sourceTree = "<group>"; };
+		79522A412563E5D70007BD64 /* RAC_View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RAC_View.h; sourceTree = "<group>"; };
+		79522A422563E5D70007BD64 /* RAC_View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAC_View.m; sourceTree = "<group>"; };
+		79522A442563E5E50007BD64 /* RAC_ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RAC_ViewModel.h; sourceTree = "<group>"; };
+		79522A452563E5E50007BD64 /* RAC_ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAC_ViewModel.m; sourceTree = "<group>"; };
 		7957843124F4F32400287486 /* XXBaseUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBaseUIViewController.h; sourceTree = "<group>"; };
 		7957843224F4F32400287486 /* XXBaseUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBaseUIViewController.m; sourceTree = "<group>"; };
 		7957843424F4F50D00287486 /* XXBaseUIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBaseUIView.h; sourceTree = "<group>"; };
@@ -1040,6 +1049,7 @@
 		339D6C7420EA285700AC535E /* DataTransmission  */ = {
 			isa = PBXGroup;
 			children = (
+				79522A362563C9E50007BD64 /* RAC */,
 				7943053D24FFCF460036D0DF /* MultiDelegate */,
 				796BAD9624DBECB400F68597 /* AvoidCrash */,
 				79DC643C23BA1E1D0073E22F /* OC-Linked - Chain Of Responsibility */,
@@ -1825,6 +1835,27 @@
 				79501BF0255A4414005865A7 /* UIView+Frame.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		79522A362563C9E50007BD64 /* RAC */ = {
+			isa = PBXGroup;
+			children = (
+				79522A402563E56E0007BD64 /* MVVM */,
+				79522A372563CD410007BD64 /* RACObjectDemos.h */,
+				79522A382563CD410007BD64 /* RACObjectDemos.m */,
+			);
+			path = RAC;
+			sourceTree = "<group>";
+		};
+		79522A402563E56E0007BD64 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				79522A412563E5D70007BD64 /* RAC_View.h */,
+				79522A422563E5D70007BD64 /* RAC_View.m */,
+				79522A442563E5E50007BD64 /* RAC_ViewModel.h */,
+				79522A452563E5E50007BD64 /* RAC_ViewModel.m */,
+			);
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 		7957843024F4F30F00287486 /* XXBaseUIKit */ = {
@@ -2618,12 +2649,14 @@
 				33759E77212FAA7200D801C1 /* NSObject+RuntimeHelper.m in Sources */,
 				7908832C23A1097100FA3BE5 /* AdpterObject.swift in Sources */,
 				790882F923A0D04500FA3BE5 /* ClassClusterViewController.m in Sources */,
+				79522A392563CD410007BD64 /* RACObjectDemos.m in Sources */,
 				79DC645A23BA1F6C0073E22F /* SwiftDemosViewController.swift in Sources */,
 				793C637C240606A4000BE949 /* DrawLine.m in Sources */,
 				7908831523A0D04500FA3BE5 /* ZTKBJDownHelper.m in Sources */,
 				79DC645323BA1F6C0073E22F /* ViewControllerChildOne.m in Sources */,
 				79E96686237EBD8E00B49697 /* BlockModel.swift in Sources */,
 				7924BB70240B6361007BA1B3 /* BindResponderOfChain.swift in Sources */,
+				79522A432563E5D70007BD64 /* RAC_View.m in Sources */,
 				7993C871228D6A4E001A6BFA /* DownLoadCell.m in Sources */,
 				79E96688237EBDEA00B49697 /* TestBlockModelViewController.swift in Sources */,
 				79E2EA0A246E4F1E003B5A39 /* SDPointsTransformFlowLayout.swift in Sources */,
@@ -2793,6 +2826,7 @@
 				79040DA12238AA2D0085335E /* AspectTrackMananer.m in Sources */,
 				79EEEA592182C13A00848B59 /* LiveCommentDemoViewController.m in Sources */,
 				79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */,
+				79522A462563E5E50007BD64 /* RAC_ViewModel.m in Sources */,
 				7936BB622445A7400043AF5A /* SqliteDataBase.m in Sources */,
 				33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */,
 				79A0ECAE236838E5004C10B0 /* VTBEncDecViewController.m in Sources */,

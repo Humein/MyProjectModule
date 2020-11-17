@@ -38,6 +38,7 @@
 #pragma mark -
 #pragma mark - public methods
 -(UIImage *)printContentToImageWithWeb:(WKWebView *)webView{
+    //        let urlStr = "https://land.3fang.com/market/110100_110108_________1.html"
     self.webView = webView;
     UIPrintPageRenderer *renderer = [[UIPrintPageRenderer alloc] init];
     [renderer addPrintFormatter:[self.webView viewPrintFormatter] startingAtPageAtIndex:0];
