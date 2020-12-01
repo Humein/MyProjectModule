@@ -27,8 +27,41 @@
     return self;
 }
 
+- (void)bindUserSeatViewModel:(RAC_ViewModel *)viewModel {
+    self.viewModel = viewModel;
+    // 信号传递
+//    [self.tutorSeatView bindTecSeatViewModel:viewModel.tecSeatViewModel];
+    /// 添加相关信号
+//    [self addSignal];
+}
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    // 改变信号
     [self.viewModel.pageSelectSubject sendNext:touches];
+}
+
+- (void)addSignal {
+//    @weakify(self);
+//    /// 切换了导航type
+//    [RACObserve(self.viewModel, seatShowType) subscribeNext:^(id x) {
+//        @strongify(self);
+//        [self updateUserSeatSubViewConstraintsBySeatShowType];
+//    }];
+//    /// 获取到直播云相关参数信息，创建房间，推流
+//    [[RACObserve(self.viewModel, roomRtcInitModel) skip:1] subscribeNext:^(id x) {
+//        @strongify(self);
+//        [self.viewModel  creatSeatLiveRoomTeacherView:self.tutorSeatView studentSeatViews:self.studentSeatViewArray];
+//    }];
+//    /// 获取到学生数据之后，将学生做展示
+//    [RACObserve(self.viewModel, studentSeatVMListData) subscribeNext:^(id x) {
+//        @strongify(self);
+//        [self createStudentSeatWithPageIndex];
+//        NSLog(@"%@",self.viewModel.studentSeatVMListData);
+//    }];
+//    /// 点击了辅导老师头像
+//    [self.viewModel.clickTutorSeatViewSubject subscribeNext:^(id x) {
+//
+//    }];
 }
 
 #pragma mark -

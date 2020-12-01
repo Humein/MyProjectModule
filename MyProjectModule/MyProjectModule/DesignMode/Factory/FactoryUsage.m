@@ -1,18 +1,18 @@
 //
-//  RAC_ViewModel.m
+//  FactoryUsage.m
 //  MyProjectModule
 //
-//  Created by zhangxinxin on 2020/11/17.
+//  Created by zhangxinxin on 2020/11/26.
 //  Copyright © 2020 xinxin. All rights reserved.
 //
 
-#import "RAC_ViewModel.h"
+#import "FactoryUsage.h"
+#import "PhoneFactory.h"
+@interface FactoryUsage()
 
-@interface RAC_ViewModel()
-@property (nonatomic, strong, readwrite) RACSubject *pageSelectSubject;
 @end
 
-@implementation RAC_ViewModel
+@implementation FactoryUsage
 
 #pragma mark -
 #pragma mark - life cycle - 生命周期
@@ -37,10 +37,7 @@
 
 /// 设置默认数据
 - (void)setDefault{
-    // 监听信号
-    [self.pageSelectSubject subscribeNext:^(id  _Nullable x) {
-            
-    }];
+    
 }
 
 /// 设置子视图
@@ -52,6 +49,32 @@
 -(void)setupSubViewsConstraints{
     
 }
+
+//MARK:- 简单工厂
+-(void)sampleFactory{
+//    Phone *iPhone = [PhoneFactory  createPhoneWithTag:FactoryProductTypeiPhone];
+//    Phone *miPhone = [PhoneFactory  createPhoneWithTag:FactoryProductTypeMiPhone];
+//
+//    [iPhone packaging];
+//    [miPhone packaging];
+//
+//    [self printPhone:iPhone];
+//    [self printPhone:miPhone];
+    
+    NSInteger type = 1;
+    Phone *phone = [PhoneFactory createPhoneWithTag:type ? ProductTypeTakeClassTest : ProductTypeGetClassInfo];
+    phone.block = ^(FactoryProductType type) {
+        NSLog(@"%ld",(long)type);
+    };
+    // !!!: 哈哈这里有点像策略模式了
+    [phone confingNoticeMessage:@""];
+    [self printPhone:phone];
+}
+
+-(void)printPhone:(Phone *)phone{
+    NSLog(@"Store begins to sell phone:%@",[phone class]);
+}
+
 
 #pragma mark -
 #pragma mark - public methods
@@ -68,11 +91,5 @@
 
 #pragma mark -
 #pragma mark - getters and setters
-- (RACSubject *)pageSelectSubject {
-    if (!_pageSelectSubject) {
-        _pageSelectSubject = [[RACSubject alloc] init];
-    }
-    return _pageSelectSubject;
-}
 
 @end

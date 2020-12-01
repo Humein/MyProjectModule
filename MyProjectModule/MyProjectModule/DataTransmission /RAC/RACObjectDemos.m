@@ -29,7 +29,7 @@
 
 #pragma mark - useAges
 
-//MARK: 键值观察--监听TF的值发生变化
+//MARK: KVO键值观察--监听TF的值发生变化
 - (void)demo1{
      @weakify(self);
     [self.tF.rac_textSignal subscribeNext:^(NSString *value) {
@@ -43,8 +43,64 @@
     }];
 }
 
+
+//MARK: RAC总结
+// https://juejin.im/post/6844903814047203336#heading-4
+
+//MARK: 特别牛逼的宏
+
+/**
+ 1. RAC(TARGET, ...)  分配一个信号给一个对象的属性, 只要有新的信号产生, 就自动分配给特定的key, 当信号完成时, 绑定自动废弃.
+ RAC(_targetLabel,text) = _textField.rac_textSignal;
+ RAC(self.streamStateButton,selected) = RACObserve(self.viewModel, stageState);
+ 
+ 2. RACObserve(TARGET, KEYPATH)
+ 替代KVO的宏: 当TARGET的KEYPATH发生变化时, 就会产生新的信号.
+
+ 3. @weakify(...) & @strongify(...)
+ 解除循环引用必备神器
+ @weakify(...) 给其中的参数变量创建一个C语言的__weak修饰的影子变量, 这些影子变量随后又会被@strongify(...)修饰, 重新成为强引用的变量
+
+ 在block中, 这个宏用弱引用变量, 但在block执行的时候, 要确保该变量一直存在
+
+ @strongify(...)将参数变量强引用, 但前提是, 这些参数之前要被@weakify(...)修饰过, 这个宏将覆盖掉初始的变量名, 所以在当前作用域使用原来的变量名并不会引起循环引用: @weakify(...)和 @strongify(...)一定要成对配合使用!
+
+ 
+ 4.
+ 
+ 
+ */
+
+
+//MARK: MVVM + RAC 双向绑定示意图
+/**
+ https://blog.csdn.net/deft_mkjing/article/details/60773266
+ */
+
+
 //MARK: 使用RACSubject替代代理
 // https://www.jianshu.com/p/f068f5783d82
+
+
+//MARK: 使用RACSubject替代通知
+//发送通知
+- (void)demo5{
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    //发送广播通知
+    [center postNotificationName:@"妇女之友" object:nil userInfo:@{@"技巧":@"用心听"}];
+}
+
+-(void)demo55{
+    //接收通知
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    //RAC的通知不需要我们手动移除
+    //注册广播通知
+    RACSignal *siganl = [center rac_addObserverForName:@"妇女之友" object:nil];
+    //设置接收通知的回调处理
+    [siganl subscribeNext:^(NSNotification *x) {
+        NSLog(@"技巧: %@",x.userInfo[@"技巧"]);
+    }];
+}
 
 
 //MARK: map的使用

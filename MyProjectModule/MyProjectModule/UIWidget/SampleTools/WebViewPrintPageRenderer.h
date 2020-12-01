@@ -6,7 +6,7 @@
 //  Copyright © 2020 xinxin. All rights reserved.
 //
 /*===================================================
-        * 文件描述 ：webView全部截图 *
+        * 文件描述 ：webView全部截图 pdf 转 image*
 =====================================================*/
 #import <Foundation/Foundation.h>
 #import <WebKit/WebKit.h>

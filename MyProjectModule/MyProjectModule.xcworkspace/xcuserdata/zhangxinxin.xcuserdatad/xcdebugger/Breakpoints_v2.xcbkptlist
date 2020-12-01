@@ -341,22 +341,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FC406F7C-48AD-4555-9B04-23B5353D36A0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyProjectModule/DesignMode/Protocol Oriented Programming/Design-Pattern-in-Swift/SwiftDemosViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "526EF543-9FC6-4F86-82CE-17FF2A7809FE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -380,8 +364,8 @@
             filePath = "MyProjectModule/DataTransmission /RAC/MVVM/RAC_ViewModel.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "-setDefault"
             landmarkType = "7">
          </BreakpointContent>

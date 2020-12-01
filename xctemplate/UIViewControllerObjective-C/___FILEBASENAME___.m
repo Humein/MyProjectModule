@@ -1,18 +1,12 @@
-//
-//  XXBaseUIViewController.m
-//  MyProjectModule
-//
-//  Created by zhangxinxin on 2020/8/25.
-//  Copyright © 2020 xinxin. All rights reserved.
-//
+//___FILEHEADER___
 
-#import "XXBaseUIViewController.h"
+#import "___FILEBASENAME___.h"
 
-@interface XXBaseUIViewController ()
+@interface ___FILEBASENAMEASIDENTIFIER___ ()
 
 @end
 
-@implementation XXBaseUIViewController
+@implementation ___FILEBASENAMEASIDENTIFIER___
 // TODO: 标示处有功能代码待编写
 // FIXME: 标示处代码需要修正
 // !!!: 标示处代码需要注意

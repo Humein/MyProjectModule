@@ -1,21 +1,19 @@
 //
-//  RAC_ViewModel.h
+//  FactoryUsage.h
 //  MyProjectModule
 //
-//  Created by zhangxinxin on 2020/11/17.
+//  Created by zhangxinxin on 2020/11/26.
 //  Copyright © 2020 xinxin. All rights reserved.
 //
 /*===================================================
         * 文件描述 ：<#文件功能描述必写#> *
 =====================================================*/
 #import <UIKit/UIKit.h>
-#import "ReactiveObjC.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RAC_ViewModel : UIView
-/// 对外暴漏 信号
-@property (nonatomic, strong, readonly) RACSubject *pageSelectSubject;
+@interface FactoryUsage : UIView
+
 @end
 
 NS_ASSUME_NONNULL_END

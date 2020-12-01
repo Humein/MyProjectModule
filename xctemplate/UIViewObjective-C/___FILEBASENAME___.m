@@ -1,18 +1,12 @@
-//
-//  RAC_ViewModel.m
-//  MyProjectModule
-//
-//  Created by zhangxinxin on 2020/11/17.
-//  Copyright © 2020 xinxin. All rights reserved.
-//
+//___FILEHEADER___
 
-#import "RAC_ViewModel.h"
+#import "___FILEBASENAME___.h"
 
-@interface RAC_ViewModel()
-@property (nonatomic, strong, readwrite) RACSubject *pageSelectSubject;
+@interface ___FILEBASENAMEASIDENTIFIER___()
+
 @end
 
-@implementation RAC_ViewModel
+@implementation ___FILEBASENAMEASIDENTIFIER___
 
 #pragma mark -
 #pragma mark - life cycle - 生命周期
@@ -37,10 +31,7 @@
 
 /// 设置默认数据
 - (void)setDefault{
-    // 监听信号
-    [self.pageSelectSubject subscribeNext:^(id  _Nullable x) {
-            
-    }];
+    
 }
 
 /// 设置子视图
@@ -68,11 +59,5 @@
 
 #pragma mark -
 #pragma mark - getters and setters
-- (RACSubject *)pageSelectSubject {
-    if (!_pageSelectSubject) {
-        _pageSelectSubject = [[RACSubject alloc] init];
-    }
-    return _pageSelectSubject;
-}
 
 @end

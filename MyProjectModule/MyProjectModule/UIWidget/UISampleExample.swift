@@ -114,6 +114,45 @@ class UISampleExample: UIView {
         self.addSubview(view1)
         view1.addSubview(view2)
     }
+//    -(UIView *)shawdowWithMask{
+//        UIView *shadowView = [UIView new];
+//        UIView *borderContent = [UIView new];
+//        shadowView.frame = CGRectMake(20, 6, kScreenWidth - 40, 161 - 12);
+//        borderContent.frame = CGRectMake(0, 0, kScreenWidth - 40, 161 - 12);
+//        borderContent.backgroundColor = [UIColor clearColor];
+//        UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:shadowView.bounds byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(8, 8)];
+//        CALayer *layer = [CALayer new];
+//        layer.shadowColor = [UIColor xesApp_colorWithHex:0xCCCCCC alpha:1].CGColor;
+//        layer.shadowOpacity = 0.24;
+//        layer.shadowPath = maskPath.CGPath;
+//        layer.shadowOffset = CGSizeZero;
+//        layer.shadowRadius = 8;
+//        [shadowView.layer addSublayer:layer];
+//        CAShapeLayer *maskLayer = [CAShapeLayer layer];
+//        maskLayer.path = maskPath.CGPath;
+//        borderContent.layer.mask = maskLayer;
+//        [shadowView addSubview:borderContent];
+//        return shadowView;
+//    }
+    
+    /// 全部圆角阴影效果
+//    - (UIView *)cellBackgroundView{
+//        if (!_cellBackgroundView) {
+//            _cellBackgroundView = [[UIView alloc] initWithFrame:CGRectZero];
+//            _cellBackgroundView.layer.cornerRadius = 4.f;
+//            _cellBackgroundView.layer.borderWidth = 0.5f;
+//            _cellBackgroundView.layer.borderColor = kXesAppColor(0xF5F5F5, 0.1).CGColor;
+//            _cellBackgroundView.layer.shadowColor = kXesAppColor(0xCCCCCC, 0.24).CGColor;
+//            _cellBackgroundView.layer.shadowRadius = 6.f;
+//            _cellBackgroundView.layer.shadowOffset = CGSizeMake(0, 2.f);
+//            _cellBackgroundView.layer.shadowOpacity = 1.f;
+//            _cellBackgroundView.userInteractionEnabled = YES;
+//            _cellBackgroundView.backgroundColor = [UIColor xesApp_white];
+//        }
+//        return _cellBackgroundView;
+//    }
+    
+    
     
     // 阴影圆角共存 https://www.jianshu.com/p/48b1a601febf
     /**

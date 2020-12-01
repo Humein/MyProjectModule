@@ -66,14 +66,6 @@
 		79040DA72238D00D0085335E /* EventList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79040DA62238D00C0085335E /* EventList.plist */; };
 		790882F123A0D04500FA3BE5 /* Produce_Consume.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908825923A0D04400FA3BE5 /* Produce_Consume.m */; };
 		790882F223A0D04500FA3BE5 /* MessageThrottle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908825D23A0D04400FA3BE5 /* MessageThrottle.m */; };
-		790882F323A0D04500FA3BE5 /* AbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908826023A0D04400FA3BE5 /* AbstractFactory.swift */; };
-		790882F423A0D04500FA3BE5 /* ClassClusterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908826623A0D04400FA3BE5 /* ClassClusterModel.m */; };
-		790882F523A0D04500FA3BE5 /* ClassClusterTableViewCellB.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908826923A0D04400FA3BE5 /* ClassClusterTableViewCellB.m */; };
-		790882F623A0D04500FA3BE5 /* ClassClusterTableViewCellC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908826D23A0D04400FA3BE5 /* ClassClusterTableViewCellC.m */; };
-		790882F723A0D04500FA3BE5 /* ClassClusterBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908826F23A0D04400FA3BE5 /* ClassClusterBaseTableViewCell.m */; };
-		790882F823A0D04500FA3BE5 /* ClassClusterTableViewCellA.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908827223A0D04400FA3BE5 /* ClassClusterTableViewCellA.m */; };
-		790882F923A0D04500FA3BE5 /* ClassClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908827423A0D04400FA3BE5 /* ClassClusterViewController.m */; };
-		790882FA23A0D04500FA3BE5 /* FactoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908827523A0D04400FA3BE5 /* FactoryObject.swift */; };
 		7908830A23A0D04500FA3BE5 /* AliPay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908829D23A0D04400FA3BE5 /* AliPay.m */; };
 		7908830B23A0D04500FA3BE5 /* ApplePay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7908829E23A0D04400FA3BE5 /* ApplePay.m */; };
 		7908830C23A0D04500FA3BE5 /* APPPayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 790882A023A0D04400FA3BE5 /* APPPayTool.m */; };
@@ -176,6 +168,18 @@
 		79522A462563E5E50007BD64 /* RAC_ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79522A452563E5E50007BD64 /* RAC_ViewModel.m */; };
 		7957843324F4F32400287486 /* XXBaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7957843224F4F32400287486 /* XXBaseUIViewController.m */; };
 		7957843624F4F50D00287486 /* XXBaseUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7957843524F4F50D00287486 /* XXBaseUIView.m */; };
+		795BFA1E256F7E55001D8371 /* FactoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795BFA07256F7E55001D8371 /* FactoryObject.swift */; };
+		795BFA1F256F7E55001D8371 /* AbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795BFA09256F7E55001D8371 /* AbstractFactory.swift */; };
+		795BFA20256F7E55001D8371 /* ClassClusterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 795BFA0F256F7E55001D8371 /* ClassClusterModel.m */; };
+		795BFA21256F7E55001D8371 /* ClassClusterTableViewCellB.m in Sources */ = {isa = PBXBuildFile; fileRef = 795BFA12256F7E55001D8371 /* ClassClusterTableViewCellB.m */; };
+		795BFA22256F7E55001D8371 /* ClassClusterTableViewCellC.m in Sources */ = {isa = PBXBuildFile; fileRef = 795BFA16256F7E55001D8371 /* ClassClusterTableViewCellC.m */; };
+		795BFA23256F7E55001D8371 /* ClassClusterBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 795BFA18256F7E55001D8371 /* ClassClusterBaseTableViewCell.m */; };
+		795BFA24256F7E55001D8371 /* ClassClusterTableViewCellA.m in Sources */ = {isa = PBXBuildFile; fileRef = 795BFA1B256F7E55001D8371 /* ClassClusterTableViewCellA.m */; };
+		795BFA25256F7E55001D8371 /* ClassClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 795BFA1D256F7E55001D8371 /* ClassClusterViewController.m */; };
+		795BFA28256F7ED0001D8371 /* PhoneFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 795BFA27256F7ED0001D8371 /* PhoneFactory.m */; };
+		795BFA2D256F7F5D001D8371 /* Phone.m in Sources */ = {isa = PBXBuildFile; fileRef = 795BFA2C256F7F5D001D8371 /* Phone.m */; };
+		795BFA30256F7F8F001D8371 /* iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 795BFA2F256F7F8F001D8371 /* iPhone.m */; };
+		795BFA33256F7FBD001D8371 /* MIPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 795BFA32256F7FBD001D8371 /* MIPhone.m */; };
 		796BAD9F24E11F4000F68597 /* CustomPopCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796BAD9E24E11F4000F68597 /* CustomPopCover.swift */; };
 		796BADAF24E1201700F68597 /* CustomAlertManagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BADA124E1201700F68597 /* CustomAlertManagerView.m */; };
 		796BADB024E1201700F68597 /* PopTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BADA224E1201700F68597 /* PopTableView.m */; };
@@ -204,6 +208,8 @@
 		79A1A51B2269AD0800CEA92A /* SmoothTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5112269AD0800CEA92A /* SmoothTitleView.m */; };
 		79A1A51C2269AD0800CEA92A /* BookmarkMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5122269AD0800CEA92A /* BookmarkMainTableView.m */; };
 		79A1A51D2269AD0800CEA92A /* SmoothBookmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5152269AD0800CEA92A /* SmoothBookmarkViewController.m */; };
+		79B3FE3B256F824A001D73F4 /* FactoryUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3FE3A256F824A001D73F4 /* FactoryUsage.m */; };
+		79B3FE532570A465001D73F4 /* UIImage+DrawCornerTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3FE522570A465001D73F4 /* UIImage+DrawCornerTools.m */; };
 		79B44B24237CF0A900B7D73D /* SmoothBookmarkDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B44B23237CF0A900B7D73D /* SmoothBookmarkDemoViewController.m */; };
 		79B44B27237CF23000B7D73D /* BaseBookmarkChildDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B44B26237CF23000B7D73D /* BaseBookmarkChildDemoController.m */; };
 		79BA3B68244D5619008805F6 /* PlayerFullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BA3B62244D5618008805F6 /* PlayerFullScreenViewController.swift */; };
@@ -408,20 +414,6 @@
 		7908825A23A0D04400FA3BE5 /* Produce_Consume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Produce_Consume.h; sourceTree = "<group>"; };
 		7908825C23A0D04400FA3BE5 /* MessageThrottle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageThrottle.h; sourceTree = "<group>"; };
 		7908825D23A0D04400FA3BE5 /* MessageThrottle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageThrottle.m; sourceTree = "<group>"; };
-		7908826023A0D04400FA3BE5 /* AbstractFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractFactory.swift; sourceTree = "<group>"; };
-		7908826223A0D04400FA3BE5 /* ClassClusterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterViewController.h; sourceTree = "<group>"; };
-		7908826523A0D04400FA3BE5 /* ClassClusterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterModel.h; sourceTree = "<group>"; };
-		7908826623A0D04400FA3BE5 /* ClassClusterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterModel.m; sourceTree = "<group>"; };
-		7908826923A0D04400FA3BE5 /* ClassClusterTableViewCellB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterTableViewCellB.m; sourceTree = "<group>"; };
-		7908826A23A0D04400FA3BE5 /* ClassClusterTableViewCellB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterTableViewCellB.h; sourceTree = "<group>"; };
-		7908826C23A0D04400FA3BE5 /* ClassClusterTableViewCellC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterTableViewCellC.h; sourceTree = "<group>"; };
-		7908826D23A0D04400FA3BE5 /* ClassClusterTableViewCellC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterTableViewCellC.m; sourceTree = "<group>"; };
-		7908826F23A0D04400FA3BE5 /* ClassClusterBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterBaseTableViewCell.m; sourceTree = "<group>"; };
-		7908827023A0D04400FA3BE5 /* ClassClusterBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterBaseTableViewCell.h; sourceTree = "<group>"; };
-		7908827223A0D04400FA3BE5 /* ClassClusterTableViewCellA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterTableViewCellA.m; sourceTree = "<group>"; };
-		7908827323A0D04400FA3BE5 /* ClassClusterTableViewCellA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterTableViewCellA.h; sourceTree = "<group>"; };
-		7908827423A0D04400FA3BE5 /* ClassClusterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterViewController.m; sourceTree = "<group>"; };
-		7908827523A0D04400FA3BE5 /* FactoryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryObject.swift; sourceTree = "<group>"; };
 		7908829B23A0D04400FA3BE5 /* AliPay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliPay.h; sourceTree = "<group>"; };
 		7908829C23A0D04400FA3BE5 /* ApplePay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplePay.h; sourceTree = "<group>"; };
 		7908829D23A0D04400FA3BE5 /* AliPay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliPay.m; sourceTree = "<group>"; };
@@ -603,6 +595,28 @@
 		7957843224F4F32400287486 /* XXBaseUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBaseUIViewController.m; sourceTree = "<group>"; };
 		7957843424F4F50D00287486 /* XXBaseUIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBaseUIView.h; sourceTree = "<group>"; };
 		7957843524F4F50D00287486 /* XXBaseUIView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBaseUIView.m; sourceTree = "<group>"; };
+		795BFA07256F7E55001D8371 /* FactoryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryObject.swift; sourceTree = "<group>"; };
+		795BFA09256F7E55001D8371 /* AbstractFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractFactory.swift; sourceTree = "<group>"; };
+		795BFA0B256F7E55001D8371 /* ClassClusterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterViewController.h; sourceTree = "<group>"; };
+		795BFA0E256F7E55001D8371 /* ClassClusterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterModel.h; sourceTree = "<group>"; };
+		795BFA0F256F7E55001D8371 /* ClassClusterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterModel.m; sourceTree = "<group>"; };
+		795BFA12256F7E55001D8371 /* ClassClusterTableViewCellB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterTableViewCellB.m; sourceTree = "<group>"; };
+		795BFA13256F7E55001D8371 /* ClassClusterTableViewCellB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterTableViewCellB.h; sourceTree = "<group>"; };
+		795BFA15256F7E55001D8371 /* ClassClusterTableViewCellC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterTableViewCellC.h; sourceTree = "<group>"; };
+		795BFA16256F7E55001D8371 /* ClassClusterTableViewCellC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterTableViewCellC.m; sourceTree = "<group>"; };
+		795BFA18256F7E55001D8371 /* ClassClusterBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterBaseTableViewCell.m; sourceTree = "<group>"; };
+		795BFA19256F7E55001D8371 /* ClassClusterBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterBaseTableViewCell.h; sourceTree = "<group>"; };
+		795BFA1B256F7E55001D8371 /* ClassClusterTableViewCellA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterTableViewCellA.m; sourceTree = "<group>"; };
+		795BFA1C256F7E55001D8371 /* ClassClusterTableViewCellA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassClusterTableViewCellA.h; sourceTree = "<group>"; };
+		795BFA1D256F7E55001D8371 /* ClassClusterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassClusterViewController.m; sourceTree = "<group>"; };
+		795BFA26256F7ED0001D8371 /* PhoneFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneFactory.h; sourceTree = "<group>"; };
+		795BFA27256F7ED0001D8371 /* PhoneFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneFactory.m; sourceTree = "<group>"; };
+		795BFA2B256F7F5D001D8371 /* Phone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Phone.h; sourceTree = "<group>"; };
+		795BFA2C256F7F5D001D8371 /* Phone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Phone.m; sourceTree = "<group>"; };
+		795BFA2E256F7F8F001D8371 /* iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPhone.h; sourceTree = "<group>"; };
+		795BFA2F256F7F8F001D8371 /* iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPhone.m; sourceTree = "<group>"; };
+		795BFA31256F7FBD001D8371 /* MIPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIPhone.h; sourceTree = "<group>"; };
+		795BFA32256F7FBD001D8371 /* MIPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIPhone.m; sourceTree = "<group>"; };
 		796BAD9E24E11F4000F68597 /* CustomPopCover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPopCover.swift; sourceTree = "<group>"; };
 		796BADA124E1201700F68597 /* CustomAlertManagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlertManagerView.m; sourceTree = "<group>"; };
 		796BADA224E1201700F68597 /* PopTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTableView.m; sourceTree = "<group>"; };
@@ -658,6 +672,10 @@
 		79A1A5132269AD0800CEA92A /* SmoothBookmarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothBookmarkView.h; sourceTree = "<group>"; };
 		79A1A5142269AD0800CEA92A /* BookmarkContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkContainerView.h; sourceTree = "<group>"; };
 		79A1A5152269AD0800CEA92A /* SmoothBookmarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothBookmarkViewController.m; sourceTree = "<group>"; };
+		79B3FE39256F824A001D73F4 /* FactoryUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryUsage.h; sourceTree = "<group>"; };
+		79B3FE3A256F824A001D73F4 /* FactoryUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryUsage.m; sourceTree = "<group>"; };
+		79B3FE512570A465001D73F4 /* UIImage+DrawCornerTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+DrawCornerTools.h"; sourceTree = "<group>"; };
+		79B3FE522570A465001D73F4 /* UIImage+DrawCornerTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DrawCornerTools.m"; sourceTree = "<group>"; };
 		79B44B22237CF0A900B7D73D /* SmoothBookmarkDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmoothBookmarkDemoViewController.h; sourceTree = "<group>"; };
 		79B44B23237CF0A900B7D73D /* SmoothBookmarkDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmoothBookmarkDemoViewController.m; sourceTree = "<group>"; };
 		79B44B25237CF23000B7D73D /* BaseBookmarkChildDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseBookmarkChildDemoController.h; sourceTree = "<group>"; };
@@ -1269,94 +1287,14 @@
 		7908825E23A0D04400FA3BE5 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				7908825F23A0D04400FA3BE5 /* AbstractFactory */,
-				7908826123A0D04400FA3BE5 /* ClassCluster */,
-				7908827523A0D04400FA3BE5 /* FactoryObject.swift */,
+				795BFA08256F7E55001D8371 /* AbstractFactory */,
+				795BFA0A256F7E55001D8371 /* ClassCluster */,
+				795BFA06256F7E55001D8371 /* Factory */,
+				795BFA05256F7E55001D8371 /* SampleFactory */,
+				79B3FE39256F824A001D73F4 /* FactoryUsage.h */,
+				79B3FE3A256F824A001D73F4 /* FactoryUsage.m */,
 			);
 			path = Factory;
-			sourceTree = "<group>";
-		};
-		7908825F23A0D04400FA3BE5 /* AbstractFactory */ = {
-			isa = PBXGroup;
-			children = (
-				7908826023A0D04400FA3BE5 /* AbstractFactory.swift */,
-			);
-			path = AbstractFactory;
-			sourceTree = "<group>";
-		};
-		7908826123A0D04400FA3BE5 /* ClassCluster */ = {
-			isa = PBXGroup;
-			children = (
-				7908826323A0D04400FA3BE5 /* module */,
-				7908826223A0D04400FA3BE5 /* ClassClusterViewController.h */,
-				7908827423A0D04400FA3BE5 /* ClassClusterViewController.m */,
-			);
-			path = ClassCluster;
-			sourceTree = "<group>";
-		};
-		7908826323A0D04400FA3BE5 /* module */ = {
-			isa = PBXGroup;
-			children = (
-				7908826423A0D04400FA3BE5 /* Model */,
-				7908826723A0D04400FA3BE5 /* View */,
-			);
-			path = module;
-			sourceTree = "<group>";
-		};
-		7908826423A0D04400FA3BE5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				7908826523A0D04400FA3BE5 /* ClassClusterModel.h */,
-				7908826623A0D04400FA3BE5 /* ClassClusterModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		7908826723A0D04400FA3BE5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				7908826823A0D04400FA3BE5 /* 子类cellB */,
-				7908826B23A0D04400FA3BE5 /* 子类cellC */,
-				7908826E23A0D04400FA3BE5 /* 基类cell */,
-				7908827123A0D04400FA3BE5 /* 子类cellA */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		7908826823A0D04400FA3BE5 /* 子类cellB */ = {
-			isa = PBXGroup;
-			children = (
-				7908826923A0D04400FA3BE5 /* ClassClusterTableViewCellB.m */,
-				7908826A23A0D04400FA3BE5 /* ClassClusterTableViewCellB.h */,
-			);
-			path = "子类cellB";
-			sourceTree = "<group>";
-		};
-		7908826B23A0D04400FA3BE5 /* 子类cellC */ = {
-			isa = PBXGroup;
-			children = (
-				7908826C23A0D04400FA3BE5 /* ClassClusterTableViewCellC.h */,
-				7908826D23A0D04400FA3BE5 /* ClassClusterTableViewCellC.m */,
-			);
-			path = "子类cellC";
-			sourceTree = "<group>";
-		};
-		7908826E23A0D04400FA3BE5 /* 基类cell */ = {
-			isa = PBXGroup;
-			children = (
-				7908826F23A0D04400FA3BE5 /* ClassClusterBaseTableViewCell.m */,
-				7908827023A0D04400FA3BE5 /* ClassClusterBaseTableViewCell.h */,
-			);
-			path = "基类cell";
-			sourceTree = "<group>";
-		};
-		7908827123A0D04400FA3BE5 /* 子类cellA */ = {
-			isa = PBXGroup;
-			children = (
-				7908827223A0D04400FA3BE5 /* ClassClusterTableViewCellA.m */,
-				7908827323A0D04400FA3BE5 /* ClassClusterTableViewCellA.h */,
-			);
-			path = "子类cellA";
 			sourceTree = "<group>";
 		};
 		7908829823A0D04400FA3BE5 /* Strategy */ = {
@@ -1811,6 +1749,8 @@
 				79501BEA255A43F6005865A7 /* YYFPSLabel.m */,
 				79501C04255A69A7005865A7 /* WebViewPrintPageRenderer.h */,
 				79501C05255A69A7005865A7 /* WebViewPrintPageRenderer.m */,
+				79B3FE512570A465001D73F4 /* UIImage+DrawCornerTools.h */,
+				79B3FE522570A465001D73F4 /* UIImage+DrawCornerTools.m */,
 				79501BE9255A43F6005865A7 /* SDCustomStatusBarView.swift */,
 			);
 			name = SampleTools;
@@ -1867,6 +1807,128 @@
 				7957843524F4F50D00287486 /* XXBaseUIView.m */,
 			);
 			path = XXBaseUIKit;
+			sourceTree = "<group>";
+		};
+		795BFA05256F7E55001D8371 /* SampleFactory */ = {
+			isa = PBXGroup;
+			children = (
+				795BFA29256F7F48001D8371 /* 抽象产品类 */,
+				795BFA2A256F7F48001D8371 /* 抽象产品类的子类 */,
+				795BFA26256F7ED0001D8371 /* PhoneFactory.h */,
+				795BFA27256F7ED0001D8371 /* PhoneFactory.m */,
+			);
+			path = SampleFactory;
+			sourceTree = "<group>";
+		};
+		795BFA06256F7E55001D8371 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				795BFA07256F7E55001D8371 /* FactoryObject.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		795BFA08256F7E55001D8371 /* AbstractFactory */ = {
+			isa = PBXGroup;
+			children = (
+				795BFA09256F7E55001D8371 /* AbstractFactory.swift */,
+			);
+			path = AbstractFactory;
+			sourceTree = "<group>";
+		};
+		795BFA0A256F7E55001D8371 /* ClassCluster */ = {
+			isa = PBXGroup;
+			children = (
+				795BFA0B256F7E55001D8371 /* ClassClusterViewController.h */,
+				795BFA1D256F7E55001D8371 /* ClassClusterViewController.m */,
+				795BFA0C256F7E55001D8371 /* module */,
+			);
+			path = ClassCluster;
+			sourceTree = "<group>";
+		};
+		795BFA0C256F7E55001D8371 /* module */ = {
+			isa = PBXGroup;
+			children = (
+				795BFA0D256F7E55001D8371 /* Model */,
+				795BFA10256F7E55001D8371 /* View */,
+			);
+			path = module;
+			sourceTree = "<group>";
+		};
+		795BFA0D256F7E55001D8371 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				795BFA0E256F7E55001D8371 /* ClassClusterModel.h */,
+				795BFA0F256F7E55001D8371 /* ClassClusterModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		795BFA10256F7E55001D8371 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				795BFA11256F7E55001D8371 /* 子类cellB */,
+				795BFA14256F7E55001D8371 /* 子类cellC */,
+				795BFA17256F7E55001D8371 /* 基类cell */,
+				795BFA1A256F7E55001D8371 /* 子类cellA */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		795BFA11256F7E55001D8371 /* 子类cellB */ = {
+			isa = PBXGroup;
+			children = (
+				795BFA12256F7E55001D8371 /* ClassClusterTableViewCellB.m */,
+				795BFA13256F7E55001D8371 /* ClassClusterTableViewCellB.h */,
+			);
+			path = "子类cellB";
+			sourceTree = "<group>";
+		};
+		795BFA14256F7E55001D8371 /* 子类cellC */ = {
+			isa = PBXGroup;
+			children = (
+				795BFA15256F7E55001D8371 /* ClassClusterTableViewCellC.h */,
+				795BFA16256F7E55001D8371 /* ClassClusterTableViewCellC.m */,
+			);
+			path = "子类cellC";
+			sourceTree = "<group>";
+		};
+		795BFA17256F7E55001D8371 /* 基类cell */ = {
+			isa = PBXGroup;
+			children = (
+				795BFA18256F7E55001D8371 /* ClassClusterBaseTableViewCell.m */,
+				795BFA19256F7E55001D8371 /* ClassClusterBaseTableViewCell.h */,
+			);
+			path = "基类cell";
+			sourceTree = "<group>";
+		};
+		795BFA1A256F7E55001D8371 /* 子类cellA */ = {
+			isa = PBXGroup;
+			children = (
+				795BFA1B256F7E55001D8371 /* ClassClusterTableViewCellA.m */,
+				795BFA1C256F7E55001D8371 /* ClassClusterTableViewCellA.h */,
+			);
+			path = "子类cellA";
+			sourceTree = "<group>";
+		};
+		795BFA29256F7F48001D8371 /* 抽象产品类 */ = {
+			isa = PBXGroup;
+			children = (
+				795BFA2B256F7F5D001D8371 /* Phone.h */,
+				795BFA2C256F7F5D001D8371 /* Phone.m */,
+			);
+			path = "抽象产品类";
+			sourceTree = "<group>";
+		};
+		795BFA2A256F7F48001D8371 /* 抽象产品类的子类 */ = {
+			isa = PBXGroup;
+			children = (
+				795BFA2E256F7F8F001D8371 /* iPhone.h */,
+				795BFA2F256F7F8F001D8371 /* iPhone.m */,
+				795BFA31256F7FBD001D8371 /* MIPhone.h */,
+				795BFA32256F7FBD001D8371 /* MIPhone.m */,
+			);
+			path = "抽象产品类的子类";
 			sourceTree = "<group>";
 		};
 		796B066825406D27001C531B /* DownHelperByOperation */ = {
@@ -2648,7 +2710,6 @@
 				7908831723A0D04500FA3BE5 /* ProtoclForCMutilellViewController.m in Sources */,
 				33759E77212FAA7200D801C1 /* NSObject+RuntimeHelper.m in Sources */,
 				7908832C23A1097100FA3BE5 /* AdpterObject.swift in Sources */,
-				790882F923A0D04500FA3BE5 /* ClassClusterViewController.m in Sources */,
 				79522A392563CD410007BD64 /* RACObjectDemos.m in Sources */,
 				79DC645A23BA1F6C0073E22F /* SwiftDemosViewController.swift in Sources */,
 				793C637C240606A4000BE949 /* DrawLine.m in Sources */,
@@ -2659,6 +2720,7 @@
 				79522A432563E5D70007BD64 /* RAC_View.m in Sources */,
 				7993C871228D6A4E001A6BFA /* DownLoadCell.m in Sources */,
 				79E96688237EBDEA00B49697 /* TestBlockModelViewController.swift in Sources */,
+				79B3FE532570A465001D73F4 /* UIImage+DrawCornerTools.m in Sources */,
 				79E2EA0A246E4F1E003B5A39 /* SDPointsTransformFlowLayout.swift in Sources */,
 				790882F123A0D04500FA3BE5 /* Produce_Consume.m in Sources */,
 				33759E71212FA08900D801C1 /* UIView+MethodSwizze.m in Sources */,
@@ -2674,18 +2736,20 @@
 				79BA3B75244D79E6008805F6 /* EXUIViewController.swift in Sources */,
 				3362E69E2130FBEF00A4B26D /* PersonInfo.m in Sources */,
 				7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */,
+				795BFA1F256F7E55001D8371 /* AbstractFactory.swift in Sources */,
 				7936BB4124459E750043AF5A /* SDCycleView.swift in Sources */,
 				33E6CDD4210034E300422FC7 /* AlertTableView.m in Sources */,
 				796BADB724E122C900F68597 /* SimplePopUpHelper.m in Sources */,
 				79E2EA5A2481F91F003B5A39 /* BookMarkView.m in Sources */,
+				795BFA28256F7ED0001D8371 /* PhoneFactory.m in Sources */,
 				79E3D63621DE60E80038CACB /* RequestMediatorBaseBusniess.m in Sources */,
 				33C2DF3721DCC5D400F96F32 /* PointTreeTypeOne.m in Sources */,
 				7913EF6D24591EC3000C77A3 /* SDPushAViewController.swift in Sources */,
-				790882F723A0D04500FA3BE5 /* ClassClusterBaseTableViewCell.m in Sources */,
 				33C2DF3621DCC5D400F96F32 /* CompositePointTreeModel.m in Sources */,
 				79E53C6A246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift in Sources */,
 				796BADB024E1201700F68597 /* PopTableView.m in Sources */,
 				79DC645923BA1F6C0073E22F /* ShakeView.swift in Sources */,
+				795BFA2D256F7F5D001D8371 /* Phone.m in Sources */,
 				796BAD9F24E11F4000F68597 /* CustomPopCover.swift in Sources */,
 				7913EF65245915DA000C77A3 /* SDPresentBViewController.swift in Sources */,
 				7908832323A0D04500FA3BE5 /* Condiment.m in Sources */,
@@ -2704,6 +2768,7 @@
 				7936BB4224459E750043AF5A /* SDPageControl.swift in Sources */,
 				79501BEB255A43F6005865A7 /* SDCustomStatusBarView.swift in Sources */,
 				793C6377240606A4000BE949 /* POPNumberAnimation.m in Sources */,
+				795BFA1E256F7E55001D8371 /* FactoryObject.swift in Sources */,
 				3362E6A22130FC1300A4B26D /* FBKVOViewController.m in Sources */,
 				7908830E23A0D04500FA3BE5 /* NSInvocationForStrategyViewController.m in Sources */,
 				793051942553E62800C4E395 /* AdvancedLoadDataVC.m in Sources */,
@@ -2713,7 +2778,6 @@
 				7936BB642445A7400043AF5A /* DBAbstractItem+DataBase.m in Sources */,
 				79BA3B72244D56E5008805F6 /* BKFullScreenViewController.m in Sources */,
 				79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */,
-				790882FA23A0D04500FA3BE5 /* FactoryObject.swift in Sources */,
 				79D353B0241324510064FB03 /* UITableView+PlaceHolder.m in Sources */,
 				33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */,
 				79305197255404B900C4E395 /* RenderTimeCountManager.m in Sources */,
@@ -2725,12 +2789,14 @@
 				33759E74212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.m in Sources */,
 				7936BB4024459E750043AF5A /* SDCycleViewCell.swift in Sources */,
 				79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */,
+				795BFA21256F7E55001D8371 /* ClassClusterTableViewCellB.m in Sources */,
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
 				79DF39392200499400977BB4 /* LRULinkedMap.m in Sources */,
 				79A1A51D2269AD0800CEA92A /* SmoothBookmarkViewController.m in Sources */,
 				794E825E2404BBA8008DFFB9 /* LRUCacheSimple.swift in Sources */,
 				79DC645423BA1F6C0073E22F /* ViewControllerChildTwo.m in Sources */,
 				79DC644023BA1E1D0073E22F /* ResponOfChainManager.m in Sources */,
+				795BFA20256F7E55001D8371 /* ClassClusterModel.m in Sources */,
 				797EC362236C141100E21E44 /* SDTimeAlertPickerView.swift in Sources */,
 				7908831123A0D04500FA3BE5 /* CorrectResolver.m in Sources */,
 				7993C86E228D692A001A6BFA /* DownListViewController.m in Sources */,
@@ -2747,6 +2813,7 @@
 				79BA3B68244D5619008805F6 /* PlayerFullScreenViewController.swift in Sources */,
 				79EEEAA9219014BD00848B59 /* PointTreeStatisTableViewCell.m in Sources */,
 				7908831323A0D04500FA3BE5 /* ZTKDownHelperManager.m in Sources */,
+				795BFA23256F7E55001D8371 /* ClassClusterBaseTableViewCell.m in Sources */,
 				79DC645623BA1F6C0073E22F /* SecondView.swift in Sources */,
 				3362E69F2130FBEF00A4B26D /* CustomKVO.m in Sources */,
 				7908832423A0D04500FA3BE5 /* Hamburger.m in Sources */,
@@ -2776,7 +2843,6 @@
 				79E3D63921DE67E00038CACB /* RequestViewController.m in Sources */,
 				79A0ECAB23682EFF004C10B0 /* XXPLEAGLLayer.m in Sources */,
 				33E6CE0721006D2000422FC7 /* UITableViewCell+AnimationType.m in Sources */,
-				790882F523A0D04500FA3BE5 /* ClassClusterTableViewCellB.m in Sources */,
 				79DC642223BA1A0A0073E22F /* UIResponder+UIResponderChain.m in Sources */,
 				33FAE4E520E2445500BE7175 /* HeaderSuspendedLayout.m in Sources */,
 				7908831B23A0D04500FA3BE5 /* ZSPlayer.m in Sources */,
@@ -2785,13 +2851,14 @@
 				79501BF8255A4414005865A7 /* SDBarrageInfo.swift in Sources */,
 				79DC645823BA1F6C0073E22F /* AbstractViewProtocol.swift in Sources */,
 				7936BB4324459E750043AF5A /* SDCycleLayout.swift in Sources */,
+				795BFA33256F7FBD001D8371 /* MIPhone.m in Sources */,
 				794B100621DEF98300B91405 /* PointsTreeTableViewCell.m in Sources */,
 				7908832523A0D04500FA3BE5 /* UIImage+Transform.m in Sources */,
 				338FEBFF20E0F25A0025631B /* UIControlFactory.m in Sources */,
 				79DC643B23BA1E170073E22F /* ProtocolLinked.swift in Sources */,
+				795BFA25256F7E55001D8371 /* ClassClusterViewController.m in Sources */,
 				79E53C68246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift in Sources */,
 				7998C6CF23CEA4E500DA3BEF /* DesignModeViewController.m in Sources */,
-				790882F823A0D04500FA3BE5 /* ClassClusterTableViewCellA.m in Sources */,
 				796E8F672430D91F001EB53F /* ThreadSafeContainer.m in Sources */,
 				7908830D23A0D04500FA3BE5 /* DownLoadViewController.m in Sources */,
 				33FAE4E620E2445500BE7175 /* CarouselLayout.m in Sources */,
@@ -2805,6 +2872,7 @@
 				7908830C23A0D04500FA3BE5 /* APPPayTool.m in Sources */,
 				79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */,
 				79BA3B71244D56E5008805F6 /* BKEnterFullscreenTransition.m in Sources */,
+				79B3FE3B256F824A001D73F4 /* FactoryUsage.m in Sources */,
 				33E6CDD9210035FF00422FC7 /* ThreeLevelTreeViewController.m in Sources */,
 				79EEEAA6218FF6CC00848B59 /* Multi-CellTree-TableViewController.m in Sources */,
 				7908830A23A0D04500FA3BE5 /* AliPay.m in Sources */,
@@ -2818,6 +2886,7 @@
 				7908831623A0D04500FA3BE5 /* ZTKDownItem.m in Sources */,
 				7957843324F4F32400287486 /* XXBaseUIViewController.m in Sources */,
 				7908831D23A0D04500FA3BE5 /* ZSPlaterHelper.m in Sources */,
+				795BFA30256F7F8F001D8371 /* iPhone.m in Sources */,
 				79EEEAA2218FF5E600848B59 /* TreeModel.m in Sources */,
 				7908832623A0D04500FA3BE5 /* UIImage+BaseFilter.m in Sources */,
 				79E2EA57247A2755003B5A39 /* AVViewController.m in Sources */,
@@ -2832,12 +2901,13 @@
 				79A0ECAE236838E5004C10B0 /* VTBEncDecViewController.m in Sources */,
 				79E3D63321DE57D60038CACB /* ZTKBaseRequest.m in Sources */,
 				339B535020F4AF35003444CB /* UIButton+ButtonBlockCategory.m in Sources */,
-				790882F623A0D04500FA3BE5 /* ClassClusterTableViewCellC.m in Sources */,
 				79B44B24237CF0A900B7D73D /* SmoothBookmarkDemoViewController.m in Sources */,
 				333D105720CE74A9004D9241 /* AppDelegate.m in Sources */,
 				79EEEA562182C09200848B59 /* liveChatModel.m in Sources */,
 				7908830B23A0D04500FA3BE5 /* ApplePay.m in Sources */,
 				7908832123A0D04500FA3BE5 /* Command.swift in Sources */,
+				795BFA22256F7E55001D8371 /* ClassClusterTableViewCellC.m in Sources */,
+				795BFA24256F7E55001D8371 /* ClassClusterTableViewCellA.m in Sources */,
 				33C2DF3921DCC5D400F96F32 /* PointTreeTypeThree.m in Sources */,
 				793C6376240606A4000BE949 /* AnimationExample.m in Sources */,
 				7936BB742446EA2C0043AF5A /* MainTabBarViewController.m in Sources */,
@@ -2848,8 +2918,6 @@
 				33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */,
 				7908830F23A0D04500FA3BE5 /* ResovlerModel.m in Sources */,
 				793C6378240606A4000BE949 /* AttributeAndPredicateWithLink.m in Sources */,
-				790882F423A0D04500FA3BE5 /* ClassClusterModel.m in Sources */,
-				790882F323A0D04500FA3BE5 /* AbstractFactory.swift in Sources */,
 				338FEC0520E0F5B70025631B /* UIButton+Decorate.m in Sources */,
 				796BADB224E1201700F68597 /* DecoratorAView.m in Sources */,
 				79DC645523BA1F6C0073E22F /* PaternalViewController.m in Sources */,
