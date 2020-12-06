@@ -59,6 +59,8 @@
     one1.font = [UIFont boldSystemFontOfSize:12];
     one1.underlineStyle = NSUnderlineStyleNone;
     
+    
+    
 // 2 组装成字典/模型
     NSDictionary *dic1 =  [self handleTheStringWithRegularExpression:HTStr].copy;
 

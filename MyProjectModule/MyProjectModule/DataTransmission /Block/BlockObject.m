@@ -13,6 +13,7 @@
 #import "UIButton+Decorate.h"
 @interface BlockObject()
 @property (nonatomic, copy) MiniProgramResultBlock completeBlock;
+@property (nonatomic, strong) UIView *tmpView;
 
 @end
 

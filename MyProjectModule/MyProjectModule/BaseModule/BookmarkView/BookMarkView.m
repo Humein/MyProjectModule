@@ -524,7 +524,7 @@ static NSString *BookmarkViewContentCellIndentify = @"BookmarkViewContentCellInd
 - (UICollectionView *)tagListView
 {
     if (_tagListView==nil) {
-        
+        // 这个item宽度是根据字数自己算的。
         UICollectionViewFlowLayout *flowLayout= [[UICollectionViewFlowLayout alloc] init];
         flowLayout.scrollDirection=UICollectionViewScrollDirectionHorizontal;
         flowLayout.minimumLineSpacing=0.0f;

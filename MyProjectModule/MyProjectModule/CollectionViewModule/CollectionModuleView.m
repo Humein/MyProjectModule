@@ -109,23 +109,22 @@
 {
     if (_collectionView== nil) {
         
-//        正常
+// !!!:     正常 需要计算item的size 参考bookmark 的 tagListView
         UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
         flowLayout.scrollDirection=UICollectionViewScrollDirectionHorizontal;
         flowLayout.itemSize=CGSizeMake(self.frame.size.width, self.frame.size.height);
         flowLayout.minimumInteritemSpacing = 23.0;
-//        flowLayout.minimumLineSpacing=0.0;
+        flowLayout.minimumLineSpacing=0.0;
         flowLayout.sectionInset=UIEdgeInsetsMake(0, 0, 0, 0);
         
-//        旋转木马      
+// !!!:        旋转木马
         CarouselLayout *carouselLayout                = [[CarouselLayout alloc] init];
         carouselLayout.carouselSlideIndexBlock          = ^(NSInteger index){
             NSLog(@"index======%ld",(long)index);
         };
         carouselLayout.itemSize                         = CGSizeMake(190, 262);
         
-//        瀑布流(标签)
-        
+// !!!:        瀑布流(标签) 不需要计算item的size
 //        UICollectionViewFlowLayout *waterLayout = [self setupFlowLayout];  废弃
         FilterCollectionViewLayout * waterFallLayout = [[FilterCollectionViewLayout alloc]init];
         waterFallLayout.delegate = self;

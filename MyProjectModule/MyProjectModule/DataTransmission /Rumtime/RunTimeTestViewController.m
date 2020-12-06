@@ -92,4 +92,16 @@
     [self runTimeAddInstanceMethod];
 }
 
+//MARK:- 在对象生命周期内只执行一次
+-(void)launch{
+    if (objc_getAssociatedObject(self, _cmd)) {
+        return;
+    }else{
+        objc_setAssociatedObject(self, _cmd, @"launched", OBJC_ASSOCIATION_RETAIN);
+    }
+    NSLog(@"方法只执行一次");
+}
+
+
+
 @end

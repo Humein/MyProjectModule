@@ -151,6 +151,16 @@
 
 //    self.hintLabel.attributedText = text;
 }
+
+/*
+-(NSMutableAttributedString *)coursePrice{
+   NSMutableAttributedString *AText  = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@",([self.actualPrice integerValue] == 0 && self.actualPrice.length < 2) ? @"免费" : [NSString stringWithFormat:@"¥%@",self.actualPrice]]];
+    [AText setColor:HexColor(0x49CF9E, 1) range:[AText.string rangeOfString:@"免费"]];
+    [AText setColor:HexColor(0xFF3F47, 1) range:[AText.string rangeOfString:[NSString stringWithFormat:@"¥%@",self.actualPrice]]];
+    return AText;
+}
+*/
+
 - (YYLabel *)hintLabel {
     if (!_hintLabel) {
         _hintLabel = [[YYLabel alloc] initWithFrame:CGRectZero];

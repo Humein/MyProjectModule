@@ -74,7 +74,7 @@ void UncaughtExceptionHandler(NSException *exception) {
     
 
     self.itemList = [NSMutableArray array];
-    NSArray *list = [NSArray arrayWithObjects:@"UISampleExampleVC",@"AVViewController",@"TestOnewCollecionViewController",@"SubTwoSwiftDemosViewController",@"SubOneSwiftDemosViewController",@"RenderImageViewController",@"RotationImageViewController",@"TransitionsAnimationDemos",@"ThreadSafeContainer",@"TestBlockModelViewController",@"BookmarkViewDemo",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
+    NSArray *list = [NSArray arrayWithObjects:@"AvoidCrashViewController",@"UISampleExampleVC",@"AVViewController",@"TestOnewCollecionViewController",@"SubTwoSwiftDemosViewController",@"SubOneSwiftDemosViewController",@"RenderImageViewController",@"RotationImageViewController",@"TransitionsAnimationDemos",@"ThreadSafeContainer",@"TestBlockModelViewController",@"BookmarkViewDemo",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
 
     [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { 
         CellModel *model =  [CellModel new];
@@ -139,20 +139,15 @@ void UncaughtExceptionHandler(NSException *exception) {
     __weak BlockObject *weakTestObj = testObj; //弱引用不会导致Block捕获对象的引用计数增加
 
     testObj.popBlock = ^{
-//        NSLog(@"%@", weakTestObj.className); // 加了这个就不会了
-//        testObj = nil; // 会触发delloc
-            
+        testObj = nil; // 会触发delloc
         { // 这样也不会，放在子线程置nil; 这样delloc会在popBlock作用域之后指向；这时 self 都是 纯在的
         dispatch_queue_t quene = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         dispatch_async(quene, ^{
             testObj = nil; // 会触发delloc
         });
         }
-
-//        NSLog(@"%@", testObj.className); // 会循环引用
     };
-//    testObj.popBlock(); // block 方式 解决循环
-    [testObj testMethod];    
+    [testObj testMethod];
 }
 
 

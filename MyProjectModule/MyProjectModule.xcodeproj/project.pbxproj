@@ -148,6 +148,7 @@
 		79402224219D59A20008A3AD /* SimulationChainFucCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79402223219D59A20008A3AD /* SimulationChainFucCode.m */; };
 		7943054124FFCFA20036D0DF /* MultiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7943054024FFCFA20036D0DF /* MultiDelegate.m */; };
 		7943054424FFD0060036D0DF /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7943054324FFD0060036D0DF /* Manager.m */; };
+		7946271625772FF1009778CB /* AvoidCrashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7946271525772FF1009778CB /* AvoidCrashViewController.m */; };
 		794B100621DEF98300B91405 /* PointsTreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */; };
 		794B100921DF02E300B91405 /* AbstractTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100821DF02E300B91405 /* AbstractTableViewController.m */; };
 		794B100C21DF2CF700B91405 /* TreeDiffModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794B100B21DF2CF700B91405 /* TreeDiffModelViewController.m */; };
@@ -564,6 +565,8 @@
 		7943054024FFCFA20036D0DF /* MultiDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiDelegate.m; sourceTree = "<group>"; };
 		7943054224FFD0060036D0DF /* Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
 		7943054324FFD0060036D0DF /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
+		7946271425772FF1009778CB /* AvoidCrashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AvoidCrashViewController.h; sourceTree = "<group>"; };
+		7946271525772FF1009778CB /* AvoidCrashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvoidCrashViewController.m; sourceTree = "<group>"; };
 		794B100421DEF98300B91405 /* PointsTreeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PointsTreeTableViewCell.h; path = MyProjectModule/NetRequstAndSocket/PointsTreeTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		794B100521DEF98300B91405 /* PointsTreeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PointsTreeTableViewCell.m; path = MyProjectModule/NetRequstAndSocket/PointsTreeTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		794B100721DF02E300B91405 /* AbstractTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractTableViewController.h; sourceTree = "<group>"; };
@@ -1745,6 +1748,8 @@
 		79501BE7255A43F6005865A7 /* SampleTools */ = {
 			isa = PBXGroup;
 			children = (
+				7957843424F4F50D00287486 /* XXBaseUIView.h */,
+				7957843524F4F50D00287486 /* XXBaseUIView.m */,
 				79501BE8255A43F6005865A7 /* YYFPSLabel.h */,
 				79501BEA255A43F6005865A7 /* YYFPSLabel.m */,
 				79501C04255A69A7005865A7 /* WebViewPrintPageRenderer.h */,
@@ -1803,8 +1808,6 @@
 			children = (
 				7957843124F4F32400287486 /* XXBaseUIViewController.h */,
 				7957843224F4F32400287486 /* XXBaseUIViewController.m */,
-				7957843424F4F50D00287486 /* XXBaseUIView.h */,
-				7957843524F4F50D00287486 /* XXBaseUIView.m */,
 			);
 			path = XXBaseUIKit;
 			sourceTree = "<group>";
@@ -1941,6 +1944,8 @@
 		796BAD9624DBECB400F68597 /* AvoidCrash */ = {
 			isa = PBXGroup;
 			children = (
+				7946271425772FF1009778CB /* AvoidCrashViewController.h */,
+				7946271525772FF1009778CB /* AvoidCrashViewController.m */,
 			);
 			path = AvoidCrash;
 			sourceTree = "<group>";
@@ -2769,6 +2774,7 @@
 				79501BEB255A43F6005865A7 /* SDCustomStatusBarView.swift in Sources */,
 				793C6377240606A4000BE949 /* POPNumberAnimation.m in Sources */,
 				795BFA1E256F7E55001D8371 /* FactoryObject.swift in Sources */,
+				7946271625772FF1009778CB /* AvoidCrashViewController.m in Sources */,
 				3362E6A22130FC1300A4B26D /* FBKVOViewController.m in Sources */,
 				7908830E23A0D04500FA3BE5 /* NSInvocationForStrategyViewController.m in Sources */,
 				793051942553E62800C4E395 /* AdvancedLoadDataVC.m in Sources */,
