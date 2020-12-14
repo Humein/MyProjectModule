@@ -27,8 +27,6 @@ typedef void(^TouchesEvent)(FactoryProductType type);
 @property (nonatomic, strong) UIView *headerBackgroundView;
 /// 提醒图片
 @property (nonatomic, strong) UIImageView *noticeImageView;
-/// 分割线
-@property (nonatomic, strong) UIView *lineView;
 /// 指向
 @property (nonatomic, strong) UIButton *noticeDirect;
 @end

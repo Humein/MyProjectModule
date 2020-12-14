@@ -46,13 +46,17 @@
         make.centerY.equalTo(self.titleTagLabel);
         make.right.equalTo(self).offset(-20);
     }];
-    // titleTagLabel 优先级显示
+    // titleTagLabel 优先级显示 https://juejin.cn/post/6904180829883203592
     [self.titleTagLabel setContentCompressionResistancePriority:751 forAxis:UILayoutConstraintAxisHorizontal];
     // 获取layout的frame
     dispatch_async(dispatch_get_main_queue(), ^{
         // 渐变
         CAGradientLayer *gradientLayer = [self setGradualChangingColor:self.titleTagLabel fromColor:[UIColor redColor] toColor:[UIColor yellowColor]];
         // layer层级
+        /*
+          父子层级无法调换
+          可以通过一个共有的父层级，然后通过zPosition属性设置子视图Layer的层次高于其他Layer即可覆盖
+         */
         gradientLayer.frame = self.titleTagLabel.layer.frame;
         [self.layer insertSublayer:gradientLayer below:self.titleTagLabel.layer];
     });
