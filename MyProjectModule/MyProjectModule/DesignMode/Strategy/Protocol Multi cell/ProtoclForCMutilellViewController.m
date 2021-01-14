@@ -73,12 +73,17 @@
     ClassClusterModel *model = self.dataArray[indexPath.row];
  
     NSString * cellID = model.cellReuseID;
-    
+    // !!!: 每个cell遵循实现协议
     UITableViewCell<MultiCellConfigPropotol> * cell= [tableView dequeueReusableCellWithIdentifier:cellID];
     
     if ([cell respondsToSelector:@selector(configCellWithModel:)]) {
-        
+        // !!!: 调用协议
         [cell configCellWithModel:model];
+    }
+    
+    if ([cell respondsToSelector:@selector(configEventDelegate:)]) {
+        // 代理回掉事件
+        [cell configEventDelegate:self];
     }
     
     return cell;
@@ -87,6 +92,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     ClassClusterModel *model = self.dataArray[indexPath.row];
+    // !!!: 响应连/父类/添加共有关联属性 消除block类型判断
 
 }
 

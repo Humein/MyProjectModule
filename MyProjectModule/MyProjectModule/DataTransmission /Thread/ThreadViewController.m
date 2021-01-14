@@ -516,8 +516,12 @@
 }
 
 -(void)request_A{
+
+    
+    
 //1    创建
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://www.cocoachina.com"]];
     NSURLSessionDownloadTask *task = [[NSURLSession sharedSession] downloadTaskWithRequest:request completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -531,7 +535,11 @@
     [task resume];
     
     //3 若计数为0则一直等待
-    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+//    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+    // 设置信号量锁时间
+    double timeoutForImageCapture = 3.0;
+    dispatch_time_t convertedTimeout = dispatch_time(DISPATCH_TIME_NOW, timeoutForImageCapture * NSEC_PER_SEC);
+    dispatch_semaphore_wait(sema, convertedTimeout);
     
 }
 -(void)request_B{

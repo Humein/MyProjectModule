@@ -140,7 +140,7 @@ void UncaughtExceptionHandler(NSException *exception) {
 
     testObj.popBlock = ^{
 //        testObj = nil; // 会触发delloc 然后崩溃
-        { // 这样也不会，放在子线程置nil; 这样delloc会在popBlock作用域之后指向；这时 self 都是 纯在的
+        { // 这样 也不会，放在子线程置nil; 这样delloc会在popBlock作用域之后指向；这时 self 都是 纯在的
         dispatch_queue_t quene = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         dispatch_async(quene, ^{
             testObj = nil; // 会触发delloc

@@ -176,6 +176,8 @@
 
      */
     [self.tableView layoutIfNeeded];
+    // !!!: XXMARK 这里计算出来的是他的contentSize。然后再 self.tableview.height = contentSize.height. 这就是cell中tableView的高度了。 collectionView 同理
+    // mas_remakeConstraints 比较保险
 
 }
 

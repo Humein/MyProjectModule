@@ -51,4 +51,17 @@
     self.rightLabel.text = model.title;
 }
 
+- (void)configEventDelegate:(id)delegate {
+    if ([delegate conformsToProtocol:@protocol(ViewControllerBDelegate)]) {
+        self.delegate = delegate;
+    }
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (self.delegate && [self.delegate  respondsToSelector:@selector(viewControllerBsendValue:)]){
+        //如果协议响应了sendValue：方法
+        //通知代理执行协议的方法
+        [self.delegate viewControllersendValue:@"1111"];
+    }
+}
 @end

@@ -12,14 +12,15 @@
 
 @interface XXBaseUIView()
 @property (nonatomic, strong) UILabel *titleTagLabel;
-@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) YYLabel *titleLabel;
 @end
 @implementation XXBaseUIView
 
 
 // !!!: 计算富文本高度
 -(void)getAttstrHeight{
-    // 简单点的方法
+    // 简单点的方法。YYLabel preferredMaxLayoutWidth换行
+    self.titleLabel.numberOfLines = 0;
     self.titleLabel.preferredMaxLayoutWidth = 220;
     CGSize size = self.titleLabel.intrinsicContentSize;
     

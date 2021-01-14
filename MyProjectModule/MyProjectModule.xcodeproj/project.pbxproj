@@ -1340,10 +1340,10 @@
 		7908829923A0D04400FA3BE5 /* Pay Type */ = {
 			isa = PBXGroup;
 			children = (
-				7908829A23A0D04400FA3BE5 /* Pay SDK */,
 				7908829F23A0D04400FA3BE5 /* APPPayProtocol.h */,
-				790882A023A0D04400FA3BE5 /* APPPayTool.m */,
 				790882A123A0D04400FA3BE5 /* APPPayTool.h */,
+				790882A023A0D04400FA3BE5 /* APPPayTool.m */,
+				7908829A23A0D04400FA3BE5 /* Pay SDK */,
 			);
 			path = "Pay Type";
 			sourceTree = "<group>";
@@ -1352,8 +1352,8 @@
 			isa = PBXGroup;
 			children = (
 				7908829B23A0D04400FA3BE5 /* AliPay.h */,
-				7908829C23A0D04400FA3BE5 /* ApplePay.h */,
 				7908829D23A0D04400FA3BE5 /* AliPay.m */,
+				7908829C23A0D04400FA3BE5 /* ApplePay.h */,
 				7908829E23A0D04400FA3BE5 /* ApplePay.m */,
 			);
 			path = "Pay SDK";
@@ -1363,11 +1363,11 @@
 			isa = PBXGroup;
 			children = (
 				790882A623A0D04400FA3BE5 /* CorrectResolver.h */,
-				790882A723A0D04400FA3BE5 /* ResovlerModel.m */,
-				790882A823A0D04400FA3BE5 /* CorrectTagModel.m */,
 				790882A923A0D04400FA3BE5 /* CorrectResolver.m */,
-				790882AA23A0D04400FA3BE5 /* ResovlerModel.h */,
 				790882AB23A0D04400FA3BE5 /* CorrectTagModel.h */,
+				790882A823A0D04400FA3BE5 /* CorrectTagModel.m */,
+				790882AA23A0D04400FA3BE5 /* ResovlerModel.h */,
+				790882A723A0D04400FA3BE5 /* ResovlerModel.m */,
 			);
 			path = "申论批改详情";
 			sourceTree = "<group>";
@@ -1375,17 +1375,17 @@
 		790882AC23A0D04400FA3BE5 /* DownLoad */ = {
 			isa = PBXGroup;
 			children = (
-				790882AD23A0D04400FA3BE5 /* ZTKLLDownHelper.m */,
 				790882AE23A0D04400FA3BE5 /* ZTKBJDownHelper.h */,
-				790882AF23A0D04400FA3BE5 /* ZTKDownItem.h */,
+				790882B423A0D04400FA3BE5 /* ZTKBJDownHelper.m */,
+				790882B623A0D04400FA3BE5 /* ZTKDownHelperManager.h */,
 				790882B023A0D04400FA3BE5 /* ZTKDownHelperManager.m */,
 				790882B123A0D04400FA3BE5 /* ZTKDownHelperProtocol.h */,
-				790882B223A0D04400FA3BE5 /* ZTKZTKBJDownItem.m */,
-				790882B323A0D04400FA3BE5 /* ZTKLLDownHelper.h */,
-				790882B423A0D04400FA3BE5 /* ZTKBJDownHelper.m */,
-				790882B523A0D04400FA3BE5 /* ZTKZTKBJDownItem.h */,
-				790882B623A0D04400FA3BE5 /* ZTKDownHelperManager.h */,
+				790882AF23A0D04400FA3BE5 /* ZTKDownItem.h */,
 				790882B723A0D04400FA3BE5 /* ZTKDownItem.m */,
+				790882B323A0D04400FA3BE5 /* ZTKLLDownHelper.h */,
+				790882AD23A0D04400FA3BE5 /* ZTKLLDownHelper.m */,
+				790882B523A0D04400FA3BE5 /* ZTKZTKBJDownItem.h */,
+				790882B223A0D04400FA3BE5 /* ZTKZTKBJDownItem.m */,
 			);
 			path = DownLoad;
 			sourceTree = "<group>";
@@ -1955,8 +1955,8 @@
 		795BFA11256F7E55001D8371 /* 子类cellB */ = {
 			isa = PBXGroup;
 			children = (
-				795BFA12256F7E55001D8371 /* ClassClusterTableViewCellB.m */,
 				795BFA13256F7E55001D8371 /* ClassClusterTableViewCellB.h */,
+				795BFA12256F7E55001D8371 /* ClassClusterTableViewCellB.m */,
 			);
 			path = "子类cellB";
 			sourceTree = "<group>";
