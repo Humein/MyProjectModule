@@ -35,6 +35,10 @@
     [self setupSubViewsConstraints];//设置子View约束
 }
 
+/// 5 万， 手续费 123。 ==  4290
+
+/// 白金卡 手续费：消费8万 + 20次 免800 年费。
+
 /// 设置默认数据
 - (void)setDefault{
     
