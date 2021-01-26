@@ -13,6 +13,8 @@
 @interface XXBaseUIView()
 @property (nonatomic, strong) UILabel *titleTagLabel;
 @property (nonatomic, strong) YYLabel *titleLabel;
+@property (nonatomic, strong) UITableView *tableView;
+
 @end
 @implementation XXBaseUIView
 
@@ -23,9 +25,10 @@
     self.titleLabel.numberOfLines = 0;
     self.titleLabel.preferredMaxLayoutWidth = 220;
     CGSize size = self.titleLabel.intrinsicContentSize;
-    
-    // 复杂点的方法 不需要label
+    // 复杂点的方法并且好用的 
     NSMutableAttributedString  *attText = [[NSMutableAttributedString  alloc] initWithString:@""];
+    // 修改富文本的上下偏移量，可以做对齐处理。
+    [attText setBaselineOffset:@(-2) range:[attText.string rangeOfString:attText.string]];
     attText.minimumLineHeight = 20;
     attText.font = [UIFont systemFontOfSize:14];
     CGSize introSize = CGSizeMake(self.width, CGFLOAT_MAX);
@@ -75,6 +78,33 @@
     gradientLayer.endPoint = CGPointMake(1, 0);
     gradientLayer.locations = @[@0,@1];
     return gradientLayer;
+}
+
+// !!!: tableView 渐变背景颜色
+-(UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:self.bounds style:UITableViewStyleGrouped];
+        
+        CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+        // 调整layer层级 ⚠️：layer要有同一个父layer zPosition 属性调整视图层级关系
+        gradientLayer.zPosition = -1;
+        _tableView.backgroundView.layer.zPosition = 0;
+        
+        gradientLayer.frame = _tableView.bounds;
+        [_tableView.layer addSublayer:gradientLayer];
+        gradientLayer.startPoint = CGPointMake(0, 0);
+        gradientLayer.endPoint = CGPointMake(0, 1);
+        //设置颜色数组
+        gradientLayer.colors = @[(__bridge id)[UIColor redColor].CGColor,
+        (__bridge id)[UIColor grayColor].CGColor];
+        //设置颜色分割点（范围：0-1）
+        gradientLayer.locations = @[@(0.3f),@(1.0f)];
+
+        _tableView.backgroundColor = [UIColor grayColor];
+
+        _tableView.estimatedRowHeight = 161;
+    }
+    return _tableView;
 }
 
 
