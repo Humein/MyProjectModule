@@ -2354,7 +2354,7 @@
 			isa = PBXGroup;
 			children = (
 				79DC644223BA1F6C0073E22F /* OC */,
-				79DC644B23BA1F6C0073E22F /* Design-Pattern-in-Swift */,
+				79DC644B23BA1F6C0073E22F /* Swift */,
 				33C9711C211EB8C900EAAD5E /* AbstractBase */,
 			);
 			path = "Protocol Oriented Programming";
@@ -2382,7 +2382,7 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		79DC644B23BA1F6C0073E22F /* Design-Pattern-in-Swift */ = {
+		79DC644B23BA1F6C0073E22F /* Swift */ = {
 			isa = PBXGroup;
 			children = (
 				79DC644C23BA1F6C0073E22F /* Protocol Programming */,
@@ -2391,7 +2391,7 @@
 				79E53C67246A6ACB00CFFE9A /* SubOneSwiftDemosViewController.swift */,
 				79E53C69246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift */,
 			);
-			path = "Design-Pattern-in-Swift";
+			path = Swift;
 			sourceTree = "<group>";
 		};
 		79DC644C23BA1F6C0073E22F /* Protocol Programming */ = {
