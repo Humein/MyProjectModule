@@ -45,18 +45,16 @@ class SwiftDemosViewController: AbstractViewController {
         
         
         //MARK:-  strategy Usage
-        let rachel = TestSubject(pupilDiameter: 30.2,
-                                 blushResponse: 0.3,
-                                 isOrganic: false)
-        
-        // strategy 1
-        let deckard = BladeRunner(test: VoightKampffTest())
-        _ = deckard.testIfAndroid(rachel)
-        deckard.videoPlay()
-        // strategy 2
-        let gaff = BladeRunner(test: GeneticTest())
-        _ = gaff.testIfAndroid(rachel)
-        gaff.videoPlay()
+//        let rachel = DownLoadObj.init(dToolsType: 0)
+//
+//        // strategy 1
+//        let deckard = BladeRunner(test: VoightKampffTest())
+//        _ = deckard.testIfAndroid(rachel)
+//        deckard.absDown()
+//        // strategy 2
+//        let gaff = BladeRunner(test: GeneticTest())
+//        _ = gaff.testIfAndroid(rachel)
+//        gaff.absDown()
         
         //MARK:- LRU
         let cache = LRUCacheSimple(2)

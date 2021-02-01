@@ -135,7 +135,8 @@ class UISampleExample: UIView {
 //        return shadowView;
 //    }
     
-    /// 全部圆角阴影效果
+    /// 全部圆角阴影效果        clipsToBounds = YES; 如果设置会使阴影失效
+
 //    - (UIView *)cellBackgroundView{
 //        if (!_cellBackgroundView) {
 //            _cellBackgroundView = [[UIView alloc] initWithFrame:CGRectZero];

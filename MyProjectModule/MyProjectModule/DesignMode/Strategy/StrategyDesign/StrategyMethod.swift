@@ -147,24 +147,29 @@ final class unowned {
 
 */
 
-/// 比OC 方便多了
+/**
+行为模式：
+ 策略模式（Strategy）
+ 对象有某个行为，但是在不同的场景中，该行为有不同的实现算法。策略模式：
+ * 定义了一族算法（业务规则）；
+ * 封装了每个算法；
+ * 这族的算法可互换代替（interchangeable）。
+ 
+  */
 
-
-struct TestSubject {
-    let pupilDiameter: Double
-    let blushResponse: Double
-    let isOrganic: Bool
+struct DownLoadObj {
+    let dToolsType: Int
+    // ...
 }
 
 // protocol
 protocol StrategyMethod: AnyObject {
-    func testRealness(_ testSubject: TestSubject) -> Bool
-    func play() -> Void
+    func testRealness(_ obj: DownLoadObj) -> Bool
+    func down() -> Void
 }
 
 extension StrategyMethod{
-    
-    func play() -> Void {
+    func down() -> Void {
         print("default play")
     }
 }
@@ -172,19 +177,23 @@ extension StrategyMethod{
 
 // strategy Method 1
 final class VoightKampffTest: StrategyMethod {
-    func testRealness(_ testSubject: TestSubject) -> Bool {
-        return testSubject.pupilDiameter < 30.0 || testSubject.blushResponse == 0.0
+    func testRealness(_ obj: DownLoadObj) -> Bool {
+        return obj.dToolsType == 0
     }
     
-    func play() {
-        print("VoightKampffTest play")
+    func down() {
+        print("AA down")
     }
 }
 
 // strategy Method 2
 final class GeneticTest: StrategyMethod {
-    func testRealness(_ testSubject: TestSubject) -> Bool {
-        return testSubject.isOrganic
+    func testRealness(_ obj: DownLoadObj) -> Bool {
+        return obj.dToolsType == 0
+    }
+    
+    func down() {
+        print("BB down")
     }
 }
 
@@ -192,21 +201,45 @@ final class GeneticTest: StrategyMethod {
 // init Strategy
 final class BladeRunner {
     
-    private let strategy: StrategyMethod
+    private var strategy: StrategyMethod
     
-    init(test: StrategyMethod) {
-        self.strategy = test
+    /// Usually, the Context accepts a strategy through the constructor, but
+    /// also provides a setter to change it at runtime.
+    init(strategy: StrategyMethod) {
+        self.strategy = strategy
     }
     
-    func testIfAndroid(_ testSubject: TestSubject) -> Bool {
-        return !strategy.testRealness(testSubject)
+    /// Usually, the Context allows replacing a Strategy object at runtime.
+    func update(strategy: StrategyMethod) {
+        self.strategy = strategy
     }
     
-    func videoPlay() -> Void {
-        strategy.play()
+    func testIfAndroid(_ obj: DownLoadObj) -> Bool {
+        return strategy.testRealness(obj)
+    }
+    
+    func absDown() -> Void {
+        strategy.down()
     }
 }
 
 
+// Usage
+func testMethod() {
+    let rachel = DownLoadObj.init(dToolsType: 0)
+
+    // Deckard is using a traditional test
+    let deckard = BladeRunner(strategy: VoightKampffTest())
+    let isRachelAndroid = deckard.testIfAndroid(rachel)
+    deckard.absDown()
+
+    // Gaff is using a very precise method
+    let gaff = BladeRunner(strategy: GeneticTest())
+    let isDeckardAndroid = gaff.testIfAndroid(rachel)
+    gaff.absDown()
+    
+    gaff.update(strategy: VoightKampffTest())
+    gaff.absDown()
 
 
+}

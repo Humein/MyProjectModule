@@ -21,14 +21,20 @@
 
 // !!!: 计算富文本高度
 -(void)getAttstrHeight{
-    // 简单点的方法。YYLabel preferredMaxLayoutWidth换行
+    // 简单点的方法。
     self.titleLabel.numberOfLines = 0;
-    self.titleLabel.preferredMaxLayoutWidth = 220;
+    self.titleLabel.preferredMaxLayoutWidth = self.width;
     CGSize size = self.titleLabel.intrinsicContentSize;
-    // 复杂点的方法并且好用的 
+    
+    // 复杂点的方法并且好用的 能处理
     NSMutableAttributedString  *attText = [[NSMutableAttributedString  alloc] initWithString:@""];
     // 修改富文本的上下偏移量，可以做对齐处理。
     [attText setBaselineOffset:@(-2) range:[attText.string rangeOfString:attText.string]];
+    
+    // 换行处理 preferredMaxLayoutWidth换行
+    self.titleLabel.numberOfLines = 2; 
+    self.titleLabel.preferredMaxLayoutWidth = self.width;
+    
     attText.minimumLineHeight = 20;
     attText.font = [UIFont systemFontOfSize:14];
     CGSize introSize = CGSizeMake(self.width, CGFLOAT_MAX);
