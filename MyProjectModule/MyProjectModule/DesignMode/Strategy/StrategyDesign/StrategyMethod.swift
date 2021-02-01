@@ -5,11 +5,6 @@
 //  Created by Zhang Xin Xin on 2019/7/23.
 //  Copyright © 2019 xinxin. All rights reserved.
 //
-/*
-   本科来 多种试卷请求
- */
-
-
 
 /**
 行为模式：
@@ -22,48 +17,55 @@
   */
 
 struct DownLoadObj {
-    let dToolsType: Int
-    // ...
+    let url: String
+    
 }
 
 // protocol
 protocol StrategyMethod: AnyObject {
-    func testRealness(_ obj: DownLoadObj) -> Bool
+    func handlerData(_ obj: DownLoadObj) -> Void
     func down() -> Void
 }
 
 extension StrategyMethod{
     func down() -> Void {
-        print("default play")
+        print("default http download")
     }
 }
 
+// strategy Method 0
+final class hpDownload: StrategyMethod {
+    func handlerData(_ obj: DownLoadObj) {
+        // hp -> obj.url
+    }
+    
+}
 
 // strategy Method 1
-final class VoightKampffTest: StrategyMethod {
-    func testRealness(_ obj: DownLoadObj) -> Bool {
-        return obj.dToolsType == 0
+final class sdDownload: StrategyMethod {
+    func handlerData(_ obj: DownLoadObj) {
+        // sd -> obj.url
     }
     
     func down() {
-        print("AA down")
+        print("sd sdk download")
     }
 }
 
 // strategy Method 2
-final class GeneticTest: StrategyMethod {
-    func testRealness(_ obj: DownLoadObj) -> Bool {
-        return obj.dToolsType == 0
+final class bjyDownload: StrategyMethod {
+    func handlerData(_ obj: DownLoadObj) {
+       // bjy -> obj.url
     }
     
     func down() {
-        print("BB down")
+        print("bjy sdk download")
     }
 }
 
 
 // init Strategy
-final class BladeRunner {
+final class DownloadTools {
     
     private var strategy: StrategyMethod
     
@@ -78,8 +80,8 @@ final class BladeRunner {
         self.strategy = strategy
     }
     
-    func testIfAndroid(_ obj: DownLoadObj) -> Bool {
-        return strategy.testRealness(obj)
+    func absHandlerData(_ obj: DownLoadObj) {
+        strategy.handlerData(obj)
     }
     
     func absDown() -> Void {
@@ -90,20 +92,27 @@ final class BladeRunner {
 
 // Usage
 func testMethod() {
-    let rachel = DownLoadObj.init(dToolsType: 0)
+    let downObj = DownLoadObj.init(url: "")
 
-    // Deckard is using a traditional test
-    let deckard = BladeRunner(strategy: VoightKampffTest())
-    let isRachelAndroid = deckard.testIfAndroid(rachel)
-    deckard.absDown()
+    let ccDownLoad = DownloadTools(strategy: sdDownload())
+    ccDownLoad.absHandlerData(downObj)
+    ccDownLoad.absDown()
 
-    // Gaff is using a very precise method
-    let gaff = BladeRunner(strategy: GeneticTest())
-    let isDeckardAndroid = gaff.testIfAndroid(rachel)
-    gaff.absDown()
-    
-    gaff.update(strategy: VoightKampffTest())
-    gaff.absDown()
 
+    let bjyDownLoad = DownloadTools(strategy: bjyDownload())
+    bjyDownLoad.absHandlerData(downObj)
+    bjyDownLoad.absDown()
+
+    bjyDownLoad.update(strategy: sdDownload())
+    bjyDownLoad.absHandlerData(downObj)
+    bjyDownLoad.absDown()
 
 }
+
+/*
+多种试卷类型请求
+ 
+ ExerciseVCRequest
+ ExamRequestManager
+ 
+ */
