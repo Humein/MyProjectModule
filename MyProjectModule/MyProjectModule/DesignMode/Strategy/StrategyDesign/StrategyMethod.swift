@@ -21,6 +21,7 @@ struct DownLoadObj {
     
 }
 
+//MARK: 策略 （抽象策略类 Strategy） 抽象策略类声明具体策略类需要实现的接口，这个接口同时也是提供给客户端调用的接口
 // protocol
 protocol StrategyMethod: AnyObject {
     func handlerData(_ obj: DownLoadObj) -> Void
@@ -33,6 +34,8 @@ extension StrategyMethod{
     }
 }
 
+
+//MARK: 具体策略 （具体策略类 Concrete Strategies） 具体策略类实现抽象策略类声明的接口，每个具体策略类都有自己独有的实现方式，即代表不同策略。
 // strategy Method 0
 final class hpDownload: StrategyMethod {
     func handlerData(_ obj: DownLoadObj) {
@@ -64,6 +67,8 @@ final class bjyDownload: StrategyMethod {
 }
 
 
+//MARK: 上下文 （环境类 Context） 环境类内部持有一个具体策略类的实例，这个实例就是当前的策略，可以供客户端使用
+
 // init Strategy
 final class DownloadTools {
     
@@ -89,7 +94,7 @@ final class DownloadTools {
     }
 }
 
-
+//MARK: 客户端 （Client） 会创建一个特定策略对象并将其传递给上下文。 上下文则会提供一个设置器以便客户端在运行时替换相关联的策略。
 // Usage
 func testMethod() {
     let downObj = DownLoadObj.init(url: "")
