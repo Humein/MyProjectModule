@@ -12,6 +12,7 @@
  */
 import UIKit
 
+//MARK:- 实现1
 protocol CurrencyDescribing {
     var symbol: String { get }
     var code: String { get }
@@ -84,3 +85,9 @@ class FactoryObject: NSObject {
     }
 }
 
+//MARK:- 实现2
+/**
+ 使用示例： 工厂方法模式在 Swift 代码中得到了广泛使用。 当你需要在代码中提供高层次的灵活性时， 该模式会非常实用。
+
+ 识别方法： 工厂方法可通过构建方法来识别， 它会创建具体类的对象， 但以抽象类型或接口的形式返回这些对象。
+ */

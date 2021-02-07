@@ -11,7 +11,7 @@ import UIKit
  使用抽象工厂模式为客户提供一组相关或依赖对象。的“家庭”创建的对象工厂是在运行时决定的。
  */
 
-
+//MARK: - 实现1
 //Protocols
 protocol BurgerDescribing {
     var ingredients: [String] { get }
@@ -64,3 +64,8 @@ class AbstractFactory: NSObject {
     let bigKahuna = BurgerFactoryType.bigKahuna.make()
     let jackInTheBox = BurgerFactoryType.jackInTheBox.make()
 }
+
+
+//MARK: - 实现2
+
+
