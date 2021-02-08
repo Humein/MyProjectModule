@@ -225,6 +225,7 @@
 		79BA3B73244D56E5008805F6 /* BKExitFullscreenTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BA3B70244D56E5008805F6 /* BKExitFullscreenTransition.m */; };
 		79BA3B75244D79E6008805F6 /* EXUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BA3B74244D79E6008805F6 /* EXUIViewController.swift */; };
 		79BA3B77244D8609008805F6 /* SDDeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BA3B76244D8609008805F6 /* SDDeviceOrientation.swift */; };
+		79C28C6225CFFB620077108D /* MatrixHandleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C28C6125CFFB610077108D /* MatrixHandleManager.m */; };
 		79C2B663221A646200C40F3A /* RunTimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C2B662221A646200C40F3A /* RunTimeTestViewController.m */; };
 		79D353B0241324510064FB03 /* UITableView+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D353AF241324510064FB03 /* UITableView+PlaceHolder.m */; };
 		79DC642223BA1A0A0073E22F /* UIResponder+UIResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC640C23BA1A090073E22F /* UIResponder+UIResponderChain.m */; };
@@ -716,6 +717,8 @@
 		79BA3B76244D8609008805F6 /* SDDeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDDeviceOrientation.swift; sourceTree = "<group>"; };
 		79BFDCE22142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE42142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
+		79C28C6025CFFB610077108D /* MatrixHandleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatrixHandleManager.h; sourceTree = "<group>"; };
+		79C28C6125CFFB610077108D /* MatrixHandleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatrixHandleManager.m; sourceTree = "<group>"; };
 		79C2B661221A646200C40F3A /* RunTimeTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunTimeTestViewController.h; sourceTree = "<group>"; };
 		79C2B662221A646200C40F3A /* RunTimeTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTimeTestViewController.m; sourceTree = "<group>"; };
 		79D353AE241324500064FB03 /* UITableView+PlaceHolder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+PlaceHolder.h"; sourceTree = "<group>"; };
@@ -870,6 +873,7 @@
 		333D105420CE74A8004D9241 /* MyProjectModule */ = {
 			isa = PBXGroup;
 			children = (
+				79C28C5F25CFFB100077108D /* APM */,
 				79462738257DD7A9009778CB /* NetRequstAndSocket */,
 				793051912553E59500C4E395 /* PageRendererOptimized */,
 				79104FDB23C47EEB00ACE8F4 /* Python */,
@@ -2256,6 +2260,15 @@
 			path = socket;
 			sourceTree = "<group>";
 		};
+		79C28C5F25CFFB100077108D /* APM */ = {
+			isa = PBXGroup;
+			children = (
+				79C28C6025CFFB610077108D /* MatrixHandleManager.h */,
+				79C28C6125CFFB610077108D /* MatrixHandleManager.m */,
+			);
+			path = APM;
+			sourceTree = "<group>";
+		};
 		79D353AD241324270064FB03 /* UITabelView-PlaceHolderview */ = {
 			isa = PBXGroup;
 			children = (
@@ -2822,6 +2835,7 @@
 				79E2EA5A2481F91F003B5A39 /* BookMarkView.m in Sources */,
 				795BFA28256F7ED0001D8371 /* PhoneFactory.m in Sources */,
 				33C2DF3721DCC5D400F96F32 /* PointTreeTypeOne.m in Sources */,
+				79C28C6225CFFB620077108D /* MatrixHandleManager.m in Sources */,
 				7913EF6D24591EC3000C77A3 /* SDPushAViewController.swift in Sources */,
 				33C2DF3621DCC5D400F96F32 /* CompositePointTreeModel.m in Sources */,
 				79E53C6A246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift in Sources */,

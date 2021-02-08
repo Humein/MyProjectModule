@@ -11,6 +11,7 @@
 #import "AspectTrackMananer.h"
 #import "AppDelegate+DownManagerHelper.h"
 #import "MainTabBarViewController.h"
+#import "MatrixHandleManager.h"
 @interface AppDelegate ()
 
 @end
@@ -41,7 +42,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-
+    // APM
+    [MatrixHandleManager new];
+    
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     window.backgroundColor = [UIColor whiteColor];
     window.rootViewController = [[MainTabBarViewController alloc] init];
