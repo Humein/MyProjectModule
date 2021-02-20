@@ -513,6 +513,7 @@
 		792A730921EF2FBE0098B94C /* Tree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tree.plist; sourceTree = "<group>"; };
 		792A730A21EF2FBE0098B94C /* HomeDatas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomeDatas.plist; sourceTree = "<group>"; };
 		792A730D21EF2FD50098B94C /* class_cluster_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = class_cluster_data.json; sourceTree = "<group>"; };
+		792B19E225E102AE0095AB5D /* ReadMe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReadMe.h; sourceTree = "<group>"; };
 		793051922553E62700C4E395 /* AdvancedLoadDataVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdvancedLoadDataVC.h; sourceTree = "<group>"; };
 		793051932553E62700C4E395 /* AdvancedLoadDataVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvancedLoadDataVC.m; sourceTree = "<group>"; };
 		79305195255404B900C4E395 /* RenderTimeCountManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderTimeCountManager.h; sourceTree = "<group>"; };
@@ -924,6 +925,7 @@
 		333D108720CF5AAB004D9241 /* TableViewModule */ = {
 			isa = PBXGroup;
 			children = (
+				792B19E225E102AE0095AB5D /* ReadMe.h */,
 				79EEEA412182BCD300848B59 /* LiveComment180TC */,
 				33E6CDCD210034E200422FC7 /* AlertTableView */,
 				33A32ADF20D91234008C3969 /* Three Fold TableView */,

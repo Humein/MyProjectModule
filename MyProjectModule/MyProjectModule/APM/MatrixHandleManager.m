@@ -80,7 +80,7 @@ void kscrash_crashCallback(const KSCrashReportWriter *writer)
     
     
     [matrix addMatrixBuilder:curBuilder];
-        
+    
     // 开启卡顿和崩溃监控
     [crashBlockPlugin start];
     // 开启内存监控，注意 memoryStatPlugin 开启之后对性能损耗较大，建议按需开启
