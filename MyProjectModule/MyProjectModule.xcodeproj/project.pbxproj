@@ -201,6 +201,8 @@
 		7979D0F8236D76C500FD8BE5 /* UIView+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */; };
 		797EC360236C10F900E21E44 /* SDOPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC35F236C10F900E21E44 /* SDOPickerView.swift */; };
 		797EC362236C141100E21E44 /* SDTimeAlertPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */; };
+		798DB84225ECDD4D000197EE /* FacadePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798DB84125ECDD4D000197EE /* FacadePattern.swift */; };
+		798DB84B25EE3C7C000197EE /* DecoratorSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798DB84A25EE3C7C000197EE /* DecoratorSwift.swift */; };
 		7998C6CF23CEA4E500DA3BEF /* DesignModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7998C6CE23CEA4E500DA3BEF /* DesignModeViewController.m */; };
 		79A0ECA123681B79004C10B0 /* VTBEncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */; };
 		79A0ECA52368262F004C10B0 /* XXH264EncodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA42368262F004C10B0 /* XXH264EncodeTool.m */; };
@@ -663,6 +665,8 @@
 		7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Radius.swift"; sourceTree = "<group>"; };
 		797EC35F236C10F900E21E44 /* SDOPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDOPickerView.swift; sourceTree = "<group>"; };
 		797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimeAlertPickerView.swift; sourceTree = "<group>"; };
+		798DB84125ECDD4D000197EE /* FacadePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacadePattern.swift; sourceTree = "<group>"; };
+		798DB84A25EE3C7C000197EE /* DecoratorSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoratorSwift.swift; sourceTree = "<group>"; };
 		7993C866228D68E6001A6BFA /* AppDelegate+DownManagerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DownManagerHelper.h"; sourceTree = "<group>"; };
 		7993C867228D68E6001A6BFA /* URLSessionDownManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSessionDownManager.h; sourceTree = "<group>"; };
 		7993C868228D68E6001A6BFA /* URLSessionDownManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSessionDownManager.m; sourceTree = "<group>"; };
@@ -1062,6 +1066,7 @@
 		33888FF520F0C25400E4A119 /* DesignMode */ = {
 			isa = PBXGroup;
 			children = (
+				798DB84025ECD7FE000197EE /* Facade patterns */,
 				79DC644123BA1F6C0073E22F /* Protocol Oriented Programming */,
 				79DC640623BA1A090073E22F /* Chain Of Responsibility */,
 				79FE526323B597DC007C54A1 /* Template */,
@@ -1499,6 +1504,7 @@
 		790882DB23A0D04500FA3BE5 /* Decorate */ = {
 			isa = PBXGroup;
 			children = (
+				798DB84A25EE3C7C000197EE /* DecoratorSwift.swift */,
 				790882DC23A0D04500FA3BE5 /* DecoratorViewController.h */,
 				790882EE23A0D04500FA3BE5 /* DecoratorViewController.m */,
 				790882DD23A0D04500FA3BE5 /* Protocol Implementation */,
@@ -2096,6 +2102,14 @@
 				7979D0F7236D76C500FD8BE5 /* UIView+Radius.swift */,
 			);
 			path = TimePick;
+			sourceTree = "<group>";
+		};
+		798DB84025ECD7FE000197EE /* Facade patterns */ = {
+			isa = PBXGroup;
+			children = (
+				798DB84125ECDD4D000197EE /* FacadePattern.swift */,
+			);
+			path = "Facade patterns";
 			sourceTree = "<group>";
 		};
 		7993C865228D68E6001A6BFA /* DownHelper */ = {
@@ -2877,6 +2891,7 @@
 				79D353B0241324510064FB03 /* UITableView+PlaceHolder.m in Sources */,
 				33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */,
 				79305197255404B900C4E395 /* RenderTimeCountManager.m in Sources */,
+				798DB84B25EE3C7C000197EE /* DecoratorSwift.swift in Sources */,
 				79A0ECA123681B79004C10B0 /* VTBEncodeViewController.m in Sources */,
 				33C2DF3521DCC5D400F96F32 /* PointTreeOnlyOneModel.m in Sources */,
 				33E6CE0521006D2000422FC7 /* CreatTreeView.m in Sources */,
@@ -2885,6 +2900,7 @@
 				33759E74212FA9B900D801C1 /* UITapGestureRecognizer+TapGestureforceHit.m in Sources */,
 				7936BB4024459E750043AF5A /* SDCycleViewCell.swift in Sources */,
 				79F9A5EF2151F84E003704D7 /* BlockViewController.m in Sources */,
+				798DB84225ECDD4D000197EE /* FacadePattern.swift in Sources */,
 				795BFA21256F7E55001D8371 /* ClassClusterTableViewCellB.m in Sources */,
 				33FAE4F220E2452D00BE7175 /* JHBodyCell.m in Sources */,
 				79DF39392200499400977BB4 /* LRULinkedMap.m in Sources */,

@@ -10,7 +10,7 @@
 /**
  
     汉堡 分 鸡肉煲 牛肉煲 蔬菜包  >getCost
-        汉堡加 辣椒 加。。。。
+    汉堡加 辣椒 加。。。。
  */
 @protocol Decorator <NSObject>
 

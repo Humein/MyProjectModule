@@ -75,7 +75,7 @@ class UISampleExample: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // 仅仅使用UIBezierPath来绘图的话，需要在view的drawRect方法里实现
+    // 仅仅使用UIBezierPath来绘图的话，需要在view的drawRect方法里实现，core graphic 框架在此没问题
     override func draw(_ rect: CGRect) {
         let color =  UIColor.red
         color.set() //设置线条颜色

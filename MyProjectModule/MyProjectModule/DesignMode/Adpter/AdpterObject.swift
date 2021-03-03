@@ -7,9 +7,14 @@
 //
 /*
  适配器模式是用来提供另两个不兼容的类型之间的联系,通过包装“adaptee”类,支持客户端所需的接口。
+ 适配器模式:
+ 对已有对象的接口进行修改。
+ 外观模式为现有对象定义了一个新接口， 适配器则会试图运用已有的接口。 适配器通常只封装一个对象， 外观通常会作用于整个对象子系统上。
  */
 
 import UIKit
+
+//MARK: - 实现一
 
 protocol NewDeathStarSuperLaserAiming {
     var angleV: Double { get }
@@ -94,4 +99,7 @@ class AdpterObject: NSObject {
 
     }
 }
+
+
+//MARK: - 实现二
 

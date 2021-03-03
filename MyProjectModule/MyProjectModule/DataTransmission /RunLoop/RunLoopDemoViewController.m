@@ -72,7 +72,7 @@ typedef void(^RunloopBlock)(void);
         &CFRelease,
         NULL
     };
-    
+    NSObject
     runloopObserver = CFRunLoopObserverCreate(NULL, kCFRunLoopBeforeWaiting, YES, 0, &callBack, &context);
     
     //    监听 kCFRunLoopCommonModes 模式
@@ -105,7 +105,7 @@ static void callBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, 
 
 //MARK: 监控卡顿
 /*
-// 注册RunLoop状态观察，并计算是否卡顿
+// 注册RunLoop状态观察，并计算是否卡顿  单个Observer监听，有问题。应该使用双Observer监听
 - (void)registerRunLoopObserver
 {
     self.ANRShortTimeInterval = (self.ANRShortTimeInterval > 0 ?: 2) * 1000;

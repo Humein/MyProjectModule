@@ -29,15 +29,12 @@
 
 @interface NSTimerObserver : NSObject
 
-//@property (nonatomic, weak) id <TimerObserver> delegate;
-
 + (instancetype)sharedInstance;
 
 - (void)addTimerObserver:(id<TimerObserver>)listener;
 
 //TODO
 - (void)addTimerObserver:(id<TimerObserver>)listener withCount:(NSUInteger )count;
-
 
 - (void)removeTimerObserver:(id<TimerObserver>)listener;
 

@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 设计一个只读的容器
 @property (nonatomic,readonly,strong) NSArray<id<YTKUrlFilterProtocol>> *readOnlyArray;
 
-/// 设计一个读写安全的容器
+/// 设计一个读写安全的容器, 同步写异步读？？？
 
 @property (nonatomic,copy) NSString *someString;
 

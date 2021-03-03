@@ -31,7 +31,7 @@ flowLayout.estimatedItemSize = CGSizeMake(74, 44);
 1.  UITableViewCell嵌套 UITableView / CollectionView 时计算高度。通过 contentSize配合layoutIfNeeded 来获取
 
 [self.tableView reloadData];
-[self.tableView layoutIfNeeded];
+[self.tableView layoutIfNeeded]; // dispatch_aysn main 也可以
 [self.tableView mas_updateConstraints:^(MASConstraintMaker *make) {
     make.height.mas_equalTo(self.tableView.contentSize.height);
 }];
