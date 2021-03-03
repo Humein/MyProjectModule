@@ -667,6 +667,7 @@
 		797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimeAlertPickerView.swift; sourceTree = "<group>"; };
 		798DB84125ECDD4D000197EE /* FacadePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacadePattern.swift; sourceTree = "<group>"; };
 		798DB84A25EE3C7C000197EE /* DecoratorSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoratorSwift.swift; sourceTree = "<group>"; };
+		798DB84F25EF3F09000197EE /* CALayer+YYAddXX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+YYAddXX.h"; sourceTree = "<group>"; };
 		7993C866228D68E6001A6BFA /* AppDelegate+DownManagerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DownManagerHelper.h"; sourceTree = "<group>"; };
 		7993C867228D68E6001A6BFA /* URLSessionDownManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSessionDownManager.h; sourceTree = "<group>"; };
 		7993C868228D68E6001A6BFA /* URLSessionDownManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSessionDownManager.m; sourceTree = "<group>"; };
@@ -878,6 +879,7 @@
 		333D105420CE74A8004D9241 /* MyProjectModule */ = {
 			isa = PBXGroup;
 			children = (
+				798DB84C25EF3E69000197EE /* PodProject Analysis */,
 				79C28C5F25CFFB100077108D /* APM */,
 				79462738257DD7A9009778CB /* NetRequstAndSocket */,
 				793051912553E59500C4E395 /* PageRendererOptimized */,
@@ -2110,6 +2112,30 @@
 				798DB84125ECDD4D000197EE /* FacadePattern.swift */,
 			);
 			path = "Facade patterns";
+			sourceTree = "<group>";
+		};
+		798DB84C25EF3E69000197EE /* PodProject Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				798DB84D25EF3ED7000197EE /* YYKits */,
+			);
+			path = "PodProject Analysis";
+			sourceTree = "<group>";
+		};
+		798DB84D25EF3ED7000197EE /* YYKits */ = {
+			isa = PBXGroup;
+			children = (
+				798DB84E25EF3ED7000197EE /* YYCategory */,
+			);
+			path = YYKits;
+			sourceTree = "<group>";
+		};
+		798DB84E25EF3ED7000197EE /* YYCategory */ = {
+			isa = PBXGroup;
+			children = (
+				798DB84F25EF3F09000197EE /* CALayer+YYAddXX.h */,
+			);
+			path = YYCategory;
 			sourceTree = "<group>";
 		};
 		7993C865228D68E6001A6BFA /* DownHelper */ = {
