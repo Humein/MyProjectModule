@@ -72,7 +72,7 @@ typedef void(^RunloopBlock)(void);
         &CFRelease,
         NULL
     };
-    NSObject
+    
     runloopObserver = CFRunLoopObserverCreate(NULL, kCFRunLoopBeforeWaiting, YES, 0, &callBack, &context);
     
     //    监听 kCFRunLoopCommonModes 模式
