@@ -12,6 +12,9 @@
 #import "AppDelegate+DownManagerHelper.h"
 #import "MainTabBarViewController.h"
 #import "MatrixHandleManager.h"
+#ifdef DEBUG
+#import <DoraemonKit/DoraemonManager.h>
+#endif
 @interface AppDelegate ()
 
 @end
@@ -42,8 +45,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    // APM
+    // 腾讯 APM
     [MatrixHandleManager new];
+    // 滴滴 APM
+    #ifdef DEBUG
+    [[DoraemonManager shareInstance] installWithPid:@"878bed371b549042e418441819df6f3f"];//productId为在“平台端操作指南”中申请的产品id
+    #endif
     
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     window.backgroundColor = [UIColor whiteColor];

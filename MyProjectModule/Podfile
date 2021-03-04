@@ -19,8 +19,13 @@ target 'MyProjectModule' do
   pod 'ReactiveObjC','~> 3.1.0'
   pod 'GPUImage'
   pod 'MLeaksFinder'
+  pod 'LookinServer', :configurations => ['Debug'] # Lookin UI调试
   pod 'matrix-wechat' #微信的APM工具
-  
+  # 滴滴哆啦A梦监控APM
+  pod 'DoraemonKit/Core', '~> 3.0.4', :configurations => ['Debug'] #必选 Core subspec作为核心，必须引入
+  pod 'DoraemonKit/WithLogger', '~> 3.0.4', :configurations => ['Debug'] #可选 如果你的日志是基于CocoaLumberjack，那你也可以引入WithLogger subspec。
+  pod 'DoraemonKit/WithLoad', '~> 3.0.4', :configurations => ['Debug'] #可选 如果你要集成Load耗时检测的话，那就请接入WithLoad subspec。
+  pod 'DoraemonKit/WithMLeaksFinder', '~> 3.0.4', :configurations => ['Debug'] #可选 如果你要使用MLeaksFinder查找内存泄漏的问题的话，那就请接入WithMLeaksFinder subspec。
 
 
   # Flutter 引入 现有 Native 工程
