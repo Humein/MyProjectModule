@@ -21,7 +21,7 @@
  
 -  NSURLSessionTask
  
-  - NSURLSessionDownloadTask
+  - NSURLSessionDownloadTask 下载任务不需要内存拼接data,NSURLSession创建本地临时文件,写到临时文件,优化内存
      使用NSURLSessionDownloadTask下载文件,系统默认存放在tmp中,所以必须要自己剪切到其他位置
   - NSURLSessionDataTask
      需要自己去写数据
