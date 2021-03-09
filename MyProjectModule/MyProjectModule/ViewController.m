@@ -136,16 +136,17 @@ void UncaughtExceptionHandler(NSException *exception) {
 
 //  应该是crash
     __block BlockObject *testObj = [BlockObject new];
-    __weak BlockObject *weakTestObj = testObj; //弱引用不会导致Block捕获对象的引用计数增加
+    __block __weak BlockObject *weakTestObj = testObj; //弱引用不会导致Block捕获对象的引用计数增加
 
     testObj.popBlock = ^{
-//        testObj = nil; // 会触发delloc 然后崩溃
-        { // 这样 也不会，放在子线程置nil; 这样delloc会在popBlock作用域之后指向；这时 self 都是 纯在的
-        dispatch_queue_t quene = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-        dispatch_async(quene, ^{
-            testObj = nil; // 会触发delloc
-        });
-        }
+//        testObj = nil;// 会触发delloc 然后崩溃
+        weakTestObj = nil; // 这么处理不会崩溃
+//        { // 这样 也不会，放在子线程置nil; 这样delloc会在popBlock作用域之后指向；这时 self 都是 纯在的
+//        dispatch_queue_t quene = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//        dispatch_async(quene, ^{
+//            testObj = nil; // 会触发delloc
+//        });
+//        }
     };
     [testObj testMethod];
 }
