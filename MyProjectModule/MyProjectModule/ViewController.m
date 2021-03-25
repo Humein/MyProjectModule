@@ -71,8 +71,11 @@ void UncaughtExceptionHandler(NSException *exception) {
     self.rightBarItemClickBlock = ^(UIButton *button, NSInteger index) {
 //        [weakSelf pushFlutterViewController_MethodChannel];
     };
+    NSNull *nul = [NSNull new];
+    NSArray *arr = @[nul,@"1",@"2"];
+//    NSUInteger l = ((NSString *)arr.firstObject).length;
     
-
+    
     self.itemList = [NSMutableArray array];
     NSArray *list = [NSArray arrayWithObjects:@"AvoidCrashViewController",@"UISampleExampleVC",@"AVViewController",@"TestOnewCollecionViewController",@"SubTwoSwiftDemosViewController",@"SubOneSwiftDemosViewController",@"RenderImageViewController",@"RotationImageViewController",@"TransitionsAnimationDemos",@"ThreadSafeContainer",@"TestBlockModelViewController",@"BookmarkViewDemo",@"VTBEncDecViewController",@"VTBEncodeViewController",@"SwiftDemosViewController", @"DownListViewController", @"colloctionViewController",@"DrawViewController",@"CollectionSectionViewController",@"PlayerViewController", @"RChainDemoViewController",@"DecoratorViewController",@"ThreadViewController",@"TablePopDemoViewController",@"CustomKVO",@"FBKVOViewController",@"LiveCommentDemoViewController",@"NSInvocationForStrategyViewController",@"BlockViewController",@"RunLoopDemoViewController",@"RunTimeTestViewController",@"ClassClusterViewController",@"Multi-CellTree-TableViewController",@"PointTreeOneModelViewController",@"DesignModeViewController",nil];
 
@@ -134,7 +137,7 @@ void UncaughtExceptionHandler(NSException *exception) {
 
     };
 
-//  应该是crash
+//  block 野指针 crash
     __block BlockObject *testObj = [BlockObject new];
     __block __weak BlockObject *weakTestObj = testObj; //弱引用不会导致Block捕获对象的引用计数增加
 
@@ -149,6 +152,18 @@ void UncaughtExceptionHandler(NSException *exception) {
 //        }
     };
     [testObj testMethod];
+    
+    // strongSelf 作用
+    typeof(self) __weak weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        typeof(weakSelf) __strong strongSelf = weakSelf;
+        // 1. 不引入 strongSelf，这个页面POP后，直接执行delloc. 同时3秒后block内部再访问weakSelf是nil
+        // 2. 引入 strongSelf, 这个页面POP后， 不执行delloc. 同时3秒后block内部再访问strongSelf是有值的，block执行完成后，再执行delloc。
+        // 3. weakSelf 造成的问题是，如果将这个对象插入字典时候，可能会造成崩溃。
+        
+    });
+
+    
 }
 
 
@@ -166,9 +181,9 @@ void UncaughtExceptionHandler(NSException *exception) {
     self.tableView.tableView.layer.cornerRadius= 4;
     self.tableView.tableView.contentInset=UIEdgeInsetsMake(0, 0, 0, 0);
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(30 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [NSObject performSelector:@selector(oo)];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(30 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [NSObject performSelector:@selector(oo)];
+//    });
 
     
     
