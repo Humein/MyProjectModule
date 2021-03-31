@@ -28,7 +28,10 @@ flowLayout.estimatedItemSize = CGSizeMake(74, 44);
 
 
 
-1.  UITableViewCell嵌套 UITableView / CollectionView 时计算高度。通过 contentSize配合layoutIfNeeded 来获取
+1.  封装UITableView时候通过 contentSize 设置高度；
+    1.1 通过重写UITableView子类的contentSize；或者 KVO 监听 contentSize；
+    1.2 UITableViewCell嵌套 UITableView / CollectionView 时计算高度。通过 contentSize配合 layoutIfNeeded 来获取；缺点需要写在网路回掉之后，耦合业务
+    1.3 layoutSubviews 中获取也行
 
 [self.tableView reloadData];
 [self.tableView layoutIfNeeded]; // dispatch_aysn main 也可以

@@ -59,6 +59,9 @@ PODS:
   - MJRefresh (3.5.0)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
+  - MMKV (1.2.7):
+    - MMKVCore (~> 1.2.7)
+  - MMKVCore (1.2.7)
   - pop (1.0.12)
   - ReactiveObjC (3.1.1)
   - RxCocoa (5.1.1):
@@ -93,6 +96,7 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - MLeaksFinder
+  - MMKV
   - pop (~> 1.0)
   - ReactiveObjC (~> 3.1.0)
   - RxCocoa (~> 5)
@@ -119,6 +123,8 @@ SPEC REPOS:
     - MJExtension
     - MJRefresh
     - MLeaksFinder
+    - MMKV
+    - MMKVCore
     - pop
     - ReactiveObjC
     - RxCocoa
@@ -145,6 +151,8 @@ SPEC CHECKSUMS:
   MJExtension: 88e0900751b6cac8de1cf724ca9838a0b28d5acb
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  MMKV: 22e5136f7d00197bc0fc9694b7f71519f0d1ca12
+  MMKVCore: 607b7b05f2c2140056b5d338e45f2c14bf3f4232
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -155,6 +163,6 @@ SPEC CHECKSUMS:
   YTKNetwork: a2337af4b444b5d0a658122fa3d8a425e2425716
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: ef86ff928b640d63320c9398317ec0b886479bc8
+PODFILE CHECKSUM: 91061ebc37dc2accab44ba00f7443bad2ce386be
 
 COCOAPODS: 1.7.3

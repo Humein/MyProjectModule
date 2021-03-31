@@ -21,6 +21,7 @@ target 'MyProjectModule' do
   pod 'MLeaksFinder'
   pod 'LookinServer', :configurations => ['Debug'] # Lookin UI调试
   pod 'matrix-wechat' #微信的APM工具
+  pod 'MMKV' #MMKV 是基于 mmap 内存映射的 key-value 组件，底层序列化/反序列化使用 protobuf 实现，性能高，稳定性强
   # 滴滴哆啦A梦监控APM
   pod 'DoraemonKit/Core', '~> 3.0.4', :configurations => ['Debug'] #必选 Core subspec作为核心，必须引入
   pod 'DoraemonKit/WithLogger', '~> 3.0.4', :configurations => ['Debug'] #可选 如果你的日志是基于CocoaLumberjack，那你也可以引入WithLogger subspec。
