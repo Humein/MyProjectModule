@@ -35,6 +35,7 @@
  利用链表形式 进行h关联
  */
 
+/// 也可以是抽象类; OC中可以声明抽象类。
 protocol Withdrawing {
     func withdraw(amount: Int) -> Bool
     

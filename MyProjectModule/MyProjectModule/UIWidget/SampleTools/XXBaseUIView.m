@@ -28,7 +28,7 @@
     
     // 复杂点的方法并且好用的 能处理
     NSMutableAttributedString  *attText = [[NSMutableAttributedString  alloc] initWithString:@""];
-    // 修改富文本的上下偏移量，可以做对齐处理。
+    // 修改富文本的上下偏移量，可以做上下对齐处理。如果不好使，用UILabel 替换 YYLable
     [attText setBaselineOffset:@(-2) range:[attText.string rangeOfString:attText.string]];
     
     // 换行处理 preferredMaxLayoutWidth换行

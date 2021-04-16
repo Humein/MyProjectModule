@@ -39,6 +39,20 @@ flowLayout.estimatedItemSize = CGSizeMake(74, 44);
     make.height.mas_equalTo(self.tableView.contentSize.height);
 }];
 
+
+⚠️ 在iOS11中，表视图默认使用估计高度。这意味着contentSize最初只是估计值。如果你需要使用contentSize，'你可以通过设置3个estimated height属性为0来禁用estimated height
+如果还是想用估计高度可以在：先设置tableView高度为最大值，layoutifneed 之后再设置contentSize
+    [self.backgroundView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(CGFLOAT_MAX);
+    }];
+    [self.tableView reloadData];
+    [self.tableView layoutIfNeeded];
+    [self.backgroundView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(self.tableView.contentSize.height);
+    }];
+}
+
+
 2.  记录Cell的预估高度
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
