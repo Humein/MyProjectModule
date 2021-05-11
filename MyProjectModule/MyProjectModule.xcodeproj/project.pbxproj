@@ -135,6 +135,18 @@
 		7936BB772446EA860043AF5A /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB762446EA860043AF5A /* BaseNavViewController.m */; };
 		79387EAE244042E100CC7A49 /* SDTimerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79387EAD244042E100CC7A49 /* SDTimerObserver.swift */; };
 		79387EB324407B6900CC7A49 /* SDCacheManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79387EB224407B6900CC7A49 /* SDCacheManagers.swift */; };
+		79392EB926327227009A0CAB /* TPRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79392EA426327226009A0CAB /* TPRecordCell.m */; };
+		79392EBA26327227009A0CAB /* hookObjcMsgSend-arm64.s in Sources */ = {isa = PBXBuildFile; fileRef = 79392EA626327226009A0CAB /* hookObjcMsgSend-arm64.s */; };
+		79392EBB26327227009A0CAB /* UIWindow+CallRecordShake.m in Sources */ = {isa = PBXBuildFile; fileRef = 79392EA826327226009A0CAB /* UIWindow+CallRecordShake.m */; };
+		79392EBC26327227009A0CAB /* TPCallTrace.c in Sources */ = {isa = PBXBuildFile; fileRef = 79392EAA26327226009A0CAB /* TPCallTrace.c */; };
+		79392EBD26327227009A0CAB /* TPRecordHierarchyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79392EAB26327226009A0CAB /* TPRecordHierarchyModel.m */; };
+		79392EBE26327227009A0CAB /* TPMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 79392EAC26327226009A0CAB /* TPMainVC.m */; };
+		79392EBF26327227009A0CAB /* TPRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79392EAD26327226009A0CAB /* TPRecordModel.m */; };
+		79392EC026327227009A0CAB /* TimeProfilerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 79392EAF26327226009A0CAB /* TimeProfilerVC.m */; };
+		79392EC126327227009A0CAB /* TPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79392EB126327226009A0CAB /* TPModel.m */; };
+		79392EC226327227009A0CAB /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 79392EB326327226009A0CAB /* fishhook.c */; };
+		79392EC326327227009A0CAB /* TimeProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 79392EB526327226009A0CAB /* TimeProfiler.m */; };
+		79392EC426327227009A0CAB /* MatrixHandleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 79392EB826327226009A0CAB /* MatrixHandleManager.m */; };
 		793C6376240606A4000BE949 /* AnimationExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C6364240606A4000BE949 /* AnimationExample.m */; };
 		793C6377240606A4000BE949 /* POPNumberAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C6365240606A4000BE949 /* POPNumberAnimation.m */; };
 		793C6378240606A4000BE949 /* AttributeAndPredicateWithLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C6369240606A4000BE949 /* AttributeAndPredicateWithLink.m */; };
@@ -226,7 +238,6 @@
 		79BA3B73244D56E5008805F6 /* BKExitFullscreenTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BA3B70244D56E5008805F6 /* BKExitFullscreenTransition.m */; };
 		79BA3B75244D79E6008805F6 /* EXUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BA3B74244D79E6008805F6 /* EXUIViewController.swift */; };
 		79BA3B77244D8609008805F6 /* SDDeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BA3B76244D8609008805F6 /* SDDeviceOrientation.swift */; };
-		79C28C6225CFFB620077108D /* MatrixHandleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C28C6125CFFB610077108D /* MatrixHandleManager.m */; };
 		79C2B663221A646200C40F3A /* RunTimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C2B662221A646200C40F3A /* RunTimeTestViewController.m */; };
 		79CBA41B2615F15A00CB874A /* BindResponderOfChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CBA4172615F15A00CB874A /* BindResponderOfChain.swift */; };
 		79CBA41C2615F15A00CB874A /* ResponOfChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CBA4192615F15A00CB874A /* ResponOfChainManager.m */; };
@@ -545,6 +556,29 @@
 		7936BB762446EA860043AF5A /* BaseNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
 		79387EAD244042E100CC7A49 /* SDTimerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimerObserver.swift; sourceTree = "<group>"; };
 		79387EB224407B6900CC7A49 /* SDCacheManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDCacheManagers.swift; sourceTree = "<group>"; };
+		79392E9F26327226009A0CAB /* TimeProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeProfiler.h; sourceTree = "<group>"; };
+		79392EA126327226009A0CAB /* TPRecordHierarchyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPRecordHierarchyModel.h; sourceTree = "<group>"; };
+		79392EA226327226009A0CAB /* TPCallTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCallTrace.h; sourceTree = "<group>"; };
+		79392EA326327226009A0CAB /* TPMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMainVC.h; sourceTree = "<group>"; };
+		79392EA426327226009A0CAB /* TPRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPRecordCell.m; sourceTree = "<group>"; };
+		79392EA526327226009A0CAB /* TPRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPRecordModel.h; sourceTree = "<group>"; };
+		79392EA626327226009A0CAB /* hookObjcMsgSend-arm64.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = "hookObjcMsgSend-arm64.s"; sourceTree = "<group>"; };
+		79392EA726327226009A0CAB /* TPModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPModel.h; sourceTree = "<group>"; };
+		79392EA826327226009A0CAB /* UIWindow+CallRecordShake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+CallRecordShake.m"; sourceTree = "<group>"; };
+		79392EA926327226009A0CAB /* TimeProfilerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeProfilerVC.h; sourceTree = "<group>"; };
+		79392EAA26327226009A0CAB /* TPCallTrace.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCallTrace.c; sourceTree = "<group>"; };
+		79392EAB26327226009A0CAB /* TPRecordHierarchyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPRecordHierarchyModel.m; sourceTree = "<group>"; };
+		79392EAC26327226009A0CAB /* TPMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMainVC.m; sourceTree = "<group>"; };
+		79392EAD26327226009A0CAB /* TPRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPRecordModel.m; sourceTree = "<group>"; };
+		79392EAE26327226009A0CAB /* TPRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPRecordCell.h; sourceTree = "<group>"; };
+		79392EAF26327226009A0CAB /* TimeProfilerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeProfilerVC.m; sourceTree = "<group>"; };
+		79392EB026327226009A0CAB /* UIWindow+CallRecordShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+CallRecordShake.h"; sourceTree = "<group>"; };
+		79392EB126327226009A0CAB /* TPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPModel.m; sourceTree = "<group>"; };
+		79392EB326327226009A0CAB /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
+		79392EB426327226009A0CAB /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		79392EB526327226009A0CAB /* TimeProfiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeProfiler.m; sourceTree = "<group>"; };
+		79392EB726327226009A0CAB /* MatrixHandleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatrixHandleManager.h; sourceTree = "<group>"; };
+		79392EB826327226009A0CAB /* MatrixHandleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatrixHandleManager.m; sourceTree = "<group>"; };
 		793C6363240606A4000BE949 /* POPNumberAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPNumberAnimation.h; sourceTree = "<group>"; };
 		793C6364240606A4000BE949 /* AnimationExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationExample.m; sourceTree = "<group>"; };
 		793C6365240606A4000BE949 /* POPNumberAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPNumberAnimation.m; sourceTree = "<group>"; };
@@ -722,8 +756,6 @@
 		79BA3B76244D8609008805F6 /* SDDeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDDeviceOrientation.swift; sourceTree = "<group>"; };
 		79BFDCE22142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
 		79BFDCE42142A16000C81069 /* Detail.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Detail.md; sourceTree = "<group>"; };
-		79C28C6025CFFB610077108D /* MatrixHandleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatrixHandleManager.h; sourceTree = "<group>"; };
-		79C28C6125CFFB610077108D /* MatrixHandleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatrixHandleManager.m; sourceTree = "<group>"; };
 		79C2B661221A646200C40F3A /* RunTimeTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunTimeTestViewController.h; sourceTree = "<group>"; };
 		79C2B662221A646200C40F3A /* RunTimeTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTimeTestViewController.m; sourceTree = "<group>"; };
 		79CBA4172615F15A00CB874A /* BindResponderOfChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindResponderOfChain.swift; sourceTree = "<group>"; };
@@ -1706,6 +1738,67 @@
 			path = DataBase;
 			sourceTree = "<group>";
 		};
+		79392E9D26327226009A0CAB /* FH_TimeProfiler */ = {
+			isa = PBXGroup;
+			children = (
+				79392E9E26327226009A0CAB /* TimeProfiler */,
+			);
+			path = FH_TimeProfiler;
+			sourceTree = "<group>";
+		};
+		79392E9E26327226009A0CAB /* TimeProfiler */ = {
+			isa = PBXGroup;
+			children = (
+				79392E9F26327226009A0CAB /* TimeProfiler.h */,
+				79392EB526327226009A0CAB /* TimeProfiler.m */,
+				79392EA026327226009A0CAB /* Core */,
+				79392EB226327226009A0CAB /* fishhook */,
+			);
+			path = TimeProfiler;
+			sourceTree = "<group>";
+		};
+		79392EA026327226009A0CAB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				79392EA126327226009A0CAB /* TPRecordHierarchyModel.h */,
+				79392EA226327226009A0CAB /* TPCallTrace.h */,
+				79392EA326327226009A0CAB /* TPMainVC.h */,
+				79392EA426327226009A0CAB /* TPRecordCell.m */,
+				79392EA526327226009A0CAB /* TPRecordModel.h */,
+				79392EA626327226009A0CAB /* hookObjcMsgSend-arm64.s */,
+				79392EA726327226009A0CAB /* TPModel.h */,
+				79392EA826327226009A0CAB /* UIWindow+CallRecordShake.m */,
+				79392EA926327226009A0CAB /* TimeProfilerVC.h */,
+				79392EAA26327226009A0CAB /* TPCallTrace.c */,
+				79392EAB26327226009A0CAB /* TPRecordHierarchyModel.m */,
+				79392EAC26327226009A0CAB /* TPMainVC.m */,
+				79392EAD26327226009A0CAB /* TPRecordModel.m */,
+				79392EAE26327226009A0CAB /* TPRecordCell.h */,
+				79392EAF26327226009A0CAB /* TimeProfilerVC.m */,
+				79392EB026327226009A0CAB /* UIWindow+CallRecordShake.h */,
+				79392EB126327226009A0CAB /* TPModel.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		79392EB226327226009A0CAB /* fishhook */ = {
+			isa = PBXGroup;
+			children = (
+				79392EB326327226009A0CAB /* fishhook.c */,
+				79392EB426327226009A0CAB /* fishhook.h */,
+			);
+			path = fishhook;
+			sourceTree = "<group>";
+		};
+		79392EB626327226009A0CAB /* TX_Maxtrix */ = {
+			isa = PBXGroup;
+			children = (
+				79392EB726327226009A0CAB /* MatrixHandleManager.h */,
+				79392EB826327226009A0CAB /* MatrixHandleManager.m */,
+			);
+			path = TX_Maxtrix;
+			sourceTree = "<group>";
+		};
 		793C6361240606A4000BE949 /* BezierPath&ShapLayer&Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -2304,8 +2397,8 @@
 		79C28C5F25CFFB100077108D /* APM */ = {
 			isa = PBXGroup;
 			children = (
-				79C28C6025CFFB610077108D /* MatrixHandleManager.h */,
-				79C28C6125CFFB610077108D /* MatrixHandleManager.m */,
+				79392E9D26327226009A0CAB /* FH_TimeProfiler */,
+				79392EB626327226009A0CAB /* TX_Maxtrix */,
 			);
 			path = APM;
 			sourceTree = "<group>";
@@ -2821,6 +2914,7 @@
 				33FAE4F020E2452D00BE7175 /* JHHeaderReusableView.m in Sources */,
 				7943054124FFCFA20036D0DF /* MultiDelegate.m in Sources */,
 				7913EF62245915DA000C77A3 /* SDABTransitionAnimator.swift in Sources */,
+				79392EB926327227009A0CAB /* TPRecordCell.m in Sources */,
 				79DC642423BA1A0A0073E22F /* HTMiddleControlView.m in Sources */,
 				79E2EA662481FC99003B5A39 /* BookmarkViewDemo.m in Sources */,
 				7957843624F4F50D00287486 /* XXBaseUIView.m in Sources */,
@@ -2845,6 +2939,7 @@
 				7908831723A0D04500FA3BE5 /* ProtoclForCMutilellViewController.m in Sources */,
 				33759E77212FAA7200D801C1 /* NSObject+RuntimeHelper.m in Sources */,
 				7908832C23A1097100FA3BE5 /* AdpterObject.swift in Sources */,
+				79392EC326327227009A0CAB /* TimeProfiler.m in Sources */,
 				79522A392563CD410007BD64 /* RACObjectDemos.m in Sources */,
 				79DC645A23BA1F6C0073E22F /* SwiftDemosViewController.swift in Sources */,
 				793C637C240606A4000BE949 /* DrawLine.m in Sources */,
@@ -2877,7 +2972,6 @@
 				79E2EA5A2481F91F003B5A39 /* BookMarkView.m in Sources */,
 				795BFA28256F7ED0001D8371 /* PhoneFactory.m in Sources */,
 				33C2DF3721DCC5D400F96F32 /* PointTreeTypeOne.m in Sources */,
-				79C28C6225CFFB620077108D /* MatrixHandleManager.m in Sources */,
 				7913EF6D24591EC3000C77A3 /* SDPushAViewController.swift in Sources */,
 				33C2DF3621DCC5D400F96F32 /* CompositePointTreeModel.m in Sources */,
 				79E53C6A246A89B400CFFE9A /* SubTwoSwiftDemosViewController.swift in Sources */,
@@ -2898,8 +2992,11 @@
 				79DC642723BA1A0A0073E22F /* HTBottomControlView.m in Sources */,
 				79C2B663221A646200C40F3A /* RunTimeTestViewController.m in Sources */,
 				79A1A5182269AD0800CEA92A /* SmoothBookmarkView.m in Sources */,
+				79392EC426327227009A0CAB /* MatrixHandleManager.m in Sources */,
 				793C637D240606A4000BE949 /* StartWaterView.m in Sources */,
+				79392EBA26327227009A0CAB /* hookObjcMsgSend-arm64.s in Sources */,
 				7913EF8B245AB5E6000C77A3 /* RenderImageViewController.m in Sources */,
+				79392EBB26327227009A0CAB /* UIWindow+CallRecordShake.m in Sources */,
 				7936BB4224459E750043AF5A /* SDPageControl.swift in Sources */,
 				79501BEB255A43F6005865A7 /* SDCustomStatusBarView.swift in Sources */,
 				793C6377240606A4000BE949 /* POPNumberAnimation.m in Sources */,
@@ -2916,6 +3013,7 @@
 				79F9A5EC214FB09B003704D7 /* AlgorithmsViewController.m in Sources */,
 				79D353B0241324510064FB03 /* UITableView+PlaceHolder.m in Sources */,
 				33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */,
+				79392EBD26327227009A0CAB /* TPRecordHierarchyModel.m in Sources */,
 				79305197255404B900C4E395 /* RenderTimeCountManager.m in Sources */,
 				798DB84B25EE3C7C000197EE /* DecoratorSwift.swift in Sources */,
 				79A0ECA123681B79004C10B0 /* VTBEncodeViewController.m in Sources */,
@@ -2939,6 +3037,7 @@
 				33C2DF3E21DCC66C00F96F32 /* PointTreeOneModelViewController.m in Sources */,
 				79104F8623C456B500ACE8F4 /* GestureRecognizerWithMenuCopy.m in Sources */,
 				79DC645723BA1F6C0073E22F /* FirstView.swift in Sources */,
+				79392EBF26327227009A0CAB /* TPRecordModel.m in Sources */,
 				79462751257DD7A9009778CB /* AppDelegate+DownManagerHelper.m in Sources */,
 				79387EB324407B6900CC7A49 /* SDCacheManagers.swift in Sources */,
 				33C9711F211EB8DC00EAAD5E /* AbstractViewController.m in Sources */,
@@ -2958,6 +3057,7 @@
 				79F9A5F5215214B4003704D7 /* NSTimer+WeakTimerBlock.m in Sources */,
 				7908832723A0D04500FA3BE5 /* UIImage+Title.m in Sources */,
 				7936BB652445A7400043AF5A /* DBAbstractItem.m in Sources */,
+				79392EC226327227009A0CAB /* fishhook.c in Sources */,
 				7913EF63245915DA000C77A3 /* SDPresentAViewController.swift in Sources */,
 				79A1A51C2269AD0800CEA92A /* BookmarkMainTableView.m in Sources */,
 				7936BB772446EA860043AF5A /* BaseNavViewController.m in Sources */,
@@ -2990,6 +3090,8 @@
 				79DC645823BA1F6C0073E22F /* AbstractViewProtocol.swift in Sources */,
 				79CBA41B2615F15A00CB874A /* BindResponderOfChain.swift in Sources */,
 				7936BB4324459E750043AF5A /* SDCycleLayout.swift in Sources */,
+				79392EBC26327227009A0CAB /* TPCallTrace.c in Sources */,
+				79392EBE26327227009A0CAB /* TPMainVC.m in Sources */,
 				795BFA33256F7FBD001D8371 /* MIPhone.m in Sources */,
 				7946274F257DD7A9009778CB /* DownListViewController.m in Sources */,
 				7908832523A0D04500FA3BE5 /* UIImage+Transform.m in Sources */,
@@ -3008,6 +3110,7 @@
 				33FAE4E720E2445500BE7175 /* WaterfallLayout.m in Sources */,
 				79501BFA255A441E005865A7 /* UISampleExample.swift in Sources */,
 				79462756257DD7A9009778CB /* RequestViewController.m in Sources */,
+				79392EC026327227009A0CAB /* TimeProfilerVC.m in Sources */,
 				79E2EA632481FA6B003B5A39 /* CheckConditionItem.m in Sources */,
 				7908830C23A0D04500FA3BE5 /* APPPayTool.m in Sources */,
 				79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */,
@@ -3074,6 +3177,7 @@
 				79E2EA5D2481FA64003B5A39 /* AbstractBookmarkViewController.m in Sources */,
 				7946274E257DD7A9009778CB /* PointsTreeTableViewCell.m in Sources */,
 				7908832223A0D04500FA3BE5 /* pie.m in Sources */,
+				79392EC126327227009A0CAB /* TPModel.m in Sources */,
 				33E6CDD6210034E300422FC7 /* AbstractTableViewCell.m in Sources */,
 				79DC643123BA1C8A0073E22F /* InterfacePlayerView.m in Sources */,
 			);
@@ -3248,7 +3352,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2DD9667W8X;
+				DEVELOPMENT_TEAM = MR4GTF2765;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = MyProjectModule/Info.plist;
@@ -3257,7 +3361,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModule;
+				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModules;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyProjectModule/MyProjectModule-Bridging-Header.h";
@@ -3275,7 +3379,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2DD9667W8X;
+				DEVELOPMENT_TEAM = MR4GTF2765;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = MyProjectModule/Info.plist;
@@ -3284,7 +3388,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModule;
+				PRODUCT_BUNDLE_IDENTIFIER = xinxin.com.MyProjectModules;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyProjectModule/MyProjectModule-Bridging-Header.h";

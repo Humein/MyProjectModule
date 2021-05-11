@@ -24,6 +24,8 @@
 #import "YYFPSLabel.h"
 #import "MyProjectModule-Swift.h"
 #include <execinfo.h>
+#import "TimeProfiler.h"
+#import "DoraemonTimeProfiler.h"
 
 void UncaughtExceptionHandler(NSException *exception) {
     NSArray *exceptionArray = [exception callStackSymbols]; //得到当前调用栈信息
@@ -62,6 +64,8 @@ void UncaughtExceptionHandler(NSException *exception) {
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+
+
     WEAKSELF
     _fpsLabel = [[YYFPSLabel alloc]initWithFrame:CGRectMake(40, 40, 55, 20)];
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
@@ -114,8 +118,18 @@ void UncaughtExceptionHandler(NSException *exception) {
 
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    // 开始记录 摇一摇出现函数耗时记录
+    [[TimeProfiler shareInstance] TPStartTrace:"touchesBegan函数"];
+    //默认3；不调用的话，默认是3
+    [[TimeProfiler shareInstance] TPSetMaxDepth:3];
+    //单位为us，1ms = 1000us；不调用的话，默认是1000us
+    [[TimeProfiler shareInstance] TPSetCostMinTime:1000];
+    //需要过滤的类，不调用此方法，默认为TimeProfilerVC、TPRecordHierarchyModel、 TPRecordCell、TPRecordModel等TimeProfiler本身类（不统计过滤的类
+//    [[TimeProfiler shareInstance] TPSetFilterClass:nil];
+//    [DoraemonTimeProfiler startRecord];
+    
     [self aleartView];
-
+    
     __block int i = 10;
     dispatch_async(dispatch_get_main_queue(), ^{
         // 注意 i 被block持有 同一个对象
@@ -136,6 +150,7 @@ void UncaughtExceptionHandler(NSException *exception) {
         self->_name =@"the name";
 
     };
+    Block();
 
 //  block 野指针 crash
     __block BlockObject *testObj = [BlockObject new];
@@ -163,7 +178,9 @@ void UncaughtExceptionHandler(NSException *exception) {
         
     });
 
-    
+//    [DoraemonTimeProfiler stopRecord];
+    // 结束记录
+    [[TimeProfiler shareInstance] TPStopTrace];
 }
 
 
