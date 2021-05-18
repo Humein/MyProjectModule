@@ -57,8 +57,6 @@ PODS:
     - matrix-wechat/matrixARC
   - MJExtension (3.2.4)
   - MJRefresh (3.5.0)
-  - MLeaksFinder (1.0.0):
-    - FBRetainCycleDetector
   - MMKV (1.2.7):
     - MMKVCore (~> 1.2.7)
   - MMKVCore (1.2.7)
@@ -95,7 +93,6 @@ DEPENDENCIES:
   - matrix-wechat
   - MJExtension
   - MJRefresh
-  - MLeaksFinder
   - MMKV
   - pop (~> 1.0)
   - ReactiveObjC (~> 3.1.0)
@@ -122,7 +119,6 @@ SPEC REPOS:
     - matrix-wechat
     - MJExtension
     - MJRefresh
-    - MLeaksFinder
     - MMKV
     - MMKVCore
     - pop
@@ -150,7 +146,6 @@ SPEC CHECKSUMS:
   matrix-wechat: 4e8a4047dde97c4634ef782edcd69ce276c5b4ab
   MJExtension: 88e0900751b6cac8de1cf724ca9838a0b28d5acb
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
-  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   MMKV: 22e5136f7d00197bc0fc9694b7f71519f0d1ca12
   MMKVCore: 607b7b05f2c2140056b5d338e45f2c14bf3f4232
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
@@ -163,6 +158,6 @@ SPEC CHECKSUMS:
   YTKNetwork: a2337af4b444b5d0a658122fa3d8a425e2425716
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 91061ebc37dc2accab44ba00f7443bad2ce386be
+PODFILE CHECKSUM: bd9fea344592a314538d42cc60f8276aad312b35
 
 COCOAPODS: 1.7.3

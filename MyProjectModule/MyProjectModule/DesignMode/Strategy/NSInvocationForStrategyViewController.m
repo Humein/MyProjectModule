@@ -56,7 +56,6 @@ static NSString *const threeEvent = @"three";
     
     NSString *string0 = @"Hello";
     NSString *addString0 = [string0 stringByAppendingString:@" World!"];
-    
 // 用NSInvocation转换后：
     
     

@@ -6,11 +6,11 @@
 //  Copyright © 2020 xinxin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "AbstractViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XXBaseUIViewController : UIViewController
+@interface XXBaseUIViewController : AbstractViewController
 
 @end
 

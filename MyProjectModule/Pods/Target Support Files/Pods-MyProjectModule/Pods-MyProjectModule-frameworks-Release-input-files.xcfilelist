@@ -9,7 +9,6 @@ ${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework
 ${BUILT_PRODUCTS_DIR}/KVOController/KVOController.framework
 ${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework
 ${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework
-${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework
 ${BUILT_PRODUCTS_DIR}/MMKV/MMKV.framework
 ${BUILT_PRODUCTS_DIR}/MMKVCore/MMKVCore.framework
 ${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework

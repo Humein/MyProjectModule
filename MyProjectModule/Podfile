@@ -1,5 +1,5 @@
-inhibit_all_warnings!
-use_frameworks!
+#inhibit_all_warnings!
+use_frameworks! #使用动态库
 target 'MyProjectModule' do
   pod 'Masonry'
   pod 'YYKit'
@@ -18,7 +18,7 @@ target 'MyProjectModule' do
 #  pod "Texture"
   pod 'ReactiveObjC','~> 3.1.0'
   pod 'GPUImage'
-  pod 'MLeaksFinder'
+#  pod 'MLeaksFinder' #和DoraemonKit的分类一样导致方法都不会执行
   pod 'LookinServer', :configurations => ['Debug'] # Lookin UI调试
   pod 'matrix-wechat' #微信的APM工具
   pod 'MMKV' #MMKV 是基于 mmap 内存映射的 key-value 组件，底层序列化/反序列化使用 protobuf 实现，性能高，稳定性强

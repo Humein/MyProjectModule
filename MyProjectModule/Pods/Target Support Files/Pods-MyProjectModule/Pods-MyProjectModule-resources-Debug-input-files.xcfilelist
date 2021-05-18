@@ -1,2 +1,9 @@
 ${PODS_ROOT}/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/DoraemonKit/DoraemonKit.bundle
+${PODS_ROOT}/GCDWebServer/GCDWebUploader/GCDWebUploader.bundle
+${PODS_ROOT}/GPUImage/framework/Resources/lookup.png
+${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png
+${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png
+${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png
+${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png
 ${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle

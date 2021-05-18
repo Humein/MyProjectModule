@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0626535278540AAFD513C6A2 /* Pods_MyProjectModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B902BC4E26BCA8C0E0E76A5 /* Pods_MyProjectModule.framework */; };
 		333D105720CE74A9004D9241 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D105620CE74A9004D9241 /* AppDelegate.m */; };
 		333D105A20CE74A9004D9241 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D105920CE74A9004D9241 /* ViewController.m */; };
 		333D105D20CE74A9004D9241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 333D105B20CE74A9004D9241 /* Main.storyboard */; };
@@ -59,8 +60,6 @@
 		33FAE4F720E2459300BE7175 /* SectionFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F320E2459200BE7175 /* SectionFModel.m */; };
 		33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE4F420E2459200BE7175 /* CellFModel.m */; };
 		33FAE50720E3693400BE7175 /* AbstractFCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */; };
-		358041E68E5480656FDBFF93 /* Pods_MyProjectModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45212555C0193DC4B8254985 /* Pods_MyProjectModule.framework */; };
-		7901F9A221A678CE005BE8A6 /* NSTimerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901F9A121A678CE005BE8A6 /* NSTimerObserver.m */; };
 		79040D8B2236462A0085335E /* FlutterSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79040D8A2236462A0085335E /* FlutterSubViewController.m */; };
 		79040DA12238AA2D0085335E /* AspectTrackMananer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79040DA02238AA2D0085335E /* AspectTrackMananer.m */; };
 		79040DA72238D00D0085335E /* EventList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79040DA62238D00C0085335E /* EventList.plist */; };
@@ -112,8 +111,12 @@
 		7913EF8B245AB5E6000C77A3 /* RenderImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF8A245AB5E6000C77A3 /* RenderImageViewController.m */; };
 		7913EF922463FDE7000C77A3 /* RotationImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7913EF912463FDE7000C77A3 /* RotationImageViewController.m */; };
 		7913EF9424640090000C77A3 /* miao.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7913EF9324640090000C77A3 /* miao.jpeg */; };
+		79223FA42653BA2B00FB74C6 /* iOS优雅实现Pipeline设计模式.md in Resources */ = {isa = PBXBuildFile; fileRef = 79223FA32653BA2B00FB74C6 /* iOS优雅实现Pipeline设计模式.md */; };
 		7924BB72240B98F8007BA1B3 /* UIRespnderChainExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924BB71240B98F8007BA1B3 /* UIRespnderChainExtension.swift */; };
 		792591EC2285517100E7F734 /* LearnSwiftDemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792591EB2285517100E7F734 /* LearnSwiftDemosViewController.swift */; };
+		79272593264D4F2300E5E6D5 /* NSTimerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 79272590264D4F2300E5E6D5 /* NSTimerObserver.m */; };
+		79272594264D4F2300E5E6D5 /* SDTimerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79272591264D4F2300E5E6D5 /* SDTimerObserver.swift */; };
+		79272597264E49F300E5E6D5 /* XXRuntimeUagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79272596264E49F300E5E6D5 /* XXRuntimeUagesViewController.m */; };
 		7929B49D219FE74B004D335E /* RunLoopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */; };
 		792A730B21EF2FBF0098B94C /* Tree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 792A730921EF2FBE0098B94C /* Tree.plist */; };
 		792A730C21EF2FBF0098B94C /* HomeDatas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 792A730A21EF2FBE0098B94C /* HomeDatas.plist */; };
@@ -133,7 +136,6 @@
 		7936BB652445A7400043AF5A /* DBAbstractItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB5F2445A73F0043AF5A /* DBAbstractItem.m */; };
 		7936BB742446EA2C0043AF5A /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB732446EA2C0043AF5A /* MainTabBarViewController.m */; };
 		7936BB772446EA860043AF5A /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936BB762446EA860043AF5A /* BaseNavViewController.m */; };
-		79387EAE244042E100CC7A49 /* SDTimerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79387EAD244042E100CC7A49 /* SDTimerObserver.swift */; };
 		79387EB324407B6900CC7A49 /* SDCacheManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79387EB224407B6900CC7A49 /* SDCacheManagers.swift */; };
 		79392EB926327227009A0CAB /* TPRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79392EA426327226009A0CAB /* TPRecordCell.m */; };
 		79392EBA26327227009A0CAB /* hookObjcMsgSend-arm64.s in Sources */ = {isa = PBXBuildFile; fileRef = 79392EA626327226009A0CAB /* hookObjcMsgSend-arm64.s */; };
@@ -214,6 +216,8 @@
 		797EC362236C141100E21E44 /* SDTimeAlertPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EC361236C141100E21E44 /* SDTimeAlertPickerView.swift */; };
 		798DB84225ECDD4D000197EE /* FacadePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798DB84125ECDD4D000197EE /* FacadePattern.swift */; };
 		798DB84B25EE3C7C000197EE /* DecoratorSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798DB84A25EE3C7C000197EE /* DecoratorSwift.swift */; };
+		79964719264A6FD600E9A8FF /* XXMemoryMonitorMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = 79964718264A6FD600E9A8FF /* XXMemoryMonitorMananger.m */; };
+		7996471C264A750600E9A8FF /* APMIndexListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996471B264A750600E9A8FF /* APMIndexListViewController.m */; };
 		7998C6CF23CEA4E500DA3BEF /* DesignModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7998C6CE23CEA4E500DA3BEF /* DesignModeViewController.m */; };
 		79A0ECA123681B79004C10B0 /* VTBEncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA023681B79004C10B0 /* VTBEncodeViewController.m */; };
 		79A0ECA52368262F004C10B0 /* XXH264EncodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A0ECA42368262F004C10B0 /* XXH264EncodeTool.m */; };
@@ -314,6 +318,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B902BC4E26BCA8C0E0E76A5 /* Pods_MyProjectModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		333D105220CE74A8004D9241 /* MyProjectModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProjectModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		333D105520CE74A8004D9241 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		333D105620CE74A9004D9241 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -417,10 +422,7 @@
 		33FAE4F620E2459200BE7175 /* SectionFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionFModel.h; sourceTree = "<group>"; };
 		33FAE50520E3693400BE7175 /* AbstractFCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractFCollectionView.h; sourceTree = "<group>"; };
 		33FAE50620E3693400BE7175 /* AbstractFCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractFCollectionView.m; sourceTree = "<group>"; };
-		45212555C0193DC4B8254985 /* Pods_MyProjectModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C26993B1DAA4E4068C6E736 /* Pods-MyProjectModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectModule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule.debug.xcconfig"; sourceTree = "<group>"; };
-		7901F9A021A678CE005BE8A6 /* NSTimerObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTimerObserver.h; sourceTree = "<group>"; };
-		7901F9A121A678CE005BE8A6 /* NSTimerObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTimerObserver.m; sourceTree = "<group>"; };
 		79040D892236462A0085335E /* FlutterSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlutterSubViewController.h; sourceTree = "<group>"; };
 		79040D8A2236462A0085335E /* FlutterSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlutterSubViewController.m; sourceTree = "<group>"; };
 		79040D9F2238AA2D0085335E /* AspectTrackMananer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AspectTrackMananer.h; sourceTree = "<group>"; };
@@ -517,9 +519,15 @@
 		7913EF902463FDE7000C77A3 /* RotationImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotationImageViewController.h; sourceTree = "<group>"; };
 		7913EF912463FDE7000C77A3 /* RotationImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RotationImageViewController.m; sourceTree = "<group>"; };
 		7913EF9324640090000C77A3 /* miao.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = miao.jpeg; sourceTree = "<group>"; };
+		79223FA32653BA2B00FB74C6 /* iOS优雅实现Pipeline设计模式.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "iOS优雅实现Pipeline设计模式.md"; sourceTree = "<group>"; };
 		7924BB71240B98F8007BA1B3 /* UIRespnderChainExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRespnderChainExtension.swift; sourceTree = "<group>"; };
 		792591EA2285517000E7F734 /* MyProjectModule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyProjectModule-Bridging-Header.h"; sourceTree = "<group>"; };
 		792591EB2285517100E7F734 /* LearnSwiftDemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSwiftDemosViewController.swift; sourceTree = "<group>"; };
+		79272590264D4F2300E5E6D5 /* NSTimerObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimerObserver.m; sourceTree = "<group>"; };
+		79272591264D4F2300E5E6D5 /* SDTimerObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDTimerObserver.swift; sourceTree = "<group>"; };
+		79272592264D4F2300E5E6D5 /* NSTimerObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimerObserver.h; sourceTree = "<group>"; };
+		79272595264E49F300E5E6D5 /* XXRuntimeUagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXRuntimeUagesViewController.h; sourceTree = "<group>"; };
+		79272596264E49F300E5E6D5 /* XXRuntimeUagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXRuntimeUagesViewController.m; sourceTree = "<group>"; };
 		7929B49B219FE74B004D335E /* RunLoopDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopDemoViewController.h; sourceTree = "<group>"; };
 		7929B49C219FE74B004D335E /* RunLoopDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopDemoViewController.m; sourceTree = "<group>"; };
 		792A730921EF2FBE0098B94C /* Tree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tree.plist; sourceTree = "<group>"; };
@@ -554,7 +562,6 @@
 		7936BB732446EA2C0043AF5A /* MainTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
 		7936BB752446EA860043AF5A /* BaseNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
 		7936BB762446EA860043AF5A /* BaseNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
-		79387EAD244042E100CC7A49 /* SDTimerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTimerObserver.swift; sourceTree = "<group>"; };
 		79387EB224407B6900CC7A49 /* SDCacheManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDCacheManagers.swift; sourceTree = "<group>"; };
 		79392E9F26327226009A0CAB /* TimeProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeProfiler.h; sourceTree = "<group>"; };
 		79392EA126327226009A0CAB /* TPRecordHierarchyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPRecordHierarchyModel.h; sourceTree = "<group>"; };
@@ -709,6 +716,10 @@
 		7993C86D228D692A001A6BFA /* DownListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownListViewController.m; sourceTree = "<group>"; };
 		7993C86F228D6A4E001A6BFA /* DownLoadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownLoadCell.h; sourceTree = "<group>"; };
 		7993C870228D6A4E001A6BFA /* DownLoadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownLoadCell.m; sourceTree = "<group>"; };
+		79964717264A6FD600E9A8FF /* XXMemoryMonitorMananger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXMemoryMonitorMananger.h; sourceTree = "<group>"; };
+		79964718264A6FD600E9A8FF /* XXMemoryMonitorMananger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXMemoryMonitorMananger.m; sourceTree = "<group>"; };
+		7996471A264A750600E9A8FF /* APMIndexListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APMIndexListViewController.h; sourceTree = "<group>"; };
+		7996471B264A750600E9A8FF /* APMIndexListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APMIndexListViewController.m; sourceTree = "<group>"; };
 		7998C6CD23CEA4E500DA3BEF /* DesignModeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignModeViewController.h; sourceTree = "<group>"; };
 		7998C6CE23CEA4E500DA3BEF /* DesignModeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignModeViewController.m; sourceTree = "<group>"; };
 		79A0EC9F23681B79004C10B0 /* VTBEncodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBEncodeViewController.h; sourceTree = "<group>"; };
@@ -865,7 +876,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				358041E68E5480656FDBFF93 /* Pods_MyProjectModule.framework in Frameworks */,
+				0626535278540AAFD513C6A2 /* Pods_MyProjectModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1024,9 +1035,6 @@
 			children = (
 				3378282F2108772600373A20 /* ThreadViewController.h */,
 				337828302108772600373A20 /* ThreadViewController.m */,
-				7901F9A021A678CE005BE8A6 /* NSTimerObserver.h */,
-				7901F9A121A678CE005BE8A6 /* NSTimerObserver.m */,
-				79387EAD244042E100CC7A49 /* SDTimerObserver.swift */,
 				796E8F652430D91F001EB53F /* ThreadSafeContainer.h */,
 				796E8F662430D91F001EB53F /* ThreadSafeContainer.m */,
 			);
@@ -1089,6 +1097,8 @@
 				33759E76212FAA7200D801C1 /* NSObject+RuntimeHelper.m */,
 				33759E7B212FABBA00D801C1 /* NSObject+KVOHelper.h */,
 				33759E7C212FABBA00D801C1 /* NSObject+KVOHelper.m */,
+				79272595264E49F300E5E6D5 /* XXRuntimeUagesViewController.h */,
+				79272596264E49F300E5E6D5 /* XXRuntimeUagesViewController.m */,
 				33759E78212FAB2A00D801C1 /* AbstractItem.h */,
 				33759E79212FAB2A00D801C1 /* AbstractItem.m */,
 				79C2B661221A646200C40F3A /* RunTimeTestViewController.h */,
@@ -1100,6 +1110,7 @@
 		33888FF520F0C25400E4A119 /* DesignMode */ = {
 			isa = PBXGroup;
 			children = (
+				7927258F264D4F2300E5E6D5 /* Observer */,
 				798DB84025ECD7FE000197EE /* Facade patterns */,
 				79DC644123BA1F6C0073E22F /* Protocol Oriented Programming */,
 				79DC640623BA1A090073E22F /* Chain Of Responsibility */,
@@ -1648,6 +1659,24 @@
 				7913EF912463FDE7000C77A3 /* RotationImageViewController.m */,
 			);
 			path = OpenGLES;
+			sourceTree = "<group>";
+		};
+		79223FA22653BA2B00FB74C6 /* PipelineDesign */ = {
+			isa = PBXGroup;
+			children = (
+				79223FA32653BA2B00FB74C6 /* iOS优雅实现Pipeline设计模式.md */,
+			);
+			path = PipelineDesign;
+			sourceTree = "<group>";
+		};
+		7927258F264D4F2300E5E6D5 /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				79272592264D4F2300E5E6D5 /* NSTimerObserver.h */,
+				79272590264D4F2300E5E6D5 /* NSTimerObserver.m */,
+				79272591264D4F2300E5E6D5 /* SDTimerObserver.swift */,
+			);
+			path = Observer;
 			sourceTree = "<group>";
 		};
 		7929B49A219FE72A004D335E /* RunLoop */ = {
@@ -2241,6 +2270,15 @@
 			path = DownHelper;
 			sourceTree = "<group>";
 		};
+		79964716264A6FA900E9A8FF /* XX_ MemoryMonitoring */ = {
+			isa = PBXGroup;
+			children = (
+				79964717264A6FD600E9A8FF /* XXMemoryMonitorMananger.h */,
+				79964718264A6FD600E9A8FF /* XXMemoryMonitorMananger.m */,
+			);
+			path = "XX_ MemoryMonitoring";
+			sourceTree = "<group>";
+		};
 		799F2AA523855916002F5ADE /* BookmarkView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2397,8 +2435,11 @@
 		79C28C5F25CFFB100077108D /* APM */ = {
 			isa = PBXGroup;
 			children = (
+				79964716264A6FA900E9A8FF /* XX_ MemoryMonitoring */,
 				79392E9D26327226009A0CAB /* FH_TimeProfiler */,
 				79392EB626327226009A0CAB /* TX_Maxtrix */,
+				7996471A264A750600E9A8FF /* APMIndexListViewController.h */,
+				7996471B264A750600E9A8FF /* APMIndexListViewController.m */,
 			);
 			path = APM;
 			sourceTree = "<group>";
@@ -2406,6 +2447,7 @@
 		79CBA4162615F15A00CB874A /* OC-Linked - Chain Of Responsibility */ = {
 			isa = PBXGroup;
 			children = (
+				79223FA22653BA2B00FB74C6 /* PipelineDesign */,
 				79CBA4172615F15A00CB874A /* BindResponderOfChain.swift */,
 				79CBA4182615F15A00CB874A /* ActionProtocol.h */,
 				79CBA4192615F15A00CB874A /* ResponOfChainManager.m */,
@@ -2705,7 +2747,7 @@
 		7C2E54819E680FA111814D28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				45212555C0193DC4B8254985 /* Pods_MyProjectModule.framework */,
+				1B902BC4E26BCA8C0E0E76A5 /* Pods_MyProjectModule.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2824,6 +2866,7 @@
 				79040DA72238D00D0085335E /* EventList.plist in Resources */,
 				33FAE4F120E2452D00BE7175 /* JHHeaderReusableView.xib in Resources */,
 				792A730E21EF2FD50098B94C /* class_cluster_data.json in Resources */,
+				79223FA42653BA2B00FB74C6 /* iOS优雅实现Pipeline设计模式.md in Resources */,
 				7913EF9424640090000C77A3 /* miao.jpeg in Resources */,
 				792A730B21EF2FBF0098B94C /* Tree.plist in Resources */,
 				79EEEA4E2182BD4700848B59 /* iOS开发、教你一步步实现直播间评论效果功能 - 简书.html in Resources */,
@@ -2950,7 +2993,9 @@
 				79E96688237EBDEA00B49697 /* TestBlockModelViewController.swift in Sources */,
 				79B3FE532570A465001D73F4 /* UIImage+DrawCornerTools.m in Sources */,
 				79E2EA0A246E4F1E003B5A39 /* SDPointsTransformFlowLayout.swift in Sources */,
+				79272593264D4F2300E5E6D5 /* NSTimerObserver.m in Sources */,
 				790882F123A0D04500FA3BE5 /* Produce_Consume.m in Sources */,
+				79272597264E49F300E5E6D5 /* XXRuntimeUagesViewController.m in Sources */,
 				33759E71212FA08900D801C1 /* UIView+MethodSwizze.m in Sources */,
 				79EEEA512182BD8C00848B59 /* LiveCommetChatTV.m in Sources */,
 				33C2DF3821DCC5D400F96F32 /* PointTreeTypeTwo.m in Sources */,
@@ -2998,6 +3043,7 @@
 				7913EF8B245AB5E6000C77A3 /* RenderImageViewController.m in Sources */,
 				79392EBB26327227009A0CAB /* UIWindow+CallRecordShake.m in Sources */,
 				7936BB4224459E750043AF5A /* SDPageControl.swift in Sources */,
+				7996471C264A750600E9A8FF /* APMIndexListViewController.m in Sources */,
 				79501BEB255A43F6005865A7 /* SDCustomStatusBarView.swift in Sources */,
 				793C6377240606A4000BE949 /* POPNumberAnimation.m in Sources */,
 				795BFA1E256F7E55001D8371 /* FactoryObject.swift in Sources */,
@@ -3068,8 +3114,8 @@
 				79E9668A237EBDF800B49697 /* AView.swift in Sources */,
 				796BADB324E1201700F68597 /* TablePopDemoViewController.m in Sources */,
 				79A1A51A2269AD0800CEA92A /* BookmarkContainerView.m in Sources */,
+				79272594264D4F2300E5E6D5 /* SDTimerObserver.swift in Sources */,
 				79BA3B77244D8609008805F6 /* SDDeviceOrientation.swift in Sources */,
-				79387EAE244042E100CC7A49 /* SDTimerObserver.swift in Sources */,
 				333D109720CFED75004D9241 /* colloctionViewController.m in Sources */,
 				7908832023A0D04500FA3BE5 /* AbstractPlayerHelperManager.m in Sources */,
 				793C637B240606A4000BE949 /* DrawViewController.m in Sources */,
@@ -3084,7 +3130,6 @@
 				79DC642223BA1A0A0073E22F /* UIResponder+UIResponderChain.m in Sources */,
 				33FAE4E520E2445500BE7175 /* HeaderSuspendedLayout.m in Sources */,
 				7908831B23A0D04500FA3BE5 /* ZSPlayer.m in Sources */,
-				7901F9A221A678CE005BE8A6 /* NSTimerObserver.m in Sources */,
 				7908832823A0D04500FA3BE5 /* UIImage+Shadow.m in Sources */,
 				79501BF8255A4414005865A7 /* SDBarrageInfo.swift in Sources */,
 				79DC645823BA1F6C0073E22F /* AbstractViewProtocol.swift in Sources */,
@@ -3160,6 +3205,7 @@
 				33FAE4F820E2459300BE7175 /* CellFModel.m in Sources */,
 				7908830F23A0D04500FA3BE5 /* ResovlerModel.m in Sources */,
 				793C6378240606A4000BE949 /* AttributeAndPredicateWithLink.m in Sources */,
+				79964719264A6FD600E9A8FF /* XXMemoryMonitorMananger.m in Sources */,
 				338FEC0520E0F5B70025631B /* UIButton+Decorate.m in Sources */,
 				796BADB224E1201700F68597 /* DecoratorAView.m in Sources */,
 				79DC645523BA1F6C0073E22F /* PaternalViewController.m in Sources */,

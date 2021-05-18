@@ -69,11 +69,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MLeaksFinder.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>MMKV.xcscheme</key>
 		<dict>
 			<key>isShown</key>

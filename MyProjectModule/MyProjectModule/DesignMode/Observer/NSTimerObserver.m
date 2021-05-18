@@ -72,6 +72,7 @@
 }
 
 - (void)trigger:(NSTimer *)timer {
+    // XXTODO 这是同步堵塞的；可以开辟子线程异步非堵塞
     [self.timerMap.allObjects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         id<TimerObserver> listener = obj;
         if([listener respondsToSelector:@selector(timerCallBack:)]){
