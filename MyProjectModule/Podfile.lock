@@ -68,9 +68,9 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
-  - SDWebImage (4.3.3):
-    - SDWebImage/Core (= 4.3.3)
-  - SDWebImage/Core (4.3.3)
+  - SDWebImage (5.8.4):
+    - SDWebImage/Core (= 5.8.4)
+  - SDWebImage/Core (5.8.4)
   - SnapKit (4.0.1)
   - YTKNetwork (3.0.5):
     - AFNetworking/NSURLSession (~> 4.0)
@@ -98,7 +98,7 @@ DEPENDENCIES:
   - ReactiveObjC (~> 3.1.0)
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
-  - SDWebImage (~> 4.3.3)
+  - SDWebImage (~> 5.8.4)
   - SnapKit (~> 4.0.0)
   - YTKNetwork
   - YYKit
@@ -153,11 +153,11 @@ SPEC CHECKSUMS:
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   YTKNetwork: a2337af4b444b5d0a658122fa3d8a425e2425716
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: bd9fea344592a314538d42cc60f8276aad312b35
+PODFILE CHECKSUM: 692d49f4649c8bf20dc0886ae5e3b2801596be66
 
 COCOAPODS: 1.7.3

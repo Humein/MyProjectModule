@@ -7,3 +7,4 @@
 #import <YYKit/YYKit.h>
 #import "BKDeviceOrientation.h"
 #import "AbstractCollectionViewCell.h"
+#import <SDWebImage/SDWebImage.h>

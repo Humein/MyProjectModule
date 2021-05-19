@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AC51EA5BE1682F8277BE5F13677E147C"
-               BuildableName = "YTKNetwork.framework"
+               BuildableName = "libYTKNetwork.a"
                BlueprintName = "YTKNetwork"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

@@ -1,5 +1,5 @@
 #inhibit_all_warnings!
-use_frameworks! #使用动态库
+#use_frameworks! #使用动态库
 target 'MyProjectModule' do
   pod 'Masonry'
   pod 'YYKit'
@@ -8,7 +8,7 @@ target 'MyProjectModule' do
   pod 'MJRefresh'
   pod 'AFNetworking'
   pod 'KVOController'
-  pod 'SDWebImage', '~> 4.3.3'
+  pod 'SDWebImage', '~> 5.8.4'
   pod 'YTKNetwork'
   pod 'Aspects' # AOP
   pod 'SnapKit', '~> 4.0.0'

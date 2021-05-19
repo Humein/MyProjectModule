@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0626535278540AAFD513C6A2 /* Pods_MyProjectModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B902BC4E26BCA8C0E0E76A5 /* Pods_MyProjectModule.framework */; };
 		333D105720CE74A9004D9241 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D105620CE74A9004D9241 /* AppDelegate.m */; };
 		333D105A20CE74A9004D9241 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D105920CE74A9004D9241 /* ViewController.m */; };
 		333D105D20CE74A9004D9241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 333D105B20CE74A9004D9241 /* Main.storyboard */; };
@@ -298,6 +297,7 @@
 		79F9A5F22151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5F12151FC82003704D7 /* CallbackAndCompletionHandlerForBlock.m */; };
 		79F9A5F5215214B4003704D7 /* NSTimer+WeakTimerBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9A5F4215214B4003704D7 /* NSTimer+WeakTimerBlock.m */; };
 		79FE526523B5A081007C54A1 /* TemplatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FE526423B5A081007C54A1 /* TemplatePattern.swift */; };
+		F4CA0647EEF619E98C8FA31F /* libPods-MyProjectModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2708E18D626E0C0D7B1EC9C9 /* libPods-MyProjectModule.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -318,7 +318,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B902BC4E26BCA8C0E0E76A5 /* Pods_MyProjectModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2708E18D626E0C0D7B1EC9C9 /* libPods-MyProjectModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyProjectModule.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		333D105220CE74A8004D9241 /* MyProjectModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProjectModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		333D105520CE74A8004D9241 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		333D105620CE74A9004D9241 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -876,7 +876,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0626535278540AAFD513C6A2 /* Pods_MyProjectModule.framework in Frameworks */,
+				F4CA0647EEF619E98C8FA31F /* libPods-MyProjectModule.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2747,7 +2747,7 @@
 		7C2E54819E680FA111814D28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1B902BC4E26BCA8C0E0E76A5 /* Pods_MyProjectModule.framework */,
+				2708E18D626E0C0D7B1EC9C9 /* libPods-MyProjectModule.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2765,6 +2765,7 @@
 				333D105020CE74A8004D9241 /* Resources */,
 				2CE45A9DEFE8C1A0493F7F4F /* [CP] Embed Pods Frameworks */,
 				79040D87223642D00085335E /* ShellScript */,
+				97B3FB3AF05A1B32E1B2285B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2927,6 +2928,23 @@
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build \n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed \n";
+		};
+		97B3FB3AF05A1B32E1B2285B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyProjectModule/Pods-MyProjectModule-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		A1174853C5C8859EE1933F3D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

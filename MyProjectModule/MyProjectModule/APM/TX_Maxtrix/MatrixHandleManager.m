@@ -7,7 +7,7 @@
 //
 
 #import "MatrixHandleManager.h"
-#import <Matrix/Matrix.h>
+#import "Matrix.h"
 #import "WCBlockTypeDef.h"
 #import "AppDelegate.h"
 
