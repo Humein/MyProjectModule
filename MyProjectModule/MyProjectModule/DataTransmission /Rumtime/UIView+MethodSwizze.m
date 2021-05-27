@@ -17,7 +17,8 @@
         
         SEL originalSelector = @selector(pointInside:withEvent:);
         SEL swizzledSelector = @selector(bk_pointInside:withEvent:);
-        Class cls = [self class];
+        Class cls = [self class]; // 对象方法
+//        Class cls = object_getClass(self); 类方法
         Method originalMethod = class_getInstanceMethod(cls, originalSelector);
         Method swizzledMethod = class_getInstanceMethod(cls, swizzledSelector);
         

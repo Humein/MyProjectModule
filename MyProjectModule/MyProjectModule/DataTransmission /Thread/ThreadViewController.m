@@ -29,6 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    return;
     [self sqlMultipleInsert]; return;
     [self runLoop]; return;
     [self lockTest0]; return;
@@ -592,10 +593,12 @@
 
 -(void)dispatch_apply2{
     dispatch_queue_t q = dispatch_queue_create("queue", DISPATCH_QUEUE_CONCURRENT);
-    //危险，可能导致线程爆炸以及死锁
-    for (int i = 0; i < 99; i++){
+    //危险，可能导致线程爆炸以及死锁 存疑！！！
+    for (int i = 0; i < 3; i++){
        dispatch_async(q, ^{
-           NSLog(@"do a job %d times",i+1);
+           for (int j = 0; j<10000; j++) {
+               NSLog(@"do a job %d times",i+j);
+           }
        });
     }
     dispatch_barrier_sync(q, ^{});

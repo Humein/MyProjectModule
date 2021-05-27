@@ -750,4 +750,17 @@ func send(job: Int, toPrinter printerName: String) throws -> String {
     return "Job sent"
 }
 
+//MARK: swift 反射
+class SwiftPushViewController: UIViewController {
+    func pushNav() -> () {
+        if let cls = NSClassFromString(getAPPName() + "." + "TestViewController") as? UIViewController.Type {
+            let vc = cls.init()
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 
+    func getAPPName() -> String {
+        guard let appName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String else { return "" }
+        return appName
+    }
+}

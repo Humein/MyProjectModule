@@ -32,6 +32,7 @@ PODS:
     - DoraemonKit/Core
     - FBRetainCycleDetector
   - FBRetainCycleDetector (0.1.4)
+  - fishhook (0.2)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
@@ -60,6 +61,8 @@ PODS:
   - MMKV (1.2.7):
     - MMKVCore (~> 1.2.7)
   - MMKVCore (1.2.7)
+  - OOMDetector (1.3):
+    - fishhook (= 0.2)
   - pop (1.0.12)
   - ReactiveObjC (3.1.1)
   - RxCocoa (5.1.1):
@@ -94,6 +97,7 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - MMKV
+  - OOMDetector
   - pop (~> 1.0)
   - ReactiveObjC (~> 3.1.0)
   - RxCocoa (~> 5)
@@ -110,6 +114,7 @@ SPEC REPOS:
     - CocoaLumberjack
     - DoraemonKit
     - FBRetainCycleDetector
+    - fishhook
     - FMDB
     - GCDWebServer
     - GPUImage
@@ -121,6 +126,7 @@ SPEC REPOS:
     - MJRefresh
     - MMKV
     - MMKVCore
+    - OOMDetector
     - pop
     - ReactiveObjC
     - RxCocoa
@@ -137,6 +143,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   DoraemonKit: 32fb97f3aa82efa133111d193080ca5462cef135
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
@@ -148,6 +155,7 @@ SPEC CHECKSUMS:
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   MMKV: 22e5136f7d00197bc0fc9694b7f71519f0d1ca12
   MMKVCore: 607b7b05f2c2140056b5d338e45f2c14bf3f4232
+  OOMDetector: c23f4dfc969ea9bbd68a57cf7e5a3ca2169263cd
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -158,6 +166,6 @@ SPEC CHECKSUMS:
   YTKNetwork: a2337af4b444b5d0a658122fa3d8a425e2425716
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 692d49f4649c8bf20dc0886ae5e3b2801596be66
+PODFILE CHECKSUM: 7e75d8712be1ac6dcedbd93220664b452d4e531b
 
 COCOAPODS: 1.7.3

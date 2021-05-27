@@ -245,6 +245,7 @@
 		79CBA41B2615F15A00CB874A /* BindResponderOfChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CBA4172615F15A00CB874A /* BindResponderOfChain.swift */; };
 		79CBA41C2615F15A00CB874A /* ResponOfChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CBA4192615F15A00CB874A /* ResponOfChainManager.m */; };
 		79D353B0241324510064FB03 /* UITableView+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D353AF241324510064FB03 /* UITableView+PlaceHolder.m */; };
+		79DAC6F9265E2126008AEFC2 /* RuntimeForSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DAC6F8265E2125008AEFC2 /* RuntimeForSwift.swift */; };
 		79DC642223BA1A0A0073E22F /* UIResponder+UIResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC640C23BA1A090073E22F /* UIResponder+UIResponderChain.m */; };
 		79DC642323BA1A0A0073E22F /* Chain_of_responsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC640F23BA1A090073E22F /* Chain_of_responsibility.swift */; };
 		79DC642423BA1A0A0073E22F /* HTMiddleControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DC641123BA1A090073E22F /* HTMiddleControlView.m */; };
@@ -775,6 +776,7 @@
 		79CBA41A2615F15A00CB874A /* ResponOfChainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponOfChainManager.h; sourceTree = "<group>"; };
 		79D353AE241324500064FB03 /* UITableView+PlaceHolder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+PlaceHolder.h"; sourceTree = "<group>"; };
 		79D353AF241324510064FB03 /* UITableView+PlaceHolder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+PlaceHolder.m"; sourceTree = "<group>"; };
+		79DAC6F8265E2125008AEFC2 /* RuntimeForSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeForSwift.swift; sourceTree = "<group>"; };
 		79DC640C23BA1A090073E22F /* UIResponder+UIResponderChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+UIResponderChain.m"; sourceTree = "<group>"; };
 		79DC640D23BA1A090073E22F /* UIResponder+UIResponderChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+UIResponderChain.h"; sourceTree = "<group>"; };
 		79DC640F23BA1A090073E22F /* Chain_of_responsibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chain_of_responsibility.swift; sourceTree = "<group>"; };
@@ -1103,6 +1105,7 @@
 				33759E79212FAB2A00D801C1 /* AbstractItem.m */,
 				79C2B661221A646200C40F3A /* RunTimeTestViewController.h */,
 				79C2B662221A646200C40F3A /* RunTimeTestViewController.m */,
+				79DAC6F8265E2125008AEFC2 /* RuntimeForSwift.swift */,
 			);
 			path = Rumtime;
 			sourceTree = "<group>";
@@ -3015,6 +3018,7 @@
 				790882F123A0D04500FA3BE5 /* Produce_Consume.m in Sources */,
 				79272597264E49F300E5E6D5 /* XXRuntimeUagesViewController.m in Sources */,
 				33759E71212FA08900D801C1 /* UIView+MethodSwizze.m in Sources */,
+				79DAC6F9265E2126008AEFC2 /* RuntimeForSwift.swift in Sources */,
 				79EEEA512182BD8C00848B59 /* LiveCommetChatTV.m in Sources */,
 				33C2DF3821DCC5D400F96F32 /* PointTreeTypeTwo.m in Sources */,
 				7924BB72240B98F8007BA1B3 /* UIRespnderChainExtension.swift in Sources */,
