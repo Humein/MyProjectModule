@@ -13,16 +13,17 @@ target 'MyProjectModule' do
   pod 'Aspects' # AOP
   pod 'SnapKit', '~> 4.0.0'
   pod 'FMDB'
-  pod 'RxSwift', '~> 5'
-  pod 'RxCocoa', '~> 5'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 #  pod "Texture"
   pod 'ReactiveObjC','~> 3.1.0'
   pod 'GPUImage'
 #  pod 'MLeaksFinder' #和DoraemonKit的分类一样导致方法都不会执行
   pod 'LookinServer', :configurations => ['Debug'] # Lookin UI调试
   pod 'matrix-wechat' #微信的APM工具
-  pod 'OOMDetector'
-  pod 'MMKV' #MMKV 是基于 mmap 内存映射的 key-value 组件，底层序列化/反序列化使用 protobuf 实现，性能高，稳定性强
+  pod 'OOMDetector', '1.3'  #实现OOM监控、大内存分配监控、内存泄漏检测等功能。 项目中有多个fishhook的时候，#import "fishhook.h"不正确，最好使用#import <fishhook/fishhook.h>
+  pod 'RIBs' # Uber 很多移动应用背后的跨平台架构框架。 RIB 是 Router、Interactor 和 Builder 的缩写，它们是该架构的核心组件。该框架是为具有大量工程师和嵌套状态的移动应用程序而设计的
+  pod 'MMKV' #MMKV 基于 mmap 内存映射的 key-value 组件，底层序列化/反序列化使用 protobuf 实现，性能高，稳定性强
   # 滴滴哆啦A梦监控APM
   pod 'DoraemonKit/Core', '~> 3.0.4', :configurations => ['Debug'] #必选 Core subspec作为核心，必须引入
   pod 'DoraemonKit/WithLogger', '~> 3.0.4', :configurations => ['Debug'] #可选 如果你的日志是基于CocoaLumberjack，那你也可以引入WithLogger subspec。
