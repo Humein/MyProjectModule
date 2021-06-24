@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import <FBAllocationTracker/FBAllocationTrackerManager.h>
+
 typedef void(^MyBlock)(void);
 
 @interface MyObject : NSObject{
@@ -34,7 +36,8 @@ typedef void(^MyBlock)(void);
 }
 @end
 int main(int argc, char * argv[]) {
-
+    [[FBAllocationTrackerManager sharedManager] startTrackingAllocations];
+    [[FBAllocationTrackerManager sharedManager] enableGenerations];
     @autoreleasepool {
         // Block 崩溃问题
         MyObject *myObject = [[MyObject alloc] init];
