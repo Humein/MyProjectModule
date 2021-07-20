@@ -229,6 +229,7 @@
 		79A1A51B2269AD0800CEA92A /* SmoothTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5112269AD0800CEA92A /* SmoothTitleView.m */; };
 		79A1A51C2269AD0800CEA92A /* BookmarkMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5122269AD0800CEA92A /* BookmarkMainTableView.m */; };
 		79A1A51D2269AD0800CEA92A /* SmoothBookmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1A5152269AD0800CEA92A /* SmoothBookmarkViewController.m */; };
+		79B0A6E9268EBA260081B0BC /* XXNamespaceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B0A6E8268EBA230081B0BC /* XXNamespaceProtocol.swift */; };
 		79B3FE3B256F824A001D73F4 /* FactoryUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3FE3A256F824A001D73F4 /* FactoryUsage.m */; };
 		79B3FE532570A465001D73F4 /* UIImage+DrawCornerTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3FE522570A465001D73F4 /* UIImage+DrawCornerTools.m */; };
 		79B44B24237CF0A900B7D73D /* SmoothBookmarkDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B44B23237CF0A900B7D73D /* SmoothBookmarkDemoViewController.m */; };
@@ -745,6 +746,7 @@
 		79A1A5132269AD0800CEA92A /* SmoothBookmarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothBookmarkView.h; sourceTree = "<group>"; };
 		79A1A5142269AD0800CEA92A /* BookmarkContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkContainerView.h; sourceTree = "<group>"; };
 		79A1A5152269AD0800CEA92A /* SmoothBookmarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothBookmarkViewController.m; sourceTree = "<group>"; };
+		79B0A6E8268EBA230081B0BC /* XXNamespaceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XXNamespaceProtocol.swift; sourceTree = "<group>"; };
 		79B3FE39256F824A001D73F4 /* FactoryUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryUsage.h; sourceTree = "<group>"; };
 		79B3FE3A256F824A001D73F4 /* FactoryUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryUsage.m; sourceTree = "<group>"; };
 		79B3FE512570A465001D73F4 /* UIImage+DrawCornerTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+DrawCornerTools.h"; sourceTree = "<group>"; };
@@ -924,6 +926,7 @@
 		333D105420CE74A8004D9241 /* MyProjectModule */ = {
 			isa = PBXGroup;
 			children = (
+				79B0A6E7268EBA230081B0BC /* Swift */,
 				798DB84C25EF3E69000197EE /* PodProject Analysis */,
 				79C28C5F25CFFB100077108D /* APM */,
 				79462738257DD7A9009778CB /* NetRequstAndSocket */,
@@ -2372,6 +2375,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		79B0A6E7268EBA230081B0BC /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				79B0A6E8268EBA230081B0BC /* XXNamespaceProtocol.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 		79BA3B60244D5618008805F6 /* 方式2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -3178,6 +3189,7 @@
 				79501BFA255A441E005865A7 /* UISampleExample.swift in Sources */,
 				79462756257DD7A9009778CB /* RequestViewController.m in Sources */,
 				79392EC026327227009A0CAB /* TimeProfilerVC.m in Sources */,
+				79B0A6E9268EBA260081B0BC /* XXNamespaceProtocol.swift in Sources */,
 				79E2EA632481FA6B003B5A39 /* CheckConditionItem.m in Sources */,
 				7908830C23A0D04500FA3BE5 /* APPPayTool.m in Sources */,
 				79A1A5172269AD0800CEA92A /* BaseBookmarkChildController.m in Sources */,

@@ -1,5 +1,7 @@
 #inhibit_all_warnings!
 #use_frameworks! #使用动态库
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '11.0'
 target 'MyProjectModule' do
   pod 'Masonry'
   pod 'YYKit'
@@ -11,9 +13,7 @@ target 'MyProjectModule' do
   pod 'SDWebImage', '~> 5.8.4'
   pod 'YTKNetwork'
   pod 'Aspects' # AOP
-  pod 'SnapKit', '~> 4.0.0'
   pod 'FMDB'
-  pod 'RxSwift'
   pod 'RxCocoa'
 #  pod "Texture"
   pod 'ReactiveObjC','~> 3.1.0'
@@ -32,6 +32,12 @@ target 'MyProjectModule' do
   pod 'DoraemonKit/WithLoad', '~> 3.0.4', :configurations => ['Debug'] #可选 如果你要集成Load耗时检测的话，那就请接入WithLoad subspec。
   pod 'DoraemonKit/WithMLeaksFinder', '~> 3.0.4', :configurations => ['Debug'] #可选 如果你要使用MLeaksFinder查找内存泄漏的问题的话，那就请接入WithMLeaksFinder subspec。
 
+  ######Swift########
+  pod 'SnapKit', '~> 4.0.0'
+  pod 'RxSwift'
+  pod 'Kingfisher', '~> 6.3.0'
+  # 使用Moya接入API，它的设计风格就是利用枚举来实现，特别很好的利用枚举绑定值这个特性
+  pod 'Moya', '~> 14.0'
 
   # Flutter 引入 现有 Native 工程
 #  flutter_application_path = "/Users/zhangxinxin/Code/FlutterDoc/my_flutter"

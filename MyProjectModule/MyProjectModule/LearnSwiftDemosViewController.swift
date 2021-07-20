@@ -35,7 +35,7 @@ class LearnSwiftDemosViewController: UIViewController {
     //把名字写在尖括号里来创建一个泛型方法或者类型。
 
     func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
-        
+        _ = second.jt.testMethod
         var result = [Item]()
         
         for _ in 0..<numberOfTimes {

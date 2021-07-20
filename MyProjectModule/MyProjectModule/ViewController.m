@@ -64,8 +64,12 @@ void UncaughtExceptionHandler(NSException *exception) {
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-
-
+    
+//    NSMutableDictionary *test = [NSMutableDictionary dictionaryWithDictionary:@{@"testInteger":@"1"}];
+//    NSObject *obj = [NSObject new];
+//    [obj setValue:nil forKey:@"testInteger"];
+//    [test setValue:nil forKey:@"testInteger"];
+//
     WEAKSELF
     _fpsLabel = [[YYFPSLabel alloc]initWithFrame:CGRectMake(40, 40, 55, 20)];
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;

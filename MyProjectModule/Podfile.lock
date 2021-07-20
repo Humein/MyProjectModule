@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - Alamofire (5.4.3)
   - Aspects (1.4.1)
   - CocoaLumberjack (3.7.2):
     - CocoaLumberjack/Core (= 3.7.2)
@@ -48,30 +49,38 @@ PODS:
   - GCDWebServer/WebUploader (3.5.4):
     - GCDWebServer/Core
   - GPUImage (0.1.7)
+  - Kingfisher (6.3.0)
   - KVOController (1.2.0)
   - LookinServer (1.0.2)
   - Masonry (1.1.0)
-  - matrix-wechat (0.6.5):
-    - matrix-wechat/matrixARC (= 0.6.5)
-    - matrix-wechat/matrixNonARC1 (= 0.6.5)
-    - matrix-wechat/matrixNonARC2 (= 0.6.5)
-  - matrix-wechat/matrixARC (0.6.5):
+  - matrix-wechat (0.6.7):
+    - matrix-wechat/matrixARC (= 0.6.7)
+    - matrix-wechat/matrixNonARC1 (= 0.6.7)
+    - matrix-wechat/matrixNonARC2 (= 0.6.7)
+  - matrix-wechat/matrixARC (0.6.7):
     - matrix-wechat/matrixNonARC1
-  - matrix-wechat/matrixNonARC1 (0.6.5)
-  - matrix-wechat/matrixNonARC2 (0.6.5):
+  - matrix-wechat/matrixNonARC1 (0.6.7)
+  - matrix-wechat/matrixNonARC2 (0.6.7):
     - matrix-wechat/matrixARC
-  - MJExtension (3.2.4)
+  - MJExtension (3.3.0)
   - MJRefresh (3.6.1)
-  - MMKV (1.2.9):
-    - MMKVCore (~> 1.2.9)
-  - MMKVCore (1.2.9)
+  - MMKV (1.2.10):
+    - MMKVCore (~> 1.2.10)
+  - MMKVCore (1.2.10)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
   - OOMDetector (1.3):
     - fishhook (= 0.2)
   - pop (1.0.12)
   - ReactiveObjC (3.1.1)
-  - RxCocoa (4.5.0):
-    - RxSwift (>= 4.4.2, ~> 4.4)
-  - RxSwift (4.5.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
   - SDWebImage (5.8.4):
     - SDWebImage/Core (= 5.8.4)
   - SDWebImage/Core (5.8.4)
@@ -92,6 +101,7 @@ DEPENDENCIES:
   - FBMemoryProfiler
   - FMDB
   - GPUImage
+  - Kingfisher (~> 6.3.0)
   - KVOController
   - LookinServer
   - Masonry
@@ -99,6 +109,7 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - MMKV
+  - Moya (~> 14.0)
   - OOMDetector (= 1.3)
   - pop (~> 1.0)
   - ReactiveObjC (~> 3.1.0)
@@ -112,6 +123,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - Alamofire
     - Aspects
     - CocoaLumberjack
     - DoraemonKit
@@ -122,6 +134,7 @@ SPEC REPOS:
     - FMDB
     - GCDWebServer
     - GPUImage
+    - Kingfisher
     - KVOController
     - LookinServer
     - Masonry
@@ -130,10 +143,12 @@ SPEC REPOS:
     - MJRefresh
     - MMKV
     - MMKVCore
+    - Moya
     - OOMDetector
     - pop
     - ReactiveObjC
     - RxCocoa
+    - RxRelay
     - RxSwift
     - SDWebImage
     - SnapKit
@@ -142,6 +157,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
   DoraemonKit: 32fb97f3aa82efa133111d193080ca5462cef135
@@ -152,24 +168,27 @@ SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   LookinServer: d6874df8b58096c8d463817b6baaa3abc21d31f7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  matrix-wechat: 4f91e4775f0cc744aaecaad09c56e2410bdc07db
-  MJExtension: 88e0900751b6cac8de1cf724ca9838a0b28d5acb
+  matrix-wechat: 9fe8e7dcd8171e56dd2641fa508fdc3a32c837b7
+  MJExtension: 01704cca2b60a214c10761b6491eab74069d68a9
   MJRefresh: d2c1970d1cf6e77fcfcdfe76c943dfab8dbfa5c1
-  MMKV: ce972c7bec17ec7aba068562820b829d4cee100c
-  MMKVCore: 27bf04f4376305c9c0187136a7b58a236ee83f9e
+  MMKV: 76033b9ace2006623308910a3afcc0e25eba3140
+  MMKVCore: b00e7a09ec77a1b916aef336eedd3b99ec249978
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   OOMDetector: c23f4dfc969ea9bbd68a57cf7e5a3ca2169263cd
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
-  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   YTKNetwork: c16be90b06be003de9e9cd0d3b187cc8eaf35c04
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 420a778be7ce176644a48fd443877eeff0acbea0
+PODFILE CHECKSUM: 1a265149a4daad94a8053e3cd710dfdacbb4cb1a
 
 COCOAPODS: 1.7.3
